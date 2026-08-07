@@ -1,10 +1,10 @@
 """
-AI 处理层 — 翻译、总结、赚钱机会挖掘。
+AI 处理层 — 批量翻译、总结、赚钱机会挖掘。
 
-调用 OpenAI 兼容接口，支持任意模型 (GPT-4o-mini / DeepSeek / 本地模型等)。
+核心改进：一次 API 调用处理全部内容，彻底解决逐条调用导致的限速问题。
+只推送经过 AI 处理且得分 > MIN_SCORE 的内容。
 """
 
-import asyncio
 import json
 import logging
 import re
@@ -15,33 +15,69 @@ from sources.base import ContentItem
 
 logger = logging.getLogger(__name__)
 
-SYSTEM_PROMPT = """你是一个「一人公司 (OPC: One Person Company) 赚钱机会挖掘」分析助手。你的目标受众是想找到赚钱机会的独立创业者、数字游民、solopreneur 和斜杠青年。
+MIN_SCORE = 0.4  # 最低推送门槛
 
-你熟悉以下领域的英文术语和缩写：OPC, SaaS, Micro-SaaS, MRR, ARR, PMF, CAC, LTV, PLG, MVP, SEO, CRO, ROI, B2B, B2C, D2C, POD, ICP, WFH, LLM, GPT 等。
+BATCH_SYSTEM_PROMPT = """你是一个「一人公司 (OPC) 赚钱机会挖掘」分析助手。
+你的受众是想找到真实赚钱机会的独立创业者、solopreneur。
 
-对于每篇提供的内容（可能是英文或中文），你需要完成以下分析，并以**严格的 JSON 格式**返回：
+对于下面每一条内容，判断它是否真正与「一人公司如何赚钱」相关，然后按格式输出。
+如果内容只是泛泛的科技新闻、产品发布、行业分析跟赚钱无关，直接标为 irrelevant。
 
-{
-  "translation": "中文翻译（英文/外文内容必须翻译成中文，原文是中文则留空字符串）",
-  "summary": "用一句话总结核心内容（中文，50字以内）",
-  "opportunity_hint": "具体可操作的赚钱机会或商业启发（中文，30字以内，没有则写'暂无明确机会'）",
-  "relevance_score": 0.0
-}
+## 相关标准（判断不是简单关键词匹配，要看实质）
+真正相关：
+- 某人/某个一人公司是如何赚到钱的（收入数字、案例）
+- 适合一人/小团队做的赚钱项目或商业模式
+- 独立开发者/小团队发布的产品，有收入/用户数据
+- 副业、被动收入的实操方法
+- Micro-SaaS / bootstrapped 产品的经验分享
+- 数字游民/自由职业者的收入方法论
 
-relevance_score 规则 (0~1):
-- 明确提到赚钱方法、商业模式、变现思路、收入数据(MRR/ARR) → 0.8~1.0
-- 与创业、副业、独立开发、数字游民、个人成长相关但无直接赚钱方法 → 0.5~0.7
-- 略有相关但无实用价值 → 0.2~0.4
-- 完全无关 → 0.0
+不相关（直接标 irrelevant）：
+- 大公司融资/上市新闻
+- 普通科技产品评测/导购
+- 游戏/影视/娱乐资讯
+- 宏观经济/行业研究报告
+- 单纯的技术教程（跟赚钱无关）
+- 个人生活/感悟类内容
+- 新闻式的"XX发布了XX"（没有收入/用户数据）
 
-注意：英文内容务必翻译成中文。保持 opportunity_hint 具体、可操作，避免空泛建议。"""
+## 输出格式
+返回严格 JSON 数组，每条内容一个对象：
+
+[
+  {
+    "index": 0,
+    "relevant": true,
+    "translation": "中文翻译（英文内容必须翻译;原文是中文则留空）",
+    "summary": "一句话中文总结（什么项目/什么人/赚了多少/怎么赚的），40字以内",
+    "opportunity_hint": "具体可操作的一人公司赚钱机会或商业启发，25字以内，没有则写'无'",
+    "relevance_score": 0.85
+  },
+  {
+    "index": 1,
+    "relevant": false,
+    "reason": "不相关原因（5字）"
+  }
+]
+
+评分标准:
+- 0.8-1.0: 明确的一人公司赚钱案例/项目/方法（有收入数字）→ 每条推送必须优先
+- 0.5-0.7: 与一人公司创业相关但无具体赚钱方法
+- 0.3-0.4: 略有相关但很边缘
+- 0.0-0.2: 几乎不相关 → 直接标 irrelevant
+
+严格要求：
+1. 输出必须是纯 JSON 数组，不要包裹在 markdown 代码块里
+2. 不要遗漏任何 index
+3. 英文内容必须翻译成中文
+4. opportunity_hint 要具体，避免"做SaaS赚钱"这种空泛描述"""
 
 
 class AIProcessor:
-    """AI 内容处理器。"""
+    """AI 内容处理器（批量模式）。"""
 
     def __init__(self, api_base: str, api_key: str, model: str,
-                 max_tokens: int = 800, temperature: float = 0.3):
+                 max_tokens: int = 4000, temperature: float = 0.2):
         self.api_base = api_base.rstrip("/")
         self.api_key = api_key
         self.model = model
@@ -59,42 +95,23 @@ class AIProcessor:
     def enabled(self) -> bool:
         return self._enabled
 
-    async def process(self, items: list[ContentItem],
-                      concurrency: int = 1) -> list[ContentItem]:
-        """批量处理内容条目。"""
-        if not self._enabled:
-            logger.warning("AI 未配置，跳过处理")
+    async def process(self, items: list[ContentItem]) -> list[ContentItem]:
+        """批量处理全部内容。一次 API 调用处理所有条目。"""
+        if not self._enabled or not items:
             return items
 
-        semaphore = asyncio.Semaphore(concurrency)
+        # 构建批量输入：每条内容包含 index + 标题 + 摘要
+        input_lines = []
+        for i, item in enumerate(items):
+            title = item.title[:120]
+            summary = item.summary[:200] if item.summary else "(无摘要)"
+            input_lines.append(f"[{i}] {title} | {summary}")
+        user_content = "\n".join(input_lines)
 
-        async def _process_one(item: ContentItem) -> ContentItem:
-            async with semaphore:
-                result = await self._process_single(item)
-                await asyncio.sleep(0.5)  # 避免触发 API 限速
-                return result
-
-        tasks = [_process_one(it) for it in items]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-
-        processed = []
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                logger.error(f"AI 处理失败 [{items[i].title[:30]}]: {result}")
-                processed.append(items[i])
-            else:
-                processed.append(result)
-
-        return processed
-
-    async def _process_single(self, item: ContentItem) -> ContentItem:
-        """处理单条内容。"""
-        text = f"标题: {item.title}\n\n内容: {item.summary}"
-        if len(text) > 1500:
-            text = text[:1500]
+        logger.info(f"批量处理 {len(items)} 条内容...")
 
         try:
-            async with httpx.AsyncClient(timeout=30) as client:
+            async with httpx.AsyncClient(timeout=120) as client:
                 resp = await client.post(
                     f"{self.api_base}/chat/completions",
                     headers={
@@ -104,8 +121,8 @@ class AIProcessor:
                     json={
                         "model": self.model,
                         "messages": [
-                            {"role": "system", "content": SYSTEM_PROMPT},
-                            {"role": "user", "content": text},
+                            {"role": "system", "content": BATCH_SYSTEM_PROMPT},
+                            {"role": "user", "content": user_content},
                         ],
                         "max_tokens": self.max_tokens,
                         "temperature": self.temperature,
@@ -113,23 +130,58 @@ class AIProcessor:
                 )
                 resp.raise_for_status()
                 data = resp.json()
-
                 content = data["choices"][0]["message"]["content"]
-                # 去除可能的 markdown 代码块包裹
-                content = content.strip()
-                if content.startswith("```"):
-                    # 去除 ```json 和末尾 ```
-                    content = re.sub(r"^```(?:json)?\s*", "", content)
-                    content = re.sub(r"\s*```$", "", content)
-                result = json.loads(content)
 
-                item.translation = result.get("translation", "")
-                item.ai_summary = result.get("summary", "")
-                item.opportunity_hint = result.get("opportunity_hint", "")
+                # 解析 JSON
+                results = self._parse_batch_response(content)
 
-                ai_score = result.get("relevance_score", 0.0)
-                if isinstance(ai_score, (int, float)):
-                    item.relevance_score = max(item.relevance_score, ai_score)
-            return item
+                # 应用到原始条目
+                result_map = {r["index"]: r for r in results if isinstance(r, dict)}
+                for i, item in enumerate(items):
+                    r = result_map.get(i)
+                    if r and r.get("relevant"):
+                        item.translation = r.get("translation", "")
+                        item.ai_summary = r.get("summary", "")
+                        item.opportunity_hint = r.get("opportunity_hint", "")
+                        if isinstance(r.get("relevance_score"), (int, float)):
+                            item.relevance_score = r["relevance_score"]
+                        item.ai_processed = True
+                    else:
+                        # 标记为不相关，后续会被过滤
+                        item.relevance_score = 0.0
+                        item.ai_processed = True
+
+            return items
+
         except Exception as e:
-            raise
+            logger.error(f"批量 AI 处理失败: {e}")
+            # 失败时标记所有条目为未处理，后续会被过滤
+            for item in items:
+                item.ai_processed = False
+            return items
+
+    def _parse_batch_response(self, content: str) -> list[dict]:
+        """解析批量 AI 响应。"""
+        content = content.strip()
+
+        # 去除可能的 markdown 代码块包裹
+        if content.startswith("```"):
+            content = re.sub(r"^```(?:json)?\s*", "", content)
+            content = re.sub(r"\s*```$", "", content)
+
+        # 尝试直接解析
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            pass
+
+        # 尝试提取 JSON 数组
+        match = re.search(r"\[.*\]", content, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group())
+            except json.JSONDecodeError:
+                pass
+
+        logger.error(f"无法解析 AI 响应: {content[:500]}")
+        return []

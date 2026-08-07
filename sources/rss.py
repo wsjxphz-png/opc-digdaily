@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 class RSSSource(BaseSource):
     name = "rss"
 
-    async def fetch(self, cfg: dict, keywords: list[str]) -> list[ContentItem]:
+    async def fetch(self, cfg: dict, keywords: dict) -> list[ContentItem]:
         feeds = cfg.get("feeds", [])
         if not feeds:
             logger.info("RSS: 无配置源，跳过")

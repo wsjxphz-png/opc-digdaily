@@ -19,7 +19,7 @@ CST = timezone(timedelta(hours=8))
 class YouTubeSource(BaseSource):
     name = "youtube"
 
-    async def fetch(self, cfg: dict, keywords: list[str]) -> list[ContentItem]:
+    async def fetch(self, cfg: dict, keywords: dict) -> list[ContentItem]:
         api_key = cfg.get("api_key", "")
         if not api_key or api_key.startswith("YOUR_"):
             logger.warning("YouTube API key 未配置，跳过")

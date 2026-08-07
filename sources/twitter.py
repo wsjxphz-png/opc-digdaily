@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 class TwitterSource(BaseSource):
     name = "twitter"
 
-    async def fetch(self, cfg: dict, keywords: list[str]) -> list[ContentItem]:
+    async def fetch(self, cfg: dict, keywords: dict) -> list[ContentItem]:
         items: list[ContentItem] = []
 
         # 优先用 Nitter RSS (免费)

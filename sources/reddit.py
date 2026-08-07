@@ -20,7 +20,7 @@ class RedditSource(BaseSource):
     # Reddit 公开 API 无需认证即可读取
     BASE = "https://www.reddit.com"
 
-    async def fetch(self, cfg: dict, keywords: list[str]) -> list[ContentItem]:
+    async def fetch(self, cfg: dict, keywords: dict) -> list[ContentItem]:
         subreddits = cfg.get("subreddits", [])
         if not subreddits:
             logger.info("Reddit: 未配置 subreddits，跳过")

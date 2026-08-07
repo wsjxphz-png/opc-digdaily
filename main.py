@@ -25,6 +25,7 @@ from push import FeishuPusher
 from sources import (
     YouTubeSource, RSSSource, RedditSource, TwitterSource, ContentItem,
 )
+from sources.base import has_strong_keyword
 
 # 项目根目录
 ROOT = Path(__file__).parent
@@ -113,7 +114,7 @@ class DailyOpportunityBot:
 
     def __init__(self, config: dict):
         self.config = config
-        self.keywords = config.get("keywords", [])
+        self.keywords = config.get("keywords", {})
         self.push_max = config.get("schedule", {}).get("push_max", 10)
 
         # 初始化各模块
@@ -147,8 +148,8 @@ class DailyOpportunityBot:
         logger.info("===== 开始每日信息采集 =====")
         start = time.time()
 
-        # Phase 1: 并行采集所有源
-        logger.info("[1/4] 采集信息源...")
+        # Phase 1: 并行采集所有源 (采集时用弱关键词初筛)
+        logger.info("[1/5] 采集信息源...")
         all_items: list[ContentItem] = []
         for source, source_cfg in self.sources:
             if not source_cfg.get("enabled", False):
@@ -163,37 +164,68 @@ class DailyOpportunityBot:
 
         logger.info(f"采集完成: 共 {len(all_items)} 条原始内容")
 
-        # Phase 2: 去重
-        logger.info("[2/4] 去重...")
+        # Phase 2: 强关键词预筛 — 必须命中至少 1 个 OPC 专属词
+        logger.info("[2/5] 强关键词预筛选...")
+        before = len(all_items)
+        all_items = [
+            it for it in all_items
+            if has_strong_keyword(f"{it.title} {it.summary}", self.keywords)
+        ]
+        logger.info(f"预筛后: {before} → {len(all_items)} 条 (仅保留 OPC 强相关内容)")
+
+        # Phase 3: 去重
+        logger.info("[3/5] 去重...")
         self.history.load()
         filtered = [it for it in all_items if not self.history.is_seen(it.url)]
         logger.info(f"去重后: {len(filtered)} 条新内容")
 
-        # Phase 3: AI 处理
-        logger.info("[3/4] AI 翻译+总结+机会挖掘...")
-        if self.ai.enabled and filtered:
+        if not filtered:
+            logger.warning("无新内容，跳过推送")
+            elapsed = time.time() - start
+            logger.info(f"===== 完成 (无推送)，耗时 {elapsed:.1f}s =====")
+            return
+
+        # Phase 4: AI 批量处理 (一次 API 调用)
+        logger.info("[4/5] AI 批量翻译+总结+机会挖掘...")
+        top_items = []
+        if self.ai.enabled:
             filtered = await self.ai.process(filtered)
-            # 按相关性排序
-            filtered.sort(key=lambda x: x.relevance_score, reverse=True)
-            logger.info(f"AI 处理完成，Top 5 得分:")
-            for it in filtered[:5]:
-                logger.info(
-                    f"  [{it.relevance_score:.2f}] {it.title[:60]}... "
-                    f"| 机会: {it.opportunity_hint[:40]}"
-                )
+            # 只保留 AI 判定为相关且得分 >= 门槛的
+            from ai.processor import MIN_SCORE
+            top_items = [
+                it for it in filtered
+                if it.ai_processed and it.relevance_score >= MIN_SCORE
+            ]
+            # 按得分排序
+            top_items.sort(key=lambda x: x.relevance_score, reverse=True)
+            # 截取 Top N
+            top_items = top_items[:self.push_max]
+            logger.info(f"AI 筛选后: {len(filtered)} → {len(top_items)} 条推送候选")
+            if top_items:
+                logger.info("Top 推送:")
+                for it in top_items:
+                    logger.info(
+                        f"  [{it.relevance_score:.2f}] {it.title[:60]}... "
+                        f"| {it.opportunity_hint[:40]}"
+                    )
         else:
-            logger.info("AI 未配置或无语料，跳过处理")
+            logger.warning("AI 未配置，无法进行内容筛选，跳过推送")
+            elapsed = time.time() - start
+            logger.info(f"===== 完成 (AI未配置)，耗时 {elapsed:.1f}s =====")
+            return
 
-        # 截取 Top N
-        top_items = filtered[:self.push_max]
+        if not top_items:
+            logger.warning("AI 筛选后无达标内容，跳过推送")
+            elapsed = time.time() - start
+            logger.info(f"===== 完成 (无达标内容)，耗时 {elapsed:.1f}s =====")
+            return
 
-        # Phase 4: 飞书推送
-        logger.info("[4/4] 推送飞书...")
+        # Phase 5: 飞书推送
+        logger.info("[5/5] 推送飞书...")
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
-        if self.pusher.enabled and top_items:
+        if self.pusher.enabled:
             ok = await self.pusher.push_daily_report(top_items, date_str)
             if ok:
-                # 标记已推送
                 for it in top_items:
                     self.history.mark_seen(it.url)
                 self.history.save()
@@ -201,15 +233,14 @@ class DailyOpportunityBot:
             else:
                 logger.error("推送失败")
         else:
-            if not self.pusher.enabled:
-                logger.warning("飞书未配置，跳过推送。内容预览：")
-                for it in top_items:
-                    print(f"\n--- [{it.source}] {it.title[:80]}")
-                    print(f"    URL: {it.url}")
-                    if it.ai_summary:
-                        print(f"    总结: {it.ai_summary}")
-                    if it.opportunity_hint:
-                        print(f"    机会: {it.opportunity_hint}")
+            logger.warning("飞书未配置，跳过推送")
+            for it in top_items:
+                print(f"\n--- [{it.source}] {it.title[:80]} — {it.relevance_score:.2f}")
+                print(f"    URL: {it.url}")
+                if it.ai_summary:
+                    print(f"    总结: {it.ai_summary}")
+                if it.opportunity_hint:
+                    print(f"    机会: {it.opportunity_hint}")
 
         elapsed = time.time() - start
         logger.info(f"===== 完成，耗时 {elapsed:.1f}s =====")
