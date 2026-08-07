@@ -1,26 +1,25 @@
 # ============================================================
-# 一人公司 (OPC) 赚钱机会挖掘 — 每日信息推送系统
+# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统
 # ============================================================
-# 🎉 零成本方案：使用 WorkBuddy 内置定时任务 + AI，无需任何外部 API Key
-#    你只需要填下面 1 项：
-#      feishu.webhook_url  ← 飞书群机器人 webhook
-#   已创建自动化任务，每天 9:00 自动执行。
+# 用户画像：不会写代码，所有搭建由 AI（Cursor/Bolt/ChatGPT）代劳
+# 推送标准：非程序员 + AI搭建 + 有实操过程 + 能复现
 # ============================================================
-# 如果你也想用 Python 脚本独立运行（start.bat）：
-#   还需填 ai.api_key (推荐 DeepSeek，¥0.02/天)
+# 零成本方案：使用 WorkBuddy 内置定时任务 + AI
+#   你只需要填 feishu.webhook_url
+#   已创建自动化任务，每天 9:00 自动执行
 # ============================================================
 
-# --- 飞书推送 ← 必填 ---
+# --- 飞书推送 ---
 feishu:
-  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/你的TOKEN"
+  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/6f30ced2-f0b9-4419-82bf-072d699cd926"
   card_color: "blue"
 
-# --- AI 大模型 (仅 start.bat 独立运行时需要，自动化不需要) ---
+# --- AI 大模型 (仅 GitHub Actions 独立运行时需要) ---
 ai:
   api_base: "https://apihub.agnes-ai.com/v1"
   api_key: "sk-你的API_KEY"
   model: "agnes-2.5-flash"
-  max_tokens: 6000       # 批量模式需要更大输出（17条 × ~300 tokens/条）
+  max_tokens: 6000
   temperature: 0.3
 
 # --- 定时调度 ---
@@ -28,16 +27,14 @@ schedule:
   hour: 9
   minute: 0
   max_per_source: 5
-  push_max: 8           # 每天最多推送 8 条
+  push_max: 8
 
 # ============================================================
-# 关键词分为两级：
-#   strong: 必须至少命中 1 个才能进入候选池（OPC 专属词）
-#   weak:   加分项，不独立决定是否入库
+# 关键词：strong 必须命中≥1个才入库，weak 加分
 # ============================================================
 keywords:
   strong:
-    # OPC 专属概念 — 必须至少命中 1 个
+    # OPC 专属
     - "OPC"
     - "one person company"
     - "one person business"
@@ -52,7 +49,6 @@ keywords:
     - "micro saas"
     - "microsaas"
     - "micro-saas"
-    - "micro SaaS"
     - "bootstrapping"
     - "bootstrapped"
     - "productized service"
@@ -62,9 +58,7 @@ keywords:
     - "build in public"
     - "#buildinpublic"
     - "MRR"
-    - "ARR"
     - "monthly recurring revenue"
-    - "annual recurring revenue"
     - "passive income"
     - "side project revenue"
     - "side hustle income"
@@ -73,11 +67,10 @@ keywords:
     - "搞钱"
     - "small bet"
     - "maker"
-    - "nocode business"
-    - "no-code business"
-    # === 非程序员/AI代写代码 专属词 ===
+    # 非程序员/AI代写代码 专属
     - "no code"
     - "no-code"
+    - "nocode"
     - "low code"
     - "low-code"
     - "can't code"
@@ -87,7 +80,6 @@ keywords:
     - "not a developer"
     - "never coded"
     - "zero coding"
-    - "zero programming"
     - "I built with AI"
     - "built with AI"
     - "AI coded"
@@ -105,8 +97,37 @@ keywords:
     - "AI编程"
     - "AI写代码"
     - "用AI开发"
+    # 数字产品/模板变现
+    - "gumroad"
+    - "notion template"
+    - "digital product"
+    - "digital download"
+    - "printable"
+    - "etsy shop"
+    - "print on demand"
+    - "POD"
+    - "模板赚钱"
+    - "卖模板"
+    # 内容变现
+    - "newsletter"
+    - "paid newsletter"
+    - "付费订阅"
+    - "知识星球"
+    - "知识付费"
+    - "online course"
+    - "cohort based course"
+    - "self publishing"
+    - "kindle publishing"
+    - "自媒体赚钱"
+    # 低门槛电商
+    - "dropshipping"
+    - "dropship"
+    - "一件代发"
+    - "跨境电商"
+    - "shopify"
+    - "amazon fba"
+    - "amazon seller"
   weak:
-    # 加分项 — 不独立决定入库
     - "side project"
     - "side hustle"
     - "freelance"
@@ -116,12 +137,6 @@ keywords:
     - "数字游民"
     - "creator economy"
     - "content creator"
-    - "newsletter business"
-    - "知识付费"
-    - "online course"
-    - "gumroad"
-    - "product hunt"
-    - "appsumo"
     - "startup"
     - "创业"
     - "副业"
@@ -141,7 +156,6 @@ keywords:
     - "订阅"
     - "ecommerce"
     - "e-commerce"
-    - "dropshipping"
     - "affiliate"
     - "consulting"
     - "coaching"
@@ -149,170 +163,164 @@ keywords:
     - "platform"
     - "plugin"
     - "template"
-    - "starter kit"
-    - "boilerplate"
     - "automation"
     - "自动化"
     - "AI agent"
     - "AI tool"
     - "AI创业"
-    - "prompt"
     - "LLM"
     - "stripe"
     - "出海"
     - "remote"
     - "WFH"
-    - "digital product"
-    - "info product"
     - "growth"
     - "marketing"
     - "SEO"
+    - "audience building"
 
 # ============================================================
-# 以下信息源已全部预配置好，无需修改即可使用
+# 信息源 — 全部面向非程序员赚钱场景
 # ============================================================
 
 sources:
-  # --- RSS 源 (免费) ---
+  # ==========================================================
+  # RSS 源（免费）
+  # ==========================================================
   rss:
     enabled: true
     feeds:
-      # ▸ 英文：独立开发者 / 一人公司
-      - name: "Indie Hackers"
-        url: "https://www.indiehackers.com/rss"
-      - name: "Hacker News (Top)"
-        url: "https://hnrss.org/frontpage"
-      - name: "Product Hunt"
-        url: "https://www.producthunt.com/feed"
-      - name: "Sidebar.io"
-        url: "https://sidebar.io/feed.xml"
-      - name: "The Hustle"
-        url: "https://thehustle.co/feed/"
-      - name: "Trends.vc"
-        url: "https://trends.vc/feed/"
-      - name: "MicroConf"
-        url: "https://microconf.com/feed/"
-      - name: "Failory"
-        url: "https://www.failory.com/blog/feed"
+      # ▸ 英文：赚钱实操案例（非程序员友好）
       - name: "Starter Story"
         url: "https://www.starterstory.com/feed"
-      - name: "Marketing Examples"
-        url: "https://marketingexamples.com/feed"
-      - name: "GrowthHackers"
-        url: "https://growthhackers.com/feed"
-      # ▸ 英文：知名独立开发者博客
-      - name: "Pieter Levels (levels.io)"
-        url: "https://levels.io/feed/"
-      - name: "Daniel Vassallo"
-        url: "https://dvassallo.com/feed/"
-      - name: "Patio11 (Kalzumeus)"
-        url: "https://www.kalzumeus.com/feed.xml"
-      - name: "Tyler Tringas (Earnest Capital)"
-        url: "https://tylertringas.com/feed/"
-      # ▸ 中文：创业 / 科技资讯
+      - name: "Side Hustle Nation"
+        url: "https://www.sidehustlenation.com/feed/"
+      - name: "Smart Passive Income (SPI)"
+        url: "https://www.smartpassiveincome.com/feed/"
+      - name: "Niche Pursuits"
+        url: "https://www.nichepursuits.com/feed/"
+
+      # ▸ 英文：在线生意买卖案例（看别人做了什么赚到钱）
+      - name: "Empire Flippers Blog"
+        url: "https://empireflippers.com/feed/"
+      - name: "Flippa Blog"
+        url: "https://flippa.com/blog/feed/"
+
+      # ▸ 英文：数字产品 / 模板变现
+      - name: "Gumroad Blog"
+        url: "https://blog.gumroad.com/feed"
+
+      # ▸ 英文：创业社区（需 AI 筛选出非程序员内容）
+      - name: "Indie Hackers"
+        url: "https://www.indiehackers.com/rss"
+      - name: "Product Hunt"
+        url: "https://www.producthunt.com/feed"
+
+      # ▸ 英文：非技术背景成功案例
+      - name: "No CS Degree"
+        url: "https://www.nocsdegree.com/feed/"
+
+      # ▸ 英文：No-code 社区
+      - name: "Maker Mag"
+        url: "https://makermag.com/feed/"
+
+      # ▸ 中文：知乎赚钱话题
+      - name: "知乎 · 创业"
+        url: "https://www.zhihu.com/rss"
+      # ▸ 中文：轻量保留（需 AI 强筛）
       - name: "少数派"
         url: "https://sspai.com/feed"
-      - name: "阮一峰的网络日志"
-        url: "https://feeds.feedburner.com/ruanyifeng"
-      - name: "36氪"
-        url: "https://36kr.com/feed"
-      - name: "钛媒体"
-        url: "https://www.tmtpost.com/rss.xml"
 
-  # --- Reddit (免费，无需 API key) ---
+  # ==========================================================
+  # Reddit（免费，RSS 模式抓取）
+  # ==========================================================
   reddit:
     enabled: true
-    user_agent: "DailyOpportunityBot/1.0"
     sort: "hot"
-    limit: 10
+    limit: 5
     subreddits:
-      # 核心
-      - "SideProject"
-      - "SaaS"
-      - "indiehackers"
-      - "microsaas"
+      # ▸ 数字产品 / 模板变现
+      - "Gumroad"
+      - "EtsySellers"
+      - "printondemand"
+      - "Notion"
+
+      # ▸ 内容变现
+      - "Blogging"
+      - "selfpublish"
+      - "Substack"
+      - "NewTubers"
+
+      # ▸ 无代码 / AI 搭建
+      - "nocode"
+      - "Bubble"
+      - "webflow"
+
+      # ▸ 电商 / 平台（低门槛）
+      - "ecommerce"
+      - "dropship"
+      - "shopify"
+      - "AmazonSeller"
+      - "sweatystartup"
+      - "smallbusiness"
+
+      # ▸ 综合赚钱
       - "passive_income"
       - "Entrepreneur"
       - "EntrepreneurRideAlong"
-      - "sweatystartup"
       - "juststart"
-      - "smallbusiness"
-      - "startups"
-      # 技能/工具
-      - "webdev"
-      - "nocode"
-      - "automation"
-      # 营销/增长
-      - "SEO"
-      - "growthhacking"
-      - "content_marketing"
-      - "copywriting"
-      - "emailmarketing"
-      # 变现
-      - "ecommerce"
-      - "dropship"
-      - "affiliatemarketing"
-      - "growmybusiness"
-      # 工作方式
       - "digitalnomad"
       - "freelance"
-      - "workfromhome"
-      - "remotework"
+      - "affiliatemarketing"
 
-  # --- X/Twitter (通过 Nitter RSS，免费) ---
+  # ==========================================================
+  # X/Twitter（Nitter RSS 模式，目前不稳定，暂时关闭）
+  # ==========================================================
   twitter:
     enabled: false
     nitter_rss:
-      enabled: true
+      enabled: false
       instance: "https://nitter.net"
       accounts:
-        # ▸ 独立开发者 / Solopreneur 标杆
-        - "levelsio"          # Pieter Levels — Nomad List, Remote OK, PhotoAI
-        - "dvassallo"         # Daniel Vassallo — 前AWS，年入$500K+小产品矩阵
-        - "marc_louvion"      # Marc Louvion — ShipFast, 月入$100K+
-        - "csallen"           # Courtland Allen — Indie Hackers 创始人
-        - "arvidkahl"         # Arvid Kahl — Zero to Sold, The Embedded Entrepreneur
-        - "jakobgreenfeld"    # Jakob Greenfeld — 独立开发者
-        - "tibo_maker"        # Tibo — Maker & 独立开发者
-        - "alexanderisora"    # Alexander Isora — 独立开发者
-        - "thisiskp_"         # KP — Build In Public 倡导者
-        # ▸ 增长 / 营销
-        - "hnshah"            # Hiten Shah — SaaS 增长专家
-        - "thejustinwelsh"    # Justin Welsh — Solopreneur $2M+ ARR
-        - "patio11"           # Patrick McKenzie — Stripe Atlas, Bingo Card Creator
-        - "gregisenberg"      # Greg Isenberg — 产品/社区
-        - "jackbutcher"       # Jack Butcher — Visualize Value
-        # ▸ 投资人/思想家
-        - "paulg"             # Paul Graham — Y Combinator
-        - "naval"             # Naval Ravikant — AngelList 创始人
-        - "garrytan"          # Garry Tan — YC CEO
-        - "shl"               # Sahil Lavingia — Gumroad 创始人
-        # ▸ 技术/开发
-        - "wesbos"            # Wes Bos — 开发者教育
-        - "aaditsh"           # Aadit Sheth — AI 创业
-        - "awilkinson"        # Andrew Wilkinson — Tiny 创始人
-        - "dharmesh"          # Dharmesh Shah — HubSpot 联合创始人
-        # ▸ 中文圈
-        - "zen_buss"          # 禅叔 — 独立开发者/AI创业
+        # 非程序员/AI搭建方向（Nitter 恢复后启用）
+        - "levelsio"       # 产品思路值得借鉴
+        - "nocodelife"     # No-code 创业
+        - "nocodemvp"      # AI 搭建 MVP
 
-  # --- YouTube (需要 API key，默认关闭) ---
+  # ==========================================================
+  # YouTube（需 API key，暂时关闭。配好 key 后启用）
+  # ==========================================================
   youtube:
     enabled: false
     api_key: "你的YOUTUBE_API_KEY"
-    channels:
-      - "UCaFm7NIJ3pB2OoMniLbJ-hw"
+    channels: []
     search_queries:
-      - "OPC one person company"
-      - "solopreneur business idea"
-      - "micro SaaS ideas 2026"
-      - "side hustle that make money"
-      - "passive income business model"
-      - "build in public journey"
-      - "一人公司 赚钱"
-      - "AI创业 副业"
+      # 英文：非程序员 + AI 搭建赚钱
+      - "I built a business with AI no coding"
+      - "no code SaaS make money 2026"
+      - "solopreneur passive income AI tools"
+      - "digital products make money gumroad etsy"
+      - "how to make money with bolt.new lovable"
+      - "one person business no code tutorial"
+      - "print on demand step by step 2026"
+      - "content creator monetization no coding"
+      - "non technical founder success story"
+      - "kindle publishing with AI make money"
+      # 中文：AI 副业实操
+      - "一人公司 AI 赚钱 实操"
+      - "零代码 创业 副业 AI 工具"
+      - "不会编程 怎么用 AI 赚钱"
+      - "AI 写代码 搭建网站 副业"
+      - "数字产品 模板 赚钱 Gumroad"
 
-  # --- 公众号 (通过 RSSHub 桥接，需自部署或公共服务) ---
+  # ==========================================================
+  # 公众号 / 中文社区（需 RSSHub。暂时关闭，配置好 RSSHub 后启用）
+  # ==========================================================
   wechat_mp:
     enabled: false
     rsshub_base: "https://rsshub.app"
-    feeds: []
+    feeds:
+      # 以下通过 RSSHub 桥接，需部署 RSSHub 实例
+      # - "生财有术精华帖"
+      # - "即刻 · 产品猎人圈子"
+      # - "小红书 · 赚钱话题"
+      # - "微信问一问 · 副业"
