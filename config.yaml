@@ -19,7 +19,7 @@ ai:
   api_base: "https://apihub.agnes-ai.com/v1"
   api_key: "sk-你的API_KEY"
   model: "agnes-2.5-flash"
-  max_tokens: 6000
+  max_tokens: 8000
   temperature: 0.3
 
 # --- 定时调度 ---
@@ -287,30 +287,27 @@ sources:
         - "nocodemvp"      # AI 搭建 MVP
 
   # ==========================================================
-  # YouTube（需 API key，暂时关闭。配好 key 后启用）
+  # YouTube（RSS 模式，免费，不需要 API key）
   # ==========================================================
   youtube:
-    enabled: false
+    enabled: true
     api_key: "你的YOUTUBE_API_KEY"
-    channels: []
-    search_queries:
-      # 英文：非程序员 + AI 搭建赚钱
-      - "I built a business with AI no coding"
-      - "no code SaaS make money 2026"
-      - "solopreneur passive income AI tools"
-      - "digital products make money gumroad etsy"
-      - "how to make money with bolt.new lovable"
-      - "one person business no code tutorial"
-      - "print on demand step by step 2026"
-      - "content creator monetization no coding"
-      - "non technical founder success story"
-      - "kindle publishing with AI make money"
-      # 中文：AI 副业实操
-      - "一人公司 AI 赚钱 实操"
-      - "零代码 创业 副业 AI 工具"
-      - "不会编程 怎么用 AI 赚钱"
-      - "AI 写代码 搭建网站 副业"
-      - "数字产品 模板 赚钱 Gumroad"
+    rss_feeds:
+      enabled: true
+      limit: 3
+      channel_ids:
+        # 被动收入 / 副业实操
+        - id: "UCGk1LitxAZVnqQn0_nt5qxw"
+          label: "Pat Flynn (Smart Passive Income)"
+        # 电商 / 按需打印 / 副业教程
+        - id: "UCC8wczy7734jKPhiR2UkS9A"
+          label: "Wholesale Ted"
+        # 内容创业 / 博客 / SEO
+        - id: "UCytOqtKYpACcWMD14UjhSeQ"
+          label: "Income School"
+        # 生产力 / 创作者经济
+        - id: "UCoOae5nYA7VqaXzerajD0lg"
+          label: "Ali Abdaal"
 
   # ==========================================================
   # 公众号 / 中文社区（需 RSSHub。暂时关闭，配置好 RSSHub 后启用）

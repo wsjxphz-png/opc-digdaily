@@ -14,6 +14,7 @@ class ContentItem:
     title: str
     url: str
     summary: str = ""          # 原始摘要/描述
+    full_text: str = ""         # 全文内容（enricher 填充，用于 AI 深度判断）
     source: str = ""           # 源标识: youtube / rss / reddit / twitter / wechat
     source_name: str = ""      # 频道名/博客名/用户等
     published: Optional[datetime] = None

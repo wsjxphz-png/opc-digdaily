@@ -26,6 +26,7 @@ from sources import (
     YouTubeSource, RSSSource, RedditSource, TwitterSource, ContentItem,
 )
 from sources.base import has_strong_keyword
+from sources.enricher import ContentEnricher
 
 # 项目根目录
 ROOT = Path(__file__).parent
@@ -145,7 +146,7 @@ class DailyOpportunityBot:
             api_base=ai_cfg.get("api_base", ""),
             api_key=ai_cfg.get("api_key", ""),
             model=ai_cfg.get("model", "gpt-4o-mini"),
-            max_tokens=ai_cfg.get("max_tokens", 6000),
+            max_tokens=ai_cfg.get("max_tokens", 8000),
             temperature=ai_cfg.get("temperature", 0.3),
         )
 
@@ -207,8 +208,13 @@ class DailyOpportunityBot:
             logger.info(f"===== 完成 (无推送)，耗时 {elapsed:.1f}s =====")
             return
 
-        # Phase 4: AI 批量处理 (一次 API 调用)
-        logger.info("[4/5] AI 批量翻译+总结+机会挖掘...")
+        # Phase 4: 全文提取 — 抓文章正文 / Reddit 评论
+        logger.info("[4/5] 全文提取（抓取文章正文+评论）...")
+        enricher = ContentEnricher()
+        filtered = await enricher.enrich(filtered)
+
+        # Phase 5: AI 批量处理 (一次 API 调用)
+        logger.info("[5/5] AI 批量翻译+总结+机会挖掘...")
         top_items = []
         if self.ai.enabled:
             filtered = await self.ai.process(filtered)
@@ -245,8 +251,8 @@ class DailyOpportunityBot:
             logger.info(f"===== 完成 (无达标内容)，耗时 {elapsed:.1f}s =====")
             return
 
-        # Phase 5: 飞书推送
-        logger.info("[5/5] 推送飞书...")
+        # Phase 6: 飞书推送
+        logger.info("[6/6] 推送飞书...")
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
         if self.pusher.enabled:
             ok = await self.pusher.push_daily_report(top_items, date_str)

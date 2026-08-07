@@ -166,12 +166,13 @@ class AIProcessor:
         if not self._enabled or not items:
             return items
 
-        # 构建批量输入：每条内容包含 index + 标题 + 摘要
+        # 构建批量输入：优先使用全文，否则用摘要
         input_lines = []
         for i, item in enumerate(items):
             title = item.title[:120]
-            summary = item.summary[:200] if item.summary else "(无摘要)"
-            input_lines.append(f"[{i}] {title} | {summary}")
+            # 有全文用全文（截取 1200 字给 AI），没全文用摘要
+            content = (item.full_text or item.summary or "(无内容)")[:1200]
+            input_lines.append(f"[{i}] {title} | {content}")
         user_content = "\n".join(input_lines)
 
         logger.info(f"批量处理 {len(items)} 条内容...")
