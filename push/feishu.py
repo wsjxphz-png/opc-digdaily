@@ -1,8 +1,7 @@
 """
 飞书推送模块 — 组装卡片消息并推送到群聊。
 
-使用飞书消息卡片 (Message Card) 格式，支持富文本、图片、按钮等。
-参考: https://open.feishu.cn/document/uAjLw4CM/ukzMukzMukzM/feishu-cards/card-components
+支持双板块：国内（中文源）+ 国际（英文源），各一板块。
 """
 
 import json
@@ -16,7 +15,6 @@ from sources.base import ContentItem
 
 logger = logging.getLogger(__name__)
 
-# 卡片颜色常量
 COLORS = {
     "blue": "blue",
     "red": "red",
@@ -26,24 +24,16 @@ COLORS = {
     "turquoise": "turquoise",
 }
 
-SOURCE_EMOJI = {
-    "youtube": "▶️",
-    "rss": "📡",
-    "reddit": "🤖",
-    "twitter": "🐦",
-    "wechat": "💬",
-}
-
 DIFFICULTY_BADGE = {
     "零门槛": "🟢 零门槛",
     "需学习": "🟡 需学习",
     "有一定门槛": "🟠 有一定门槛",
 }
 
+SECTION_EMOJI = {"国内": "🇨🇳", "国际": "🌍"}
+
 
 class FeishuPusher:
-    """飞书卡片推送器。"""
-
     def __init__(self, webhook_url: str, card_color: str = "blue"):
         self.webhook_url = webhook_url
         self.card_color = COLORS.get(card_color, "blue")
@@ -57,99 +47,132 @@ class FeishuPusher:
     def enabled(self) -> bool:
         return self._enabled
 
-    async def push_daily_report(
-        self, items: list[ContentItem], date_str: str
+    # ================================================================
+    # 入口：双板块推送
+    # ================================================================
+
+    async def push_dual_report(
+        self,
+        domestic: list[ContentItem],
+        international: list[ContentItem],
+        date_str: str,
     ) -> bool:
-        """推送每日报告 — 多条内容用单个卡片消息。"""
+        """推送每日报告 — 国内 + 国际两个板块。"""
         if not self._enabled:
             logger.warning("飞书 webhook 未配置")
             return False
-        if not items:
+        if not domestic and not international:
             logger.info("无内容需要推送")
             return False
 
-        card = self._build_card(items, date_str)
+        total = len(domestic) + len(international)
+        card = self._build_dual_card(domestic, international, date_str, total)
         return await self._send_card(card)
 
-    def _build_card(self, items: list[ContentItem], date_str: str) -> dict:
-        """组装飞书消息卡片 JSON。"""
+    # ================================================================
+    # 双板块卡片组装
+    # ================================================================
 
-        # ===== 卡片头部 =====
+    def _build_dual_card(
+        self,
+        domestic: list[ContentItem],
+        international: list[ContentItem],
+        date_str: str,
+        total: int,
+    ) -> dict:
         header = {
             "title": {
                 "tag": "plain_text",
-                "content": f"🔔 OPC 一人公司 · 每日机会挖掘 | {date_str}",
+                "content": f"🔔 OPC 一人公司 · 每日机会 | {date_str}",
             },
             "template": self.card_color,
         }
 
-        # ===== 总览统计 =====
-        # 来源：用实际的源名称（不是 "rss"/"reddit" 这种笼统标签）
-        source_names: list[str] = []
-        for item in items:
-            name = item.source_name or item.source
-            if name and name not in source_names:
-                source_names.append(name)
+        elements = []
 
+        # ---- 顶部统计 ----
         stats_parts = []
-        # 难度分布
-        easy = sum(1 for it in items if "零门槛" in (it.difficulty or ""))
-        learn = sum(1 for it in items if "需学习" in (it.difficulty or ""))
-        hard = sum(1 for it in items if "有一定门槛" in (it.difficulty or ""))
-        diff_parts = []
-        if easy:
-            diff_parts.append(f"🟢{easy}")
-        if learn:
-            diff_parts.append(f"🟡{learn}")
-        if hard:
-            diff_parts.append(f"🟠{hard}")
-        if diff_parts:
-            stats_parts.append(f"难度：{' '.join(diff_parts)}")
-        if source_names:
-            stats_parts.append(f"来源：{' · '.join(source_names[:4])}")
-            if len(source_names) > 4:
-                stats_parts[-1] += f" 等{len(source_names)}个"
+        if domestic:
+            stats_parts.append(f"🇨🇳 国内 {len(domestic)} 条")
+        else:
+            stats_parts.append(f"🇨🇳 国内 0 条（中文源内容偏少，持续优化中）")
+        if international:
+            stats_parts.append(f"🌍 国际 {len(international)} 条")
+        else:
+            stats_parts.append(f"🌍 国际 0 条")
+        stats_text = "  ·  ".join(stats_parts)
 
-        stats_text = "\n".join(stats_parts) if stats_parts else f"今日共 {len(items)} 条"
-
-        elements = [
-            {
-                "tag": "div",
-                "text": {
-                    "tag": "lark_md",
-                    "content": f"**📊 今日共 {len(items)} 条机会**\n{stats_text}",
-                },
+        elements.append({
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": f"**📊 今日共 {total} 条机会**\n{stats_text}",
             },
-            {"tag": "hr"},
-        ]
+        })
+        elements.append({"tag": "hr"})
 
-        # ===== 每条内容卡片 =====
-        # 找最高分作为"今日首选"
+        # ---- 国内板块 ----
+        if domestic:
+            elements.extend(self._build_section("国内", domestic, "red"))
+            if international:
+                elements.append({"tag": "hr"})
+
+        # ---- 国际板块 ----
+        if international:
+            elements.extend(self._build_section("国际", international, "blue"))
+
+        # ---- 底部 ----
+        elements.append({"tag": "hr"})
+        elements.append({
+            "tag": "note",
+            "elements": [{
+                "tag": "plain_text",
+                "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+            }],
+        })
+
+        return {
+            "config": {"wide_screen_mode": True},
+            "header": header,
+            "elements": elements,
+        }
+
+    # ================================================================
+    # 板块内部：标题 + 条目
+    # ================================================================
+
+    def _build_section(
+        self, label: str, items: list[ContentItem], color: str
+    ) -> list[dict]:
+        emoji = SECTION_EMOJI.get(label, "📌")
+        elements = []
+
+        # 板块标题
+        elements.append({
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": f"{emoji} **{label}机会**",
+            },
+        })
+
         top_score = max(it.relevance_score for it in items) if items else 0
 
         for i, item in enumerate(items, 1):
-            is_top_pick = item.relevance_score >= top_score and top_score >= 0.7
+            is_top = item.relevance_score >= top_score and top_score >= 0.7
 
-            # 标题（最多 120 字）
             title_text = item.title
             if len(title_text) > 120:
                 title_text = title_text[:120] + "..."
 
-            # AI 总结和机会
             ai_summary = item.ai_summary or ""
             opportunity = item.opportunity_hint or ""
-
-            # 翻译
             translation = item.translation or ""
-
-            # 难度标签
             difficulty = item.difficulty or ""
             diff_badge = DIFFICULTY_BADGE.get(difficulty, "")
-
-            # 来源显示：用真实源名称，而非 "rss"/"reddit"
             source_label = item.source_name or item.source
 
-            # 构建 markdown
+            # 标题链接
             if item.url:
                 title_line = f"**[{title_text}]({item.url})**"
             else:
@@ -157,68 +180,45 @@ class FeishuPusher:
 
             md_lines = []
 
-            # 今日首选标记
-            if is_top_pick and len(items) > 1:
-                md_lines.append(f"⭐ **今日首选** · {diff_badge}" if diff_badge else "⭐ **今日首选**")
+            # 首选标记 + 难度
+            if is_top and len(items) > 1:
+                tag = f"⭐ 首选 · {diff_badge}" if diff_badge else "⭐ 首选"
+                md_lines.append(tag)
             elif diff_badge:
                 md_lines.append(diff_badge)
 
             md_lines.append(title_line)
 
-            # 文章大意
             if ai_summary:
-                md_lines.append(f"📖 **文章大意**：{ai_summary}")
+                md_lines.append(f"📖 {ai_summary}")
 
-            # 机会提示
             if opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
-                md_lines.append(f"💡 **怎么模仿**：{opportunity}")
+                md_lines.append(f"💡 怎么模仿：{opportunity}")
 
-            # 翻译
             if translation:
                 md_lines.append(f"🌐 原标题：{translation[:120]}")
 
-            # 来源
             md_lines.append(f"📎 来自「{source_label}」· {self._time_str(item.published)}")
 
-            elem = {
+            elements.append({
                 "tag": "div",
                 "text": {
                     "tag": "lark_md",
                     "content": "\n".join(md_lines),
                 },
-            }
+            })
 
-            elements.append(elem)
-
-            # 分隔线 (非最后一条)
             if i < len(items):
                 elements.append({"tag": "hr"})
 
-        # ===== 卡片底部 =====
-        elements.append({"tag": "hr"})
-        elements.append({
-            "tag": "note",
-            "elements": [
-                {
-                    "tag": "plain_text",
-                    "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-                }
-            ],
-        })
+        return elements
 
-        card = {
-            "config": {"wide_screen_mode": True},
-            "header": header,
-            "elements": elements,
-        }
-        return card
+    # ================================================================
+    # 工具
+    # ================================================================
 
     async def _send_card(self, card: dict) -> bool:
-        """发送卡片到飞书群。"""
-        payload = {
-            "msg_type": "interactive",
-            "card": card,
-        }
+        payload = {"msg_type": "interactive", "card": card}
         try:
             async with httpx.AsyncClient(timeout=15) as client:
                 resp = await client.post(

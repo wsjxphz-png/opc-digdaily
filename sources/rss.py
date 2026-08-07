@@ -13,6 +13,13 @@ from .base import BaseSource, ContentItem
 
 logger = logging.getLogger(__name__)
 
+# 浏览器 UA — 中文 RSS 站大多要求非默认 UA
+BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/131.0.0.0 Safari/537.36"
+)
+
 
 class RSSSource(BaseSource):
     name = "rss"
@@ -24,7 +31,6 @@ class RSSSource(BaseSource):
             return []
 
         items: list[ContentItem] = []
-        loop = asyncio.get_event_loop()
 
         for feed_def in feeds:
             name = feed_def.get("name", "Unknown")
@@ -33,13 +39,11 @@ class RSSSource(BaseSource):
                 continue
 
             try:
-                # feedparser 是同步的，放线程池跑
-                raw = await loop.run_in_executor(None, feedparser.parse, url)
+                raw = await self._fetch_feed(url)
                 for entry in raw.entries[:10]:
                     title = entry.get("title", "")
                     link = entry.get("link", "")
                     summary = entry.get("summary", entry.get("description", ""))
-                    # 清理 HTML 标签
                     summary = self._strip_html(summary)[:300]
 
                     published = None
@@ -69,6 +73,17 @@ class RSSSource(BaseSource):
 
         logger.info(f"RSS: 获取到 {len(items)} 条")
         return items
+
+    async def _fetch_feed(self, url: str):
+        """用浏览器 UA 请求 RSS URL，成功则用 feedparser 解析文本。"""
+        async with httpx.AsyncClient(
+            timeout=20, follow_redirects=True,
+            headers={"User-Agent": BROWSER_UA},
+        ) as client:
+            resp = await client.get(url)
+            resp.raise_for_status()
+            loop = asyncio.get_event_loop()
+            return await loop.run_in_executor(None, feedparser.parse, resp.text)
 
     @staticmethod
     def _strip_html(text: str) -> str:

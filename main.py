@@ -23,7 +23,7 @@ import yaml
 from ai import AIProcessor
 from push import FeishuPusher
 from sources import (
-    YouTubeSource, RSSSource, RedditSource, TwitterSource, ContentItem,
+    YouTubeSource, RSSSource, RedditSource, TwitterSource, ChineseSearchSource, ContentItem,
 )
 from sources.base import has_strong_keyword
 from sources.enricher import ContentEnricher
@@ -45,11 +45,10 @@ logger = logging.getLogger("main")
 
 
 # ============================================================
-# .env 加载（本地运行用，不提交到 git）
+# .env 加载
 # ============================================================
 
 def _load_dotenv():
-    """加载 .env 文件到环境变量（简单实现，不依赖 python-dotenv）。"""
     env_path = ROOT / ".env"
     if not env_path.exists():
         return
@@ -63,18 +62,16 @@ def _load_dotenv():
             if key and value and key not in os.environ:
                 os.environ[key] = value
 
+
 # ============================================================
 # 配置加载
 # ============================================================
 
 def load_config() -> dict:
-    # 加载 .env 文件（如果存在且不在 git 中）
     _load_dotenv()
-
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
-    # 环境变量覆盖敏感字段 (适合 GitHub Actions / CI)
     if os.environ.get("FEISHU_WEBHOOK_URL"):
         config["feishu"]["webhook_url"] = os.environ["FEISHU_WEBHOOK_URL"]
     if os.environ.get("AI_API_KEY"):
@@ -92,12 +89,10 @@ def load_config() -> dict:
 # ============================================================
 
 class HistoryManager:
-    """简单文件去重，记录已推送的 URL。"""
-
     def __init__(self, path: Path, days: int = 7):
         self.path = Path(path)
         self.days = days
-        self._data: dict[str, str] = {}  # url -> date_str
+        self._data: dict[str, str] = {}
 
     def load(self):
         if self.path.exists():
@@ -109,11 +104,8 @@ class HistoryManager:
         self._prune()
 
     def _prune(self):
-        """清理过期记录。"""
         cutoff = (datetime.now(CST) - timedelta(days=self.days)).strftime("%Y-%m-%d")
-        self._data = {
-            k: v for k, v in self._data.items() if v >= cutoff
-        }
+        self._data = {k: v for k, v in self._data.items() if v >= cutoff}
 
     def is_seen(self, url: str) -> bool:
         return url in self._data
@@ -129,18 +121,113 @@ class HistoryManager:
 
 
 # ============================================================
-# 主流程
+# 管道运行
+# ============================================================
+
+def _build_sources(pipeline_cfg: dict) -> list:
+    """根据管道配置构建信息源列表。"""
+    sources_cfg = pipeline_cfg.get("sources", {})
+    sources = []
+    if sources_cfg.get("rss", {}).get("enabled"):
+        sources.append((RSSSource(), sources_cfg["rss"]))
+    if sources_cfg.get("reddit", {}).get("enabled"):
+        sources.append((RedditSource(), sources_cfg["reddit"]))
+    if sources_cfg.get("youtube", {}).get("enabled"):
+        sources.append((YouTubeSource(), sources_cfg["youtube"]))
+    if sources_cfg.get("twitter", {}).get("enabled"):
+        sources.append((TwitterSource(), sources_cfg["twitter"]))
+    if sources_cfg.get("chinese_search", {}).get("enabled"):
+        sources.append((ChineseSearchSource(), sources_cfg["chinese_search"]))
+    return sources
+
+
+async def _run_pipeline(
+    label: str,
+    pipeline_cfg: dict,
+    ai: AIProcessor,
+    history: HistoryManager,
+) -> list[ContentItem]:
+    """运行一条完整管道，返回推送候选列表。"""
+    logger.info(f"===== [{label}] 开始 =====")
+    start = time.time()
+
+    sources = _build_sources(pipeline_cfg)
+    keywords = pipeline_cfg.get("keywords", {})
+    push_max = pipeline_cfg.get("push_max", 5)
+
+    # Phase 1: 采集
+    logger.info(f"[{label}] 1/5 采集信息源...")
+    all_items: list[ContentItem] = []
+    for source, source_cfg in sources:
+        logger.info(f"  [{label}] [采集] {source.name}...")
+        try:
+            items = await source.fetch(source_cfg, keywords)
+            all_items.extend(items)
+        except Exception as e:
+            logger.error(f"  [{label}] [失败] {source.name}: {e}")
+
+    logger.info(f"[{label}] 采集完成: {len(all_items)} 条")
+
+    # Phase 2: 强关键词预筛
+    logger.info(f"[{label}] 2/5 关键词预筛...")
+    before = len(all_items)
+    all_items = [
+        it for it in all_items
+        if has_strong_keyword(f"{it.title} {it.summary}", keywords)
+    ]
+    logger.info(f"[{label}] 预筛: {before} → {len(all_items)} 条")
+
+    # Phase 3: 去重
+    logger.info(f"[{label}] 3/5 去重...")
+    history.load()
+    filtered = [it for it in all_items if not history.is_seen(it.url)]
+    logger.info(f"[{label}] 去重后: {len(filtered)} 条")
+
+    if not filtered:
+        logger.warning(f"[{label}] 无新内容，跳过")
+        elapsed = time.time() - start
+        logger.info(f"===== [{label}] 完成 (无推送) {elapsed:.1f}s =====")
+        return []
+
+    # Phase 4: 全文提取
+    logger.info(f"[{label}] 4/5 全文提取...")
+    enricher = ContentEnricher()
+    filtered = await enricher.enrich(filtered)
+
+    # Phase 5: AI 处理
+    logger.info(f"[{label}] 5/5 AI 筛选+总结...")
+    top_items = []
+    if ai.enabled:
+        filtered = await ai.process(filtered)
+        from ai.processor import MIN_SCORE
+        top_items = [
+            it for it in filtered
+            if it.ai_processed and it.relevance_score >= MIN_SCORE
+        ]
+        top_items.sort(key=lambda x: x.relevance_score, reverse=True)
+        top_items = top_items[:push_max]
+        logger.info(f"[{label}] AI 筛选: {len(filtered)} → {len(top_items)} 条")
+        if top_items:
+            for it in top_items:
+                logger.info(
+                    f"  [{it.relevance_score:.2f}] {it.title[:60]}..."
+                )
+    else:
+        logger.warning(f"[{label}] AI 未配置，跳过")
+
+    elapsed = time.time() - start
+    logger.info(f"===== [{label}] 完成 {elapsed:.1f}s =====")
+    return top_items
+
+
+# ============================================================
+# 主控
 # ============================================================
 
 class DailyOpportunityBot:
-    """主控类。"""
-
     def __init__(self, config: dict):
         self.config = config
-        self.keywords = config.get("keywords", {})
-        self.push_max = config.get("schedule", {}).get("push_max", 10)
 
-        # 初始化各模块
         ai_cfg = config.get("ai", {})
         self.ai = AIProcessor(
             api_base=ai_cfg.get("api_base", ""),
@@ -158,123 +245,56 @@ class DailyOpportunityBot:
 
         self.history = HistoryManager(HISTORY_PATH)
 
-        # 信息源 registry
-        self.sources = [
-            (YouTubeSource(), config.get("sources", {}).get("youtube", {})),
-            (RSSSource(), config.get("sources", {}).get("rss", {})),
-            (RedditSource(), config.get("sources", {}).get("reddit", {})),
-            (TwitterSource(), config.get("sources", {}).get("twitter", {})),
-        ]
-
     async def run(self):
-        """执行一次完整流程。"""
-        logger.info("===== 开始每日信息采集 =====")
+        logger.info("========== 开始每日双管道推送 ==========")
         start = time.time()
 
-        # Phase 1: 并行采集所有源 (采集时用弱关键词初筛)
-        logger.info("[1/5] 采集信息源...")
-        all_items: list[ContentItem] = []
-        for source, source_cfg in self.sources:
-            if not source_cfg.get("enabled", False):
-                logger.info(f"  [跳过] {source.name}")
-                continue
-            logger.info(f"  [采集] {source.name}...")
-            try:
-                items = await source.fetch(source_cfg, self.keywords)
-                all_items.extend(items)
-            except Exception as e:
-                logger.error(f"  [失败] {source.name}: {e}")
+        # ---- 国内管道 ----
+        domestic_cfg = self.config.get("domestic", {})
+        domestic_items = await _run_pipeline("国内", domestic_cfg, self.ai, self.history)
 
-        logger.info(f"采集完成: 共 {len(all_items)} 条原始内容")
+        # ---- 国际管道 ----
+        international_cfg = self.config.get("international", {})
+        international_items = await _run_pipeline("国际", international_cfg, self.ai, self.history)
 
-        # Phase 2: 强关键词预筛 — 必须命中至少 1 个 OPC 专属词
-        logger.info("[2/5] 强关键词预筛选...")
-        before = len(all_items)
-        all_items = [
-            it for it in all_items
-            if has_strong_keyword(f"{it.title} {it.summary}", self.keywords)
-        ]
-        logger.info(f"预筛后: {before} → {len(all_items)} 条 (仅保留 OPC 强相关内容)")
-
-        # Phase 3: 去重
-        logger.info("[3/5] 去重...")
-        self.history.load()
-        filtered = [it for it in all_items if not self.history.is_seen(it.url)]
-        logger.info(f"去重后: {len(filtered)} 条新内容")
-
-        if not filtered:
-            logger.warning("无新内容，跳过推送")
+        # ---- 合并推送 ----
+        if not domestic_items and not international_items:
+            logger.warning("两条管道均无推送内容")
             elapsed = time.time() - start
-            logger.info(f"===== 完成 (无推送)，耗时 {elapsed:.1f}s =====")
+            logger.info(f"========== 完成 (无推送) {elapsed:.1f}s ==========")
             return
 
-        # Phase 4: 全文提取 — 抓文章正文 / Reddit 评论
-        logger.info("[4/5] 全文提取（抓取文章正文+评论）...")
-        enricher = ContentEnricher()
-        filtered = await enricher.enrich(filtered)
-
-        # Phase 5: AI 批量处理 (一次 API 调用)
-        logger.info("[5/5] AI 批量翻译+总结+机会挖掘...")
-        top_items = []
-        if self.ai.enabled:
-            filtered = await self.ai.process(filtered)
-            # 只保留 AI 判定为相关且得分 >= 门槛的
-            from ai.processor import MIN_SCORE
-            top_items = [
-                it for it in filtered
-                if it.ai_processed and it.relevance_score >= MIN_SCORE
-            ]
-            # 按得分排序
-            top_items.sort(key=lambda x: x.relevance_score, reverse=True)
-            # 截取 Top N
-            top_items = top_items[:self.push_max]
-            logger.info(f"AI 筛选后: {len(filtered)} → {len(top_items)} 条推送候选")
-            if top_items:
-                logger.info("Top 推送:")
-                for it in top_items:
-                    summary_preview = (it.ai_summary or "")[:120]
-                    opp_preview = (it.opportunity_hint or "")[:60]
-                    logger.info(
-                        f"  [{it.relevance_score:.2f}] {it.title[:60]}..."
-                    )
-                    logger.info(f"    总结: {summary_preview}")
-                    logger.info(f"    机会: {opp_preview}")
-        else:
-            logger.warning("AI 未配置，无法进行内容筛选，跳过推送")
-            elapsed = time.time() - start
-            logger.info(f"===== 完成 (AI未配置)，耗时 {elapsed:.1f}s =====")
-            return
-
-        if not top_items:
-            logger.warning("AI 筛选后无达标内容，跳过推送")
-            elapsed = time.time() - start
-            logger.info(f"===== 完成 (无达标内容)，耗时 {elapsed:.1f}s =====")
-            return
-
-        # Phase 6: 飞书推送
-        logger.info("[6/6] 推送飞书...")
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
+
         if self.pusher.enabled:
-            ok = await self.pusher.push_daily_report(top_items, date_str)
+            ok = await self.pusher.push_dual_report(
+                domestic_items, international_items, date_str
+            )
             if ok:
-                for it in top_items:
+                for it in domestic_items + international_items:
                     self.history.mark_seen(it.url)
                 self.history.save()
-                logger.info(f"推送成功: {len(top_items)} 条")
+                logger.info(
+                    f"推送成功: 国内 {len(domestic_items)} 条 + 国际 {len(international_items)} 条"
+                )
             else:
                 logger.error("推送失败")
         else:
-            logger.warning("飞书未配置，跳过推送")
-            for it in top_items:
-                print(f"\n--- [{it.source}] {it.title[:80]} — {it.relevance_score:.2f}")
-                print(f"    URL: {it.url}")
-                if it.ai_summary:
-                    print(f"    总结: {it.ai_summary}")
-                if it.opportunity_hint:
-                    print(f"    机会: {it.opportunity_hint}")
+            logger.warning("飞书未配置")
+            for label, items in [("国内", domestic_items), ("国际", international_items)]:
+                if not items:
+                    continue
+                logger.info(f"\n--- {label} ---")
+                for it in items:
+                    print(f"\n  [{it.source_name}] {it.title[:80]} — {it.relevance_score:.2f}")
+                    print(f"  URL: {it.url}")
+                    if it.ai_summary:
+                        print(f"  大意: {it.ai_summary}")
+                    if it.opportunity_hint:
+                        print(f"  模仿: {it.opportunity_hint}")
 
         elapsed = time.time() - start
-        logger.info(f"===== 完成，耗时 {elapsed:.1f}s =====")
+        logger.info(f"========== 全部完成 {elapsed:.1f}s ==========")
 
 
 async def run_once():
@@ -284,9 +304,7 @@ async def run_once():
 
 
 def run_daemon():
-    """定时服务模式。"""
     import schedule
-
     config = load_config()
     sched = config.get("schedule", {})
     hour = sched.get("hour", 9)
@@ -303,7 +321,6 @@ def run_daemon():
     def _runner():
         asyncio.run(job())
 
-    # 先立即执行一次
     logger.info("首次执行...")
     _runner()
 
@@ -314,20 +331,10 @@ def run_daemon():
         time.sleep(60)
 
 
-# ============================================================
-# CLI
-# ============================================================
-
 def main():
     parser = argparse.ArgumentParser(description="一人公司赚钱机会挖掘 每日推送系统")
-    parser.add_argument(
-        "--daemon", action="store_true",
-        help="启动定时服务模式"
-    )
-    parser.add_argument(
-        "--once", action="store_true",
-        help="立即执行一次 (默认)"
-    )
+    parser.add_argument("--daemon", action="store_true", help="启动定时服务模式")
+    parser.add_argument("--once", action="store_true", help="立即执行一次 (默认)")
     args = parser.parse_args()
 
     if args.daemon:

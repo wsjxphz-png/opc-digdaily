@@ -1,12 +1,9 @@
 # ============================================================
-# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统
+# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统 v2
 # ============================================================
-# 用户画像：不会写代码，所有搭建由 AI（Cursor/Bolt/ChatGPT）代劳
-# 推送标准：非程序员 + AI搭建 + 有实操过程 + 能复现
-# ============================================================
-# 零成本方案：使用 WorkBuddy 内置定时任务 + AI
-#   你只需要填 feishu.webhook_url
-#   已创建自动化任务，每天 9:00 自动执行
+# 用户画像：不会写代码，所有搭建由 AI 代劳
+# 推送标准：非程序员 + 有实操过程 + 能复现
+# 双管道：国内（中文源）+ 国际（英文源），各 5 条
 # ============================================================
 
 # --- 飞书推送 ---
@@ -14,7 +11,7 @@ feishu:
   webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/6f30ced2-f0b9-4419-82bf-072d699cd926"
   card_color: "blue"
 
-# --- AI 大模型 (仅 GitHub Actions 独立运行时需要) ---
+# --- AI 大模型 ---
 ai:
   api_base: "https://apihub.agnes-ai.com/v1"
   api_key: "sk-你的API_KEY"
@@ -27,297 +24,341 @@ schedule:
   hour: 9
   minute: 0
   max_per_source: 5
+
+# ============================================================
+# 国内管道：中文赚钱实操内容
+# ============================================================
+domestic:
   push_max: 5
 
-# ============================================================
-# 关键词：strong 必须命中≥1个才入库，weak 加分
-# ============================================================
-keywords:
-  strong:
-    # OPC 专属
-    - "OPC"
-    - "one person company"
-    - "one person business"
-    - "一人公司"
-    - "solopreneur"
-    - "solopreneurship"
-    - "indie hacker"
-    - "indiehacker"
-    - "solo founder"
-    - "solo developer"
-    - "lifestyle business"
-    - "micro saas"
-    - "microsaas"
-    - "micro-saas"
-    - "bootstrapping"
-    - "bootstrapped"
-    - "productized service"
-    - "独立开发者"
-    - "个人开发者"
-    - "一人企业"
-    - "build in public"
-    - "#buildinpublic"
-    - "MRR"
-    - "monthly recurring revenue"
-    - "passive income"
-    - "side project revenue"
-    - "side hustle income"
-    - "副业赚钱"
-    - "被动收入"
-    - "搞钱"
-    - "small bet"
-    - "maker"
-    # 非程序员/AI代写代码 专属
-    - "no code"
-    - "no-code"
-    - "nocode"
-    - "low code"
-    - "low-code"
-    - "can't code"
-    - "cannot code"
-    - "non-programmer"
-    - "non-technical founder"
-    - "not a developer"
-    - "never coded"
-    - "zero coding"
-    - "I built with AI"
-    - "built with AI"
-    - "AI coded"
-    - "AI built"
-    - "Cursor"
-    - "Bolt.new"
-    - "Lovable"
-    - "Replit"
-    - "v0"
-    - "不会编程"
-    - "不会写代码"
-    - "不会代码"
-    - "零代码"
-    - "无代码"
-    - "AI编程"
-    - "AI写代码"
-    - "用AI开发"
-    # 数字产品/模板变现
-    - "gumroad"
-    - "notion template"
-    - "digital product"
-    - "digital download"
-    - "printable"
-    - "etsy shop"
-    - "print on demand"
-    - "POD"
-    - "模板赚钱"
-    - "卖模板"
-    # 内容变现
-    - "newsletter"
-    - "paid newsletter"
-    - "付费订阅"
-    - "知识星球"
-    - "知识付费"
-    - "online course"
-    - "cohort based course"
-    - "self publishing"
-    - "kindle publishing"
-    - "自媒体赚钱"
-    # 低门槛电商
-    - "dropshipping"
-    - "dropship"
-    - "一件代发"
-    - "跨境电商"
-    - "shopify"
-    - "amazon fba"
-    - "amazon seller"
-  weak:
-    - "side project"
-    - "side hustle"
-    - "freelance"
-    - "freelancing"
-    - "indie dev"
-    - "digital nomad"
-    - "数字游民"
-    - "creator economy"
-    - "content creator"
-    - "startup"
-    - "创业"
-    - "副业"
-    - "变现"
-    - "monetize"
-    - "revenue"
-    - "income"
-    - "profit"
-    - "niche"
-    - "SaaS"
-    - "MVP"
-    - "PMF"
-    - "LTV"
-    - "CAC"
-    - "ROI"
-    - "subscription"
-    - "订阅"
-    - "ecommerce"
-    - "e-commerce"
-    - "affiliate"
-    - "consulting"
-    - "coaching"
-    - "marketplace"
-    - "platform"
-    - "plugin"
-    - "template"
-    - "automation"
-    - "自动化"
-    - "AI agent"
-    - "AI tool"
-    - "AI创业"
-    - "LLM"
-    - "stripe"
-    - "出海"
-    - "remote"
-    - "WFH"
-    - "growth"
-    - "marketing"
-    - "SEO"
-    - "audience building"
+  keywords:
+    strong:
+      # 赚钱/收入
+      - "赚钱"
+      - "副业"
+      - "搞钱"
+      - "被动收入"
+      - "月入"
+      - "年入"
+      - "营收"
+      - "利润"
+      - "销售额"
+      - "收入"
+      # 一人/独立
+      - "一人公司"
+      - "一人企业"
+      - "一个人"
+      - "自由职业"
+      - "裸辞"
+      - "不上班"
+      - "在家"
+      # 平台
+      - "闲鱼"
+      - "小红书"
+      - "抖音"
+      - "快手"
+      - "公众号"
+      - "视频号"
+      - "拼多多"
+      - "淘宝"
+      - "知乎"
+      - "B站"
+      - "微博"
+      - "微信"
+      # 模式
+      - "自媒体"
+      - "知识付费"
+      - "内容创业"
+      - "直播带货"
+      - "带货"
+      - "跨境电商"
+      - "一件代发"
+      - "摆摊"
+      - "数字产品"
+      - "模板"
+      - "电子书"
+      - "课程"
+      - "接单"
+      - "线上"
+      - "远程"
+      # AI + 非编程
+      - "AI赚钱"
+      - "用AI"
+      - "AI帮"
+      - "AI写"
+      - "AI做"
+      - "AI生成"
+      # 教程/案例
+      - "教程"
+      - "攻略"
+      - "案例"
+      - "实操"
+      - "经验"
+      - "干货"
+      - "手把手"
+      - "从零"
+      - "入门"
+      - "怎么"
+      - "如何"
+      - "我是怎么"
+      - "我是如何"
+      - "赚了"
+    weak:
+      - "创业"
+      - "兼职"
+      - "上班族"
+      - "斜杠"
+      - "低成本"
+      - "零成本"
+      - "分享"
+      - "辞职"
+      - "变现"
+      - "网赚"
+      - "选题"
+      - "涨粉"
+      - "流量"
+      - "运营"
+      - "转化"
+
+  sources:
+    rss:
+      enabled: true
+      feeds:
+        - name: "少数派"
+          url: "https://sspai.com/feed"
+        - name: "人人都是产品经理"
+          url: "https://www.woshipm.com/feed"
+        - name: "数字移民"
+          url: "https://blog.shuziyimin.org/feed"
+        - name: "可能吧"
+          url: "https://kenengba.com/feed/"
+
+    chinese_search:
+      enabled: false  # 当前网络搜索引擎全被封，仅靠 RSS
+      engine: "duckduckgo"
+      limit: 5
+      max_total: 30
+      query_delay: 2
+      queries: []
+
+    reddit:
+      enabled: false
+    youtube:
+      enabled: false
+
 
 # ============================================================
-# 信息源 — 全部面向非程序员赚钱场景
+# 国际管道：英文赚钱实操内容
 # ============================================================
+international:
+  push_max: 5
 
-sources:
-  # ==========================================================
-  # RSS 源（免费）
-  # ==========================================================
-  rss:
-    enabled: true
-    feeds:
-      # ▸ 英文：赚钱实操案例（非程序员友好）
-      - name: "Starter Story"
-        url: "https://www.starterstory.com/feed"
-      - name: "Side Hustle Nation"
-        url: "https://www.sidehustlenation.com/feed/"
-      - name: "Smart Passive Income (SPI)"
-        url: "https://www.smartpassiveincome.com/feed/"
-      - name: "Niche Pursuits"
-        url: "https://www.nichepursuits.com/feed/"
-
-      # ▸ 英文：在线生意买卖案例（看别人做了什么赚到钱）
-      - name: "Empire Flippers Blog"
-        url: "https://empireflippers.com/feed/"
-      - name: "Flippa Blog"
-        url: "https://flippa.com/blog/feed/"
-
-      # ▸ 英文：数字产品 / 模板变现
-      - name: "Gumroad Blog"
-        url: "https://blog.gumroad.com/feed"
-
-      # ▸ 英文：创业社区（需 AI 筛选出非程序员内容）
-      - name: "Indie Hackers"
-        url: "https://www.indiehackers.com/rss"
-      - name: "Product Hunt"
-        url: "https://www.producthunt.com/feed"
-
-      # ▸ 英文：非技术背景成功案例
-      - name: "No CS Degree"
-        url: "https://www.nocsdegree.com/feed/"
-
-      # ▸ 英文：No-code 社区
-      - name: "Maker Mag"
-        url: "https://makermag.com/feed/"
-
-      # ▸ 中文：知乎赚钱话题
-      - name: "知乎 · 创业"
-        url: "https://www.zhihu.com/rss"
-      # ▸ 中文：轻量保留（需 AI 强筛）
-      - name: "少数派"
-        url: "https://sspai.com/feed"
-
-  # ==========================================================
-  # Reddit（免费，RSS 模式抓取）
-  # ==========================================================
-  reddit:
-    enabled: true
-    sort: "hot"
-    limit: 5
-    subreddits:
-      # ▸ 数字产品 / 模板变现
-      - "Gumroad"
-      - "EtsySellers"
-      - "printondemand"
-      - "Notion"
-
-      # ▸ 内容变现
-      - "Blogging"
-      - "selfpublish"
-      - "Substack"
-      - "NewTubers"
-
-      # ▸ 无代码 / AI 搭建
+  keywords:
+    strong:
+      # OPC 专属
+      - "OPC"
+      - "one person company"
+      - "one person business"
+      - "一人公司"
+      - "solopreneur"
+      - "solopreneurship"
+      - "indie hacker"
+      - "indiehacker"
+      - "solo founder"
+      - "solo developer"
+      - "lifestyle business"
+      - "micro saas"
+      - "microsaas"
+      - "micro-saas"
+      - "bootstrapping"
+      - "bootstrapped"
+      - "productized service"
+      - "independent creator"
+      - "build in public"
+      - "#buildinpublic"
+      - "MRR"
+      - "monthly recurring revenue"
+      - "passive income"
+      - "side project revenue"
+      - "side hustle income"
+      - "small bet"
+      - "maker"
+      # 非程序员/AI代写代码
+      - "no code"
+      - "no-code"
       - "nocode"
-      - "Bubble"
-      - "webflow"
-
-      # ▸ 电商 / 平台（低门槛）
-      - "ecommerce"
+      - "low code"
+      - "low-code"
+      - "can't code"
+      - "cannot code"
+      - "non-programmer"
+      - "non-technical founder"
+      - "not a developer"
+      - "never coded"
+      - "zero coding"
+      - "I built with AI"
+      - "built with AI"
+      - "AI coded"
+      - "AI built"
+      - "Cursor"
+      - "Bolt.new"
+      - "Lovable"
+      - "Replit"
+      - "v0"
+      # 数字产品/模板变现
+      - "gumroad"
+      - "notion template"
+      - "digital product"
+      - "digital download"
+      - "printable"
+      - "etsy shop"
+      - "print on demand"
+      - "POD"
+      # 内容变现
+      - "newsletter"
+      - "paid newsletter"
+      - "online course"
+      - "cohort based course"
+      - "self publishing"
+      - "kindle publishing"
+      # 低门槛电商
+      - "dropshipping"
       - "dropship"
       - "shopify"
-      - "AmazonSeller"
-      - "sweatystartup"
-      - "smallbusiness"
-
-      # ▸ 综合赚钱
-      - "passive_income"
-      - "Entrepreneur"
-      - "EntrepreneurRideAlong"
-      - "juststart"
-      - "digitalnomad"
+      - "amazon fba"
+      - "amazon seller"
+    weak:
+      - "side project"
+      - "side hustle"
       - "freelance"
-      - "affiliatemarketing"
+      - "freelancing"
+      - "indie dev"
+      - "digital nomad"
+      - "creator economy"
+      - "content creator"
+      - "startup"
+      - "monetize"
+      - "revenue"
+      - "income"
+      - "profit"
+      - "niche"
+      - "SaaS"
+      - "MVP"
+      - "PMF"
+      - "LTV"
+      - "CAC"
+      - "ROI"
+      - "subscription"
+      - "ecommerce"
+      - "e-commerce"
+      - "affiliate"
+      - "consulting"
+      - "coaching"
+      - "marketplace"
+      - "platform"
+      - "plugin"
+      - "template"
+      - "automation"
+      - "AI agent"
+      - "AI tool"
+      - "LLM"
+      - "stripe"
+      - "remote"
+      - "WFH"
+      - "growth"
+      - "marketing"
+      - "SEO"
+      - "audience building"
 
-  # ==========================================================
-  # X/Twitter（Nitter RSS 模式，目前不稳定，暂时关闭）
-  # ==========================================================
-  twitter:
-    enabled: false
-    nitter_rss:
-      enabled: false
-      instance: "https://nitter.net"
-      accounts:
-        # 非程序员/AI搭建方向（Nitter 恢复后启用）
-        - "levelsio"       # 产品思路值得借鉴
-        - "nocodelife"     # No-code 创业
-        - "nocodemvp"      # AI 搭建 MVP
-
-  # ==========================================================
-  # YouTube（RSS 模式，免费，不需要 API key）
-  # ==========================================================
-  youtube:
-    enabled: true
-    api_key: "你的YOUTUBE_API_KEY"
-    rss_feeds:
+  sources:
+    rss:
       enabled: true
-      limit: 3
-      channel_ids:
-        # 被动收入 / 副业实操
-        - id: "UCGk1LitxAZVnqQn0_nt5qxw"
-          label: "Pat Flynn (Smart Passive Income)"
-        # 电商 / 按需打印 / 副业教程
-        - id: "UCC8wczy7734jKPhiR2UkS9A"
-          label: "Wholesale Ted"
-        # 内容创业 / 博客 / SEO
-        - id: "UCytOqtKYpACcWMD14UjhSeQ"
-          label: "Income School"
-        # 生产力 / 创作者经济
-        - id: "UCoOae5nYA7VqaXzerajD0lg"
-          label: "Ali Abdaal"
+      feeds:
+        # ▸ 英文：赚钱实操案例
+        - name: "Starter Story"
+          url: "https://www.starterstory.com/feed"
+        - name: "Side Hustle Nation"
+          url: "https://www.sidehustlenation.com/feed/"
+        - name: "Smart Passive Income (SPI)"
+          url: "https://www.smartpassiveincome.com/feed/"
+        - name: "Niche Pursuits"
+          url: "https://www.nichepursuits.com/feed/"
 
-  # ==========================================================
-  # 公众号 / 中文社区（需 RSSHub。暂时关闭，配置好 RSSHub 后启用）
-  # ==========================================================
-  wechat_mp:
-    enabled: false
-    rsshub_base: "https://rsshub.app"
-    feeds:
-      # 以下通过 RSSHub 桥接，需部署 RSSHub 实例
-      # - "生财有术精华帖"
-      # - "即刻 · 产品猎人圈子"
-      # - "小红书 · 赚钱话题"
-      # - "微信问一问 · 副业"
+        # ▸ 英文：在线生意买卖案例
+        - name: "Empire Flippers Blog"
+          url: "https://empireflippers.com/feed/"
+        - name: "Flippa Blog"
+          url: "https://flippa.com/blog/feed/"
+
+        # ▸ 英文：数字产品 / 模板变现
+        - name: "Gumroad Blog"
+          url: "https://blog.gumroad.com/feed"
+
+        # ▸ 英文：创业社区
+        - name: "Indie Hackers"
+          url: "https://www.indiehackers.com/rss"
+        - name: "Product Hunt"
+          url: "https://www.producthunt.com/feed"
+
+        # ▸ 英文：非技术背景成功案例
+        - name: "No CS Degree"
+          url: "https://www.nocsdegree.com/feed/"
+
+        # ▸ 英文：No-code 社区
+        - name: "Maker Mag"
+          url: "https://makermag.com/feed/"
+
+    reddit:
+      enabled: true
+      sort: "hot"
+      limit: 5
+      subreddits:
+        - "Gumroad"
+        - "EtsySellers"
+        - "printondemand"
+        - "Notion"
+        - "Blogging"
+        - "selfpublish"
+        - "Substack"
+        - "NewTubers"
+        - "nocode"
+        - "Bubble"
+        - "webflow"
+        - "ecommerce"
+        - "dropship"
+        - "shopify"
+        - "AmazonSeller"
+        - "sweatystartup"
+        - "smallbusiness"
+        - "passive_income"
+        - "Entrepreneur"
+        - "EntrepreneurRideAlong"
+        - "juststart"
+        - "digitalnomad"
+        - "freelance"
+        - "affiliatemarketing"
+
+    twitter:
+      enabled: false
+      nitter_rss:
+        enabled: false
+        instance: "https://nitter.net"
+        accounts:
+          - "levelsio"
+          - "nocodelife"
+          - "nocodemvp"
+
+    youtube:
+      enabled: true
+      rss_feeds:
+        enabled: true
+        limit: 3
+        channel_ids:
+          - id: "UCGk1LitxAZVnqQn0_nt5qxw"
+            label: "Pat Flynn (Smart Passive Income)"
+          - id: "UCC8wczy7734jKPhiR2UkS9A"
+            label: "Wholesale Ted"
+          - id: "UCytOqtKYpACcWMD14UjhSeQ"
+            label: "Income School"
+          - id: "UCoOae5nYA7VqaXzerajD0lg"
+            label: "Ali Abdaal"
