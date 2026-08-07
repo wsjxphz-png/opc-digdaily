@@ -104,34 +104,40 @@ class FeishuPusher:
             emoji = SOURCE_EMOJI.get(item.source, "📌")
             source_tag = item.source_name or item.source
 
-            # 标题行（最多 100 字）
+            # 标题（最多 120 字）
             title_text = item.title
-            if len(title_text) > 100:
-                title_text = title_text[:100] + "..."
+            if len(title_text) > 120:
+                title_text = title_text[:120] + "..."
 
-            # AI 总结
+            # AI 总结和机会
             ai_summary = item.ai_summary or ""
             opportunity = item.opportunity_hint or ""
 
             # 翻译（如果有）
             translation = item.translation or ""
 
-            # 构建 markdown 内容 — 标题必须是可点击链接
+            # 构建 markdown — 标题可点击 → 文章大意（主体）→ 机会提示 → 来源信息
             if item.url:
                 title_line = f"**{emoji} [{title_text}]({item.url})**"
             else:
                 title_line = f"**{emoji} {title_text}**"
 
-            md_lines = [
-                title_line,
-                f"来源：{source_tag}  |  {self._time_str(item.published)}",
-            ]
-            if translation:
-                md_lines.append(f"🌐 {translation[:120]}")
+            md_lines = [title_line]
+
+            # 文章大意：放在最显眼的位置，加粗标签
             if ai_summary:
-                md_lines.append(f"💡 {ai_summary}")
+                md_lines.append(f"📖 **文章大意**：{ai_summary}")
+
+            # 机会提示
             if opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
-                md_lines.append(f"💰 机会：{opportunity}")
+                md_lines.append(f"💰 **机会提示**：{opportunity}")
+
+            # 翻译
+            if translation:
+                md_lines.append(f"🌐 原标题翻译：{translation[:120]}")
+
+            # 来源信息放最后
+            md_lines.append(f"📎 来源：{source_tag}  |  {self._time_str(item.published)}")
 
             elem = {
                 "tag": "div",

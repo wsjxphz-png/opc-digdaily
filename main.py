@@ -123,7 +123,7 @@ class DailyOpportunityBot:
             api_base=ai_cfg.get("api_base", ""),
             api_key=ai_cfg.get("api_key", ""),
             model=ai_cfg.get("model", "gpt-4o-mini"),
-            max_tokens=ai_cfg.get("max_tokens", 800),
+            max_tokens=ai_cfg.get("max_tokens", 6000),
             temperature=ai_cfg.get("temperature", 0.3),
         )
 
@@ -204,10 +204,13 @@ class DailyOpportunityBot:
             if top_items:
                 logger.info("Top 推送:")
                 for it in top_items:
+                    summary_preview = (it.ai_summary or "")[:120]
+                    opp_preview = (it.opportunity_hint or "")[:60]
                     logger.info(
-                        f"  [{it.relevance_score:.2f}] {it.title[:60]}... "
-                        f"| {it.opportunity_hint[:40]}"
+                        f"  [{it.relevance_score:.2f}] {it.title[:60]}..."
                     )
+                    logger.info(f"    总结: {summary_preview}")
+                    logger.info(f"    机会: {opp_preview}")
         else:
             logger.warning("AI 未配置，无法进行内容筛选，跳过推送")
             elapsed = time.time() - start

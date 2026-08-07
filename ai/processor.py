@@ -63,8 +63,8 @@ BATCH_SYSTEM_PROMPT = """你是「一人公司 (OPC) 赚钱机会挖掘」分析
     "index": 0,
     "relevant": true,
     "translation": "中文翻译（英文必译，中文留空）",
-    "summary": "谁（会不会写代码）用什么方法做了什么产品/服务，赚了多少，有什么过程，40字",
-    "opportunity_hint": "如果你是一个不会编程的人，如何用 AI 复现这个模式。说清：做什么 × 用什么 AI 工具 × 去哪找客户。25字",
+    "summary": "文章大意（80-120字）：用自己的话把文章内容讲清楚。包括：这篇文章讲了一个什么故事/方法？谁（会不会编程）做了什么？具体怎么做的？遇到了什么问题、怎么解决的？赚了多少、花了多久？有什么你没想到的细节？让读者看完你的总结就知道这篇文章值不值得点开。",
+    "opportunity_hint": "如果用户是不会编程的人，如何用 AI 复现这个模式。说清：做什么产品/服务 × 用什么 AI 工具具体怎么描述需求 × 去哪找第一批客户 × 怎么定价。30-40字",
     "relevance_score": 0.85
   },
   {
@@ -98,7 +98,7 @@ class AIProcessor:
     """AI 内容处理器（批量模式）。"""
 
     def __init__(self, api_base: str, api_key: str, model: str,
-                 max_tokens: int = 4000, temperature: float = 0.2):
+                 max_tokens: int = 6000, temperature: float = 0.2):
         self.api_base = api_base.rstrip("/")
         self.api_key = api_key
         self.model = model
