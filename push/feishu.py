@@ -104,10 +104,10 @@ class FeishuPusher:
             emoji = SOURCE_EMOJI.get(item.source, "📌")
             source_tag = item.source_name or item.source
 
-            # 标题行
+            # 标题行（最多 100 字）
             title_text = item.title
-            if len(title_text) > 80:
-                title_text = title_text[:80] + "..."
+            if len(title_text) > 100:
+                title_text = title_text[:100] + "..."
 
             # AI 总结
             ai_summary = item.ai_summary or ""
@@ -116,16 +116,21 @@ class FeishuPusher:
             # 翻译（如果有）
             translation = item.translation or ""
 
-            # 构建 markdown 内容
+            # 构建 markdown 内容 — 标题必须是可点击链接
+            if item.url:
+                title_line = f"**{emoji} [{title_text}]({item.url})**"
+            else:
+                title_line = f"**{emoji} {title_text}**"
+
             md_lines = [
-                f"**{emoji} {title_text}**",
+                title_line,
                 f"来源：{source_tag}  |  {self._time_str(item.published)}",
             ]
             if translation:
                 md_lines.append(f"🌐 {translation[:120]}")
             if ai_summary:
                 md_lines.append(f"💡 {ai_summary}")
-            if opportunity and "暂无" not in opportunity:
+            if opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
                 md_lines.append(f"💰 机会：{opportunity}")
 
             elem = {
@@ -135,10 +140,6 @@ class FeishuPusher:
                     "content": "\n".join(md_lines),
                 },
             }
-
-            # 如果有链接，包装为可点击
-            if item.url:
-                elem["href"] = {"urlVal": {"url": item.url}}
 
             elements.append(elem)
 
