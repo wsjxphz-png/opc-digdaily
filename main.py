@@ -99,6 +99,7 @@ class HistoryManager:
 
     def save(self):
         self._prune()
+        self.path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self._data, f, ensure_ascii=False, indent=2)
 

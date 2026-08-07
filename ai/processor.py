@@ -60,7 +60,7 @@ class AIProcessor:
         return self._enabled
 
     async def process(self, items: list[ContentItem],
-                      concurrency: int = 5) -> list[ContentItem]:
+                      concurrency: int = 1) -> list[ContentItem]:
         """批量处理内容条目。"""
         if not self._enabled:
             logger.warning("AI 未配置，跳过处理")
@@ -70,7 +70,9 @@ class AIProcessor:
 
         async def _process_one(item: ContentItem) -> ContentItem:
             async with semaphore:
-                return await self._process_single(item)
+                result = await self._process_single(item)
+                await asyncio.sleep(0.5)  # 避免触发 API 限速
+                return result
 
         tasks = [_process_one(it) for it in items]
         results = await asyncio.gather(*tasks, return_exceptions=True)
