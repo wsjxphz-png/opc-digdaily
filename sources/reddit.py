@@ -1,13 +1,11 @@
 """
-Reddit 信息源 — 抓取指定的 subreddits 热门/新帖。
-通过 Reddit API (免费 tier) 无需登录即可读取公开数据。
+Reddit 信息源 — 通过 Reddit 内置 RSS 抓取热门/新帖。
+RSS 方式比 JSON API 更稳定，不受 User-Agent 限制。
 """
 
 import asyncio
 import logging
 from datetime import datetime, timezone
-
-import httpx
 
 from .base import BaseSource, ContentItem
 
@@ -17,8 +15,7 @@ logger = logging.getLogger(__name__)
 class RedditSource(BaseSource):
     name = "reddit"
 
-    # Reddit 公开 API 无需认证即可读取
-    BASE = "https://www.reddit.com"
+    BASE_RSS = "https://www.reddit.com/r/{sub}/.rss"
 
     async def fetch(self, cfg: dict, keywords: dict) -> list[ContentItem]:
         subreddits = cfg.get("subreddits", [])
@@ -27,21 +24,23 @@ class RedditSource(BaseSource):
             return []
 
         limit = cfg.get("limit", 10)
-        sort = cfg.get("sort", "hot")  # hot / new / top
 
         items: list[ContentItem] = []
-        headers = {"User-Agent": cfg.get("user_agent", "DailyOpportunityBot/1.0")}
+        # 按批次并发抓取，每批最多 5 个，避免被限
+        batch_size = 5
+        for i in range(0, len(subreddits), batch_size):
+            batch = subreddits[i:i + batch_size]
+            tasks = [self._fetch_rss(sub, limit, keywords) for sub in batch]
+            results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        async with httpx.AsyncClient(timeout=15, headers=headers) as client:
-            for sub in subreddits:
-                try:
-                    sub_items = await self._fetch_subreddit(
-                        client, sub, sort, limit, keywords
-                    )
-                    items.extend(sub_items)
-                except Exception as e:
-                    logger.error(f"Reddit r/{sub} 获取失败: {e}")
-                await asyncio.sleep(0.5)
+            for sub, result in zip(batch, results):
+                if isinstance(result, Exception):
+                    logger.error(f"Reddit r/{sub} 获取失败: {result}")
+                else:
+                    items.extend(result)
+
+            if i + batch_size < len(subreddits):
+                await asyncio.sleep(2)  # 批次间暂停
 
         # 去重
         seen = set()
@@ -54,56 +53,42 @@ class RedditSource(BaseSource):
         logger.info(f"Reddit: 获取到 {len(unique)} 条")
         return unique
 
-    async def _fetch_subreddit(
-        self, client: httpx.AsyncClient, sub: str,
-        sort: str, limit: int, keywords: list[str],
-    ) -> list[ContentItem]:
-        url = f"{self.BASE}/r/{sub}/{sort}.json"
-        params = {"limit": limit, "raw_json": 1}
-        resp = await client.get(url, params=params)
-        resp.raise_for_status()
-        data = resp.json()
+    async def _fetch_rss(self, sub: str, limit: int, keywords: dict) -> list[ContentItem]:
+        """通过 Reddit RSS 抓取。"""
+        import feedparser
+        loop = asyncio.get_event_loop()
+
+        url = self.BASE_RSS.format(sub=sub)
+        raw = await loop.run_in_executor(None, feedparser.parse, url)
 
         items = []
-        for child in data.get("data", {}).get("children", []):
-            post = child.get("data", {})
-            # 跳过置顶帖和广告
-            if post.get("stickied") or post.get("is_self", False) and not post.get("selftext"):
-                pass
+        for entry in raw.entries[:limit]:
+            title = entry.get("title", "")
+            link = entry.get("link", "")
+            summary = entry.get("summary", entry.get("description", ""))
+            summary = self._strip_html(summary)[:300]
 
-            title = post.get("title", "")
-            selftext = post.get("selftext", "")[:300]
-            permalink = post.get("permalink", "")
-            subreddit = post.get("subreddit_name_prefixed", "")
-            created_utc = post.get("created_utc", 0)
-            url_post = post.get("url", "")
-            ups = post.get("ups", 0)
-            num_comments = post.get("num_comments", 0)
-            thumbnail = post.get("thumbnail", "")
+            published = None
+            if hasattr(entry, "published_parsed") and entry.published_parsed:
+                from time import mktime
+                ts = mktime(entry.published_parsed)
+                published = datetime.fromtimestamp(ts, tz=timezone.utc)
 
-            if thumbnail in ("self", "default", "nsfw", ""):
-                thumbnail = ""
-
-            pub_dt = None
-            if created_utc:
-                pub_dt = datetime.fromtimestamp(created_utc, tz=timezone.utc)
-
-            full_text = f"{title}\n{selftext}"
+            full_text = f"{title}\n{summary}"
             score = self.keyword_score(full_text, keywords)
-
-            # Reddit self post 用 permalink，link post 用真实 url
-            final_url = f"https://www.reddit.com{permalink}"
-            if not post.get("is_self"):
-                final_url = url_post if url_post else final_url
 
             items.append(ContentItem(
                 title=title,
-                url=final_url,
-                summary=f"[r/{sub} | {ups} upvotes | {num_comments} comments]\n{selftext}",
+                url=link,
+                summary=f"[r/{sub}]\n{summary}",
                 source="reddit",
-                source_name=subreddit,
-                published=pub_dt,
-                thumbnail=thumbnail,
-                relevance_score=score * (1 + min(ups / 500, 1) * 0.3),  # 热门帖加权
+                source_name=f"r/{sub}",
+                published=published,
+                relevance_score=score,
             ))
         return items
+
+    @staticmethod
+    def _strip_html(text: str) -> str:
+        import re
+        return re.sub(r"<[^>]+>", " ", text).strip()
