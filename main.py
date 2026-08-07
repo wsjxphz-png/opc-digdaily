@@ -44,10 +44,32 @@ logger = logging.getLogger("main")
 
 
 # ============================================================
+# .env 加载（本地运行用，不提交到 git）
+# ============================================================
+
+def _load_dotenv():
+    """加载 .env 文件到环境变量（简单实现，不依赖 python-dotenv）。"""
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return
+    with open(env_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key, value = key.strip(), value.strip()
+            if key and value and key not in os.environ:
+                os.environ[key] = value
+
+# ============================================================
 # 配置加载
 # ============================================================
 
 def load_config() -> dict:
+    # 加载 .env 文件（如果存在且不在 git 中）
+    _load_dotenv()
+
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
