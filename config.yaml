@@ -1,0 +1,300 @@
+# ============================================================
+# 一人公司 (OPC) 赚钱机会挖掘 — 每日信息推送系统
+# ============================================================
+# 🎉 零成本方案：使用 WorkBuddy 内置定时任务 + AI，无需任何外部 API Key
+#    你只需要填下面 1 项：
+#      feishu.webhook_url  ← 飞书群机器人 webhook
+#   已创建自动化任务，每天 9:00 自动执行。
+# ============================================================
+# 如果你也想用 Python 脚本独立运行（start.bat）：
+#   还需填 ai.api_key (推荐 DeepSeek，¥0.02/天)
+# ============================================================
+
+# --- 飞书推送 ← 必填 ---
+feishu:
+  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/你的TOKEN"
+  card_color: "blue"
+
+# --- AI 大模型 (仅 start.bat 独立运行时需要，自动化不需要) ---
+ai:
+  api_base: "https://apihub.agnes-ai.com/v1"
+  api_key: "sk-你的API_KEY"
+  model: "agnes-2.5-flash"
+  max_tokens: 800
+  temperature: 0.3
+
+# --- 定时调度 ---
+schedule:
+  hour: 9
+  minute: 0
+  max_per_source: 5
+  push_max: 10
+
+# --- 关键词 (中英双语 + 缩写，用于内容匹配筛选) ---
+keywords:
+  # === 核心概念 ===
+  - "OPC"
+  - "one person company"
+  - "one person business"
+  - "一人公司"
+  - "solopreneur"
+  - "solopreneurship"
+  - "indie hacker"
+  - "indiehacker"
+  - "独立开发者"
+  - "独立创业"
+  # === 赚钱 / 变现 ===
+  - "side hustle"
+  - "side project"
+  - "passive income"
+  - "recurring revenue"
+  - "monetization"
+  - "monetize"
+  - "make money"
+  - "revenue stream"
+  - "副业"
+  - "赚钱"
+  - "被动收入"
+  - "变现"
+  - "搞钱"
+  # === SaaS / 产品 ===
+  - "SaaS"
+  - "micro SaaS"
+  - "microsaas"
+  - "MVP"
+  - "bootstrapping"
+  - "bootstrapped"
+  - "no-code"
+  - "low-code"
+  - "nocode"
+  - "subscription"
+  - "订阅制"
+  - "digital product"
+  - "info product"
+  # === 关键指标缩写 ===
+  - "MRR"
+  - "ARR"
+  - "PMF"
+  - "CAC"
+  - "LTV"
+  - "PLG"
+  - "ROI"
+  - "SEO"
+  - "CRO"
+  # === 商业模式 ===
+  - "B2B"
+  - "B2C"
+  - "D2C"
+  - "SaaS"
+  - "marketplace"
+  - "affiliate marketing"
+  - "dropshipping"
+  - "e-commerce"
+  - "ecommerce"
+  - "跨境电商"
+  - "print on demand"
+  - "POD"
+  # === 工作方式 ===
+  - "remote work"
+  - "remote job"
+  - "work from home"
+  - "WFH"
+  - "digital nomad"
+  - "数字游民"
+  - "freelancing"
+  - "freelance"
+  - "自由职业"
+  - "consulting"
+  - "coaching"
+  # === 创作者经济 ===
+  - "creator economy"
+  - "content creator"
+  - "newsletter"
+  - "ghostwriting"
+  - "自媒体"
+  - "知识付费"
+  - "知识星球"
+  - "cohort based course"
+  - "online course"
+  - "audience building"
+  # === AI / 自动化 ===
+  - "AI"
+  - "LLM"
+  - "GPT"
+  - "AI创业"
+  - "automation"
+  - "自动化"
+  - "AI agent"
+  - "AI tool"
+  - "prompt engineering"
+  # === 增长 / 营销 ===
+  - "growth hacking"
+  - "product hunt"
+  - "launch"
+  - "customer acquisition"
+  - "ICP"
+  - "email marketing"
+  - "cold outreach"
+  - "community building"
+  - "build in public"
+  - "#buildinpublic"
+  # === 出海 / 全球化 ===
+  - "出海"
+  - "global"
+  - "international"
+  - "stripe"
+  - "gumroad"
+  - "appsumo"
+  - "productized service"
+  - "lifestyle business"
+  - "niche"
+  - "niche market"
+
+# ============================================================
+# 以下信息源已全部预配置好，无需修改即可使用
+# ============================================================
+
+sources:
+  # --- RSS 源 (免费) ---
+  rss:
+    enabled: true
+    feeds:
+      # ▸ 英文：独立开发者 / 一人公司
+      - name: "Indie Hackers"
+        url: "https://www.indiehackers.com/rss"
+      - name: "Hacker News (Top)"
+        url: "https://hnrss.org/frontpage"
+      - name: "Product Hunt"
+        url: "https://www.producthunt.com/feed"
+      - name: "Sidebar.io"
+        url: "https://sidebar.io/feed.xml"
+      - name: "The Hustle"
+        url: "https://thehustle.co/feed/"
+      - name: "Trends.vc"
+        url: "https://trends.vc/feed/"
+      - name: "MicroConf"
+        url: "https://microconf.com/feed/"
+      - name: "Failory"
+        url: "https://www.failory.com/blog/feed"
+      - name: "Starter Story"
+        url: "https://www.starterstory.com/feed"
+      - name: "Marketing Examples"
+        url: "https://marketingexamples.com/feed"
+      - name: "GrowthHackers"
+        url: "https://growthhackers.com/feed"
+      # ▸ 英文：知名独立开发者博客
+      - name: "Pieter Levels (levels.io)"
+        url: "https://levels.io/feed/"
+      - name: "Daniel Vassallo"
+        url: "https://dvassallo.com/feed/"
+      - name: "Patio11 (Kalzumeus)"
+        url: "https://www.kalzumeus.com/feed.xml"
+      - name: "Tyler Tringas (Earnest Capital)"
+        url: "https://tylertringas.com/feed/"
+      # ▸ 中文：创业 / 科技资讯
+      - name: "少数派"
+        url: "https://sspai.com/feed"
+      - name: "阮一峰的网络日志"
+        url: "https://feeds.feedburner.com/ruanyifeng"
+      - name: "36氪"
+        url: "https://36kr.com/feed"
+      - name: "钛媒体"
+        url: "https://www.tmtpost.com/rss.xml"
+
+  # --- Reddit (免费，无需 API key) ---
+  reddit:
+    enabled: true
+    user_agent: "DailyOpportunityBot/1.0"
+    sort: "hot"
+    limit: 10
+    subreddits:
+      # 核心
+      - "SideProject"
+      - "SaaS"
+      - "indiehackers"
+      - "microsaas"
+      - "passive_income"
+      - "Entrepreneur"
+      - "EntrepreneurRideAlong"
+      - "sweatystartup"
+      - "juststart"
+      - "smallbusiness"
+      - "startups"
+      # 技能/工具
+      - "webdev"
+      - "nocode"
+      - "automation"
+      # 营销/增长
+      - "SEO"
+      - "growthhacking"
+      - "content_marketing"
+      - "copywriting"
+      - "emailmarketing"
+      # 变现
+      - "ecommerce"
+      - "dropship"
+      - "affiliatemarketing"
+      - "growmybusiness"
+      # 工作方式
+      - "digitalnomad"
+      - "freelance"
+      - "workfromhome"
+      - "remotework"
+
+  # --- X/Twitter (通过 Nitter RSS，免费) ---
+  twitter:
+    enabled: false
+    nitter_rss:
+      enabled: true
+      instance: "https://nitter.net"
+      accounts:
+        # ▸ 独立开发者 / Solopreneur 标杆
+        - "levelsio"          # Pieter Levels — Nomad List, Remote OK, PhotoAI
+        - "dvassallo"         # Daniel Vassallo — 前AWS，年入$500K+小产品矩阵
+        - "marc_louvion"      # Marc Louvion — ShipFast, 月入$100K+
+        - "csallen"           # Courtland Allen — Indie Hackers 创始人
+        - "arvidkahl"         # Arvid Kahl — Zero to Sold, The Embedded Entrepreneur
+        - "jakobgreenfeld"    # Jakob Greenfeld — 独立开发者
+        - "tibo_maker"        # Tibo — Maker & 独立开发者
+        - "alexanderisora"    # Alexander Isora — 独立开发者
+        - "thisiskp_"         # KP — Build In Public 倡导者
+        # ▸ 增长 / 营销
+        - "hnshah"            # Hiten Shah — SaaS 增长专家
+        - "thejustinwelsh"    # Justin Welsh — Solopreneur $2M+ ARR
+        - "patio11"           # Patrick McKenzie — Stripe Atlas, Bingo Card Creator
+        - "gregisenberg"      # Greg Isenberg — 产品/社区
+        - "jackbutcher"       # Jack Butcher — Visualize Value
+        # ▸ 投资人/思想家
+        - "paulg"             # Paul Graham — Y Combinator
+        - "naval"             # Naval Ravikant — AngelList 创始人
+        - "garrytan"          # Garry Tan — YC CEO
+        - "shl"               # Sahil Lavingia — Gumroad 创始人
+        # ▸ 技术/开发
+        - "wesbos"            # Wes Bos — 开发者教育
+        - "aaditsh"           # Aadit Sheth — AI 创业
+        - "awilkinson"        # Andrew Wilkinson — Tiny 创始人
+        - "dharmesh"          # Dharmesh Shah — HubSpot 联合创始人
+        # ▸ 中文圈
+        - "zen_buss"          # 禅叔 — 独立开发者/AI创业
+
+  # --- YouTube (需要 API key，默认关闭) ---
+  youtube:
+    enabled: false
+    api_key: "你的YOUTUBE_API_KEY"
+    channels:
+      - "UCaFm7NIJ3pB2OoMniLbJ-hw"
+    search_queries:
+      - "OPC one person company"
+      - "solopreneur business idea"
+      - "micro SaaS ideas 2026"
+      - "side hustle that make money"
+      - "passive income business model"
+      - "build in public journey"
+      - "一人公司 赚钱"
+      - "AI创业 副业"
+
+  # --- 公众号 (通过 RSSHub 桥接，需自部署或公共服务) ---
+  wechat_mp:
+    enabled: false
+    rsshub_base: "https://rsshub.app"
+    feeds: []

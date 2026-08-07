@@ -1,0 +1,31 @@
+name: OPC 一人公司每日机会挖掘
+
+on:
+  schedule:
+    # 北京时间每天 9:00 = UTC 1:00
+    - cron: "0 1 * * *"
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  daily-push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install httpx pyyaml feedparser
+
+      - name: Run daily push
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_API_BASE: ${{ secrets.AI_API_BASE }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+        run: python main.py --once
