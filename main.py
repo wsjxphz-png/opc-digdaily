@@ -23,7 +23,8 @@ import yaml
 from ai import AIProcessor
 from push import FeishuPusher
 from sources import (
-    YouTubeSource, RSSSource, RedditSource, TwitterSource, ChineseSearchSource, ContentItem,
+    YouTubeSource, RSSSource, RSSHubSource, RedditSource,
+    TwitterSource, ChineseSearchSource, ContentItem,
 )
 from sources.base import has_strong_keyword
 from sources.enricher import ContentEnricher
@@ -130,6 +131,8 @@ def _build_sources(pipeline_cfg: dict) -> list:
     sources = []
     if sources_cfg.get("rss", {}).get("enabled"):
         sources.append((RSSSource(), sources_cfg["rss"]))
+    if sources_cfg.get("rsshub", {}).get("enabled"):
+        sources.append((RSSHubSource(), sources_cfg["rsshub"]))
     if sources_cfg.get("reddit", {}).get("enabled"):
         sources.append((RedditSource(), sources_cfg["reddit"]))
     if sources_cfg.get("youtube", {}).get("enabled"):
@@ -209,8 +212,10 @@ async def _run_pipeline(
         logger.info(f"[{label}] AI 筛选: {len(filtered)} → {len(top_items)} 条")
         if top_items:
             for it in top_items:
+                flag = getattr(it, "quality_flag", "") or ""
+                flag_str = f" {flag}" if flag else ""
                 logger.info(
-                    f"  [{it.relevance_score:.2f}] {it.title[:60]}..."
+                    f"  [{it.relevance_score:.2f}{flag_str}] {it.title[:60]}..."
                 )
     else:
         logger.warning(f"[{label}] AI 未配置，跳过")

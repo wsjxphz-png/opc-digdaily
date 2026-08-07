@@ -30,6 +30,11 @@ DIFFICULTY_BADGE = {
     "有一定门槛": "🟠 有一定门槛",
 }
 
+QUALITY_ICON = {
+    "⭐": "⭐ 高价值",
+    "⚠️": "⚠️ 注意甄别",
+}
+
 SECTION_EMOJI = {"国内": "🇨🇳", "国际": "🌍"}
 
 
@@ -170,6 +175,8 @@ class FeishuPusher:
             translation = item.translation or ""
             difficulty = item.difficulty or ""
             diff_badge = DIFFICULTY_BADGE.get(difficulty, "")
+            quality_flag = getattr(item, "quality_flag", "") or ""
+            quality_label = QUALITY_ICON.get(quality_flag, "")
             source_label = item.source_name or item.source
 
             # 标题链接
@@ -180,12 +187,16 @@ class FeishuPusher:
 
             md_lines = []
 
-            # 首选标记 + 难度
+            # 首选标记 + 难度 + 质量标记
+            tags = []
             if is_top and len(items) > 1:
-                tag = f"⭐ 首选 · {diff_badge}" if diff_badge else "⭐ 首选"
-                md_lines.append(tag)
-            elif diff_badge:
-                md_lines.append(diff_badge)
+                tags.append("⭐ 首选")
+            if diff_badge:
+                tags.append(diff_badge)
+            if quality_label:
+                tags.append(quality_label)
+            if tags:
+                md_lines.append(" · ".join(tags))
 
             md_lines.append(title_line)
 

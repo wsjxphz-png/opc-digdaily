@@ -1,9 +1,10 @@
 # ============================================================
-# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统 v2
+# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统 v3
 # ============================================================
 # 用户画像：不会写代码，所有搭建由 AI 代劳
-# 推送标准：非程序员 + 有实操过程 + 能复现
-# 双管道：国内（中文源）+ 国际（英文源），各 5 条
+# 推送标准：非程序员 + 有实操过程 + 能复现 + 非卖铲子
+# 双管道：国内（中文源）+ 国际（英文源），各 8 条
+# 筛选增强：卖铲子检测、平台可靠性评级、信源新鲜度分级
 # ============================================================
 
 # --- 飞书推送 ---
@@ -16,20 +17,20 @@ ai:
   api_base: "https://apihub.agnes-ai.com/v1"
   api_key: "sk-你的API_KEY"
   model: "agnes-2.5-flash"
-  max_tokens: 8000
+  max_tokens: 12000
   temperature: 0.3
 
 # --- 定时调度 ---
 schedule:
   hour: 9
   minute: 0
-  max_per_source: 5
+  max_per_source: 8
 
 # ============================================================
 # 国内管道：中文赚钱实操内容
 # ============================================================
 domestic:
-  push_max: 5
+  push_max: 8
 
   keywords:
     strong:
@@ -124,22 +125,57 @@ domestic:
     rss:
       enabled: true
       feeds:
+        # ▸ 中文：效率 / 数字生活 / 工具推荐
         - name: "少数派"
           url: "https://sspai.com/feed"
+        - name: "小众软件"
+          url: "https://www.appinn.com/feed/"
+        - name: "异次元软件"
+          url: "https://www.iplaysoft.com/feed"
+
+        # ▸ 中文：产品 / 运营 / 变现
         - name: "人人都是产品经理"
           url: "https://www.woshipm.com/feed"
+
+        # ▸ 中文：互联网观察 / 赚钱方法
         - name: "数字移民"
           url: "https://blog.shuziyimin.org/feed"
         - name: "可能吧"
           url: "https://kenengba.com/feed/"
+        - name: "阮一峰"
+          url: "https://www.ruanyifeng.com/blog/atom.xml"
+        - name: "月光博客"
+          url: "https://www.williamlong.info/rss.xml"
 
+    # ▸ RSSHub 桥接：知乎日报 + V2EX 热榜
+    rsshub:
+      enabled: true
+      mirror: "https://rsshub.rssforever.com"
+      timeout: 30
+      routes:
+        - route: "/zhihu/daily"
+          label: "知乎日报"
+        - route: "/v2ex/topics/hot"
+          label: "V2EX 热榜"
+
+    # ▸ 中文搜索引擎（当前网络质量不稳定，暂时禁用）
     chinese_search:
-      enabled: false  # 当前网络搜索引擎全被封，仅靠 RSS
+      enabled: false
       engine: "duckduckgo"
       limit: 5
       max_total: 30
       query_delay: 2
-      queries: []
+      queries:
+        - "副业 赚钱 零成本 教程 2025"
+        - "一人公司 赚钱 实操 案例"
+        - "小红书 怎么赚钱 经验分享"
+        - "自媒体 变现 从零开始 案例"
+        - "AI赚钱 不会编程 普通人 副业"
+        - "闲鱼 卖货 赚钱 教程 新手"
+        - "数字产品 卖模板 赚钱 经验"
+        - "跨境电商 一件代发 教程"
+        - "知识付费 怎么做 月入"
+        - "自由职业 接单 赚钱 平台"
 
     reddit:
       enabled: false
@@ -151,7 +187,7 @@ domestic:
 # 国际管道：英文赚钱实操内容
 # ============================================================
 international:
-  push_max: 5
+  push_max: 8
 
   keywords:
     strong:
