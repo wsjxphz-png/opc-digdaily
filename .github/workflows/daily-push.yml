@@ -20,7 +20,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install httpx pyyaml feedparser
+        run: pip install httpx pyyaml feedparser trafilatura
 
       - name: Run daily push
         env:
