@@ -34,6 +34,12 @@ SOURCE_EMOJI = {
     "wechat": "💬",
 }
 
+DIFFICULTY_BADGE = {
+    "零门槛": "🟢 零门槛",
+    "需学习": "🟡 需学习",
+    "有一定门槛": "🟠 有一定门槛",
+}
+
 
 class FeishuPusher:
     """飞书卡片推送器。"""
@@ -78,31 +84,51 @@ class FeishuPusher:
         }
 
         # ===== 总览统计 =====
-        source_stats = {}
+        # 来源：用实际的源名称（不是 "rss"/"reddit" 这种笼统标签）
+        source_names: list[str] = []
         for item in items:
-            s = item.source
-            source_stats[s] = source_stats.get(s, 0) + 1
+            name = item.source_name or item.source
+            if name and name not in source_names:
+                source_names.append(name)
 
-        stats_text = " · ".join(
-            f"{SOURCE_EMOJI.get(k, '📌')} {v} 条 {k}"
-            for k, v in source_stats.items()
-        )
+        stats_parts = []
+        # 难度分布
+        easy = sum(1 for it in items if "零门槛" in (it.difficulty or ""))
+        learn = sum(1 for it in items if "需学习" in (it.difficulty or ""))
+        hard = sum(1 for it in items if "有一定门槛" in (it.difficulty or ""))
+        diff_parts = []
+        if easy:
+            diff_parts.append(f"🟢{easy}")
+        if learn:
+            diff_parts.append(f"🟡{learn}")
+        if hard:
+            diff_parts.append(f"🟠{hard}")
+        if diff_parts:
+            stats_parts.append(f"难度：{' '.join(diff_parts)}")
+        if source_names:
+            stats_parts.append(f"来源：{' · '.join(source_names[:4])}")
+            if len(source_names) > 4:
+                stats_parts[-1] += f" 等{len(source_names)}个"
+
+        stats_text = "\n".join(stats_parts) if stats_parts else f"今日共 {len(items)} 条"
 
         elements = [
             {
                 "tag": "div",
                 "text": {
                     "tag": "lark_md",
-                    "content": f"**📊 今日共 {len(items)} 条高价值信息**\n{stats_text}",
+                    "content": f"**📊 今日共 {len(items)} 条机会**\n{stats_text}",
                 },
             },
             {"tag": "hr"},
         ]
 
         # ===== 每条内容卡片 =====
+        # 找最高分作为"今日首选"
+        top_score = max(it.relevance_score for it in items) if items else 0
+
         for i, item in enumerate(items, 1):
-            emoji = SOURCE_EMOJI.get(item.source, "📌")
-            source_tag = item.source_name or item.source
+            is_top_pick = item.relevance_score >= top_score and top_score >= 0.7
 
             # 标题（最多 120 字）
             title_text = item.title
@@ -113,31 +139,46 @@ class FeishuPusher:
             ai_summary = item.ai_summary or ""
             opportunity = item.opportunity_hint or ""
 
-            # 翻译（如果有）
+            # 翻译
             translation = item.translation or ""
 
-            # 构建 markdown — 标题可点击 → 文章大意（主体）→ 机会提示 → 来源信息
+            # 难度标签
+            difficulty = item.difficulty or ""
+            diff_badge = DIFFICULTY_BADGE.get(difficulty, "")
+
+            # 来源显示：用真实源名称，而非 "rss"/"reddit"
+            source_label = item.source_name or item.source
+
+            # 构建 markdown
             if item.url:
-                title_line = f"**{emoji} [{title_text}]({item.url})**"
+                title_line = f"**[{title_text}]({item.url})**"
             else:
-                title_line = f"**{emoji} {title_text}**"
+                title_line = f"**{title_text}**"
 
-            md_lines = [title_line]
+            md_lines = []
 
-            # 文章大意：放在最显眼的位置，加粗标签
+            # 今日首选标记
+            if is_top_pick and len(items) > 1:
+                md_lines.append(f"⭐ **今日首选** · {diff_badge}" if diff_badge else "⭐ **今日首选**")
+            elif diff_badge:
+                md_lines.append(diff_badge)
+
+            md_lines.append(title_line)
+
+            # 文章大意
             if ai_summary:
                 md_lines.append(f"📖 **文章大意**：{ai_summary}")
 
             # 机会提示
             if opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
-                md_lines.append(f"💰 **机会提示**：{opportunity}")
+                md_lines.append(f"💡 **怎么模仿**：{opportunity}")
 
             # 翻译
             if translation:
-                md_lines.append(f"🌐 原标题翻译：{translation[:120]}")
+                md_lines.append(f"🌐 原标题：{translation[:120]}")
 
-            # 来源信息放最后
-            md_lines.append(f"📎 来源：{source_tag}  |  {self._time_str(item.published)}")
+            # 来源
+            md_lines.append(f"📎 来自「{source_label}」· {self._time_str(item.published)}")
 
             elem = {
                 "tag": "div",

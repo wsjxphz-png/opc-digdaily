@@ -27,7 +27,7 @@ schedule:
   hour: 9
   minute: 0
   max_per_source: 5
-  push_max: 8
+  push_max: 5
 
 # ============================================================
 # 关键词：strong 必须命中≥1个才入库，weak 加分
