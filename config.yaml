@@ -20,7 +20,7 @@ ai:
   api_base: "https://apihub.agnes-ai.com/v1"
   api_key: "sk-你的API_KEY"
   model: "agnes-2.5-flash"
-  max_tokens: 800
+  max_tokens: 6000       # 批量模式需要更大输出（17条 × ~300 tokens/条）
   temperature: 0.3
 
 # --- 定时调度 ---

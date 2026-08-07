@@ -176,13 +176,14 @@ class AIProcessor:
             return items
 
     def _parse_batch_response(self, content: str) -> list[dict]:
-        """解析批量 AI 响应。"""
+        """解析批量 AI 响应，容错处理截断的 JSON。"""
         content = content.strip()
 
         # 去除可能的 markdown 代码块包裹
         if content.startswith("```"):
             content = re.sub(r"^```(?:json)?\s*", "", content)
             content = re.sub(r"\s*```$", "", content)
+            content = content.strip()
 
         # 尝试直接解析
         try:
@@ -197,6 +198,24 @@ class AIProcessor:
                 return json.loads(match.group())
             except json.JSONDecodeError:
                 pass
+
+        # 容错：如果 JSON 被截断（max_tokens 不够），尝试补齐
+        if content.startswith("[") and not content.rstrip().endswith("]"):
+            logger.warning("JSON 可能被截断，尝试补齐最后一个对象...")
+            # 找到最后一个完整的对象（以 }, 或 } 结尾的）
+            last_complete = max(
+                content.rfind("},"),
+                content.rfind('}",'),
+                content.rfind('}\n'),
+            )
+            if last_complete > 0:
+                partial = content[:last_complete + 1] + "\n]"
+                try:
+                    results = json.loads(partial)
+                    logger.info(f"截断恢复成功: {len(results)}/{len(content.split('{'))} 条")
+                    return results
+                except json.JSONDecodeError:
+                    pass
 
         logger.error(f"无法解析 AI 响应: {content[:500]}")
         return []
