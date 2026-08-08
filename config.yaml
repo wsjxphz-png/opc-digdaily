@@ -11,8 +11,10 @@
 # ============================================================
 
 # --- 飞书推送 ---
+# webhook 地址不要写死在这里（会随仓库公开泄露）。放在 .env 的 FEISHU_WEBHOOK_URL，
+# 运行时由 load_config() 覆盖本占位符；GitHub Actions 用仓库 Secrets 注入同名变量。
 feishu:
-  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/6f30ced2-f0b9-4419-82bf-072d699cd926"
+  webhook_url: "${FEISHU_WEBHOOK_URL}"
   card_color: "blue"
 
 # --- AI 大模型 ---
