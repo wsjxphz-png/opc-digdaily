@@ -1,4 +1,4 @@
-# 一人公司掘金日报 · OPC Gold Daily
+# 一人公司掘金日报 · OPC DigDaily
 
 > 每天从全网挖出**真正在赚钱、而且你能照着抄**的一人公司案例，用大白话拆开讲：他做什么、从哪找客户、怎么收钱。推到你的飞书群里，你躺着看就行。
 
@@ -53,7 +53,7 @@
 
 ## 内容从哪来
 
-- **国内**：微信公众号（按号名定向监测更新）、B站、小宇宙、中文搜索、精选中文 RSS
+- **国内**：微信公众号（按号名定向监测更新）、B站、中文搜索、精选中文 RSS
 - **国际**：Starter Story / Side Hustle Nation / Indie Hackers 等 RSS，以及 Reddit、Twitter、YouTube
 - **侦察兵**：每天自动挖新的「写一人公司 / 本身是 OPC」的号，列入名单持续追更（这就是它"长大"的方式）
 
@@ -63,17 +63,28 @@
 
 我已经把它跑在云上，每天自动把情报推到飞书群。你只要进群，每天准时收作业。
 
-> 📣 **加入飞书群，每天收推送**
+> 📣 **扫码加入飞书群，每天收推送**
 >
-> _（二维码待补充 —— 把飞书群二维码 PNG 给我，我直接嵌进来。群二维码有时效，失效了就评论 / 私信我拿新的。）_
+> 扫描下方二维码即可加入（有效期至 **2027 年 8 月 9 日**）。群内每天自动收到：
+> - 1–2 个真人拆解卡（谁在赚钱、怎么做）
+> - 约 10 条可抄机会（国内 + 国际）
+>
+> 不用装软件、不用填配置、不用消耗你的 AI 额度。**直接抄作业，零成本。**
+
+<p align="center">
+<img src="docs/qr.png" alt="飞书群二维码" width="320"/>
+<br><em>扫描二维码加入「一人公司掘金日报」飞书群</em>
+</p>
+
+> ⚠️ 二维码过期后，在仓库提 Issue 或 GitHub Discussion 我会更新。
 
 ### 🅱️ 路线 B：想自己部署（技术向，可选）
 
-仓库自带完整代码，能跑在 GitHub Actions 上，完全免费。步骤：
+如果你有自己的 AI Key 和飞书机器人，也可以把这套系统 fork 过去自己跑。步骤：
 
 ```bash
-git clone https://github.com/wsjxphz-png/opc-gold-daily.git
-cd opc-gold-daily
+git clone https://github.com/wsjxphz-png/opc-digdaily.git
+cd opc-digdaily
 python -m venv .venv && .venv/Scripts/activate   # Windows；mac/Linux 用 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env                              # 填入 FEISHU_WEBHOOK_URL 与 AI_API_KEY
@@ -81,6 +92,8 @@ python main.py --once                             # 立即跑一次（真实采�
 ```
 
 也可推到 GitHub 后用 Actions 定时运行（见 `.github/workflows/daily-push.yml`，默认北京时间每天 22:00）。**所有密钥走环境变量 / Secrets，绝不写进代码。**
+
+> 💡 **说实话**：路线 A 更省心。你自己搭要准备 AI Key（花钱）、配 webhook、调试环境；直接进群，这些我都替你做了，而且每天的内容一样不少。除非你有定制需求（比如想加自己的信息源、推到别的平台），否则没必要重复造轮子。
 
 ## 免责声明
 
