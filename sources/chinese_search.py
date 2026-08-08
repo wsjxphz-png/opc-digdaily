@@ -11,6 +11,7 @@ import re
 from datetime import datetime, timezone
 
 import httpx
+from urllib.parse import unquote, quote
 
 from .base import BaseSource, ContentItem
 
@@ -58,7 +59,7 @@ class ChineseSearchSource(BaseSource):
 
         all_items: list[ContentItem] = []
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
         }
 
         if engine == "bing":
@@ -98,7 +99,7 @@ class ChineseSearchSource(BaseSource):
     ) -> list[ContentItem]:
         """DuckDuckGo HTML 搜索（202 也算成功，部分返回内容）。"""
         import asyncio as aio
-        url = f"https://html.duckduckgo.com/html/?q={query}"
+        url = f"https://html.duckduckgo.com/html/?q={quote(query)}"
         for attempt in range(3):
             resp = await client.get(url)
             if resp.status_code in (200, 202):
@@ -118,7 +119,7 @@ class ChineseSearchSource(BaseSource):
     ) -> list[ContentItem]:
         """Bing 搜索（带重试）。"""
         import asyncio as aio
-        url = f"https://www.bing.com/search?q={query}&setlang=zh-hans&count={limit}"
+        url = f"https://www.bing.com/search?q={quote(query)}&setlang=zh-hans&count={limit}"
         for attempt in range(3):
             resp = await client.get(url)
             if resp.status_code == 200:
@@ -133,52 +134,41 @@ class ChineseSearchSource(BaseSource):
             return []
         return []
 
+    @staticmethod
+    def _ddg_real_url(href_raw: str) -> str:
+        """DDG 结果链接形如 //duckduckgo.com/l/?uddg=<encoded>&rut=...，
+        真实 URL 在 uddg 参数里（双重 URL 编码），解析出来。"""
+        href = href_raw.replace("&amp;", "&")
+        m = re.search(r"[?&]uddg=([^&]+)", href)
+        if m:
+            return unquote(m.group(1))
+        if href.startswith("//"):
+            return "https:" + href
+        return href
+
     def _parse_ddg_html(self, html: str, limit: int) -> list[ContentItem]:
-        """解析 DuckDuckGo HTML 搜索结果。"""
+        """解析 DuckDuckGo HTML 搜索结果（2024+ 结构：result__a=标题，result__snippet=摘要）。"""
         items = []
-        # 每条结果的结构: class="result__body" 包含 title, snippet, url
-        results = re.findall(
-            r'class="result__body".*?</div>\s*</div>',
-            html, re.DOTALL
+        title_re = re.compile(
+            r'<a[^>]*class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.DOTALL
         )
-        for block in results[:limit]:
-            # 提取标题
-            title_m = re.search(
-                r'class="result__a"[^>]*>(.*?)</a>', block, re.DOTALL
-            )
-            if not title_m:
-                continue
-            title = re.sub(r'<[^>]+>', '', title_m.group(1)).strip()
-
-            # 提取链接
-            link_m = re.search(
-                r'class="result__url"[^>]*>(.*?)</a>', block, re.DOTALL
-            )
-            link = ""
-            if link_m:
-                link_raw = re.sub(r'<[^>]+>', '', link_m.group(1)).strip()
-                if link_raw.startswith("http"):
-                    link = link_raw
-                else:
-                    link = f"https://{link_raw}"
-
-            # 提取摘要
-            snippet_m = re.search(
-                r'class="result__snippet"[^>]*>(.*?)</a>', block, re.DOTALL
-            )
+        snippet_re = re.compile(
+            r'<a[^>]*class="result__snippet"[^>]*>(.*?)</a>', re.DOTALL
+        )
+        titles = title_re.findall(html)
+        snippets = snippet_re.findall(html)
+        n = min(len(titles), limit)
+        for i in range(n):
+            href_raw, title_html = titles[i]
+            link = self._ddg_real_url(href_raw)
+            title = re.sub(r"<[^>]+>", "", title_html).strip()
             snippet = ""
-            if snippet_m:
-                snippet = re.sub(r'<[^>]+>', '', snippet_m.group(1)).strip()[:300]
-
-            # 跳过已排除域名
-            skip = False
-            for ex in EXCLUDE_DOMAINS:
-                if ex in link:
-                    skip = True
-                    break
-            if skip:
+            if i < len(snippets):
+                snippet = re.sub(r"<[^>]+>", "", snippets[i]).strip()[:300]
+            if not link or not title:
                 continue
-
+            if any(ex in link for ex in EXCLUDE_DOMAINS):
+                continue
             items.append(ContentItem(
                 title=title,
                 url=link,
@@ -187,7 +177,6 @@ class ChineseSearchSource(BaseSource):
                 source_name="中文搜索",
                 published=datetime.now(timezone.utc),
             ))
-
         return items
 
     def _parse_bing_html(self, html: str, limit: int) -> list[ContentItem]:

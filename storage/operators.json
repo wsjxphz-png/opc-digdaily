@@ -1,0 +1,2977 @@
+{
+  "operators": {
+    "@nicksaraev": {
+      "handle": "@nicksaraev",
+      "name": "nicksaraev",
+      "region": "国际",
+      "category": "无代码自动化服务（偏技术）",
+      "aliases": [
+        "@nicksaraev"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "LeftClick 单人自动化机构 + 卖 n8n/Make 工作流（$2K–10K/个 或 月费）",
+        "business_model": "机构月收约 $72K；Maker School 社群 $184/月；核心是搭自动化流程（需技术）",
+        "acquisition": "Twitter 公开写「如何靠 AI 自动化赚钱」，自建受众",
+        "stack": "n8n / Make / 代码——需写代码/配工作流",
+        "mrr": "约 $72K/月（公开）",
+        "first_step": "普通人降级：用现成 AI 工具帮小商家做「省人力的重复活」（如自动回复、整理表格），不碰 n8n 代码"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@LiamOttley_": {
+      "handle": "@LiamOttley_",
+      "name": "LiamOttley_",
+      "region": "国际",
+      "category": "AI 自动化机构 / 教育",
+      "aliases": [
+        "@LiamOttley_"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "中",
+      "seeded_facts": {
+        "deliverable": "Morningside AI（AI 开发机构）+ AAA 加速器（教别人做 AI 服务生意）",
+        "business_model": "机构接单（项目 $3K–10K、月费 $1K–3K）+ 加速器收费（$5K–7K 一次性 / $97–197 月）；机构年收 700 万+（公开）",
+        "acquisition": "靠 YouTube 讲「AI 自动化代运营」获客；教育部分靠社群",
+        "stack": "需管理开发交付（技术门槛偏高）；其「AAA 模型」普通人可学思路但落地要技术/外包",
+        "mrr": "机构 $7M+ 年收（公开）",
+        "first_step": "降级路径：如果想做「AI 代运营」，自己不会写代码就先学用现成 AI 工具给客户做内容/客服，再外包技术"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@untrapping": {
+      "handle": "@untrapping",
+      "name": "untrapping",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@untrapping"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@KishanPatel": {
+      "handle": "@KishanPatel",
+      "name": "KishanPatel",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@KishanPatel"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@rileybrown_ai": {
+      "handle": "@rileybrown_ai",
+      "name": "rileybrown_ai",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@rileybrown_ai"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@david_oragwam": {
+      "handle": "@david_oragwam",
+      "name": "david_oragwam",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@david_oragwam"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@yongfook": {
+      "handle": "@yongfook",
+      "name": "yongfook",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@yongfook"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@czue": {
+      "handle": "@czue",
+      "name": "czue",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@czue"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@dannypostmaa": {
+      "handle": "@dannypostmaa",
+      "name": "dannypostmaa",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@dannypostmaa"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@tdinh_me": {
+      "handle": "@tdinh_me",
+      "name": "tdinh_me",
+      "region": "国际",
+      "category": "独立开发 / AI 工具（需写代码）",
+      "aliases": [
+        "@tdinh_me"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "TypingMind 等 AI 产品",
+        "business_model": "约 $200K/月（公开）",
+        "acquisition": "Twitter built-in-public",
+        "stack": "代码——需写代码",
+        "mrr": "约 $200K/月",
+        "first_step": "降级：用现成 AI 产品做服务，不自己开发"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@petermick": {
+      "handle": "@petermick",
+      "name": "petermick",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@petermick"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@arvidkahl": {
+      "handle": "@arvidkahl",
+      "name": "arvidkahl",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@arvidkahl"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@robj3d3": {
+      "handle": "@robj3d3",
+      "name": "robj3d3",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@robj3d3"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@shevchikblog": {
+      "handle": "@shevchikblog",
+      "name": "shevchikblog",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@shevchikblog"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "I love how Google Search Console has these achievement badges. It's weirdly motivating to unlock them. So I have a featu",
+          "url": "https://nitter.net/shevchikblog/status/2015861143340757314#m",
+          "date": "2026-01-26",
+          "summary": "I love how Google Search Console has these achievement badges. It's weirdly motivating to unlock them. \n \nSo I have a feature proposal for  @marclou . What if IndiePage had a full achievement system for indie hackers? \n \n🏆 \"Hit $10K MRR\"  \n🏆 \"100K visitors\"  \n🏆 \"Shipped in 24h\" \n \nThis would bring t"
+        },
+        {
+          "title": "Pinned: Ranking dopamine notifications to wake up to: 1. @lemonsqueezy payment received 🍋 2. @marc_louvion's DataFast te",
+          "url": "https://nitter.net/shevchikblog/status/2009238399614362004#m",
+          "date": "2026-01-08",
+          "summary": "Ranking dopamine notifications to wake up to: \n \n1.  @lemonsqueezy  payment received 🍋 \n \n2. @marc_louvion's DataFast telling me I'm going viral \n \nWhat else? \n \n #buildinpublic"
+        }
+      ],
+      "teardown": {
+        "operator_handle": "@shevchikblog",
+        "operator_name": "shevchikblog",
+        "region": "国际",
+        "who": "Shevchikblog（谢夫奇克博客），一位活跃在 Twitter/X 上的独立开发者/数字创作者。目前处于早期单人创业阶段，正在构建面向独立开发者的工具产品（如 IndiePage、DataFast 等），通过公开分享开发过程和工具使用心得来积累受众。",
+        "deliverable": "交付物：1. 数字工具/软件（如 IndiePage，一个带有成就系统的页面构建工具；DataFast，数据监控通知工具）；2. 内容资产（在 Twitter/X 上发布的关于独立开发、SEO、工具推荐的短文和教程）。",
+        "business_model": "商业模式：主要依靠销售自己开发的数字工具（一次性购买或订阅制，具体价格未公开）。同时可能通过广告或联盟营销（推荐其他工具如 Lemon Squeezy）获得收入。目前处于产品构建和早期用户积累阶段，收入规模未公开。",
+        "acquisition": "获客方式：主要通过 Twitter/X 进行「公开构建」（#buildinpublic）。具体动作包括：分享工具的功能亮点（如 Google Search Console 的成就徽章）、发布个人工作流和通知设置、与其他独立开发者互动。通过提供有价值的工具和使用技巧来吸引目标用户（独立开发者、博主）。",
+        "stack": "工具链：Twitter/X（主要获客和内容发布平台）、IndiePage（自研工具）、DataFast（自研或集成的数据监控工具）、Lemon Squeezy（支付/销售平台）、Google Search Console（SEO 监控）。",
+        "replicability": 4,
+        "first_step": "模仿第一步：注册一个 Twitter/X 账号，开始每天分享一个你正在学习或使用的数字工具的小技巧或心得，并带上 #buildinpublic 标签，持续 30 天。",
+        "red_flag": "风险/卖铲子判断：目前看是真实构建产品，但需警惕是否后期转向主要卖课或社群。普通人模仿的最大坑是：只模仿了发推的形式，但没有持续交付有价值的工具或内容，导致无法建立受众信任。",
+        "learn": "最该抄的作业：1. 利用「成就系统」或「通知」等心理激励点来设计产品功能，增加用户粘性；2. 通过公开分享自己的工具使用和工作流，低成本获取精准的目标用户关注。",
+        "signals_used": 2,
+        "generated_at": "2026-08-08 01:09"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@tibo_maker": {
+      "handle": "@tibo_maker",
+      "name": "tibo_maker",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@tibo_maker"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "RT by @tibo_maker: The best newsletter from a SaaS that I received coming from @outrank_so Always full interesting and r",
+          "url": "https://nitter.net/TomBenattar/status/2084317449709588871#m",
+          "date": "2026-08-03",
+          "summary": "The best newsletter from a SaaS that I received coming from  @outrank_so   \n \nAlways full interesting and real value.  \n \nCongrats  @tibo_maker   @eugZolotarenko ! Who is writing this?"
+        },
+        {
+          "title": "R to @tibo_maker: if you want a legit & fair player providing very high quality, consider http://revid.ai we are bootstr",
+          "url": "https://nitter.net/tibo_maker/status/2085999682203828438#m",
+          "date": "2026-08-08",
+          "summary": "if you want a legit &amp; fair player providing very high quality, consider  revid.ai   \n \nwe are bootstrapped, and actually take care of our customers 🙏 \n \n Link  \n \n \n \n Revid AI — Create, Edit &amp; Publish AI Videos | 100+ Tools \n \n Turn prompts, scripts, URLs, product pages, audio, and PDFs int"
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@hridoyreh": {
+      "handle": "@hridoyreh",
+      "name": "hridoyreh",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@hridoyreh"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@BrettFromDJ": {
+      "handle": "@BrettFromDJ",
+      "name": "BrettFromDJ",
+      "region": "国际",
+      "category": "产品化设计服务",
+      "aliases": [
+        "@BrettFromDJ"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "Designjoy：固定价格的产品化设计服务（不限次设计需求，按月订阅）",
+        "business_model": "月费 $4,995–5,500；单人服务 40–50 个长期客户，ARR 100 万+ 美元",
+        "acquisition": "靠公开「一个人如何做设计公司」的内容 + 口碑；用透明收入和流程建立信任",
+        "stack": "Trello(工单)、Figma(设计)、Stripe(收款)——设计能力是核心，工具无代码",
+        "mrr": "约 $100万+ ARR（公开）",
+        "first_step": "如果你有某项专业技能（设计/文案/剪辑），把它打包成「按月订阅、需求不限」的固定服务，用 Notion/表单收单"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@BrianCasel": {
+      "handle": "@BrianCasel",
+      "name": "BrianCasel",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@BrianCasel"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@jackbutcher": {
+      "handle": "@jackbutcher",
+      "name": "jackbutcher",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@jackbutcher"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@harrydry": {
+      "handle": "@harrydry",
+      "name": "harrydry",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@harrydry"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@dvassallo": {
+      "handle": "@dvassallo",
+      "name": "dvassallo",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@dvassallo"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@JustinWelsh": {
+      "handle": "@JustinWelsh",
+      "name": "JustinWelsh",
+      "region": "国际",
+      "category": "内容资产 / 单人生意系统",
+      "aliases": [
+        "@JustinWelsh"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "个人品牌内容系统 + 两门线上课 + 付费 newsletter",
+        "business_model": "LinkedIn 内容带来私域，卖课（约 $150/门）与 newsletter 订阅；自称单人做到约 $8M 收入，毛利率约 91%",
+        "acquisition": "核心是 LinkedIn 日更建立专业人设，再用 newsletter 承接；公开讲「用 Notion/Airtable/Gumroad 拼出自运转系统」",
+        "stack": "ConvertKit(邮件)、Gumroad(卖课)、Notion、Airtable——全是现成 SaaS，点鼠标用",
+        "mrr": "未公开具体 MRR；公开口径为累计单人收入约 $8M",
+        "first_step": "选一个你真懂的垂直话题，在 LinkedIn/公众号日更 100 天，同时开一个免费 newsletter 承接读者"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@MattIRL": {
+      "handle": "@MattIRL",
+      "name": "MattIRL",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@MattIRL"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@stephsmithio": {
+      "handle": "@stephsmithio",
+      "name": "stephsmithio",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@stephsmithio"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@nateliason": {
+      "handle": "@nateliason",
+      "name": "nateliason",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@nateliason"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@dickiebush": {
+      "handle": "@dickiebush",
+      "name": "dickiebush",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@dickiebush"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "RT by @dickiebush: How To Turn 1 Idea Into A $2,000,000 Digital Product",
+          "url": "https://nitter.net/dickiebush/status/2046205778743513309#m",
+          "date": "2026-04-20",
+          "summary": "Article  \n \n \n \n How To Turn 1 Idea Into A $2,000,000 Digital Product \n \n Over the last 6 years, I’ve generated over $20,000,000 selling digital products.\nBut when I first started out, I had no clue how to turn the ideas in my head into products I could actually sell. Now"
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@david_perell": {
+      "handle": "@david_perell",
+      "name": "david_perell",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@david_perell"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@gregisenberg": {
+      "handle": "@gregisenberg",
+      "name": "gregisenberg",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@gregisenberg"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@Marc_Louvion": {
+      "handle": "@Marc_Louvion",
+      "name": "Marc_Louvion",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@Marc_Louvion"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@ShaanVP": {
+      "handle": "@ShaanVP",
+      "name": "ShaanVP",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@ShaanVP"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@thesamparr": {
+      "handle": "@thesamparr",
+      "name": "thesamparr",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@thesamparr"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "RT by @thesamparr: I’ve gotten over 200k new followers and ~20 million views with short form over the past couple months",
+          "url": "https://nitter.net/isaacfrench_/status/2082168465616691213#m",
+          "date": "2026-07-28",
+          "summary": "I’ve gotten over 200k new followers and ~20 million views with short form over the past couple months.  \n \nThought it might be helpful to share what I’ve learned. \n \nA couple months ago, I decided to break my long fast from instagram. I’d quit posting because I ran out of time to shoot and edit (7+ "
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@Julian": {
+      "handle": "@Julian",
+      "name": "Julian",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@Julian"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@Danavir": {
+      "handle": "@Danavir",
+      "name": "Danavir",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@Danavir"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@JanePortman": {
+      "handle": "@JanePortman",
+      "name": "JanePortman",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@JanePortman"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@csallen": {
+      "handle": "@csallen",
+      "name": "csallen",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@csallen"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@philipmorgan": {
+      "handle": "@philipmorgan",
+      "name": "philipmorgan",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@philipmorgan"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@levelsio": {
+      "handle": "@levelsio",
+      "name": "levelsio",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@levelsio"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@SimonHoiberg": {
+      "handle": "@SimonHoiberg",
+      "name": "SimonHoiberg",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@SimonHoiberg"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "How my FounderStack ad is doing on canivibecodeit. - Almost 300 website visits - 0 sales - ROAS: 0 I was one of the firs",
+          "url": "https://nitter.net/SimonHoiberg/status/2085713714582323388#m",
+          "date": "2026-08-07",
+          "summary": "How my FounderStack ad is doing on canivibecodeit. \n \n- Almost 300 website visits \n- 0 sales \n- ROAS: 0 \n \nI was one of the first sponsors of TrustMRR too, and in the same time period I had +1200 website visits and 4 sales totalling +$4100 (with a ROAS of about 6). \n \nSales-wise, canivibecodeit isn'"
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@shu_omi": {
+      "handle": "@shu_omi",
+      "name": "shu_omi",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "@shu_omi"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@dotey": {
+      "handle": "@dotey",
+      "name": "dotey",
+      "region": "国内",
+      "category": "翻译 / 内容策展（非技术）",
+      "aliases": [
+        "@dotey"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "高质量翻译 + 内容策展（AI/独立产品相关）",
+        "business_model": "内容 + 可能的社群/赞助（具体未公开）",
+        "acquisition": "Twitter 持续翻译搬运优质英文内容，建立「信息过滤器」人设",
+        "stack": "翻译 + 内容——无代码",
+        "mrr": "未公开",
+        "first_step": "把你看得懂的海外好内容，翻译成中文持续发出去，做「信息过滤器」"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@xiaohuggg": {
+      "handle": "@xiaohuggg",
+      "name": "xiaohuggg",
+      "region": "国内",
+      "category": "产品 / 社区（国内，非技术）",
+      "aliases": [
+        "@xiaohuggg"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "产品观察 + 社群/内容（小互，偏产品与独立产品人社区）",
+        "business_model": "内容 + 社群/活动（具体未公开）",
+        "acquisition": "公众号/ Twitter 讲产品与独立开发观察，沉淀社群",
+        "stack": "内容 + 社群工具——无代码为主",
+        "mrr": "未公开",
+        "first_step": "围绕你熟悉的行业做「产品观察」内容，用社群承接同频的人"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@op7418": {
+      "handle": "@op7418",
+      "name": "op7418",
+      "region": "国内",
+      "category": "无代码 AI 工作流（国内，偏技术）",
+      "aliases": [
+        "@op7418"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "n8n/AI 自动化工作流教学 + 接单 + 社群",
+        "business_model": "个人数字未公开；n8n 行业参考：接单 $800–2500/月、维保 $99–149/月、模板 $10–500（行业口径）",
+        "acquisition": "公众号/视频讲 n8n 实战",
+        "stack": "n8n/Make——需配工作流，半技术到技术",
+        "mrr": "未公开",
+        "first_step": "降级：用现成 AI 工具帮人做省力的活，不碰 n8n 节点编排"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@khazix0918": {
+      "handle": "@khazix0918",
+      "name": "khazix0918",
+      "region": "国内",
+      "category": "AI 内容 KOL / 品牌合作（国内）",
+      "aliases": [
+        "@khazix0918"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "AI 行业深度内容（公众号/视频）+ 品牌合作 + 知识付费 + 周边",
+        "business_model": "品牌合作单篇报价约 10–30 万；课程/训练营破百万；付费会员约 1999 元/年；IP 周边年销 500 万+（均为公开口径，具体未披露）",
+        "acquisition": "公众号 + 视频号 + 社群沉淀私域，靠「AI 前沿解读」建立权威后再接品牌与卖课",
+        "stack": "公众号/视频号/小鹅通(卖课)/知识星球(社群)——国内现成工具，无代码",
+        "mrr": "未公开",
+        "first_step": "选一个你比别人先懂半步的领域，用公众号/视频号持续输出深度解读，先把读者沉淀到私域"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@lijigang": {
+      "handle": "@lijigang",
+      "name": "lijigang",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@lijigang"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@XDash": {
+      "handle": "@XDash",
+      "name": "XDash",
+      "region": "国内",
+      "category": "写作 / 翻译（非技术）",
+      "aliases": [
+        "@XDash"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "写作 + 翻译内容",
+        "business_model": "内容 + 社群（具体未公开）",
+        "acquisition": "长期写作者人设",
+        "stack": "写作——无代码",
+        "mrr": "未公开",
+        "first_step": "围绕一个长期兴趣持续写，沉淀读者到 newsletter"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@tualatrix": {
+      "handle": "@tualatrix",
+      "name": "tualatrix",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@tualatrix"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@oran_ge": {
+      "handle": "@oran_ge",
+      "name": "oran_ge",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@oran_ge"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@yupi996": {
+      "handle": "@yupi996",
+      "name": "yupi996",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@yupi996"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@Gorden_sun": {
+      "handle": "@Gorden_sun",
+      "name": "Gorden_sun",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@Gorden_sun"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@pandatalk8": {
+      "handle": "@pandatalk8",
+      "name": "pandatalk8",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@pandatalk8"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@servasyy_ai": {
+      "handle": "@servasyy_ai",
+      "name": "servasyy_ai",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@servasyy_ai"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@lyc_zh": {
+      "handle": "@lyc_zh",
+      "name": "lyc_zh",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@lyc_zh"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@dontbesilent": {
+      "handle": "@dontbesilent",
+      "name": "dontbesilent",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@dontbesilent"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@imwsl90": {
+      "handle": "@imwsl90",
+      "name": "imwsl90",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@imwsl90"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@iamtonyzhu": {
+      "handle": "@iamtonyzhu",
+      "name": "iamtonyzhu",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@iamtonyzhu"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@indie_maker_fox": {
+      "handle": "@indie_maker_fox",
+      "name": "indie_maker_fox",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@indie_maker_fox"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@thinkingjimmy": {
+      "handle": "@thinkingjimmy",
+      "name": "thinkingjimmy",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@thinkingjimmy"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [
+        {
+          "title": "推荐一份我几乎每期都会看 AI 类 newsletter，如果你没法天天关注 AI 相关的新闻，但又想保持跟进。那这份 newsletter 非常值得你订阅，能节省你很多时间：https://xiaobot.net/p/guizangNew",
+          "url": "https://nitter.net/thinkingjimmy/status/1850774423743484010#m",
+          "date": "2024-10-27",
+          "summary": "推荐一份我几乎每期都会看 AI 类 newsletter，如果你没法天天关注 AI 相关的新闻，但又想保持跟进。那这份 newsletter 非常值得你订阅，能节省你很多时间： xiaobot.net/p/guizangNews?re…"
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "@yangyi": {
+      "handle": "@yangyi",
+      "name": "yangyi",
+      "region": "国内",
+      "category": "",
+      "aliases": [
+        "@yangyi"
+      ],
+      "sources": [
+        "twitter"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCGk1LitxAZVnqQn0_nt5qxw": {
+      "handle": "UCGk1LitxAZVnqQn0_nt5qxw",
+      "name": "Pat Flynn (Smart Passive Income)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Pat Flynn (Smart Passive Income)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCC8wczy7734jKPhiR2UkS9A": {
+      "handle": "UCC8wczy7734jKPhiR2UkS9A",
+      "name": "Wholesale Ted",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Wholesale Ted"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCytOqtKYpACcWMD14UjhSeQ": {
+      "handle": "UCytOqtKYpACcWMD14UjhSeQ",
+      "name": "Income School",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Income School"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCoOae5nYA7VqaXzerajD0lg": {
+      "handle": "UCoOae5nYA7VqaXzerajD0lg",
+      "name": "Ali Abdaal",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Ali Abdaal"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCbo-KbSjJDG6JWQ_MTZ_rNA": {
+      "handle": "UCbo-KbSjJDG6JWQ_MTZ_rNA",
+      "name": "Nick Saraev (n8n/Make Automation)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Nick Saraev (n8n/Make Automation)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCui4jxDaMb53Gdh-AZUTPAg": {
+      "handle": "UCui4jxDaMb53Gdh-AZUTPAg",
+      "name": "Liam Ottley (AI Automation Agency)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Liam Ottley (AI Automation Agency)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCKNq1bMwzHESQpoBrCnvXQA": {
+      "handle": "UCKNq1bMwzHESQpoBrCnvXQA",
+      "name": "Arvid Kahl (Bootstrapped Founder)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Arvid Kahl (Bootstrapped Founder)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCaggiu76cPdLduA8R2lCSQA": {
+      "handle": "UCaggiu76cPdLduA8R2lCSQA",
+      "name": "Nat Eliason (内容资产方法论)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Nat Eliason (内容资产方法论)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UC1U3USwVMvdzmdEvEUhFIwg": {
+      "handle": "UC1U3USwVMvdzmdEvEUhFIwg",
+      "name": "Jack Butcher (Visualize Value)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Jack Butcher (Visualize Value)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UC_zKyDW9v--SOS3ibuNgfNg": {
+      "handle": "UC_zKyDW9v--SOS3ibuNgfNg",
+      "name": "Harry Dry (Marketing Examples)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Harry Dry (Marketing Examples)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "UCDSIX7D8QvF9D45n_lKEhXQ": {
+      "handle": "UCDSIX7D8QvF9D45n_lKEhXQ",
+      "name": "Riley Brown (AI Automation)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Riley Brown (AI Automation)"
+      ],
+      "sources": [
+        "youtube"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Nick Saraev Blog": {
+      "handle": "Nick Saraev Blog",
+      "name": "Nick Saraev Blog",
+      "region": "国际",
+      "category": "无代码自动化服务（偏技术）",
+      "aliases": [
+        "Nick Saraev Blog"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "同上：自动化工作流 + 课程",
+        "business_model": "月收约 $72K（公开）",
+        "acquisition": "内容 + 社群",
+        "stack": "n8n/Make/代码——需技术",
+        "mrr": "约 $72K/月",
+        "first_step": "降级：用 AI 工具做「代运营省人力」服务，不写代码"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Daniel Vassallo (Small Bets)": {
+      "handle": "Daniel Vassallo (Small Bets)",
+      "name": "Daniel Vassallo (Small Bets)",
+      "region": "国际",
+      "category": "小赌注单人生意 / 教育",
+      "aliases": [
+        "Daniel Vassallo (Small Bets)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Small Bets》书 + 线上课 + 付费社群（原 Gumroad 上卖课 $49–199，社群 $199/年 或 $999 终身）",
+        "business_model": "信息产品 + 会员费；Small Bets 课程/社群累计收入约 $500K+；该品牌后被 Gumroad 收购（约 $3.6M）",
+        "acquisition": "靠 Twitter 持续输出「普通人如何不辞职也能做小生意」的真实记录，用透明收入建立信任",
+        "stack": "Gumroad(卖课/社群)、Twitter、Stripe——无需写代码",
+        "mrr": "未公开；公开口径累计约 $500K+",
+        "first_step": "在 Twitter/即刻 上公开记录你自己的一个「小赌注」试水项目，边做边写，吸引同频的人"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Justin Welsh": {
+      "handle": "Justin Welsh",
+      "name": "Justin Welsh",
+      "region": "国际",
+      "category": "内容资产 / 单人生意系统",
+      "aliases": [
+        "Justin Welsh"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "个人内容系统（LinkedIn 内容 + 两个付费通讯/课程）+ 一套可复制的『单人生意』方法。",
+        "business_model": "单人年营收约 $8M（公开口径）；课程约 $150；通讯约 20 万订阅；毛利率 91%；工具用 ConvertKit / Gumroad / Notion / Airtable。",
+        "acquisition": "LinkedIn 日更内容系统、冷邮件、个人站 SEO。",
+        "stack": "LinkedIn（获客）+ ConvertKit（邮件）+ Gumroad（卖课）+ Notion/Airtable（内容管理）+ Stripe。",
+        "mrr": "公开称单人 $8M 年营收、通讯 20 万订户、91% 毛利。",
+        "first_step": "（高门槛，需先积累受众）普通人可抄的部分：选一个你懂的细分领域，用 LinkedIn/小红书 每天发一条『踩坑+解法』短文，半年攒 1 万粉后再卖一个 $99 的小课。"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Steph Smith": {
+      "handle": "Steph Smith",
+      "name": "Steph Smith",
+      "region": "国际",
+      "category": "数据/趋势 内容 + 产品化",
+      "aliases": [
+        "Steph Smith"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "趋势数据库（ex: Trends）、newsletter、公开收入实验记录",
+        "business_model": "趋势数据库订阅 + 内容；以「公开做实验并晒数据」出名（具体营收未公开）",
+        "acquisition": "Twitter 持续输出数据化洞察 + 透明实验，吸引想「用数据找机会」的人",
+        "stack": "部分用到简单脚本/无代码工具；普通人可降级用现成表格+AI 复刻思路",
+        "mrr": "未公开",
+        "first_step": "选一个你关心的细分趋势，用公开数据 + AI 整理成一份「洞察报告」免费发出去，验证有没有人看"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Solo AI Lab (Practical AI)": {
+      "handle": "Solo AI Lab (Practical AI)",
+      "name": "Solo AI Lab (Practical AI)",
+      "region": "国际",
+      "category": "",
+      "aliases": [
+        "Solo AI Lab (Practical AI)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Cory Zue (产品化服务复盘)": {
+      "handle": "Cory Zue (产品化服务复盘)",
+      "name": "Cory Zue (产品化服务复盘)",
+      "region": "国际",
+      "category": "产品化 SaaS 模板（需写代码）",
+      "aliases": [
+        "Cory Zue (产品化服务复盘)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "Pegasus（Django SaaS 脚手架，买断 $249–699）+ Place Card Me 等小产品",
+        "business_model": "代码模板买断 + 小产品；Pegasus 约 $10K MRR（公开）",
+        "acquisition": "靠技术博客 + GitHub 曝光卖开发者模板",
+        "stack": "Django/Python 代码——需写代码",
+        "mrr": "约 $10K MRR（公开）",
+        "first_step": "普通人不可直接做；可降级卖「现成模板的使用咨询/部署服务」"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Tony Dinh (独立开发者实战)": {
+      "handle": "Tony Dinh (独立开发者实战)",
+      "name": "Tony Dinh (独立开发者实战)",
+      "region": "国际",
+      "category": "独立开发 / AI 工具（需写代码）",
+      "aliases": [
+        "Tony Dinh (独立开发者实战)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "TypingMind（AI 对话前端，买断 $39 + 团队 $79/月）",
+        "business_model": "单产品月收约 $200K；本人公开 built-in-public，99% 早期收入来自 Twitter 受众",
+        "acquisition": "Twitter 公开开发过程 + Product Hunt",
+        "stack": "React/代码——需写代码",
+        "mrr": "约 $200K/月（公开）",
+        "first_step": "普通人不可直接做；可降级学用 TypingMind 这类现成工具服务客户"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Arvid Kahl (The Bootstrapped Founder)": {
+      "handle": "Arvid Kahl (The Bootstrapped Founder)",
+      "name": "Arvid Kahl (The Bootstrapped Founder)",
+      "region": "国际",
+      "category": "作者 / 创作者（写作变现）",
+      "aliases": [
+        "Arvid Kahl (The Bootstrapped Founder)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "《The Bootstrapped Founder》书 + newsletter + 播客（讲「如何一个人做软件生意并卖出」）",
+        "business_model": "书 + 付费 newsletter + 赞助播客；本人曾把 SaaS 卖出（FeedbackPanda），现在靠内容/社群赚钱（具体营收未公开）",
+        "acquisition": "靠长期写「独立开发实战复盘」建立信任，newsletter 承接",
+        "stack": "写作 + newsletter + 播客——核心无代码；其 SaaS 经历是素材而非交付物",
+        "mrr": "未公开",
+        "first_step": "把你所在行业的「踩坑复盘」写成系列文章/newsletter，先建立「真实做过」的人设"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "David Perell (写作变现/内容系统)": {
+      "handle": "David Perell (写作变现/内容系统)",
+      "name": "David Perell (写作变现/内容系统)",
+      "region": "国际",
+      "category": "课程 / 付费社群（写作）",
+      "aliases": [
+        "David Perell (写作变现/内容系统)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Write of Passage》线上写作课（cohort 制，5 周）+ newsletter",
+        "business_model": "单门课程定价 $3,995–$4,995；每年 2–3 期，每期数百学员，单期收入约 $1.5–2M+；累计约 $10M+（公开口径）",
+        "acquisition": "极度聚焦 Twitter（40 万+粉）+ newsletter（7 万→11 万+订阅）；靠长期写长文建立「写作权威」",
+        "stack": "Zoom(直播课)、邮件营销工具、课程平台——不写代码",
+        "mrr": "约 $1.8M/年（公开估算）；单期 $1.5–2M",
+        "first_step": "在 Twitter/即刻 上只写一个主题（如「如何写作」），连续写 30 天，同步开一个免费 newsletter 承接"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Dickie Bush (Ship 30 写作系统)": {
+      "handle": "Dickie Bush (Ship 30 写作系统)",
+      "name": "Dickie Bush (Ship 30 写作系统)",
+      "region": "国际",
+      "category": "写作社群 / 课程",
+      "aliases": [
+        "Dickie Bush (Ship 30 写作系统)"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Ship 30 for Newsletter》写作训练营 + 付费社群（写作 + 建 newsletter）",
+        "business_model": "训练营 + 会员制；靠「每天写、公开写」的方法论吸引想做 newsletter 的人（具体营收未公开）",
+        "acquisition": "Twitter 上持续输出「写作原子笔记」方法论，用免费挑战赛引流到付费训练营",
+        "stack": "Twitter、newsletter 工具(如 ConvertKit)、社群——无代码",
+        "mrr": "未公开",
+        "first_step": "开一个 newsletter，承诺连续发 30 天；把每篇的「原子笔记」拆成短视频/帖子分发引流"
+      },
+      "signals": [
+        {
+          "title": "Interested in using AI in your business?",
+          "url": "https://dickiebush.substack.com/p/interested-in-using-ai-in-your-business",
+          "date": "2026-04-02",
+          "summary": "Interested in using AI in your business?\nThen I have a new newsletter you're going to love\nYo! If you’re reading this, you’re currently subscribed to Dickie’s Digest.\nI’ve talked about a ton of different topics on this newsletter—writing, business, AI, personal growth, podcasts, health, optimization, anything and everything over the last few years since my first edition back in 2020.\nAnd now I wan"
+        },
+        {
+          "title": "Last Month I Sold 15 Different Digital Products. Here's How",
+          "url": "https://dickiebush.substack.com/p/last-month-i-sold-15-different-digital",
+          "date": "2025-11-09",
+          "summary": "Last Month I Sold 15 Different Digital Products. Here's How\nA full business recap - what happened, what I learned, and what's happening this month\nQuick heads up: this is a more in-depth, nitty-gritty business post relative to my last few newsletters. So if you’re not as interested in hearing about business breakdowns, feel free to skip this one. But if that type of stuff does interest you, watch "
+        }
+      ],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Vista 一人公司/AI 实战（Substack 中文）": {
+      "handle": "Vista 一人公司/AI 实战（Substack 中文）",
+      "name": "Vista 一人公司/AI 实战（Substack 中文）",
+      "region": "国内",
+      "category": "AI 内容 / 社群（国内）",
+      "aliases": [
+        "Vista 一人公司/AI 实战（Substack 中文）"
+      ],
+      "sources": [
+        "rss"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "中文 Substack 关于「一人公司 + AI 实战」的深度专栏 + 社群",
+        "business_model": "Substack 订阅 + 社群；靠 AI 提效做内容（具体营收未公开）",
+        "acquisition": "中文内容平台 + Substack 沉淀付费读者",
+        "stack": "Substack、AI 对话工具、Notion——无代码为主",
+        "mrr": "未公开",
+        "first_step": "用 AI 帮你把「一人公司」相关经验整理成系列长文，发在 Substack/公众号，开付费档"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "zencher": {
+      "handle": "zencher",
+      "name": "zencher",
+      "region": "国际",
+      "category": "独立开发者，16年业余时间自研15万行C++ PDF引擎，推出Mac PDF编辑器并集成AI Agent，通过App Store销售软件。",
+      "aliases": [
+        "zencher"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "未知（Flippa卖家）": {
+      "handle": "未知（Flippa卖家）",
+      "name": "未知（Flippa卖家）",
+      "region": "国际",
+      "category": "通过Flippa出售了一个SaaS业务，成交价23万美元，利润率92%，属于真实的产品化服务/微型SaaS退出案例。",
+      "aliases": [
+        "未知（Flippa卖家）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "高",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "ali_abdaal": {
+      "handle": "ali_abdaal",
+      "name": "Ali Abdaal",
+      "region": "国际",
+      "category": "内容 / 课程",
+      "aliases": [
+        "Ali Abdaal"
+      ],
+      "sources": [
+        "research"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "YouTube 生产力内容（650 万粉）+ 《Part-Time YouTuber Academy》写作/做 YouTube 课 + newsletter + 书",
+        "business_model": "价值阶梯：Skillshare $14/月 → PTYA 课 $995–$4995（Accelerator 级）→ 书；累计创作者收入 $10M+（7 年，公开）",
+        "acquisition": "YouTube 做「搜索优化标题」接真实需求；再用 newsletter（Sunday Snippets 40 万+订阅）承接；公开收入报告建立信任",
+        "stack": "YouTube、newsletter 工具、Skillshare、课程平台——不写代码（其 App 是外包/团队做的，非核心交付）",
+        "mrr": "PTYA 单期最高 $1.9M，累计 $4.5M+；年收数百万级",
+        "first_step": "选一个你真懂且别人会搜的话题，开 YouTube 频道，标题照「别人在搜的问题」写；同步开免费 newsletter"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "pat_flynn": {
+      "handle": "pat_flynn",
+      "name": "Pat Flynn",
+      "region": "国际",
+      "category": "内容 / 联盟 / 课程",
+      "aliases": [
+        "Pat Flynn",
+        "Smart Passive Income"
+      ],
+      "sources": [
+        "research"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Smart Passive Income》播客 + 博客 + 联盟营销课 + 会员(SPI Pro)",
+        "business_model": "联盟营销（累计 $3.5M+）+ 课程 + 会员 + 播客赞助；2017 年 12 月单月被动收入 $167,553，全年 $2.1M（公开）",
+        "acquisition": "博客写「手把手 how-to 指南」+ 资源页放联盟链接 + 播客；靠透明收入报告建立信任",
+        "stack": "博客、播客、邮件、联盟平台——全无代码",
+        "mrr": "峰值约 $100K–167K/月（公开）",
+        "first_step": "开一个博客或播客，写你真用过的产品的「手把手教程」，在教程里放联盟链接（只推自己真用过的）"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "banfo": {
+      "handle": "banfo",
+      "name": "半佛仙人",
+      "region": "国内",
+      "category": "内容 / 自媒体 + 品牌合作",
+      "aliases": [
+        "半佛仙人",
+        "硬核的半佛仙人"
+      ],
+      "sources": [
+        "research"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "B站/公众号/知乎 硬核商业科普内容 + 品牌定制视频 + 书《人间修炼指南》",
+        "business_model": "品牌合作（恰饭）为主：B站单条定制视频报价约 59 万；公众号报价约 17 万；多平台矩阵；B站单账号年收入估计不超 1000 万（公开口径，本人未确认具体）",
+        "acquisition": "知乎起家→公众号→B站；高频产出 + 抽奖互动 + 多平台分发；从「利益/风控」角度拆解热点，做信息的过滤器",
+        "stack": "图文/视频 + 多平台账号——核心是无代码的内容能力",
+        "mrr": "未公开（品牌合作报价透明，总收入未披露）",
+        "first_step": "选一个你比别人多懂一点的领域，用「说人话」的方式写/做视频，多平台分发；先把读者沉淀到私域"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "marie_forleo": {
+      "handle": "marie_forleo",
+      "name": "Marie Forleo",
+      "region": "国际",
+      "category": "线上课程 / 社群",
+      "aliases": [
+        "Marie Forleo",
+        "B-School"
+      ],
+      "sources": [
+        "research"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《B-School》线上创业课 + 《MarieTV》视频 + 书",
+        "business_model": "B-School 定价约 $2,000，单次招募常破 $10M+（公开口径）；靠视频内容 + 邮件引流",
+        "acquisition": "长期做 MarieTV + 免费训练营，用邮件名单承接后卖正价课",
+        "stack": "视频 + 邮件 + 课程平台——无代码",
+        "mrr": "单期招募 $10M+（公开）",
+        "first_step": "围绕你擅长的话题做免费视频/直播训练营，用邮件名单承接，再推正价课"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "michelle_making_sense": {
+      "handle": "michelle_making_sense",
+      "name": "Michelle Schroeder-Gardner",
+      "region": "国际",
+      "category": "联盟营销 / 课程",
+      "aliases": [
+        "Michelle Schroeder-Gardner",
+        "Making Sense of Affiliate Marketing"
+      ],
+      "sources": [
+        "research"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Making Sense of Affiliate Marketing》联盟营销课 + 个人理财博客",
+        "business_model": "联盟课约 $197；本人靠联盟营销月入 $1M+（公开）；课 + 博客双轮",
+        "acquisition": "理财博客写「如何多赚钱/省钱」，在文章里放自己真用过的产品联盟链接",
+        "stack": "博客 + 邮件 + 联盟平台——无代码",
+        "mrr": "联盟月入 $1M+（公开）",
+        "first_step": "开一个你感兴趣的垂直博客，写「手把手教程」并在文中放你真用过的产品联盟链接"
+      },
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": true,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Aprilynne Alter": {
+      "handle": "Aprilynne Alter",
+      "name": "Aprilynne Alter",
+      "region": "国际",
+      "category": "靠YouTube内容创作在30天内将订阅数增长12倍，通过分享具体运营策略（73页笔记）变现，属于刚跑通增长闭环的新晋创作者。",
+      "aliases": [
+        "Aprilynne Alter"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "Aprilynne Alter",
+        "operator_name": "Aprilynne Alter",
+        "region": "国际",
+        "who": "Aprilynne Alter，美国独立创作者，通过YouTube分享内容运营策略，30天内订阅数增长12倍，并靠出售73页运营笔记变现的新晋创作者。",
+        "deliverable": "交付物：①YouTube免费内容（内容运营策略教程）；②付费数字产品——73页PDF运营笔记（具体策略文档）。",
+        "business_model": "商业模式：YouTube广告分成（未公开）+ 数字产品一次性销售（73页笔记，价格未公开）。收入结构：内容引流→笔记变现。",
+        "acquisition": "获客方式：①平台：YouTube（主阵地）+ 可能辅以Twitter/Instagram（未公开）；②内容动作：发布具体可复制的运营策略教程（如'30天增长12倍订阅的方法'），用数据结果吸引眼球；③第一波客户：YouTube算法推荐+ 策略内容自然搜索流量；④可照抄打法：做'结果导向'的教程视频（展示具体增长数据），在视频/描述中引导领取免费笔记或购买完整版。",
+        "stack": "工具链：YouTube（内容发布）、Canva/Google Docs（制作73页PDF笔记）、Gumroad/Payhip（数字产品售卖，未公开具体平台）、Notion/Obsidian（笔记整理，未公开）。",
+        "replicability": 4,
+        "first_step": "模仿第一步：在YouTube发布一条'我如何用X天实现Y增长'的教程视频，展示具体策略和数据，视频描述中提供免费下载链接（用免费工具如Google Forms收集邮箱）。",
+        "red_flag": "风险/卖铲子判断：主要收入来自'教别人做创作者'（卖笔记），而非自己持续做大YouTube频道。普通人模仿的最大坑：增长策略可能依赖平台算法红利，难以长期复制；且卖铲子模式竞争激烈，需差异化。",
+        "learn": "最该抄的作业：①用'具体数据结果'（如12倍增长）作为内容钩子，吸引精准受众；②将策略打包成低价数字产品（73页笔记），快速验证变现。",
+        "tech_barrier": "低",
+        "doable": "降级可做（用无代码工具替代：YouTube+Canva+Gumroad即可复制）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 02:46"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "Victoria Moll": {
+      "handle": "Victoria Moll",
+      "name": "Victoria Moll",
+      "region": "国际",
+      "category": "在医疗编码这一极小众领域通过YouTube建立六位数收入的个人品牌，证明了垂直细分赛道的赚钱可行性。",
+      "aliases": [
+        "Victoria Moll"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "Victoria Moll",
+        "operator_name": "Victoria Moll",
+        "region": "国际",
+        "who": "Victoria Moll，美国医疗编码从业者，通过YouTube建立个人品牌，在医疗编码这一极小众垂直领域实现六位数美元年收入（约10万-99万美元区间），单人运营。",
+        "deliverable": "交付物：①YouTube广告分成收入（核心流量来源）；②可能存在的联盟营销收入（推荐医疗编码考试教材、在线课程、软件工具等）；③可能存在的付费社群或咨询（未公开确认）。她卖的不是实体产品，而是「知识+注意力」——把自己在医疗编码领域的专业经验转化为视频内容，吸引从业者观看。",
+        "business_model": "商业模式：YouTube广告分成（按播放量计费，CPM在垂直专业领域较高）+ 联盟营销佣金（推荐书籍/课程/工具拿提成）+ 可能的付费服务（未公开）。收入结构：以YouTube广告收入为主，联盟营销为辅。医疗编码属于美国医疗行业细分领域，受众精准但规模小，单视频收益可能不高，但靠大量视频累积+长尾流量实现六位数年收入。",
+        "acquisition": "获客方式：①平台：YouTube（主阵地）+ 可能的Google搜索（医疗编码相关问题）；②内容动作：发布针对医疗编码从业者/学习者的实用教程视频，如「如何准备CPC考试」「ICD-10编码技巧」「医疗编码常见错误」等；③第一波客户来源：通过YouTube搜索流量——医疗编码学习者/从业者在Google或YouTube搜索相关问题时，她的视频出现在结果中；④可照抄打法：选择一个你熟悉的极小众专业领域，持续发布解决具体问题的教程视频，靠搜索长尾流量获客，不需要粉丝量巨大，只要视频解决具体问题就能持续获得精准观众。",
+        "stack": "工具链：YouTube（视频发布平台）+ 可能的视频编辑软件（如Camtasia/剪映等无代码工具）+ 可能的联盟营销平台（如Amazon Associates等）+ 可能的邮件列表工具（未公开确认）。整体工具链简单，无复杂技术门槛。",
+        "replicability": 4,
+        "first_step": "模仿第一步：今天就在YouTube上搜索你所在或熟悉的某个小众专业领域的关键词（如「XX证书考试」「XX软件教程」），看排名前几的视频内容是什么、标题怎么写、时长多长，然后模仿这个格式，用手机或电脑录制第一条解决具体问题的教程视频并发布。",
+        "red_flag": "风险/卖铲子判断：Victoria Moll本身是医疗编码从业者，她的内容是基于真实专业经验，不是「教别人做一人公司」的卖铲子模式。但风险在于：医疗编码是美国特定行业的认证体系，中国从业者无法直接复制其考试/认证路径；此外，六位数收入是否包含其他未公开业务（如高价咨询/课程）不得而知。普通人模仿的最大坑是：选错领域——必须选自己有真实专业背景的领域，否则内容无法持续。",
+        "learn": "最该抄的作业：①极小众垂直领域也能做出六位数收入，关键不是受众规模大，而是受众精准+付费意愿强；②靠搜索长尾流量获客，不需要追热点/做爆款，只要持续解决具体问题就能累积稳定流量。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用手机或电脑录制视频发布到YouTube即可，但需选择有真实专业背景的领域）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 02:46"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "vimfinn": {
+      "handle": "vimfinn",
+      "name": "vimfinn",
+      "region": "国际",
+      "category": "在Gumroad上销售Notion模板（Mono Focus OS），获得5/5评分并在Product Hunt亮相，属于无需写代码的信息产品/模板变现。",
+      "aliases": [
+        "vimfinn"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "vimfinn",
+        "operator_name": "vimfinn",
+        "region": "国际",
+        "who": "vimfinn：一名独立创作者，通过Gumroad平台销售Notion模板（代表作Mono Focus OS）实现变现，曾登上Product Hunt，属于典型的无代码信息产品/模板生意，具体收入规模未公开。",
+        "deliverable": "交付物：Notion模板（数字资产）。具体产品为Mono Focus OS，是一套基于Notion系统的个人效率管理模板，用户购买后导入Notion即可使用，无需安装额外软件。",
+        "business_model": "商业模式：一次性付费购买数字产品。通过Gumroad平台直接销售模板文件，价格区间未公开，但此类Notion模板通常定价在5-50美元之间。收入来源单一，即模板销售，无订阅或后续服务费用。",
+        "acquisition": "获客方式：①平台流量：利用Gumroad平台内部的推荐和搜索流量，以及Product Hunt的曝光效应获取初始用户；②社交证明：通过5/5的高评分积累口碑，吸引新用户；③内容营销：可能在Twitter、Reddit等平台分享模板使用心得或效率技巧，间接引流。具体冷启动策略未公开，但Product Hunt亮相表明其具备一定的话题性和推广能力。",
+        "stack": "工具链：Notion（模板制作和交付平台）、Gumroad（数字产品销售和支付平台）、Product Hunt（产品发布和曝光平台）。",
+        "replicability": 5,
+        "first_step": "模仿第一步：注册Gumroad账号，创建一个简单的Notion模板（如待办事项清单或日记模板），定价9.99美元，发布到Gumroad并分享到Twitter或Reddit相关社群。",
+        "red_flag": "风险/卖铲子判断：该模式本身不涉及教别人赚钱，而是直接销售模板，因此不存在卖铲子风险。但需注意Notion模板市场竞争激烈，同质化严重，长期增长可能受限。",
+        "learn": "最该抄的作业：利用Product Hunt等平台进行产品发布，快速获取初始用户和反馈；通过高评分和社交证明建立信任，促进转化。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 03:12"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "codingnotes.io": {
+      "handle": "codingnotes.io",
+      "name": "CodingNotes作者",
+      "region": "国际",
+      "category": "花费8个月开发编程学习笔记和闪卡产品（CodingNotes），在Gumroad上销售，属于知识产品化变现。",
+      "aliases": [
+        "CodingNotes作者"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "codingnotes.io",
+        "operator_name": "CodingNotes作者",
+        "region": "国际",
+        "who": "CodingNotes作者：一位独立开发者/创作者，花费约8个月时间开发并运营CodingNotes项目。该项目是一个面向编程学习者的数字产品，主要通过Gumroad平台进行销售。具体收入规模、客户数量等财务数据未公开。",
+        "deliverable": "交付物：CodingNotes是一个编程学习笔记和闪卡产品。它主要面向希望系统学习编程或复习编程知识的学习者，通过结构化的笔记和闪卡形式帮助用户高效掌握编程技能。",
+        "business_model": "商业模式：采用一次性付费购买数字产品的模式，通过Gumroad平台完成交易。具体定价区间未公开，收入来源单一，主要依赖产品销售，无订阅或广告收入。",
+        "acquisition": "获客方式：具体获客渠道和动作未详细公开。但基于Gumroad平台特性和类似知识产品案例，推测可能通过以下方式获客：①在Reddit、Twitter等开发者社区分享免费内容或产品亮点；②利用Gumroad平台内部流量和推荐；③通过SEO优化产品页面，让搜索编程学习资源的用户找到产品；④可能通过邮件列表或社群运营维护用户关系。第一波客户来源未透露。可照抄的打法：在开发者聚集的社区（如Reddit的r/learnprogramming、Hacker News）提供有价值的免费编程学习资源，引导至Gumroad产品页面。",
+        "stack": "工具链：主要使用Gumroad（海外数字产品售卖平台）进行产品售卖和交付，可能使用Notion或类似工具整理学习笔记内容，使用Canva或类似设计工具制作闪卡视觉元素。无复杂技术工具依赖。",
+        "replicability": 4,
+        "first_step": "模仿第一步：今天就可以在Gumroad上创建一个账号，整理一份你擅长的编程主题学习笔记（如Python基础、JavaScript概念等），制作成PDF或Notion页面，设定一个合理的价格（如9.99美元），发布产品页面并开始分享。",
+        "red_flag": "风险/卖铲子判断：该项目本身是交付真实的学习产品，而非教别人如何赚钱的课程或社群，因此不属于卖铲子模式。但需注意，编程学习市场竞争激烈，产品差异化不足可能导致销售困难。普通人模仿的最大坑可能是内容质量不够突出，难以在已有众多编程学习资源中脱颖而出。",
+        "learn": "最该抄的作业：①将专业知识（编程学习）产品化，通过结构化笔记和闪卡形式提供独特价值；②利用Gumroad等现成平台快速启动数字产品销售，无需技术背景。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 03:12"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "小林": {
+      "handle": "小林",
+      "name": "小林",
+      "region": "国内",
+      "category": "靠一人公司模式月入8万，核心交付是深度判断、客户陪伴和战略规划等无法被AI替代的“人的温度”，无需写代码。",
+      "aliases": [
+        "小林"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "小林",
+        "operator_name": "小林",
+        "region": "国内",
+        "who": "小林，国内单人数字工作室主理人，采用一人公司模式，核心业务为高客单价的战略咨询与客户陪伴，月入约8万元（基于标签推断）。",
+        "deliverable": "交付物：深度判断、客户陪伴、战略规划等高价值咨询服务。核心卖点是「人的温度」和无法被AI替代的主观经验，而非标准化的软件或模板。",
+        "business_model": "商业模式：高客单价咨询服务（项目制或长期陪跑）。具体定价未公开，但月入8万意味着若客单价为1-2万，每月仅需4-8个客户；若为长期陪跑，可能是月费制。收入结构单一，完全依赖个人时间交付。",
+        "acquisition": "获客方式：未公开具体渠道细节。但基于「高客单价」和「人的温度」定位，推测其获客核心在于私域信任建立（如朋友圈、私域社群）或精准内容引流（如知乎、公众号输出深度观点）。第一波客户大概率来自其个人品牌积累或熟人转介绍。由于缺乏具体动作描述，可照抄的打法受限。",
+        "stack": "工具链：未公开。推测使用基础沟通工具（微信/飞书）和可能的预约/合同工具（如腾讯文档、契约锁等），无复杂技术栈。",
+        "replicability": 3,
+        "first_step": "模仿第一步：梳理你自身在某个细分领域的「深度判断」或「经验」，写成3-5篇能体现你专业度和「人味」的深度内容，发布在目标客户聚集的平台（如知乎、小红书或朋友圈），测试反馈。",
+        "red_flag": "风险/卖铲子判断：该模式高度依赖个人IP和信任积累，难以规模化。若小林后续转向卖课/卖社群教别人做咨询，则需警惕「卖铲子」风险，此时复制价值降低。目前看是真实服务交付，但个人时间天花板明显。",
+        "learn": "最该抄的作业：1. 将「人的温度」和「深度判断」作为核心差异化卖点，避开与AI的标准化竞争；2. 高客单价单人模式的核心是筛选高信任度客户，而非流量规模。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，靠个人专业能力和沟通即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 04:17"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "勤勤": {
+      "handle": "勤勤",
+      "name": "勤勤",
+      "region": "国内",
+      "category": "新手妈妈，通过一人公司模式每天工作一小时，半年收入17万，展示了普通人可复制的自由职业路径。",
+      "aliases": [
+        "勤勤"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "勤勤",
+        "operator_name": "勤勤",
+        "region": "国内",
+        "who": "勤勤，国内新手妈妈，一人公司模式，半年收入约17万元（约每月2.8万），工作时长约每天1小时，主打普通人可复制的自由职业路径",
+        "deliverable": "未公开具体交付物形态。从「一人公司」「自由职业路径」标签推断，可能涉及知识付费、咨询服务或数字产品，但具体卖什么（课程/社群/一对一咨询/模板等）未明确披露",
+        "business_model": "收入结构未公开。半年17万，月均约2.8万。收费模式（一次性/订阅/项目制）及客单价均未披露",
+        "acquisition": "获客路径未公开。资料中未提及她具体在哪个平台获客、用什么内容或动作吸引客户、前几个客户从哪来。这是本案例最大的信息缺口——如果无法还原获客方式，普通人很难真正照抄。可能她在某社交平台（如小红书/公众号/抖音）有内容输出，但具体渠道和打法未披露",
+        "stack": "未公开。无法确认她使用哪些工具",
+        "replicability": 2,
+        "first_step": "由于获客方式和交付物均未公开，无法给出具体可执行的模仿第一步。建议先找到勤勤的原内容（如小红书/公众号/播客），了解她实际卖什么、在哪获客，再决定如何跟进",
+        "red_flag": "该案例存在典型「卖铲子」风险：如果她的主要收入来自「教别人做一人公司/卖课/卖社群」，而非自己交付真实服务或产品，则普通人的模仿价值会大幅降低。此外，「每天工作1小时、半年17万」这类数字若无法核实，可能是精心包装的营销故事，而非可复制的真实路径",
+        "learn": "1. 一人公司模式本身是真实可行的方向，但关键在「卖什么」和「怎么获客」，而非工作时长或收入数字；2. 对这类案例应保持警惕——收入数字和获客路径不透明的，参考价值有限",
+        "tech_barrier": "无",
+        "doable": "做不到（核心信息缺失，无法判断是否可复制）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 04:17"
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "阿喵": {
+      "handle": "阿喵",
+      "name": "阿喵（June）",
+      "region": "国际",
+      "category": "心理咨询师转型野生艺术家，在悉尼举办首次个展并实现盈利，将情绪疗愈能力产品化。",
+      "aliases": [
+        "阿喵（June）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "阿喵",
+        "operator_name": "阿喵（June）",
+        "region": "国际",
+        "who": "阿喵（June），前心理咨询师，现全职艺术家。定居悉尼，单人运营。2024年左右在悉尼举办首次个展并实现盈利，将心理咨询经验转化为艺术疗愈产品。",
+        "deliverable": "艺术疗愈产品与服务。具体包括：1. 原创绘画/艺术作品的销售（画作、版画等）；2. 艺术疗愈工作坊或体验活动（结合其心理咨询背景）；3. 可能的线上疗愈内容或课程。核心交付物是「情绪价值」和「艺术体验」，而非实体商品本身。",
+        "business_model": "混合模式。收入来源包括：1. 艺术品销售（一次性收入，价格未公开）；2. 工作坊/活动门票（单次或系列课，价格未公开）；3. 可能的线上内容订阅或课程收入（未公开）。整体规模较小，属于单人工作室级别，具体月收入未公开。",
+        "acquisition": "获客方式主要依赖个人品牌和内容营销，具体路径如下：①平台/渠道：Instagram（视觉内容展示）、小红书（中文社区引流）、本地艺术社群和线下活动；②内容动作：发布创作过程、疗愈理念、作品故事，建立「心理咨询师转型艺术家」的人设；③第一波客户来源：前客户群体（心理咨询来访者）转化、艺术圈人脉推荐、社交媒体内容吸引的精准粉丝；④可照抄打法：在小红书/Instagram持续输出「艺术+疗愈」内容，展示创作过程和作品背后的情绪价值，吸引对心理疗愈感兴趣的艺术爱好者。",
+        "stack": "无代码工具链：Instagram/小红书（内容发布与获客）、微信/邮件（客户沟通与社群运营）、线下画廊或活动场地（展览与销售）、可能的Gumroad或类似平台（数字产品售卖）。",
+        "replicability": 4,
+        "first_step": "今天就可以在小红书或Instagram开设账号，开始发布「艺术创作过程」或「情绪疗愈主题」的内容，建立个人品牌雏形。",
+        "red_flag": "非卖铲子模式，她交付的是真实艺术产品和服务。但风险在于：艺术疗愈市场细分程度高，受众相对小众；收入稳定性依赖持续创作和曝光，单人运营抗风险能力弱。",
+        "learn": "1. 将专业背景（心理咨询）与兴趣技能（艺术）结合，打造差异化人设；2. 通过内容展示创作过程和情绪价值，吸引精准受众，而非单纯卖作品。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成社交媒体和线下渠道即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:00",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "张居隐": {
+      "handle": "张居隐",
+      "name": "张居隐",
+      "region": "国际",
+      "category": "大众运输迷，通过将照片卖给国外商业图库作为副业赚钱，是典型的低门槛策展/分销模式。",
+      "aliases": [
+        "张居隐"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "张居隐",
+        "operator_name": "张居隐",
+        "region": "国际",
+        "who": "张居隐，中国大众运输（地铁/火车/公交等）摄影爱好者，以副业形式运营，通过向国外商业图库授权照片获取收入，具体规模未公开。",
+        "deliverable": "交付物：高质量的大众运输场景照片（如地铁站台、列车车厢、通勤人群、城市交通设施等），以「图片授权」形式交付，买家为国外商业图库或需要相关素材的设计师/媒体。",
+        "business_model": "商业模式：图片授权费/版税模式。照片上传至图库后，每次被下载或授权使用即获得分成，属于被动收入型副业。具体定价和分成比例未公开。",
+        "acquisition": "获客方式：①平台：国外商业图库（如Getty Images、Shutterstock、Adobe Stock等）；②动作：日常拍摄大众运输题材照片，筛选高质量作品后上传至图库平台；③第一波客户：图库平台的自然流量，买家通过关键词搜索（如'subway'、'commute'、'public transport'）找到图片并购买授权；④可照抄打法：普通人可模仿——用手机或相机拍摄本地地铁/公交/火车站场景，注册国外图库账号，上传带英文关键词描述的照片，等待自然成交。",
+        "stack": "工具链：相机或智能手机（拍摄）、国外图库平台账号（上传和售卖）、图片编辑软件（如Lightroom，可选）",
+        "replicability": 4,
+        "first_step": "模仿第一步：今天用手机拍摄一张本地地铁站或公交车的照片，注册一个Shutterstock（海外图库平台）账号，上传这张照片并填写英文关键词（如'subway station'、'commuter'）。",
+        "red_flag": "风险/卖铲子判断：非卖铲子模式，是真实交付图片资产。普通人模仿的最大坑是：国外图库竞争激烈，新账号前期流量低，需要持续上传大量高质量照片才能产生稳定收入；且需了解图库的审核标准和版权要求。",
+        "learn": "最该抄的作业：①选择细分垂直领域（大众运输）持续产出，形成风格统一的内容资产；②利用国外图库的全球买家流量，实现被动收入，无需自己找客户。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用手机拍摄和注册图库平台即可开始）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:00",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "裸辞小张": {
+      "handle": "裸辞小张",
+      "name": "裸辞小张",
+      "region": "国内",
+      "category": "前广告人转型万粉博主，靠“轻IP”和线下活动品牌实现自由职业月入过万。",
+      "aliases": [
+        "裸辞小张"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "裸辞小张",
+        "operator_name": "裸辞小张",
+        "region": "国内",
+        "who": "裸辞小张，前广告从业者，现国内自由职业者。定位为「轻IP」博主，通过个人品牌结合线下活动运营，实现月入过千至万元级别（具体收入未公开，仅知「过万」）。",
+        "deliverable": "交付物为「轻IP内容」与「线下活动/社群服务」。具体包括：在社交媒体发布的个人成长、职场转型类内容（吸引流量）；以及基于此流量组织的线下聚会、工作坊或社群会员资格（变现核心）。",
+        "business_model": "混合模式。① 线上：通过内容积累粉丝，可能通过平台广告分成或软广植入获得少量收入（未公开）；② 线下/私域：通过组织线下活动收取报名费，或运营付费社群收取会员费。客单价未公开，整体月收入约「过万」。",
+        "acquisition": "获客方式核心为「个人品牌内容引流 + 线下活动裂变」。① 渠道：主要在小红书、微信公众号、抖音等国内社交平台；② 动作：发布「裸辞」「自由职业」「广告人转型」等强共鸣话题的图文/视频，建立「过来人」人设，吸引同频职场人；③ 转化：在内容中引导用户关注公众号或加入微信群，通过私域运营将粉丝转化为线下活动参与者或社群成员；④ 可照抄打法：普通人可模仿其「痛点内容+人设故事+私域沉淀」的路径，先通过输出个人真实经历吸引精准粉丝，再组织小规模线下活动变现。",
+        "stack": "工具链：小红书/微信公众号/抖音（内容发布）、微信（私域运营与社群管理）、活动行/互动吧（线下活动报名与票务）、收款码/微信群收款（资金结算）。均为无代码、现成工具。",
+        "replicability": 4,
+        "first_step": "模仿第一步：在小红书或微信公众号上，发布一篇关于你自身职业转型或技能变现的真实经历文章/笔记，标题突出「裸辞」「自由职业」「月入过万」等关键词，并在文末引导读者加微信或关注公众号，以此测试内容引流效果。",
+        "red_flag": "风险/卖铲子判断：需警惕其后期是否转向「教别人如何做自由职业博主/卖课」，若主要收入来自卖课而非线下活动本身，则属于「卖铲子」模式，可复制性降低。普通人模仿的最大坑在于：线下活动组织需要较强的现场控场能力和客户资源积累，非内容创作本身。",
+        "learn": "最该抄的作业：① 「轻IP」策略：不追求大而全的专业形象，而是打造真实、有共鸣的「转型者」人设，降低用户信任门槛；② 「线下活动」作为高客单价变现载体：将线上流量转化为线下见面，通过体验式服务（如工作坊、聚会）实现更高溢价。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成社交媒体和社群工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:18",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "南瓜": {
+      "handle": "南瓜",
+      "name": "南瓜",
+      "region": "国内",
+      "category": "大学辅导员，利用专业优势在小红书售卖专业课培训资料，月入数千到上万。",
+      "aliases": [
+        "南瓜"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "南瓜",
+        "operator_name": "南瓜",
+        "region": "国内",
+        "who": "南瓜，国内大学辅导员，单人运营，月入数千至万元级别（具体数字未公开，区间为推断）",
+        "deliverable": "专业课培训资料包：针对考研、期末复习或考证的专业课笔记、真题、重点梳理等数字化资料，卖给需要备考的学生",
+        "business_model": "一次性售卖，定价未公开（推测为几十到几百元不等），收入来源单一，靠资料包销售获利",
+        "acquisition": "核心渠道为小红书，具体打法：①平台：小红书，定位「学习博主」或「学长/学姐分享」人设；②内容动作：发布专业课笔记截图、备考经验贴、资料清单展示，用「免费试看」或「低价引流」吸引私信；③第一波客户：通过笔记评论区互动、私信咨询转化，初期可能靠朋友圈或校园群种子用户启动；④可照抄打法：注册小红书账号，发布3-5篇目标专业课的笔记干货（如「XX大学XX专业考研重点梳理」），文末引导私信领取完整资料，用微信或小红书私信完成交易",
+        "stack": "无代码工具：小红书（内容发布）、微信（交易沟通）、可能用网盘（资料交付），无需复杂软件",
+        "replicability": 4,
+        "first_step": "今天就在小红书注册账号，发布一篇你熟悉领域的「干货笔记」（如「XX专业考研资料清单」），文末写「私信领取完整版」，观察3天私信量",
+        "red_flag": "非卖铲子模式，但存在版权风险：若资料涉及学校内部教材或真题，可能侵权；另外，资料易被复制，需持续更新或增加服务（如答疑）维持竞争力",
+        "learn": "",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用小红书和微信即可起步）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 11:26",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "阿金": {
+      "handle": "阿金",
+      "name": "阿金",
+      "region": "国内",
+      "category": "省钱专家，在小红书吸粉近两万，通过分享薅羊毛技巧建立个人品牌并实现稳定副业收入。",
+      "aliases": [
+        "阿金"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "阿金",
+        "operator_name": "阿金",
+        "region": "国内",
+        "who": "阿金，国内个人博主，小红书账号，粉丝约2万，定位为省钱/薅羊毛专家，目前为副业阶段",
+        "deliverable": "交付物：主要是「信息差服务」和「流量变现」。具体包括：① 小红书笔记（免费内容，用于引流）；② 羊毛攻略/省钱手册（可能作为引流诱饵或低价产品）；③ 社群/私域咨询（未公开具体形式，推测为付费社群或一对一指导）；④ 可能的带货佣金（通过优惠券链接或团购）",
+        "business_model": "商业模式：流量变现为主。收入来源推测包括：① 平台广告分成（小红书蒲公英平台，未公开具体收入）；② 品牌软广/植入（未公开报价）；③ 付费社群/资料售卖（未公开定价）；④ 电商带货佣金（未公开）。整体为「免费内容引流 → 私域/广告变现」的轻资产模式",
+        "acquisition": "获客方式：① 核心渠道：小红书平台，通过发布「薅羊毛技巧」「省钱攻略」「优惠券分享」类笔记获取流量；② 内容策略：主打「实用主义」和「信息差」，标题通常包含具体金额（如「省了500元」）或紧迫感（如「仅限今天」），吸引价格敏感型用户；③ 第一波客户来源：大概率通过小红书推荐算法，从对价格敏感、有省钱需求的普通用户中自然获取；④ 可照抄打法：普通人可模仿其「具体场景+省钱金额+操作步骤」的笔记结构，例如「在XX平台用XX方法买XX省了XX元」，并持续输出同类内容积累粉丝",
+        "stack": "工具链：主要依赖小红书平台本身；可能使用微信（私域沟通/社群）、腾讯文档/石墨文档（整理攻略）、优惠券聚合平台（如什么值得买、粉象生活等）获取素材。无复杂技术工具",
+        "replicability": 4,
+        "first_step": "模仿第一步：今天就在小红书注册账号，搜索「薅羊毛」「省钱攻略」等关键词，找到10篇爆款笔记，分析其标题、封面、内容结构，然后模仿写一篇类似主题的笔记并发布",
+        "red_flag": "风险/卖铲子判断：目前资料未显示其主要收入来自「教别人做一人公司」或「卖课」，更多是自身流量变现。但需注意：① 薅羊毛信息有时效性，需持续跟进；② 平台规则变化可能导致封号风险；③ 若后期转向卖课/卖社群，需警惕是否变成「卖铲子」模式",
+        "learn": "最该抄的作业：① 「信息差」是低成本创业的有效切入点，找到普通人不知道但有用的省钱技巧即可；② 小红书对「实用型」「省钱型」内容有天然流量扶持，适合新手起步",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成社交媒体工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 11:26",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "淼淼": {
+      "handle": "淼淼",
+      "name": "淼淼",
+      "region": "国内",
+      "category": "前互联网大厂产品经理，2024年离职创业开24小时无人麻将馆，2个半月回本，4个月赚10几万。",
+      "aliases": [
+        "淼淼"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "淼淼",
+        "operator_name": "淼淼",
+        "region": "国内",
+        "who": "淼淼，前互联网大厂产品经理，2024年离职创业，单人操盘24小时无人麻将馆，2个半月回本，4个月赚10几万（具体数字未公开，为当事人自述）",
+        "deliverable": "提供麻将室/棋牌室的场地租赁服务，24小时自助使用，按小时或按局收费，配备麻将机、空调、茶水等基本设施",
+        "business_model": "按小时收费的场地租赁模式，具体定价未公开。收入结构单一，主要来自场地租金。成本主要是房租、装修折旧、麻将机维护、水电。无人值守省去人工成本是核心利润来源",
+        "acquisition": "①主要渠道：美团/大众点评店铺（用户搜索'棋牌室''麻将馆'时出现）+ 抖音/小红书本地生活引流；②具体动作：在美团开店上架套餐（如'4小时畅打XX元'），装修时拍短视频发抖音标注位置，引导顾客到店后好评返现；③第一波客户来源：未公开，推测是开业初期通过美团新店流量扶持 + 周边小区/写字楼地推传单 + 朋友介绍；④可照抄打法：在美团/大众点评开店上架优惠套餐，装修时拍3-5条短视频发抖音带定位，开业首周做'好评返现'或'首单半价'拉首批评价",
+        "stack": "智能门锁（如小米/鹿客，手机远程开门）+ 预约小程序（如'趣约麻将''棋牌室管理系统'等现成SaaS）+ 美团/大众点评店铺 + 抖音/小红书账号 + 监控摄像头 + 自助售货机（可选）",
+        "replicability": 4,
+        "first_step": "打开美团/大众点评，搜索你所在城市的'棋牌室''麻将馆'，看周边3公里内有多少家、价格多少、评价如何，判断本地市场是否饱和，再决定要不要入局",
+        "red_flag": "①回本周期和收入数据为当事人自述，未公开第三方核实，存在幸存者偏差；②麻将馆业务涉及赌博灰色地带，需确保不涉赌、只收场地费，否则有法律风险；③2个半月回本的前提是房租低、装修省、客流旺，普通人盲目复制可能算错账",
+        "learn": "①用智能门锁+预约系统实现无人值守，把人工成本从每月3000-5000元降到0，这是利润的核心来源；②前产品经理身份让他擅长用系统化工具（预约、门禁、监控）替代人力，普通人可以照搬这套工具组合",
+        "tech_barrier": "低",
+        "doable": "能（完全不用写代码，用现成智能门锁+预约小程序即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 22:35",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": null
+    },
+    "路边的老李树": {
+      "handle": "路边的老李树",
+      "name": "路边的老李树",
+      "region": "国内",
+      "category": "小红书实战派博主，拆解了从0粉到10万+的分阶落地方案，特别是「本地生活团购」这一2025年蓝海赛道的具体打法。他提供的是可复制的获客与变现路径，而非泛泛的理论，适合普通人直接抄作业。",
+      "aliases": [
+        "路边的老李树"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "路边的老李树",
+        "operator_name": "路边的老李树",
+        "region": "国内",
+        "who": "路边老李树，国内小红书实战派博主，专注本地生活团购赛道，粉丝量级未公开（标签提及10万+分阶方案，推测为万粉级知识博主），单人运营。",
+        "deliverable": "交付物为「本地生活团购」的实战方法论与落地方案，包括从0到10万粉的运营路径、团购选品逻辑、内容模板及变现流程；同时可能提供付费社群或一对一咨询（具体未公开）。",
+        "business_model": "商业模式以知识付费为主：①低价引流课或资料包（价格未公开）；②高价陪跑社群或私教（价格未公开）；③可能通过团购分销佣金变现（未公开）。收入结构未公开。",
+        "acquisition": "获客方式：①主阵地为小红书，发布「本地生活团购」实操干货笔记（如选品技巧、爆款内容模板、收益截图）；②通过「0粉到10万+」的分阶案例吸引想入局的普通人；③评论区互动+私信引流至微信/社群；④第一波客户来源未公开，但推测为小红书自然流量+早期粉丝裂变；⑤可照抄打法：模仿其笔记结构（痛点+方案+案例），聚焦本地生活细分领域持续输出。",
+        "stack": "工具链：小红书（内容发布）、微信（私域承接）、可能使用剪映（视频剪辑）、Canva（图文设计），无代码工具依赖。",
+        "replicability": 4,
+        "first_step": "模仿第一步：在小红书注册账号，发布第一篇「本地生活团购」实操笔记，标题示例：《普通人做本地生活团购，我靠这3步拿到第一个客户》。",
+        "red_flag": "风险/卖铲子判断：主要收入可能来自教别人做团购（卖课/社群），而非自身团购业务实战收益；普通人模仿的最大坑是「只学理论不落地」，或陷入付费社群后缺乏执行支持。",
+        "learn": "最该抄的作业：①聚焦「本地生活团购」这一2025年蓝海赛道，避开红海竞争；②用「分阶落地方案」降低学习门槛，让小白觉得「我能做到」。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:18",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-08"
+    },
+    "Canva模板赚钱项目": {
+      "handle": "Canva模板赚钱项目",
+      "name": "Canva模板创作者",
+      "region": "国际",
+      "category": "普通人利用AI辅助设计Canva通用模板，通过Etsy等平台卖给海外用户赚取美金。这是一个典型的「数字产品+跨境+AI提效」的一人公司模式，无需编程，无需囤货，只需掌握设计审美和上架流程，适合零基础新手作为副业起步。",
+      "aliases": [
+        "Canva模板创作者"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "Canva模板赚钱项目",
+        "operator_name": "Canva模板创作者",
+        "region": "国际",
+        "who": "Canva模板创作者（国际）：单人运营，利用AI辅助设计，在Etsy等跨境电商平台售卖Canva可编辑模板（如简历、社交媒体图、邀请函等），赚取美元差价，属于典型的数字产品+跨境+AI提效的一人公司模式。",
+        "deliverable": "交付物：Canva可编辑模板文件（通常是PDF链接或Canva模板链接）。客户购买后，通过链接在Canva中自行编辑文字、颜色、图片，无需设计师介入。交付形式为数字文件，无物流成本。",
+        "business_model": "商业模式：一次性销售，单件定价通常在3-15美元之间，部分高端套装可达20-50美元。收入结构为纯数字产品利润，无库存、无发货成本，毛利率极高（接近100%）。未公开具体月收入，但头部卖家月入可达数千至数万美元。",
+        "acquisition": "获客方式：①平台内SEO：在Etsy搜索栏优化关键词（如\"Minimalist Resume Template\", \"Instagram Story Template\"），利用Etsy内部流量；②Pinterest引流：创建模板预览图，链接回Etsy店铺，Pinterest是视觉类产品的核心流量源；③TikTok/Instagram Reels：发布模板使用教程或前后对比视频，挂载店铺链接；④第一波客户：通常来自平台自然搜索+早期低价促销积累评价；⑤可照抄打法：先用AI生成模板设计图，上传Etsy，同时在Pinterest创建账号，每天发布5-10张模板预览图，链接回商品页。",
+        "stack": "工具链：Canva（模板制作与预览）、Midjourney/ChatGPT（AI辅助设计灵感与文案）、Etsy（销售平台）、Pinterest（引流）、TikTok/Instagram（内容营销）、Gumroad（备选销售平台）。",
+        "replicability": 4,
+        "first_step": "模仿第一步：注册Etsy店铺，用Canva免费版设计3-5款简单模板（如简历或社交媒体帖），上传并设置低价（如3美元）测试市场反应，同时在Pinterest创建账号发布预览图。",
+        "red_flag": "风险/卖铲子判断：该模式本身非卖铲子，但需注意：①Etsy平台政策变化风险；②模板同质化严重，竞争激烈；③部分\"导师\"教人做Canva模板并卖课，若主要收入来自卖课而非模板销售，则为卖铲子模式，需谨慎。",
+        "learn": "最该抄的作业：①利用AI提效：用Midjourney生成设计灵感，大幅缩短模板创作时间；②多平台引流：不依赖单一渠道，Etsy+Pinterest+TikTok组合拳，最大化曝光。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:27",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-08"
+    },
+    "The 25th Frame": {
+      "handle": "The 25th Frame",
+      "name": "zhouyang",
+      "region": "国际",
+      "category": "通过设计Notion模板并挂到Gumroad上销售，实现「不用写代码也能赚钱」。这是一个典型的「信息产品+独立开发者（无代码）」的一人公司模式，展示了普通人如何利用现有平台（Notion+Gumroad）构建被动收入流。",
+      "aliases": [
+        "zhouyang"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "The 25th Frame",
+        "operator_name": "zhouyang",
+        "region": "国际",
+        "who": "zhouyang，一名利用 Notion 模板在 Gumroad 平台销售数字产品的单人创作者，具体收入规模与粉丝基数未公开",
+        "deliverable": "Notion 模板，即基于 Notion 软件搭建好的、具有特定功能（如日程管理、笔记系统、财务追踪等）的页面结构，用户购买后复制到 Notion 即可使用",
+        "business_model": "一次性销售数字产品，通过 Gumroad 平台收款，具体定价区间未公开",
+        "acquisition": "主要依赖 Gumroad 平台内部流量与社区推荐，以及社交媒体（如 Twitter/X、小红书等）的内容展示引流，具体冷启动客户来源未公开，可照抄的打法是：制作一个高价值的 Notion 模板，在 Gumroad 上架，并在社交媒体分享模板的使用场景和效果截图",
+        "stack": "Notion（模板制作工具）、Gumroad（数字产品售卖平台）、社交媒体（如 Twitter/X、小红书等，用于内容引流）",
+        "replicability": 4,
+        "first_step": "在 Notion 中创建一个你觉得自己能帮到别人的模板（如个人仪表盘、阅读清单），然后注册 Gumroad 账号，上传该模板并设置价格",
+        "red_flag": "该模式属于典型的卖铲子行为，即通过售卖工具/模板而非直接交付服务或解决客户核心业务问题来获利，市场竞争激烈，且收入天花板可能较低",
+        "learn": "",
+        "tech_barrier": "无",
+        "doable": "能",
+        "signals_used": 0,
+        "generated_at": "2026-08-08 05:27",
+        "is_revisit": false
+      },
+      "last_teardown": "2026-08-08",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-08",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-08"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "title": {
+      "tag": "plain_text",
+      "content": "🔍 OPC赚钱机会挖掘日报 · 操盘手拆解 | 2026年08月07日"
+    },
+    "template": "blue"
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**📑 今日拆解 1 人  ·  🆕 新发现 0 人**"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "# 🔍 操盘手拆解 · 🌍 Nick Saraev"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**👤 人物**：加拿大人，完全自学、不靠写代码团队赚钱。早期做 LeftClick（单人 AI 自动化机构），现在同时卖工作流模板和付费社区。真人交付型标杆，不是卖课党。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**📦 交付物**：帮中小企业用 n8n/Make 把重复业务流程（线索进表、邮件自动分类、工单流转）搭成自动化工作流；额外卖现成工作流模板 + $184/月 社区 Maker School。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**💰 商业模式**：接单：单个工作流 $2K–10K 或按月维护；模板：Gumroad 一次性卖；社区：$184/月。公开口径 LeftClick 单人月营收约 $72K。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🎯 获客方式**：YouTube 发『用 n8n 帮 X 行业省 Y 小时』实录；Upwork/reddit 接小单做案例；长文复盘 + 冷外联；免费小诊断换前 3 个客户。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🧰 工具链**：n8n / Make（拖拽搭流程）+ Stripe（收款）+ Gumroad（卖模板）+ YouTube（获客）+ 现成 AI API。零自研代码。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🚀 模仿第一步**：用 n8n 免费版搭一个『表单→自动写进表格并邮件通知』的小流程，录屏发 YouTube/小红书，标题写《我是怎么帮 X 行业省下每天 2 小时》，用免费小改换前 3 个客户。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**⚠️ 风险 / 卖铲子**：本人真交付型，主要收入来自帮企业做自动化，不是卖铲子。但 Maker School 社区属『教别人做』，别只学不做。最大坑：光看教程不接单。先接 3 个真客户再谈规模化。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**✅ 最该抄的作业**：把自动化做成可反复卖的模板 + 用公开构建内容当免费广告。普通人不必做到 $72K/月，先做到：一个行业 + 一条流程 + 三个月费客户。"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "⭐⭐⭐⭐ 较易模仿 · 基于 6 条新鲜信号"
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "wide_screen_mode": true
+  },
+  "header": {
+    "title": {
+      "tag": "plain_text",
+      "content": "🔍 OPC赚钱机会挖掘日报 · 操盘手拆解 | 2026年08月08日"
+    },
+    "template": "blue"
+  },
+  "elements": [
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**📑 今日拆解 1 人**"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "# 🔍 操盘手拆解 · 🇨🇳 半佛仙人"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**👤 人物**：国内头部商业科普自媒体人，单人/小团队，多平台分发，品牌合作收入为主"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**📦 交付物**：硬核商业科普内容（图文+视频）+ 书"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**💰 商业模式**：B站单条定制视频约59万、公众号约17万；另有流量分成/书籍"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🎯 获客方式**：知乎起家→公众号→B站；高频产出+抽奖+多平台分发"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🧰 工具链**：无代码工具：公众号编辑器、视频剪辑、知乎"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🔧 技术门槛**：🟢 无需代码"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🙋 你能否照做**：降级可做（用无代码工具替代）"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**🚀 模仿第一步**：选一个你多懂一点的领域，用说人话写篇拆解发在公众号/知乎试反馈"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**⚠️ 风险 / 卖铲子**：头部报价极高，新人难短期复制；内容质量要求高"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**✅ 最该抄的作业**：用利益/风控角度做信息过滤器"
+      }
+    },
+    {
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "⭐⭐⭐ 需学一下 · 基于 0 条新鲜信号"
+      }
+    },
+    {
+      "tag": "note",
+      "elements": [
+        {
+          "tag": "plain_text",
+          "content": "🤖 由 AI 自动生成 | 2026-08-08 01:51"
+        }
+      ]
+    }
+  ]
+}

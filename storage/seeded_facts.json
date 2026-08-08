@@ -1,0 +1,337 @@
+{
+  "entries": {
+    "_说明": "每个 key 对应名单里的 handle（或新操盘手的自定义 id）。tech_barrier: 无=完全不用碰代码/软件；低=可用 ChatGPT/Notion/表单等无代码工具；中=需配复杂工具/半技术；高=必须写代码/开发软件（系统默认排除）。未标注 tech_barrier 的现有关键人，运行时会默认判为「高」并被过滤，避免推 indie hacker。",
+
+    "@JustinWelsh": {
+      "category": "内容资产 / 单人生意系统",
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "个人品牌内容系统 + 两门线上课 + 付费 newsletter",
+        "business_model": "LinkedIn 内容带来私域，卖课（约 $150/门）与 newsletter 订阅；自称单人做到约 $8M 收入，毛利率约 91%",
+        "acquisition": "核心是 LinkedIn 日更建立专业人设，再用 newsletter 承接；公开讲「用 Notion/Airtable/Gumroad 拼出自运转系统」",
+        "stack": "ConvertKit(邮件)、Gumroad(卖课)、Notion、Airtable——全是现成 SaaS，点鼠标用",
+        "mrr": "未公开具体 MRR；公开口径为累计单人收入约 $8M",
+        "first_step": "选一个你真懂的垂直话题，在 LinkedIn/公众号日更 100 天，同时开一个免费 newsletter 承接读者"
+      }
+    },
+
+    "Daniel Vassallo (Small Bets)": {
+      "category": "小赌注单人生意 / 教育",
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Small Bets》书 + 线上课 + 付费社群（原 Gumroad 上卖课 $49–199，社群 $199/年 或 $999 终身）",
+        "business_model": "信息产品 + 会员费；Small Bets 课程/社群累计收入约 $500K+；该品牌后被 Gumroad 收购（约 $3.6M）",
+        "acquisition": "靠 Twitter 持续输出「普通人如何不辞职也能做小生意」的真实记录，用透明收入建立信任",
+        "stack": "Gumroad(卖课/社群)、Twitter、Stripe——无需写代码",
+        "mrr": "未公开；公开口径累计约 $500K+",
+        "first_step": "在 Twitter/即刻 上公开记录你自己的一个「小赌注」试水项目，边做边写，吸引同频的人"
+      }
+    },
+
+    "@khazix0918": {
+      "category": "AI 内容 KOL / 品牌合作（国内）",
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "AI 行业深度内容（公众号/视频）+ 品牌合作 + 知识付费 + 周边",
+        "business_model": "品牌合作单篇报价约 10–30 万；课程/训练营破百万；付费会员约 1999 元/年；IP 周边年销 500 万+（均为公开口径，具体未披露）",
+        "acquisition": "公众号 + 视频号 + 社群沉淀私域，靠「AI 前沿解读」建立权威后再接品牌与卖课",
+        "stack": "公众号/视频号/小鹅通(卖课)/知识星球(社群)——国内现成工具，无代码",
+        "mrr": "未公开",
+        "first_step": "选一个你比别人先懂半步的领域，用公众号/视频号持续输出深度解读，先把读者沉淀到私域"
+      }
+    },
+
+    "David Perell (写作变现/内容系统)": {
+      "category": "课程 / 付费社群（写作）",
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Write of Passage》线上写作课（cohort 制，5 周）+ newsletter",
+        "business_model": "单门课程定价 $3,995–$4,995；每年 2–3 期，每期数百学员，单期收入约 $1.5–2M+；累计约 $10M+（公开口径）",
+        "acquisition": "极度聚焦 Twitter（40 万+粉）+ newsletter（7 万→11 万+订阅）；靠长期写长文建立「写作权威」",
+        "stack": "Zoom(直播课)、邮件营销工具、课程平台——不写代码",
+        "mrr": "约 $1.8M/年（公开估算）；单期 $1.5–2M",
+        "first_step": "在 Twitter/即刻 上只写一个主题（如「如何写作」），连续写 30 天，同步开一个免费 newsletter 承接"
+      }
+    },
+
+    "Dickie Bush (Ship 30 写作系统)": {
+      "category": "写作社群 / 课程",
+      "tech_barrier": "无",
+      "seeded_facts": {
+        "deliverable": "《Ship 30 for Newsletter》写作训练营 + 付费社群（写作 + 建 newsletter）",
+        "business_model": "训练营 + 会员制；靠「每天写、公开写」的方法论吸引想做 newsletter 的人（具体营收未公开）",
+        "acquisition": "Twitter 上持续输出「写作原子笔记」方法论，用免费挑战赛引流到付费训练营",
+        "stack": "Twitter、newsletter 工具(如 ConvertKit)、社群——无代码",
+        "mrr": "未公开",
+        "first_step": "开一个 newsletter，承诺连续发 30 天；把每篇的「原子笔记」拆成短视频/帖子分发引流"
+      }
+    },
+
+    "Arvid Kahl (The Bootstrapped Founder)": {
+      "category": "作者 / 创作者（写作变现）",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "《The Bootstrapped Founder》书 + newsletter + 播客（讲「如何一个人做软件生意并卖出」）",
+        "business_model": "书 + 付费 newsletter + 赞助播客；本人曾把 SaaS 卖出（FeedbackPanda），现在靠内容/社群赚钱（具体营收未公开）",
+        "acquisition": "靠长期写「独立开发实战复盘」建立信任，newsletter 承接",
+        "stack": "写作 + newsletter + 播客——核心无代码；其 SaaS 经历是素材而非交付物",
+        "mrr": "未公开",
+        "first_step": "把你所在行业的「踩坑复盘」写成系列文章/newsletter，先建立「真实做过」的人设"
+      }
+    },
+
+    "Steph Smith": {
+      "category": "数据/趋势 内容 + 产品化",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "趋势数据库（ex: Trends）、newsletter、公开收入实验记录",
+        "business_model": "趋势数据库订阅 + 内容；以「公开做实验并晒数据」出名（具体营收未公开）",
+        "acquisition": "Twitter 持续输出数据化洞察 + 透明实验，吸引想「用数据找机会」的人",
+        "stack": "部分用到简单脚本/无代码工具；普通人可降级用现成表格+AI 复刻思路",
+        "mrr": "未公开",
+        "first_step": "选一个你关心的细分趋势，用公开数据 + AI 整理成一份「洞察报告」免费发出去，验证有没有人看"
+      }
+    },
+
+    "Vista 一人公司/AI 实战（Substack 中文）": {
+      "category": "AI 内容 / 社群（国内）",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "中文 Substack 关于「一人公司 + AI 实战」的深度专栏 + 社群",
+        "business_model": "Substack 订阅 + 社群；靠 AI 提效做内容（具体营收未公开）",
+        "acquisition": "中文内容平台 + Substack 沉淀付费读者",
+        "stack": "Substack、AI 对话工具、Notion——无代码为主",
+        "mrr": "未公开",
+        "first_step": "用 AI 帮你把「一人公司」相关经验整理成系列长文，发在 Substack/公众号，开付费档"
+      }
+    },
+
+    "@BrettFromDJ": {
+      "category": "产品化设计服务",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "Designjoy：固定价格的产品化设计服务（不限次设计需求，按月订阅）",
+        "business_model": "月费 $4,995–5,500；单人服务 40–50 个长期客户，ARR 100 万+ 美元",
+        "acquisition": "靠公开「一个人如何做设计公司」的内容 + 口碑；用透明收入和流程建立信任",
+        "stack": "Trello(工单)、Figma(设计)、Stripe(收款)——设计能力是核心，工具无代码",
+        "mrr": "约 $100万+ ARR（公开）",
+        "first_step": "如果你有某项专业技能（设计/文案/剪辑），把它打包成「按月订阅、需求不限」的固定服务，用 Notion/表单收单"
+      }
+    },
+
+    "@LiamOttley_": {
+      "category": "AI 自动化机构 / 教育",
+      "tech_barrier": "中",
+      "seeded_facts": {
+        "deliverable": "Morningside AI（AI 开发机构）+ AAA 加速器（教别人做 AI 服务生意）",
+        "business_model": "机构接单（项目 $3K–10K、月费 $1K–3K）+ 加速器收费（$5K–7K 一次性 / $97–197 月）；机构年收 700 万+（公开）",
+        "acquisition": "靠 YouTube 讲「AI 自动化代运营」获客；教育部分靠社群",
+        "stack": "需管理开发交付（技术门槛偏高）；其「AAA 模型」普通人可学思路但落地要技术/外包",
+        "mrr": "机构 $7M+ 年收（公开）",
+        "first_step": "降级路径：如果想做「AI 代运营」，自己不会写代码就先学用现成 AI 工具给客户做内容/客服，再外包技术"
+      }
+    },
+
+    "@nicksaraev": {
+      "category": "无代码自动化服务（偏技术）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "LeftClick 单人自动化机构 + 卖 n8n/Make 工作流（$2K–10K/个 或 月费）",
+        "business_model": "机构月收约 $72K；Maker School 社群 $184/月；核心是搭自动化流程（需技术）",
+        "acquisition": "Twitter 公开写「如何靠 AI 自动化赚钱」，自建受众",
+        "stack": "n8n / Make / 代码——需写代码/配工作流",
+        "mrr": "约 $72K/月（公开）",
+        "first_step": "普通人降级：用现成 AI 工具帮小商家做「省人力的重复活」（如自动回复、整理表格），不碰 n8n 代码"
+      }
+    },
+
+    "Nick Saraev Blog": {
+      "category": "无代码自动化服务（偏技术）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "同上：自动化工作流 + 课程",
+        "business_model": "月收约 $72K（公开）",
+        "acquisition": "内容 + 社群",
+        "stack": "n8n/Make/代码——需技术",
+        "mrr": "约 $72K/月",
+        "first_step": "降级：用 AI 工具做「代运营省人力」服务，不写代码"
+      }
+    },
+
+    "Cory Zue (产品化服务复盘)": {
+      "category": "产品化 SaaS 模板（需写代码）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "Pegasus（Django SaaS 脚手架，买断 $249–699）+ Place Card Me 等小产品",
+        "business_model": "代码模板买断 + 小产品；Pegasus 约 $10K MRR（公开）",
+        "acquisition": "靠技术博客 + GitHub 曝光卖开发者模板",
+        "stack": "Django/Python 代码——需写代码",
+        "mrr": "约 $10K MRR（公开）",
+        "first_step": "普通人不可直接做；可降级卖「现成模板的使用咨询/部署服务」"
+      }
+    },
+
+    "Tony Dinh (独立开发者实战)": {
+      "category": "独立开发 / AI 工具（需写代码）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "TypingMind（AI 对话前端，买断 $39 + 团队 $79/月）",
+        "business_model": "单产品月收约 $200K；本人公开 built-in-public，99% 早期收入来自 Twitter 受众",
+        "acquisition": "Twitter 公开开发过程 + Product Hunt",
+        "stack": "React/代码——需写代码",
+        "mrr": "约 $200K/月（公开）",
+        "first_step": "普通人不可直接做；可降级学用 TypingMind 这类现成工具服务客户"
+      }
+    },
+
+    "@tdinh_me": {
+      "category": "独立开发 / AI 工具（需写代码）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "TypingMind 等 AI 产品",
+        "business_model": "约 $200K/月（公开）",
+        "acquisition": "Twitter built-in-public",
+        "stack": "代码——需写代码",
+        "mrr": "约 $200K/月",
+        "first_step": "降级：用现成 AI 产品做服务，不自己开发"
+      }
+    },
+
+    "@op7418": {
+      "category": "无代码 AI 工作流（国内，偏技术）",
+      "tech_barrier": "高",
+      "seeded_facts": {
+        "deliverable": "n8n/AI 自动化工作流教学 + 接单 + 社群",
+        "business_model": "个人数字未公开；n8n 行业参考：接单 $800–2500/月、维保 $99–149/月、模板 $10–500（行业口径）",
+        "acquisition": "公众号/视频讲 n8n 实战",
+        "stack": "n8n/Make——需配工作流，半技术到技术",
+        "mrr": "未公开",
+        "first_step": "降级：用现成 AI 工具帮人做省力的活，不碰 n8n 节点编排"
+      }
+    },
+
+    "@xiaohuggg": {
+      "category": "产品 / 社区（国内，非技术）",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "产品观察 + 社群/内容（小互，偏产品与独立产品人社区）",
+        "business_model": "内容 + 社群/活动（具体未公开）",
+        "acquisition": "公众号/ Twitter 讲产品与独立开发观察，沉淀社群",
+        "stack": "内容 + 社群工具——无代码为主",
+        "mrr": "未公开",
+        "first_step": "围绕你熟悉的行业做「产品观察」内容，用社群承接同频的人"
+      }
+    },
+
+    "@dotey": {
+      "category": "翻译 / 内容策展（非技术）",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "高质量翻译 + 内容策展（AI/独立产品相关）",
+        "business_model": "内容 + 可能的社群/赞助（具体未公开）",
+        "acquisition": "Twitter 持续翻译搬运优质英文内容，建立「信息过滤器」人设",
+        "stack": "翻译 + 内容——无代码",
+        "mrr": "未公开",
+        "first_step": "把你看得懂的海外好内容，翻译成中文持续发出去，做「信息过滤器」"
+      }
+    },
+
+    "@XDash": {
+      "category": "写作 / 翻译（非技术）",
+      "tech_barrier": "低",
+      "seeded_facts": {
+        "deliverable": "写作 + 翻译内容",
+        "business_model": "内容 + 社群（具体未公开）",
+        "acquisition": "长期写作者人设",
+        "stack": "写作——无代码",
+        "mrr": "未公开",
+        "first_step": "围绕一个长期兴趣持续写，沉淀读者到 newsletter"
+      }
+    },
+
+    "ali_abdaal": {
+      "name": "Ali Abdaal",
+      "region": "国际",
+      "category": "内容 / 课程",
+      "tech_barrier": "无",
+      "aliases": ["Ali Abdaal"],
+      "sources": ["research"],
+      "seeded_facts": {
+        "deliverable": "YouTube 生产力内容（650 万粉）+ 《Part-Time YouTuber Academy》写作/做 YouTube 课 + newsletter + 书",
+        "business_model": "价值阶梯：Skillshare $14/月 → PTYA 课 $995–$4995（Accelerator 级）→ 书；累计创作者收入 $10M+（7 年，公开）",
+        "acquisition": "YouTube 做「搜索优化标题」接真实需求；再用 newsletter（Sunday Snippets 40 万+订阅）承接；公开收入报告建立信任",
+        "stack": "YouTube、newsletter 工具、Skillshare、课程平台——不写代码（其 App 是外包/团队做的，非核心交付）",
+        "mrr": "PTYA 单期最高 $1.9M，累计 $4.5M+；年收数百万级",
+        "first_step": "选一个你真懂且别人会搜的话题，开 YouTube 频道，标题照「别人在搜的问题」写；同步开免费 newsletter"
+      }
+    },
+
+    "pat_flynn": {
+      "name": "Pat Flynn",
+      "region": "国际",
+      "category": "内容 / 联盟 / 课程",
+      "tech_barrier": "无",
+      "aliases": ["Pat Flynn", "Smart Passive Income"],
+      "sources": ["research"],
+      "seeded_facts": {
+        "deliverable": "《Smart Passive Income》播客 + 博客 + 联盟营销课 + 会员(SPI Pro)",
+        "business_model": "联盟营销（累计 $3.5M+）+ 课程 + 会员 + 播客赞助；2017 年 12 月单月被动收入 $167,553，全年 $2.1M（公开）",
+        "acquisition": "博客写「手把手 how-to 指南」+ 资源页放联盟链接 + 播客；靠透明收入报告建立信任",
+        "stack": "博客、播客、邮件、联盟平台——全无代码",
+        "mrr": "峰值约 $100K–167K/月（公开）",
+        "first_step": "开一个博客或播客，写你真用过的产品的「手把手教程」，在教程里放联盟链接（只推自己真用过的）"
+      }
+    },
+
+    "banfo": {
+      "name": "半佛仙人",
+      "region": "国内",
+      "category": "内容 / 自媒体 + 品牌合作",
+      "tech_barrier": "无",
+      "aliases": ["半佛仙人", "硬核的半佛仙人"],
+      "sources": ["research"],
+      "seeded_facts": {
+        "deliverable": "B站/公众号/知乎 硬核商业科普内容 + 品牌定制视频 + 书《人间修炼指南》",
+        "business_model": "品牌合作（恰饭）为主：B站单条定制视频报价约 59 万；公众号报价约 17 万；多平台矩阵；B站单账号年收入估计不超 1000 万（公开口径，本人未确认具体）",
+        "acquisition": "知乎起家→公众号→B站；高频产出 + 抽奖互动 + 多平台分发；从「利益/风控」角度拆解热点，做信息的过滤器",
+        "stack": "图文/视频 + 多平台账号——核心是无代码的内容能力",
+        "mrr": "未公开（品牌合作报价透明，总收入未披露）",
+        "first_step": "选一个你比别人多懂一点的领域，用「说人话」的方式写/做视频，多平台分发；先把读者沉淀到私域"
+      }
+    },
+
+    "marie_forleo": {
+      "name": "Marie Forleo",
+      "region": "国际",
+      "category": "线上课程 / 社群",
+      "tech_barrier": "无",
+      "aliases": ["Marie Forleo", "B-School"],
+      "sources": ["research"],
+      "seeded_facts": {
+        "deliverable": "《B-School》线上创业课 + 《MarieTV》视频 + 书",
+        "business_model": "B-School 定价约 $2,000，单次招募常破 $10M+（公开口径）；靠视频内容 + 邮件引流",
+        "acquisition": "长期做 MarieTV + 免费训练营，用邮件名单承接后卖正价课",
+        "stack": "视频 + 邮件 + 课程平台——无代码",
+        "mrr": "单期招募 $10M+（公开）",
+        "first_step": "围绕你擅长的话题做免费视频/直播训练营，用邮件名单承接，再推正价课"
+      }
+    },
+
+    "michelle_making_sense": {
+      "name": "Michelle Schroeder-Gardner",
+      "region": "国际",
+      "category": "联盟营销 / 课程",
+      "tech_barrier": "无",
+      "aliases": ["Michelle Schroeder-Gardner", "Making Sense of Affiliate Marketing"],
+      "sources": ["research"],
+      "seeded_facts": {
+        "deliverable": "《Making Sense of Affiliate Marketing》联盟营销课 + 个人理财博客",
+        "business_model": "联盟课约 $197；本人靠联盟营销月入 $1M+（公开）；课 + 博客双轮",
+        "acquisition": "理财博客写「如何多赚钱/省钱」，在文章里放自己真用过的产品联盟链接",
+        "stack": "博客 + 邮件 + 联盟平台——无代码",
+        "mrr": "联盟月入 $1M+（公开）",
+        "first_step": "开一个你感兴趣的垂直博客，写「手把手教程」并在文中放你真用过的产品联盟链接"
+      }
+    }
+  }
+}

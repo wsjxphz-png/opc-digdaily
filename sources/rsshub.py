@@ -1,7 +1,8 @@
 """
-RSSHub 桥接源 — 通过 RSSHub 实例抓取中文平台内容。
+RSSHub 桥接源 — 通过公开 RSSHub 实例抓取中文平台内容。
 
-支持知乎、V2EX、即刻、B站等平台，通过 RSSHub mirror 桥接为 RSS。
+零代码方案：使用社区维护的公开 RSSHub 节点，不需要自己部署 Docker。
+支持多镜像自动回退：当一个节点不可用时，自动尝试下一个。
 """
 import asyncio
 import logging
@@ -14,9 +15,15 @@ from .base import BaseSource, ContentItem
 
 logger = logging.getLogger(__name__)
 
+# 公开 RSSHub 节点列表（按优先级排序，自动回退）
+# 不需要自己部署 Docker，直接使用社区维护的公开实例
+DEFAULT_MIRRORS = [
+    "https://rsshub.rssforever.com",
+]
+
 
 class RSSHubSource(BaseSource):
-    """RSSHub 桥接内容源。通过 mirror 实例抓取中文平台内容。"""
+    """RSSHub 桥接内容源。通过公开实例抓取中文平台内容。"""
 
     name = "rsshub"
 
@@ -25,7 +32,13 @@ class RSSHubSource(BaseSource):
             logger.info("RSSHub: 未启用，跳过")
             return []
 
-        mirror = cfg.get("mirror", "https://rsshub.rssforever.com")
+        # 支持多镜像配置（mirrors 列表），也兼容旧版单 mirror 字段
+        mirrors = cfg.get("mirrors") or [cfg.get("mirror", DEFAULT_MIRRORS[0])]
+        if isinstance(mirrors, str):
+            mirrors = [mirrors]
+        if not mirrors:
+            mirrors = DEFAULT_MIRRORS
+
         timeout = cfg.get("timeout", 30)
         routes = cfg.get("routes", [])
 
@@ -40,14 +53,30 @@ class RSSHubSource(BaseSource):
             for route_def in routes:
                 route = route_def.get("route", "")
                 label = route_def.get("label", route)
-                url = f"{mirror.rstrip('/')}{route}"
+
+                # 多镜像回退：逐个尝试直到成功
+                success = False
+                for mirror in mirrors:
+                    url = f"{mirror.rstrip('/')}{route}"
+                    try:
+                        resp = await client.get(url)
+                        if resp.status_code == 200:
+                            success = True
+                            break
+                        elif resp.status_code == 403:
+                            logger.debug(f"RSSHub [{label}]: {mirror} 返回 403（可能被墙），尝试下一个镜像")
+                        else:
+                            logger.warning(f"RSSHub [{label}]: {mirror} HTTP {resp.status_code}")
+                    except asyncio.TimeoutError:
+                        logger.debug(f"RSSHub [{label}]: {mirror} 超时，尝试下一个镜像")
+                    except Exception as e:
+                        logger.debug(f"RSSHub [{label}]: {mirror} {type(e).__name__}")
+
+                if not success:
+                    logger.warning(f"RSSHub [{label}]: 所有镜像均不可用，跳过")
+                    continue
 
                 try:
-                    resp = await client.get(url)
-                    if resp.status_code != 200:
-                        logger.warning(f"RSSHub [{label}]: HTTP {resp.status_code}")
-                        continue
-
                     f = feedparser.parse(resp.text)
                     entries = f.entries[:10]
 
@@ -79,7 +108,7 @@ class RSSHubSource(BaseSource):
                     logger.info(f"RSSHub [{label}]: {len(entries)} 条")
 
                 except asyncio.TimeoutError:
-                    logger.warning(f"RSSHub [{label}]: 超时，跳过")
+                    logger.warning(f"RSSHub [{label}]: 解析超时，跳过")
                 except Exception as e:
                     logger.error(f"RSSHub [{label}]: {type(e).__name__}: {e}")
 

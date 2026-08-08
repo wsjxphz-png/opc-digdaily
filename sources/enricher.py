@@ -33,11 +33,11 @@ class ContentEnricher:
 
         tasks = []
         for item in items:
-            if item.source == "rss":
+            if item.source in ("rss", "weixin", "weixin_whitelist"):
                 tasks.append(self._enrich_rss(item))
             elif item.source == "reddit":
                 tasks.append(self._enrich_reddit(item))
-            # YouTube / Twitter 暂不处理
+            # YouTube / Twitter / chinese-search 暂不抓全文（用摘要即可）
 
         if tasks:
             results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -50,8 +50,11 @@ class ContentEnricher:
         return items
 
     async def _enrich_rss(self, item: ContentItem):
-        """下载文章 HTML → trafilatura 提取正文。"""
+        """下载文章 HTML → trafilatura 提取正文（RSS / 公众号文章通用）。"""
         if not item.url:
+            return
+        # 搜狗中转链接（/link?url=）是 JS 跳转页，无正文，跳过以免覆盖摘要
+        if "weixin.sogou.com" in item.url:
             return
         async with self.semaphore:
             try:
@@ -59,9 +62,13 @@ class ContentEnricher:
                     resp = await client.get(
                         item.url,
                         headers={
-                            "User-Agent": "Mozilla/5.0 (compatible; OPC-bot/1.0; +https://github.com/wsjxphz-png/opc-daily-opportunity-bot)",
+                            "User-Agent": (
+                                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                "Chrome/124.0.0.0 Safari/537.36"
+                            ),
                             "Accept": "text/html,application/xhtml+xml",
-                            "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8",
+                            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
                         },
                     )
                     if resp.status_code != 200:

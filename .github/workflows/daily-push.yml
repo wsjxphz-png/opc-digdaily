@@ -2,14 +2,14 @@ name: OPC 一人公司每日机会挖掘
 
 on:
   schedule:
-    # 北京时间每天 9:00 = UTC 1:00
-    - cron: "0 1 * * *"
+    # 北京时间每天 22:00 = UTC 14:00（用户夜间工作，电脑此时在线）
+    - cron: "0 14 * * *"
   workflow_dispatch:  # 允许手动触发
 
 jobs:
   daily-push:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -28,4 +28,5 @@ jobs:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_API_BASE: ${{ secrets.AI_API_BASE }}
           AI_MODEL: ${{ secrets.AI_MODEL }}
+          WEIXIN_RSS_BASE_URL: ${{ secrets.WEIXIN_RSS_BASE_URL }}
         run: python main.py --once

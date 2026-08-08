@@ -27,6 +27,13 @@ class ContentItem:
     difficulty: str = ""       # 门槛: 零门槛 / 需学习 / 有一定门槛
     quality_flag: str = ""      # AI 质量标记: ⭐ / "" / ⚠️
     relevance_score: float = 0.0
+
+    # 严苛商业分析师评估维度（新）
+    code_dependency: int = 0       # 代码依赖度 1-5（5=必须精通编程）
+    authenticity: int = 0          # 真实性打分 1-5（1=纯卖课/卖铲子）
+    practical_steps: str = ""      # 核心实操步骤拆解（去除废话后）
+    verdict: str = ""              # 结论: "可复刻的真机会" / "卖噱头/卖铲子"
+
     ai_processed: bool = False # 是否经过 AI 处理
 
     def dict_key(self) -> str:

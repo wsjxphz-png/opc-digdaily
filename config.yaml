@@ -1,10 +1,13 @@
 # ============================================================
-# OPC 一人公司赚钱机会挖掘 — 每日信息推送系统 v3
+# 双模块系统
+#   模块1 操盘手拆解：每天拆解 1-2 个「隐形超级个体」的商业模式/获客/实操
+#   模块2 赚钱机会挖掘：每天挖掘 ~10 条一人公司赚钱机会（国内5 + 国际5），剔除卖铲子
 # ============================================================
-# 用户画像：不会写代码，所有搭建由 AI 代劳
-# 推送标准：非程序员 + 有实操过程 + 能复现 + 非卖铲子
-# 双管道：国内（中文源）+ 国际（英文源），各 8 条
-# 筛选增强：卖铲子检测、平台可靠性评级、信源新鲜度分级
+# 用户画像：完全不会写代码，要的是「能照着抄的作业」
+# 模块1 名单来源：config 里的 twitter/youtube/个人RSS 自动构建（媒体源仅用于发现）
+# 模块1 拆解数据（混合模式）：dossier 种子事实(agent 联网补搜) + 近期抓取信号 + LLM 知识
+# 模块2 评估：四维度评估(代码依赖/真实性/实操/结论) + 三条一票否决红线，硬过滤卖铲子
+# 过滤铁律：无论哪个模块，卖铲子/需写代码/真实性低的内容一律不发
 # ============================================================
 
 # --- 飞书推送 ---
@@ -22,9 +25,59 @@ ai:
 
 # --- 定时调度 ---
 schedule:
-  hour: 9
+  hour: 22
   minute: 0
   max_per_source: 8
+
+# --- 推送策略 ---
+push:
+  batch_size: 8            # 单张卡最多放几条；超过则自动拆成多张卡分批推送（第N批/共M批）
+  # 说明：命中硬过滤的优质内容「不封顶」——有多少优质推多少；
+  # 只是单条消息太长会被飞书截断，所以用分批解决，而不是砍条数。
+
+# --- 模块1 拆解引擎 ---
+teardown:
+  enabled: true
+  per_day: 2              # 每天推送几张深度拆解卡（用户要求 1-2 人/天）
+  require_signals: false  # true=只拆近期有新鲜内容的人；false=也可拆纯靠知识还原的人
+  # 只推送「完全不会写代码的人」能做的方向：无=完全不用碰软件；低=可用 ChatGPT/Notion/表单等无代码工具
+  # 中/高（需配复杂工具/需写代码/开发软件）一律不发，避免推 indie hacker / SaaS / 自动化工作流的人
+  allowed_tech_barrier: ["无", "低"]
+  # 聚焦「机会」：排除已成名多年的大V（如半佛仙人），只推新的一人公司/新IP/刚跑通一人模式的人
+  exclude_established: true
+  # 复盘更新：对已拆解的操盘手补充新动态（新业务/新边界/新赚钱方式）
+  revisit_per_day: 1            # 每天最多补充更新几个（0=关闭）
+  revisit_interval_days: 14    # 同一人距上次拆解/更新至少隔多少天才再补充
+
+# --- 模块1 发现引擎 ---
+discovery:
+  enabled: true
+  max_scan: 30            # 每次最多扫描多少条候选内容，从中识别新操盘手
+
+# --- 内容源侦察兵：每天主动挖掘新的「写一人公司/本身是OPC」的内容源（公众号）并自动入白名单 ---
+#   与 discovery 互补：discovery 找「值得拆解的人」(进 roster)，scout 找「值得每天追更的源」(进白名单)。
+#   侦察到的账号写入 storage/scouted_sources.json，次日（甚至当日由 main 注入 config）即被白名单轮询。
+source_scout:
+  enabled: true
+  max_candidates: 20        # 每轮最多评估多少候选公众号（避免一次烧太多 token）
+  min_score: 7              # LLM 打分 ≥ 此值才通过加入白名单
+  rejudge_days: 60          # 同一账号多少天内不重复评估（避免反复烧 token）
+  queries:
+    - "一人公司 公众号"
+    - "副业 公众号 推荐"
+    - "个人IP 公众号 关注"
+    - "轻创业 公众号"
+    - "不上班 公众号 搞钱"
+    - "知识付费 公众号 推荐"
+    - "自由职业 公众号 大佬"
+    - "小本创业 公众号"
+
+# --- 模块2 赚钱机会挖掘引擎 ---
+opportunity:
+  enabled: true
+  per_day: 10             # 每天目标总条数（仅作统计参考）
+  per_region: 15          # 安全上限（不是目标条数）：命中硬过滤的优质内容不封顶，仅防极端失控
+  exclude_shovel: true    # 硬过滤卖铲子：verdict≠真机会 / 真实性<3 / 代码依赖≥4 / 综合分<0.4 一律丢弃
 
 # ============================================================
 # 国内管道：中文赚钱实操内容
@@ -33,124 +86,142 @@ domestic:
   push_max: 8
 
   keywords:
+    # 策略：不用"一人公司/副业/创业"等营销标签 → 用"行为+交付形态"关键词
+    # 真正赚钱的人不打"一人公司"招牌，他们是极度高效的"超级个体/单人数字化工作室"
     strong:
-      # 赚钱/收入
-      - "赚钱"
+      # ▸ 无代码/自动化工具（核心工具箱）
+      - "n8n"
+      - "Make"
+      - "Zapier"
+      - "Coze"
+      - "扣子"
+      - "Dify"
+      - "Notion"
+      - "Airtable"
+      - "Framer"
+      - "Webflow"
+      - "Bubble"
+      - "Gumroad"
+      # ▸ 交付形态（卖什么、怎么卖）
+      - "自动化接单"
+      - "工作流定制"
+      - "流程交付"
+      - "产品化服务"
+      - "信息差"
+      - "数据整理"
+      - "无代码交付"
+      - "自动化顾问"
+      - "自动化定制"
+      # ▸ 商业模式（非营销标签，是真正的收费方式）
+      - "订阅制"
+      - "买断制"
+      - "按月收费"
+      - "项目制收费"
+      - "月费"
+      - "年费"
+      # ▸ 工作模式（超级个体/数字化工作室）
+      - "单人工作室"
+      - "数字化工作室"
+      - "超级个体"
+      - "独立开发者"
+      - "小团队"
+      # ▸ 获客与交付（可复制的实操）
+      - "冷邮件"
+      - "获客案例"
+      - "客户开发"
+      - "客户案例"
+      - "付费用户"
+      - "行业痛点"
+      - "小众需求"
+      - "垂直领域"
+      # ▸ 知识点（内容形式，非卖课）
+      - "实操复盘"
+      - "从零到一"
+      - "项目拆解"
+      - "工具组合"
+      - "AI工作流"
+      - "智能体"
+      - "流程自动化"
+      - "无代码"
+      - "零代码"
+      # ▸ 非技术方向（面向不会写代码的用户：内容/课程/社群/服务）
+      - "自媒体"
+      - "品牌合作"
+      - "知识付费"
+      - "付费社群"
+      - "会员制"
+      - "代运营"
+      - "内容变现"
+      - "newsletter"
+      - "写作者"
+      - "个人IP"
+      - "社群运营"
+      # ▸ 赚钱/变现/个人商业（让真赚钱案例进池；卖铲子由 AI 三否决兜底剔除）
+      - "一人公司"
       - "副业"
       - "搞钱"
-      - "被动收入"
+      - "赚钱"
       - "月入"
       - "年入"
-      - "营收"
-      - "利润"
-      - "销售额"
-      - "收入"
-      # 一人/独立
-      - "一人公司"
-      - "一人企业"
-      - "一个人"
-      - "自由职业"
-      - "裸辞"
-      - "不上班"
-      - "在家"
-      # 平台
-      - "闲鱼"
-      - "小红书"
-      - "抖音"
-      - "快手"
-      - "公众号"
-      - "视频号"
-      - "拼多多"
-      - "淘宝"
-      - "知乎"
-      - "B站"
-      - "微博"
-      - "微信"
-      # 模式
-      - "自媒体"
-      - "知识付费"
-      - "内容创业"
-      - "直播带货"
-      - "带货"
-      - "跨境电商"
-      - "一件代发"
-      - "摆摊"
-      - "数字产品"
-      - "模板"
-      - "电子书"
-      - "课程"
+      - "被动收入"
+      - "睡后收入"
+      - "个人品牌"
+      - "知识变现"
+      - "轻创业"
+      - "小本创业"
+      - "信息差"
       - "接单"
-      - "线上"
-      - "远程"
-      # AI + 非编程
-      - "AI赚钱"
-      - "用AI"
-      - "AI帮"
-      - "AI写"
-      - "AI做"
-      - "AI生成"
-      # 教程/案例
-      - "教程"
-      - "攻略"
-      - "案例"
-      - "实操"
-      - "经验"
-      - "干货"
-      - "手把手"
-      - "从零"
-      - "入门"
-      - "怎么"
-      - "如何"
-      - "我是怎么"
-      - "我是如何"
-      - "赚了"
+      - "外包"
+      - "自由职业"
+      - "小红书变现"
+      - "公众号变现"
+      - "卖课"
+      - "咨询"
+      - "陪跑"
+      - "赚钱案例"
+      - "副业项目"
     weak:
-      - "创业"
-      - "兼职"
-      - "上班族"
-      - "斜杠"
-      - "低成本"
-      - "零成本"
-      - "分享"
-      - "辞职"
-      - "变现"
-      - "网赚"
-      - "选题"
-      - "涨粉"
-      - "流量"
-      - "运营"
-      - "转化"
+      # 辅助信号（单独出现不足以命中，但配合strong可加分）
+      - "搭建"
+      - "定制化"
+      - "标准化"
+      - "复购"
+      - "续费"
+      - "线索"
+      - "交付物"
+      - "落地页"
+      - "转化路径"
+      - "定价策略"
+      - "服务收费"
+      - "如何找客户"
+      - "工作室模式"
+      - "productized service"
+      - "Built with n8n"
+      - "Built with Make"
+      - "Powered by Airtable"
 
   sources:
+    # ▸ 盯人策略：中文一人公司/AI工作流/无代码自动化实操者
+    #   注：中文 RSS 普遍偏科技资讯/软件评测，产不出「一人公司赚钱案例」，
+    #   故RSS仅保留少数直接对题的源，主力由「公众号搜索 + 中文搜索引擎」承担。
     rss:
       enabled: true
       feeds:
-        # ▸ 中文：效率 / 数字生活 / 工具推荐
+        # ▸ Substack 中文 Newsletter（盯具体人，直接讲一人公司/AI 实战）
+        - name: "Vista 一人公司/AI 实战（Substack 中文）"
+          url: "https://iamvista.substack.com/feed"
+        # ▸ 数字生活/效率（偶尔产出信息产品变现内容）
         - name: "少数派"
           url: "https://sspai.com/feed"
-        - name: "小众软件"
-          url: "https://www.appinn.com/feed/"
-        - name: "异次元软件"
-          url: "https://www.iplaysoft.com/feed"
 
-        # ▸ 中文：产品 / 运营 / 变现
-        - name: "人人都是产品经理"
-          url: "https://www.woshipm.com/feed"
-
-        # ▸ 中文：互联网观察 / 赚钱方法
-        - name: "数字移民"
-          url: "https://blog.shuziyimin.org/feed"
-        - name: "可能吧"
-          url: "https://kenengba.com/feed/"
-        - name: "阮一峰"
-          url: "https://www.ruanyifeng.com/blog/atom.xml"
-        - name: "月光博客"
-          url: "https://www.williamlong.info/rss.xml"
-
-    # ▸ RSSHub 桥接：知乎日报 + V2EX 热榜
+    # ▸ 公开 RSSHub 节点（知乎日报/V2EX 等）
+    #   已按用户反馈关闭：知乎日报/V2EX 偏资讯，产不出赚钱实操案例，
+    #   且 RSSHub 海外节点对中文路由不稳定。国内赚钱案例改由公众号搜索覆盖。
     rsshub:
-      enabled: true
-      mirror: "https://rsshub.rssforever.com"
+      enabled: false
+      mirrors:
+        - "https://rsshub.rssforever.com"
+        - "https://hub.slarker.me"
       timeout: 30
       routes:
         - route: "/zhihu/daily"
@@ -158,9 +229,100 @@ domestic:
         - route: "/v2ex/topics/hot"
           label: "V2EX 热榜"
 
-    # ▸ 中文搜索引擎（当前网络质量不稳定，暂时禁用）
+    # ▸ 公众号搜索（搜狗微信）：国内最优质、最直接的「一人公司/副业/赚钱」来源
+    #   无需登录即可搜到真实公众号文章，URL 经 JS 跳转解析为 mp.weixin 真实链接，
+    #   由 ContentEnricher 用浏览器 UA 抓全文。query_delay 避反爬。
+    weixin_search:
+      enabled: false      # 已弃用：泛关键词搜触发 DDG 限流；改用 weixin_targets（按号名搜）
+      engine: "sogou"
+      limit: 6              # 每个搜索词取前 6 条
+      max_total: 20         # 公众号源总数上限
+      query_delay: 3        # 词间延迟(秒)，避免被限流
+      queries:
+        - "一人公司 赚钱 案例 复盘"
+        - "副业 月入过万 实操 普通人"
+        - "公众号 变现 月入 真实 案例"
+        - "小红书 变现 案例 一个人"
+        - "知识付费 赚钱 真实 复盘"
+        - "自由职业 接单 赚钱 经验"
+        - "AI 副业 普通人 赚钱 实操"
+        - "不上班 赚钱 案例 一个人"
+        - "小本创业 赚钱 方法 经验"
+        - "个人IP 变现 案例 怎么做"
+        - "闲鱼 卖货 赚钱 实操 教程"
+        - "付费社群 变现 案例 单人"
+
+    # ▸ 公众号白名单（名单制定向轮询）：先定一批「写一人公司/OPC 最牛」或本身就是
+    #   牛逼 OPC / 一人公司的公众号，每天定点看它们发了什么新文章再筛。
+    #   比关键词搜索更稳、更对题（关键词搜偶发被搜狗反爬干到 0 条）。
+    #   名单由检索能力筛选得出，可随时增删。想换更稳的采集方式时，部署 WeWe-RSS
+    #   （GitHub: Longliveping/wewe-rss，基于微信读书，稳定不被限流）并把 rss_base_url
+    #   填上它的地址即可自动切换为 RSS 稳定路径。
+    weixin_whitelist:
+      enabled: false             # 已弃用：搜狗账号搜索被 wx_sh2 反爬；RSS 路径需部署 WeWe-RSS
+      limit_per_account: 3      # 每个账号取最新几篇
+      max_total: 30             # 白名单源总数上限
+      query_delay: 3            # 账号间延迟(秒)，避免被限流
+      rss_base_url: ""          # 留空=用搜狗账号搜索；填上 WeWe-RSS 地址则走稳定 RSS 路径
+      accounts:
+        # ▸ 本身就是一人公司 / 写《一人公司》的标杆
+        - "阿猫读书"              # 一人公司存活7年，《一人公司》作者，觉醒品牌创始人
+        - "findyi"               # 洋哥：超级个体、AI破局俱乐部，个人IP/副业破200万
+        # ▸ 副业 / 年入百万 / 真实搞钱复盘
+        - "临公子的后花园"        # 临公子：副业年收入7位数，职场+投资实操
+        - "林蔷七"                # 百万小富婆：打工/创业/理财/个人品牌四种方式年入百万
+        - "陈舟Amber"             # 小红书/视频号40w搞钱博主，低成本创业+自媒体实战
+        - "小羊车儿"              # 体制内裸辞，靠小红书年入百万
+        - "啡小沫"                # 轻资产创业达人，私域电商/副业实战
+        - "长颈鹿有钱途"          # 副业购入4套房产，独家副业渠道+干货
+
+    # ▸ 公众号目标号轮询（2026-08-08 启用，替代上面两个被墙的源）
+    #   机制：维护一份「目标公众号列表」(storage/weixin_targets.json)，每天推送时按号名
+    #   用 Baidu `site:mp.weixin.qq.com "号名"` 搜索 → 跟进跳转拿真实文章 → 抓页验证作者
+    #   昵称是否真匹配（号名≠作者显示名时以 weixin_id 验证，如「临公子的后花园」作者=「临公子」）。
+    #   「上次推送到这次之间有没有新发文」由 main.py 的 HistoryManager 持久化去重天然实现。
+    #   引擎：baidu（主，已实测稳定）/ ddg（Baidu 被拦时回退）。
+    #   增删号：直接改 storage/weixin_targets.json（或告诉我，我帮你加）。
+    # ▸ 公众号目标号轮询（按号名监测更新，替代泛关键词搜索）
+    #   机制：维护 storage/weixin_targets.json（目标公众号名单）→ 每天按号名用多引擎
+    #   （sogou→baidu→ddg）搜该号新发文 → 抓页验证作者昵称真实匹配 → 进入内容池。
+    #   「上次推送以来有无新发文」由 HistoryManager(URL去重,30天) 天然实现。
+    #   多引擎回退原因：单引擎常被限流/反爬，逐一尝试任一有结果即用。
+    #   增删号：直接改 storage/weixin_targets.json（或告诉我加）。
+    weixin_targets:
+      enabled: true
+      engines: ["sogou", "baidu", "ddg"]   # 顺序尝试，任一有候选即停
+      per_account: 4            # 每个号取候选前几篇做昵称验证
+      delay: 2                  # 号间延迟(秒)，避免被限流
+      max_total: 24             # 该源总数上限
+      timeout: 15
+
+    # ▸ B站（哔哩哔哩）源：按 OPC 主题关键词搜视频，免登录公开 API
+    #   内容偏「副业/自媒体/一人公司」实战，与模块1发现引擎、模块2机会评估天然对题，
+    #   故主流程预筛阶段豁免二次关键词过滤（同 xiaoyuzhou）。
+    bilibili:
+      enabled: true
+      max_per_query: 5          # 每个搜索词取前几支视频
+      max_total: 20             # 该源总数上限
+      query_delay: 2
+      timeout: 20
+      queries:
+        - "一人公司"
+        - "副业 赚钱"
+        - "个人IP 变现"
+        - "自媒体 怎么赚钱"
+        - "不上班 赚钱"
+        - "小本创业"
+        - "知识付费 怎么做"
+        - "小红书 变现"
+        - "自由职业 接单"
+        - "AI 副业 普通人"
+
+    # ▸ 中文搜索引擎：用 DuckDuckGo 主动搜「一人公司/副业/变现」等精准词
+    #   （中文 RSS 几乎产不出赚钱案例，搜索引擎是唯一主动补齐国内源的杠杆）
+    #   DDG 已于 2026-08-08 验证可用：返回真实中文结果，真实 URL 藏在 uddg 参数里已解码
     chinese_search:
-      enabled: false
+      enabled: true
       engine: "duckduckgo"
       limit: 5
       max_total: 30
@@ -177,6 +339,25 @@ domestic:
         - "知识付费 怎么做 月入"
         - "自由职业 接单 赚钱 平台"
 
+    # ▸ 小宇宙（中文播客）：iTunes Search API 搜主题播客 → RSS 免登录抓取
+    #   内容偏访谈/讨论，主要作为「发现新 IP / 新一人公司」信号（喂给模块1发现引擎），
+    #   也一并进入模块2 机会评估（访谈型大概率被硬过滤，属正常）。
+    #   已按主题订阅，故在主流程预筛阶段豁免二次关键词过滤。
+    xiaoyuzhou:
+      enabled: true
+      max_feeds_per_query: 3     # 每个搜索词取前几个播客
+      max_episodes: 2            # 每个播客取最新几集
+      query_delay: 2
+      queries:
+        - "一人公司"
+        - "副业"
+        - "自由职业"
+        - "个人IP"
+        - "个体经营"
+        - "不上班"
+        - "小本创业"
+        - "知识付费"
+
     reddit:
       enabled: false
     youtube:
@@ -190,41 +371,52 @@ international:
   push_max: 8
 
   keywords:
+    # 策略：彻底放弃 "solopreneur/indie hacker/one person company" 等身份营销标签
+    # 改用 "行为+交付形态" 关键词——盯具体动作而非自我标签
     strong:
-      # OPC 专属
-      - "OPC"
-      - "one person company"
-      - "one person business"
-      - "一人公司"
-      - "solopreneur"
-      - "solopreneurship"
-      - "indie hacker"
-      - "indiehacker"
-      - "solo founder"
-      - "solo developer"
-      - "lifestyle business"
-      - "micro saas"
-      - "microsaas"
-      - "micro-saas"
-      - "bootstrapping"
-      - "bootstrapped"
-      - "productized service"
-      - "independent creator"
-      - "build in public"
-      - "#buildinpublic"
-      - "MRR"
-      - "monthly recurring revenue"
-      - "passive income"
-      - "side project revenue"
-      - "side hustle income"
-      - "small bet"
-      - "maker"
-      # 非程序员/AI代写代码
+      # ▸ 无代码工具链（现成工具，点鼠标就能用）
+      - "built with n8n"
+      - "built with Make"
+      - "powered by Airtable"
+      - "Framer template"
+      - "Notion database for sale"
       - "no code"
       - "no-code"
       - "nocode"
       - "low code"
       - "low-code"
+      - "off-the-shelf"
+      # ▸ 交付形态（Productized Service / 自动化顾问 / 数据产品）
+      - "productized service"
+      - "workflow automation for"
+      - "case study how I automated"
+      - "automation consultant"
+      - "automation agency client"
+      - "data aggregation"
+      - "knowledge product"
+      - "productized consulting"
+      - "standardized service"
+      # ▸ 商业模式（具体的收费方式）
+      - "one-time purchase"
+      - "lifetime deal"
+      - "monthly retainer"
+      - "Gumroad sales"
+      - "Gumroad revenue"
+      # ▸ 获客实操（可复制的客户开发）
+      - "cold email campaign"
+      - "cold outreach results"
+      - "client acquisition"
+      - "how to sell"
+      - "pricing strategy"
+      # ▸ 仍然有用的信号词（不是身份标签，是行为描述）
+      - "bootstrapped"
+      - "bootstrapping"
+      - "build in public"
+      - "#buildinpublic"
+      - "micro saas"
+      - "micro-saas"
+      - "microsaas"
+      # ▸ 非程序员/AI 辅助构建
       - "can't code"
       - "cannot code"
       - "non-programmer"
@@ -234,77 +426,52 @@ international:
       - "zero coding"
       - "I built with AI"
       - "built with AI"
-      - "AI coded"
-      - "AI built"
-      - "Cursor"
-      - "Bolt.new"
-      - "Lovable"
-      - "Replit"
-      - "v0"
-      # 数字产品/模板变现
+      # ▸ 数字产品/模板变现
       - "gumroad"
       - "notion template"
       - "digital product"
       - "digital download"
-      - "printable"
-      - "etsy shop"
-      - "print on demand"
-      - "POD"
-      # 内容变现
+      # ▸ 内容变现（非卖课，纯内容运营）
       - "newsletter"
       - "paid newsletter"
-      - "online course"
-      - "cohort based course"
+      - "newsletter monetization"
       - "self publishing"
-      - "kindle publishing"
-      # 低门槛电商
-      - "dropshipping"
-      - "dropship"
-      - "shopify"
-      - "amazon fba"
-      - "amazon seller"
     weak:
+      # 辅助信号
+      - "revenue breakdown"
+      - "client case study"
+      - "freelance automation"
+      - "consultant workflow"
+      - "tool stack"
+      - "service delivery"
+      - "paid subscription"
       - "side project"
-      - "side hustle"
       - "freelance"
       - "freelancing"
-      - "indie dev"
-      - "digital nomad"
-      - "creator economy"
-      - "content creator"
-      - "startup"
-      - "monetize"
-      - "revenue"
-      - "income"
-      - "profit"
       - "niche"
-      - "SaaS"
-      - "MVP"
-      - "PMF"
-      - "LTV"
-      - "CAC"
-      - "ROI"
-      - "subscription"
-      - "ecommerce"
-      - "e-commerce"
-      - "affiliate"
-      - "consulting"
-      - "coaching"
-      - "marketplace"
-      - "platform"
-      - "plugin"
       - "template"
       - "automation"
       - "AI agent"
-      - "AI tool"
-      - "LLM"
       - "stripe"
-      - "remote"
-      - "WFH"
       - "growth"
       - "marketing"
       - "SEO"
       - "audience building"
+      # 无代码工具名（单独命中不够，配合strong加分）
+      - "n8n"
+      - "Make automation"
+      - "Voiceflow"
+      - "Bubble"
+      - "Framer"
+      - "Webflow"
+      - "Coze"
+      - "Dify"
+      - "Typeform"
+      - "Airtable"
+      - "ConvertKit"
+      - "Taplio"
+      - "Beehiiv"
+      - "Zapier"
 
   sources:
     rss:
@@ -335,6 +502,10 @@ international:
           url: "https://www.indiehackers.com/rss"
         - name: "Product Hunt"
           url: "https://www.producthunt.com/feed"
+        # ▸ 英文：Hacker News 官方 RSS（GitHub 调研得出的最稳、信号最高的英文源之一）
+        #   持续产出 maker / build-in-public / 微型创业 / 一人公司 相关讨论，质量高、更新快
+        - name: "Hacker News"
+          url: "https://hnrss.org/frontpage"
 
         # ▸ 英文：非技术背景成功案例
         - name: "No CS Degree"
@@ -343,6 +514,30 @@ international:
         # ▸ 英文：No-code 社区
         - name: "Maker Mag"
           url: "https://makermag.com/feed/"
+
+        # ▸ 无代码/自动化实操博主
+        - name: "Nick Saraev Blog"
+          url: "https://nicksaraev.com/feed/"
+        - name: "Daniel Vassallo (Small Bets)"
+          url: "https://dvassallo.substack.com/feed"
+        - name: "Justin Welsh"
+          url: "https://www.justinwelsh.me/blog?format=rss"
+        - name: "Steph Smith"
+          url: "https://blog.stephsmith.io/feed/"
+        - name: "Solo AI Lab (Practical AI)"
+          url: "https://soloailab.substack.com/feed"
+
+        # ▸ 隐形操盘手（真正做事、不卖铲子）
+        - name: "Cory Zue (产品化服务复盘)"
+          url: "https://www.coryzue.com/feed.xml"
+        - name: "Tony Dinh (独立开发者实战)"
+          url: "https://tdinh.substack.com/feed"
+        - name: "Arvid Kahl (The Bootstrapped Founder)"
+          url: "https://thebootstrappedfounder.com/feed/"
+        - name: "David Perell (写作变现/内容系统)"
+          url: "https://perell.com/feed/"
+        - name: "Dickie Bush (Ship 30 写作系统)"
+          url: "https://dickiebush.substack.com/feed"
 
     reddit:
       enabled: true
@@ -375,14 +570,75 @@ international:
         - "affiliatemarketing"
 
     twitter:
-      enabled: false
+      enabled: true
       nitter_rss:
-        enabled: false
+        enabled: true
         instance: "https://nitter.net"
         accounts:
-          - "levelsio"
-          - "nocodelife"
-          - "nocodemvp"
+          # ▸ 无代码/自动化服务方向（帮B端搭流程、卖服务）
+          - "nicksaraev"
+          - "LiamOttley_"
+          - "untrapping"
+          - "KishanPatel"
+          - "rileybrown_ai"     # Riley Brown — AI Automation Agency 实操、报价、接单
+          - "david_oragwam"     # David Oragwam — AI 自动化接单、客户交付
+          - "yongfook"          # Jon Yongfook — Bannerbear/OAuthful 单人 SaaS、极简架构
+          # ▸ 隐形操盘手（真正做事、不教别人做一人公司）
+          - "czue"              # Cory Zue — 产品化服务+微型SaaS，公开年收入复盘
+          - "dannypostmaa"      # Danny Postma — 极简落地页验证+API拼装，多次成功退出
+          - "tdinh_me"          # Tony Dinh — TypingMind独立开发，单人$45K MRR
+          - "petermick"         # Peter Mick — 小众数据聚合+数据库产品
+          - "arvidkahl"         # Arvid Kahl — Bootstrapped Founder，真实创业交付+退出复盘
+          - "robj3d3"           # Rob Hallam — SuperX $14K MRR，Build in Public
+          - "shevchikblog"      # Nicholas Shevchik — 记录 $20K MRR 旅程
+          - "tibo_maker"        # Tibo — 独立开发+教学，透明收入
+          - "hridoyreh"         # Hridoy — TrustMRR 选品/微型SaaS
+          # ▸ 产品化服务（Productized Service）
+          - "BrettFromDJ"       # Brett Williams / Designjoy — 单人设计订阅制标杆
+          - "BrianCasel"        # Brian Casel — 产品化服务方法论（Audition/Casjam）
+          - "jackbutcher"       # Jack Butcher — Visualize Value，产品化+视觉化交付
+          - "harrydry"          # Harry Dry — Marketing Examples，具体增长案例拆解
+          # ▸ 内容资产与信息服务
+          - "dvassallo"
+          - "JustinWelsh"
+          - "MattIRL"
+          - "stephsmithio"
+          - "nateliason"        # Nat Eliason — 内容资产/课程，真实方法论
+          - "dickiebush"        # Dickie Bush — Ship 30 写作系统产品化
+          - "david_perell"      # David Perell — 写作变现/内容系统
+          # ▸ 微型创业与社区（商业拆解、选品、增长）
+          - "gregisenberg"
+          - "Marc_Louvion"
+          - "ShaanVP"           # Shaan Puri — MFM 商业拆解，真实案例
+          - "thesamparr"        # Sam Parr — 商业/创业实战
+          - "Julian"            # Julian Shapiro — 增长方法论，具体可复制
+          - "Danavir"           # Danavir Sarria — SaaS 文案/产品化
+          - "JanePortman"       # Jane Portman — SaaS 文案，产品化服务
+          - "csallen"           # Courtland Allen — Indie Hackers 创始人
+          - "philipmorgan"      # Philip Morgan — 定位咨询，具体交付
+          - "levelsio"          # Pieter Levels — 标杆（极简技术栈+公开构建，方法论可学）
+          - "SimonHoiberg"      # Simon Hoiberg — 独立开发+教学
+          - "shu_omi"           # Shu Omi — 0代码做产品赚钱 YouTube 实操
+          # ▸ 中文硬核实操者
+          - "dotey"             # 宝玉 — LLM 真实应用边界拆解
+          - "xiaohuggg"         # 小互 — 全球AI工具/应用案例日更
+          - "op7418"            # 归藏/藏师傅 — n8n/PPT/AI工作流硬核实操，不会代码
+          - "khazix0918"        # 卡兹克 — 国产大模型冷酷实测、AI产品
+          - "lijigang"          # 李继刚 — Prompt哲学/认知工具箱
+          - "XDash"             # 范冰 — 增长黑客/出海/产品
+          - "tualatrix"         # 图拉鼎 — 独立开发常青树
+          - "oran_ge"           # 橘子 — AI产品经理/创业实战
+          - "yupi996"           # 程序员鱼皮 — AI创业与产品实战
+          - "Gorden_sun"        # Gorden Sun — AI资讯日报
+          - "pandatalk8"        # Mr Panda — AI商业化/个人IP教练
+          - "servasyy_ai"       # huangserva — AI出海实战
+          - "lyc_zh"            # lyc_zh — AI出海增长实战
+          - "dontbesilent"      # AI安全/商业哲学/在线生意系统
+          - "imwsl90"           # 卫斯理 — AI商业化前哨
+          - "iamtonyzhu"        # Tony出海 — 出海实战活字典
+          - "indie_maker_fox"   # Fox — SaaS创业+AI变订阅费
+          - "thinkingjimmy"     # JimmyWong — AI创造者思考
+          - "yangyi"            # Yangyi — 数字游民/增长黑客
 
     youtube:
       enabled: true
@@ -398,3 +654,17 @@ international:
             label: "Income School"
           - id: "UCoOae5nYA7VqaXzerajD0lg"
             label: "Ali Abdaal"
+          - id: "UCbo-KbSjJDG6JWQ_MTZ_rNA"
+            label: "Nick Saraev (n8n/Make Automation)"
+          - id: "UCui4jxDaMb53Gdh-AZUTPAg"
+            label: "Liam Ottley (AI Automation Agency)"
+          - id: "UCKNq1bMwzHESQpoBrCnvXQA"
+            label: "Arvid Kahl (Bootstrapped Founder)"
+          - id: "UCaggiu76cPdLduA8R2lCSQA"
+            label: "Nat Eliason (内容资产方法论)"
+          - id: "UC1U3USwVMvdzmdEvEUhFIwg"
+            label: "Jack Butcher (Visualize Value)"
+          - id: "UC_zKyDW9v--SOS3ibuNgfNg"
+            label: "Harry Dry (Marketing Examples)"
+          - id: "UCDSIX7D8QvF9D45n_lKEhXQ"
+            label: "Riley Brown (AI Automation)"
