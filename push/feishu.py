@@ -673,7 +673,7 @@ class FeishuPusher:
                 resp = await client.post(
                     self.webhook_url,
                     json=payload,
-                    headers={"Content-Type": "application/json"},
+                    headers={"Content-Type": "application/json; charset=utf-8"},
                 )
                 resp.raise_for_status()
                 result = resp.json()
