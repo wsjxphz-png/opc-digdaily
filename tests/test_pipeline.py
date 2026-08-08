@@ -15,6 +15,7 @@ import asyncio
 import json
 import sys
 import tempfile
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -250,7 +251,8 @@ async def main_tests():
               f"due[0]={due_all[0].handle}")
 
         # 标记“当天已拆解” → 应被轮转跳过（get_due_for_teardown 会过滤 today）
-        op_due.last_teardown = "2026-08-08"
+        today_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+        op_due.last_teardown = today_str
         due2 = roster.get_due_for_teardown(1, require_signals=False)
         check("当天已拆解者被轮转跳过",
               op_due.handle not in [o.handle for o in due2] or len(due2) == 0)
