@@ -99,6 +99,17 @@ MIN_FACTOR_COVERAGE = 0.6
 # dbs 公理4「流量≠收入」：拿不出收入证据时，商业化潜力打的折扣
 NO_REVENUE_PROOF_DISCOUNT = 0.85
 
+# ---- 用户规则：低客单「卖时间/卖劳动力」→ 适当降权（优先产品/服务/高客单类）----
+# 复用 dbs 框架已有因子判断，不引入外部依赖：
+#   · margin  交付毛利：2=重人工、按小时换钱（最直白的"卖时间"）
+#   · machine 换人也能做：<=2 = 严重依赖作者本人（个性化劳力）
+#   · repeat  持续付费：<=2 = 一锤子买卖、无复购
+#   · pricing 单笔收费：>=HIGH_TICKET_PRICING（单笔≥2000元，尤其≥1万）即「高客单」→ 豁免
+# 这是「宽进严出」的降权，不是硬删：只压低 startup_index 让其排后、被 per_region
+# 上限优先裁掉，不直接跌破 min_startup_index(3)，避免把好内容误杀。
+LABOR_PENALTY_CAP = 5.0
+HIGH_TICKET_PRICING = 4
+
 
 def _is_rated(v: Any) -> bool:
     """判断 AI 到底有没有给这一项打分（区分"给了3分"和"压根没给"）。"""
@@ -248,6 +259,16 @@ def compute(
         idx = min(idx, 5.0)
         caps.append("满篇风口/赛道等空词 → 封顶5分")
         gates.append("语言陷阱：核心词没有定义，问题本身不成立")
+
+    # ---- 用户规则：低客单卖时间/卖劳动力 → 适当降权（优先产品/服务/高客单） ----
+    # 复用 dbs 因子（margin/machine/repeat/pricing），高客单个性化服务豁免。
+    # 只压低 startup_index 让其排后、被 per_region 上限优先裁掉，不直接硬删。
+    _high_ticket = f["pricing"] >= HIGH_TICKET_PRICING
+    _labor_heavy = (f["margin"] <= 2) or (f["machine"] <= 2 and f["repeat"] <= 2)
+    if _labor_heavy and not _high_ticket:
+        idx = min(idx, LABOR_PENALTY_CAP)
+        caps.append("低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）")
+        gates.append("低客单纯劳力：靠时间换钱，杠杆低")
 
     startup_index = int(max(1, min(10, round(idx))))
 

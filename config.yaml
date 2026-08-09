@@ -29,7 +29,6 @@ ai:
 schedule:
   hour: 22
   minute: 0
-  max_per_source: 8
 
 # --- 推送策略 ---
 push:
@@ -85,6 +84,9 @@ opportunity:
   #   设 3 而非 4：噱头清单文已被 AI 相关性闸门挡在 scoring 之前，这里只需拦住
   #   "真实但平庸"的机会不至于全被砍光——避免内容波动大的日子整轮 0 条。
   min_startup_index: 3
+  # 附加规则（scoring.py）：低客单「卖时间/卖劳动力」机会会被降权（startup_index 压到 5），
+  # 让产品/服务/高客单类优先浮到前面；高客单个性化服务（单笔≥2000元，pricing≥4）豁免，不降权。
+  # 这是「宽进严出」的降权而非硬删——只排后、被 per_region 上限优先裁掉，不跌破 min_startup_index。
 
 # --- 跨天机会库：把「同一个机会被不同来源、在不同天反复讲到」这件事记下来 ---
 #   同一主题反复出现 = 真实存在的信号，不是个例。卡片上会标「🔁 第N次出现 · M个来源印证」，
@@ -109,8 +111,6 @@ feedback:
 # 国内管道：中文赚钱实操内容
 # ============================================================
 domestic:
-  push_max: 8
-
   keywords:
     # 策略：不用"一人公司/副业/创业"等营销标签 → 用"行为+交付形态"关键词
     # 真正赚钱的人不打"一人公司"招牌，他们是极度高效的"超级个体/单人数字化工作室"
@@ -382,8 +382,6 @@ domestic:
 # 国际管道：英文赚钱实操内容
 # ============================================================
 international:
-  push_max: 8
-
   keywords:
     # 策略：彻底放弃 "solopreneur/indie hacker/one person company" 等身份营销标签
     # 改用 "行为+交付形态" 关键词——盯具体动作而非自我标签
@@ -637,26 +635,18 @@ international:
         # ▸ 无代码/自动化实操博主
         - name: "Nick Saraev Blog"
           url: "https://nicksaraev.com/feed/"
-        - name: "Daniel Vassallo (Small Bets)"
-          url: "https://dvassallo.substack.com/feed"
         - name: "Justin Welsh"
           url: "https://www.justinwelsh.me/blog?format=rss"
         - name: "Steph Smith"
           url: "https://blog.stephsmith.io/feed/"
-        - name: "Solo AI Lab (Practical AI)"
-          url: "https://soloailab.substack.com/feed"
 
         # ▸ 隐形操盘手（真正做事、不卖铲子）
         - name: "Cory Zue (产品化服务复盘)"
           url: "https://www.coryzue.com/feed.xml"
-        - name: "Tony Dinh (独立开发者实战)"
-          url: "https://tdinh.substack.com/feed"
         - name: "Arvid Kahl (The Bootstrapped Founder)"
           url: "https://thebootstrappedfounder.com/feed/"
         - name: "David Perell (写作变现/内容系统)"
           url: "https://perell.com/feed/"
-        - name: "Dickie Bush (Ship 30 写作系统)"
-          url: "https://dickiebush.substack.com/feed"
 
     reddit:
       enabled: true
