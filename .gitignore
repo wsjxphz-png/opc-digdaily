@@ -1,6 +1,15 @@
 .venv/
 __pycache__/
 *.pyc
-storage/history.json
 .DS_Store
 .env
+
+# 演练模式产生的卡片快照，只在本地看，不入库
+storage/dry_run/
+
+# 注意：storage/ 下的 history.json / operators.json / opportunity_library.json
+# 是「跨天累积的状态」，必须提交进仓库。
+# GitHub Actions 每次运行都是全新容器，不回写这些文件的话：
+#   · 机会库永远停在「第1次出现」，跨天印证功能失效
+#   · 操盘手轮转会反复拆同一批人
+#   · 去重历史每天清零，同一篇文章会被重复推送

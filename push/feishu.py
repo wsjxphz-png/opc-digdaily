@@ -7,11 +7,13 @@
 import json
 import logging
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 import httpx
 
 from sources.base import ContentItem
+from feedback import build_feedback_urls
 
 logger = logging.getLogger(__name__)
 
@@ -91,16 +93,42 @@ SOURCE_LABEL_MAP = {
 }
 
 
+def _startup_badge(idx: int) -> str:
+    """把 1-10 的「适合你启动指数」渲染成一眼可读的标签。"""
+    if idx >= 9:
+        return f"🔥 适合你启动 {idx}/10（今天最该抄）"
+    if idx >= 7:
+        return f"🎯 适合你启动 {idx}/10（值得动手）"
+    if idx >= 5:
+        return f"🟡 适合你启动 {idx}/10（可以看看）"
+    return f"⚪ 适合你启动 {idx}/10（参考为主）"
+
+
 class FeishuPusher:
-    def __init__(self, webhook_url: str, card_color: str = "blue", batch_size: int = 8):
+    def __init__(
+        self,
+        webhook_url: str,
+        card_color: str = "blue",
+        batch_size: int = 8,
+        feedback_repo: str = "",
+        feedback_enabled: bool = False,
+        dry_run: bool = False,
+    ):
         self.webhook_url = webhook_url
         self.card_color = COLORS.get(card_color, "blue")
         self._batch_size = max(1, int(batch_size))
+        self.feedback_repo = (feedback_repo or "").strip()
+        self.feedback_enabled = bool(feedback_enabled and self.feedback_repo)
+        # 演练模式：完整跑通流程并渲染卡片，但绝不真的发到群里
+        self.dry_run = bool(dry_run)
         self._enabled = bool(
             webhook_url
             and "open.feishu.cn" in webhook_url
             and "YOUR_WEBHOOK_TOKEN" not in webhook_url
         )
+        # 演练时即使没配 webhook 也要让流程往下走，才能看到卡片长什么样
+        if self.dry_run:
+            self._enabled = True
 
     @property
     def enabled(self) -> bool:
@@ -115,6 +143,7 @@ class FeishuPusher:
         domestic: list[ContentItem],
         international: list[ContentItem],
         date_str: str,
+        recurring: Optional[list[dict]] = None,
     ) -> bool:
         """模块2：推送 OPC赚钱机会挖掘日报 — 国内 + 国际两个板块。
 
@@ -133,7 +162,7 @@ class FeishuPusher:
 
         # 总量未超一批：保持单卡（旧样式，国内+国际同卡）
         if total <= batch:
-            card = self._build_dual_card(domestic, international, date_str, total)
+            card = self._build_dual_card(domestic, international, date_str, total, recurring)
             return await self._send_card(card)
 
         # 超批：国内 / 国际分别切块，每块一张卡，顺序推送
@@ -151,7 +180,10 @@ class FeishuPusher:
         ]
         n = len(chunks)
         for idx, (label, items, color) in enumerate(chunks, 1):
-            cards.append(self._build_section_card(label, items, color, date_str, idx, n, total))
+            cards.append(self._build_section_card(
+                label, items, color, date_str, idx, n, total,
+                recurring if idx == 1 else None,
+            ))
 
         ok_all = True
         for card in cards:
@@ -160,9 +192,26 @@ class FeishuPusher:
         logger.info(f"模块2 分批推送: 共 {n} 张卡（每批 {batch} 条，总计 {total} 条）")
         return ok_all
 
+    def _build_recurring_block(self, recurring: Optional[list[dict]]) -> list[dict]:
+        """「本周风向」：跨天机会库里近期反复出现的主题（多来源印证 = 强信号）。"""
+        if not recurring:
+            return []
+        lines = ["**🔁 本周反复出现的方向**（同一件事被不同来源、在不同天里反复讲到，可信度更高）"]
+        for r in recurring:
+            lines.append(
+                f"· {r.get('topic', '')} — 第 {r.get('times', 1)} 次出现"
+                f"，{r.get('sources', 1)} 个来源印证"
+                f"（首次 {r.get('first_seen', '')}）"
+            )
+        return [
+            {"tag": "div", "text": {"tag": "lark_md", "content": "\n".join(lines)}},
+            {"tag": "hr"},
+        ]
+
     def _build_section_card(
         self, label: str, items: list[ContentItem], color: str,
         date_str: str, batch_no: int, total_batches: int, grand_total: int,
+        recurring: Optional[list[dict]] = None,
     ) -> dict:
         """构建「单板块单批次」卡片（超批时用于分批推送）。"""
         header = {
@@ -186,15 +235,10 @@ class FeishuPusher:
             "text": {"tag": "lark_md", "content": "**📊 " + "  ·  ".join(stats) + "**"},
         })
         elements.append({"tag": "hr"})
+        elements.extend(self._build_recurring_block(recurring))
         elements.extend(self._build_section(label, items, color))
         elements.append({"tag": "hr"})
-        elements.append({
-            "tag": "note",
-            "elements": [{
-                "tag": "plain_text",
-                "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            }],
-        })
+        elements.append(self._footer_note())
         return {"config": {"wide_screen_mode": True}, "header": header, "elements": elements}
 
     # 兼容别名（历史方法名）
@@ -290,6 +334,7 @@ class FeishuPusher:
         international: list[ContentItem],
         date_str: str,
         total: int,
+        recurring: Optional[list[dict]] = None,
     ) -> dict:
         header = {
             "title": {
@@ -322,6 +367,9 @@ class FeishuPusher:
         })
         elements.append({"tag": "hr"})
 
+        # ---- 本周风向（跨天机会库）----
+        elements.extend(self._build_recurring_block(recurring))
+
         # ---- 国内板块 ----
         if domestic:
             elements.extend(self._build_section("国内", domestic, "red"))
@@ -334,18 +382,27 @@ class FeishuPusher:
 
         # ---- 底部 ----
         elements.append({"tag": "hr"})
-        elements.append({
-            "tag": "note",
-            "elements": [{
-                "tag": "plain_text",
-                "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            }],
-        })
+        elements.append(self._footer_note())
 
         return {
             "config": {"wide_screen_mode": True},
             "header": header,
             "elements": elements,
+        }
+
+    def _footer_note(self) -> dict:
+        tips = [f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}"]
+        tips.append(
+            "分数说明：商业化潜力与可行性由固定公式计算（AI 只回答 11 个事实型子问题，不参与打总分）"
+        )
+        if self.feedback_enabled:
+            tips.append(
+                "点「想做 / 没兴趣」会打开一个已填好的反馈页，再点一下提交即可；"
+                "明天的推送会据此调整排序"
+            )
+        return {
+            "tag": "note",
+            "elements": [{"tag": "plain_text", "content": "　|　".join(tips)}],
         }
 
     # ================================================================
@@ -367,10 +424,13 @@ class FeishuPusher:
             },
         })
 
-        top_score = max(it.relevance_score for it in items) if items else 0
+        top_score = (
+            max((getattr(it, "startup_index", 0) or 0) for it in items) if items else 0
+        )
 
         for i, item in enumerate(items, 1):
-            is_top = item.relevance_score >= top_score and top_score >= 0.7
+            startup_index = getattr(item, "startup_index", 0) or 0
+            is_top = startup_index >= top_score and top_score >= 7
 
             original_title = item.title or ""
             translation = item.translation or ""  # 英文标题的中文翻译（国内源为空串）
@@ -427,14 +487,40 @@ class FeishuPusher:
 
             md_lines.append(title_line)
 
-            # 评估分数行
+            # ---- 客观分数行（公式算出，非 AI 自评）----
+            commercial = getattr(item, "commercial_score", 0) or 0
+            feasibility = getattr(item, "feasibility_score", 0) or 0
+            if startup_index:
+                md_lines.append(
+                    f"**{_startup_badge(startup_index)}**\n"
+                    f"💰 商业化潜力 **{commercial}**/100  ·  🛠 可行性 **{feasibility}**/100"
+                )
+            score_reason = getattr(item, "score_reason", "") or ""
+            if score_reason:
+                md_lines.append(f"　└ {score_reason}")
+
+            # ---- 定性标签行（保留原有代码依赖 / 真实性判读）----
             score_parts = []
             if code_label:
                 score_parts.append(code_label)
             if auth_label:
                 score_parts.append(auth_label)
-            score_parts.append(f"综合 {item.relevance_score:.2f}")
-            md_lines.append(" · ".join(score_parts))
+            if score_parts:
+                md_lines.append(" · ".join(score_parts))
+
+            # ---- 跨天机会库标注 ----
+            repeat = getattr(item, "repeat_count", 0) or 0
+            corro = getattr(item, "corroborations", 0) or 0
+            if repeat >= 2 or corro >= 2:
+                bits = []
+                if repeat >= 2:
+                    bits.append(f"🔁 第 {repeat} 次出现")
+                if corro >= 2:
+                    bits.append(f"✔️ 已被 {corro} 个来源印证")
+                first_seen = getattr(item, "first_seen", "") or ""
+                if first_seen:
+                    bits.append(f"首次 {first_seen}")
+                md_lines.append(" · ".join(bits))
 
             if ai_summary:
                 md_lines.append(f"📖 {ai_summary}")
@@ -444,10 +530,31 @@ class FeishuPusher:
             elif opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
                 md_lines.append(f"💡 怎么模仿：{opportunity}")
 
+            # ---- 可抄模板：明天就能开工的最小行动包 ----
+            tpl = getattr(item, "copy_template", None) or {}
+            if tpl:
+                tl = ["📋 **可抄模板**"]
+                if tpl.get("who"):
+                    tl.append(f"　· 卖给谁：{tpl['who']}")
+                if tpl.get("what"):
+                    tl.append(f"　· 卖什么：{tpl['what']}")
+                if tpl.get("first_step"):
+                    tl.append(f"　· 第一步：{tpl['first_step']}")
+                if tpl.get("first_prompt"):
+                    tl.append(f"　· 复制给 AI 的第一句话：\n> {tpl['first_prompt']}")
+                if tpl.get("cost"):
+                    tl.append(f"　· 成本与周期：{tpl['cost']}")
+                md_lines.append("\n".join(tl))
+
             if show_original:
                 md_lines.append(f"🌐 英文原标题：{original_title[:120]}")
 
-            md_lines.append(f"📎 来自「{source_label}」· {self._time_str(item.published)}")
+            # 发布时间拿不到就只写来源，别在卡片上留一个「未知」
+            published_str = self._time_str(item.published) if item.published else ""
+            md_lines.append(
+                f"📎 来自「{source_label}」· {published_str}" if published_str
+                else f"📎 来自「{source_label}」"
+            )
 
             elements.append({
                 "tag": "div",
@@ -457,10 +564,45 @@ class FeishuPusher:
                 },
             })
 
+            # ---- 反馈按钮 ----
+            fb = self._build_feedback_actions(item, display_title)
+            if fb:
+                elements.append(fb)
+
             if i < len(items):
                 elements.append({"tag": "hr"})
 
         return elements
+
+    def _build_feedback_actions(self, item: ContentItem, title: str) -> Optional[dict]:
+        """两个反馈按钮：点击打开已预填的 GitHub Issue 页面，提交即完成反馈。
+
+        群自定义机器人 webhook 是单向的，收不到 callback 事件；用 url 按钮
+        把反馈落到 GitHub Issue，次日运行时由 feedback.py 读回并调整权重。
+        """
+        if not self.feedback_enabled:
+            return None
+        key = getattr(item, "topic_key", "") or ""
+        if not key:
+            return None
+        like_url, dislike_url = build_feedback_urls(self.feedback_repo, key, title)
+        return {
+            "tag": "action",
+            "actions": [
+                {
+                    "tag": "button",
+                    "text": {"tag": "plain_text", "content": "👍 这条我想做"},
+                    "type": "primary",
+                    "url": like_url,
+                },
+                {
+                    "tag": "button",
+                    "text": {"tag": "plain_text", "content": "👎 没兴趣"},
+                    "type": "default",
+                    "url": dislike_url,
+                },
+            ],
+        }
 
     # ================================================================
     # 操盘手拆解卡 + 新发现预警
@@ -668,6 +810,30 @@ class FeishuPusher:
 
     async def _send_card(self, card: dict) -> bool:
         payload = {"msg_type": "interactive", "card": card}
+
+        if self.dry_run:
+            # 演练：把卡片落到本地文件供检查，不发网络请求
+            try:
+                out_dir = Path(__file__).resolve().parent.parent / "storage" / "dry_run"
+                out_dir.mkdir(parents=True, exist_ok=True)
+                title = ""
+                try:
+                    title = card["header"]["title"]["content"]
+                except (KeyError, TypeError):
+                    pass
+                stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]
+                out = out_dir / f"card_{stamp}.json"
+                out.write_text(
+                    json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+                )
+                size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+                logger.info(
+                    "【演练】未发送。卡片「%s」%d 字节 → %s", title, size, out
+                )
+            except Exception as e:
+                logger.warning("【演练】卡片落盘失败（不影响演练）: %s", e)
+            return True
+
         try:
             async with httpx.AsyncClient(timeout=15) as client:
                 resp = await client.post(

@@ -28,11 +28,27 @@ class ContentItem:
     quality_flag: str = ""      # AI 质量标记: ⭐ / "" / ⚠️
     relevance_score: float = 0.0
 
-    # 严苛商业分析师评估维度（新）
+    # 严苛商业分析师评估维度
     code_dependency: int = 0       # 代码依赖度 1-5（5=必须精通编程）
     authenticity: int = 0          # 真实性打分 1-5（1=纯卖课/卖铲子）
     practical_steps: str = ""      # 核心实操步骤拆解（去除废话后）
     verdict: str = ""              # 结论: "可复刻的真机会" / "卖噱头/卖铲子"
+
+    # 客观打分（scoring.py 用固定公式算出，AI 只提供 1-5 的事实型子因子）
+    score_factors: dict = field(default_factory=dict)  # 12 个子因子原始分
+    commercial_score: int = 0      # 商业化潜力 0-100
+    feasibility_score: int = 0     # 可行性 0-100
+    startup_index: int = 0         # 适合你启动的指数 1-10
+    score_reason: str = ""         # 分数怎么来的（加分项/扣分项/封顶原因）
+
+    # 可抄模板（照着做的最小行动包）
+    copy_template: dict = field(default_factory=dict)
+
+    # 跨天机会库标注（library.py 填充）
+    topic_key: str = ""            # 归并同一主题用的指纹
+    repeat_count: int = 0          # 这个主题历史上第几次出现
+    corroborations: int = 0        # 被多少个不同来源印证过
+    first_seen: str = ""           # 首次出现日期 YYYY-MM-DD
 
     ai_processed: bool = False # 是否经过 AI 处理
 

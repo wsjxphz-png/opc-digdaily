@@ -37,6 +37,8 @@ from operators import OperatorRoster
 from teardown import TeardownEngine
 from discovery import DiscoveryEngine
 from opportunity import OpportunityEngine
+from library import OpportunityLibrary
+from feedback import FeedbackCollector, PreferenceProfile
 from seed_facts import apply_seeds
 
 # 项目根目录
@@ -45,6 +47,7 @@ CONFIG_PATH = ROOT / "config.yaml"
 HISTORY_PATH = ROOT / "storage" / "history.json"
 ROSTER_PATH = ROOT / "storage" / "operators.json"
 SEEDS_PATH = ROOT / "storage" / "seeded_facts.json"
+LIBRARY_PATH = ROOT / "storage" / "opportunity_library.json"
 
 # 北京时间
 CST = timezone(timedelta(hours=8))
@@ -235,8 +238,9 @@ async def _collect(
 # ============================================================
 
 class DailyOpportunityBot:
-    def __init__(self, config: dict):
+    def __init__(self, config: dict, dry_run: bool = False):
         self.config = config
+        self.dry_run = bool(dry_run)
 
         ai_cfg = config.get("ai", {})
         self.ai = AIProcessor(
@@ -249,10 +253,18 @@ class DailyOpportunityBot:
 
         fs_cfg = config.get("feishu", {})
         push_cfg = config.get("push", {})
+        fb_cfg = config.get("feedback", {})
+        self.feedback_enabled = bool(fb_cfg.get("enabled", False))
+        self.feedback_repo = fb_cfg.get("github_repo", "") or ""
+        self.feedback_boost = int(fb_cfg.get("boost_liked", 1))
+        self.feedback_penalty = int(fb_cfg.get("penalize_disliked", 2))
         self.pusher = FeishuPusher(
             webhook_url=fs_cfg.get("webhook_url", ""),
             card_color=fs_cfg.get("card_color", "blue"),
             batch_size=push_cfg.get("batch_size", 8),
+            feedback_repo=self.feedback_repo,
+            feedback_enabled=self.feedback_enabled,
+            dry_run=self.dry_run,
         )
 
         self.history = HistoryManager(HISTORY_PATH)
@@ -279,11 +291,22 @@ class DailyOpportunityBot:
         self.opportunity_enabled = opp_cfg.get("enabled", True)
         self.opportunity_per_region = opp_cfg.get("per_region", 5)
         self.exclude_shovel = opp_cfg.get("exclude_shovel", True)
+        self.min_startup_index = int(opp_cfg.get("min_startup_index", 4))
+
+        # 跨天机会库
+        lib_cfg = config.get("library", {})
+        self.library_enabled = bool(lib_cfg.get("enabled", True))
+        self.recurring_days = int(lib_cfg.get("recurring_days", 7))
+        self.recurring_top = int(lib_cfg.get("recurring_top", 3))
+        self.recurring_min_times = int(lib_cfg.get("recurring_min_times", 2))
+        self.library = OpportunityLibrary(LIBRARY_PATH)
 
         # 引擎
         self.teardown_engine = TeardownEngine(self.ai)
         self.discovery_engine = DiscoveryEngine(self.ai, max_scan=self.discovery_max_scan)
-        self.opportunity_engine = OpportunityEngine(self.ai)
+        self.opportunity_engine = OpportunityEngine(
+            self.ai, min_startup_index=self.min_startup_index
+        )
 
     async def run(self):
         logger.info("========== 操盘手拆解系统启动 ==========")
@@ -363,7 +386,7 @@ class DailyOpportunityBot:
             if self.roster.accumulate(it):
                 acc += 1
         logger.info(f"信号归档: {acc} 条内容归入操盘手档案")
-        self.roster.save()
+        self._save_roster()
 
         # ── 拆解循环：轮转合成拆解卡 ──
         teardowns = []
@@ -384,7 +407,7 @@ class DailyOpportunityBot:
                 td = await self.teardown_engine.synthesize(op)
                 if td:
                     teardowns.append(td.to_dict())
-            self.roster.save()
+            self._save_roster()
 
         # ── 复盘更新循环：对过去已拆解的操盘手补充新动态（新业务/新边界/新赚钱方式）──
         if self.teardown_enabled and self.ai.enabled:
@@ -399,7 +422,7 @@ class DailyOpportunityBot:
                     teardowns.append(td.to_dict())
             if revisit_pool:
                 logger.info(f"今日复盘更新: {len(revisit_pool)} 人")
-            self.roster.save()
+            self._save_roster()
 
         # ============================================================
         # 模块2：赚钱机会挖掘（国内 / 国际，剔除卖铲子）
@@ -409,6 +432,57 @@ class DailyOpportunityBot:
             dom_opps, intl_opps = await self.opportunity_engine.mine(
                 domestic_items, international_items, self.opportunity_per_region
             )
+
+        # ============================================================
+        # 跨天机会库 + 反馈闭环
+        #   1) 读回昨天之前用户点的 👍/👎（GitHub Issues）→ 写进机会库
+        #   2) 把今天的机会并入机会库，标注「第N次出现 / M个来源印证」
+        #   3) 按历史口味微调排序（±1~2 分，刻意克制，避免一两次点击带偏系统）
+        # ============================================================
+        recurring = []
+        if self.library_enabled and (dom_opps or intl_opps):
+            try:
+                self.library.load()
+
+                if self.feedback_enabled and self.feedback_repo:
+                    collector = FeedbackCollector(
+                        self.feedback_repo,
+                        token=os.environ.get("GITHUB_TOKEN", ""),
+                        enabled=True,
+                    )
+                    tallies = await collector.fetch()
+                    if tallies:
+                        n = self.library.apply_feedback(tallies)
+                        logger.info(f"反馈已并入机会库：{n} 个主题带有 👍/👎")
+
+                today = datetime.now(CST).strftime("%Y-%m-%d")
+                self.library.annotate(dom_opps, today)
+                self.library.annotate(intl_opps, today)
+
+                if self.feedback_enabled:
+                    profile = PreferenceProfile.from_library(
+                        self.library, self.feedback_boost, self.feedback_penalty
+                    )
+                    if profile.active:
+                        profile.adjust(dom_opps)
+                        profile.adjust(intl_opps)
+                        logger.info(
+                            "已按历史反馈调整排序（喜欢 %d 类 / 不喜欢 %d 类）",
+                            len(profile.liked), len(profile.disliked),
+                        )
+
+                recurring = self.library.top_recurring(
+                    days=self.recurring_days,
+                    limit=self.recurring_top,
+                    min_times=self.recurring_min_times,
+                )
+                if self.dry_run:
+                    logger.info("【演练】机会库不落盘，避免污染真实的出现次数统计")
+                else:
+                    self.library.save()
+                logger.info(self.library.stats())
+            except Exception as e:
+                logger.exception(f"机会库/反馈处理异常（已跳过，不影响推送）: {e}")
 
         # ── 推送 / 输出 ──
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
@@ -432,7 +506,9 @@ class DailyOpportunityBot:
         # 模块2：赚钱机会挖掘（OPC赚钱机会挖掘日报）
         if dom_opps or intl_opps:
             if self.pusher.enabled:
-                ok = await self.pusher.push_opportunities(dom_opps, intl_opps, date_str)
+                ok = await self.pusher.push_opportunities(
+                    dom_opps, intl_opps, date_str, recurring
+                )
                 if ok:
                     pushed_any = True
                     logger.info(
@@ -441,7 +517,7 @@ class DailyOpportunityBot:
                 else:
                     logger.error("模块2 推送失败")
             else:
-                self._cli_output_opportunities(dom_opps, intl_opps)
+                self._cli_output_opportunities(dom_opps, intl_opps, recurring)
 
         # 内容源侦察兵：今日新挖掘并加入白名单的内容源（公众号）
         if discovered_sources:
@@ -461,13 +537,24 @@ class DailyOpportunityBot:
             logger.warning("今日两模块均无内容可推送")
 
         # 去重标记：任一模块成功推送，即把今日采到的内容标记为已读
-        if pushed_any:
+        # 演练时绝不能标记，否则真实运行会以为这些内容"昨天推过了"而漏掉
+        if pushed_any and not self.dry_run:
             for it in all_items:
                 self.history.mark_seen(it.url)
             self.history.save()
+        elif pushed_any and self.dry_run:
+            logger.info("【演练】不写去重历史，%d 条内容仍可在正式运行时推送", len(all_items))
 
         elapsed = time.time() - start
         logger.info(f"========== 全部完成 {elapsed:.1f}s ==========")
+
+    def _save_roster(self):
+        """保存操盘手名单。演练模式下不落盘——名单里记着"谁已经拆解过、下次轮到谁"，
+        演练写进去会让正式运行跳过这些人。"""
+        if self.dry_run:
+            logger.debug("【演练】操盘手名单不落盘")
+            return
+        self.roster.save()
 
     def _cli_output_teardowns(self, teardowns: list[dict], discovered: list):
         if teardowns:
@@ -484,16 +571,30 @@ class DailyOpportunityBot:
             for d in discovered:
                 print(f"  🆕 {d.name} ({d.region}) — {d.highlight}")
 
-    def _cli_output_opportunities(self, dom_opps: list, intl_opps: list):
+    def _cli_output_opportunities(self, dom_opps: list, intl_opps: list, recurring: list = None):
         print("\n========== [模块2] 赚钱机会 ==========")
         print(f"🇨🇳 国内 {len(dom_opps)} 条 / 🌍 国际 {len(intl_opps)} 条")
+        if recurring:
+            print("🔁 本周反复出现的方向：")
+            for r in recurring:
+                print(f"   · {r['topic']} — 第{r['times']}次，{r['sources']}个来源印证")
         for it in dom_opps + intl_opps:
-            print(f"  💡 {it.title} — 综合 {getattr(it, 'relevance_score', 0):.2f}")
+            print(
+                f"  💡 {it.title[:60]}\n"
+                f"     适合你启动 {getattr(it, 'startup_index', 0)}/10 · "
+                f"商业化 {getattr(it, 'commercial_score', 0)}/100 · "
+                f"可行性 {getattr(it, 'feasibility_score', 0)}/100"
+            )
+            if getattr(it, "score_reason", ""):
+                print(f"     └ {it.score_reason}")
+            tpl = getattr(it, "copy_template", None) or {}
+            if tpl.get("first_step"):
+                print(f"     📋 第一步：{tpl['first_step']}")
 
 
-async def run_once():
+async def run_once(dry_run: bool = False):
     config = load_config()
-    bot = DailyOpportunityBot(config)
+    bot = DailyOpportunityBot(config, dry_run=dry_run)
     await bot.run()
 
 
@@ -529,12 +630,19 @@ def main():
     parser = argparse.ArgumentParser(description="操盘手拆解系统 每日推送")
     parser.add_argument("--daemon", action="store_true", help="启动定时服务模式")
     parser.add_argument("--once", action="store_true", help="立即执行一次 (默认)")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="演练：完整跑一遍并把卡片存到 storage/dry_run/，但不发到群、不写任何历史记录",
+    )
     args = parser.parse_args()
 
     if args.daemon:
         run_daemon()
     else:
-        asyncio.run(run_once())
+        if args.dry_run:
+            logger.info("========== 演练模式：不推送、不落盘 ==========")
+        asyncio.run(run_once(dry_run=args.dry_run))
 
 
 if __name__ == "__main__":

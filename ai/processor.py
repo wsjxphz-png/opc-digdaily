@@ -12,6 +12,7 @@ from typing import Optional
 import httpx
 
 from sources.base import ContentItem
+from scoring import FACTOR_RUBRIC, apply_to_item
 
 logger = logging.getLogger(__name__)
 
@@ -199,6 +200,32 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 
 ---
 
+## 五、客观子因子打分（重要：你不要给"总分"，只回答事实）
+
+**你没有权限给这条机会打总分。** 总分由程序用固定公式算，你只负责回答下面 11 个
+「能从原文观察到的事实型问题」，每个打 1-5 分，档位定义如下。
+
+{FACTOR_RUBRIC}
+
+**纪律**：
+- 原文写清楚了才给 4-5 分；原文没写、要靠你猜的，一律给 2-3 分。
+- 不要因为"这个方向我觉得有前途"给高分，只看原文有没有证据。
+- channel（获客路径清晰）是所有子项里最重要的一项，宁可给低不要给高。
+
+---
+
+## 六、可抄模板（照着做的最小行动包）
+
+给每条真机会写一个「明天就能开工」的最小行动包，五个字段都要填，不许空泛：
+
+- **who**：卖给谁（具体到人群+场景，如「开在小区里的宠物店老板」，不许写"中小企业"）
+- **what**：卖什么（一句话说清交付物，如「一份每周更新的本地活动清单」）
+- **first_step**：今天下班后 2 小时内能做完的第一步（具体到打开哪个网站、做什么动作）
+- **first_prompt**：第一句可以直接复制粘贴给 AI 的话（完整一句，不是描述，是原话）
+- **cost**：启动要花多少钱、多少时间（如「0 元，每天 1 小时，两周见第一单」）
+
+---
+
 ## 输出格式
 
 返回严格 JSON 数组，每条必须包含：
@@ -217,7 +244,18 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "verdict": "可复刻的真机会",
   "difficulty": "零门槛",
   "quality_flag": "⭐",
-  "relevance_score": 0.85
+  "factors": {
+    "urgency": 4, "market_size": 3, "pricing": 4, "repeat": 3,
+    "moat": 2, "margin": 4, "evergreen": 4,
+    "channel": 4, "capital": 5, "speed": 4, "skill": 5
+  },
+  "copy_template": {
+    "who": "开在小区里的宠物店老板",
+    "what": "一份每月更新的宠物节日营销素材包",
+    "first_step": "打开地图软件搜本市「宠物店」，抄下 30 家店的名字和电话，存进表格",
+    "first_prompt": "帮我写一条 80 字以内的微信开场白，发给宠物店老板，介绍我可以每月给他做一套节日海报文案，第一次免费试用。语气自然、不要像推销。",
+    "cost": "0 元，每天 1 小时，两周内谈下第一单"
+  }
 }
 ```
 
@@ -238,13 +276,8 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 - **verdict**: 「可复刻的真机会」或「卖噱头/卖铲子」
 - **difficulty**: 「零门槛」「需学习」「有一定门槛」
 - **quality_flag**: 「⭐」（高价值信号：细节丰富、有社区验证、小渠道首发）、「」（正常）、「⚠️」（有风险信号：来源可疑、标题党、可能有水分）
-- **relevance_score**: 0-1 综合评分（代码依赖越低+真实性越高+实操越具体 → 分数越高）
-
-## 评分指南
-- **0.8-1.0**: 代码依赖 1-2 + 真实性 4-5 + 实操详细 → 必推
-- **0.6-0.7**: 代码依赖 2-3 + 真实性 3-4 + 有实操 → 推荐
-- **0.4-0.5**: 边界内容，有点价值但不够具体/不够可信
-- **0.0-0.3**: 代码依赖 >=4 或 真实性 <=2 或 三条红线命中 → irrelevant
+- **factors**: 上面 11 个子因子，每个 1-5 的整数，一个都不能少（缺失会被当成 3 分处理，等于浪费这条机会）
+- **copy_template**: 五个字段 who / what / first_step / first_prompt / cost，全部必填
 
 ## 严格要求
 1. 纯 JSON 数组，不要 markdown 代码块包裹
@@ -255,7 +288,11 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 6. 真实性 <= 2 → relevant=false，verdict=卖噱头/卖铲子
 7. 三条一票否决红线命中任一条 → relevant=false，verdict=卖噱头/卖铲子
 8. relevant=false 的条目只返回 index、relevant、reason、verdict
-9. irrelevant 的也要返回，不要省略"""
+9. irrelevant 的也要返回，不要省略
+10. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略"""
+
+
+BATCH_SYSTEM_PROMPT = BATCH_SYSTEM_PROMPT.replace("{FACTOR_RUBRIC}", FACTOR_RUBRIC)
 
 
 
@@ -283,10 +320,96 @@ class AIProcessor:
         return self._enabled
 
     async def process(self, items: list[ContentItem]) -> list[ContentItem]:
-        """批量处理全部内容。一次 API 调用处理所有条目。"""
+        """批量处理全部内容。
+
+        按 token 预算自动分块：单次 API 调用的输出受 max_tokens 限制，若把所有候选
+        塞进一次调用，响应会被截断、整批 JSON 解析失败（历史上导致「国内 0 条」）。
+        改为拆成多块并发处理；某块若仍被截断/解析失败，自动「减半重试」，直到成功或
+        拆到单条——保证不丢数据、也不因一次抖动拖垮全量。
+        """
         if not self._enabled or not items:
             return items
 
+        sem = asyncio.Semaphore(3)  # 并发上限，避免瞬时打爆 API
+
+        async def _safe(chunk: list[ContentItem]):
+            async with sem:
+                return await self._process_chunk(chunk)
+
+        work = list(self._chunk_items(items))
+        if len(work) > 1:
+            logger.info(
+                f"内容过多（{len(items)} 条），按 token 预算拆分为 {len(work)} 批并发处理"
+                f"（避免单次响应被截断导致整批丢失）"
+            )
+
+        out: list[ContentItem] = []
+        # 失败自动减半重试，直到全部成功或拆到单条（单条仍失败则放弃该条）
+        while work:
+            outcomes = await asyncio.gather(*[_safe(c) for c in work])
+            next_work: list[list[ContentItem]] = []
+            for chunk, (processed, ok) in zip(work, outcomes):
+                if ok:
+                    out.extend(processed)
+                elif len(chunk) > 1:
+                    mid = len(chunk) // 2
+                    next_work.append(chunk[:mid])
+                    next_work.append(chunk[mid:])
+                else:
+                    # 单条仍失败（极端异常）→ 保留在结果里（ai_processed=False），顺序不缺
+                    out.extend(processed)
+            work = next_work
+        return out
+
+    @staticmethod
+    def _est_input_tokens(item: ContentItem) -> int:
+        """粗略估算单条输入占用的 token（中英文混合，偏保守：1 字符≈0.5 token）。"""
+        title = item.title[:120]
+        content = (item.full_text or item.summary or "(无内容)")[:1200]
+        return (len(title) + len(content)) // 2 + 30
+
+    def _chunk_items(
+        self,
+        items: list[ContentItem],
+        max_input_tokens: int = 7000,
+        per_item_output_est: int = 600,
+        hard_cap: int = 14,
+    ) -> list[list[ContentItem]]:
+        """把内容按 token 预算切成多块，保证每块的输出不超 max_tokens、输入不超上下文。
+
+        - per_item_output_est：单条完整 JSON 输出的估计 token 数（保守）。
+        - budget_out = max_tokens * 0.8：给模型留思考/格式余量。
+        - hard_cap：单块硬上限，防止个别超长内容把块撑爆。
+        """
+        budget_out = int(self.max_tokens * 0.8)
+        chunks: list[list[ContentItem]] = []
+        cur: list[ContentItem] = []
+        in_tok = 0
+        out_tok = 0
+        for it in items:
+            est = self._est_input_tokens(it)
+            # 当前块非空且再加这条会超预算/硬上限 → 切块
+            if cur and (
+                len(cur) >= hard_cap
+                or in_tok + est > max_input_tokens
+                or out_tok + per_item_output_est > budget_out
+            ):
+                chunks.append(cur)
+                cur = []
+                in_tok = 0
+                out_tok = 0
+            cur.append(it)
+            in_tok += est
+            out_tok += per_item_output_est
+        if cur:
+            chunks.append(cur)
+        return chunks
+
+    async def _process_chunk(self, items: list[ContentItem]) -> tuple[list[ContentItem], bool]:
+        """处理单块内容。返回 (被原地改写的同批条目, 是否成功)。
+
+        失败 = API 调用失败 或 JSON 解析不出/被截断（条目数对不上）→ 上层会减半重试。
+        """
         # 构建批量输入：优先使用全文，否则用摘要
         input_lines = []
         for i, item in enumerate(items):
@@ -304,16 +427,25 @@ class AIProcessor:
         ]
         content = await self._chat(messages, self.max_tokens, self.temperature)
         if content is None:
-            # 重试后仍失败：标记所有条目为未处理，后续会被过滤
-            logger.error("批量 AI 处理失败（重试后仍失败），本条内容不参与推送")
+            # 重试后仍失败：标记本块所有条目为未处理，后续会被过滤
+            logger.error("本批 AI 调用失败（重试后仍失败），该批内容不参与推送")
             for item in items:
                 item.ai_processed = False
-            return items
+            return items, False
 
         # 解析 JSON
         results = self._parse_batch_response(content)
+        if not results or len(results) < len(items):
+            # 解析失败，或被截断（返回的条目数 < 输入条数）→ 上层减半重试
+            logger.warning(
+                "本批响应解析失败/被截断（%d/%d 条），将减半重试",
+                len(results) if results else 0, len(items),
+            )
+            for item in items:
+                item.ai_processed = False
+            return items, False
 
-        # 应用到原始条目
+        # 应用到原始条目（index 是本块内的局部下标，与 items 一一对应）
         result_map = {r["index"]: r for r in results if isinstance(r, dict)}
         for i, item in enumerate(items):
             r = result_map.get(i)
@@ -330,8 +462,22 @@ class AIProcessor:
                     item.authenticity = int(r["authenticity"])
                 item.practical_steps = r.get("practical_steps", "")
                 item.verdict = r.get("verdict", "")
-                if isinstance(r.get("relevance_score"), (int, float)):
-                    item.relevance_score = r["relevance_score"]
+                # 可抄模板
+                tpl = r.get("copy_template")
+                if isinstance(tpl, dict):
+                    item.copy_template = {
+                        k: str(v).strip()
+                        for k, v in tpl.items()
+                        if k in ("who", "what", "first_step", "first_prompt", "cost") and v
+                    }
+                # ⚠️ 总分不采信 AI 自评，一律由 scoring.py 的固定公式重算
+                factors = r.get("factors")
+                if not isinstance(factors, dict):
+                    factors = {}
+                    logger.warning(
+                        "条目[%d] 缺少 factors 子因子，按保守中位数 3 分计算", i
+                    )
+                apply_to_item(item, factors)
                 item.ai_processed = True
             else:
                 # 标记为不相关，后续会被过滤
@@ -339,7 +485,7 @@ class AIProcessor:
                 item.verdict = r.get("verdict", "卖噱头/卖铲子") if r else "卖噱头/卖铲子"
                 item.ai_processed = True
 
-        return items
+        return items, True
 
     # ============================================================
     # 通用 LLM 调用（供拆解引擎 / 发现引擎复用）

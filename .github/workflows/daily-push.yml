@@ -6,10 +6,21 @@ on:
     - cron: "0 14 * * *"
   workflow_dispatch:  # 允许手动触发
 
+# contents: write —— 把 storage/ 的状态写回仓库（机会库/名单/去重历史要跨天累积）
+# issues: read    —— 读取「👍想做 / 👎没兴趣」反馈
+permissions:
+  contents: write
+  issues: read
+
+# 同一时间只允许跑一个，避免两次运行同时写 storage/ 打架
+concurrency:
+  group: daily-push
+  cancel-in-progress: false
+
 jobs:
   daily-push:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v4
@@ -29,4 +40,33 @@ jobs:
           AI_API_BASE: ${{ secrets.AI_API_BASE }}
           AI_MODEL: ${{ secrets.AI_MODEL }}
           WEIXIN_RSS_BASE_URL: ${{ secrets.WEIXIN_RSS_BASE_URL }}
+          # X（推特）登录态。没配就自动跳过 X，不影响其它源
+          TWITTER_COOKIES: ${{ secrets.TWITTER_COOKIES }}
+          # 读 Issues 里的反馈。用 Actions 自带的 token 即可，无需自己建
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python main.py --once
+
+      # 关键：把跨天累积的状态写回仓库。
+      # 不做这一步的话，每次运行都是从零开始 ——
+      # 机会库永远停在「第1次出现」、操盘手轮转会重复拆同一批人、去重历史每天清零。
+      - name: Persist state
+        if: always()
+        run: |
+          git config user.name  "opc-digdaily-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A storage/
+          if git diff --cached --quiet; then
+            echo "状态无变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore(state): 更新机会库/名单/去重历史 [skip ci]"
+          # 可能有并发或手动改动，失败就 rebase 后重试几次
+          for i in 1 2 3; do
+            if git push; then
+              echo "状态已写回"
+              exit 0
+            fi
+            echo "推送失败，第 $i 次重试..."
+            git pull --rebase --autostash || true
+          done
+          echo "::warning::状态写回失败，本次累积数据将丢失"

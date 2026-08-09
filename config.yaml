@@ -80,6 +80,28 @@ opportunity:
   per_day: 10             # 每天目标总条数（仅作统计参考）；国内/国际不硬性分配，按内容质量动态配比
   per_region: 15          # 安全上限（不是目标条数）：命中硬过滤的优质内容不封顶，仅防极端失控
   exclude_shovel: true    # 硬过滤卖铲子：verdict≠真机会 / 真实性<3 / 代码依赖≥4 / 综合分<0.4 一律丢弃
+  # 「适合你启动指数」低于此值不推。指数由 scoring.py 的固定公式算出（1-10）：
+  #   <4 = 落地路径不清或有致命短板（需写代码 / 疑似卖课 / 没写清客户从哪来）
+  min_startup_index: 4
+
+# --- 跨天机会库：把「同一个机会被不同来源、在不同天反复讲到」这件事记下来 ---
+#   同一主题反复出现 = 真实存在的信号，不是个例。卡片上会标「🔁 第N次出现 · M个来源印证」，
+#   并在日报开头给出「本周反复出现的方向」。
+library:
+  enabled: true
+  recurring_days: 7       # 「本周风向」统计最近多少天
+  recurring_top: 3        # 最多展示几个反复出现的主题
+  recurring_min_times: 2  # 至少出现过几次才算「反复」
+
+# --- 反馈闭环：卡片上的「👍想做 / 👎没兴趣」 ---
+#   群自定义机器人 webhook 是单向的，收不到按钮回调（那需要飞书自建应用 + 公网回调地址）。
+#   这里改用：按钮打开一个「已预填好的 GitHub Issue 页面」，你再点一下提交即可；
+#   次日运行时系统用 GitHub API 把这些反馈读回来，据此微调后续同类机会的排序（±1~2 分）。
+feedback:
+  enabled: true
+  github_repo: "wsjxphz-png/opc-digdaily"   # 反馈落在哪个仓库的 Issues 里
+  boost_liked: 1          # 与你点过「想做」的主题相似 → 指数 +1
+  penalize_disliked: 2    # 与你点过「没兴趣」的主题相似 → 指数 -2
 
 # ============================================================
 # 国内管道：中文赚钱实操内容
@@ -573,8 +595,64 @@ international:
 
     twitter:
       enabled: true
-      nitter_rss:
+
+      # ▸ 主通道：X 私有 GraphQL（用登录 Cookie，免费、不需要付费 API Key）
+      #   需要在 .env / GitHub Secrets 配 TWITTER_COOKIES：{"auth_token":"...","ct0":"..."}
+      #   取法：浏览器登录 x.com → F12 → 应用 → Cookie → 复制 auth_token 和 ct0
+      #   ⚠️ 等同登录态，只放 .env 和加密 Secret，绝不提交进仓库；未配置则本源自动跳过
+      graphql:
         enabled: true
+        hours: 48              # 只取最近多少小时的推文
+        tweets_per_account: 30 # 每个账号拉多少条时间线再筛
+        max_per_account: 5     # 每个账号最多留几条进管道
+        min_chars: 80          # 太短的推文（打招呼/一句吐槽）没有拆解价值，丢弃
+        skip_replies: true     # 跳过回复（多为闲聊）
+        skip_retweets: true    # 跳过转推（不是本人内容）
+        sleep: 0.8             # 每个账号之间的间隔，避免触发限流
+        # 精选「非技术」账号（内容/信息产品/付费社群/产品化服务方向）。
+        # 刻意不含 indie hacker / SaaS 开发者 / 程序员博主——那些内容你看了也用不上。
+        accounts:
+          # ▸ 内容资产与信息产品
+          - "JustinWelsh"       # 一人企业内容变现体系，全程非技术
+          - "dvassallo"         # 小产品 / 课程 / 社群，公开收入
+          - "stephsmithio"      # 内容与信息产品，方法论具体
+          - "nateliason"        # 内容资产 / 课程真实复盘
+          - "dickiebush"        # 写作系统产品化
+          - "david_perell"      # 写作变现
+          - "MattIRL"           # 独立创作者实操
+          # ▸ 产品化服务（把服务卖成标准产品）
+          - "BrettFromDJ"       # Designjoy 单人设计订阅制标杆
+          - "BrianCasel"        # 产品化服务方法论
+          - "jackbutcher"       # Visualize Value 视觉化交付
+          - "philipmorgan"      # 定位咨询，交付具体
+          - "JanePortman"       # 文案 / 产品化服务
+          # ▸ 商业拆解与获客方法（可复制的获客动作）
+          - "harrydry"          # Marketing Examples 具体增长案例
+          - "gregisenberg"      # 细分领域商业点子拆解
+          - "ShaanVP"           # 真实生意案例
+          - "thesamparr"        # 小生意实战
+          - "Julian"            # 增长方法论，可复制
+          # ▸ 中文非技术实操者
+          - "XDash"             # 范冰 — 增长 / 出海
+          - "dontbesilent"      # 在线生意系统 / 商业哲学
+          - "pandatalk8"        # AI 商业化 / 个人 IP
+          - "lijigang"          # 认知工具箱 / 提示词
+          - "xiaohuggg"         # 小互 — 全球 AI 应用案例日更
+          - "khazix0918"        # 卡兹克 — AI 产品实测
+          - "iamtonyzhu"        # 出海实战
+          - "oran_ge"           # AI 产品 / 创业实战
+          - "thinkingjimmy"     # 创造者思考
+          - "imwsl90"           # AI 商业化前哨
+          - "op7418"            # 归藏 — AI 工作流实操（无代码）
+          - "ai_xiaomu"         # AI 小木 — AI 应用与变现
+          - "hq4ai"             # AI 商业化观察
+          - "canghe"            # 内容与个人品牌
+
+      # ▸ 兜底通道：Nitter RSS —— 公共实例 2024 年后基本全部关停，默认关闭。
+      #   下面这份 accounts 仍然是「操盘手名单」的数据源（operators.py 读它构建 roster），
+      #   所以保留不删；它只是不再用于抓取。
+      nitter_rss:
+        enabled: false
         instance: "https://nitter.net"
         accounts:
           # ▸ 无代码/自动化服务方向（帮B端搭流程、卖服务）
