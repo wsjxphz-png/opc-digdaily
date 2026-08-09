@@ -499,6 +499,11 @@ class FeishuPusher:
             if score_reason:
                 md_lines.append(f"　└ {score_reason}")
 
+            # ---- dbs 检验未过项（最该让用户看到的"为什么不行"）----
+            gate_reason = getattr(item, "gate_reason", "") or ""
+            if gate_reason:
+                md_lines.append(f"　⚠️ {gate_reason}")
+
             # ---- 定性标签行（保留原有代码依赖 / 真实性判读）----
             score_parts = []
             if code_label:

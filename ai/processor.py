@@ -13,6 +13,7 @@ import httpx
 
 from sources.base import ContentItem
 from scoring import FACTOR_RUBRIC, apply_to_item
+from filters import is_hype
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +26,26 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 要找到这群人，核心是摒弃"一人公司/OPC/副业/创业"这类营销词，转去识别「具体的交付形态 × 极小团队/个人操作」。
 
 你的核心关注点不是"这个人赚了多少钱"或"他给自己贴什么标签"，而是"他到底用了什么工具、做了什么交付、客户怎么找来的"。
+
+## 六条判断公理（你的每一个判断都要能追溯到这六条）
+
+1. **商业模式是独立于人的客观存在。** 它是一台有固定进料要求的机器，人只是喂料员。
+   要对"大佬"祛魅，但要对商业模式保持敬畏。看一篇文章，先看机器长什么样，别看作者是谁。
+2. **好的商业模式逼人做好人。** 免费分享能增加收入的是好模式；必须夸大、制造焦虑、
+   隐瞒信息才能成交的是坏模式。
+3. **智力不直接变现，商业模式才变现。** 不要因为作者显得聪明就给高分。
+4. **流量不等于收入。** 99% 的情况下，流量越大越不赚钱。粉丝十万、播放百万，
+   如果拿不出收入证据，这条内容的商业价值就是零。看到大数字先分清是钱还是流量。
+5. **定价即产品。** 定价本身就是产品设计。没有价格的"产品"根本不是产品。
+   成熟的定价会有便宜的引流款和贵的利润款，价差通常在 5 到 15 倍。
+6. **能不能换个人做，是判断生意的分水岭。** 换一个普通人来喂同样的料，
+   出不出同样的货？不能用别人代替本人的，那不是生意，是高薪打工——读者学不会。
+
+## 两个当场证伪的检验（先做这两个，不过就别往下看了）
+
+- **产品颜色测试**：这门生意卖的东西，你能说出它是什么颜色的吗？
+  说不出来（因为它只是个"方向""领域""模式"），说明作者还没进入市场。
+- **付款链接测试**：作者能不能把付款链接发出来？收不了钱的，就还没有产品。
 
 ## 用户画像
 你的用户**完全不会写代码**，不知道什么叫编程、开发、技术栈。
@@ -202,15 +223,10 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 
 ## 五、客观子因子打分（重要：你不要给"总分"，只回答事实）
 
-**你没有权限给这条机会打总分。** 总分由程序用固定公式算，你只负责回答下面 11 个
+**你没有权限给这条机会打总分。** 总分由程序用固定公式算，你只负责回答下面 16 个
 「能从原文观察到的事实型问题」，每个打 1-5 分，档位定义如下。
 
 {FACTOR_RUBRIC}
-
-**纪律**：
-- 原文写清楚了才给 4-5 分；原文没写、要靠你猜的，一律给 2-3 分。
-- 不要因为"这个方向我觉得有前途"给高分，只看原文有没有证据。
-- channel（获客路径清晰）是所有子项里最重要的一项，宁可给低不要给高。
 
 ---
 
@@ -245,9 +261,11 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "difficulty": "零门槛",
   "quality_flag": "⭐",
   "factors": {
-    "urgency": 4, "market_size": 3, "pricing": 4, "repeat": 3,
-    "moat": 2, "margin": 4, "evergreen": 4,
-    "channel": 4, "capital": 5, "speed": 4, "skill": 5
+    "urgency": 4, "pricing": 4, "margin": 4, "repeat": 3,
+    "price_ladder": 3, "revenue_proof": 4, "market_size": 3, "evergreen": 4,
+    "channel": 4, "machine": 4, "delivery_chain": 3, "replicable": 4,
+    "capital": 5, "speed": 4, "skill": 5,
+    "concrete": 4
   },
   "copy_template": {
     "who": "开在小区里的宠物店老板",
@@ -276,7 +294,10 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 - **verdict**: 「可复刻的真机会」或「卖噱头/卖铲子」
 - **difficulty**: 「零门槛」「需学习」「有一定门槛」
 - **quality_flag**: 「⭐」（高价值信号：细节丰富、有社区验证、小渠道首发）、「」（正常）、「⚠️」（有风险信号：来源可疑、标题党、可能有水分）
-- **factors**: 上面 11 个子因子，每个 1-5 的整数，一个都不能少（缺失会被当成 3 分处理，等于浪费这条机会）
+- **factors**: 上面 16 个子因子，每个 1-5 的整数，一个都不能少（缺失会被当成 3 分处理，等于浪费这条机会）
+  · 商业化 8 项：urgency / pricing / margin / repeat / price_ladder / revenue_proof / market_size / evergreen
+  · 可行性 7 项：channel / machine / delivery_chain / replicable / capital / speed / skill
+  · 闸门 1 项：concrete
 - **copy_template**: 五个字段 who / what / first_step / first_prompt / cost，全部必填
 
 ## 严格要求
@@ -372,8 +393,8 @@ class AIProcessor:
         self,
         items: list[ContentItem],
         max_input_tokens: int = 7000,
-        per_item_output_est: int = 600,
-        hard_cap: int = 14,
+        per_item_output_est: int = 1500,
+        hard_cap: int = 5,
     ) -> list[list[ContentItem]]:
         """把内容按 token 预算切成多块，保证每块的输出不超 max_tokens、输入不超上下文。
 
@@ -470,6 +491,10 @@ class AIProcessor:
                         for k, v in tpl.items()
                         if k in ("who", "what", "first_step", "first_prompt", "cost") and v
                     }
+                # dbs 语言陷阱：先用确定性关键词判定噱头（与 AI 判读无关）
+                item.hype_flag = is_hype(
+                    (item.title or "") + " " + (item.full_text or item.summary or "")
+                )
                 # ⚠️ 总分不采信 AI 自评，一律由 scoring.py 的固定公式重算
                 factors = r.get("factors")
                 if not isinstance(factors, dict):

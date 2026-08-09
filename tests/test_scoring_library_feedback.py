@@ -88,7 +88,7 @@ def scoring_tests():
           str(empty["startup_index"]))
     partial = scoring.compute({"urgency": 5, "pricing": 5, "channel": 5},
                               code_dependency=1, authenticity=5)
-    check("AI 只给 3/11 项 → 仍判降级", partial["degraded"] is True)
+    check("AI 只给 3/15 项 → 仍判降级", partial["degraded"] is True)
     check("AI 只给 3/11 项 → 封顶 4 分", partial["startup_index"] <= 4,
           str(partial["startup_index"]))
     full = scoring.compute(_all(4), code_dependency=1, authenticity=4)
@@ -97,7 +97,7 @@ def scoring_tests():
     # --- 脏数据不能让公式崩 ---
     dirty = scoring.compute(
         {"urgency": "5", "market_size": None, "pricing": 99, "repeat": -3,
-         "moat": "很高", "margin": 3.7, "evergreen": True,
+         "revenue_proof": "不少", "margin": 3.7, "evergreen": True,
          "channel": 4, "capital": 4, "speed": 4, "skill": 4},
         code_dependency="2", authenticity=None,
     )
@@ -354,6 +354,15 @@ async def dryrun_tests():
     size = len(s.encode("utf-8"))
     check("卡片体积在飞书 30KB 限制内", size < 30000, f"{size} 字节")
 
+    # --- dbs 检验未过项应在卡片以「⚠️」标出 ---
+    it_gate = _mk("餐厅", "代运营小红书账号", idx=3)
+    it_gate.ai_summary = "只讲了方向、落不到一个具体产品"
+    it_gate.code_dependency, it_gate.authenticity = 1, 4
+    scoring.apply_to_item(it_gate, dict(_all(4), concrete=1))
+    card_g = p2._build_dual_card([it_gate], [], "2026-08-09", 1)
+    sg = json.dumps(card_g, ensure_ascii=False)
+    check("卡片渲染 dbs 检验未过项（⚠️）", "⚠️" in sg, sg[:200])
+
 
 # ============================================================
 # 5. 大批量自动分块（process 不再因截断丢整批）
@@ -386,7 +395,7 @@ async def chunking_tests():
     flat = [it for c in chunks for it in c]
     check("分块不丢条目、不重复",
           len(flat) == 172 and {id(x) for x in flat} == {id(x) for x in items})
-    check("单块不超过硬上限 18", all(len(c) <= 18 for c in chunks))
+    check("单块不超过硬上限 10", all(len(c) <= 10 for c in chunks))
 
     # 长全文应比短全文切得更碎（短全文被输出预算限到 ~10/块，长全文被输入预算提前切开）
     short = [ContentItem(title=f"机会{i}", url=f"http://x/{i}", source_name="S")
@@ -421,9 +430,11 @@ async def chunking_tests():
                 "practical_steps": "1.交付 2.客户 3.工具",
                 "verdict": "可复刻的真机会", "difficulty": "零门槛",
                 "quality_flag": "",
-                "factors": {"urgency": 4, "market_size": 3, "pricing": 4,
-                            "repeat": 3, "moat": 2, "margin": 4, "evergreen": 4,
-                            "channel": 4, "capital": 5, "speed": 4, "skill": 5},
+                "factors": {"urgency": 4, "pricing": 4, "margin": 4, "repeat": 3,
+                            "price_ladder": 3, "revenue_proof": 4, "market_size": 3,
+                            "evergreen": 4, "channel": 4, "machine": 4,
+                            "delivery_chain": 3, "replicable": 4, "capital": 5,
+                            "speed": 4, "skill": 5, "concrete": 4},
                 "copy_template": {"who": "A", "what": "B",
                                   "first_step": "C", "first_prompt": "D", "cost": "0元"},
             })
@@ -471,6 +482,59 @@ async def chunking_tests():
           all(getattr(it, "ai_processed", False) for it in out3))
 
 
+# ============================================================
+# 6. 噱头检测 & dbs 检验闸门（v2「dbs 商业本体论」新增）
+# ============================================================
+
+def hype_and_gate_tests():
+    print("\n===== 6. 噱头检测 & dbs 检验闸门 =====")
+    from filters import is_hype
+
+    # --- 确定性噱头判定：满篇空词 + 拿不出具体的钱/客户信号 ---
+    hype_text = ("现在的新赛道真的是有前景的风口，抓住了未来趋势就是财富自由的机会来了，"
+                 "这个蓝海赛道大势所趋，谁进场谁赚钱")
+    check("满篇空词无具体信号 → 判噱头", is_hype(hype_text))
+
+    # --- 用词浮夸但拿得出客户+收入 → 不算噱头（他在讲真事）---
+    real_text = ("现在的新赛道很有前景，但我第一个客户是本地餐厅老板，收了2000块钱做了套小红书方案，已复购3次")
+    check("有具体客户+收入 → 不是噱头", not is_hype(real_text))
+
+    # --- 正常行业讨论不算噱头 ---
+    check("正常商业分析不算噱头",
+          not is_hype("分析了二手书倒卖的定价和获客渠道，利润率约40%"))
+
+    # --- dbs 产品颜色测试：concrete ≤ 2 触发封顶 + 写回 gate_reason ---
+    it = ContentItem(title="t", url="u", source_name="s")
+    it.code_dependency, it.authenticity = 1, 4
+    scoring.apply_to_item(it, dict(_all(4), concrete=1))
+    check("concrete=1 → 封顶 3 分", it.startup_index <= 3, str(it.startup_index))
+    check("gate_reason 写出「产品颜色测试」", "产品颜色测试" in it.gate_reason, it.gate_reason)
+
+    # --- dbs 印钞机检验：machine ≤ 2 ---
+    it2 = ContentItem(title="t", url="u", source_name="s")
+    it2.code_dependency, it2.authenticity = 1, 4
+    scoring.apply_to_item(it2, dict(_all(4), machine=2))
+    check("machine=2 → 封顶 4 分", it2.startup_index <= 4, str(it2.startup_index))
+    check("gate_reason 写出「印钞机检验」", "印钞机检验" in it2.gate_reason, it2.gate_reason)
+
+    # --- dbs 公理4 流量≠收入：revenue_proof=2 打折 + 标注 ---
+    it3 = ContentItem(title="t", url="u", source_name="s")
+    it3.code_dependency, it3.authenticity = 1, 4
+    scoring.apply_to_item(it3, dict(_all(4), revenue_proof=2, concrete=4))
+    check("revenue_proof=2 标注「流量≠收入」", "流量" in it3.gate_reason, it3.gate_reason)
+    base = scoring.compute(_all(4), code_dependency=1, authenticity=4)["commercial"]
+    check("revenue_proof=2 商业化被打折", it3.commercial_score < base,
+          f"{it3.commercial_score} < {base}")
+
+    # --- 噱头标记经 apply_to_item 触发语言陷阱封顶 ---
+    it4 = ContentItem(title="t", url="u", source_name="s")
+    it4.code_dependency, it4.authenticity = 1, 4
+    it4.hype_flag = True
+    scoring.apply_to_item(it4, _all(4))
+    check("hype_flag=True → 封顶 5 分", it4.startup_index <= 5, str(it4.startup_index))
+    check("hype_flag=True → gate_reason 含「语言陷阱」", "语言陷阱" in it4.gate_reason, it4.gate_reason)
+
+
 def run():
     try:
         scoring_tests()
@@ -478,6 +542,7 @@ def run():
         feedback_tests()
         asyncio.run(dryrun_tests())
         asyncio.run(chunking_tests())
+        hype_and_gate_tests()
     except Exception:
         import traceback
         traceback.print_exc()

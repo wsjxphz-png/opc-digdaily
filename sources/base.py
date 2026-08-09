@@ -35,11 +35,13 @@ class ContentItem:
     verdict: str = ""              # 结论: "可复刻的真机会" / "卖噱头/卖铲子"
 
     # 客观打分（scoring.py 用固定公式算出，AI 只提供 1-5 的事实型子因子）
-    score_factors: dict = field(default_factory=dict)  # 12 个子因子原始分
+    score_factors: dict = field(default_factory=dict)  # 全部子因子原始分
     commercial_score: int = 0      # 商业化潜力 0-100
     feasibility_score: int = 0     # 可行性 0-100
     startup_index: int = 0         # 适合你启动的指数 1-10
     score_reason: str = ""         # 分数怎么来的（加分项/扣分项/封顶原因）
+    gate_reason: str = ""          # dbs 七项检验里没通过的项（人话）
+    hype_flag: bool = False        # 确定性关键词判定：满篇空词的噱头文
 
     # 可抄模板（照着做的最小行动包）
     copy_template: dict = field(default_factory=dict)

@@ -52,3 +52,98 @@ def is_technical(text: str) -> bool:
         if kw.lower() in t:
             return True
     return False
+
+
+# ============================================================
+# 语言陷阱 / 噱头检测（来源：dbs 商业本体论「第一层：语言陷阱检测」）
+# ============================================================
+#
+# dbs 的诊断漏斗第一层就是查「模糊的、没有被定义的核心词」：
+# 「适合」「值得」「应该」「好的」「高级」「有前景」「赛道」。
+# 一段文字如果通篇都靠这类词撑着，说明作者自己也没想清楚在说什么，
+# 这种内容对「照着抄」的读者是纯噪音。
+#
+# 关键设计：**按密度判定，不按单个命中判定。**
+# 「风口」「机会」这些词在正常商业文章里也会出现一两次，单词命中会大量误伤。
+# 只有当这类空词高频堆叠、而全文又拿不出具体数字时，才判为噱头。
+
+# 没有定义的空词（dbs 语言陷阱词 + 中文自媒体常见的营销套话）
+HYPE_WORDS: list[str] = [
+    # dbs 原始陷阱词
+    "赛道", "有前景", "很有前途", "值得做", "适合你", "适不适合",
+    "高级感", "高大上",
+    # 中文内容农场高频空词
+    "风口", "红利期", "新蓝海", "蓝海市场", "下一个风口",
+    "颠覆", "革命性", "划时代", "重新定义", "弯道超车",
+    "财富自由", "躺赚", "睡后收入", "被动收入神话",
+    "月入十万", "月入百万", "轻松月入", "月入过万不是梦",
+    "机会来了", "抓住机会", "改变命运", "普通人的机会",
+    "未来趋势", "大势所趋", "必将取代", "时代红利",
+]
+
+# 具体性信号：出现这些说明作者在讲真事，可抵消一部分空词
+CONCRETE_SIGNALS: list[str] = [
+    "元", "块钱", "美元", "美金", "刀",
+    "客户", "顾客", "下单", "成交", "付款", "收款", "报价",
+    "第一单", "第一个客户", "复购", "退款",
+]
+
+# 空词密度阈值：每千字出现多少次算「满篇空话」
+HYPE_PER_1K_THRESHOLD = 3.0
+# 短文本（少于该字数）单独用绝对次数判定，避免除以小分母导致密度虚高
+SHORT_TEXT_LEN = 300
+HYPE_ABS_THRESHOLD_SHORT = 3
+
+
+def count_hype(text: str) -> int:
+    """统计文本里「没有定义的空词」出现的总次数。"""
+    if not text:
+        return 0
+    t = text.lower()
+    return sum(t.count(w.lower()) for w in HYPE_WORDS)
+
+
+def has_concrete_signal(text: str) -> bool:
+    """文本里有没有「具体到钱和客户」的信号。有的话说明作者在讲真事。"""
+    if not text:
+        return False
+    t = text.lower()
+    return any(s.lower() in t for s in CONCRETE_SIGNALS)
+
+
+def is_hype(text: str) -> bool:
+    """判断一段文本是否为「满篇空词、拿不出具体东西」的噱头文。
+
+    判定逻辑（三者同时成立才算噱头，尽量少误伤）：
+      1. 空词出现次数达到密度阈值；
+      2. 全文找不到任何「钱 / 客户 / 成交」这类具体信号；
+      3. 文本本身不是太短（太短的标题不做判定，交给 AI）。
+
+    对应 dbs 诊断漏斗第一层：核心词没有定义 → 这个问题本身不成立，不需要被回答。
+    """
+    if not text:
+        return False
+
+    n = count_hype(text)
+    if n == 0:
+        return False
+
+    # 只要作者拿得出具体的钱和客户，就不算空转——他在讲真事，只是用词浮夸
+    if has_concrete_signal(text):
+        return False
+
+    length = len(text)
+    if length < SHORT_TEXT_LEN:
+        return n >= HYPE_ABS_THRESHOLD_SHORT
+
+    density = n / (length / 1000.0)
+    return density >= HYPE_PER_1K_THRESHOLD
+
+
+def hype_reason(text: str) -> str:
+    """给出噱头判定的人话理由（用于日志和卡片，让判断可追溯）。"""
+    if not is_hype(text):
+        return ""
+    t = (text or "").lower()
+    hit = [w for w in HYPE_WORDS if w.lower() in t]
+    return "满篇没有定义的空词（" + "、".join(hit[:4]) + "），且全文拿不出具体的钱和客户"
