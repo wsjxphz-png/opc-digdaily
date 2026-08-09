@@ -14,6 +14,8 @@ LLM 偶尔会把技术大牛误判成「无技术门槛」而放行，所以这�
 合法非技术 OPC 的泛词。
 """
 
+import re
+
 # 强技术信号关键词（大小写不敏感，子串匹配）
 TECH_KEYWORDS: list[str] = [
     # 中文 - 编程 / 程序员身份
@@ -165,11 +167,15 @@ HYPE_WORDS: list[str] = [
 ]
 
 # 具体性信号：出现这些说明作者在讲真事，可抵消一部分空词
+# 注意：裸单字「元」会误中「元宇宙 / 公元 / 元旦 / 元气森林」，所以金额类
+# 信号改成「数字 + 货币单位」正则，只有真的写了钱数才算数。
 CONCRETE_SIGNALS: list[str] = [
-    "元", "块钱", "美元", "美金", "刀",
+    "块钱", "美元", "美金", "刀",
     "客户", "顾客", "下单", "成交", "付款", "收款", "报价",
     "第一单", "第一个客户", "复购", "退款",
 ]
+# 数字 + 货币单位（避免裸「元」误中元宇宙/公元/元旦/元气森林）
+CONCRETE_AMOUNT_RE = re.compile(r"\d[\d.,]*\s*(?:元|块|万元|万块|万刀|美元|美金|刀)")
 
 # 空词密度阈值：每千字出现多少次算「满篇空话」
 HYPE_PER_1K_THRESHOLD = 3.0
@@ -187,11 +193,17 @@ def count_hype(text: str) -> int:
 
 
 def has_concrete_signal(text: str) -> bool:
-    """文本里有没有「具体到钱和客户」的信号。有的话说明作者在讲真事。"""
+    """文本里有没有「具体到钱和客户」的信号。有的话说明作者在讲真事。
+
+    金额类信号必须用「数字 + 货币单位」正则判定，避免裸单字「元」把
+    「元宇宙 / 公元 / 元旦 / 元气森林」误判成有金额信号、架空噱头闸门。
+    """
     if not text:
         return False
     t = text.lower()
-    return any(s.lower() in t for s in CONCRETE_SIGNALS)
+    if any(s.lower() in t for s in CONCRETE_SIGNALS):
+        return True
+    return bool(CONCRETE_AMOUNT_RE.search(t))
 
 
 def is_hype(text: str) -> bool:

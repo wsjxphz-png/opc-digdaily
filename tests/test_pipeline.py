@@ -334,10 +334,11 @@ async def main_tests():
     bot.pusher.push_teardowns = fake_push
 
     captured_opp = {}
-    async def fake_push_opps(domestic, international, date_str):
+    async def fake_push_opps(domestic, international, date_str, recurring=None):
         captured_opp["dom"] = domestic
         captured_opp["intl"] = international
         captured_opp["date"] = date_str
+        captured_opp["recurring"] = recurring
         return True
     bot.pusher.push_opportunities = fake_push_opps
 

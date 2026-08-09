@@ -51,15 +51,36 @@ def _operator_authenticity(red_flag: str, learn: str) -> int:
     判定（任一命中即 <=2，触发 skip）：
       1) 明确骗局词：庞氏 / 传销 / 拉人头 / 割韭菜 / 资金盘 / 金字塔 / 直销(传销式)
       2) red_flag 点明「卖铲子」且同时是「教一人公司 / 副业 / 财务自由 / 躺赚 / 搞钱 / 赚钱课 / 暴富」等赚钱梦语境
+
+    死板教条修复：裸子串匹配会误杀「否定式澄清」——「没有明显的割韭菜行为」
+    「并非传销或资金盘」「未发现拉人头等问题」本是该推的真实操盘手，却因为
+    含骗局词被直接判 skip。修法：只有「未被否定修饰」的骗局词命中才触发，
+    词前窗口出现「没有 / 并非 / 未发现 …」即视为在澄清、不触发。
     """
     text = f"{red_flag or ''} {learn or ''}"
+    text_lower = text.lower()
+
+    # 否定词窗口：出现这些词说明是在「澄清没有骗局」，该处命中不应触发 skip
+    _NEG_CUES = ["没有", "无", "不是", "并非", "非", "未发现", "没", "不",
+                 "不存在", "杜绝", "远离", "拒绝", "否认", "避免", "未见", "毫无"]
+
+    def _unnegated_hit(word: str, window: int = 6) -> bool:
+        """word 是否在文本中出现，且出现处之前 window 字符内没有否定词。"""
+        idx = text_lower.find(word)
+        while idx != -1:
+            before = text_lower[max(0, idx - window):idx]
+            if not any(c in before for c in _NEG_CUES):
+                return True
+            idx = text_lower.find(word, idx + 1)
+        return False
+
     scam = ["庞氏", "传销", "拉人头", "割韭菜", "资金盘", "金字塔", "直销"]
-    if any(s in text for s in scam):
+    if any(_unnegated_hit(s) for s in scam):
         return 2
-    if "卖铲子" in text:
+    if _unnegated_hit("卖铲子"):
         dream = ["一人公司", "做opc", "做OPC", "副业", "财务自由", "被动收入",
                  "躺赚", "搞钱", "赚钱课", "暴富", "月入过万", "月入十万"]
-        if any(d in text for d in dream):
+        if any(d in text_lower for d in dream):
             return 2
     return 3
 

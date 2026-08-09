@@ -153,11 +153,13 @@ def _mk(who, what, src="源A", idx=7):
 def library_tests():
     print("\n===== 2. 跨天机会库 =====")
 
-    # --- 相似度：同义改写要认出来，不同生意不能误并 ---
+    # --- 相似度：归一化后完全相同 / 纯语序颠倒要认出来，不同生意不能误并 ---
+    # 注：两路阈值（二元组≥0.75 或 单字≥0.92 且二元组≥0.45）下，只有
+    # 「同一批字」的近重复才会合并；松散改写（换说法/换修饰词）不再合并，
+    # 这是有意为之——宁可少合并，也不要把不同生意误并（误并会污染 repeat_count）。
     same = [
-        ("帮本地餐饮店做小红书代运营", "给本地餐厅代运营小红书账号"),
-        ("用ChatGPT帮人写求职简历", "ChatGPT代写简历，一份收200"),
-        ("给中小企业做AI客服话术培训", "面向中小企业的AI客服话术培训课"),
+        ("代写简历199元", "代写简历一份200"),                    # 归一化后完全相同
+        ("帮本地餐饮店做小红书代运营", "小红书代运营帮本地餐饮店做"),  # 纯语序颠倒 → 单字一致
     ]
     diff = [
         ("帮本地餐饮店做小红书代运营", "用AI做简历优化服务收费199"),
@@ -166,11 +168,30 @@ def library_tests():
         ("卖Notion模板给自由职业者", "做剪辑外包接单"),
     ]
     for a, b in same:
-        s = lib_mod._sim(lib_mod._norm(a), lib_mod._norm(b))
-        check(f"同义改写判为同一主题：{a[:12]}…", s >= lib_mod.SIM_THRESHOLD, f"sim={s:.3f}")
+        ok = lib_mod._is_same_topic(lib_mod._norm(a), lib_mod._norm(b))
+        check(f"同义改写判为同一主题：{a[:12]}…", ok)
     for a, b in diff:
-        s = lib_mod._sim(lib_mod._norm(a), lib_mod._norm(b))
-        check(f"不同生意不误并：{a[:12]}…", s < lib_mod.SIM_THRESHOLD, f"sim={s:.3f}")
+        ok = lib_mod._is_same_topic(lib_mod._norm(a), lib_mod._norm(b))
+        check(f"不同生意不误并：{a[:12]}…", not ok)
+
+    # 死板教条修复：只差一两个字的不同生意，单字 Jaccard 很高却不该误并
+    false_merge = [
+        ("手工皂市集摆摊", "手工蜡烛市集摆摊"),
+        ("英语陪练一对一", "日语陪练一对一"),
+        ("帮宝妈做小红书代运营", "帮宝妈做抖音代运营"),
+    ]
+    for a, b in false_merge:
+        ok = lib_mod._is_same_topic(lib_mod._norm(a), lib_mod._norm(b))
+        check(f"差一字不误并：{a[:12]}…", not ok)
+
+    # 纯语序颠倒（同一批字）→ 仍判同一主题
+    reorder = [
+        ("手工皂市集摆摊", "手工皂摆摊市集"),
+        ("帮本地餐饮店做小红书代运营", "小红书代运营帮本地餐饮店做"),
+    ]
+    for a, b in reorder:
+        ok = lib_mod._is_same_topic(lib_mod._norm(a), lib_mod._norm(b))
+        check(f"纯语序颠倒仍合并：{a[:12]}…", ok)
 
     # --- 金额是噪声，不该影响主题判定 ---
     check("价格数字被归一化掉",
@@ -178,6 +199,10 @@ def library_tests():
           f'{lib_mod._norm("代写简历199元")} vs {lib_mod._norm("代写简历")}')
 
     # --- 跨天累积 ---
+    # 注：归并闸门已收紧为「二元组≥0.75 或（单字≥0.92 且二元组≥0.45）」，
+    # 只有「同一批字」的近重复才会合并；松散改写（换说法/换修饰词）不再合并，
+    # 这是 #89 修复的刻意结果——宁可少合并，也不要把不同生意误并。
+    # 下面用「who 相同、what 为纯语序颠倒（同一批字）」来验证跨天累积。
     tmp = Path(tempfile.mkdtemp()) / "lib.json"
 
     d1 = OpportunityLibrary(tmp); d1.load()
@@ -190,10 +215,11 @@ def library_tests():
     d1.save()
 
     d2 = OpportunityLibrary(tmp); d2.load()
-    day2 = [_mk("餐厅", "代运营小红书账号", "少数派"),
+    # who 相同、what 为纯语序颠倒（同一批字）→ 应累计到第 2 次、印证数 +1
+    day2 = [_mk("本地餐饮店", "代运营小红书", "少数派"),
             _mk("宝妈", "付费社群卖育儿知识", "公众号-丙")]
     d2.annotate(day2, "2026-08-07")
-    check("换个说法讲同一件事 → 累计到第 2 次",
+    check("换成同一批字的不同说法 → 累计到第 2 次",
           day2[0].repeat_count == 2, str(day2[0].repeat_count))
     check("不同来源讲同一件事 → 印证数 2",
           day2[0].corroborations == 2, str(day2[0].corroborations))
@@ -202,11 +228,11 @@ def library_tests():
     d2.save()
 
     d3 = OpportunityLibrary(tmp); d3.load()
-    day3 = [_mk("本地餐厅", "小红书账号代运营", "推特-丁", idx=8)]
+    day3 = [_mk("本地餐饮店", "小红书代运营", "推特-丁", idx=8)]
     d3.annotate(day3, "2026-08-08")
     check("第三天累计到第 3 次", day3[0].repeat_count == 3, str(day3[0].repeat_count))
 
-    dup = [_mk("餐饮店", "小红书代运营", "公众号-戊")]
+    dup = [_mk("本地餐饮店", "小红书代运营", "公众号-戊")]
     d3.annotate(dup, "2026-08-08")
     check("同一天再出现不重复计次",
           dup[0].repeat_count == 3, str(dup[0].repeat_count))

@@ -27,8 +27,18 @@ logger = logging.getLogger(__name__)
 
 CST = timezone(timedelta(hours=8))
 
-# 两条机会的主题指纹相似度 ≥ 此值 → 视为同一个主题
+# 两条机会的主题指纹相似度 ≥ 此值 → 视为同一个主题（二元组路线）
 SIM_THRESHOLD = 0.45
+
+# 归并阈值（分两条路线，避免单字 Jaccard 把不同主题误合并）：
+#  · 二元组路线：要求二元组相似度 ≥ BIGRAM_THRESHOLD（抓「连着说的词」，对同义改写较严）
+#  · 单字路线：仅在两套文本「几乎由同一批字组成」（单字 Jaccard ≥ UNIGRAM_THRESHOLD，
+#    基本是纯语序颠倒）时才放行，杜绝「手工皂 vs 手工蜡烛」「英语陪练 vs 日语陪练」误并。
+#  · 单字路线额外要求二元组不低于 BIGRAM_FLOOR——只差一两个字的不同生意
+#    （英语陪练 vs 日语陪练，二元组≈0.71）不该因为单字几乎相同就被并掉。
+BIGRAM_THRESHOLD = 0.75
+UNIGRAM_THRESHOLD = 0.92
+BIGRAM_FLOOR = 0.45
 
 # 归并时忽略的高频无意义词（出现在几乎每条机会里，会把不相关主题拉近）
 _NOISE = [
@@ -66,25 +76,40 @@ def _jaccard(ga: set, gb: set) -> float:
     return len(ga & gb) / len(ga | gb)
 
 
-# 单字 Jaccard 的权重折扣。单字对「同义改写、语序颠倒」更宽容
-# （"帮餐饮店做小红书代运营" vs "给餐厅代运营小红书账号"），
-# 但也更容易误判，所以打个折再和二元组取较大值。
+# 单字 Jaccard 的权重折扣（仅用于 _sim 打分，不再作为归并闸门）。
 _UNIGRAM_DISCOUNT = 0.85
 
 
 def _sim(a: str, b: str) -> float:
     """
-    主题相似度（0-1），中英文通吃、零依赖分词。
+    主题相似度（0-1），中英文通吃、零依赖分词。用于挑「最像」的那条做归并，
+    但**是否算同一主题由 _is_same_topic 决定**（分两路阈值，见下）。
 
-    取「字符二元组 Jaccard」与「打折后的单字 Jaccard」的较大值：
-      · 二元组抓的是"连着说的词"，对同义改写太严（换个语序就认不出）；
-      · 单字抓的是"讲的是同一批东西"，对语序不敏感，补上二元组的漏判。
+    返回「字符二元组 Jaccard」与「打折后的单字 Jaccard」的较大值。
     """
     if not a or not b:
         return 0.0
     bi = _jaccard(_bigrams(a), _bigrams(b))
     uni = _jaccard(set(a), set(b))
     return max(bi, uni * _UNIGRAM_DISCOUNT)
+
+
+def _is_same_topic(fp_a: str, fp_b: str) -> bool:
+    """两条归一化指纹是否同一主题：二元组足够相似，或单字近乎完全相同（纯语序颠倒）。
+
+    用「取较大值」会误并：手工皂市集摆摊 vs 手工蜡烛市集摆摊、英语陪练 vs 日语陪练，
+    单字 Jaccard 都很高（共享大半字符）却不是同一生意。所以分两路：
+      · 二元组 ≥ BIGRAM_THRESHOLD（同一批「连着说的词」）→ 同主题；
+      · 否则要求单字 Jaccard ≥ UNIGRAM_THRESHOLD（几乎由同一批字组成，纯语序颠倒）
+        → 才认作同主题，避免只差一两个字就误并。
+    """
+    if not fp_a or not fp_b:
+        return False
+    bi = _jaccard(_bigrams(fp_a), _bigrams(fp_b))
+    if bi >= BIGRAM_THRESHOLD:
+        return True
+    uni = _jaccard(set(fp_a), set(fp_b))
+    return uni >= UNIGRAM_THRESHOLD
 
 
 def topic_signature(item) -> tuple[str, str]:
@@ -143,13 +168,17 @@ class OpportunityLibrary:
     # ---------------- 核心：归并 + 标注 ----------------
 
     def _match(self, fingerprint: str) -> str | None:
-        """在已有条目里找相似度最高且过阈值的主题 key。"""
+        """在已有条目里找相似度最高且过「两路阈值」的主题 key。"""
         best_key, best_sim = None, 0.0
         for key, ent in self.entries.items():
-            s = _sim(fingerprint, ent.get("fingerprint", ""))
+            other = ent.get("fingerprint", "")
+            if not _is_same_topic(fingerprint, other):
+                continue
+            # 仍用 _sim 在「同主题」候选里挑最像的那条，便于归并到最贴切的主题
+            s = _sim(fingerprint, other)
             if s > best_sim:
                 best_key, best_sim = key, s
-        return best_key if best_sim >= SIM_THRESHOLD else None
+        return best_key
 
     def annotate(self, items: list, today: str | None = None) -> list:
         """
