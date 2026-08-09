@@ -95,6 +95,8 @@ class Operator:
         self.last_revisit: Optional[str] = None   # 上次「动态更新」补充的日期
         self.revisit_count: int = 0               # 被动态更新补充的次数
         self.recommended_at: Optional[str] = None # 被「发现引擎」推荐（加入名单）的日期，用于补拆排队
+        self.commercial_health: dict = None       # dbs 商业底层逻辑体检结果（compute 返回 dict + gate_reason）
+        self.commercial_severity: str = ""        # 分档：ok / warn / skip（skip=结构性坏案例，轮转直接不推）
 
     def to_dict(self) -> dict:
         return {
@@ -116,6 +118,8 @@ class Operator:
             "last_revisit": self.last_revisit,
             "revisit_count": self.revisit_count,
             "recommended_at": self.recommended_at,
+            "commercial_health": self.commercial_health,
+            "commercial_severity": self.commercial_severity,
         }
 
     @classmethod
@@ -140,6 +144,8 @@ class Operator:
         op.last_revisit = d.get("last_revisit")
         op.revisit_count = d.get("revisit_count", 0) or 0
         op.recommended_at = d.get("recommended_at")
+        op.commercial_health = d.get("commercial_health")
+        op.commercial_severity = d.get("commercial_severity", "") or ""
         return op
 
 
@@ -282,16 +288,22 @@ class OperatorRoster:
         if exclude_established:
             candidates = [c for c in candidates if not c.established]
 
+        # dbs 商业底层逻辑体检：结构性坏案例（skip）直接不进待拆池，保护初学者
+        candidates = [c for c in candidates if c.commercial_severity != "skip"]
+
         def sort_key(o: Operator):
             # 优先拆解「还没拆过」的人（补拆：过去推荐过但没拆的，先补上），
             # 再按「越早被推荐」优先（推荐队列先进先出，避免积压），
             # 然后「刚被发现/新晋」的人（新机会排前面），最后用新鲜信号/近期未拆做微调。
+            # 插入「商业体检分档」：健康(ok)优先、存疑(warn)排后——存疑案例仍推，但靠后。
             never_torn = 0 if o.teardown_count == 0 else 1
+            sev = o.commercial_severity or "ok"
+            sev_rank = 1 if sev == "warn" else 0
             rec = o.recommended_at or "9999-99-99"   # 越早被推荐越优先补拆
             fresh = o.discovered_date or "0000-00-00"  # 字典序：日期越大越新 → 排前面
             has_sig = 0 if o.signals else 1
             recency = o.last_teardown or "0000-00-00"
-            return (never_torn, rec, fresh, has_sig, recency)
+            return (never_torn, sev_rank, rec, fresh, has_sig, recency)
 
         candidates.sort(key=sort_key)
         if require_signals:

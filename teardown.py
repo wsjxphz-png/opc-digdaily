@@ -20,9 +20,64 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 from operators import Operator
+from scoring import (
+    compute,
+    FACTOR_RUBRIC,
+    gate_summary,
+    operator_severity,
+    AI_RATED_KEYS,
+)
+from filters import is_hype
 
 logger = logging.getLogger(__name__)
 CST = timezone(timedelta(hours=8))
+
+
+def _clamp_factor(v) -> int:
+    """把模型返回的 dbs 因子收敛成 1-5 整数；缺失/非法给保守中位数 3。"""
+    try:
+        n = int(round(float(v)))
+    except (TypeError, ValueError):
+        return 3
+    return max(1, min(5, n))
+
+
+def _operator_authenticity(red_flag: str, learn: str) -> int:
+    """从拆解卡的 red_flag / learn 判断是否「纯卖铲子 / 骗局」（命中则 dbs 判 skip）。
+
+    口径与用户允许方向对齐（用户允许：内容 / 信息产品·课程·训练营 / 付费社群 / 产品化服务）：
+      · 卖「真实技能」课（YouTube 增长、写作、剪辑、设计、英语…）属于允许的信息产品，不算卖铲子；
+      · 只有「卖一人公司 / 副业 / 躺赚 / 暴富 等赚钱梦」的纯铲子党，或明显骗局，才判 authenticity<=2。
+    判定（任一命中即 <=2，触发 skip）：
+      1) 明确骗局词：庞氏 / 传销 / 拉人头 / 割韭菜 / 资金盘 / 金字塔 / 直销(传销式)
+      2) red_flag 点明「卖铲子」且同时是「教一人公司 / 副业 / 财务自由 / 躺赚 / 搞钱 / 赚钱课 / 暴富」等赚钱梦语境
+    """
+    text = f"{red_flag or ''} {learn or ''}"
+    scam = ["庞氏", "传销", "拉人头", "割韭菜", "资金盘", "金字塔", "直销"]
+    if any(s in text for s in scam):
+        return 2
+    if "卖铲子" in text:
+        dream = ["一人公司", "做opc", "做OPC", "副业", "财务自由", "被动收入",
+                 "躺赚", "搞钱", "赚钱课", "暴富", "月入过万", "月入十万"]
+        if any(d in text for d in dream):
+            return 2
+    return 3
+
+
+def _tech_barrier_to_code_dep(tb: str) -> int:
+    """技术门槛 → 代码依赖度 1-5（与 scoring.compute 口径一致）。"""
+    return {"无": 1, "低": 2, "中": 3, "高": 4}.get((tb or "").strip(), 3)
+
+
+DBS_PROMPT_SUFFIX = (
+    "\n\n## 商业底层逻辑体检（dontbesilent 商业本体论 16 因子）\n"
+    + FACTOR_RUBRIC
+    + "\n\n请在输出 JSON 中补充一个 `dbs` 对象，逐项填上面 16 个因子的 1-5 分"
+    "（no_code 已由技术门槛反算，不在此列；只打分，不解释）：\n"
+    "urgency / pricing / margin / repeat / price_ladder / revenue_proof / "
+    "market_size / evergreen / channel / machine / delivery_chain / replicable / "
+    "capital / speed / skill / concrete"
+)
 
 
 TEARDOWN_SYSTEM_PROMPT = """你是一名「商业拆解教练」，专门把一个赚钱的超级个体 / 单人数字化工作室，拆成完全不会写代码的人也能照着学的结构。
@@ -61,7 +116,13 @@ SaaS→「在线工具/软件」；MRR→「每月收入」；SEO→「让内容
   "red_flag": "风险/卖铲子判断：他是不是主要靠教别人赚钱？普通人模仿的最大坑是什么？",
   "learn": "最该抄的作业：这个案例里最值得普通人学习的 1-2 个点",
   "tech_barrier": "无",
-  "doable": "能（完全不用写代码，用现成工具即可）"
+  "doable": "能（完全不用写代码，用现成工具即可）",
+  "dbs": {
+    "urgency": 3, "pricing": 3, "margin": 3, "repeat": 3, "price_ladder": 3,
+    "revenue_proof": 3, "market_size": 3, "evergreen": 3,
+    "channel": 3, "machine": 3, "delivery_chain": 3, "replicable": 3,
+    "capital": 3, "speed": 3, "skill": 3, "concrete": 3
+  }
 }
 
 ## 字段说明
@@ -70,6 +131,7 @@ SaaS→「在线工具/软件」；MRR→「每月收入」；SEO→「让内容
 - doable: 给非程序员的一句话结论：「能」/「降级可做（用无代码工具替代）」/「做不到（需写代码）」
 - 其他字段均为中文大白话字符串
 - 严格只返回 JSON 对象，不要额外文字"""
+TEARDOWN_SYSTEM_PROMPT = TEARDOWN_SYSTEM_PROMPT + DBS_PROMPT_SUFFIX
 
 
 REVISIT_SYSTEM_PROMPT = """你是一名「商业拆解教练」，现在要对一位**之前已经拆解过**的操盘手做「动态更新补充」。读者已经看过他上一次的拆解卡，他只关心一件事：**这之后，他有没有搞出新的业务、拓展了新的边界、出现了新的赚钱方式？**
@@ -104,13 +166,20 @@ SaaS→「在线工具/软件」；MRR→「每月收入」；SEO→「让内容
   "red_flag": "风险/卖铲子判断（这次有没有新坑）",
   "learn": "最该抄的新作业（这次动态里最值得学的 1-2 点）",
   "tech_barrier": "无",
-  "doable": "能（完全不用写代码，用现成工具即可）"
+  "doable": "能（完全不用写代码，用现成工具即可）",
+  "dbs": {
+    "urgency": 3, "pricing": 3, "margin": 3, "repeat": 3, "price_ladder": 3,
+    "revenue_proof": 3, "market_size": 3, "evergreen": 3,
+    "channel": 3, "machine": 3, "delivery_chain": 3, "replicable": 3,
+    "capital": 3, "speed": 3, "skill": 3, "concrete": 3
+  }
 }
 ## 字段说明
 - replicability: 整数 1-5，给「完全不会写代码的人」的复制难度反向分（5=极易照做，1=基本做不到）
 - tech_barrier: 字符串「无」/「低」/「中」/「高」
 - doable: 「能」/「降级可做（用无代码工具替代）」/「做不到（需写代码）」
 - 严格只返回 JSON 对象，不要额外文字"""
+REVISIT_SYSTEM_PROMPT = REVISIT_SYSTEM_PROMPT + DBS_PROMPT_SUFFIX
 
 
 @dataclass
@@ -132,6 +201,7 @@ class Teardown:
     signals_used: int = 0
     generated_at: str = ""
     is_revisit: bool = False   # True=这是一份「动态更新补充」卡（基于上次拆解后的新动态）
+    commercial_health: dict = None  # dbs 商业底层逻辑体检结果（compute 返回的原始 dict + gate_reason）
 
     def to_dict(self) -> dict:
         return {
@@ -152,6 +222,7 @@ class Teardown:
             "signals_used": self.signals_used,
             "generated_at": self.generated_at,
             "is_revisit": self.is_revisit,
+            "commercial_health": self.commercial_health,
         }
 
     @classmethod
@@ -174,6 +245,7 @@ class Teardown:
             signals_used=d.get("signals_used", 0) or 0,
             generated_at=d.get("generated_at", ""),
             is_revisit=bool(d.get("is_revisit", False)),
+            commercial_health=d.get("commercial_health"),
         )
 
 
@@ -225,6 +297,38 @@ class TeardownEngine:
         )
         return "\n".join(lines)
 
+    def _score_business_logic(self, op: Operator, data: dict, td: "Teardown") -> str:
+        """对同一道 LLM 调用返回的 dbs 因子打分，跑 dbs 商业本体论体检，
+        把结果写回 td 与 op（commercial_health + commercial_severity）。返回分档。
+        """
+        dbs = data.get("dbs") or {}
+        factors = {k: _clamp_factor(dbs.get(k)) for k in AI_RATED_KEYS}
+        code_dependency = _tech_barrier_to_code_dep(td.tech_barrier)
+        authenticity = _operator_authenticity(td.red_flag, td.learn)
+        hype = is_hype(
+            " ".join([
+                td.who, td.deliverable, td.business_model,
+                td.acquisition, td.red_flag, td.learn,
+            ])
+        )
+        res = compute(
+            factors,
+            code_dependency=code_dependency,
+            authenticity=authenticity,
+            hype=hype,
+        )
+        res["gate_reason"] = gate_summary(res)
+        severity = operator_severity(res, authenticity=authenticity, hype=hype)
+        td.commercial_health = res
+        op.commercial_health = res
+        op.commercial_severity = severity
+        logger.info(
+            f"[{op.name}] dbs 商业体检：商业化 {res['commercial']}/100 · "
+            f"可行性 {res['feasibility']}/100 · 适合启动 {res['startup_index']}/10 · "
+            f"分档={severity}"
+        )
+        return severity
+
     async def synthesize(self, op: Operator) -> Optional[Teardown]:
         """合成一名操盘手的拆解卡，并写回其 dossier。"""
         user_content = self._build_user_content(op)
@@ -265,6 +369,9 @@ class TeardownEngine:
             "signals_used": len(op.signals),
             "generated_at": datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
         })
+
+        # dbs 商业底层逻辑体检（复用同一道 LLM 返回的 dbs 因子，免费算）
+        self._score_business_logic(op, data, td)
 
         # 写回 dossier
         op.teardown = td.to_dict()
@@ -340,6 +447,9 @@ class TeardownEngine:
             "signals_used": len(op.signals),
             "generated_at": datetime.now(CST).strftime("%Y-%m-%d %H:%M"),
         })
+
+        # dbs 商业底层逻辑体检（复用同一道 LLM 返回的 dbs 因子，免费算）
+        self._score_business_logic(op, data, td)
 
         # 写回 dossier（更新为最新拆解，含新动态）
         op.teardown = td.to_dict()

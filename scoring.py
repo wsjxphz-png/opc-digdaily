@@ -296,6 +296,38 @@ def gate_summary(result: dict) -> str:
     return "；".join(gates)
 
 
+# ============================================================
+# 操盘手「商业底层逻辑体检」分档 —— 供模块1（操盘手拆解）轮转 / 推送决策
+# ============================================================
+def operator_severity(
+    result: dict,
+    authenticity: int = 3,
+    hype: bool = False,
+) -> str:
+    """把 dbs 体检结果分成三档，对应「标注+降权，严重则跳过」策略：
+
+      - "skip" 结构性坏案例：直接不推
+                （纯卖铲子/庞氏/传销/拉人头、满篇空词的语言陷阱、连产品是什么都说不清）
+      - "warn" 轻度瑕疵：照常推，但卡片加「商业体检」警告、轮转排后
+                （靠个人IP换人就失效、只有流量没有收入、获客/交付链条讲不清等）
+      - "ok"   健康：正常推、优先排
+
+    判定口径（比模块2更克制——不把「靠个人IP」这类常见情况误判成跳过）：
+      skip 条件（任一命中即跳过）：
+        · authenticity <= 2  —— 主要靠教别人赚钱 / 卖铲子 / 庞氏 / 传销
+        · hype is True        —— 满篇风口/赛道等空词，语言陷阱，问题本身不成立
+        · concrete <= 1       —— 纯概念空转（连「产品是什么颜色」都说不出）
+      warn 条件（其余闸门命中，但不致命）：任何 gate 命中，或综合 startup_index <= 4
+    """
+    f = result.get("factors", {})
+    if authenticity <= 2 or hype or (f.get("concrete", 3) <= 1):
+        return "skip"
+    gates = result.get("gates") or []
+    if gates or int(result.get("startup_index", 10) or 10) <= 4:
+        return "warn"
+    return "ok"
+
+
 def apply_to_item(item, factors: dict) -> dict:
     """把打分结果写回 ContentItem（就地修改），并返回原始结果字典。"""
     res = compute(

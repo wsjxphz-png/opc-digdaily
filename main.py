@@ -405,8 +405,11 @@ class DailyOpportunityBot:
             )
             for op in due:
                 td = await self.teardown_engine.synthesize(op)
-                if td:
+                # dbs 商业底层逻辑体检判为「结构性坏案例」的，直接不推（保护初学者）
+                if td and op.commercial_severity != "skip":
                     teardowns.append(td.to_dict())
+                elif op.commercial_severity == "skip":
+                    logger.info(f"[{op.name}] dbs 商业体检未过，跳过推送")
             self._save_roster()
 
         # ── 复盘更新循环：对过去已拆解的操盘手补充新动态（新业务/新边界/新赚钱方式）──
@@ -418,8 +421,11 @@ class DailyOpportunityBot:
             )
             for op in revisit_pool:
                 td = await self.teardown_engine.synthesize_revisit(op, op.teardown)
-                if td:
+                # 复盘重算后若判为「结构性坏案例」，同样不推
+                if td and op.commercial_severity != "skip":
                     teardowns.append(td.to_dict())
+                elif op.commercial_severity == "skip":
+                    logger.info(f"[{op.name}] 复盘后 dbs 商业体检未过，跳过推送")
             if revisit_pool:
                 logger.info(f"今日复盘更新: {len(revisit_pool)} 人")
             self._save_roster()
