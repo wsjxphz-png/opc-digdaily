@@ -635,18 +635,36 @@ international:
         # ▸ 无代码/自动化实操博主
         - name: "Nick Saraev Blog"
           url: "https://nicksaraev.com/feed/"
+        - name: "Daniel Vassallo (Small Bets)"
+          url: "https://dvassallo.substack.com/feed"
         - name: "Justin Welsh"
           url: "https://www.justinwelsh.me/blog?format=rss"
         - name: "Steph Smith"
           url: "https://blog.stephsmith.io/feed/"
+        - name: "Solo AI Lab (Practical AI)"
+          url: "https://soloailab.substack.com/feed"
 
         # ▸ 隐形操盘手（真正做事、不卖铲子）
         - name: "Cory Zue (产品化服务复盘)"
           url: "https://www.coryzue.com/feed.xml"
+        - name: "Tony Dinh (独立开发者实战)"
+          url: "https://tdinh.substack.com/feed"
         - name: "Arvid Kahl (The Bootstrapped Founder)"
           url: "https://thebootstrappedfounder.com/feed/"
         - name: "David Perell (写作变现/内容系统)"
           url: "https://perell.com/feed/"
+        - name: "Dickie Bush (Ship 30 写作系统)"
+          url: "https://dickiebush.substack.com/feed"
+
+        # ▸ 方案A 扩充：Substack 之外、非技术的「一人公司 / 内容变现」源（经本机代理直连，不依赖 Substack）
+        - name: "Seth Godin (每日短评/营销思维)"
+          url: "https://seths.blog/feed/"
+        - name: "James Clear (习惯/写作/知识付费)"
+          url: "https://jamesclear.com/feed/"
+        - name: "Amy Porterfield (在线课程/知识付费)"
+          url: "https://amyporterfield.com/feed/"
+        - name: "Smart Blogger (内容写作变现)"
+          url: "https://smartblogger.com/feed/"
 
     reddit:
       enabled: true

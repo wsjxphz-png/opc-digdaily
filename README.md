@@ -166,7 +166,7 @@
 ## 内容从哪来
 
 - **国内**：微信公众号（按号名定向监测更新）、B站、中文搜索、精选中文 RSS
-- **国际**：Side Hustle Nation、My Wife Quit Her Job 等非 Substack RSS，以及 Reddit、YouTube、X（推特）
+- **国际**：Substack 系（dvassallo / tdinh / dickiebush / soloailab，靠本机代理抓取）+ Side Hustle Nation、My Wife Quit Her Job、Seth Godin、James Clear、Amy Porterfield 等非 Substack RSS，以及 Reddit、YouTube、X（推特）
 - **X（推特）**：走 X 网页端自身的接口抓取，需要配 `TWITTER_COOKIES`（见 `.env.example`）。**不配就自动跳过，不影响其它源。**
 - **侦察兵**：每天自动挖新的「写一人公司 / 本身是 OPC」的号，列入名单持续追更（这就是它"长大"的方式）
 
@@ -178,7 +178,7 @@
 
 ## 近期更新（2026-08）
 
-- **国际源更稳，每天照样准时到**：国际内容源已全部换成非 Substack 源（Substack 在云端常被拦），并改成**在你本机定时运行 + 走本机代理**抓取，不再依赖 GitHub 云端。每天北京时间 22:00 准时推送到飞书群，国际案例不再经常空白。
+- **国际源更稳，每天照样准时到**：Substack 系源保留（云端常被拦，故改成**在本机定时运行 + 走本机代理**抓取），同时补强了 Substack 之外的非技术源（Seth Godin、James Clear、Amy Porterfield、Smart Blogger 等），不再依赖 GitHub 云端。每天北京时间 22:00 准时推送到飞书群，国际案例不再经常空白。
 - **推送更"对你胃口"——产品 / 服务 / 高客单优先**：新增一条筛选规则——**低客单、纯卖时间 / 卖劳动力的机会会自动往后排**（让位给做产品、做服务、做产品化服务的内容）；但**高客单的个性化服务（例如高端咨询、定制交付，单笔 ≥2000 元）不会被误伤**，照样往前排。这是"宽进严出"：好内容都进池子，推送时再优中选优。
 - **后台清理**：删掉了一批写了但代码根本没读取的配置（包括之前让人误以为"每天只推 8 条"的 `push_max`）。现在上限说清楚：每个地区每天最多 15 条优质内容（命中硬过滤的不封顶，仅防极端失控）。
 
