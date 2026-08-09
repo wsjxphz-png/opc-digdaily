@@ -77,7 +77,7 @@ source_scout:
 # --- 模块2 赚钱机会挖掘引擎 ---
 opportunity:
   enabled: true
-  per_day: 10             # 每天目标总条数（仅作统计参考）
+  per_day: 10             # 每天目标总条数（仅作统计参考）；国内/国际不硬性分配，按内容质量动态配比
   per_region: 15          # 安全上限（不是目标条数）：命中硬过滤的优质内容不封顶，仅防极端失控
   exclude_shovel: true    # 硬过滤卖铲子：verdict≠真机会 / 真实性<3 / 代码依赖≥4 / 综合分<0.4 一律丢弃
 
