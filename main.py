@@ -16,6 +16,7 @@ import dataclasses
 import json
 import logging
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -67,6 +68,31 @@ logging.basicConfig(
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
+
+
+class _RedactSecrets(logging.Filter):
+    """飞书 webhook 是保密凭证，但 httpx 会把完整请求 URL 打进日志。
+
+    只要日志里出现 open.feishu.cn 的 hook 路径，一律打码后再输出，
+    避免日志文件/CI 输出被分享时泄露群机器人地址。
+    """
+
+    _HOOK = re.compile(r"(hook/)[A-Za-z0-9\-_]{6,}")
+
+    def filter(self, record: logging.LogRecord) -> bool:
+        try:
+            msg = record.getMessage()
+        except Exception:
+            return True
+        if "hook/" in msg:
+            record.msg = self._HOOK.sub(r"\1***REDACTED***", msg)
+            record.args = ()
+        return True
+
+
+for _h in logging.getLogger().handlers:
+    _h.addFilter(_RedactSecrets())
+
 logger = logging.getLogger("main")
 
 

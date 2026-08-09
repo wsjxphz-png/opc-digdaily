@@ -8,6 +8,12 @@ __pycache__/
 storage/dry_run/
 storage/dry_run_log.txt
 
+# 本地跑出来的运行日志/结果快照，不入库
+# （push_log.txt 曾经含飞书 webhook 明文，绝不能提交）
+storage/push_log.txt
+storage/push_result.md
+storage/*_log.txt
+
 # 注意：storage/ 下的 history.json / operators.json / opportunity_library.json
 # 是「跨天累积的状态」，必须提交进仓库。
 # GitHub Actions 每次运行都是全新容器，不回写这些文件的话：
