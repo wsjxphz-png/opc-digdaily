@@ -530,6 +530,10 @@ class FeishuPusher:
             if ai_summary:
                 md_lines.append(f"📖 {ai_summary}")
 
+            xhs_title = getattr(item, "xhs_title", "") or ""
+            if xhs_title:
+                md_lines.append(f"📕 小红书标题（可直接发）：{xhs_title}")
+
             if practical_steps:
                 md_lines.append(f"🔧 实操步骤：\n{practical_steps}")
             elif opportunity and "暂无" not in opportunity and "无" != opportunity.strip():

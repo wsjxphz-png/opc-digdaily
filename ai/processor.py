@@ -242,6 +242,28 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 
 ---
 
+## 七、文案原则（dbs 内容/开头/标题三件套，只管表达质量）
+
+本段只约束「你写的文字怎么写」，不改变上面的判断标准与红线。
+
+### dbs-content 文字洁癖（作用于 summary / opportunity_hint）
+- 不许堆 emoji、不许写空洞排比、不许喊口号；一句话能说清就别写两句。
+- 先有产品后有内容：你写的这条机会必须指向一个「能发付款链接的具体交付物」，没有具体产品的（只有概念、只有流量）不许包装成机会。
+- 把事情说清楚优先于「显得专业」；禁用「赋能/闭环/抓手/方法论/底层逻辑」这类空词。
+
+### dbs-hook 开头公式（作用于 opportunity_hint）
+- opportunity_hint 是给读者的「一句话钩子」，按公式写：话题 + Hook + 可信度。
+- 留悬念、不直接给答案（用「为什么」不用「证明」）；能直接念出口、不绕口；独立成立、不假设读者看过标题。
+- 例：「素人靠卖 Excel 模板月入过万——他怎么找的第一批客户？」
+
+### dbs-xhs-title 小红书标题公式（作用于 xhs_title 字段）
+- 给每条真机会生成一个「可直接发到小红书」的标题，单独放在 xhs_title 字段。
+- 硬规则：≤20 字（含标点）；留悬念不说答案；用普世词（赚钱/不上班/副业）替换行业术语以扩大话题；击中真实痛点（读者真正想要的，不是表象概念）；张力至少满足 2 项（对比/数字/悬念/冲突/时间承诺/结果承诺）。
+- 可套用的爆款公式类型：认知冲突、数字锚定、结果承诺、身份代入、场景条件；不要硬套不合适的类型。
+- 例：「不会写代码，靠卖模板月入过万？」 / 「普通人做这个副业，3 个月赚到第一笔钱」
+
+---
+
 ## 输出格式
 
 返回严格 JSON 数组，每条必须包含：
@@ -260,6 +282,7 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "verdict": "可复刻的真机会",
   "difficulty": "零门槛",
   "quality_flag": "⭐",
+  "xhs_title": "不会写代码，靠卖模板月入过万？",
   "factors": {
     "urgency": 4, "pricing": 4, "margin": 4, "repeat": 3,
     "price_ladder": 3, "revenue_proof": 4, "market_size": 3, "evergreen": 4,
@@ -318,7 +341,8 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
    · copy_template 各字段：who/what/first_step ≤25字，first_prompt ≤60字，cost ≤20字
    · relevant=false 的 reason：≤25字
    · 精简后单条输出更稳定、不易被截断，也能减少 API 调用次数（避开限流）
-
+12. relevant=true 的条目必须包含 xhs_title 字段：一条 ≤20 字的小红书标题（套用 dbs-xhs-title 爆款公式，留悬念/扩大话题/击中真实痛点），直接可发
+"""
 
 BATCH_SYSTEM_PROMPT = BATCH_SYSTEM_PROMPT.replace("{FACTOR_RUBRIC}", FACTOR_RUBRIC)
 
@@ -387,6 +411,11 @@ class AIProcessor:
                     # 单条仍失败（极端异常）→ 保留在结果里（ai_processed=False），顺序不缺
                     out.extend(processed)
             work = next_work
+        # 诊断日志：本轮 AI 相关性闸门分布（相关=拿到 startup_index）
+        _rel = sum(1 for it in out if getattr(it, "startup_index", None) is not None)
+        _proc = sum(1 for it in out if getattr(it, "ai_processed", False))
+        _fail = sum(1 for it in out if not getattr(it, "ai_processed", False))
+        logger.info(f"AI 处理完成：输入 {len(items)} 条 → 相关 {_rel} 条 / 不相关 {_proc - _rel} 条 / 解析失败丢条 {_fail} 条")
         return out
 
     @staticmethod
@@ -481,6 +510,7 @@ class AIProcessor:
                 item.translation = r.get("translation", "")
                 item.ai_summary = r.get("summary", "")
                 item.opportunity_hint = r.get("opportunity_hint", "")
+                item.xhs_title = (r.get("xhs_title") or "").strip()
                 item.difficulty = r.get("difficulty", "")
                 item.quality_flag = r.get("quality_flag", "")
                 # 新评估维度

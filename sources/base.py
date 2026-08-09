@@ -24,6 +24,7 @@ class ContentItem:
     translation: str = ""      # 中文翻译
     ai_summary: str = ""       # AI 精简总结
     opportunity_hint: str = "" # 赚钱机会提示
+    xhs_title: str = ""        # 小红书标题（dbs-xhs-title 公式生成，≤20字，可直接发）
     difficulty: str = ""       # 门槛: 零门槛 / 需学习 / 有一定门槛
     quality_flag: str = ""      # AI 质量标记: ⭐ / "" / ⚠️
     relevance_score: float = 0.0

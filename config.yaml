@@ -81,8 +81,10 @@ opportunity:
   per_region: 15          # 安全上限（不是目标条数）：命中硬过滤的优质内容不封顶，仅防极端失控
   exclude_shovel: true    # 硬过滤卖铲子：verdict≠真机会 / 真实性<3 / 代码依赖≥4 / 综合分<0.4 一律丢弃
   # 「适合你启动指数」低于此值不推。指数由 scoring.py 的固定公式算出（1-10）：
-  #   <4 = 落地路径不清或有致命短板（需写代码 / 疑似卖课 / 没写清客户从哪来）
-  min_startup_index: 4
+  #   <3 = 落地路径不清或有致命短板（需写代码 / 疑似卖课 / 没写清客户从哪来）
+  #   设 3 而非 4：噱头清单文已被 AI 相关性闸门挡在 scoring 之前，这里只需拦住
+  #   "真实但平庸"的机会不至于全被砍光——避免内容波动大的日子整轮 0 条。
+  min_startup_index: 3
 
 # --- 跨天机会库：把「同一个机会被不同来源、在不同天反复讲到」这件事记下来 ---
 #   同一主题反复出现 = 真实存在的信号，不是个例。卡片上会标「🔁 第N次出现 · M个来源印证」，
@@ -503,6 +505,50 @@ international:
       - "sell prints"
       - "pet sitting"
       - "cleaning service"
+      # ▸ 自媒体/内容变现（非技术：写作者、POD 设计、YouTube 自动化）
+      - "canva template"
+      - "spreadsheet template"
+      - "faceless youtube"
+      - "youtube automation"
+      - "pinterest"
+      - "pinterest traffic"
+      # ▸ 自助出版 / KDP（非技术：写电子书赚版税）
+      - "kindle direct publishing"
+      - "kdp"
+      - "kdp income"
+      - "royalty"
+      - "royalties"
+      - "ebook"
+      - "ebook income"
+      - "audiobook"
+      - "self published"
+      # ▸ POD / 设计变现（非技术：上传设计赚钱）
+      - "printful"
+      - "redbubble"
+      - "society6"
+      - "merch by amazon"
+      - "merch"
+      - "print on demand store"
+      # ▸ 细分网站 / 展示广告（非技术：做内容站赚广告费）
+      - "display ads"
+      - "mediavine"
+      - "adthrive"
+      - "niche website"
+      - "content site"
+      - "rank and rent"
+      - "website flipping"
+      - "blog income"
+      - "blog monetization"
+      # ▸ 电商 / 一件代发（非技术：开店卖货）
+      - "dropshipping"
+      - "dropship"
+      - "shopify store"
+      - "ecommerce store"
+      # ▸ 课程 / 社群变现（非技术）
+      - "teachable"
+      - "kajabi"
+      - "course sales"
+      - "membership income"
     weak:
       # 辅助信号
       - "revenue breakdown"
@@ -557,6 +603,20 @@ international:
           url: "https://www.smartpassiveincome.com/feed/"
         - name: "Niche Pursuits"
           url: "https://www.nichepursuits.com/feed/"
+
+        # ▸ 英文：非技术小生意 / 内容变现（2026-08-09 补强，专攻「国际5」）
+        - name: "The Book Designer (自助出版)"
+          url: "https://www.thebookdesigner.com/feed/"
+        - name: "The Creative Penn (作者变现/自助出版)"
+          url: "https://www.thecreativepenn.com/feed/"
+        - name: "A Better Lemonade Stand (电商/POD/一件代发)"
+          url: "https://www.abetterlemonadestand.com/feed/"
+        - name: "Millo (自由职业接单)"
+          url: "https://millo.co/feed"
+        - name: "Fat Stacks (细分网站/展示广告变现)"
+          url: "https://fatstacksblog.com/feed/"
+        - name: "Printful Blog (POD 一件代发)"
+          url: "https://www.printful.com/blog/feed"
 
         # ▸ 英文：在线生意买卖案例
         - name: "Empire Flippers Blog"
