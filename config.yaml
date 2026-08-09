@@ -579,8 +579,8 @@ international:
       enabled: true
       feeds:
         # ▸ 英文：赚钱实操案例
-        - name: "Starter Story"
-          url: "https://www.starterstory.com/feed"
+        # Starter Story 已于 2026-08 前后关闭公开 RSS（/feed 与 /rss.xml 均 404，
+        # 本地与 GitHub Actions 均复现），保留会每天刷一条 ERROR 日志，故移除。
         - name: "Side Hustle School (Chris Guillebeau)"
           url: "https://feeds.megaphone.fm/sidehustleschool"
         - name: "My Wife Quit Her Job (电商实战)"

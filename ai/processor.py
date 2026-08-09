@@ -574,7 +574,13 @@ class AIProcessor:
                     )
                     resp.raise_for_status()
                     data = resp.json()
-                    return data["choices"][0]["message"]["content"]
+                    text = data["choices"][0]["message"]["content"]
+                    # 空响应（API 抖动 / 触发内容策略）也算失败：
+                    # 否则会被当成「成功但解析不出」，白白拖着一整批走减半重试，
+                    # 而减半对「空响应」毫无帮助——真正该做的是重发这一次请求。
+                    if not (text or "").strip():
+                        raise ValueError("模型返回空响应")
+                    return text
             except Exception as e:
                 last_err = str(e) or repr(e)
                 if attempt < 2:

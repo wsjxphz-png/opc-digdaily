@@ -39,19 +39,102 @@ TECH_KEYWORDS: list[str] = [
 ]
 
 
+# ------------------------------------------------------------
+# 上下文豁免：命中技术词 ≠ 这是技术内容
+# ------------------------------------------------------------
+#
+# 裸子串匹配有两类致命误伤，实测把最该推的内容全挡掉了：
+#
+#   1) 否定式表述 —— 「无需编程」「不用写代码」「我不是程序员」
+#      这恰恰是**非技术**的最强信号，却因为含「编程/写代码/程序员」被判死。
+#   2) 转行叙事   —— 「从程序员被裁到 81 万粉小红书博主」
+#      「前端工程师转行做手工皂」讲的是**非技术生意**，
+#      只因提到过去的职业身份就被砍。
+#
+# 修法：命中关键词后，再看它周围的上下文。
+#   · 词**前面**出现否定词       → 这一处不算技术信号
+#   · 词**后面**出现转行/过去时  → 这一处不算技术信号（那是履历，不是现在做的事）
+# 只有当某处命中是「裸露的、无豁免修饰」的，才判定为技术内容。
+
+# 否定词：出现在技术词**之前**的窗口内
+NEGATION_CUES: list[str] = [
+    "无需", "不需要", "不用", "不必", "不懂", "不会", "不是", "没有", "不靠", "不写",
+    "零基础", "零", "非", "免", "无", "小白", "外行", "门外汉",
+    "not ", "no ", "non-", "without ", "don't ", "dont ", "doesn't ", "never ",
+    "zero ", "can't ", "cannot ", "instead of ",
+]
+
+# 转行词：出现在技术词**之后**的窗口内（「程序员**转行**做手工皂」）
+# 注意：不要收「前」「现在」这类过短/过泛的词——
+# 「目前正在做全栈开发」会因为「目前」含「前」而被错误豁免。
+CAREER_SHIFT_CUES: list[str] = [
+    "转行", "转型", "改行", "离职", "辞职", "被裁", "裁员", "退出", "不再", "放弃",
+    "转做", "转型做", "跨行", "转岗",
+    "quit", "left ", "pivot", "switched", "career change",
+]
+
+# 过去身份词：出现在技术词**之前**的窗口内（「她**曾是**软件工程师，现在做手账」）
+PAST_IDENTITY_CUES: list[str] = [
+    "曾是", "曾经是", "曾经", "以前是", "原来是", "之前是", "早年", "过去是",
+    "former", "used to", "ex-", "once a", "was a",
+]
+
+# 上下文窗口（字符数）。中文信息密度高，窗口不宜过大，否则豁免会被滥用。
+_NEG_WINDOW = 8      # 技术词之前
+_SHIFT_WINDOW = 12   # 技术词之后
+
+
+def _is_exempt_occurrence(t: str, start: int, end: int) -> bool:
+    """判断某一处技术词命中是否应被豁免（否定式 / 转行叙事）。"""
+    before = t[max(0, start - _NEG_WINDOW):start]
+    if any(cue in before for cue in NEGATION_CUES):
+        return True
+    if any(cue in before for cue in PAST_IDENTITY_CUES):
+        return True
+    after = t[end:end + _SHIFT_WINDOW]
+    if any(cue in after for cue in CAREER_SHIFT_CUES):
+        return True
+    return False
+
+
 def is_technical(text: str) -> bool:
     """判断一段文本是否包含「强技术信号」。
 
     用于把技术向的一人公司 / 文章确定性地挡在推送之外，
     与 LLM 给出的 tech_barrier 判读形成双保险。
+
+    注意：命中关键词后会做上下文豁免检查——「无需编程」「不用写代码」
+    这类否定式表述，以及「程序员转行做手工皂」这类转行叙事，都不算技术内容。
+    只要文本中存在**任意一处**未被豁免的裸技术信号，即判定为技术。
     """
     if not text:
         return False
     t = text.lower()
     for kw in TECH_KEYWORDS:
-        if kw.lower() in t:
-            return True
+        k = kw.lower()
+        pos = t.find(k)
+        while pos != -1:
+            if not _is_exempt_occurrence(t, pos, pos + len(k)):
+                return True   # 存在裸露的技术信号 → 判技术
+            pos = t.find(k, pos + 1)
     return False
+
+
+def technical_reason(text: str) -> str:
+    """返回判定为技术内容的具体命中词（用于日志/排查误伤）。"""
+    if not text:
+        return ""
+    t = text.lower()
+    hits = []
+    for kw in TECH_KEYWORDS:
+        k = kw.lower()
+        pos = t.find(k)
+        while pos != -1:
+            if not _is_exempt_occurrence(t, pos, pos + len(k)):
+                hits.append(kw)
+                break
+            pos = t.find(k, pos + 1)
+    return "、".join(hits)
 
 
 # ============================================================
