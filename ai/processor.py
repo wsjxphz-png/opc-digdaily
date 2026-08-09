@@ -393,8 +393,8 @@ class AIProcessor:
         self,
         items: list[ContentItem],
         max_input_tokens: int = 7000,
-        per_item_output_est: int = 1500,
-        hard_cap: int = 5,
+        per_item_output_est: int = 2200,
+        hard_cap: int = 3,
     ) -> list[list[ContentItem]]:
         """把内容按 token 预算切成多块，保证每块的输出不超 max_tokens、输入不超上下文。
 
