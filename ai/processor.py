@@ -310,7 +310,14 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 7. 三条一票否决红线命中任一条 → relevant=false，verdict=卖噱头/卖铲子
 8. relevant=false 的条目只返回 index、relevant、reason、verdict
 9. irrelevant 的也要返回，不要省略
-10. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略"""
+10. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略
+11. 所有文本字段务必精简（直接给干货，不要展开解释）：
+   · summary：60-100字（含💭我的判断，别超过）
+   · opportunity_hint：25-35字
+   · practical_steps：三部分用\\n分隔，每部分≤25字
+   · copy_template 各字段：who/what/first_step ≤25字，first_prompt ≤60字，cost ≤20字
+   · relevant=false 的 reason：≤25字
+   · 精简后单条输出更稳定、不易被截断，也能减少 API 调用次数（避开限流）
 
 
 BATCH_SYSTEM_PROMPT = BATCH_SYSTEM_PROMPT.replace("{FACTOR_RUBRIC}", FACTOR_RUBRIC)
@@ -394,7 +401,7 @@ class AIProcessor:
         items: list[ContentItem],
         max_input_tokens: int = 7000,
         per_item_output_est: int = 2200,
-        hard_cap: int = 3,
+        hard_cap: int = 4,
     ) -> list[list[ContentItem]]:
         """把内容按 token 预算切成多块，保证每块的输出不超 max_tokens、输入不超上下文。
 
