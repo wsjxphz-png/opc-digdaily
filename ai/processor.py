@@ -274,11 +274,11 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "index": 0,
   "relevant": true,
   "translation": "中文翻译（英文必译，中文留空字符串）",
-  "summary": "文章大意（80-120字）：大白话讲清楚这人做了什么、怎么做的、赚了多少。**必须先点出「他怎么获客的」——在哪个渠道、用什么具体动作拉来第一批客户**（这是读者最想知道的）；最后加💭我的判断：在中国能不能做、启动成本、最大风险。不许出现英文缩写。",
+  "summary": "文章大意（80-120字）：大白话讲清楚这人做了什么、怎么做的、赚了多少。**必须先点出「他怎么获客的」**；提到陌生工具/平台/人名时在首次出现后加括号解释一句；最后加💭我的判断：在中国能不能做、启动成本、最大风险。不许出现英文缩写。",
   "opportunity_hint": "普通人怎么模仿：卖什么 × 去哪卖 × 怎么找顾客（核心，必须具体：哪个平台/什么动作）× 收多少钱。30-40字，禁止术语。",
   "code_dependency": 2,
   "authenticity": 4,
-  "practical_steps": "1. 交付物：xxx（什么东西、给谁用）\n2. 前5个客户：xxx（具体渠道、方法）\n3. 工具链：xxx（用的什么无代码工具组合）",
+  "practical_steps": "1. 交付物：xxx（什么东西、给谁用）\n2. 前5个客户：xxx（具体渠道、方法）\n3. 工具链：xxx（每个陌生工具名后加括号解释一句它是什么，如「Gumroad（卖数字产品的平台）」）",
   "verdict": "可复刻的真机会",
   "difficulty": "零门槛",
   "quality_flag": "⭐",
@@ -328,20 +328,23 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 2. 每条都要有 index
 3. 英文必翻译成中文
 4. 术语全部用中文大白话替换
-5. 代码依赖度 >= 4 → relevant=false，verdict=卖噱头/卖铲子
-6. 真实性 <= 2 → relevant=false，verdict=卖噱头/卖铲子
-7. 三条一票否决红线命中任一条 → relevant=false，verdict=卖噱头/卖铲子
-8. relevant=false 的条目只返回 index、relevant、reason、verdict
-9. irrelevant 的也要返回，不要省略
-10. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略
-11. 所有文本字段务必精简（直接给干货，不要展开解释）：
-   · summary：60-100字（含💭我的判断，别超过）
-   · opportunity_hint：25-35字
-   · practical_steps：三部分用\\n分隔，每部分≤25字
-   · copy_template 各字段：who/what/first_step ≤25字，first_prompt ≤60字，cost ≤20字
+5. **陌生概念必须解释**：假设读者完全不会英文、没用过海外工具。出现以下内容时，第一次必须用括号做一句话补充说明：
+   · 海外平台/工具：Gumroad（一个卖数字产品的网站）、Etsy（全球最大的手工/设计品电商平台）、Teachable（一个做在线课程的平台）、Stripe（海外收款工具，类似支付宝）、n8n（一个点鼠标就能搭自动化流程的工具）
+   · 外国人名/公司名：一句话交代他是谁（如「Pat Flynn，一个靠博客和播客年入百万美元的创业者」）
+   · 专有名词/概念：如「newsletter（邮件订阅 newsletter，像定期发送的付费邮件杂志）」「POD（按需打印，设计好图案上传，有人买才印，不用囤货）」
+6. 代码依赖度 >= 4 → relevant=false，verdict=卖噱头/卖铲子
+7. 真实性 <= 2 → relevant=false，verdict=卖噱头/卖铲子
+8. 三条一票否决红线命中任一条 → relevant=false，verdict=卖噱头/卖铲子
+9. relevant=false 的条目只返回 index、relevant、reason、verdict
+10. irrelevant 的也要返回，不要省略
+11. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略
+12. 所有文本字段务必精简（直接给干货，不要展开解释）：
+   · summary：80-120字（含💭我的判断，别超过）
+   · opportunity_hint：30-35字
+   · practical_steps：三部分用\\n分隔，每部分≤30字
+   · copy_template 各字段：who/what/first_step ≤30字，first_prompt ≤60字，cost ≤25字
    · relevant=false 的 reason：≤25字
-   · 精简后单条输出更稳定、不易被截断，也能减少 API 调用次数（避开限流）
-12. relevant=true 的条目必须包含 xhs_title 字段：一条 ≤20 字的小红书标题（套用 dbs-xhs-title 爆款公式，留悬念/扩大话题/击中真实痛点），直接可发
+13. relevant=true 的条目必须包含 xhs_title 字段：一条 ≤20 字的小红书标题（套用 dbs-xhs-title 爆款公式，留悬念/扩大话题/击中真实痛点），直接可发
 """
 
 BATCH_SYSTEM_PROMPT = BATCH_SYSTEM_PROMPT.replace("{FACTOR_RUBRIC}", FACTOR_RUBRIC)
