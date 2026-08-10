@@ -647,8 +647,8 @@ international:
         # ▸ 隐形操盘手（真正做事、不卖铲子）
         - name: "Cory Zue (产品化服务复盘)"
           url: "https://www.coryzue.com/feed.xml"
-        - name: "Tony Dinh (独立开发者实战)"
-          url: "https://tdinh.substack.com/feed"
+        # Tony Dinh (https://tdinh.substack.com/feed) 已于 2026-08 起 301 重定向至非 Substack 地址，
+        # 抓取失败；移除避免刷 ERROR 日志。
         - name: "Arvid Kahl (The Bootstrapped Founder)"
           url: "https://thebootstrappedfounder.com/feed/"
         - name: "David Perell (写作变现/内容系统)"
