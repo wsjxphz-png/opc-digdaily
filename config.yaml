@@ -32,7 +32,7 @@ schedule:
 
 # --- 推送策略 ---
 push:
-  batch_size: 8            # 单张卡最多放几条；超过则自动拆成多张卡分批推送（第N批/共M批）
+  batch_size: 30           # 单张卡最多放几条（用户要求不拆卡，一屏看完）
   # 说明：命中硬过滤的优质内容「不封顶」——有多少优质推多少；
   # 只是单条消息太长会被飞书截断，所以用分批解决，而不是砍条数。
 
@@ -663,8 +663,8 @@ international:
           url: "https://jamesclear.com/feed/"
         - name: "Amy Porterfield (在线课程/知识付费)"
           url: "https://amyporterfield.com/feed/"
-        - name: "Smart Blogger (内容写作变现)"
-          url: "https://smartblogger.com/feed/"
+        # Smart Blogger (https://smartblogger.com/feed/) 已于 2026-08 起返回 403，
+        # 本地与 Proxy 均复现；移除避免每次运行刷一条 ERROR 日志。
 
     reddit:
       enabled: true

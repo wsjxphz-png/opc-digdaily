@@ -748,22 +748,13 @@ class FeishuPusher:
                     },
                 })
 
-        # dbs 商业底层逻辑体检：分数 + 命中的闸门警告（存疑案例照常推，但把瑕疵亮出来）
+        # dbs 商业体检：只展示启动指数，后台细节不暴露
         health = td.get("commercial_health") or {}
         if health:
-            commercial = health.get("commercial", 0) or 0
-            feasibility = health.get("feasibility", 0) or 0
             idx = health.get("startup_index", 0) or 0
-            gate = health.get("gate_reason", "") or ""
-            line = (
-                f"🩺 商业体检：商业化 **{commercial}**/100 · "
-                f"可行性 **{feasibility}**/100 · 适合启动 {idx}/10"
-            )
-            if gate:
-                line += f"\n　⚠️ 商业底层逻辑存疑：{gate}"
             elements.append({
                 "tag": "div",
-                "text": {"tag": "lark_md", "content": line},
+                "text": {"tag": "lark_md", "content": f"🩺 适合你启动 **{idx}/10**{_startup_suffix(idx)}"},
             })
 
         meta = []
