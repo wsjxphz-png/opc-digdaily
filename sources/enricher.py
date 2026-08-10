@@ -18,6 +18,12 @@ logger = logging.getLogger(__name__)
 MAX_TEXT_LEN = 5000   # 全文上限（避免超出 AI token 限制）
 MAX_REDDIT_COMMENTS = 3
 
+# 这些源是视频/音频，没有可提取的文章正文，只用摘要即可，不抓全文。
+# 其余带 URL 的源（rss / weixin / weixin_targets / chinese-search / rsshub 等）
+# 一律尝试抓正文——用黑名单而不是白名单，避免新增源时又漏抓（曾经国内 0/172 就是
+# 因为 chinese-search / weixin_targets 不在白名单里，导致国内主力来源全被跳过）。
+NO_FETCH_FULLTEXT = {"youtube", "twitter", "bilibili", "xiaoyuzhou"}
+
 
 class ContentEnricher:
     """在关键词预筛之后、AI 处理之前，丰富内容。"""
@@ -27,17 +33,16 @@ class ContentEnricher:
         self.timeout = timeout
 
     async def enrich(self, items: list[ContentItem]) -> list[ContentItem]:
-        """批量丰富：RSS 抓全文，Reddit 抓评论，其他源跳过。"""
+        """批量丰富：文章类源抓全文，Reddit 抓评论，视频/音频源跳过。"""
         if not items:
             return items
 
         tasks = []
         for item in items:
-            if item.source in ("rss", "weixin", "weixin_whitelist"):
-                tasks.append(self._enrich_rss(item))
-            elif item.source == "reddit":
+            if item.source == "reddit":
                 tasks.append(self._enrich_reddit(item))
-            # YouTube / Twitter / chinese-search 暂不抓全文（用摘要即可）
+            elif item.source not in NO_FETCH_FULLTEXT and item.url:
+                tasks.append(self._enrich_article(item))
 
         if tasks:
             results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -49,7 +54,7 @@ class ContentEnricher:
         logger.info(f"全文提取: {enriched}/{len(items)} 条成功")
         return items
 
-    async def _enrich_rss(self, item: ContentItem):
+    async def _enrich_article(self, item: ContentItem):
         """下载文章 HTML → trafilatura 提取正文（RSS / 公众号文章通用）。"""
         if not item.url:
             return

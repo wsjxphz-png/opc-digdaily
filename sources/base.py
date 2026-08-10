@@ -71,6 +71,15 @@ class BaseSource(ABC):
         """抓取内容，返回 ContentItem 列表。"""
         ...
 
+    def keyword_score(self, text: str, keywords: dict) -> float:
+        """文本与关键词匹配度（0~1），实现见模块级 _keyword_score_fn。
+
+        注意：必须是 BaseSource 的方法，子类（RSSSource/RedditSource/TwitterSource/
+        YouTubeSource）都通过 self.keyword_score(...) 调用。曾因误改成模块级函数
+        导致所有源采集时 AttributeError、RSS 全线挂掉。
+        """
+        return _keyword_score_fn(text, keywords)
+
 # ============================================================
 # 关键词匹配：避免短英文词裸子串误命中 + 素人/真实生意叙事旁路
 # ============================================================
@@ -147,7 +156,7 @@ def _money_story_bypass(t: str) -> bool:
     return any(v in t for v in _BIZ_VERB)
 
 
-def keyword_score(self, text: str, keywords: dict) -> float:
+def _keyword_score_fn(text: str, keywords: dict) -> float:
     """
     计算文本与关键词的匹配度 (0~1)。
 

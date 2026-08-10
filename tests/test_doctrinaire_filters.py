@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from sources.base import has_strong_keyword, keyword_score
+from sources.base import has_strong_keyword, _keyword_score_fn
 import filters
 from teardown import _operator_authenticity
 import library as lib_mod
@@ -65,13 +65,13 @@ def test_strong_keyword_bypass():
     check("royalty 正常命中独立词",
           has_strong_keyword("earn royalty income from your photos", kw))
 
-    # keyword_score: 触发旁路也给分（不为 0），且强词命中也给分
-    check("keyword_score 旁路给分",
-          keyword_score(None, "一位宝妈靠手工皂月售3000块", kw) > 0)
-    check("keyword_score 强词给分",
-          keyword_score(None, "普通人做一人公司月入过万", kw) > 0)
-    check("keyword_score 无关内容 0 分",
-          keyword_score(None, "今日天气晴，适合散步", kw) == 0.0)
+    # _keyword_score_fn: 触发旁路也给分（不为 0），且强词命中也给分
+    check("_keyword_score_fn 旁路给分",
+          _keyword_score_fn("一位宝妈靠手工皂月售3000块", kw) > 0)
+    check("_keyword_score_fn 强词给分",
+          _keyword_score_fn("普通人做一人公司月入过万", kw) > 0)
+    check("_keyword_score_fn 无关内容 0 分",
+          _keyword_score_fn("今日天气晴，适合散步", kw) == 0.0)
 
 
 # ============================================================
