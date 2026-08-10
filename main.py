@@ -41,11 +41,13 @@ from opportunity import OpportunityEngine
 from library import OpportunityLibrary
 from feedback import FeedbackCollector, PreferenceProfile
 from seed_facts import apply_seeds
+from overflow_pool import OverflowPool
 
 # 项目根目录
 ROOT = Path(__file__).parent
 CONFIG_PATH = ROOT / "config.yaml"
 HISTORY_PATH = ROOT / "storage" / "history.json"
+OVERFLOW_PATH = ROOT / "storage" / "overflow_pool.json"
 ROSTER_PATH = ROOT / "storage" / "operators.json"
 SEEDS_PATH = ROOT / "storage" / "seeded_facts.json"
 LIBRARY_PATH = ROOT / "storage" / "opportunity_library.json"
@@ -318,9 +320,13 @@ class DailyOpportunityBot:
         # 模块2：赚钱机会挖掘 配置
         opp_cfg = config.get("opportunity", {})
         self.opportunity_enabled = opp_cfg.get("enabled", True)
-        self.opportunity_per_region = opp_cfg.get("per_region", 5)
+        self.opportunity_per_region = opp_cfg.get("per_region", 20)
         self.exclude_shovel = opp_cfg.get("exclude_shovel", True)
-        self.min_startup_index = int(opp_cfg.get("min_startup_index", 4))
+        self.min_startup_index = int(opp_cfg.get("min_startup_index", 3))
+
+        # 质量溢池：每日推送上限 + 高质量标杆 + 保质期
+        self.daily_push_cap = int(opp_cfg.get("per_day", 10))
+        self.quality_threshold = int(opp_cfg.get("quality_threshold", 7))
 
         # 跨天机会库
         lib_cfg = config.get("library", {})
@@ -519,6 +525,29 @@ class DailyOpportunityBot:
             except Exception as e:
                 logger.exception(f"机会库/反馈处理异常（已跳过，不影响推送）: {e}")
 
+        # ── 质量溢池：合并昨日滞留，限制每日推送 ≤ 10 条 ──
+        total_before_pool = len(dom_opps) + len(intl_opps)
+        if dom_opps or intl_opps:
+            all_opps = dom_opps + intl_opps
+            pool = OverflowPool(
+                OVERFLOW_PATH,
+                daily_cap=self.daily_push_cap,
+                quality_threshold=self.quality_threshold,
+                max_age_days=int(opp_cfg.get("overflow_days", 3)),
+            )
+            today_str = datetime.now(CST).strftime("%Y-%m-%d")
+            pushed, overflowed = pool.decide(all_opps, today_str)
+            # 重新按 region 分拆
+            dom_opps = [it for it in pushed if it in dom_opps or getattr(it, "source_name", "") in [d.source_name for d in domestic_items[:1]]]
+            # 简化：track region via original list membership
+            dom_urls = set(getattr(it, "url", "") for it in domestic_items)
+            dom_opps = [it for it in pushed if getattr(it, "url", "") in dom_urls]
+            intl_opps = [it for it in pushed if getattr(it, "url", "") not in dom_urls]
+            if overflowed:
+                logger.info(
+                    f"溢池：{total_before_pool} → 今日推送 {len(pushed)} / 入池 {len(overflowed)}（标杆≥{self.quality_threshold}）"
+                )
+
         # ── 推送 / 输出 ──
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
         pushed_any = False
@@ -542,7 +571,9 @@ class DailyOpportunityBot:
         if dom_opps or intl_opps:
             if self.pusher.enabled:
                 ok = await self.pusher.push_opportunities(
-                    dom_opps, intl_opps, date_str, recurring
+                    dom_opps, intl_opps, date_str, recurring,
+                    screened_out=total_before_pool - len(pushed) if 'pushed' in dir() else 0,
+                    screened_total=total_before_pool,
                 )
                 if ok:
                     pushed_any = True

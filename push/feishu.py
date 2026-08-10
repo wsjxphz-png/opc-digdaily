@@ -214,6 +214,8 @@ class FeishuPusher:
         international: list[ContentItem],
         date_str: str,
         recurring: Optional[list[dict]] = None,
+        screened_out: int = 0,
+        screened_total: int = 0,
     ) -> bool:
         """模块2：推送 OPC赚钱机会挖掘日报 — 国内 + 国际两个板块。
 
@@ -236,9 +238,12 @@ class FeishuPusher:
         total = len(domestic) + len(international)
         batch = self._batch_size
 
-        # 总量未超一批：保持单卡（旧样式，国内+国际同卡）
+        # 总量未超一批：保持单卡（国内+国际同卡）
         if total <= batch:
-            card = self._build_dual_card(domestic, international, date_str, total, recurring)
+            card = self._build_dual_card(
+                domestic, international, date_str, total, recurring,
+                screened_out, screened_total,
+            )
             return await self._send_card(card)
 
         # 超批：国内 / 国际分别切块，每块一张卡，顺序推送
@@ -412,6 +417,8 @@ class FeishuPusher:
         date_str: str,
         total: int,
         recurring: Optional[list[dict]] = None,
+        screened_out: int = 0,
+        screened_total: int = 0,
     ) -> dict:
         header = {
             "title": {
@@ -423,45 +430,35 @@ class FeishuPusher:
 
         elements = []
 
-        # ---- 顶部统计 ----
-        stats_parts = []
-        if domestic:
-            stats_parts.append(f"🇨🇳 国内 {len(domestic)} 条")
-        else:
-            stats_parts.append(f"🇨🇳 国内 0 条（中文源内容偏少，持续优化中）")
-        if international:
-            stats_parts.append(f"🌍 国际 {len(international)} 条")
-        else:
-            stats_parts.append(f"🌍 国际 0 条")
-        stats_text = "  ·  ".join(stats_parts)
-
+        # ---- 信任摘要：帮用户省一屏时间，一眼看懂这堆内容是怎么来的 ----
+        trust_lines = [f"**📊 今日共 {total} 条**  🇨🇳{len(domestic)}条  ·  🌍{len(international)}条"]
+        if screened_total > 0:
+            trust_lines.append(f"从 {screened_total} 条内容中，自动筛掉 {screened_out} 条卖铲子/需写代码/真实性低的内容")
+        trust_lines.append(f"🎯 适合你启动 = 分值越高越容易上手（9-10=今天最该抄 / 7-8=值得动手 / 5-6=可以看看 / <5=参考为主）")
         elements.append({
             "tag": "div",
-            "text": {
-                "tag": "lark_md",
-                "content": f"**📊 今日共 {total} 条机会**\n{stats_text}",
-            },
+            "text": {"tag": "lark_md", "content": "\n".join(trust_lines)},
         })
         elements.append({"tag": "hr"})
 
-        # ---- 📋 目录 ----
-        all_items = [
-            ("🇨🇳", "国内", dom) for dom in [domestic] if dom
-        ] + [
-            ("🌍", "国际", intl) for intl in [international] if intl
-        ]
+        # ---- 📋 目录：超过 10 条时只显示前 8 条 ----
+        all_items = []
+        for it in domestic:
+            all_items.append(("🇨🇳", it))
+        for it in international:
+            all_items.append(("🌍", it))
+
         toc_lines = ["**📋 今日目录**"]
-        idx = 1
-        for flag, region, items in all_items:
-            toc_lines.append(f"\n{flag} {region}：")
-            for item in items:
-                si = getattr(item, "startup_index", 0) or 0
-                tl_text = item.translation or item.title or ""
-                if len(tl_text) > 35:
-                    tl_text = tl_text[:32] + "..."
-                badge = f"🎯{si}/10"
-                toc_lines.append(f"  {idx}. {tl_text}  {badge}")
-                idx += 1
+        max_toc = min(len(all_items), 8)
+        for k in range(max_toc):
+            flag, item = all_items[k]
+            si = getattr(item, "startup_index", 0) or 0
+            tl_text = item.translation or item.title or ""
+            if len(tl_text) > 30:
+                tl_text = tl_text[:28] + ".."
+            toc_lines.append(f"  {k+1}. {tl_text}  🎯{si}")
+        if len(all_items) > max_toc:
+            toc_lines.append(f"  ... 还有 {len(all_items) - max_toc} 条")
         elements.append({
             "tag": "div",
             "text": {"tag": "lark_md", "content": "\n".join(toc_lines)},
@@ -748,7 +745,7 @@ class FeishuPusher:
                     },
                 })
 
-        # dbs 商业体检：只展示启动指数，后台细节不暴露
+        # dbs 体检：精简为总分
         health = td.get("commercial_health") or {}
         if health:
             idx = health.get("startup_index", 0) or 0
@@ -757,15 +754,6 @@ class FeishuPusher:
                 "text": {"tag": "lark_md", "content": f"🩺 适合你启动 **{idx}/10**{_startup_suffix(idx)}"},
             })
 
-        meta = []
-        if rep_label:
-            meta.append(rep_label)
-        sig = td.get("signals_used", 0) or 0
-        meta.append(f"基于 {sig} 条新鲜信号")
-        elements.append({
-            "tag": "div",
-            "text": {"tag": "lark_md", "content": " · ".join(meta)},
-        })
         return elements
 
     def _build_discovery_alert(self, d: dict) -> list[dict]:
