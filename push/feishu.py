@@ -104,6 +104,17 @@ def _startup_badge(idx: int) -> str:
     return f"⚪ 适合你启动 {idx}/10（参考为主）"
 
 
+def _startup_suffix(idx: int) -> str:
+    """启动指数对应的括号后缀（配合其他排版使用）。"""
+    if idx >= 9:
+        return "（今天最该抄）"
+    if idx >= 7:
+        return "（值得动手）"
+    if idx >= 5:
+        return "（可以看看）"
+    return "（参考为主）"
+
+
 class FeishuPusher:
     def __init__(
         self,
@@ -433,18 +444,44 @@ class FeishuPusher:
         })
         elements.append({"tag": "hr"})
 
+        # ---- 📋 目录 ----
+        all_items = [
+            ("🇨🇳", "国内", dom) for dom in [domestic] if dom
+        ] + [
+            ("🌍", "国际", intl) for intl in [international] if intl
+        ]
+        toc_lines = ["**📋 今日目录**"]
+        idx = 1
+        for flag, region, items in all_items:
+            toc_lines.append(f"\n{flag} {region}：")
+            for item in items:
+                si = getattr(item, "startup_index", 0) or 0
+                tl_text = item.translation or item.title or ""
+                if len(tl_text) > 35:
+                    tl_text = tl_text[:32] + "..."
+                badge = f"🎯{si}/10"
+                toc_lines.append(f"  {idx}. {tl_text}  {badge}")
+                idx += 1
+        elements.append({
+            "tag": "div",
+            "text": {"tag": "lark_md", "content": "\n".join(toc_lines)},
+        })
+        elements.append({"tag": "hr"})
+
         # ---- 本周风向（跨天机会库）----
         elements.extend(self._build_recurring_block(recurring))
 
         # ---- 国内板块 ----
+        next_idx = 1
         if domestic:
-            elements.extend(self._build_section("国内", domestic, "red"))
+            elements.extend(self._build_section("国内", domestic, "red", next_idx))
+            next_idx += len(domestic)
             if international:
                 elements.append({"tag": "hr"})
 
         # ---- 国际板块 ----
         if international:
-            elements.extend(self._build_section("国际", international, "blue"))
+            elements.extend(self._build_section("国际", international, "blue", next_idx))
 
         # ---- 底部 ----
         elements.append({"tag": "hr"})
@@ -472,9 +509,23 @@ class FeishuPusher:
     # ================================================================
     # 板块内部：标题 + 条目
     # ================================================================
+    def _parse_practical_steps(self, steps_text: str) -> dict:
+        """从 AI 生成的实操步骤字符串中提取三部分。"""
+        result = {"deliverable": "", "acquisition": "", "tools": ""}
+        if not steps_text:
+            return result
+        key_map = {"交付物": "deliverable", "前5个客户": "acquisition", "工具链": "tools"}
+        for line in steps_text.split("\n"):
+            line = line.strip()
+            for prefix, key in key_map.items():
+                if prefix in line:
+                    val = line.split("：", 1)[-1].split(":", 1)[-1].strip()
+                    result[key] = val
+                    break
+        return result
 
     def _build_section(
-        self, label: str, items: list[ContentItem], color: str
+        self, label: str, items: list[ContentItem], color: str, start_index: int = 1
     ) -> list[dict]:
         emoji = SECTION_EMOJI.get(label, "📌")
         elements = []
@@ -492,146 +543,112 @@ class FeishuPusher:
             max((getattr(it, "startup_index", 0) or 0) for it in items) if items else 0
         )
 
-        for i, item in enumerate(items, 1):
+        for j, item in enumerate(items):
+            i = start_index + j  # 全卡序号
             startup_index = getattr(item, "startup_index", 0) or 0
             is_top = startup_index >= top_score and top_score >= 7
 
             original_title = item.title or ""
-            translation = item.translation or ""  # 英文标题的中文翻译（国内源为空串）
+            translation = item.translation or ""
 
-            # 优先用「中文翻译」做标题
+            # 优先中文翻译
             display_title = translation if translation else original_title
             if not translation and original_title:
                 ascii_count = sum(1 for c in original_title if ord(c) < 128)
                 if ascii_count / max(len(original_title), 1) > 0.6:
                     display_title = f"英文｜{original_title[:110]}" if len(original_title) > 110 else f"英文｜{original_title}"
-                    show_original = False  # 已经标记了，不用再显示英文原标题
-                else:
-                    if len(display_title) > 120:
-                        display_title = display_title[:120] + "..."
-                    show_original = bool(original_title) and bool(translation) and original_title != translation
-            else:
-                if len(display_title) > 120:
+                elif len(display_title) > 120:
                     display_title = display_title[:120] + "..."
-                show_original = bool(original_title) and bool(translation) and original_title != translation
+            elif len(display_title) > 120:
+                display_title = display_title[:120] + "..."
 
             ai_summary = item.ai_summary or ""
-            opportunity = item.opportunity_hint or ""
-            translation = item.translation or ""
             difficulty = item.difficulty or ""
             diff_badge = DIFFICULTY_BADGE.get(difficulty, "")
-            quality_flag = getattr(item, "quality_flag", "") or ""
-            quality_label = QUALITY_ICON.get(quality_flag, "")
-            verdict = getattr(item, "verdict", "") or ""
             code_dep = getattr(item, "code_dependency", 0) or 0
+            code_label = CODE_DEPENDENCY_LABEL.get(code_dep, "")
             authenticity = getattr(item, "authenticity", 0) or 0
+            auth_label = AUTHENTICITY_LABEL.get(authenticity, "")
             practical_steps = getattr(item, "practical_steps", "") or ""
             source_label = item.source_name or item.source
-            # 平台级来源名汉化（如 twitter → 推特）
             if source_label:
                 src_key = source_label.split("/")[-1].split(".")[0].lower()
                 source_label = SOURCE_LABEL_MAP.get(src_key, source_label)
 
-            # 代码依赖度标签
-            code_label = CODE_DEPENDENCY_LABEL.get(code_dep, "")
-            # 真实性标签
-            auth_label = AUTHENTICITY_LABEL.get(authenticity, "")
+            # 解析实操步骤三部分
+            steps = self._parse_practical_steps(practical_steps)
+            tpl = getattr(item, "copy_template", None) or {}
 
-            # 标题链接（用中文翻译做主标题）
-            if item.url:
-                title_line = f"**[{display_title}]({item.url})**"
-            else:
-                title_line = f"**{display_title}**"
+            # 标题链接
+            title_line = f"**[{display_title}]({item.url})**" if item.url else f"**{display_title}**"
 
             md_lines = []
 
-            # 首选标记 + 判定结论 + 难度 + 质量标记
+            # --- 编号 + 标题 + 总分 ---
             tags = []
             if is_top and len(items) > 1:
                 tags.append("⭐ 首选")
-            if verdict:
-                verdict_emoji = "✅" if "真机会" in verdict else "🚫"
-                tags.append(f"{verdict_emoji} {verdict}")
             if diff_badge:
                 tags.append(diff_badge)
-            if quality_label:
-                tags.append(quality_label)
-            if tags:
-                md_lines.append(" · ".join(tags))
-
-            md_lines.append(title_line)
-
-            # ---- 总评分（只展示一个数字，后台细项不暴露）----
+            tag_str = " · ".join(tags)
+            header_line = f"**{i}. {display_title}**" + (f"  （{tag_str}）" if tag_str else "")
+            if item.url:
+                header_line = f"**{i}. [{display_title}]({item.url})**" + (f"  （{tag_str}）" if tag_str else "")
+            md_lines.append(header_line)
             if startup_index:
-                md_lines.append(f"**{_startup_badge(startup_index)}**")
+                md_lines.append(f"🎯 适合你启动 **{startup_index}/10**{_startup_suffix(startup_index)}")
 
-            # ---- 定性标签行（保留原有代码依赖 / 真实性判读）----
-            score_parts = []
-            if code_label:
-                score_parts.append(code_label)
-            if auth_label:
-                score_parts.append(auth_label)
-            if score_parts:
-                md_lines.append(" · ".join(score_parts))
-
-            # ---- 跨天机会库标注 ----
-            repeat = getattr(item, "repeat_count", 0) or 0
-            corro = getattr(item, "corroborations", 0) or 0
-            if repeat >= 2 or corro >= 2:
-                bits = []
-                if repeat >= 2:
-                    bits.append(f"🔁 第 {repeat} 次出现")
-                if corro >= 2:
-                    bits.append(f"✔️ 已被 {corro} 个来源印证")
-                first_seen = getattr(item, "first_seen", "") or ""
-                if first_seen:
-                    bits.append(f"首次 {first_seen}")
-                md_lines.append(" · ".join(bits))
-
+            # --- 摘要（包含💭判断，即风险分析）---
             if ai_summary:
                 md_lines.append(f"📖 {ai_summary}")
 
-            xhs_title = getattr(item, "xhs_title", "") or ""
-            if xhs_title:
-                md_lines.append(f"📕 小红书标题（可直接发）：{xhs_title}")
+            # --- 做什么产品 / 怎么获客 / 需要工具 ---
+            if steps["deliverable"]:
+                md_lines.append(f"📦 做什么产品：{steps['deliverable']}")
+            elif tpl.get("what"):
+                md_lines.append(f"📦 做什么产品：{tpl['what']}")
+            if steps["acquisition"]:
+                md_lines.append(f"📣 怎么获客：{steps['acquisition']}")
+            if steps["tools"]:
+                md_lines.append(f"🔧 需要工具：{steps['tools']}")
 
-            if practical_steps:
-                md_lines.append(f"🔧 实操步骤：\n{practical_steps}")
-            elif opportunity and "暂无" not in opportunity and "无" != opportunity.strip():
-                md_lines.append(f"💡 怎么模仿：{opportunity}")
+            # --- 技术门槛 ---
+            if code_label:
+                md_lines.append(f"🚪 技术门槛：{code_label}")
 
-            # ---- 可抄模板：明天就能开工的最小行动包 ----
-            tpl = getattr(item, "copy_template", None) or {}
+            # --- 你该怎么抄 ---
             if tpl:
-                tl = ["📋 **可抄模板**"]
+                md_lines.append(f"\n👣 **你该怎么抄**")
                 if tpl.get("who"):
-                    tl.append(f"　· 卖给谁：{tpl['who']}")
-                if tpl.get("what"):
-                    tl.append(f"　· 卖什么：{tpl['what']}")
+                    md_lines.append(f"· 卖给谁：{tpl['who']}")
                 if tpl.get("first_step"):
-                    tl.append(f"　· 第一步：{tpl['first_step']}")
+                    md_lines.append(f"· 第一步：{tpl['first_step']}")
                 if tpl.get("first_prompt"):
-                    tl.append(f"　· 复制给 AI 的第一句话：\n> {tpl['first_prompt']}")
+                    md_lines.append(f"· 让 AI 帮你一句话：\n> {tpl['first_prompt']}")
                 if tpl.get("cost"):
-                    tl.append(f"　· 成本与周期：{tpl['cost']}")
-                md_lines.append("\n".join(tl))
+                    md_lines.append(f"· 花了多长时间、多少钱：{tpl['cost']}")
 
-            if show_original:
-                md_lines.append(f"🌐 英文原标题：{original_title[:120]}")
+            # --- 可信度 / 重复出现 ---
+            repeat = getattr(item, "repeat_count", 0) or 0
+            corro = getattr(item, "corroborations", 0) or 0
+            credit_parts = []
+            if auth_label:
+                credit_parts.append(auth_label)
+            if repeat >= 2:
+                credit_parts.append(f"🔁 第 {repeat} 次出现")
+            if corro >= 2:
+                credit_parts.append(f"✔️ {corro} 个来源印证")
+            if credit_parts:
+                md_lines.append(" · ".join(credit_parts))
 
-            # 发布时间拿不到就只写来源，别在卡片上留一个「未知」
+            # --- 来源 ---
             published_str = self._time_str(item.published) if item.published else ""
-            md_lines.append(
-                f"📎 来自「{source_label}」· {published_str}" if published_str
-                else f"📎 来自「{source_label}」"
-            )
+            src_line = f"📎 来自「{source_label}」" + (f" · {published_str}" if published_str else "")
+            md_lines.append(src_line)
 
             elements.append({
                 "tag": "div",
-                "text": {
-                    "tag": "lark_md",
-                    "content": "\n".join(md_lines),
-                },
+                "text": {"tag": "lark_md", "content": "\n".join(md_lines)},
             })
 
             # ---- 反馈按钮 ----
@@ -639,7 +656,7 @@ class FeishuPusher:
             if fb:
                 elements.append(fb)
 
-            if i < len(items):
+            if j < len(items) - 1:
                 elements.append({"tag": "hr"})
 
         return elements
