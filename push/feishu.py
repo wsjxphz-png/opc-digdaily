@@ -109,10 +109,13 @@ class FeishuPusher:
         self,
         webhook_url: str,
         card_color: str = "blue",
-        batch_size: int = 8,
+        batch_size: int = 30,
         feedback_repo: str = "",
         feedback_enabled: bool = False,
         dry_run: bool = False,
+        ai_api_base: str = "",
+        ai_api_key: str = "",
+        ai_model: str = "",
     ):
         self.webhook_url = webhook_url
         self.card_color = COLORS.get(card_color, "blue")
@@ -121,6 +124,9 @@ class FeishuPusher:
         self.feedback_enabled = bool(feedback_enabled and self.feedback_repo)
         # 演练模式：完整跑通流程并渲染卡片，但绝不真的发到群里
         self.dry_run = bool(dry_run)
+        self._ai_api_base = (ai_api_base or "").strip()
+        self._ai_api_key = (ai_api_key or "").strip()
+        self._ai_model = (ai_model or "").strip()
         self._enabled = bool(
             webhook_url
             and "open.feishu.cn" in webhook_url
@@ -133,6 +139,59 @@ class FeishuPusher:
     @property
     def enabled(self) -> bool:
         return self._enabled
+
+    # ================================================================
+    # 英文标题翻译：AI 批量任务里常被跳过，这里做独立补刀
+    # ================================================================
+    async def _translate_titles(self, items: list[ContentItem]) -> list[ContentItem]:
+        """对无翻译的英文标题做独立批量翻译，只调一次 API。"""
+        need = [(i, it) for i, it in enumerate(items) if it.title and not it.translation]
+        if not need or not self._ai_api_key:
+            return items
+
+        # 筛出主要含英文的标题
+        def _mostly_ascii(s: str) -> bool:
+            return sum(1 for c in s if ord(c) < 128) / max(len(s), 1) > 0.6
+
+        to_translate = [(idx, it.title.strip()) for idx, it in need if _mostly_ascii(it.title)]
+        if not to_translate:
+            return items
+
+        titles = [t for _, t in to_translate]
+        prompt = (
+            "将以下英文文章标题翻译成中文。每行一个翻译，保持顺序，不要编号，不要原文。\n\n"
+            + "\n".join(titles)
+        )
+        try:
+            async with httpx.AsyncClient(timeout=30) as client:
+                resp = await client.post(
+                    f"{self._ai_api_base}/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self._ai_api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json={
+                        "model": self._ai_model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "max_tokens": min(500, len(titles) * 40),
+                        "temperature": 0.1,
+                    },
+                )
+                if resp.status_code == 200:
+                    body = resp.json()
+                    text = body["choices"][0]["message"]["content"].strip()
+                    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+                    if len(lines) == len(titles):
+                        for (idx, _), zh in zip(to_translate, lines):
+                            items[idx].translation = zh
+                        logger.info(f"独立翻译完成：{len(titles)} 条英文标题 → 中文")
+                    else:
+                        logger.warning(f"翻译返回行数不匹配 ({len(lines)} vs {len(titles)})，跳过补刀")
+                else:
+                    logger.warning(f"翻译 API 返回 {resp.status_code}")
+        except Exception as e:
+            logger.warning(f"独立翻译失败: {e}")
+        return items
 
     # ================================================================
     # 入口：模块2 赚钱机会挖掘（国内 + 国际双板块）
@@ -156,6 +215,12 @@ class FeishuPusher:
         if not domestic and not international:
             logger.info("无机会内容需要推送")
             return False
+
+        # ---- 补刀翻译：国际条目若 AI 没给翻译，这里独立翻一次 ----
+        if international:
+            international = await self._translate_titles(international)
+        if domestic:
+            domestic = await self._translate_titles(domestic)
 
         total = len(domestic) + len(international)
         batch = self._batch_size
@@ -218,7 +283,8 @@ class FeishuPusher:
             "title": {
                 "tag": "plain_text",
                 "content": (
-                    f"💡 OPC赚钱机会挖掘日报 | {date_str}"
+                    f"💡 OPC赚钱机会 | {date_str}"
+                    + (f" · {label} {len(items)} 条" if label else "")
                     + (f"  (第{batch_no}/{total_batches}批)" if total_batches > 1 else "")
                 ),
             },
@@ -339,7 +405,7 @@ class FeishuPusher:
         header = {
             "title": {
                 "tag": "plain_text",
-                "content": f"💡 OPC赚钱机会挖掘日报 | {date_str}",
+                "content": f"💡 OPC赚钱机会 | {date_str} · 🇨🇳{len(domestic)}条 · 🌍{len(international)}条",
             },
             "template": self.card_color,
         }
@@ -392,9 +458,7 @@ class FeishuPusher:
 
     def _footer_note(self) -> dict:
         tips = [f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}"]
-        tips.append(
-            "分数说明：商业化潜力与可行性由固定公式计算（AI 只回答 11 个事实型子问题，不参与打总分）"
-        )
+        tips.append("分数说明：适合你启动指数由公式自动计算")
         if self.feedback_enabled:
             tips.append(
                 "点「想做 / 没兴趣」会打开一个已填好的反馈页，再点一下提交即可；"
@@ -435,11 +499,21 @@ class FeishuPusher:
             original_title = item.title or ""
             translation = item.translation or ""  # 英文标题的中文翻译（国内源为空串）
 
-            # 优先用「中文翻译」做标题，英文原标题降级成脚注，减少英文观感
+            # 优先用「中文翻译」做标题
             display_title = translation if translation else original_title
-            if len(display_title) > 120:
-                display_title = display_title[:120] + "..."
-            show_original = bool(original_title) and bool(translation) and original_title != translation
+            if not translation and original_title:
+                ascii_count = sum(1 for c in original_title if ord(c) < 128)
+                if ascii_count / max(len(original_title), 1) > 0.6:
+                    display_title = f"英文｜{original_title[:110]}" if len(original_title) > 110 else f"英文｜{original_title}"
+                    show_original = False  # 已经标记了，不用再显示英文原标题
+                else:
+                    if len(display_title) > 120:
+                        display_title = display_title[:120] + "..."
+                    show_original = bool(original_title) and bool(translation) and original_title != translation
+            else:
+                if len(display_title) > 120:
+                    display_title = display_title[:120] + "..."
+                show_original = bool(original_title) and bool(translation) and original_title != translation
 
             ai_summary = item.ai_summary or ""
             opportunity = item.opportunity_hint or ""
@@ -487,22 +561,9 @@ class FeishuPusher:
 
             md_lines.append(title_line)
 
-            # ---- 客观分数行（公式算出，非 AI 自评）----
-            commercial = getattr(item, "commercial_score", 0) or 0
-            feasibility = getattr(item, "feasibility_score", 0) or 0
+            # ---- 总评分（只展示一个数字，后台细项不暴露）----
             if startup_index:
-                md_lines.append(
-                    f"**{_startup_badge(startup_index)}**\n"
-                    f"💰 商业化潜力 **{commercial}**/100  ·  🛠 可行性 **{feasibility}**/100"
-                )
-            score_reason = getattr(item, "score_reason", "") or ""
-            if score_reason:
-                md_lines.append(f"　└ {score_reason}")
-
-            # ---- dbs 检验未过项（最该让用户看到的"为什么不行"）----
-            gate_reason = getattr(item, "gate_reason", "") or ""
-            if gate_reason:
-                md_lines.append(f"　⚠️ {gate_reason}")
+                md_lines.append(f"**{_startup_badge(startup_index)}**")
 
             # ---- 定性标签行（保留原有代码依赖 / 真实性判读）----
             score_parts = []

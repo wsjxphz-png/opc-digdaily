@@ -38,6 +38,10 @@ TECH_KEYWORDS: list[str] = [
     "open source", "open-source", "indie hacker", "tech blogger",
     "ai engineer", "machine learning", "deep learning",
     "writes code", "codes in", "github", "stack overflow",
+    # 卖自动化服务 / no-code 流水线≈卖铲子（虽可无代码但本质是技术向服务外包）
+    "automation agency", "automation consultant",
+    "sell automations", "sell automated",
+    "build automations for clients",
 ]
 
 

@@ -291,6 +291,9 @@ class DailyOpportunityBot:
             feedback_repo=self.feedback_repo,
             feedback_enabled=self.feedback_enabled,
             dry_run=self.dry_run,
+            ai_api_base=ai_cfg.get("api_base", ""),
+            ai_api_key=ai_cfg.get("api_key", ""),
+            ai_model=ai_cfg.get("model", ""),
         )
 
         self.history = HistoryManager(HISTORY_PATH)
