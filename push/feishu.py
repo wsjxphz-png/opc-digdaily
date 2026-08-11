@@ -115,6 +115,37 @@ def _startup_suffix(idx: int) -> str:
     return "（参考为主）"
 
 
+def _source_counts(items: list) -> dict:
+    """按 source 统计条数，短标签优先。"""
+    counts: dict[str, int] = {}
+    for it in items:
+        src = getattr(it, "source", "") or ""
+        if src in ("rss",):
+            key = "rss"
+        elif src in ("weixin_targets", "weixin_search", "weixin_whitelist"):
+            key = "wx"
+        elif src == "twitter":
+            key = "tw"
+        elif src == "youtube":
+            key = "yt"
+        elif src == "bilibili":
+            key = "b站"
+        elif src == "chinese_search":
+            key = "搜索"
+        elif src == "reddit":
+            key = "rdt"
+        elif src == "xiaoyuzhou":
+            key = "播客"
+        else:
+            key = src[:6]
+        counts[key] = counts.get(key, 0) + 1
+    return dict(sorted(counts.items(), key=lambda x: -x[1]))
+
+
+def _src_label(key: str) -> str:
+    return key
+
+
 class FeishuPusher:
     def __init__(
         self,
@@ -425,6 +456,21 @@ class FeishuPusher:
         }
 
         elements = []
+
+        # ---- 数据源健康度：一眼看清今天哪些源在干活 ----
+        src_dom = _source_counts(domestic)
+        src_intl = _source_counts(international)
+        src_parts = []
+        if src_dom:
+            src_parts.append(" ".join(f"{n}{_src_label(k)}" for k, n in src_dom.items()))
+        if src_intl:
+            src_parts.append(" ".join(f"{n}{_src_label(k)}" for k, n in src_intl.items()))
+        if src_parts:
+            elements.append({
+                "tag": "div",
+                "text": {"tag": "lark_md", "content": f"📡 {' · '.join(src_parts)}"},
+            })
+            elements.append({"tag": "hr"})
 
         # ---- 信任摘要：帮用户省一屏时间，一眼看懂这堆内容是怎么来的 ----
         trust_lines = [f"**📊 今日共 {total} 条**  🇨🇳{len(domestic)}条  ·  🌍{len(international)}条"]
