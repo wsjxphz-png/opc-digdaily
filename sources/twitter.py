@@ -39,6 +39,48 @@ TWITTER_BEARER = (
 TWITTER_API_BASE = "https://x.com/i/api/graphql"
 Q_USER_BY_SCREEN_NAME = "IGgvgiOx4QZndDHuD3x9TQ"
 Q_USER_TWEETS = "PNd0vlufvrcIwrAnBYKE9g"
+TIMEOUT = 30
+
+# sync 版 API 调用（供 asyncio.to_thread 使用，解决 httpx cookie 兼容问题）
+def _sync_user_id(session, handle: str):
+    """通过 screen_name 获取 Twitter 用户 ID（同步版，用 requests.Session）。"""
+    variables = json.dumps({"screen_name": handle}, separators=(",", ":"))
+    url = f"{TWITTER_API_BASE}/{Q_USER_BY_SCREEN_NAME}/UserByScreenName?variables={variables}&features={TWITTER_FEATURES}"
+    try:
+        resp = session.get(url, timeout=TIMEOUT)
+        if resp.status_code == 200:
+            return resp.json().get("data", {}).get("user", {}).get("result", {}).get("rest_id")
+    except Exception:
+        pass
+    return None
+
+
+def _sync_user_tweets(session, user_id: str, count: int = 30) -> list:
+    """获取用户推文列表（同步版，用 requests.Session）。"""
+    variables = json.dumps(
+        {"userId": user_id, "count": count, "includePromotedContent": False,
+         "withQuickPromoteEligibilityTweetFields": False, "withVoice": False,
+         "withV2Timeline": True},
+        separators=(",", ":"),
+    )
+    url = f"{TWITTER_API_BASE}/{Q_USER_TWEETS}/UserTweets?variables={variables}&features={TWITTER_FEATURES}"
+    try:
+        resp = session.get(url, timeout=TIMEOUT)
+        if resp.status_code != 200:
+            return []
+        data = resp.json()
+        tl = (data.get("data", {}).get("user", {}).get("result", {})
+              .get("timeline_v2", {}).get("timeline", {}))
+        tweets = []
+        for inst in tl.get("instructions", []):
+            if inst.get("type") == "TimelineAddEntries":
+                for entry in inst.get("entries", []):
+                    tw = entry.get("content", {}).get("itemContent", {}).get("tweet_results", {}).get("result", {})
+                    if tw.get("__typename") == "Tweet" and "legacy" in tw:
+                        tweets.append(tw)
+        return tweets
+    except Exception:
+        return []
 
 # GraphQL 的 features 开关必须逐字匹配，缺一个就整体报错
 TWITTER_FEATURES = json.dumps(
@@ -147,66 +189,77 @@ class TwitterSource(BaseSource):
 
         items: list[ContentItem] = []
         ok = 0
-        async with httpx.AsyncClient(
-            timeout=20,
-            headers=headers,
-            cookies={"auth_token": auth_token, "ct0": ct0},
-            follow_redirects=True,
-        ) as client:
-            for handle in accounts:
-                try:
-                    user_id = await self._user_id(client, handle)
-                    if not user_id:
-                        logger.debug(f"Twitter @{handle}: 找不到用户（可能改名或被封）")
+        # httpx 的 cookie 处理在 GraphQL API 上有兼容问题（requests.Session 正常），
+        # 用 requests.Session + asyncio.to_thread 替代
+        import requests as sync_http
+        session = sync_http.Session()
+        session.cookies.set("auth_token", auth_token)
+        session.cookies.set("ct0", ct0)
+        session.headers.update({
+            "User-Agent": headers["User-Agent"],
+            "Authorization": headers["Authorization"],
+            "X-Csrf-Token": ct0,
+            "X-Twitter-Active-User": "yes",
+            "X-Twitter-Auth-Type": "OAuth2Session",
+        })
+
+        for handle in accounts:
+            try:
+                user_id = await asyncio.to_thread(
+                    _sync_user_id, session, handle
+                )
+                if not user_id:
+                    logger.debug(f"Twitter @{handle}: 找不到用户（可能改名或被封）")
+                    continue
+                tweets = await asyncio.to_thread(
+                    _sync_user_tweets, session, user_id, per_account_fetch
+                )
+
+                kept = 0
+                for tw in tweets:
+                    if kept >= max_keep:
+                        break
+                    legacy = tw.get("legacy", {}) or {}
+                    created = legacy.get("created_at", "")
+                    if not created:
                         continue
-                    tweets = await self._user_tweets(client, user_id, per_account_fetch)
+                    try:
+                        pub = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
+                    except Exception:
+                        continue
+                    if pub < cutoff:
+                        continue
 
-                    kept = 0
-                    for tw in tweets:
-                        if kept >= max_keep:
-                            break
-                        legacy = tw.get("legacy", {}) or {}
-                        created = legacy.get("created_at", "")
-                        if not created:
-                            continue
-                        try:
-                            pub = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
-                        except Exception:
-                            continue
-                        if pub < cutoff:
-                            continue
+                    text = (legacy.get("full_text") or "").strip()
+                    if not text or len(text) < min_chars:
+                        continue
+                    if skip_retweets and text.startswith("RT @"):
+                        continue
+                    if skip_replies and legacy.get("in_reply_to_status_id_str"):
+                        continue
 
-                        text = (legacy.get("full_text") or "").strip()
-                        if not text or len(text) < min_chars:
-                            continue
-                        if skip_retweets and text.startswith("RT @"):
-                            continue
-                        if skip_replies and legacy.get("in_reply_to_status_id_str"):
-                            continue
-
-                        tid = tw.get("rest_id", "") or legacy.get("id_str", "")
-                        url = f"https://x.com/{handle}/status/{tid}"
-                        score = self.keyword_score(text, keywords)
-                        items.append(
-                            ContentItem(
-                                title=text[:150],
-                                url=url,
-                                summary=text[:1000],
-                                # 推文本身就是全文，省掉一次抓取（x.com 也抓不到）
-                                full_text=text,
-                                source="twitter",
-                                source_name=f"@{handle}",
-                                published=pub,
-                                relevance_score=score,
-                            )
+                    tid = tw.get("rest_id", "") or legacy.get("id_str", "")
+                    url = f"https://x.com/{handle}/status/{tid}"
+                    score = self.keyword_score(text, keywords)
+                    items.append(
+                        ContentItem(
+                            title=text[:150],
+                            url=url,
+                            summary=text[:1000],
+                            full_text=text,
+                            source="twitter",
+                            source_name=f"@{handle}",
+                            published=pub,
+                            relevance_score=score,
                         )
-                        kept += 1
-                    ok += 1
-                    if kept:
-                        logger.debug(f"Twitter @{handle}: {kept} 条")
-                except Exception as e:
-                    logger.warning(f"Twitter @{handle} 失败: {str(e)[:100]}")
-                await asyncio.sleep(gap)
+                    )
+                    kept += 1
+                ok += 1
+                if kept:
+                    logger.debug(f"Twitter @{handle}: {kept} 条")
+            except Exception as e:
+                logger.warning(f"Twitter @{handle} 失败: {str(e)[:100]}")
+            await asyncio.sleep(gap)
 
         logger.info(f"Twitter GraphQL: {ok}/{len(accounts)} 个账号成功 → {len(items)} 条")
         return items
