@@ -114,3 +114,53 @@ class OpportunityEngine:
         )
         # per_region 只是安全护栏，不是硬目标；优质内容不封顶
         return kept[:per_region]
+
+
+# ============================================================
+# 竞争热度（软信号）：高频曝光 ≠ 硬杀
+# ============================================================
+# 用户判断（2026-08-11）：一个机会在互联网上被反复提及 → 多半已是红海、
+# 周围卖铲子内容扎堆 → 对新人不是好机会。但「高频」是软信号，不是「该删」：
+#   · 高频也可能=被多人验证真实、仍可行（比如小红书接商单）
+#   · 系统只能测「我们这几个源里提了几次」，不是真正的全网曝光频次
+# 所以做成：升温和红海都只「降权 + 标注」，绝不改动原始 startup_index，
+# 原始分仍用于硬门槛（min_startup_index / 溢池 quality_threshold-1），
+# 因此红海机会不会被降权间接「硬删」，只会沉到后面、超 10 条上限时先被溢池延后。
+RED_OCEAN_REPEAT = 3      # 跨天出现 ≥3 次 → 红海
+RED_OCEAN_CORRO = 4       # 不同来源 ≥4 个 → 红海
+WARM_REPEAT = 2           # 跨天出现 ≥2 次 → 升温
+WARM_CORRO = 3            # 不同来源 ≥3 个 → 升温
+PENALTY_RED = 2           # 红海：启动指数排序时扣 2
+PENALTY_WARM = 1          # 升温：启动指数排序时扣 1
+
+
+def competition_heat(it: ContentItem) -> int:
+    """0=低 1=升温 2=红海。由跨天出现次数 + 不同来源数共同决定。"""
+    rc = getattr(it, "repeat_count", 0) or 0
+    cb = getattr(it, "corroborations", 0) or 0
+    if rc >= RED_OCEAN_REPEAT or cb >= RED_OCEAN_CORRO:
+        return 2
+    if rc >= WARM_REPEAT or cb >= WARM_CORRO:
+        return 1
+    return 0
+
+
+def heat_penalty(it: ContentItem) -> int:
+    return {2: PENALTY_RED, 1: PENALTY_WARM, 0: 0}[competition_heat(it)]
+
+
+def effective_index(it: ContentItem) -> int:
+    """降权后的「有效启动指数」，只用于排序/限流；硬门槛仍看原始 startup_index。"""
+    return max(1, (getattr(it, "startup_index", 0) or 0) - heat_penalty(it))
+
+
+def apply_competition_heat(items: list[ContentItem]) -> None:
+    """就地给一批机会打上竞争热度软标记（heat / red_ocean / heat_penalty）。
+
+    幂等：重复调用结果一致。
+    """
+    for it in items:
+        h = competition_heat(it)
+        it.competition_heat = h
+        it.red_ocean = h == 2
+        it.heat_penalty = heat_penalty(it)

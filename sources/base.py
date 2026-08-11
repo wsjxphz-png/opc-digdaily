@@ -54,6 +54,11 @@ class ContentItem:
     corroborations: int = 0        # 被多少个不同来源印证过
     first_seen: str = ""           # 首次出现日期 YYYY-MM-DD
 
+    # 竞争热度软信号（用户 2026-08-11）：高频≠硬杀，只降权+标注
+    competition_heat: int = 0       # 0=低 1=升温 2=红海
+    red_ocean: bool = False         # 高频红海标记：仅降权+标注，不硬杀
+    heat_penalty: int = 0           # 红海降权分值（从启动指数扣，仅参与排序）
+
     ai_processed: bool = False # 是否经过 AI 处理
 
     def dict_key(self) -> str:

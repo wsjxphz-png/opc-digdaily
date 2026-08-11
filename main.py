@@ -37,7 +37,7 @@ from sources.enricher import ContentEnricher
 from operators import OperatorRoster
 from teardown import TeardownEngine
 from discovery import DiscoveryEngine
-from opportunity import OpportunityEngine
+from opportunity import OpportunityEngine, apply_competition_heat
 from library import OpportunityLibrary
 from feedback import FeedbackCollector, PreferenceProfile
 from seed_facts import apply_seeds
@@ -524,6 +524,12 @@ class DailyOpportunityBot:
                 logger.info(self.library.stats())
             except Exception as e:
                 logger.exception(f"机会库/反馈处理异常（已跳过，不影响推送）: {e}")
+
+        # ── 竞争热度软信号：高频红海降权 + 标注（不硬杀）──
+        # 必须在 library.annotate 之后（repeat_count/corroborations 此时才就位）
+        if dom_opps or intl_opps:
+            apply_competition_heat(dom_opps)
+            apply_competition_heat(intl_opps)
 
         # ── 质量溢池：合并昨日滞留，限制每日推送 ≤ 10 条 ──
         total_before_pool = len(dom_opps) + len(intl_opps)

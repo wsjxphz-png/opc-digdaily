@@ -277,7 +277,7 @@ class FeishuPusher:
         """「本周风向」：跨天机会库里近期反复出现的主题（多来源印证 = 强信号）。"""
         if not recurring:
             return []
-        lines = ["**🔁 本周反复出现的方向**（同一件事被不同来源、在不同天里反复讲到，可信度更高）"]
+        lines = ["**🔁 本周反复出现的方向**（同一件事被不同来源、在不同天里反复讲到，说明被多人验证真实；但反复出现也可能已偏红海，下面的新机会往往更蓝海）"]
         for r in recurring:
             lines.append(
                 f"· {r.get('topic', '')} — 第 {r.get('times', 1)} 次出现"
@@ -537,13 +537,15 @@ class FeishuPusher:
         })
 
         top_score = (
-            max((getattr(it, "startup_index", 0) or 0) for it in items) if items else 0
+            max((getattr(it, "startup_index", 0) or 0) - (getattr(it, "heat_penalty", 0) or 0)
+                for it in items) if items else 0
         )
 
         for j, item in enumerate(items):
             i = start_index + j  # 全卡序号
             startup_index = getattr(item, "startup_index", 0) or 0
-            is_top = startup_index >= top_score and top_score >= 7
+            eff_index = startup_index - (getattr(item, "heat_penalty", 0) or 0)
+            is_top = eff_index >= top_score and top_score >= 7
 
             original_title = item.title or ""
             translation = item.translation or ""
@@ -637,6 +639,13 @@ class FeishuPusher:
                 credit_parts.append(f"✔️ {corro} 个来源印证")
             if credit_parts:
                 md_lines.append(" · ".join(credit_parts))
+
+            # --- 竞争热度（软信号：红海降权 + 标注，不硬杀）---
+            if getattr(item, "red_ocean", False):
+                md_lines.append(
+                    "⚠️ 竞争红海：近期被反复提及，周围卖铲子内容可能扎堆；"
+                    "新手进场先想清楚差异化再动手"
+                )
 
             # --- 来源 ---
             published_str = self._time_str(item.published) if item.published else ""

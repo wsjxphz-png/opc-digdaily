@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Optional
 
 from sources.base import ContentItem
+from opportunity import effective_index
 
 logger = logging.getLogger(__name__)
 
@@ -84,9 +85,9 @@ class OverflowPool:
 
         all_items = list(seen.values())
 
-        # 3. 按启动指数降序排列
+        # 3. 按「降权后」启动指数降序排列（红海机会软降权，但不改硬门槛）
         all_items.sort(
-            key=lambda it: (getattr(it, "startup_index", 0) or 0),
+            key=lambda it: (effective_index(it),),
             reverse=True,
         )
 
