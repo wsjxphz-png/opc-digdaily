@@ -97,11 +97,12 @@ class ChineseSearchSource(BaseSource):
     async def _fetch_duckduckgo(
         self, client: httpx.AsyncClient, query: str, limit: int
     ) -> list[ContentItem]:
-        """DuckDuckGo HTML 搜索（202 也算成功，部分返回内容）。"""
+        """DuckDuckGo lite 搜索（html 端点已失效，切 lite 端点）。"""
         import asyncio as aio
-        url = f"https://html.duckduckgo.com/html/?q={quote(query)}"
+        url = f"https://lite.duckduckgo.com/lite/?q={quote(query)}"
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         for attempt in range(3):
-            resp = await client.get(url)
+            resp = await client.get(url, headers=headers)
             if resp.status_code in (200, 202):
                 items = self._parse_ddg_html(resp.text, limit)
                 if items:
@@ -147,28 +148,28 @@ class ChineseSearchSource(BaseSource):
         return href
 
     def _parse_ddg_html(self, html: str, limit: int) -> list[ContentItem]:
-        """解析 DuckDuckGo HTML 搜索结果（2024+ 结构：result__a=标题，result__snippet=摘要）。"""
+        """解析 DuckDuckGo lite 搜索结果（class='result-link' 含标题/链接）。"""
         items = []
-        title_re = re.compile(
-            r'<a[^>]*class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', re.DOTALL
-        )
-        snippet_re = re.compile(
-            r'<a[^>]*class="result__snippet"[^>]*>(.*?)</a>', re.DOTALL
-        )
-        titles = title_re.findall(html)
+        # lite 端点 result-link 标签包含 id/href/class，属性顺序不固定
+        tag_re = re.compile(r"<a\s[^>]*class=['\"]result-link['\"][^>]*>(.*?)</a>", re.DOTALL)
+        href_re = re.compile(r"""href=['"]([^'"]+)['"]""")
+        snippet_re = re.compile(r"<td\s+class='result-snippet'>\s*(.*?)\s*</td>", re.DOTALL)
+
         snippets = snippet_re.findall(html)
-        n = min(len(titles), limit)
-        for i in range(n):
-            href_raw, title_html = titles[i]
-            link = self._ddg_real_url(href_raw)
-            title = re.sub(r"<[^>]+>", "", title_html).strip()
-            snippet = ""
-            if i < len(snippets):
-                snippet = re.sub(r"<[^>]+>", "", snippets[i]).strip()[:300]
+
+        for i, tag_html in enumerate(tag_re.finditer(html)):
+            full = tag_html.group(0)  # 完整 <a ...>...</a>
+            title = tag_html.group(1)  # 标签内文本
+            title = re.sub(r"<[^>]+>", "", title).strip()
+            hm = href_re.search(full)
+            link = self._ddg_real_url(hm.group(1)) if hm else ""
             if not link or not title:
                 continue
             if any(ex in link for ex in EXCLUDE_DOMAINS):
                 continue
+            snippet = ""
+            if i < len(snippets):
+                snippet = re.sub(r"<[^>]+>", "", snippets[i]).strip()[:300]
             items.append(ContentItem(
                 title=title,
                 url=link,
@@ -177,6 +178,8 @@ class ChineseSearchSource(BaseSource):
                 source_name="中文搜索",
                 published=datetime.now(timezone.utc),
             ))
+            if len(items) >= limit:
+                break
         return items
 
     def _parse_bing_html(self, html: str, limit: int) -> list[ContentItem]:
