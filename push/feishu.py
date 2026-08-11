@@ -323,10 +323,6 @@ class FeishuPusher:
         elements.append(self._footer_note())
         return {"config": {"wide_screen_mode": True}, "header": header, "elements": elements}
 
-    # 兼容别名（历史方法名）
-    async def push_dual_report(self, domestic, international, date_str) -> bool:
-        return await self.push_opportunities(domestic, international, date_str)
-
     # ================================================================
     # 内容源侦察兵：新挖掘到的可追更内容源（公众号）
     # ================================================================

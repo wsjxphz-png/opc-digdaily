@@ -230,69 +230,7 @@ domestic:
         - name: "少数派"
           url: "https://sspai.com/feed"
 
-    # ▸ 公开 RSSHub 节点（知乎日报/V2EX 等）
-    #   已按用户反馈关闭：知乎日报/V2EX 偏资讯，产不出赚钱实操案例，
-    #   且 RSSHub 海外节点对中文路由不稳定。国内赚钱案例改由公众号搜索覆盖。
-    rsshub:
-      enabled: false
-      mirrors:
-        - "https://rsshub.rssforever.com"
-        - "https://hub.slarker.me"
-      timeout: 30
-      routes:
-        - route: "/zhihu/daily"
-          label: "知乎日报"
-        - route: "/v2ex/topics/hot"
-          label: "V2EX 热榜"
-
-    # ▸ 公众号搜索（搜狗微信）：国内最优质、最直接的「一人公司/副业/赚钱」来源
-    #   无需登录即可搜到真实公众号文章，URL 经 JS 跳转解析为 mp.weixin 真实链接，
-    #   由 ContentEnricher 用浏览器 UA 抓全文。query_delay 避反爬。
-    weixin_search:
-      enabled: false      # 已弃用：泛关键词搜触发 DDG 限流；改用 weixin_targets（按号名搜）
-      engine: "sogou"
-      limit: 6              # 每个搜索词取前 6 条
-      max_total: 20         # 公众号源总数上限
-      query_delay: 3        # 词间延迟(秒)，避免被限流
-      queries:
-        - "一人公司 赚钱 案例 复盘"
-        - "副业 月入过万 实操 普通人"
-        - "公众号 变现 月入 真实 案例"
-        - "小红书 变现 案例 一个人"
-        - "知识付费 赚钱 真实 复盘"
-        - "自由职业 接单 赚钱 经验"
-        - "AI 副业 普通人 赚钱 实操"
-        - "不上班 赚钱 案例 一个人"
-        - "小本创业 赚钱 方法 经验"
-        - "个人IP 变现 案例 怎么做"
-        - "闲鱼 卖货 赚钱 实操 教程"
-        - "付费社群 变现 案例 单人"
-
-    # ▸ 公众号白名单（名单制定向轮询）：先定一批「写一人公司/OPC 最牛」或本身就是
-    #   牛逼 OPC / 一人公司的公众号，每天定点看它们发了什么新文章再筛。
-    #   比关键词搜索更稳、更对题（关键词搜偶发被搜狗反爬干到 0 条）。
-    #   名单由检索能力筛选得出，可随时增删。想换更稳的采集方式时，部署 WeWe-RSS
-    #   （GitHub: Longliveping/wewe-rss，基于微信读书，稳定不被限流）并把 rss_base_url
-    #   填上它的地址即可自动切换为 RSS 稳定路径。
-    weixin_whitelist:
-      enabled: false             # 已弃用：搜狗账号搜索被 wx_sh2 反爬；RSS 路径需部署 WeWe-RSS
-      limit_per_account: 3      # 每个账号取最新几篇
-      max_total: 30             # 白名单源总数上限
-      query_delay: 3            # 账号间延迟(秒)，避免被限流
-      rss_base_url: ""          # 留空=用搜狗账号搜索；填上 WeWe-RSS 地址则走稳定 RSS 路径
-      accounts:
-        # ▸ 本身就是一人公司 / 写《一人公司》的标杆
-        - "阿猫读书"              # 一人公司存活7年，《一人公司》作者，觉醒品牌创始人
-        - "findyi"               # 洋哥：超级个体、AI破局俱乐部，个人IP/副业破200万
-        # ▸ 副业 / 年入百万 / 真实搞钱复盘
-        - "临公子的后花园"        # 临公子：副业年收入7位数，职场+投资实操
-        - "林蔷七"                # 百万小富婆：打工/创业/理财/个人品牌四种方式年入百万
-        - "陈舟Amber"             # 小红书/视频号40w搞钱博主，低成本创业+自媒体实战
-        - "小羊车儿"              # 体制内裸辞，靠小红书年入百万
-        - "啡小沫"                # 轻资产创业达人，私域电商/副业实战
-        - "长颈鹿有钱途"          # 副业购入4套房产，独家副业渠道+干货
-
-    # ▸ 公众号目标号轮询（2026-08-08 启用，替代上面两个被墙的源）
+    # ▸ 公众号目标号轮询（将 weixin_search + weixin_whitelist 统一为此实现）（2026-08-08 启用，替代上面两个被墙的源）
     #   机制：维护一份「目标公众号列表」(storage/weixin_targets.json)，每天推送时按号名
     #   用 Baidu `site:mp.weixin.qq.com "号名"` 搜索 → 跟进跳转拿真实文章 → 抓页验证作者
     #   昵称是否真匹配（号名≠作者显示名时以 weixin_id 验证，如「临公子的后花园」作者=「临公子」）。
@@ -374,10 +312,6 @@ domestic:
         - "小本创业"
         - "知识付费"
 
-    reddit:
-      enabled: false
-    youtube:
-      enabled: false
 
 
 # ============================================================

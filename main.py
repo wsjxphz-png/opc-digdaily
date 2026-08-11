@@ -378,13 +378,7 @@ class DailyOpportunityBot:
                     discovered_sources = await scout.scout(
                         self.ai, client, domestic_items
                     )
-                # 注入到白名单 accounts（次日即轮询；注册表也会持久化）
-                wl_cfg = self.config["domestic"]["sources"]["weixin_whitelist"]
-                existing = set(wl_cfg.get("accounts", []))
-                for s in discovered_sources:
-                    if s.name not in existing:
-                        wl_cfg.setdefault("accounts", []).append(s.name)
-                        existing.add(s.name)
+                # 新源已持久化到 scouted_sources.json，weixin_targets 通过 _merge_dynamic 读取
                 if discovered_sources:
                     logger.info(
                         "侦察兵新增 %d 个内容源并已注入白名单：%s",
@@ -543,9 +537,7 @@ class DailyOpportunityBot:
             )
             today_str = datetime.now(CST).strftime("%Y-%m-%d")
             pushed, overflowed = pool.decide(all_opps, today_str)
-            # 重新按 region 分拆
-            dom_opps = [it for it in pushed if it in dom_opps or getattr(it, "source_name", "") in [d.source_name for d in domestic_items[:1]]]
-            # 简化：track region via original list membership
+            # 按 region 分拆：用 URL 集合匹配
             dom_urls = set(getattr(it, "url", "") for it in domestic_items)
             dom_opps = [it for it in pushed if getattr(it, "url", "") in dom_urls]
             intl_opps = [it for it in pushed if getattr(it, "url", "") not in dom_urls]
@@ -674,7 +666,7 @@ def run_daemon():
     import schedule
     config = load_config()
     sched = config.get("schedule", {})
-    hour = sched.get("hour", 9)
+    hour = sched.get("hour", 20)
     minute = sched.get("minute", 0)
 
     logger.info(f"定时服务已启动，每天 {hour:02d}:{minute:02d} (北京时间) 执行")
