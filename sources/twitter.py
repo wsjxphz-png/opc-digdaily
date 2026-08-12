@@ -246,6 +246,11 @@ class TwitterSource(BaseSource):
                     tid = tw.get("rest_id", "") or legacy.get("id_str", "")
                     url = f"https://x.com/{handle}/status/{tid}"
                     score = self.keyword_score(text, keywords)
+                    eng = (
+                        int(legacy.get("favorite_count") or 0)
+                        + int(legacy.get("retweet_count") or 0)
+                        + int(legacy.get("reply_count") or 0)
+                    )
                     items.append(
                         ContentItem(
                             title=text[:150],
@@ -256,6 +261,7 @@ class TwitterSource(BaseSource):
                             source_name=f"@{handle}",
                             published=pub,
                             relevance_score=score,
+                            engagement=eng,
                         )
                     )
                     kept += 1

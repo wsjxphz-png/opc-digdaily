@@ -35,6 +35,7 @@ class ContentItem:
     authenticity: int = 0          # 真实性打分 1-5（1=纯卖课/卖铲子）
     practical_steps: str = ""      # 核心实操步骤拆解（去除废话后）
     verdict: str = ""              # 结论: "可复刻的真机会" / "卖噱头/卖铲子"
+    engagement: int = 0            # 客观互动量（赞+转+评，Twitter 有，其余源为 0）——数据锚定用
 
     # 客观打分（scoring.py 用固定公式算出，AI 只提供 1-5 的事实型子因子）
     score_factors: dict = field(default_factory=dict)  # 全部子因子原始分

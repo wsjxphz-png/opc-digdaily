@@ -52,12 +52,22 @@ _NOISE = [
 # 数字留着反而会把两条同主题的机会拉开距离。
 _PRICE_RE = re.compile(r"[¥$￥]?\d+(?:\.\d+)?\s*(?:元|块|刀|美元|美金|万|千|[kw])?")
 
+# 同义/缩写归一：语义相同但用词不同的机会归并到同一主题（2026-08-13 聚类增强）
+_SYNONYMS = [
+    ("搜索引擎优化", "seo"), ("人工智能", "ai"), ("大模型", "ai"),
+    ("无代码", "nocode"), ("零代码", "nocode"), ("不写代码", "nocode"),
+    ("播客", "podcast"), ("时事通讯", "newsletter"), ("邮件订阅", "newsletter"),
+    ("电商", "ecommerce"), ("跨境电商", "ecommerce"),
+]
+
 
 def _norm(text: str) -> str:
-    """归一化：去金额数字、去噪声词、去标点空白、转小写。"""
+    """归一化：先同义/缩写归一，再去金额数字、去噪声词、去标点空白、转小写。"""
     if not text:
         return ""
     s = str(text).lower()
+    for full, short in _SYNONYMS:
+        s = s.replace(full, short)
     s = _PRICE_RE.sub("", s)
     for w in _NOISE:
         s = s.replace(w, "")
