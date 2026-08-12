@@ -74,16 +74,30 @@ class RSSSource(BaseSource):
         logger.info(f"RSS: 获取到 {len(items)} 条")
         return items
 
-    async def _fetch_feed(self, url: str):
-        """用浏览器 UA 请求 RSS URL，成功则用 feedparser 解析文本。"""
-        async with httpx.AsyncClient(
-            timeout=20, follow_redirects=True,
-            headers={"User-Agent": BROWSER_UA},
-        ) as client:
-            resp = await client.get(url)
-            resp.raise_for_status()
-            loop = asyncio.get_event_loop()
-            return await loop.run_in_executor(None, feedparser.parse, resp.text)
+    async def _fetch_feed(self, url: str, retries: int = 3, backoff: float = 2.0):
+        """用浏览器 UA 请求 RSS URL，成功则用 feedparser 解析文本。
+
+        加轻量重试：RSS 托管源偶发超时 / 5xx，单次失败就丢一整天源太脆弱，
+        重试可吸收云端瞬时网络抖动（内容源抓取失败的主要来源之一）。
+        """
+        last_exc: Exception | None = None
+        for attempt in range(1, retries + 1):
+            try:
+                async with httpx.AsyncClient(
+                    timeout=20, follow_redirects=True,
+                    headers={"User-Agent": BROWSER_UA},
+                ) as client:
+                    resp = await client.get(url)
+                    resp.raise_for_status()
+                    loop = asyncio.get_event_loop()
+                    return await loop.run_in_executor(None, feedparser.parse, resp.text)
+            except Exception as e:
+                last_exc = e
+                logger.warning(f"RSS {url} 第 {attempt}/{retries} 次获取失败: {e}")
+                if attempt < retries:
+                    await asyncio.sleep(backoff * attempt)
+        logger.error(f"RSS {url} 重试 {retries} 次仍失败: {last_exc}")
+        raise last_exc
 
     @staticmethod
     def _strip_html(text: str) -> str:
