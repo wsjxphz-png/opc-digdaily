@@ -604,9 +604,24 @@ international:
 
     reddit:
       enabled: true
-      sort: "hot"
-      limit: 5
+      # Reddit 现仅 hot .rss 可用（new/.rss 与 JSON API 均已失效/403），
+      # 靠「选高频副业/内容变现 sub」保证每天有新热门帖，而非 sort 参数。
+      limit: 10
       subreddits:
+        # ▸ 高频活跃（每日新帖，2026-08-13 新增，专攻「国际5」；方向=一人公司四大类，非技术）
+        - "sidehustle"
+        - "Fiverr"
+        - "Upwork"
+        - "copywriting"
+        - "SEO"
+        - "youtubers"
+        - "PartneredYoutube"
+        - "podcasting"
+        - "Emailmarketing"
+        - "artbusiness"
+        - "Etsy"
+        - "content_marketing"
+        # ▸ 原有（电商/小生意/自由职业，保留）
         - "Gumroad"
         - "EtsySellers"
         - "printondemand"

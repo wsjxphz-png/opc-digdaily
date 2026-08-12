@@ -80,8 +80,9 @@ class YouTubeSource(BaseSource):
                         ts = mktime(entry.published_parsed)
                         published = datetime.fromtimestamp(ts, tz=timezone.utc)
 
-                    # 只取最近 3 天的
-                    if published and published < datetime.now(timezone.utc) - timedelta(days=3):
+                    # 只取最近 14 天的（频道多为周更，3 天窗口会把新视频全砍掉；
+                    # 跨天重复由 HistoryManager 的 URL 去重兜底，这里只滤掉过老的）
+                    if published and published < datetime.now(timezone.utc) - timedelta(days=14):
                         continue
 
                     full_text = f"{title}\n{desc}"
