@@ -7,7 +7,7 @@
   2. teardown._score_business_logic  同一道 LLM 返回的 dbs 因子 → 体检 + 分档（集成）
   3. Teardown / Operator           commercial_health 字段的序列化往返
   4. operators.get_due_for_teardown   skip 不进池、warn 排后
-  5. push.feishu._build_teardown_section  卡片渲染「🩺 商业体检」+ 闸门警告
+  5. push.feishu._build_teardown_section  卡片渲染「🩺 适合你启动 X/10」总分（分项分与闸门明细不再前台展示）
 
 运行： cd daily-opportunity-bot && .venv/Scripts/python tests/test_operator_health.py
 """
@@ -158,10 +158,14 @@ def test_feishu_renders_health():
         e.get("text", {}).get("content", "") for e in elements
         if e.get("tag") == "div"
     )
-    assert "商业体检" in text
-    assert "72" in text and "65" in text
-    assert "商业底层逻辑存疑" in text
-    assert "印钞机检验未过" in text
+    # 卡片已精简：拆解卡只渲染「🩺 适合你启动 X/10」总分
+    assert "操盘手拆解" in text
+    assert "🩺 适合你启动" in text
+    assert "7/10" in text
+    # 分项分（商业化/可行性）与闸门明细不再前台展示（内部仍生成，用于排序/持久化）
+    assert "72" not in text
+    assert "65" not in text
+    assert "印钞机检验未过" not in text
 
 
 if __name__ == "__main__":
