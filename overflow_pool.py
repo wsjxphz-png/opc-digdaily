@@ -158,7 +158,6 @@ class OverflowPool:
                 "difficulty": getattr(it, "difficulty", ""),
                 "practical_steps": getattr(it, "practical_steps", ""),
                 "opportunity_hint": getattr(it, "opportunity_hint", ""),
-                "xhs_title": getattr(it, "xhs_title", ""),
                 "source_name": getattr(it, "source_name", "") or getattr(it, "source", ""),
                 "copy_template": getattr(it, "copy_template", None) or {},
                 "score_reason": getattr(it, "score_reason", ""),
@@ -188,7 +187,6 @@ class OverflowPool:
         it.difficulty = d.get("difficulty", "")
         it.practical_steps = d.get("practical_steps", "")
         it.opportunity_hint = d.get("opportunity_hint", "")
-        it.xhs_title = d.get("xhs_title", "")
         it.source_name = d.get("source_name", "")
         it.copy_template = d.get("copy_template", {})
         it.score_reason = d.get("score_reason", "")

@@ -672,11 +672,6 @@ class FeishuPusher:
                 if tpl.get("cost"):
                     md_lines.append(f"· 花了多长时间、多少钱：{tpl['cost']}")
 
-            # --- 小红书标题（AI 生成、可直接发，≤20字）---
-            xhs_title = getattr(item, "xhs_title", "") or ""
-            if xhs_title:
-                md_lines.append(f"📕 小红书标题：{xhs_title}")
-
             # --- 可信度 / 重复出现 ---
             repeat = getattr(item, "repeat_count", 0) or 0
             corro = getattr(item, "corroborations", 0) or 0

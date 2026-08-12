@@ -263,12 +263,6 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 - 留悬念、不直接给答案（用「为什么」不用「证明」）；能直接念出口、不绕口；独立成立、不假设读者看过标题。
 - 例：「素人靠卖 Excel 模板月入过万——他怎么找的第一批客户？」
 
-### dbs-xhs-title 小红书标题公式（作用于 xhs_title 字段）
-- 给每条真机会生成一个「可直接发到小红书」的标题，单独放在 xhs_title 字段。
-- 硬规则：≤20 字（含标点）；留悬念不说答案；用普世词（赚钱/不上班/副业）替换行业术语以扩大话题；击中真实痛点（读者真正想要的，不是表象概念）；张力至少满足 2 项（对比/数字/悬念/冲突/时间承诺/结果承诺）。
-- 可套用的爆款公式类型：认知冲突、数字锚定、结果承诺、身份代入、场景条件；不要硬套不合适的类型。
-- 例：「不会写代码，靠卖模板月入过万？」 / 「普通人做这个副业，3 个月赚到第一笔钱」
-
 ---
 
 ## 输出格式
@@ -288,7 +282,6 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "practical_steps": "1. 交付物：xxx（什么东西、给谁用）\n2. 前5个客户：xxx（具体渠道、方法）\n3. 工具链：xxx（每个陌生工具名后加括号解释一句它是什么，如「Gumroad（卖数字产品的平台）」）",
   "difficulty": "零门槛",
   "quality_flag": "⭐",
-  "xhs_title": "不会写代码，靠卖模板月入过万？",
   "factors": {
     "urgency": 4, "pricing": 4, "margin": 4, "repeat": 3,
     "price_ladder": 3, "revenue_proof": 4, "market_size": 3, "evergreen": 4,
@@ -348,7 +341,6 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
    · practical_steps：三部分用\\n分隔，每部分≤30字
    · copy_template 各字段：who/what/first_step ≤30字，first_prompt ≤60字，cost ≤25字
    · relevant=false 的 reason：≤25字
-13. relevant=true 的条目必须包含 xhs_title 字段：一条 ≤20 字的小红书标题（套用 dbs-xhs-title 爆款公式，留悬念/扩大话题/击中真实痛点），直接可发
 """
 
 BATCH_SYSTEM_PROMPT = BATCH_SYSTEM_PROMPT.replace("{FACTOR_RUBRIC}", FACTOR_RUBRIC)
@@ -517,7 +509,6 @@ class AIProcessor:
                 item.translation = r.get("translation", "")
                 item.ai_summary = r.get("summary", "")
                 item.opportunity_hint = r.get("opportunity_hint", "")
-                item.xhs_title = (r.get("xhs_title") or "").strip()
                 item.difficulty = r.get("difficulty", "")
                 item.quality_flag = r.get("quality_flag", "")
                 # 新评估维度

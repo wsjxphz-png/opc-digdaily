@@ -388,26 +388,6 @@ async def dryrun_tests():
     sg = json.dumps(card_g, ensure_ascii=False)
     check("卡片渲染 dbs 检验未过项（⚠️）", "⚠️" in sg, sg[:200])
 
-    # --- dbs-xhs-title：每条机会应带可直接发的小红书标题（📕）---
-    it_xhs = _mk("宝妈", "AI做模板卖给老外", idx=8)
-    it_xhs.ai_summary = "用Canva做模板挂独立站，零门槛可抄"
-    it_xhs.code_dependency, it_xhs.authenticity = 1, 4
-    it_xhs.xhs_title = "普通人如何用AI做模板月入3000刀？"
-    scoring.apply_to_item(it_xhs, _all(4))
-    card_x = p2._build_dual_card([it_xhs], [], "2026-08-09", 1)
-    sx = json.dumps(card_x, ensure_ascii=False)
-    check("卡片渲染小红书标题（📕）", "📕" in sx and "小红书标题" in sx, sx[:200])
-    check("小红书标题含 AI 生成内容", "月入3000刀" in sx)
-
-    # 无 xhs_title 时不渲染 📕
-    it_nox = _mk("本地店", "代运营", idx=5)
-    it_nox.ai_summary = "摘要"
-    it_nox.code_dependency, it_nox.authenticity = 1, 4
-    scoring.apply_to_item(it_nox, _all(4))
-    card_n = p2._build_dual_card([it_nox], [], "2026-08-09", 1)
-    sn = json.dumps(card_n, ensure_ascii=False)
-    check("无小红书标题时不渲染 📕", "📕" not in sn)
-
 
 # ============================================================
 # 5. 大批量自动分块（process 不再因截断丢整批）
