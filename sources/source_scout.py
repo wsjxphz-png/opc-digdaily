@@ -72,6 +72,8 @@ SCOUT_SYSTEM_PROMPT = """你是一个「内容源策展人」，为一档名为�
 - 明显不符/该排除 → 1-2（verdict=reject）
 
 ## 输出格式（严格 JSON 数组，不要 markdown 包裹）
+- 字符串值里若需引用，一律用中文引号「」或“”包裹；严禁在 JSON 字符串值里使用未转义的双引号，否则 JSON 解析失败、当天侦察归零。
+- 字段值不要带尾随逗号；不要输出 ```json 围栏，也不要在 JSON 前后加解释文字。
 对每条候选返回：
 {
   "name": "账号名（与候选一致，不要翻译）",
@@ -308,35 +310,14 @@ class SourceScout:
 
     @staticmethod
     def _parse(raw: str) -> list[dict]:
-        """解析 LLM 返回的 JSON 数组（兼容 ```json 包裹 / 裸数组 / 单对象）。"""
-        if not raw:
-            return []
-        raw = raw.strip()
-        if raw.startswith("```"):
-            raw = re.sub(r"^```(?:json)?\s*", "", raw)
-            raw = re.sub(r"\s*```$", "", raw).strip()
-        try:
-            data = json.loads(raw)
-        except json.JSONDecodeError:
-            data = None
-        if isinstance(data, list):
-            return data
-        if isinstance(data, dict):
-            return [data]
+        """解析 LLM 返回的 JSON 数组（兼容 ```json 包裹 / 裸数组 / 单对象 / 未转义引号）。"""
+        import jsonfix
 
-        m = re.search(r"\[.*\]", raw, re.DOTALL)
-        if m:
-            try:
-                return json.loads(m.group())
-            except json.JSONDecodeError:
-                pass
-        m2 = re.search(r"\{.*\}", raw, re.DOTALL)
-        if m2:
-            try:
-                return [json.loads(m2.group())]
-            except json.JSONDecodeError:
-                pass
-        logger.error(f"侦察兵结果解析失败: {raw[:300]}")
+        obj = jsonfix.parse_llm_json(raw)
+        if isinstance(obj, list):
+            return obj
+        if isinstance(obj, dict):
+            return [obj]
         return []
 
     # ── 对外查询 ─────────────────────────────────────────────

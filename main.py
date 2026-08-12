@@ -533,7 +533,7 @@ class DailyOpportunityBot:
                 OVERFLOW_PATH,
                 daily_cap=self.daily_push_cap,
                 quality_threshold=self.quality_threshold,
-                max_age_days=int(opp_cfg.get("overflow_days", 3)),
+                max_age_days=int(self.config.get("opportunity", {}).get("overflow_days", 3)),
             )
             today_str = datetime.now(CST).strftime("%Y-%m-%d")
             pushed, overflowed = pool.decide(all_opps, today_str)

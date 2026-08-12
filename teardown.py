@@ -151,7 +151,7 @@ SaaS→「在线工具/软件」；MRR→「每月收入」；SEO→「让内容
 - tech_barrier: 字符串「无」/「低」/「中」/「高」，含义见铁律第 5 条
 - doable: 给非程序员的一句话结论：「能」/「降级可做（用无代码工具替代）」/「做不到（需写代码）」
 - 其他字段均为中文大白话字符串
-- 严格只返回 JSON 对象，不要额外文字"""
+- 严格只返回 JSON 对象，不要额外文字。字符串值内的引用一律用中文引号「」或“”，严禁在 JSON 字符串值里使用未转义的双引号，字段值不要带尾随逗号。"""
 TEARDOWN_SYSTEM_PROMPT = TEARDOWN_SYSTEM_PROMPT + DBS_PROMPT_SUFFIX
 
 
@@ -199,7 +199,7 @@ SaaS→「在线工具/软件」；MRR→「每月收入」；SEO→「让内容
 - replicability: 整数 1-5，给「完全不会写代码的人」的复制难度反向分（5=极易照做，1=基本做不到）
 - tech_barrier: 字符串「无」/「低」/「中」/「高」
 - doable: 「能」/「降级可做（用无代码工具替代）」/「做不到（需写代码）」
-- 严格只返回 JSON 对象，不要额外文字"""
+- 严格只返回 JSON 对象，不要额外文字。字符串值内的引用一律用中文引号「」或“”，严禁在 JSON 字符串值里使用未转义的双引号，字段值不要带尾随逗号。"""
 REVISIT_SYSTEM_PROMPT = REVISIT_SYSTEM_PROMPT + DBS_PROMPT_SUFFIX
 
 
@@ -481,30 +481,10 @@ class TeardownEngine:
 
     @staticmethod
     def _parse(raw: str) -> Optional[dict]:
-        raw = raw.strip()
-        if raw.startswith("```"):
-            raw = re.sub(r"^```(?:json)?\s*", "", raw)
-            raw = re.sub(r"\s*```$", "", raw).strip()
+        import jsonfix
 
-        def _to_dict(obj):
-            # 模型有时会返回数组（如 [{...}] 或 [{...},{...}]），取第一个对象
-            if isinstance(obj, list):
-                obj = obj[0] if obj else None
-            return obj if isinstance(obj, dict) else None
-
-        try:
-            data = json.loads(raw)
-        except json.JSONDecodeError:
-            data = None
-        d = _to_dict(data)
-        if d is not None:
-            return d
-
-        m = re.search(r"\{.*\}", raw, re.DOTALL)
-        if m:
-            try:
-                return _to_dict(json.loads(m.group()))
-            except json.JSONDecodeError:
-                pass
-        logger.error(f"拆解 JSON 解析失败: {raw[:300]}")
-        return None
+        obj = jsonfix.parse_llm_json(raw, fallback_to_list=False)
+        # 模型有时会返回数组（如 [{...}] 或 [{...},{...}]），取第一个对象
+        if isinstance(obj, list):
+            obj = obj[0] if obj else None
+        return obj if isinstance(obj, dict) else None

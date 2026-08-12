@@ -56,6 +56,8 @@ DISCOVERY_SYSTEM_PROMPT = """你是一个「新机会猎手」，专门在内容
 - 如果内容只是泛泛方法论或新闻 → 不是
 
 ## 输出格式（严格 JSON 数组，不要 markdown 包裹）
+- 字符串值里若需引用别人的话，一律用中文引号「」或“”包裹；**严禁在 JSON 字符串值里使用未转义的双引号（"），否则整个 JSON 会解析失败、当天发现归零**。
+- 所有字段值都是字符串，不要出现尾随逗号；不要输出 ```json 围栏，也不要在 JSON 前后加解释文字。
 对每条内容，返回：
 {
   "index": 0,
@@ -179,38 +181,12 @@ class DiscoveryEngine:
 
     @staticmethod
     def _parse(raw: str) -> list[dict]:
-        raw = raw.strip()
-        if raw.startswith("```"):
-            raw = re.sub(r"^```(?:json)?\s*", "", raw)
-            raw = re.sub(r"\s*```$", "", raw).strip()
+        import jsonfix
 
-        def _as_list(obj):
-            if isinstance(obj, list):
-                return obj
-            if isinstance(obj, dict):
-                return [obj]  # 模型有时直接返回单个对象而非数组
-            return []
-
-        try:
-            data = json.loads(raw)
-        except json.JSONDecodeError:
-            data = None
-        if isinstance(data, (list, dict)):
-            return _as_list(data)
-
-        # 尝试从文本提取数组
-        m = re.search(r"\[.*\]", raw, re.DOTALL)
-        if m:
-            try:
-                return _as_list(json.loads(m.group()))
-            except json.JSONDecodeError:
-                pass
-        # 尝试提取单个对象
-        m2 = re.search(r"\{.*\}", raw, re.DOTALL)
-        if m2:
-            try:
-                return _as_list(json.loads(m2.group()))
-            except json.JSONDecodeError:
-                pass
-        logger.error(f"发现结果解析失败: {raw[:300]}")
+        obj = jsonfix.parse_llm_json(raw)
+        # 模型有时返回 {"operators": [...]} 这类外层包裹
+        if isinstance(obj, dict) and "operators" in obj and isinstance(obj["operators"], list):
+            return obj["operators"]
+        if isinstance(obj, (list, dict)):
+            return obj if isinstance(obj, list) else [obj]
         return []

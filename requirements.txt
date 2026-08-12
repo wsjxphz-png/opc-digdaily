@@ -3,3 +3,4 @@ trafilatura>=1.12
 pyyaml>=6.0
 schedule>=1.2
 feedparser>=6.0
+json5>=0.9
