@@ -672,6 +672,11 @@ class FeishuPusher:
                 if tpl.get("cost"):
                     md_lines.append(f"· 花了多长时间、多少钱：{tpl['cost']}")
 
+            # --- 小红书标题（AI 生成、可直接发，≤20字）---
+            xhs_title = getattr(item, "xhs_title", "") or ""
+            if xhs_title:
+                md_lines.append(f"📕 小红书标题：{xhs_title}")
+
             # --- 可信度 / 重复出现 ---
             repeat = getattr(item, "repeat_count", 0) or 0
             corro = getattr(item, "corroborations", 0) or 0
@@ -684,6 +689,11 @@ class FeishuPusher:
                 credit_parts.append(f"✔️ {corro} 个来源印证")
             if credit_parts:
                 md_lines.append(" · ".join(credit_parts))
+
+            # --- dbs 检验未过项（最该让用户看到的"这条机会的短板"）---
+            gate_reason = getattr(item, "gate_reason", "") or ""
+            if gate_reason:
+                md_lines.append(f"⚠️ 注意甄别：{gate_reason}")
 
             # --- 竞争热度（软信号：红海降权 + 标注，不硬杀）---
             if getattr(item, "red_ocean", False):

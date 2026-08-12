@@ -371,8 +371,7 @@ async def dryrun_tests():
                   "first_seen": "2026-08-06", "best_startup_index": 8}]
     card = p2._build_dual_card([it], [], "2026-08-09", 1, recurring=recurring)
     s = json.dumps(card, ensure_ascii=False)
-    for kw, label in [("适合你启动", "启动指数"), ("商业化潜力", "商业化分"),
-                      ("可行性", "可行性分"), ("可抄模板", "可抄模板"),
+    for kw, label in [("适合你启动", "启动指数"), ("你该怎么抄", "你该怎么抄"),
                       ("第 3 次出现", "重复出现标注"), ("想做", "反馈按钮"),
                       ("本周反复出现", "本周风向")]:
         check(f"卡片包含{label}", kw in s)

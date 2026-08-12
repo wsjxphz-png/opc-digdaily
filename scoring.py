@@ -151,7 +151,6 @@ def compute(
     code_dependency: int = 3,
     authenticity: int = 3,
     hype: bool = False,
-    engagement: int = 0,
 ) -> dict:
     """
     核心公式。输入 AI 观察到的子因子分（1-5），输出三个可解释的数字。
@@ -183,12 +182,6 @@ def compute(
     commercial = _weighted(f, COMMERCIAL_FACTORS)
     feasibility = _weighted(f, FEASIBILITY_FACTORS)
     auth = _clamp(authenticity)
-
-    # ---- 数据锚定：客观互动量高 → 真实性下限至少 2（被大量人验证过，至少不是纯编造）----
-    # 只对 Twitter 这类有互动数据的源生效（engagement=0 的源跳过）；保守起见只抬到 2，
-    # 不把"互动高"当成"真机会"（标题党也可能高互动，那是 hype 维度的事）。
-    if engagement >= 100:
-        auth = max(auth, 2)
 
     # ---- dbs 公理4：流量 ≠ 收入 ----
     # 只有粉丝量/播放量、拿不出真金白银的收入证据 → 商业化潜力直接打折，
@@ -363,7 +356,6 @@ def apply_to_item(item, factors: dict) -> dict:
         code_dependency=getattr(item, "code_dependency", 3) or 3,
         authenticity=getattr(item, "authenticity", 3) or 3,
         hype=bool(getattr(item, "hype_flag", False)),
-        engagement=getattr(item, "engagement", 0) or 0,
     )
     item.score_factors = res["factors"]
     item.commercial_score = res["commercial"]
