@@ -103,13 +103,11 @@
 - Josh Kaufman《The Personal MBA》**十项经济性评估**（紧迫度 / 市场规模 / 定价潜力 / 交付成本 / 独特性 / 上市速度 / 前期投入 / 追加销售 / 长青度）
 - 独立创业圈的 **BB Score**（10 因子加权 0–100）
 
-最后你在卡片上看到三个数：
+最后你在卡片上看到**一个最该看的数**——「适合你启动指数」。商业化潜力、可行性两个分数仍由公式算出、在后台参与排序与「该不该推」的判断，但不再堆在卡片上，让每张卡一眼能扫完：
 
 | 指标 | 含义 |
 |------|------|
-| 💰 **商业化潜力** 0–100 | 这门生意本身值不值钱（跟你会不会做无关） |
-| 🛠 **可行性** 0–100 | 你这个不会写代码的人，能不能真的落地 |
-| 🎯 **适合你启动指数** 1–10 | 综合排序，一眼看出今天最该动手哪条 |
+| 🎯 **适合你启动指数** 1–10 | 综合排序，一眼看出今天最该动手哪条（9–10=今天最该抄 / 7–8=值得动手 / 5–6=可以看看 / <5=参考为主） |
 
 还有几条**一票压制**规则，防止总分虚高掩盖致命短板：
 
@@ -165,7 +163,7 @@
 
 ## 内容从哪来
 
-- **国内**：微信公众号（按号名定向监测更新）、B站、中文搜索、精选中文 RSS
+- **国内**：微信公众号（搜狗微信搜索发现 + 按号名定向监测更新）、中文搜索（DDG）、B站、精选中文 RSS（少数派 / Vista 等）
 - **国际**：Substack 系（dvassallo / tdinh / dickiebush / soloailab，靠本机代理抓取）+ Side Hustle Nation、My Wife Quit Her Job、Seth Godin、James Clear、Amy Porterfield 等非 Substack RSS，以及 Reddit、YouTube、X（推特）
 - **X（推特）**：走 X 网页端自身的接口抓取，需要配 `TWITTER_COOKIES`（见 `.env.example`）。**不配就自动跳过，不影响其它源。**
 - **侦察兵**：每天自动挖新的「写一人公司 / 本身是 OPC」的号，列入名单持续追更（这就是它"长大"的方式）
@@ -182,6 +180,10 @@
 - **国际源更稳，每天照样准时到**：Substack 系源保留（云端常被拦，故改成**在本机定时运行 + 走本机代理**抓取），同时补强了 Substack 之外的非技术源（Seth Godin、James Clear、Amy Porterfield、Smart Blogger 等），不再依赖 GitHub 云端。每天北京时间 20:00 准时推送到飞书群，国际案例不再经常空白。
 - **推送更"对你胃口"——产品 / 服务 / 高客单优先**：新增一条筛选规则——**低客单、纯卖时间 / 卖劳动力的机会会自动往后排**（让位给做产品、做服务、做产品化服务的内容）；但**高客单的个性化服务（例如高端咨询、定制交付，单笔 ≥2000 元）不会被误伤**，照样往前排。这是"宽进严出"：好内容都进池子，推送时再优中选优。
 - **后台清理**：删掉了一批写了但代码根本没读取的配置（包括之前让人误以为"每天只推 8 条"的 `push_max`）。现在上限说清楚：每个地区每天最多 15 条优质内容（命中硬过滤的不封顶，仅防极端失控）。
+- **卡片更聚焦（2026-08-11）**：推送卡片做减法——不再在卡片上堆分项分数，每张卡只突出一个最该看的数「适合你启动指数」，阅读更清爽；风险提示与可抄操作步骤保留并前置。
+- **推送更轻更稳（2026-08-13）**：精简了卡片上你用不上的「小红书标题」生成（你不用小红书），每轮 AI 调用更省；同时把测试套件全部对齐到当前卡片，现已跑通全绿。
+- **国内水源更扎实（2026-08 上旬）**：国内主力改为「公众号搜索 + 中文搜索」双路抓取，并保留少数派 / Vista 等精选 RSS，确保每天有新鲜优质内容进池。
+- **评分回归内容本身（2026-08）**：明确不同平台的互动量（赞 / 评论）体量不同、不可跨平台比较，评分只看内容，不拿平台数据做跨平台判断。
 
 ---
 
@@ -197,7 +199,7 @@
 
 ### 每天推什么内容？什么时候推？
 
-每天北京时间 20:00 推两张飞书卡片：一张是 **1–2 个真人一人公司的商业拆解**（他做什么、客户从哪来、怎么收钱、你能怎么抄），一张是 **约 10 条可复刻的赚钱机会**（含商业化潜力、可行性、适合启动指数三个分数和一份可抄模板）。加入方式：<https://wsjxphz-png.github.io/opc-digdaily/>。
+每天北京时间 20:00 推两张飞书卡片：一张是 **1–2 个真人一人公司的商业拆解**（他做什么、客户从哪来、怎么收钱、你能怎么抄），一张是 **约 10 条可复刻的赚钱机会**（卡片上突出「适合你启动指数」，并附一份可抄模板）。加入方式：<https://wsjxphz-png.github.io/opc-digdaily/>。
 
 ### 和市面上的「副业课」「一人公司训练营」有什么不同？
 
@@ -228,7 +230,7 @@
 Every day it automatically finds, analyses and delivers:
 
 - **1–2 teardowns** of real solopreneurs — what they sell, where their customers come from, how they get paid;
-- **~10 replicable money-making opportunities**, each scored on commercial potential (0–100), feasibility for a non-technical person (0–100) and a "start today" index (1–10).
+- **~10 replicable money-making opportunities**, scored internally on commercial potential and feasibility, and presented with a single "start today" index (1–10).
 
 **It deliberately filters out "shovel sellers"** — coaches and course creators who make money by teaching others to make money — and keeps only operators who earn from real products and services. It also filters out anything requiring programming, SaaS development or indie-hacker skills.
 
