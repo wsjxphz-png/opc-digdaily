@@ -298,7 +298,9 @@ class DailyOpportunityBot:
             ai_model=ai_cfg.get("model", ""),
         )
 
-        self.history = HistoryManager(HISTORY_PATH)
+        # 去重窗口 30 天（与 config.yaml / weixin_targets 文档一致）。
+        # 用 7 天会导致旧内容过窗口后被重新判新、重复推送，故对齐到 30 天。
+        self.history = HistoryManager(HISTORY_PATH, days=30)
 
         # 拆解 / 发现 配置
         td_cfg = config.get("teardown", {})
