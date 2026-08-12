@@ -21,7 +21,6 @@ from typing import Optional
 
 from ai import AIProcessor
 from sources.base import ContentItem
-from filters import is_technical
 
 logger = logging.getLogger(__name__)
 
@@ -31,43 +30,37 @@ DEFAULT_MIN_STARTUP_INDEX = 2
 
 
 def _is_real_opportunity(it: ContentItem, min_startup_index: int = DEFAULT_MIN_STARTUP_INDEX) -> bool:
-    """判断一条内容是否触碰「绝对红线」（明确卖铲子 / 必须写代码 / 技术向）。
+    """判断一条内容是否触碰「绝对红线」（需要写代码 / 明确卖铲子 / 无落地路径）。
 
-    2026-08-13 优化（参考 opportunity-radar / lefttree 的连续评分思路）：
-    质量高低不再用 verdict 二元 + authenticity/code_dependency/relevance 硬阈值
-    一刀切——那会把边界案例砍光、导致「7 条候选 → 0 机会」。改为只保留三条
-    绝对红线（碰了就完全没法照做、没有任何中间地带），质量高低交给
-    startup_index 连续评分排序 + 溢池的每日上限做软选择。
+    2026-08-13 重构（从第一性原理）：筛选只保留三条由 AI 语义评分判定的绝对红线，
+    去掉关键词硬杀（is_technical）和 verdict 二元裁决——它们理解不了上下文、会误杀
+    边界案例。质量高低交给 startup_index 连续评分排序 + 溢池每日上限做软选择。
+
+    口径与 ai/processor.py 的判定规则对齐（code>=4 / auth<=2 判 irrelevant）：
+      · code>=4（需写代码）→ 这里兜底硬杀（4分=需写代码但不复杂，5分=必须精通编程，
+        对完全不会写代码的人都做不了）
+      · auth<=1（明确卖铲子）→ 这里兜底硬杀
+      · auth=2（轻微卖铲子嫌疑）→ 不硬杀，交给 scoring 封顶降权
     """
     if not getattr(it, "ai_processed", False):
         return False
 
-    verdict = it.verdict or ""
     auth = it.authenticity or 0
     code = it.code_dependency or 0
 
-    # 绝对红线1：明确卖铲子 —— 真实性最低，且 AI 明确判为卖课/卖噱头/卖铲子
-    if auth <= 1 and any(k in verdict for k in ("卖铲", "卖课", "卖噱头", "割韭菜")):
+    # 绝对红线1：需要写代码（code>=4）—— 对"完全不会写代码"的人做不了
+    if code >= 4:
         logger.info(
-            "机会 [%s] 明确卖铲子（真实性 %d 分 + %s），已排除",
-            (getattr(it, "title", "") or "")[:30], auth, verdict,
-        )
-        return False
-
-    # 绝对红线2：必须精通编程才能做（code_dependency=5，普通人完全无法落地）
-    if code >= 5:
-        logger.info(
-            "机会 [%s] 代码依赖度 %d 分（必须精通编程），已排除",
+            "机会 [%s] 代码依赖度 %d 分（需写代码），已排除",
             (getattr(it, "title", "") or "")[:30], code,
         )
         return False
 
-    # 绝对红线3：技术向（确定性关键词兜底，与 LLM 的 tech_barrier 双保险）
-    probe = f"{getattr(it, 'title', '')} {getattr(it, 'summary', '')}"
-    if is_technical(probe):
+    # 绝对红线2：明确卖铲子（auth<=1）—— 纯卖课/卖社群/卖铲子
+    if auth <= 1:
         logger.info(
-            "机会 [%s] 命中技术关键词，已排除（不推技术向文章）",
-            (getattr(it, "title", "") or "")[:30],
+            "机会 [%s] 明确卖铲子（真实性 %d 分），已排除",
+            (getattr(it, "title", "") or "")[:30], auth,
         )
         return False
 

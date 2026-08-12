@@ -424,19 +424,18 @@ async def main_tests():
         it.relevance_score = score
         return it
 
-    # 7.1 绝对红线：明确卖铲子 / 必须写代码 / 技术向 才剔除
-    #     2026-08-13 起，真实性2分、代码依赖4分、综合分低 从「硬杀」改为「边界案例降权保留」
-    shovel = mk_item(1, "卖噱头/卖铲子", 1, 5, 0.05)      # 明确卖铲子（真实性1 + verdict卖铲）
+    # 7.1 绝对红线：需写代码 / 明确卖铲子 才剔除（is_technical 关键词硬杀已移除）
+    #     2026-08-13 重构：code>=4 硬杀（需写代码）、auth<=1 硬杀（明确卖铲子），
+    #     auth=2（轻微卖铲子嫌疑）、code=3（无代码工具）、综合分低 一律降权保留
+    shovel = mk_item(1, "卖噱头/卖铲子", 1, 5, 0.05)      # 明确卖铲子（auth=1）
     must_code = mk_item(2, "可复刻的真机会", 4, 5, 0.8)   # 必须精通编程（code=5）
-    tech_title = mk_item(3, "可复刻的真机会", 5, 1, 0.9, title="程序员教你做副业")  # 技术向
-    low_auth = mk_item(4, "可复刻的真机会", 2, 2, 0.5)     # 真实性2分（边界，降权保留）
-    high_code = mk_item(5, "可复刻的真机会", 4, 4, 0.8)    # 代码依赖4分（边界，降权保留）
-    low_score = mk_item(6, "可复刻的真机会", 4, 2, 0.3)    # 综合分低（边界，降权保留）
-    real = mk_item(7, "可复刻的真机会", 5, 1, 0.9)         # 真机会
-    for label, it in [("明确卖铲子", shovel), ("必须写代码", must_code), ("技术向", tech_title)]:
+    high_code = mk_item(3, "可复刻的真机会", 4, 4, 0.8)   # 需写代码但不复杂（code=4）
+    low_auth = mk_item(4, "可复刻的真机会", 2, 2, 0.5)     # 轻微卖铲子嫌疑（auth=2，降权保留）
+    code3 = mk_item(5, "可复刻的真机会", 4, 3, 0.7)        # 需配置无代码工具（code=3，保留）
+    real = mk_item(6, "可复刻的真机会", 5, 1, 0.9)         # 真机会
+    for label, it in [("明确卖铲子", shovel), ("必须写代码", must_code), ("需写代码", high_code)]:
         check(f"剔除{label}", not _is_real_opportunity(it))
-    for label, it in [("真实性2分边界", low_auth), ("代码依赖4分边界", high_code),
-                      ("综合分低边界", low_score), ("真机会", real)]:
+    for label, it in [("轻微卖铲子嫌疑", low_auth), ("无代码工具", code3), ("真机会", real)]:
         check(f"保留{label}", _is_real_opportunity(it))
 
     # 7.2 _select 平衡取前 N + 排序
@@ -693,16 +692,17 @@ async def scout_tests():
     check("发现引擎确定性排除技术大牛（即使 tech_barrier=无）", not added_tech)
     Path(rtmp.name).unlink(missing_ok=True)
 
-    # 16.3 模块2：含技术信号的文章确定性不通过硬过滤
+    # 16.3 模块2：技术向文章靠 AI 判 code_dependency 排除（is_technical 关键词已移除，
+    #     改为强化 AI prompt「技术向内容必须判高 code>=4」来防漏判）
     tech_item = ContentItem(
         title="独立开发者用 Python 写了一个 SaaS", url="http://x", source="rss", source_name="r",
     )
     tech_item.ai_processed = True
     tech_item.verdict = "可复刻的真机会"
     tech_item.authenticity = 5
-    tech_item.code_dependency = 2   # AI 可能低判代码依赖，但关键词兜底
+    tech_item.code_dependency = 5   # AI 判「必须精通编程」
     tech_item.relevance_score = 0.9
-    check("模块2 确定性排除技术向文章", not _is_real_opportunity(tech_item))
+    check("模块2 技术向文章(code=5)被排除", not _is_real_opportunity(tech_item))
     normal_item = ContentItem(
         title="普通人靠信息差做闲鱼无货源月入过万", url="http://y", source="rss", source_name="r",
     )
