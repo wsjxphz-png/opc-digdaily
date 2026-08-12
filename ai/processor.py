@@ -189,9 +189,9 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 
 ---
 
-## 三条一票否决红线（在 verdict 中体现）
+## 三条一票否决红线
 
-以下三条任何一条命中 → 直接 irrelevant=false，verdict=卖噱头/卖铲子：
+以下三条任何一条命中 → 直接 irrelevant=false：
 
 ### 红线 1：交付物必须是"数字中介/自动化工作流服务"，不是"软件/SaaS"
 - 要淘汰：「我开发了一个 AI SaaS 软件」（需要持续写代码维护、打补丁、数据库运维）
@@ -286,7 +286,6 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
   "code_dependency": 2,
   "authenticity": 4,
   "practical_steps": "1. 交付物：xxx（什么东西、给谁用）\n2. 前5个客户：xxx（具体渠道、方法）\n3. 工具链：xxx（每个陌生工具名后加括号解释一句它是什么，如「Gumroad（卖数字产品的平台）」）",
-  "verdict": "可复刻的真机会",
   "difficulty": "零门槛",
   "quality_flag": "⭐",
   "xhs_title": "不会写代码，靠卖模板月入过万？",
@@ -312,8 +311,7 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 {
   "index": 1,
   "relevant": false,
-  "reason": "代码依赖度5分，纯编程内容，普通人无法复刻",
-  "verdict": "卖噱头/卖铲子"
+  "reason": "代码依赖度5分，纯编程内容，普通人无法复刻"
 }
 ```
 
@@ -321,7 +319,6 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 - **code_dependency**: 整数 1-5，代码依赖度评分
 - **authenticity**: 整数 1-5，真实性与水分评分
 - **practical_steps**: 核心实操步骤三部分：1.交付物(什么东西给谁用) 2.前5个付费客户怎么来的(具体渠道方法) 3.工具链(用的无代码工具组合)。如果文章信息不足，写「文章未提供足够实操信息」
-- **verdict**: 「可复刻的真机会」或「卖噱头/卖铲子」
 - **difficulty**: 「零门槛」「需学习」「有一定门槛」
 - **quality_flag**: 「⭐」（高价值信号：细节丰富、有社区验证、小渠道首发）、「」（正常）、「⚠️」（有风险信号：来源可疑、标题党、可能有水分）
 - **factors**: 上面 16 个子因子，每个 1-5 的整数，一个都不能少（缺失会被当成 3 分处理，等于浪费这条机会）
@@ -333,16 +330,16 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 ## 严格要求
 1. 纯 JSON 数组，不要 markdown 代码块包裹
 2. 每条都要有 index
-3. 英文必翻译成中文
-4. 术语全部用中文大白话替换
+3. 英文必翻译成中文（正文用中文）
+4. **关键术语保留原文 + 括号解释**：工具名/平台名/专有名词（n8n、Gumroad、SEO、newsletter、Notion、Stripe 等）首次出现时保留英文原文，紧跟括号给一句大白话解释。不要整段堆英文，也不要把术语硬翻成生硬的中文。
 5. **陌生概念必须解释**：假设读者完全不会英文、没用过海外工具。出现以下内容时，第一次必须用括号做一句话补充说明：
    · 海外平台/工具：Gumroad（一个卖数字产品的网站）、Etsy（全球最大的手工/设计品电商平台）、Teachable（一个做在线课程的平台）、Stripe（海外收款工具，类似支付宝）、n8n（一个点鼠标就能搭自动化流程的工具）
    · 外国人名/公司名：一句话交代他是谁（如「Pat Flynn，一个靠博客和播客年入百万美元的创业者」）
    · 专有名词/概念：如「newsletter（邮件订阅 newsletter，像定期发送的付费邮件杂志）」「POD（按需打印，设计好图案上传，有人买才印，不用囤货）」
-6. 代码依赖度 >= 4 → relevant=false，verdict=卖噱头/卖铲子
-7. 真实性 <= 2 → relevant=false，verdict=卖噱头/卖铲子
-8. 三条一票否决红线命中任一条 → relevant=false，verdict=卖噱头/卖铲子
-9. relevant=false 的条目只返回 index、relevant、reason、verdict
+6. 代码依赖度 >= 4 → relevant=false
+7. 真实性 <= 1 → relevant=false
+8. 三条一票否决红线命中任一条 → relevant=false
+9. relevant=false 的条目只返回 index、relevant、reason
 10. irrelevant 的也要返回，不要省略
 11. 不要输出 relevance_score / 总分 / 星级评价——总分由程序计算，你输出了也会被忽略
 12. 所有文本字段务必精简（直接给干货，不要展开解释）：
@@ -529,7 +526,6 @@ class AIProcessor:
                 if isinstance(r.get("authenticity"), (int, float)):
                     item.authenticity = int(r["authenticity"])
                 item.practical_steps = r.get("practical_steps", "")
-                item.verdict = r.get("verdict", "")
                 # 可抄模板
                 tpl = r.get("copy_template")
                 if isinstance(tpl, dict):
@@ -552,9 +548,9 @@ class AIProcessor:
                 apply_to_item(item, factors)
                 item.ai_processed = True
             else:
-                # 标记为不相关，后续会被过滤
+                # 标记为不相关，后续会被过滤；原因存进 gate_reason 供日志/排查
                 item.relevance_score = 0.0
-                item.verdict = r.get("verdict", "卖噱头/卖铲子") if r else "卖噱头/卖铲子"
+                item.gate_reason = r.get("reason", "") if r else ""
                 item.ai_processed = True
 
         return items, True

@@ -141,8 +141,8 @@ class PreferenceProfile:
     def __init__(self, boost: int = 1, penalty: int = 2):
         self.boost = int(boost)
         self.penalty = int(penalty)
-        self.liked: list[str] = []      # 归一化指纹
-        self.disliked: list[str] = []
+        self.liked: dict[str, int] = {}      # 归一化指纹 → 反馈次数（置信度）
+        self.disliked: dict[str, int] = {}
         self.source_score: dict[str, int] = {}
 
     @classmethod
@@ -155,11 +155,11 @@ class PreferenceProfile:
                 continue
             fp = ent.get("fingerprint") or _norm(ent.get("topic", ""))
             if up > down:
-                p.liked.append(fp)
+                p.liked[fp] = p.liked.get(fp, 0) + up
                 for s in set(ent.get("sources", [])):
                     p.source_score[s] = p.source_score.get(s, 0) + 1
             elif down > up:
-                p.disliked.append(fp)
+                p.disliked[fp] = p.disliked.get(fp, 0) + down
                 for s in set(ent.get("sources", [])):
                     p.source_score[s] = p.source_score.get(s, 0) - 1
         return p
@@ -178,15 +178,18 @@ class PreferenceProfile:
                 continue
             like_sim = max((_sim(fp, x) for x in self.liked), default=0.0)
             dis_sim = max((_sim(fp, x) for x in self.disliked), default=0.0)
+            # 置信度：命中同类偏好的累计反馈次数（≥3 次额外 ±1，高置信度加成）
+            like_n = max((n for x, n in self.liked.items() if _sim(fp, x) >= self.SIM_HIT), default=0)
+            dis_n = max((n for x, n in self.disliked.items() if _sim(fp, x) >= self.SIM_HIT), default=0)
             src = getattr(it, "source_name", "") or getattr(it, "source", "")
             src_pts = self.source_score.get(src, 0)
 
             delta, why = 0, []
             if like_sim >= self.SIM_HIT:
-                delta += self.boost
+                delta += self.boost + (1 if like_n >= 3 else 0)
                 why.append("与你点过「想做」的主题相似")
             if dis_sim >= self.SIM_HIT:
-                delta -= self.penalty
+                delta -= self.penalty + (1 if dis_n >= 3 else 0)
                 why.append("与你点过「没兴趣」的主题相似")
             if src_pts >= 2:
                 delta += 1
