@@ -25,23 +25,54 @@ from filters import is_technical
 
 logger = logging.getLogger(__name__)
 
-# 适合你启动指数低于此值 → 不推（默认 4：低于 4 意味着落地路径不清或有致命短板）
-DEFAULT_MIN_STARTUP_INDEX = 4
+# 适合你启动指数低于此值 → 不推（默认 2：低于 2 意味着几乎没有落地路径）
+# 2026-08-13 从 4 降到 2：3 分的「边界但真实」机会降权保留而非归零，质量交给排序+溢池
+DEFAULT_MIN_STARTUP_INDEX = 2
 
 
 def _is_real_opportunity(it: ContentItem, min_startup_index: int = DEFAULT_MIN_STARTUP_INDEX) -> bool:
-    """判断一条内容是否为「可复刻的真机会」，且不是卖铲子。"""
+    """判断一条内容是否触碰「绝对红线」（明确卖铲子 / 必须写代码 / 技术向）。
+
+    2026-08-13 优化（参考 opportunity-radar / lefttree 的连续评分思路）：
+    质量高低不再用 verdict 二元 + authenticity/code_dependency/relevance 硬阈值
+    一刀切——那会把边界案例砍光、导致「7 条候选 → 0 机会」。改为只保留三条
+    绝对红线（碰了就完全没法照做、没有任何中间地带），质量高低交给
+    startup_index 连续评分排序 + 溢池的每日上限做软选择。
+    """
     if not getattr(it, "ai_processed", False):
         return False
+
     verdict = it.verdict or ""
-    if "真机会" not in verdict:
+    auth = it.authenticity or 0
+    code = it.code_dependency or 0
+
+    # 绝对红线1：明确卖铲子 —— 真实性最低，且 AI 明确判为卖课/卖噱头/卖铲子
+    if auth <= 1 and any(k in verdict for k in ("卖铲", "卖课", "卖噱头", "割韭菜")):
+        logger.info(
+            "机会 [%s] 明确卖铲子（真实性 %d 分 + %s），已排除",
+            (getattr(it, "title", "") or "")[:30], auth, verdict,
+        )
         return False
-    if (it.authenticity or 0) < 3:
+
+    # 绝对红线2：必须精通编程才能做（code_dependency=5，普通人完全无法落地）
+    if code >= 5:
+        logger.info(
+            "机会 [%s] 代码依赖度 %d 分（必须精通编程），已排除",
+            (getattr(it, "title", "") or "")[:30], code,
+        )
         return False
-    if (it.code_dependency or 0) >= 4:
+
+    # 绝对红线3：技术向（确定性关键词兜底，与 LLM 的 tech_barrier 双保险）
+    probe = f"{getattr(it, 'title', '')} {getattr(it, 'summary', '')}"
+    if is_technical(probe):
+        logger.info(
+            "机会 [%s] 命中技术关键词，已排除（不推技术向文章）",
+            (getattr(it, "title", "") or "")[:30],
+        )
         return False
-    if (it.relevance_score or 0) < 0.4:
-        return False
+
+    # 适合你启动指数：保留宽松下限（低于下限 = 几乎没有落地路径），
+    # 其余交给排序 + 溢池上限，边界案例降权保留而非归零
     idx = getattr(it, "startup_index", 0) or 0
     if idx and idx < min_startup_index:
         logger.info(
@@ -49,11 +80,7 @@ def _is_real_opportunity(it: ContentItem, min_startup_index: int = DEFAULT_MIN_S
             (getattr(it, "title", "") or "")[:30], idx, min_startup_index,
         )
         return False
-    # 双保险：读者完全不懂代码，含强技术信号的文章一律不推
-    probe = f"{getattr(it, 'title', '')} {getattr(it, 'summary', '')}"
-    if is_technical(probe):
-        logger.info(f"机会 [{getattr(it, 'title', '')[:30]}] 命中技术关键词，已排除（不推技术向文章）")
-        return False
+
     return True
 
 

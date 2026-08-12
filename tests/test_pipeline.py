@@ -315,11 +315,13 @@ async def main_tests():
     main_mod.apply_seeds = fake_apply_seeds
 
     # 桩掉采集：返回一条命中归档 + 一条进入发现
+    # 国内/国际用不同 url 前缀，否则 overflow_pool 按 url 分拆时会把国际内容全归到国内 → intl 恒 0
     async def fake_collect(label, cfg2, history):
+        p = "i" if label == "国际" else "d"
         return [
-            ContentItem(title="Nick 新流程", url="http://n/run1",
+            ContentItem(title="Nick 新流程", url=f"http://{p}/run1",
                         summary="他分享接单", source_name="@nicksaraev"),
-            ContentItem(title="某人帮诊所搭建自动化流程", url="http://d/run1",
+            ContentItem(title="某人帮诊所搭建自动化流程", url=f"http://{p}/run2",
                         summary="详细讲了具体交付过程、收费方式和获客渠道",
                         source_name="r/discoverysub"),
         ]
@@ -334,11 +336,13 @@ async def main_tests():
     bot.pusher.push_teardowns = fake_push
 
     captured_opp = {}
-    async def fake_push_opps(domestic, international, date_str, recurring=None):
+    async def fake_push_opps(domestic, international, date_str, recurring=None,
+                             screened_out=0, screened_total=0):
         captured_opp["dom"] = domestic
         captured_opp["intl"] = international
         captured_opp["date"] = date_str
         captured_opp["recurring"] = recurring
+        captured_opp["screened_out"] = screened_out
         return True
     bot.pusher.push_opportunities = fake_push_opps
 
@@ -420,16 +424,20 @@ async def main_tests():
         it.relevance_score = score
         return it
 
-    # 7.1 硬过滤：四类卖铲子/不可做的一律剔除
-    shovel = mk_item(1, "卖噱头/卖铲子", 1, 5, 0.05)      # 卖铲子
-    low_auth = mk_item(2, "可复刻的真机会", 2, 2, 0.5)      # 真实性<3
-    high_code = mk_item(3, "可复刻的真机会", 4, 4, 0.8)     # 代码依赖>=4
-    low_score = mk_item(4, "可复刻的真机会", 4, 2, 0.3)     # 综合分<0.4
-    real = mk_item(5, "可复刻的真机会", 5, 1, 0.9)          # 真机会
-    for label, it in [("卖铲子", shovel), ("真实性低", low_auth),
-                      ("需写代码", high_code), ("综合分低", low_score)]:
+    # 7.1 绝对红线：明确卖铲子 / 必须写代码 / 技术向 才剔除
+    #     2026-08-13 起，真实性2分、代码依赖4分、综合分低 从「硬杀」改为「边界案例降权保留」
+    shovel = mk_item(1, "卖噱头/卖铲子", 1, 5, 0.05)      # 明确卖铲子（真实性1 + verdict卖铲）
+    must_code = mk_item(2, "可复刻的真机会", 4, 5, 0.8)   # 必须精通编程（code=5）
+    tech_title = mk_item(3, "可复刻的真机会", 5, 1, 0.9, title="程序员教你做副业")  # 技术向
+    low_auth = mk_item(4, "可复刻的真机会", 2, 2, 0.5)     # 真实性2分（边界，降权保留）
+    high_code = mk_item(5, "可复刻的真机会", 4, 4, 0.8)    # 代码依赖4分（边界，降权保留）
+    low_score = mk_item(6, "可复刻的真机会", 4, 2, 0.3)    # 综合分低（边界，降权保留）
+    real = mk_item(7, "可复刻的真机会", 5, 1, 0.9)         # 真机会
+    for label, it in [("明确卖铲子", shovel), ("必须写代码", must_code), ("技术向", tech_title)]:
         check(f"剔除{label}", not _is_real_opportunity(it))
-    check("保留真机会", _is_real_opportunity(real))
+    for label, it in [("真实性2分边界", low_auth), ("代码依赖4分边界", high_code),
+                      ("综合分低边界", low_score), ("真机会", real)]:
+        check(f"保留{label}", _is_real_opportunity(it))
 
     # 7.2 _select 平衡取前 N + 排序
     items = [real, mk_item(6, "可复刻的真机会", 4, 2, 0.6),

@@ -636,6 +636,9 @@ class FeishuPusher:
             if item.url:
                 header_line = f"**{i}. [{display_title}]({item.url})**" + (f"  （{tag_str}）" if tag_str else "")
             md_lines.append(header_line)
+            # 英文原标题脚注：有中文翻译时保留原文溯源（国际内容），中文原文不重复展示
+            if translation and original_title and original_title != translation:
+                md_lines.append(f"🔤 英文原标题：{original_title[:110]}")
             if startup_index:
                 md_lines.append(f"🎯 适合你启动 **{startup_index}/10**{_startup_suffix(startup_index)}")
 

@@ -321,8 +321,7 @@ class DailyOpportunityBot:
         opp_cfg = config.get("opportunity", {})
         self.opportunity_enabled = opp_cfg.get("enabled", True)
         self.opportunity_per_region = opp_cfg.get("per_region", 20)
-        self.exclude_shovel = opp_cfg.get("exclude_shovel", True)
-        self.min_startup_index = int(opp_cfg.get("min_startup_index", 3))
+        self.min_startup_index = int(opp_cfg.get("min_startup_index", 2))
 
         # 质量溢池：每日推送上限 + 高质量标杆 + 保质期
         self.daily_push_cap = int(opp_cfg.get("per_day", 10))
