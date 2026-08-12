@@ -29,7 +29,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@LiamOttley_": {
       "handle": "@LiamOttley_",
@@ -60,7 +62,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@untrapping": {
       "handle": "@untrapping",
@@ -84,7 +88,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@KishanPatel": {
       "handle": "@KishanPatel",
@@ -108,7 +114,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@rileybrown_ai": {
       "handle": "@rileybrown_ai",
@@ -132,7 +140,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@david_oragwam": {
       "handle": "@david_oragwam",
@@ -156,7 +166,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@yongfook": {
       "handle": "@yongfook",
@@ -180,7 +192,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@czue": {
       "handle": "@czue",
@@ -204,7 +218,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@dannypostmaa": {
       "handle": "@dannypostmaa",
@@ -228,7 +244,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@tdinh_me": {
       "handle": "@tdinh_me",
@@ -259,7 +277,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@petermick": {
       "handle": "@petermick",
@@ -283,7 +303,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@arvidkahl": {
       "handle": "@arvidkahl",
@@ -307,7 +329,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@robj3d3": {
       "handle": "@robj3d3",
@@ -331,7 +355,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@shevchikblog": {
       "handle": "@shevchikblog",
@@ -383,7 +409,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@tibo_maker": {
       "handle": "@tibo_maker",
@@ -420,7 +448,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@hridoyreh": {
       "handle": "@hridoyreh",
@@ -444,7 +474,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@BrettFromDJ": {
       "handle": "@BrettFromDJ",
@@ -475,7 +507,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@BrianCasel": {
       "handle": "@BrianCasel",
@@ -499,7 +533,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@jackbutcher": {
       "handle": "@jackbutcher",
@@ -523,7 +559,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@harrydry": {
       "handle": "@harrydry",
@@ -547,7 +585,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@dvassallo": {
       "handle": "@dvassallo",
@@ -571,7 +611,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@JustinWelsh": {
       "handle": "@JustinWelsh",
@@ -602,7 +644,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@MattIRL": {
       "handle": "@MattIRL",
@@ -626,7 +670,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@stephsmithio": {
       "handle": "@stephsmithio",
@@ -650,7 +696,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@nateliason": {
       "handle": "@nateliason",
@@ -674,7 +722,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@dickiebush": {
       "handle": "@dickiebush",
@@ -705,7 +755,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@david_perell": {
       "handle": "@david_perell",
@@ -729,7 +781,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@gregisenberg": {
       "handle": "@gregisenberg",
@@ -753,7 +807,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@Marc_Louvion": {
       "handle": "@Marc_Louvion",
@@ -777,7 +833,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@ShaanVP": {
       "handle": "@ShaanVP",
@@ -801,7 +859,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@thesamparr": {
       "handle": "@thesamparr",
@@ -832,7 +892,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@Julian": {
       "handle": "@Julian",
@@ -856,7 +918,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@Danavir": {
       "handle": "@Danavir",
@@ -880,7 +944,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@JanePortman": {
       "handle": "@JanePortman",
@@ -904,7 +970,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@csallen": {
       "handle": "@csallen",
@@ -928,7 +996,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@philipmorgan": {
       "handle": "@philipmorgan",
@@ -952,7 +1022,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@levelsio": {
       "handle": "@levelsio",
@@ -976,7 +1048,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@SimonHoiberg": {
       "handle": "@SimonHoiberg",
@@ -1007,7 +1081,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@shu_omi": {
       "handle": "@shu_omi",
@@ -1031,7 +1107,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@dotey": {
       "handle": "@dotey",
@@ -1062,7 +1140,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@xiaohuggg": {
       "handle": "@xiaohuggg",
@@ -1093,7 +1173,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@op7418": {
       "handle": "@op7418",
@@ -1124,7 +1206,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@khazix0918": {
       "handle": "@khazix0918",
@@ -1155,7 +1239,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@lijigang": {
       "handle": "@lijigang",
@@ -1179,7 +1265,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@XDash": {
       "handle": "@XDash",
@@ -1210,7 +1298,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@tualatrix": {
       "handle": "@tualatrix",
@@ -1234,7 +1324,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@oran_ge": {
       "handle": "@oran_ge",
@@ -1258,7 +1350,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@yupi996": {
       "handle": "@yupi996",
@@ -1282,7 +1376,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@Gorden_sun": {
       "handle": "@Gorden_sun",
@@ -1306,7 +1402,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@pandatalk8": {
       "handle": "@pandatalk8",
@@ -1330,7 +1428,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@servasyy_ai": {
       "handle": "@servasyy_ai",
@@ -1354,7 +1454,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@lyc_zh": {
       "handle": "@lyc_zh",
@@ -1378,7 +1480,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@dontbesilent": {
       "handle": "@dontbesilent",
@@ -1402,7 +1506,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@imwsl90": {
       "handle": "@imwsl90",
@@ -1426,7 +1532,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@iamtonyzhu": {
       "handle": "@iamtonyzhu",
@@ -1450,7 +1558,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@indie_maker_fox": {
       "handle": "@indie_maker_fox",
@@ -1474,7 +1584,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@thinkingjimmy": {
       "handle": "@thinkingjimmy",
@@ -1505,7 +1617,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "@yangyi": {
       "handle": "@yangyi",
@@ -1529,7 +1643,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCGk1LitxAZVnqQn0_nt5qxw": {
       "handle": "UCGk1LitxAZVnqQn0_nt5qxw",
@@ -1553,7 +1669,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCC8wczy7734jKPhiR2UkS9A": {
       "handle": "UCC8wczy7734jKPhiR2UkS9A",
@@ -1577,7 +1695,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCytOqtKYpACcWMD14UjhSeQ": {
       "handle": "UCytOqtKYpACcWMD14UjhSeQ",
@@ -1601,7 +1721,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCoOae5nYA7VqaXzerajD0lg": {
       "handle": "UCoOae5nYA7VqaXzerajD0lg",
@@ -1625,7 +1747,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCbo-KbSjJDG6JWQ_MTZ_rNA": {
       "handle": "UCbo-KbSjJDG6JWQ_MTZ_rNA",
@@ -1649,7 +1773,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCui4jxDaMb53Gdh-AZUTPAg": {
       "handle": "UCui4jxDaMb53Gdh-AZUTPAg",
@@ -1673,7 +1799,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCKNq1bMwzHESQpoBrCnvXQA": {
       "handle": "UCKNq1bMwzHESQpoBrCnvXQA",
@@ -1697,7 +1825,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCaggiu76cPdLduA8R2lCSQA": {
       "handle": "UCaggiu76cPdLduA8R2lCSQA",
@@ -1721,7 +1851,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UC1U3USwVMvdzmdEvEUhFIwg": {
       "handle": "UC1U3USwVMvdzmdEvEUhFIwg",
@@ -1745,7 +1877,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UC_zKyDW9v--SOS3ibuNgfNg": {
       "handle": "UC_zKyDW9v--SOS3ibuNgfNg",
@@ -1769,7 +1903,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "UCDSIX7D8QvF9D45n_lKEhXQ": {
       "handle": "UCDSIX7D8QvF9D45n_lKEhXQ",
@@ -1793,7 +1929,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Nick Saraev Blog": {
       "handle": "Nick Saraev Blog",
@@ -1815,7 +1953,20 @@
         "mrr": "约 $72K/月",
         "first_step": "降级：用 AI 工具做「代运营省人力」服务，不写代码"
       },
-      "signals": [],
+      "signals": [
+        {
+          "title": "5 More Automations You Can Sell Today for $1,500 (Or $10,000)",
+          "url": "https://nicksaraev.com/5-more-automations-you-can-sell-today-for-1-500-or-10-000/",
+          "date": "2024-09-01",
+          "summary": "Given the success of my last video on the topic, I thought I'd write a post + record a video all about practical, real-world automations you can sell right now to make money in the AI/automation space.\nYou'll find 43mins of accompanying video below (if you wanted a reference), or you can just read the content.\nFirst, what makes a high-ROI automation?\nThere are three components to a great, high-ROI"
+        },
+        {
+          "title": "Hiring pitfalls & how I fix them",
+          "url": "https://nicksaraev.com/hiring-pitfalls-and-how-to-fix-them/",
+          "date": "2024-03-23",
+          "summary": "Below are a couple of key foundational concepts that I think most agency or service business owners should consider before they hire, along with a few major issues I see most of them fall prey to.\n1. Track & optimize revenue per employee (RPE)\nThe purpose of staff is to help a business produce revenue. Whether that's at the front end of the business (sales and marketing) or the back end of the bus"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1824,7 +1975,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Daniel Vassallo (Small Bets)": {
       "handle": "Daniel Vassallo (Small Bets)",
@@ -1855,7 +2008,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Justin Welsh": {
       "handle": "Justin Welsh",
@@ -1886,7 +2041,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Steph Smith": {
       "handle": "Steph Smith",
@@ -1917,7 +2074,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Solo AI Lab (Practical AI)": {
       "handle": "Solo AI Lab (Practical AI)",
@@ -1941,7 +2100,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Cory Zue (产品化服务复盘)": {
       "handle": "Cory Zue (产品化服务复盘)",
@@ -1972,7 +2133,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Tony Dinh (独立开发者实战)": {
       "handle": "Tony Dinh (独立开发者实战)",
@@ -1994,7 +2157,20 @@
         "mrr": "约 $200K/月（公开）",
         "first_step": "普通人不可直接做；可降级学用 TypingMind 这类现成工具服务客户"
       },
-      "signals": [],
+      "signals": [
+        {
+          "title": "Nov 2024: My first million!",
+          "url": "https://news.tonydinh.com/p/nov-2024-my-first-million",
+          "date": "2024-11-21",
+          "summary": "Nov 2024: My first million!\n$1M in annual revenue, B2B sales, SOC 2, resellers, grow team, and other updates in November 2024.\nHello everyone, it’s Tony again 👋\nI haven’t written much for this newsletter in a while, mainly because the past few months have been uneventful.\nToday, I checked our PnL and found that TypingMind has reached $1M in revenue in the last 12 months. So, I thought this would b"
+        },
+        {
+          "title": "$500K milestone – my reflections after 1 year of building Typing Mind",
+          "url": "https://news.tonydinh.com/p/500k-milestone-my-reflections-after",
+          "date": "2024-02-25",
+          "summary": "$500K milestone – my reflections after 1 year of building Typing Mind\nAlso in this issue: one-off purchase vs. subscription, selling Xnapper, and other updates from me in Feb 2024\nHi everyone, it’s Tony again with another update! 👋\nIn February 2024, my ChatGPT chat frontend, Typing Mind, reaches $500K in total revenue. It started out almost exactly one year ago as a simple UI for ChatGPT API.\nThan"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -2003,7 +2179,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Arvid Kahl (The Bootstrapped Founder)": {
       "handle": "Arvid Kahl (The Bootstrapped Founder)",
@@ -2025,7 +2203,14 @@
         "mrr": "未公开",
         "first_step": "把你所在行业的「踩坑复盘」写成系列文章/newsletter，先建立「真实做过」的人设"
       },
-      "signals": [],
+      "signals": [
+        {
+          "title": "The Increasing Risk of Building in Public",
+          "url": "https://thebootstrappedfounder.com/the-increasing-risk-of-building-in-public/",
+          "date": "2026-04-03",
+          "summary": "Building in public once helped me sell my company. Today, that same transparency could destroy yours.\nThat’s not hyperbole. I owe my entire career as a writer, podcaster, and founder to being radically transparent about my business. I shared my Stripe-verified monthly recurring revenue numbers with the world, and that visibility attracted financial and acquisition interest that ultimately led to t"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -2034,7 +2219,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "David Perell (写作变现/内容系统)": {
       "handle": "David Perell (写作变现/内容系统)",
@@ -2065,7 +2252,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Dickie Bush (Ship 30 写作系统)": {
       "handle": "Dickie Bush (Ship 30 写作系统)",
@@ -2099,6 +2288,12 @@
           "url": "https://dickiebush.substack.com/p/last-month-i-sold-15-different-digital",
           "date": "2025-11-09",
           "summary": "Last Month I Sold 15 Different Digital Products. Here's How\nA full business recap - what happened, what I learned, and what's happening this month\nQuick heads up: this is a more in-depth, nitty-gritty business post relative to my last few newsletters. So if you’re not as interested in hearing about business breakdowns, feel free to skip this one. But if that type of stuff does interest you, watch "
+        },
+        {
+          "title": "Reflecting On 2025 & My Gameplan For 2026",
+          "url": "https://dickiebush.substack.com/p/reflecting-on-2025-and-my-gameplan",
+          "date": "2026-01-11",
+          "summary": "Reflecting On 2025 & My Gameplan For 2026\nWhat happened & what I learned across both life & business\nHappy 2026 squad ✊\nI just dropped a 2-hour video recapping my entire year—everything that happened & everything I learned across both life and business.\nThis is my 4th Yearly Review video, a tradition I started back in 2022 to document my life so one day my 85-year-old self can reminisce on everyth"
         }
       ],
       "teardown": null,
@@ -2109,7 +2304,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Vista 一人公司/AI 实战（Substack 中文）": {
       "handle": "Vista 一人公司/AI 实战（Substack 中文）",
@@ -2140,7 +2337,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "zencher": {
       "handle": "zencher",
@@ -2164,7 +2363,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "未知（Flippa卖家）": {
       "handle": "未知（Flippa卖家）",
@@ -2188,7 +2389,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "ali_abdaal": {
       "handle": "ali_abdaal",
@@ -2219,7 +2422,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "pat_flynn": {
       "handle": "pat_flynn",
@@ -2251,7 +2456,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "banfo": {
       "handle": "banfo",
@@ -2283,7 +2490,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "marie_forleo": {
       "handle": "marie_forleo",
@@ -2315,7 +2524,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "michelle_making_sense": {
       "handle": "michelle_making_sense",
@@ -2347,7 +2558,9 @@
       "established": true,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Aprilynne Alter": {
       "handle": "Aprilynne Alter",
@@ -2389,7 +2602,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "Victoria Moll": {
       "handle": "Victoria Moll",
@@ -2431,7 +2646,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "vimfinn": {
       "handle": "vimfinn",
@@ -2473,7 +2690,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "codingnotes.io": {
       "handle": "codingnotes.io",
@@ -2514,7 +2733,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "小林": {
       "handle": "小林",
@@ -2555,7 +2776,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "勤勤": {
       "handle": "勤勤",
@@ -2596,7 +2819,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "阿喵": {
       "handle": "阿喵",
@@ -2638,7 +2863,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "张居隐": {
       "handle": "张居隐",
@@ -2680,7 +2907,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "裸辞小张": {
       "handle": "裸辞小张",
@@ -2722,7 +2951,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "南瓜": {
       "handle": "南瓜",
@@ -2764,7 +2995,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "阿金": {
       "handle": "阿金",
@@ -2806,7 +3039,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "淼淼": {
       "handle": "淼淼",
@@ -2848,7 +3083,9 @@
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": null
+      "recommended_at": null,
+      "commercial_health": null,
+      "commercial_severity": ""
     },
     "路边的老李树": {
       "handle": "路边的老李树",
@@ -2868,29 +3105,136 @@
         "operator_handle": "路边的老李树",
         "operator_name": "路边的老李树",
         "region": "国内",
-        "who": "小红书实战派博主，专注本地生活团购赛道，从0粉做到10万+粉丝，主要面向想入局本地生活团购的普通人/小商家/副业人群",
-        "deliverable": "交付的是「本地生活团购」的实操方案：包括账号搭建方法、内容模板、获客话术、变现路径设计。可能是付费课程、付费社群、或一对一咨询，具体形式未公开",
-        "business_model": "知识付费模式，收费方式未公开。可能包含：一次性课程费、年度社群会员费、或按项目收费的咨询服务。收入结构未公开",
-        "acquisition": "核心获客渠道是小红书平台。具体打法：①在小红书发「本地生活团购」实战内容，包括从0到10万粉的完整路径拆解、分阶段落地方案；②内容风格偏实战派，强调「可复制」「能抄作业」，吸引想入局的普通人；③第一波客户来源未公开，但大概率是通过小红书内容自然引流，粉丝看到实战方案后私信或评论区互动转化；④可照抄的打法：普通人可以在小红书发「本地生活团购」相关实操笔记，用分阶方案（如：第一周做什么、第二周做什么）吸引目标人群，比泛泛的理论更容易转化",
-        "stack": "小红书（内容发布平台）、可能使用Notion或飞书整理方案、可能用微信社群做私域运营、具体工具链未公开",
+        "who": "小红书实战派博主，专注本地生活团购赛道，从0粉做到10万+粉丝，提供分阶落地方案",
+        "deliverable": "本地生活团购的实操方案，包括内容模板、获客路径、变现方法，以课程/社群/咨询服务形式交付",
+        "business_model": "知识付费为主（课程/社群/咨询），具体定价未公开，收入结构未公开",
+        "acquisition": "①平台：小红书，发布本地生活团购相关干货内容；②内容动作：拆解从0到10万+的分阶方案，输出可复制的获客与变现路径；③第一波客户来源：小红书内容自然流量，搜索「本地生活团购」相关关键词的用户；④可照抄打法：在小红书持续发布本地生活团购实操笔记，用分阶方案吸引想入行的普通人",
+        "stack": "小红书、微信私域（可能）、知识星球/小报童等付费社群工具（未公开确认）",
         "replicability": 3,
-        "first_step": "今天就去小红书搜索「本地生活团购」，找到10个爆款笔记，分析它们的标题结构、内容框架、评论区高频问题，然后模仿写一篇自己的分阶落地方案笔记发出去",
-        "red_flag": "这是一个典型的「卖铲子」模式——他的主要收入很可能来自教别人做本地生活团购（卖课/卖社群/卖咨询），而不是自己实际运营团购业务赚钱。普通人模仿的最大坑是：你以为他在教你赚钱，其实他赚的是你的学费。本地生活团购这个赛道本身是否真的如他描述的那么蓝海，需要你自己验证，不要盲目相信",
-        "learn": "①分阶落地方案的表达方式很聪明——把复杂事情拆成「第一周做什么、第二周做什么」，让普通人觉得「我也能跟上」；②选了一个有热度的细分赛道（本地生活团购），用「实战派」人设建立信任，比泛泛的知识博主更容易转化",
-        "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用小红书+微信社群即可照做）",
+        "first_step": "在小红书注册账号，发布第一篇关于本地生活团购的实操笔记，测试流量反馈",
+        "red_flag": "主要收入可能来自卖课/卖社群，而非自己实际交付本地生活团购服务。普通人模仿的最大坑：他教的是「教别人做本地生活团购」，而不是「自己做本地生活团购赚钱」，属于卖铲子模式",
+        "learn": "①本地生活团购是2025年蓝海赛道，普通人有机会切入；②用分阶落地方案（从0到10万+）降低学习门槛，让小白觉得可复制",
+        "tech_barrier": "低",
+        "doable": "降级可做（用小红书+微信等现成工具即可模仿内容策略，但能否复制其粉丝量和收入未公开）",
         "signals_used": 0,
-        "generated_at": "2026-08-09 01:01",
-        "is_revisit": false
+        "generated_at": "2026-08-11 02:03",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 39,
+          "feasibility": 56,
+          "startup_index": 5,
+          "composite": 48.7,
+          "drivers": [
+            [
+              "交付毛利",
+              4
+            ],
+            [
+              "客户规模",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              2
+            ],
+            [
+              "收入证据",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 3,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 3,
+            "capital": 4,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
       },
-      "last_teardown": "2026-08-09",
-      "teardown_count": 2,
+      "last_teardown": "2026-08-11",
+      "teardown_count": 3,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": "2026-08-08"
+      "recommended_at": "2026-08-08",
+      "commercial_health": {
+        "commercial": 39,
+        "feasibility": 56,
+        "startup_index": 5,
+        "composite": 48.7,
+        "drivers": [
+          [
+            "交付毛利",
+            4
+          ],
+          [
+            "客户规模",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            2
+          ],
+          [
+            "收入证据",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 4,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
     },
     "Canva模板赚钱项目": {
       "handle": "Canva模板赚钱项目",
@@ -2910,29 +3254,138 @@
         "operator_handle": "Canva模板赚钱项目",
         "operator_name": "Canva模板创作者",
         "region": "国际",
-        "who": "一类人，不是单一个体。泛指在Etsy、Creative Market等海外平台上售卖Canva可编辑模板的创作者。规模从月入几百美金到几万美金不等，未公开具体收入数据。典型画像：零基础新手，用AI辅助设计，一人运营，数字产品交付。",
-        "deliverable": "Canva可编辑模板，属于数字下载产品。具体品类包括：婚礼邀请函、简历模板、社交媒体帖子模板、商业演示文稿、品牌视觉包、电子表格模板等。客户是海外个人用户和小企业主，交付方式是买家付款后下载模板链接，在Canva里自行编辑使用。",
-        "business_model": "一次性销售数字产品，无订阅。定价区间：Etsy上常见$3-$15，高端品牌包可达$20-$50，未公开具体客单价。收入结构单一，靠模板销量×单价，无广告收入、无会员费。部分创作者会同时上架多个平台（Etsy + Creative Market + 自有网站）分散风险。",
-        "acquisition": "获客方式分三层，这是普通人最该抄的部分：\n\n① 主战场在Etsy平台内部：Etsy本身是一个有搜索流量的 marketplace，买家主动搜「Canva wedding invitation template」就能看到你的商品。所以核心动作是「SEO优化」——在标题、标签、描述里堆满买家会搜的关键词。例如标题写「Editable Canva Wedding Invitation Template | Modern Minimalist | Instant Download」，覆盖「editable」「Canva」「wedding invitation」「template」「instant download」五个搜索词。\n\n② 社交媒体引流（免费流量）：在Pinterest和Instagram上发模板预览图，挂Etsy链接。Pinterest特别适合这类视觉产品，因为用户会主动收藏保存。打法是：每天发3-5张模板效果图，用Canva批量生成不同场景的预览图，挂上商品链接。TikTok上也有「Canva template」相关话题，发设计过程短视频能带来自然流量。\n\n③ 第一波客户从哪来：绝大多数新手的第一个客户来自Etsy自然搜索——你上架后，有人搜到关键词就下单了。不需要主动冷启动，平台自带买家。部分创作者会先免费送几份模板给社群或邮件列表，换取好评和销量权重，提升Etsy排名。\n\n可照抄的打法：今天就能做——去Etsy搜「Canva template」，看销量前10的商品，复制他们的标题关键词结构，用AI生成类似模板，上架到Etsy，优化标题和标签。",
-        "stack": "Canva（模板设计工具，免费版够用）；Midjourney或DALL-E（生成设计素材/背景图）；ChatGPT（写产品标题、描述、关键词）；Etsy（主要销售渠道，开店免费，每上架收$0.20，成交后抽6.5%）；Pinterest（引流工具）；Google Trends（查热门搜索词）。全部点鼠标就能用，无需写代码。",
+        "who": "Canva模板创作者（国际），单人数字产品卖家，利用AI辅助设计Canva模板，通过Etsy等海外平台销售给全球用户，赚取美金。规模通常为副业级别，月入几百至数千美元不等，具体收入未公开。",
+        "deliverable": "交付物是Canva可编辑模板（数字产品），包括社交媒体帖子模板、简历模板、商业计划书模板、邀请函模板、品牌视觉模板等。客户是海外小企业主、自由职业者、内容创作者、创业者等需要快速出图但不会设计的人群。交付方式是Etsy自动发货，买家付款后下载模板链接，在Canva中打开即可编辑使用。",
+        "business_model": "一次性销售数字产品，无订阅。价格区间通常为5-50美元，热门模板或模板套装可达50-100美元。收入结构单一，全靠模板销量×单价。未公开具体收入数字。",
+        "acquisition": "获客方式分三层：①主要渠道是Etsy平台内部流量，靠SEO优化——标题写满关键词（如'Instagram Template', 'Canva Resume', 'Business Plan Template'），标签填满13个，让买家搜索时能搜到；②辅助渠道是Pinterest和Instagram，把模板效果做成精美图片发帖，引流回Etsy店铺；③第一波客户通常来自Etsy自然搜索，因为新店铺没有评价，前几单多靠低价或免费模板积累好评。可照抄的打法：在Etsy搜索'Canva template'，看销量前10的标题怎么写、标签怎么填、定价多少，然后模仿这个结构上架自己的模板。",
+        "stack": "Canva（设计工具）、Etsy（海外数字产品售卖平台）、ChatGPT或Midjourney（辅助生成设计灵感或文案）、Google Analytics（查看流量来源，可选）",
         "replicability": 4,
-        "first_step": "今天就能做的第一件事：注册一个Etsy账号（免费），然后去Etsy搜索「Canva resume template」，看销量最高的前5个商品，截图保存他们的标题和标签。然后用ChatGPT帮你生成10个类似的关键词组合，再用Canva免费版做一个简历模板，上架到Etsy。这是完整的闭环，不需要任何代码。",
-        "red_flag": "这个模式本身不是卖铲子，而是真正在卖产品，所以red_flag较低。但有两个坑要注意：第一，Etsy竞争已经非常激烈，2024年后大量涌入的创作者导致同类模板价格战严重，$3的模板可能卖不出去；第二，用AI生成的设计素材可能存在版权风险，建议用Canva内置素材库或购买商用授权素材，不要直接用Midjourney生成的图片作为模板核心元素。另外，部分「教人做Canva模板副业」的博主本身就是在卖铲子，要区分清楚。",
-        "learn": "最值得抄的两个点：① 用AI提效——用ChatGPT写标题和描述，用Midjourney生成背景图，把原本需要几小时的设计工作压缩到30分钟；② 选细分利基——不要做「婚礼邀请函」这种大类，去做「可编辑Canva婚礼请柬模板」这种长尾词，竞争小、转化高。",
-        "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用Canva + AI工具 + Etsy即可照做）",
+        "first_step": "今天就去Etsy搜索'Canva template'，找到销量最高的10个商品，截图保存它们的标题、标签、定价、预览图风格，这就是你明天要模仿的模板。",
+        "red_flag": "这个模式本身不是卖铲子，但市面上大量教程在卖'Canva模板副业课'，如果你花几百块买课，那才是被割韭菜。真正的坑是：Etsy竞争激烈，同质化严重，新店铺没有评价很难出单；另外Canva模板容易被买家倒卖或分享，版权保护弱。",
+        "learn": "最值得抄的两个点：①用AI辅助生成设计灵感和文案，大幅降低设计门槛；②在Etsy上靠关键词SEO获取自然流量，而不是花钱投广告，这是零成本获客的核心。",
+        "tech_barrier": "低",
+        "doable": "能（完全不用写代码，用Canva和Etsy现成工具即可）",
         "signals_used": 0,
-        "generated_at": "2026-08-09 01:01",
-        "is_revisit": false
+        "generated_at": "2026-08-11 02:03",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 44,
+          "feasibility": 70,
+          "startup_index": 3,
+          "composite": 51.8,
+          "drivers": [
+            [
+              "交付毛利",
+              5
+            ],
+            [
+              "启动资金低",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [
+            "疑似卖课/卖铲子 → 封顶3分"
+          ],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 3,
+            "margin": 5,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 4,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 4,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
       },
-      "last_teardown": "2026-08-09",
-      "teardown_count": 2,
+      "last_teardown": "2026-08-11",
+      "teardown_count": 3,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": "2026-08-08"
+      "recommended_at": "2026-08-08",
+      "commercial_health": {
+        "commercial": 44,
+        "feasibility": 70,
+        "startup_index": 3,
+        "composite": 51.8,
+        "drivers": [
+          [
+            "交付毛利",
+            5
+          ],
+          [
+            "启动资金低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 3,
+          "margin": 5,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 4,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 4,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "skip"
     },
     "The 25th Frame": {
       "handle": "The 25th Frame",
@@ -2952,29 +3405,603 @@
         "operator_handle": "The 25th Frame",
         "operator_name": "zhouyang",
         "region": "国际",
-        "who": "zhouyang，单人运营的数字产品创作者，通过设计 Notion 模板并在 Gumroad 平台销售，构建被动收入流。规模未公开，属于典型的无代码一人公司模式。",
-        "deliverable": "交付物：Notion 模板（数字产品）。具体模板类型未公开（可能是笔记系统、项目管理、习惯追踪等）。客户是想要提升效率的个人用户、自由职业者或小型团队。",
-        "business_model": "商业模式：一次性销售数字产品。客户在 Gumroad 上购买模板后下载使用。定价未公开，同类 Notion 模板市场常见价格在 5-50 美元区间。收入结构为纯被动收入，无需持续交付服务。",
-        "acquisition": "获客方式：具体获客路径未公开。但基于同类 Notion 模板创作者的通用打法，可合理推断以下渠道：①社交媒体展示（Twitter/X、小红书、Instagram 等发布模板使用截图和教程）；②内容引流（发布 Notion 使用技巧、效率提升类内容吸引目标用户）；③社区渗透（在 Notion 相关论坛、Reddit 板块、Discord 社群分享免费模板引流）；④SEO（让模板关键词在搜索引擎好找）。第一波客户来源未公开。可照抄的打法：在 Twitter 或小红书发布模板使用前后对比图，附上 Gumroad 购买链接。",
-        "stack": "工具链：Notion（模板设计平台）、Gumroad（数字产品售卖平台）。两者均为点鼠标即可使用的无代码工具，无需任何编程知识。",
+        "who": "zhouyang，中国背景（推测），单人运营，通过销售Notion模板在Gumroad上建立被动收入流。具体月入规模、粉丝量、销量等数字未公开。",
+        "deliverable": "交付物是「Notion模板」——即用Notion搭建好的系统化页面/数据库/看板，卖给需要效率工具但不想从零搭建的人。典型产品可能包括：读书笔记模板、项目管理模板、财务管理模板、生活习惯追踪表等。产品以数字文件形式交付，买家自行在Notion中复制使用。",
+        "business_model": "一次性销售数字产品模式。定价区间通常为5-50美元（海外Gumroad常见定价），属于低价走量型。部分卖家会设置多个价格档位（如基础版免费、进阶版付费、高级版含视频指导课），但zhouyang的具体定价结构未公开。收入来源单一，主要是模板销售收入，无订阅或广告收入证据。",
+        "acquisition": "获客方式（这是该类模式最核心的部分）：① 平台渠道——主要依赖Gumroad站内流量 + Gumroad Explore页面曝光 + 社交媒体引流；② 内容打法——典型做法是在Twitter/X或小红书发「模板预览图/截图」+「使用前后对比」的短文，展示模板长什么样、解决了什么问题；部分卖家会在YouTube发「Notion模板开箱/教程」视频，视频描述区挂Gumroad链接；③ 第一批客户来源——通常来自作者已有的个人社交账号（Twitter关注者、小红书粉丝、Notion社区活跃账号），先免费分享部分模板建立信任，再引导购买完整版；④ 可照抄的打法：在Twitter/X发一条「我用Notion管理了XX，分享免费版给你」→ 评论区互动 → 私信完整模板链接（需关注/转发）→ 引导到Gumroad购买升级版。这是普通人今天就能做的第一步。注意：Gumroad本身有站内分发机制，如果你的模板被选入Gumroad推荐，会获得额外免费流量。",
+        "stack": "工具链极简：Notion（制作模板的核心工具）、Gumroad（海外数字产品售卖平台，负责收款和自动发货）、Canva或Figma（制作模板预览图和封面）、Twitter/X 或 小红书（主要引流渠道，视目标市场而定）、可选：MailerLite或Substack（海外付费邮件订阅平台，用于维护买家属性）。全程无需写代码，点鼠标即可完成。",
         "replicability": 4,
-        "first_step": "模仿第一步：注册 Notion 账号，选择一个你日常使用的场景（如待办清单、读书笔记、项目管理），设计一个简洁实用的模板，截图展示效果，然后注册 Gumroad 账号上架销售。",
-        "red_flag": "风险/卖铲子判断：此模式本身是卖真实产品（模板），不是卖铲子。但需注意：Notion 模板市场竞争激烈，同质化严重，需要持续更新和差异化才能维持销量。最大坑是前期投入时间设计模板，但可能销量不佳。",
-        "learn": "最该抄的作业：①用现成平台（Notion+Gumroad）组合实现零代码交付，门槛极低；②数字产品一旦做好可以无限次销售，边际成本为零，适合构建被动收入。",
-        "tech_barrier": "低",
-        "doable": "能（完全不用写代码，用 Notion 和 Gumroad 现成工具即可）",
+        "first_step": "今天就能做的第一件事：去Gumroad注册账号 → 打开Notion → 挑一个你正在用的模板（比如自己的记账表或待办清单）→ 美化一下，做成「通用版本」→ 上传到Gumroad，定价5美元 → 发一条Twitter/小红书，附上模板截图和使用场景说明，挂上Gumroad链接。完成这一步，你就已经有了第一件商品和第一个获客渠道。",
+        "red_flag": "风险判断：这不是「卖铲子」模式，因为zhouyang自己确实在卖真实产品（Notion模板），而不是教别人怎么卖模板。但有两个坑需要注意：① 这个赛道已进入红海，全球有成千上万人在卖Notion模板，竞争极其激烈，同质化严重；② 低价策略意味着需要巨大流量才能产生可观收入——如果定价5美元，要达到月入1万元需要卖出约140份，对新手来说未必轻松。最大风险是「流量天花板」而非「模式本身有问题」。",
+        "learn": "最值得抄的两个作业：① 「免费+付费」组合拳——先免费放出简化版模板换取关注/转发，再用完整版/高级版赚钱，这是转化率最高的打法；② 用视觉内容（模板截图、对比图）做引流，因为Notion模板是「看得见效果」的产品，一张好图胜过千言万语，这对不会写代码的人来说是天然优势。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用Notion和Gumroad两个现成工具即可，普通人一周内可做出第一个模板并上线）",
         "signals_used": 0,
-        "generated_at": "2026-08-09 04:06",
-        "is_revisit": false
+        "generated_at": "2026-08-12 20:31",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 42,
+          "feasibility": 78,
+          "startup_index": 6,
+          "composite": 60.0,
+          "drivers": [
+            [
+              "交付毛利",
+              5
+            ],
+            [
+              "启动资金低",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              1
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 3,
+            "margin": 5,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 1,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 4,
+            "delivery_chain": 4,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 5,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
       },
-      "last_teardown": "2026-08-09",
-      "teardown_count": 2,
+      "last_teardown": "2026-08-12",
+      "teardown_count": 3,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
-      "recommended_at": "2026-08-08"
+      "recommended_at": "2026-08-08",
+      "commercial_health": {
+        "commercial": 42,
+        "feasibility": 78,
+        "startup_index": 6,
+        "composite": 60.0,
+        "drivers": [
+          [
+            "交付毛利",
+            5
+          ],
+          [
+            "启动资金低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 3,
+          "margin": 5,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 4,
+          "delivery_chain": 4,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "甜甜（AI+跨境副业嘉宾）": {
+      "handle": "甜甜（AI+跨境副业嘉宾）",
+      "name": "甜甜",
+      "region": "国内",
+      "category": "26岁00后女生，从安徽农村走出来，大二开始兼职，毕业两年成为合伙人，用AI+Temu全托管+印花模式运营10家店铺，一年利润百万，零英语门槛、不囤货、每天1-2小时，普通人可复制的跨境一人公司范本。",
+      "aliases": [
+        "甜甜"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "甜甜（AI+跨境副业嘉宾）",
+        "operator_name": "甜甜",
+        "region": "国内",
+        "who": "甜甜，26岁00后女生，安徽农村出身。大二开始兼职，毕业后两年成为合伙人。目前以一人公司形态运营Temu平台印花类产品店铺10家，自述年利润约100万元（未公开财务凭证）。",
+        "deliverable": "印花产品：主要是T恤、帆布袋等印有AI生成图案的日用商品。通过Temu平台卖给海外消费者（欧美为主）。交付物是实体商品，由Temu全托管模式负责生产、物流、售后，商家只负责选品和上架。",
+        "business_model": "Temu全托管模式：商家把货发到Temu国内仓库，平台负责定价、销售、物流、售后。Temu从销售额中抽成，剩余部分归商家。定价方式未公开，推测为按件结算（类似批发价）。10家店铺分散经营，降低单店风险。收入结构：纯产品差价，无订阅、无课程、无社群收入。",
+        "acquisition": "核心获客路径不在商家这边——Temu全托管模式的本质是商家把货发过去，平台去流量池里找买家。所以商家的'获客'实际是'选品+上架+等订单'，而非传统意义上的引流。具体打法：①在Temu后台注册店铺（10个不同主体/信息开设10家店）；②用AI工具批量生成印花图案（类似Midjourney或国产平替）；③找印花工厂打样/代工；④发货到Temu仓库；⑤等平台下单。第一波客户来源：Temu自有流量（海外平台用户搜索购买），商家不参与精准获客动作。可照抄的一步：直接注册Temu入驻，选一个细分印花品类（如宠物T恤、咖啡杯袋），用AI生成30-50个图案，找一家支持一件代发的印花厂合作，发货到仓。",
+        "stack": "Temu卖家后台（平台自带）、AI绘图工具（未公开具体使用哪款，推测为国产平替或Midjourney）、印花代工供应链（未公开具体厂家）、淘宝/1688找货源。无代码工具依赖。",
+        "replicability": 4,
+        "first_step": "今天就去Temu官网注册一个店铺账号，了解全托管模式的入驻要求；同时用任意AI绘图工具生成10张印花图案，测试能否输出可打印的图。",
+        "red_flag": "①年利润百万是商家自述，无第三方财务凭证，无法验证；②10家店铺可能是用不同主体注册的，存在平台风控风险（Temu对多店关联有打击政策）；③印花类Temu竞争已非常激烈，2024-2025年大量普通人涌入，利润空间被压缩；④这不是'教别人赚钱'的卖铲子模式，但她本人确实靠这套模式赚到钱（至少自述如此），交付的是真实产品。",
+        "learn": "①全托管模式真正降低了跨境门槛——不需要英语、不需要懂物流、不需要自己获客，适合完全不懂外贸的人；②AI批量生成图案+一件代发印花厂，实现了'零库存、零设计成本'的产品矩阵，这是普通人能复制的核心组合。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成平台+AI工具即可启动）",
+        "signals_used": 0,
+        "generated_at": "2026-08-12 20:05",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 35,
+          "feasibility": 76,
+          "startup_index": 6,
+          "composite": 56.8,
+          "drivers": [
+            [
+              "技能门槛低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 4,
+            "delivery_chain": 4,
+            "replicable": 4,
+            "capital": 4,
+            "speed": 4,
+            "skill": 5,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-12",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-12",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-12",
+      "commercial_health": {
+        "commercial": 35,
+        "feasibility": 76,
+        "startup_index": 6,
+        "composite": 56.8,
+        "drivers": [
+          [
+            "技能门槛低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 4,
+          "delivery_chain": 4,
+          "replicable": 4,
+          "capital": 4,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "做不露脸自媒体10个月的研究生博主": {
+      "handle": "做不露脸自媒体10个月的研究生博主",
+      "name": "不露脸自媒体博主（研究生）",
+      "region": "国内",
+      "category": "一名研究生通过不露脸自媒体方式坚持10个月并成功变现，证明了普通人在低技术门槛下靠内容+人设定位也能跑通赚钱闭环，路径清晰、无需任何编程或开发能力。",
+      "aliases": [
+        "不露脸自媒体博主（研究生）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "做不露脸自媒体10个月的研究生博主",
+        "operator_name": "不露脸自媒体博主（研究生）",
+        "region": "国内",
+        "who": "一名在读研究生，通过不露脸自媒体在某个国内平台（具体平台未公开）坚持运营约10个月后实现变现，属于低技术门槛的内容型个人创作者",
+        "deliverable": "未公开具体交付物形态，可能为知识资料包、付费内容、咨询服务或社群 membership 中的一种或组合",
+        "business_model": "变现方式未公开，定价体系未公开，收入金额未公开。仅知已在10个月时实现「成功变现」",
+        "acquisition": "获客路径未公开，具体在哪个平台、用什么内容形式、第一波客户从哪来均无披露。唯一可确认的是：以研究生身份建立人设定位，靠不露脸的内容输出持续10个月。若资料中完全没透露获客方法，可参考性大幅降低",
+        "stack": "未公开，推测主要依赖国内主流内容平台（如小红书/B站/抖音等，未确认）自带的创作与变现工具，无编程要求",
+        "replicability": 3,
+        "first_step": "确定自己的身份标签（如学生/职场人/某领域从业者），选择一个不露脸的内容形式（文字图文/配音剪辑/录屏讲解），在小红书上发布第一篇内容",
+        "red_flag": "案例信息严重不足，无法判断其是否主要靠教别人赚钱（卖铲子）。同时，研究生身份本身可能带有幸存者偏差，普通人照抄可能只是得到相同的时间成本投入而未必能变现",
+        "learn": "①不露脸+身份人设是一个真实可行的低成本启动路径；②坚持10个月再变现，说明内容型生意需要耐心沉淀，不是速成",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现有内容平台即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-12 20:05",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 25,
+          "feasibility": 42,
+          "startup_index": 3,
+          "composite": 37.9,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "技能门槛低",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              1
+            ],
+            [
+              "获客路径清晰",
+              1
+            ]
+          ],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "只有原作者本人能做 → 封顶4分",
+            "没有定价 = 还没有产品 → 封顶5分",
+            "没写清客户从哪来 → 封顶6分",
+            "需求不痛且卖不上价 → 封顶5分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
+          "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "定价检验未过：全文没有一个真实价格",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付",
+            "低客单纯劳力：靠时间换钱，杠杆低"
+          ],
+          "factors": {
+            "urgency": 2,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 2,
+            "price_ladder": 1,
+            "revenue_proof": 1,
+            "market_size": 4,
+            "evergreen": 3,
+            "channel": 1,
+            "machine": 2,
+            "delivery_chain": 1,
+            "replicable": 2,
+            "capital": 5,
+            "speed": 2,
+            "skill": 5,
+            "concrete": 2,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
+        }
+      },
+      "last_teardown": "2026-08-12",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-12",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-12",
+      "commercial_health": {
+        "commercial": 25,
+        "feasibility": 42,
+        "startup_index": 3,
+        "composite": 37.9,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "技能门槛低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            1
+          ],
+          [
+            "获客路径清晰",
+            1
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没有定价 = 还没有产品 → 封顶5分",
+          "没写清客户从哪来 → 封顶6分",
+          "需求不痛且卖不上价 → 封顶5分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "定价检验未过：全文没有一个真实价格",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付",
+          "低客单纯劳力：靠时间换钱，杠杆低"
+        ],
+        "factors": {
+          "urgency": 2,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 2,
+          "price_ladder": 1,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 1,
+          "machine": 2,
+          "delivery_chain": 1,
+          "replicable": 2,
+          "capital": 5,
+          "speed": 2,
+          "skill": 5,
+          "concrete": 2,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
+      },
+      "commercial_severity": "warn"
+    },
+    "没滚刷的吸尘器": {
+      "handle": "没滚刷的吸尘器",
+      "name": "B站UP主（扫地僧/友望品牌合作）",
+      "region": "国内",
+      "category": "一位B站UP主上个月靠接广子获得11000元收入，通过拆解品牌合作（友望吸尘器）的完整路径，展示了普通内容创作者如何在不卖课、不教人的前提下，靠真实内容交付拿到商业变现，一个月破万的可复制样本。",
+      "aliases": [
+        "B站UP主（扫地僧/友望品牌合作）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "没滚刷的吸尘器",
+        "operator_name": "B站UP主（扫地僧/友望品牌合作）",
+        "region": "国内",
+        "who": "B站UP主（ID：扫地僧），单人数码/家电测评类内容创作者，与友望等小家电品牌有商业合作，月收入约1.1万元（仅广告收入，其他收入未公开）",
+        "deliverable": "品牌视频广告——为品牌拍摄产品测评、开箱或使用体验视频，交付给品牌方作为种草素材，同时发布在B站获取播放量",
+        "business_model": "品牌广告合作（俗称「恰饭」），一次性项目制收费，单条视频报价未公开；上月广告收入约11000元；是否还有其他收入来源（如B站创作激励、带货佣金等）未公开",
+        "acquisition": "具体获客路径资料未透露，无法还原其第一条广告是怎么谈下来的、通过什么渠道联系到友望品牌、有没有走代理或品牌直联。根据行业常识推断：B站UP主接广通常有两条路——①品牌或代理机构主动找上门（需要有一定粉丝基础和内容质量作为敲门砖）；②UP主主动通过B站商单平台（如B站商的单系统）或社交渠道自荐。但资料没有说明这位UP主走的是哪条路、第一步怎么破冰，因此可参考性有限。",
+        "stack": "B站创作工具（剪映等视频剪辑软件）、B站商单系统/接单渠道（具体名称未公开）",
+        "replicability": 3,
+        "first_step": "在B站注册账号，选择一个你熟悉且有市场需求的细分领域（如小家电、数码配件），连续发布3-5条高质量测评/体验类视频，积累基础播放量和粉丝后，主动申请B站商单平台或关注品牌官号寻找合作机会",
+        "red_flag": "收入数据仅有「上月广告收入11000元」一个数字，没有说明是否稳定、持续，也没有披露流量数据（播放量、粉丝数）作为佐证，无法判断这个收入水平是否可持续。另外，这类UP主的收入高度依赖平台算法和粉丝活跃度，一旦内容流量下滑，商业价值会迅速缩水。",
+        "learn": "①不卖课、不教人，纯粹靠内容交付变现——这对普通人更有参考价值，因为不需要先成为「老师」；②从「真实使用体验」切入而非纯参数堆砌，更容易建立品牌信任感，这也是接广的核心竞争力。",
+        "tech_barrier": "低",
+        "doable": "降级可做（用无代码工具替代）",
+        "signals_used": 0,
+        "generated_at": "2026-08-12 20:31",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 52,
+          "feasibility": 49,
+          "startup_index": 5,
+          "composite": 50.4,
+          "drivers": [
+            [
+              "交付毛利",
+              4
+            ],
+            [
+              "抗过时",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              2
+            ],
+            [
+              "获客路径清晰",
+              2
+            ]
+          ],
+          "caps": [
+            "没写清客户从哪来 → 封顶6分"
+          ],
+          "gates": [
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 3,
+            "market_size": 3,
+            "evergreen": 4,
+            "channel": 2,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 3,
+            "capital": 4,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 3,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
+      },
+      "last_teardown": "2026-08-12",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-12",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-12",
+      "commercial_health": {
+        "commercial": 52,
+        "feasibility": 49,
+        "startup_index": 5,
+        "composite": 50.4,
+        "drivers": [
+          [
+            "交付毛利",
+            4
+          ],
+          [
+            "抗过时",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            2
+          ],
+          [
+            "获客路径清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "没写清客户从哪来 → 封顶6分"
+        ],
+        "gates": [
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 3,
+          "market_size": 3,
+          "evergreen": 4,
+          "channel": 2,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 4,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 3,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
     }
   }
 }

@@ -37,8 +37,12 @@ TWITTER_BEARER = (
     "%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
 )
 TWITTER_API_BASE = "https://x.com/i/api/graphql"
-Q_USER_BY_SCREEN_NAME = "IGgvgiOx4QZndDHuD3x9TQ"
-Q_USER_TWEETS = "PNd0vlufvrcIwrAnBYKE9g"
+# ⚠️ X 会定期轮换 GraphQL query ID（前端 main bundle 里的 queryId 映射表）。
+# 失效表现：UserByScreenName 仍能返回 uid，但 UserTweets 返回 {"result":{"__typename":"UserUnavailable"}} → 0 条。
+# 更新方法：抓 https://abs.twimg.com/responsive-web/client-web/main.*.js，grep `operationName:"UserTweets"` 前的 queryId。
+# 当前值抓取于 2026-08-12（main.f3d2f4ca.js）
+Q_USER_BY_SCREEN_NAME = "Gb-d6r0vxPOADdG62OEBpQ"
+Q_USER_TWEETS = "SXVCYB8XHSS25nzIljNtZA"
 TIMEOUT = 30
 
 # sync 版 API 调用（供 asyncio.to_thread 使用，解决 httpx cookie 兼容问题）
@@ -69,8 +73,9 @@ def _sync_user_tweets(session, user_id: str, count: int = 30) -> list:
         if resp.status_code != 200:
             return []
         data = resp.json()
+        # X UserTweets 返回结构是 data.user.result.timeline.timeline（无 timeline_v2 层）
         tl = (data.get("data", {}).get("user", {}).get("result", {})
-              .get("timeline_v2", {}).get("timeline", {}))
+              .get("timeline", {}).get("timeline", {}))
         tweets = []
         for inst in tl.get("instructions", []):
             if inst.get("type") == "TimelineAddEntries":

@@ -13,6 +13,10 @@ storage/dry_run_log.txt
 storage/push_log.txt
 storage/push_result.md
 storage/*_log.txt
+storage/*.log
+
+# WorkBuddy 项目数据（不入库）
+.workbuddy/
 
 # 注意：storage/ 下的 history.json / operators.json / opportunity_library.json
 # 是「跨天累积的状态」，必须提交进仓库。

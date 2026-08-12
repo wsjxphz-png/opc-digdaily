@@ -14,6 +14,7 @@
 import subprocess
 import sys
 import os
+import signal
 from pathlib import Path
 from datetime import datetime
 
@@ -80,12 +81,31 @@ def _send_alert(webhook: str, rc: int, log_tail: str):
         print(f"[告警] 飞书发送也失败: {e}")
 
 
+_ABORTED = {"sig": None}
+
+
+def _on_signal(signum, frame):
+    # 只记录"被信号中断"，真正的告警在 main 末尾发，避免 handler 里做重 IO
+    _ABORTED["sig"] = signum
+
+
 def main() -> int:
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"=== run_bot 启动 {ts} ===")
 
+    # 注册信号：即使被 Ctrl+C / SIGTERM 中断，也要能发出失败告警
+    # （8/11 教训：进程被 3221225786 式终止时，静默失败无人知晓）
+    try:
+        signal.signal(signal.SIGINT, _on_signal)
+        if hasattr(signal, "SIGTERM"):
+            signal.signal(signal.SIGTERM, _on_signal)
+    except (ValueError, OSError):
+        pass  # 非主线程等情况下可能注册失败，忽略
+
     LOG.parent.mkdir(parents=True, exist_ok=True)
 
+    rc = None
+    output = ""
     try:
         proc = subprocess.run(
             [str(VENV_PY), "main.py", "--once"],
@@ -101,17 +121,24 @@ def main() -> int:
     except subprocess.TimeoutExpired:
         rc = -1
         output = "[超时] main.py 超过 30 分钟未完成"
+    except KeyboardInterrupt:
+        rc = -3221225786
+        output = "[被中断] run_bot 收到 Ctrl+C / SIGINT"
     except Exception as e:
         rc = -2
         output = f"[异常] run_bot 自身: {e}"
 
-    # 子进程输出写入日志
-    try:
-        with open(LOG, "a", encoding="utf-8", errors="replace") as f:
-            f.write(output)
-            f.flush()
-    except Exception as e:
-        print(f"[日志] 写入 bot_cron.log 失败: {e}")
+    # 子进程输出直接打印，由 bat 的 `>> storage\bot_cron.log` 统一收集。
+    # 不要再 open 同一个文件——会和 bat 的重定向抢句柄导致 Windows 下
+    # Permission denied，main.py 的真实输出（含推送失败原因）就全丢了。
+    if output:
+        print(output)
+
+    # 被信号中断：优先发告警（覆盖 3221225786 式静默死亡）
+    if _ABORTED["sig"] is not None:
+        print(f"[被信号 {_ABORTED['sig']} 中断] 发告警")
+        _send_alert(_load_webhook(), -3221225786, output)
+        return 0
 
     # 判定成功：退出码为零 且 日志含「推送成功」
     success = (rc == 0) and ("推送成功" in output)
@@ -125,7 +152,7 @@ def main() -> int:
     print(
         f"[失败] 退出码={rc}, 含「推送成功」={has_push}, 发告警"
     )
-    _send_alert(_load_webhook(), rc, output)
+    _send_alert(_load_webhook(), rc or -1, output)
     return 0  # 告警发出就算收工，不让 bat/cmd 因为非零退出导致额外告警
 
 

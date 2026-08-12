@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-09 19:44",
+  "updated": "2026-08-12 05:21",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -130,6 +130,82 @@
       ],
       "best_startup_index": 4,
       "best_commercial": 58,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0008_会员订阅专属内容无广告社": {
+      "topic": "会员订阅（专属内容+无广告+社区） → 卖给有写作能力的个人创作者",
+      "fingerprint": "会员订阅专属内容无广告社区卖给有写作能力个人创作者",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/taegan-goddard-political-wire/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0009_移民签证手续代办咨询服务": {
+      "topic": "移民/签证手续代办咨询服务 → 卖给有跨境需求的美籍华人或准备出国的人",
+      "fingerprint": "移民签证手续代办咨询服务卖给有跨境需求美籍华人或准备出国人",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3509-first-1000-paralegal-assists-us-immigrants-to-canada"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0010_无代码平台搭建自动化流程": {
+      "topic": "用无代码平台搭建的自动化流程 → 卖给中小企业老板",
+      "fingerprint": "无代码平台搭建自动化流程卖给中小企业老板",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "times_seen": 1,
+      "sources": [
+        "Nick Saraev Blog"
+      ],
+      "urls": [
+        "https://nicksaraev.com/5-more-automations-you-can-sell-today-for-1-500-or-10-000/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0011_卖整理好信息差去社群找顾": {
+      "topic": "卖整理好的信息差，去社群找顾客，收会员费。",
+      "fingerprint": "卖整理好信息差去社群找顾客收会员费",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
+      "times_seen": 2,
+      "sources": [
+        "@nicksaraev"
+      ],
+      "urls": [
+        "http://n/run1"
+      ],
+      "best_startup_index": 0,
+      "best_commercial": 0,
       "feedback": {
         "up": 0,
         "down": 0
