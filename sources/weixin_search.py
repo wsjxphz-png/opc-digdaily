@@ -20,6 +20,7 @@ from urllib.parse import quote, unquote, urljoin
 import httpx
 
 from .base import BaseSource, ContentItem
+from .weixin_targets import extract_publish_time
 
 logger = logging.getLogger(__name__)
 
@@ -100,8 +101,34 @@ class WeixinSearchSource(BaseSource):
                 seen.add(key)
                 unique.append(it)
 
+        # 补真实发布时间（公众号深度文，发布久≠过时；与小宇宙/目标号对齐，不伪造"今天"）。
+        # 仅在去重后的最终候选上 best-effort 抓一次，成本受 max_total 上限约束。
+        if unique:
+            await self._enrich_publish_times(client, unique)
+
         logger.info(f"公众号搜索: 获取 {len(unique)} 条（去重后）")
         return unique[:max_total]
+
+    async def _enrich_publish_times(
+        self, client: httpx.AsyncClient, items: list[ContentItem]
+    ) -> None:
+        """对每条公众号文章 best-effort 抓取真实发布时间，覆盖源构造时的占位时间。
+
+        复用 weixin_targets.extract_publish_time（从 var publish_time 解析）。
+        失败（限流/非文章页/超时）保持原占位时间，不阻断整条采集。
+        """
+        for it in items:
+            if it.source != "weixin" or "mp.weixin.qq.com" not in (it.url or ""):
+                continue
+            try:
+                rp = await client.get(it.url, timeout=10)
+            except Exception:
+                continue
+            if "mp.weixin.qq.com/s" not in str(rp.url):
+                continue
+            pt = extract_publish_time(rp.text)
+            if pt:
+                it.published = pt
 
     async def _search(
         self, client: httpx.AsyncClient, query: str, limit: int
