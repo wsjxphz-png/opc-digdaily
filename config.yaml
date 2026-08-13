@@ -298,7 +298,7 @@ domestic:
     xiaoyuzhou:
       enabled: true
       max_feeds_per_query: 3     # 每个搜索词取前几个播客
-      max_episodes: 2            # 每个播客取最新几集
+      max_episodes: 6            # 每个播客取最新几集（放宽以让较旧但仍有价值的深度集进入候选；去重30天窗口保证稳态成本低，仅首次部署有回溯峰值）
       query_delay: 2
       queries:
         - "一人公司"
