@@ -104,6 +104,18 @@ BATCH_SYSTEM_PROMPT = """你是一名极其严苛且反噱头的「无代码商�
 
 ---
 
+## 时效性豁免（长内容不因旧而降权）
+
+每条内容末尾会附「发布日期」。评估时请谨记：
+
+- 播客 / 长视频 / 深度长文（小宇宙、YouTube、B站、公众号深度文）属长周期、可沉淀内容——一年前的深度拆解，今天照样能照着抄。发布时间久，不等于价值低、不等于过时。
+- 因此，不要因为内容旧就压低「适合你启动指数」或「真实性」。唯一标准是：模式是否讲透、获客路径是否具体、普通人能否照做。
+- 反向：纯时效资讯（某平台当日新规、限时活动、已下线的功能）若已过期失效，才可降权或判 irrelevant。
+
+一句话：深的内容越陈越香，浅的资讯才讲时效。
+
+---
+
 ## 一、代码依赖度评估（1-5 分，5 分 = 必须精通编程）
 
 详细说明实现该模式是否需要写代码。关键问题：如果用无代码工具（Make、n8n、Zapier、Notion、Framer、AI 智能体等）能否 100% 替代？
@@ -472,7 +484,12 @@ class AIProcessor:
             title = item.title[:120]
             # 有全文用全文（截取 1200 字给 AI），没全文用摘要
             content = (item.full_text or item.summary or "(无内容)")[:1200]
-            input_lines.append(f"[{i}] {title} | {content}")
+            date_str = (
+                item.published.strftime("%Y-%m-%d")
+                if getattr(item, "published", None)
+                else "未知"
+            )
+            input_lines.append(f"[{i}] {title} | 发布:{date_str} | {content}")
         user_content = "\n".join(input_lines)
 
         logger.info(f"批量处理 {len(items)} 条内容...")
