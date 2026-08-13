@@ -25,6 +25,22 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # 受控暂停开关（aeon 式：暂停 = 配置标志，绝不 disable 工作流）
+      # 需要暂定时：gh secret set OPC_PAUSED -b "true"  ；恢复：gh secret delete OPC_PAUSED
+      # 这是「暂停」的唯一 sanctioned 通道，禁止再用 gh workflow disable 搞死调度。
+      - name: Guard (sanctioned pause switch)
+        id: guard
+        env:
+          OPC_PAUSED: ${{ secrets.OPC_PAUSED }}
+        run: |
+          if [ "${OPC_PAUSED:-}" = "true" ]; then
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "[pause] OPC_PAUSED=true -> 本次跳过推送（配置开关式暂停，非禁用工作流）"
+          else
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            echo "[run] 正常执行"
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -34,6 +50,7 @@ jobs:
         run: pip install httpx pyyaml feedparser trafilatura
 
       - name: Run daily push
+        if: steps.guard.outputs.should_run == 'true'
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
