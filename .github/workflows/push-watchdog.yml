@@ -1,0 +1,60 @@
+name: 推送通道看门狗
+
+# 自愈 + 检测：防止「每日推送通道被悄悄禁用/失败却无人知晓」（8/13 曾因通道被禁静默 4 天，
+# 直到用户发现群里没推送才手动重开）。本工作流独立于 daily-push，每日在其后检查并自愈。
+on:
+  schedule:
+    # 北京时间每天 21:30 = UTC 13:30（daily-push 排期 20:00 之后，留足运行余量）
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write   # 用于重新启用 / 触发 daily-push
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 检查并自愈推送通道
+        env:
+          WF: daily-push.yml
+          REPO: ${{ github.repository }}
+          FEISHU: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          set -e
+          TODAY=$(date -u +%Y-%m-%d)
+
+          STATE=$(gh api "repos/$REPO/actions/workflows/$WF" --jq '.state')
+          echo "daily-push 当前状态: $STATE"
+
+          ACTION=""
+
+          # 1) 被禁用 -> 自动重开（自愈核心）
+          if [ "$STATE" = "disabled_manually" ] || [ "$STATE" = "disabled_inactivity" ]; then
+            gh workflow enable "$WF" --repo "$REPO"
+            ACTION="重新启用被禁用的推送通道"
+            echo "已自动重新启用"
+          fi
+
+          # 2) 今天是否已有成功运行（排除仍在跑的，避免误补推造成重复）
+          LAST_OK=$(gh run list --workflow "$WF" --repo "$REPO" --status success \
+                      --limit 1 --json createdAt --jq '.[0].createdAt // ""' | cut -c1-10)
+          PENDING=$(gh run list --workflow "$WF" --repo "$REPO" --limit 10 \
+                      --json createdAt,status \
+                      --jq "[.[] | select((.status==\"in_progress\") or (.status==\"queued\") or (.status==\"waiting\")) | select(.createdAt[0:10]==\"$TODAY\")] | length")
+          echo "今日(UTC $TODAY) 最近成功: ${LAST_OK:-无}；今日进行中/排队: ${PENDING:-0}"
+
+          if [ "$LAST_OK" != "$TODAY" ] && [ "${PENDING:-0}" = "0" ]; then
+            echo "今日尚未成功推送，补推一次"
+            gh workflow run "$WF" --repo "$REPO" || true
+            ACTION="${ACTION:+$ACTION；}补推今日内容"
+          fi
+
+          # 3) 仅在有动作时通知（中性措辞，不指责系统），正常日子静默
+          if [ -n "$ACTION" ] && [ -n "$FEISHU" ]; then
+            curl -s -X POST "$FEISHU" -H 'Content-Type: application/json' \
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"【每日推送守护】已自动处理：$ACTION。系统已恢复正常。\"}}" \
+              || echo "（通知发送失败，但自愈动作已完成）"
+          fi
