@@ -46,11 +46,21 @@ from overflow_pool import OverflowPool
 # 项目根目录
 ROOT = Path(__file__).parent
 CONFIG_PATH = ROOT / "config.yaml"
-HISTORY_PATH = ROOT / "storage" / "history.json"
-OVERFLOW_PATH = ROOT / "storage" / "overflow_pool.json"
-ROSTER_PATH = ROOT / "storage" / "operators.json"
-SEEDS_PATH = ROOT / "storage" / "seeded_facts.json"
-LIBRARY_PATH = ROOT / "storage" / "opportunity_library.json"
+
+# 持久化目录：默认用项目内 storage/；测试可通过环境变量 OPC_STORAGE_DIR 指向临时目录，
+# 让测试完全不碰真实 storage/（history / library / overflow / roster），根治测试污染真实盘。
+def _resolve_storage_dir() -> Path:
+    env = os.environ.get("OPC_STORAGE_DIR")
+    d = Path(env).resolve() if env else (ROOT / "storage")
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+_STORAGE_DIR = _resolve_storage_dir()
+HISTORY_PATH = _STORAGE_DIR / "history.json"
+OVERFLOW_PATH = _STORAGE_DIR / "overflow_pool.json"
+ROSTER_PATH = _STORAGE_DIR / "operators.json"
+SEEDS_PATH = _STORAGE_DIR / "seeded_facts.json"
+LIBRARY_PATH = _STORAGE_DIR / "opportunity_library.json"
 
 # 北京时间
 CST = timezone(timedelta(hours=8))
