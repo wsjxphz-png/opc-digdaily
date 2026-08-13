@@ -29,12 +29,9 @@ jobs:
           STATE=$(gh api "repos/$REPO/actions/workflows/$WF" --jq '.state')
           echo "daily-push 当前状态: $STATE"
 
-          ACTION=""
-
-          # 1) 被禁用 -> 自动重开（自愈核心）
+          # 1) 被禁用 -> 自动重开（静默自愈，不发任何通知）
           if [ "$STATE" = "disabled_manually" ] || [ "$STATE" = "disabled_inactivity" ]; then
             gh workflow enable "$WF" --repo "$REPO"
-            ACTION="重新启用被禁用的推送通道"
             echo "已自动重新启用"
           fi
 
@@ -47,14 +44,11 @@ jobs:
           echo "今日(UTC $TODAY) 最近成功: ${LAST_OK:-无}；今日进行中/排队: ${PENDING:-0}"
 
           if [ "$LAST_OK" != "$TODAY" ] && [ "${PENDING:-0}" = "0" ]; then
-            echo "今日尚未成功推送，补推一次"
+            echo "今日尚未成功推送，静默补推一次"
             gh workflow run "$WF" --repo "$REPO" || true
-            ACTION="${ACTION:+$ACTION；}补推今日内容"
           fi
 
-          # 3) 仅在有动作时通知（中性措辞，不指责系统），正常日子静默
-          if [ -n "$ACTION" ] && [ -n "$FEISHU" ]; then
-            curl -s -X POST "$FEISHU" -H 'Content-Type: application/json' \
-              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"【每日推送守护】已自动处理：$ACTION。系统已恢复正常。\"}}" \
-              || echo "（通知发送失败，但自愈动作已完成）"
-          fi
+          # 3) 静默自愈：不在群里发任何通知（包括"恢复/补推"也不要）。
+          #    正常日子这里什么都不会发生；只有通道被禁用或当日推送失败时，
+          #    才在后台默默修好。用户只会在固定时间收到正常的每日推送，
+          #    全程无需感知任何修复动作——这才是"每天固定自动推送"。
