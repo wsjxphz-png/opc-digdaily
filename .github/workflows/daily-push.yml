@@ -20,7 +20,7 @@ concurrency:
 jobs:
   daily-push:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v5
@@ -47,7 +47,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install httpx pyyaml feedparser trafilatura
+        run: pip install httpx pyyaml feedparser trafilatura requests json5
 
       - name: Run daily push (retry with backoff)
         if: steps.guard.outputs.should_run == 'true'
@@ -103,4 +103,4 @@ jobs:
             echo "推送失败，第 $i 次重试..."
             git pull --rebase --autostash || true
           done
-          echo "::warning::状态写回失败，本次累积数据将丢失"
+          echo "::error::状态写回失败，本次累积数据将丢失（下次 checkout 会回到旧状态）"

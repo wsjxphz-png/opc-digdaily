@@ -14,6 +14,7 @@
 import asyncio
 import json
 import logging
+import os
 import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -28,8 +29,13 @@ from .weixin_search import WeixinSearchSource
 logger = logging.getLogger(__name__)
 
 # 项目根目录（用于定位动态源注册表 storage/scouted_sources.json）
+# 支持 OPC_STORAGE_DIR 环境变量覆盖（测试隔离用），与 main.py 的 _STORAGE_DIR 保持一致
 _ROOT = Path(__file__).parent.parent
-_DYNAMIC_FILE = _ROOT / "storage" / "scouted_sources.json"
+_DYNAMIC_FILE = (
+    Path(os.environ["OPC_STORAGE_DIR"]).resolve() / "scouted_sources.json"
+    if os.environ.get("OPC_STORAGE_DIR")
+    else _ROOT / "storage" / "scouted_sources.json"
+)
 
 HEAD = {
     "User-Agent": (

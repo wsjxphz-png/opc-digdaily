@@ -103,9 +103,10 @@ class ScoutedSource:
 class SourceScout:
     """主动侦察新的 OPC 内容源，并维护动态源注册表。"""
 
-    def __init__(self, dynamic_file: Path, config: dict | None = None):
+    def __init__(self, dynamic_file: Path, config: dict | None = None, persist: bool = True):
         self.file = Path(dynamic_file)
         self.cfg = config or {}
+        self.persist = bool(persist)
         self.queries = self.cfg.get("queries", DEFAULT_SCOUT_QUERIES)
         self.max_candidates = self.cfg.get("max_candidates", 20)
         self.min_score = self.cfg.get("min_score", 7)
@@ -141,7 +142,8 @@ class SourceScout:
                 last = e.get("last_judged") or e.get("discovered_at", "")
                 if last:
                     try:
-                        d = datetime.strptime(last, "%Y-%m-%d")
+                        # 必须带 tzinfo 再相减：aware CST 减 naive 会抛 TypeError
+                        d = datetime.strptime(last, "%Y-%m-%d").replace(tzinfo=CST)
                         if (datetime.now(CST) - d).days < self.rejudge_days:
                             return True
                     except Exception:
@@ -305,7 +307,11 @@ class SourceScout:
             self._upsert(ss, today)
             if ss.verdict == "add" and ss.score >= self.min_score:
                 approved.append(ss)
-        self._save()
+        # dry-run 演练不落盘，避免污染真实动态白名单
+        if self.persist:
+            self._save()
+        else:
+            logger.info("【演练】侦察兵注册表不落盘（新源只在内存中）")
         return approved
 
     @staticmethod

@@ -6,9 +6,13 @@
 
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
+
+# 页脚/落盘时间戳统一用北京时间：UTC 与北京在 00:00-08:00 会差一天，
+# 跨天边界时卡片标题(北京)与页脚(UTC)日期不一致
+_CST = timezone(timedelta(hours=8))
 
 import httpx
 
@@ -162,6 +166,9 @@ class FeishuPusher:
         self.webhook_url = webhook_url
         self.card_color = COLORS.get(card_color, "blue")
         self._batch_size = max(1, int(batch_size))
+        # 本次推送实际送达的条目 URL（按卡粒度累计，供 main.py 精确去重标记：
+        # 部分批次失败时，已送达的子卡内容不会被明日重复推送）
+        self._delivered_urls: set[str] = set()
         self.feedback_repo = (feedback_repo or "").strip()
         self.feedback_enabled = bool(feedback_enabled and self.feedback_repo)
         # 演练模式：完整跑通流程并渲染卡片，但绝不真的发到群里
@@ -268,6 +275,12 @@ class FeishuPusher:
 
         total = len(domestic) + len(international)
         batch = self._batch_size
+        self._delivered_urls = set()  # 本次推送清零
+
+        def _mark(items: list[ContentItem]):
+            for it in items:
+                if getattr(it, "url", ""):
+                    self._delivered_urls.add(it.url)
 
         # 总量未超一批：保持单卡（国内+国际同卡）
         if total <= batch:
@@ -275,7 +288,25 @@ class FeishuPusher:
                 domestic, international, date_str, total, recurring,
                 screened_out, screened_total,
             )
-            return await self._send_card(card)
+            ok = await self._send_card(card)
+            if ok:
+                _mark(domestic + international)
+                return True
+            # 超限降级：切成国内/国际两张板块卡重发
+            logger.warning(f"单卡 {total} 条发送失败（可能超飞书大小上限），按板块拆分重发")
+            ok_all = True
+            for label, items, color in (("国内", domestic, "red"), ("国际", international, "blue")):
+                if not items:
+                    continue
+                sub = self._build_section_card(
+                    label, items, color, date_str, 1, 2, total,
+                    recurring if label == "国内" else None,
+                )
+                if await self._send_card(sub):
+                    _mark(items)
+                else:
+                    ok_all = False
+            return ok_all
 
         # 超批：国内 / 国际分别切块，每块一张卡，顺序推送
         cards = []
@@ -298,8 +329,29 @@ class FeishuPusher:
             ))
 
         ok_all = True
-        for card in cards:
+        for idx, ((label, items, color), card) in enumerate(zip(chunks, cards), 1):
             ok = await self._send_card(card)
+            if ok:
+                _mark(items)
+            elif len(items) > 2:
+                # 超限降级：对半拆分重发（最多拆一次，仍失败则如实上报）
+                logger.warning(
+                    f"板块「{label}」{len(items)} 条发送失败（可能超飞书大小上限），对半拆分重发"
+                )
+                half = len(items) // 2
+                ok = True
+                for sub in (items[:half], items[half:]):
+                    if not sub:
+                        continue
+                    sub_card = self._build_section_card(
+                        label, sub, color, date_str, idx, n + 1, total, None
+                    )
+                    if await self._send_card(sub_card):
+                        _mark(sub)
+                    else:
+                        ok = False
+            else:
+                ok = False
             ok_all = ok_all and ok
         logger.info(f"模块2 分批推送: 共 {n} 张卡（每批 {batch} 条，总计 {total} 条）")
         return ok_all
@@ -423,7 +475,7 @@ class FeishuPusher:
             "tag": "note",
             "elements": [{
                 "tag": "plain_text",
-                "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+                "content": f"🤖 由 AI 自动生成 | {datetime.now(_CST).strftime('%Y-%m-%d %H:%M')}",
             }],
         })
         card = {
@@ -533,7 +585,7 @@ class FeishuPusher:
         }
 
     def _footer_note(self) -> dict:
-        tips = [f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}"]
+        tips = [f"🤖 由 AI 自动生成 | {datetime.now(_CST).strftime('%Y-%m-%d %H:%M')}"]
         tips.append("分数说明：适合你启动指数由公式自动计算")
         if self.feedback_enabled:
             tips.append(
@@ -862,12 +914,25 @@ class FeishuPusher:
         n = len(td_chunks)
         ok_all = True
 
+        async def _send_with_halving(chunk: list[dict], disc: list[dict], idx: int, total_batches: int) -> bool:
+            """发送一张拆解卡；失败（如超飞书大小上限）则对半拆再发。"""
+            card = self._build_teardown_card(chunk, disc, date_str, idx, total_batches)
+            ok = await self._send_card(card)
+            if ok or len(chunk) <= 1:
+                return ok
+            logger.warning(
+                f"拆解卡 {len(chunk)} 张发送失败（可能超飞书大小上限），对半拆分重发"
+            )
+            half = len(chunk) // 2
+            a = await _send_with_halving(chunk[:half], [], idx, total_batches + 1)
+            b = await _send_with_halving(chunk[half:], disc if half == 0 else [], idx, total_batches + 1)
+            return a and b
+
         if td_chunks:
             for idx, chunk in enumerate(td_chunks, 1):
                 # 新发现预警只在最后一批（或唯一一批）出现
                 disc = discovered if idx == n else []
-                card = self._build_teardown_card(chunk, disc, date_str, idx, n)
-                ok = await self._send_card(card)
+                ok = await _send_with_halving(chunk, disc, idx, n)
                 ok_all = ok_all and ok
         else:
             # 没有拆解卡但有新发现（少见）：单独一张卡
@@ -937,7 +1002,7 @@ class FeishuPusher:
             "tag": "note",
             "elements": [{
                 "tag": "plain_text",
-                "content": f"🤖 由 AI 自动生成 | {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+                "content": f"🤖 由 AI 自动生成 | {datetime.now(_CST).strftime('%Y-%m-%d %H:%M')}",
             }],
         })
 
@@ -954,6 +1019,19 @@ class FeishuPusher:
     async def _send_card(self, card: dict) -> bool:
         payload = {"msg_type": "interactive", "card": card}
 
+        # 飞书自定义机器人单条消息体上限约 30KB：超限直接失败（不浪费请求），
+        # 由调用方的降批重发兜底；演练模式同样暴露，避免本地正常、上线才炸
+        try:
+            size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+        except Exception:
+            size = 0
+        if size > 25 * 1024:
+            logger.error(
+                "卡片 %d 字节，超过飞书 ~30KB 上限，本次不发送（将由调用方降批重发）",
+                size,
+            )
+            return False
+
         if self.dry_run:
             # 演练：把卡片落到本地文件供检查，不发网络请求
             try:
@@ -964,7 +1042,7 @@ class FeishuPusher:
                     title = card["header"]["title"]["content"]
                 except (KeyError, TypeError):
                     pass
-                stamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]
+                stamp = datetime.now(_CST).strftime("%Y%m%d_%H%M%S_%f")[:-3]
                 out = out_dir / f"card_{stamp}.json"
                 out.write_text(
                     json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"

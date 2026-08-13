@@ -61,6 +61,7 @@ OVERFLOW_PATH = _STORAGE_DIR / "overflow_pool.json"
 ROSTER_PATH = _STORAGE_DIR / "operators.json"
 SEEDS_PATH = _STORAGE_DIR / "seeded_facts.json"
 LIBRARY_PATH = _STORAGE_DIR / "opportunity_library.json"
+PUSH_MARKER_PATH = _STORAGE_DIR / "push_marker.json"
 
 # 北京时间
 CST = timezone(timedelta(hours=8))
@@ -279,6 +280,7 @@ class DailyOpportunityBot:
     def __init__(self, config: dict, dry_run: bool = False):
         self.config = config
         self.dry_run = bool(dry_run)
+        self._storage_dir = _STORAGE_DIR
 
         ai_cfg = config.get("ai", {})
         self.ai = AIProcessor(
@@ -361,7 +363,11 @@ class DailyOpportunityBot:
         # ── 构建 / 加载操盘手名单 ──
         self.roster = OperatorRoster.build_from_config(self.config, ROSTER_PATH)
         # 套用种子事实 + 技术门槛分类（每次运行都重新应用，确保 indie hacker 被过滤）
-        apply_seeds(self.roster, SEEDS_PATH)
+        # 文件缺失/损坏不应拖垮整个运行（seeded_facts.json 是辅助数据）
+        try:
+            apply_seeds(self.roster, SEEDS_PATH)
+        except Exception as e:
+            logger.warning(f"种子事实应用失败（已跳过，不影响主流程）: {e}")
         logger.info(f"当前名单: {self.roster.stats()}")
 
         # 内容源侦察兵改在 _collect 之后运行（见下方），以便从已采集的微信内容里
@@ -382,7 +388,12 @@ class DailyOpportunityBot:
         scout_cfg = self.config.get("source_scout", {})
         if scout_cfg.get("enabled", True) and self.ai.enabled:
             try:
-                scout = SourceScout(ROOT / "storage" / "scouted_sources.json", scout_cfg)
+                scout = SourceScout(
+                    self._storage_dir / "scouted_sources.json",
+                    scout_cfg,
+                    # 演练不落盘：侦察兵写的是真实动态白名单，演练写进去会污染次日推送
+                    persist=not self.dry_run,
+                )
                 async with httpx.AsyncClient(
                     timeout=20, follow_redirects=True, headers=_HEAD
                 ) as client:
@@ -403,7 +414,9 @@ class DailyOpportunityBot:
             logger.warning("两条管道均无新内容，跳过")
             elapsed = time.time() - start
             logger.info(f"========== 完成 (无内容) {elapsed:.1f}s ==========")
-            return
+            # 无内容 ≠ 推送失败：必须返回 True，否则 main() 会 sys.exit(1)，
+            # CI 重试 3 次空跑 + 看门狗补推，无内容日每天制造假失败
+            return True
 
         # ============================================================
         # 模块1：操盘手拆解 + 发现
@@ -450,7 +463,13 @@ class DailyOpportunityBot:
                     teardowns.append(td.to_dict())
                 elif op.commercial_severity == "skip":
                     logger.info(f"[{op.name}] dbs 商业体检未过，跳过推送")
-            self._save_roster()
+            # 全 skip 日（无任何正常拆解）：轮转标记也须落盘，
+            # 否则坏案例明天重拆、无限烧 token。有正常拆解的日子由
+            # 模块1 推送成功后的 _save_roster 统一保存（失败日不消耗额度）
+            if not teardowns and any(
+                getattr(op, "commercial_severity", "") == "skip" for op in due
+            ):
+                self._save_roster()
 
         # ── 复盘更新循环：对过去已拆解的操盘手补充新动态（新业务/新边界/新赚钱方式）──
         if self.teardown_enabled and self.ai.enabled:
@@ -468,7 +487,11 @@ class DailyOpportunityBot:
                     logger.info(f"[{op.name}] 复盘后 dbs 商业体检未过，跳过推送")
             if revisit_pool:
                 logger.info(f"今日复盘更新: {len(revisit_pool)} 人")
-            self._save_roster()
+            # 全 skip 日同样落盘轮转标记（与拆解循环同一原则）
+            if not teardowns and any(
+                getattr(op, "commercial_severity", "") == "skip" for op in revisit_pool
+            ):
+                self._save_roster()
 
         # ============================================================
         # 模块2：赚钱机会挖掘（国内 / 国际，剔除卖铲子）
@@ -478,6 +501,12 @@ class DailyOpportunityBot:
             dom_opps, intl_opps = await self.opportunity_engine.mine(
                 domestic_items, international_items, self.opportunity_per_region
             )
+        # 打 region 标记：溢池序列化时携带、恢复后按此正确分拆国内/国际，
+        # 避免「恢复项 URL 不在今日列表 → 全落国际」「空 URL → 全判国内」的错乱
+        for it in dom_opps:
+            it.region = "domestic"
+        for it in intl_opps:
+            it.region = "international"
 
         # ============================================================
         # 跨天机会库 + 反馈闭环
@@ -522,10 +551,10 @@ class DailyOpportunityBot:
                     limit=self.recurring_top,
                     min_times=self.recurring_min_times,
                 )
-                if self.dry_run:
-                    logger.info("【演练】机会库不落盘，避免污染真实的出现次数统计")
-                else:
-                    self.library.save()
+                # 机会库落盘延迟到模块2 推送成功后：失败日 annotate 已 +1 的
+                # times_seen 不落盘，避免计数虚增触发假「红海」降权。
+                # annotate 成功后才可保存（未 annotate 时 entries 为空，save 会清空库）
+                self._library_annotated = True
                 logger.info(self.library.stats())
             except Exception as e:
                 logger.exception(f"机会库/反馈处理异常（已跳过，不影响推送）: {e}")
@@ -538,6 +567,7 @@ class DailyOpportunityBot:
 
         # ── 质量溢池：合并昨日滞留，限制每日推送 ≤ 10 条 ──
         total_before_pool = len(dom_opps) + len(intl_opps)
+        pool = None
         if dom_opps or intl_opps:
             all_opps = dom_opps + intl_opps
             pool = OverflowPool(
@@ -547,11 +577,13 @@ class DailyOpportunityBot:
                 max_age_days=int(self.config.get("opportunity", {}).get("overflow_days", 3)),
             )
             today_str = datetime.now(CST).strftime("%Y-%m-%d")
-            pushed, overflowed = pool.decide(all_opps, today_str)
-            # 按 region 分拆：用 URL 集合匹配
-            dom_urls = set(getattr(it, "url", "") for it in domestic_items)
-            dom_opps = [it for it in pushed if getattr(it, "url", "") in dom_urls]
-            intl_opps = [it for it in pushed if getattr(it, "url", "") not in dom_urls]
+            # 恒不在此落盘：decide 只在内存算（恢复项从池文件恢复后，未推送不删池）。
+            # 推送成功后由模块2成功分支的 pool.save() 统一写盘——
+            # 否则失败日恢复项已从池文件消失却未送达，永久丢失
+            pushed, overflowed = pool.decide(all_opps, today_str, persist=False)
+            # 按 region 分拆：恢复项携带序列化时的 region；无 region（旧池遗留数据）归国际
+            dom_opps = [it for it in pushed if getattr(it, "region", "") == "domestic"]
+            intl_opps = [it for it in pushed if getattr(it, "region", "") != "domestic"]
             if overflowed:
                 logger.info(
                     f"溢池：{total_before_pool} → 今日推送 {len(pushed)} / 入池 {len(overflowed)}（标杆≥{self.quality_threshold}）"
@@ -560,6 +592,8 @@ class DailyOpportunityBot:
         # ── 推送 / 输出 ──
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
         pushed_any = False
+        push_failed = False
+        delivered_urls: set[str] = set()
 
         # 模块1：操盘手拆解（OPC赚钱机会挖掘日报 · 操盘手拆解）
         if teardowns or discovered:
@@ -571,7 +605,10 @@ class DailyOpportunityBot:
                     logger.info(
                         f"模块1 推送成功: 拆解 {len(teardowns)} 人 + 新发现 {len(discovered)} 人"
                     )
+                    # 确认送达后才保存名单：拆解计数/复盘状态落盘（失败日不消耗额度）
+                    self._save_roster()
                 else:
+                    push_failed = True
                     logger.error("模块1 推送失败")
             else:
                 self._cli_output_teardowns(teardowns, discovered)
@@ -581,15 +618,29 @@ class DailyOpportunityBot:
             if self.pusher.enabled:
                 ok = await self.pusher.push_opportunities(
                     dom_opps, intl_opps, date_str, recurring,
-                    screened_out=total_before_pool - len(pushed) if 'pushed' in dir() else 0,
+                    screened_out=max(0, total_before_pool - len(pushed)) if 'pushed' in dir() else 0,
                     screened_total=total_before_pool,
                 )
                 if ok:
                     pushed_any = True
+                    # 只标记「实际送达」的条目（按子卡粒度，由 pusher 累计）：
+                    # 失败批次的内容保持未读，明天/重试仍会出现，杜绝永久丢失
+                    delivered_urls.update(
+                        getattr(self.pusher, "_delivered_urls", set())
+                    )
+                    # 机会库 / 溢池在确认送达后才落盘（失败日计数不虚增）。
+                    # 注意：library 仅在 annotate 执行过才可保存，
+                    # 否则 entries 为空会拿空库覆盖真实机会库
+                    if not self.dry_run:
+                        if getattr(self, "_library_annotated", False):
+                            self.library.save()
+                        if pool is not None:
+                            pool.save()
                     logger.info(
                         f"模块2 推送成功: 国内 {len(dom_opps)} + 国际 {len(intl_opps)}"
                     )
                 else:
+                    push_failed = True
                     logger.error("模块2 推送失败")
             else:
                 self._cli_output_opportunities(dom_opps, intl_opps, recurring)
@@ -611,17 +662,38 @@ class DailyOpportunityBot:
         if not (teardowns or discovered or dom_opps or intl_opps or discovered_sources):
             logger.warning("今日两模块均无内容可推送")
 
-        # 去重标记：任一模块成功推送，即把今日采到的内容标记为已读
+        # 去重标记：只标记「实际送达」的条目（delivered_urls）。
+        # 旧逻辑「任一模块成功即全量标记」会让失败模块的内容永久丢失。
         # 演练时绝不能标记，否则真实运行会以为这些内容"昨天推过了"而漏掉
-        if pushed_any and not self.dry_run:
+        if delivered_urls and not self.dry_run:
             for it in all_items:
-                self.history.mark_seen(it.url)
+                if it.url in delivered_urls:
+                    self.history.mark_seen(it.url)
             self.history.save()
+            logger.info(f"已标记 {len(delivered_urls)} 条送达内容")
         elif pushed_any and self.dry_run:
             logger.info("【演练】不写去重历史，%d 条内容仍可在正式运行时推送", len(all_items))
 
+        # 推送成功标记：写 storage/push_marker.json（随 Persist state 提交回仓库）。
+        # 看门狗据此判断「今日是否已送达」——比 run status 更可靠：
+        # run 可能被超时 kill（status 非 success）但推送其实已成功，避免误补推导致双推。
+        # 条件 = 全部推送成功（无 push_failed）：部分失败时看门狗必须补推，
+        # 否则模块2 三连败那天 marker 会挡住补推，主推送内容当天不送达
+        if pushed_any and not push_failed and not self.dry_run:
+            try:
+                PUSH_MARKER_PATH.parent.mkdir(parents=True, exist_ok=True)
+                PUSH_MARKER_PATH.write_text(
+                    datetime.now(CST).strftime("%Y-%m-%d"), encoding="utf-8"
+                )
+            except Exception as e:
+                logger.warning(f"推送标记写入失败（不影响推送结果）: {e}")
+
         elapsed = time.time() - start
         logger.info(f"========== 全部完成 {elapsed:.1f}s ==========")
+
+        # 返回推送是否全部成功：供 main() 决定退出码，
+        # 让 CI 重试循环与看门狗真正生效（此前推送失败恒 exit 0，自愈体系空转）
+        return not push_failed
 
     def _save_roster(self):
         """保存操盘手名单。演练模式下不落盘——名单里记着"谁已经拆解过、下次轮到谁"，
@@ -667,20 +739,25 @@ class DailyOpportunityBot:
                 print(f"     📋 第一步：{tpl['first_step']}")
 
 
-async def run_once(dry_run: bool = False):
+async def run_once(dry_run: bool = False) -> bool:
     config = load_config()
     bot = DailyOpportunityBot(config, dry_run=dry_run)
-    await bot.run()
+    return await bot.run()
 
 
 def run_daemon():
+    """本地定时模式。
+
+    注意：schedule 库按「进程本地时区」调度——本机为北京时间时 20:00 正确；
+    若部署到 UTC 容器需自行换算（CI 通道走 GitHub cron UTC，不受影响）。
+    """
     import schedule
     config = load_config()
     sched = config.get("schedule", {})
     hour = sched.get("hour", 20)
     minute = sched.get("minute", 0)
 
-    logger.info(f"定时服务已启动，每天 {hour:02d}:{minute:02d} (北京时间) 执行")
+    logger.info(f"定时服务已启动，每天 {hour:02d}:{minute:02d}（进程本地时区）执行")
 
     async def job():
         try:
@@ -717,7 +794,12 @@ def main():
     else:
         if args.dry_run:
             logger.info("========== 演练模式：不推送、不落盘 ==========")
-        asyncio.run(run_once(dry_run=args.dry_run))
+        ok = asyncio.run(run_once(dry_run=args.dry_run))
+        if not ok:
+            # 推送环节失败 → 非零退出：CI 重试循环与看门狗据此判定失败并自愈。
+            # 此前推送失败恒 exit 0，workflow 永远"成功"，看门狗永不补推
+            logger.error("推送环节失败，以退出码 1 结束（供 CI 重试/看门狗补推）")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

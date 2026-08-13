@@ -32,7 +32,7 @@ from urllib.parse import quote
 
 import httpx
 
-from library import _norm, _sim, topic_signature
+from library import _is_same_topic, _norm, _sim, topic_signature
 
 logger = logging.getLogger(__name__)
 
@@ -96,20 +96,29 @@ class FeedbackCollector:
             async with httpx.AsyncClient(timeout=20, headers=headers) as client:
                 for label, field in ((LIKE_LABEL, "up"), (DISLIKE_LABEL, "down")):
                     params["labels"] = label
-                    resp = await client.get(url, params=params)
-                    if resp.status_code == 404:
-                        logger.warning("反馈仓库不存在或不可读: %s", self.repo)
-                        return {}
-                    resp.raise_for_status()
-                    for issue in resp.json():
-                        if "pull_request" in issue:
-                            continue
-                        m = _KEY_RE.search(issue.get("body") or "")
-                        if not m:
-                            continue
-                        key = m.group(1)
-                        tally.setdefault(key, {"up": 0, "down": 0})
-                        tally[key][field] += 1
+                    page = 1
+                    while True:
+                        params["page"] = page
+                        resp = await client.get(url, params=params)
+                        if resp.status_code == 404:
+                            logger.warning("反馈仓库不存在或不可读: %s", self.repo)
+                            return {}
+                        resp.raise_for_status()
+                        issues = resp.json()
+                        if not issues:
+                            break
+                        for issue in issues:
+                            if "pull_request" in issue:
+                                continue
+                            m = _KEY_RE.search(issue.get("body") or "")
+                            if not m:
+                                continue
+                            key = m.group(1)
+                            tally.setdefault(key, {"up": 0, "down": 0})
+                            tally[key][field] += 1
+                        if len(issues) < 100:
+                            break
+                        page += 1
         except Exception as e:
             logger.warning(f"读取反馈失败（跳过，不影响推送）: {e}")
             return {}
@@ -176,19 +185,24 @@ class PreferenceProfile:
             _readable, fp = topic_signature(it)
             if not fp:
                 continue
+            # 同类判定必须与机会库归并使用同一闸门（_is_same_topic：二元组≥0.75 或
+            # 单字≥0.92）。旧的 _sim≥0.4 太宽：给「英语陪练」点 👍 会把「日语陪练」
+            # 也算同类，反馈跨主题泄漏，把系统带偏的正是它想防的"一两次点击"。
             like_sim = max((_sim(fp, x) for x in self.liked), default=0.0)
             dis_sim = max((_sim(fp, x) for x in self.disliked), default=0.0)
+            like_hit = any(_is_same_topic(fp, x) for x in self.liked)
+            dis_hit = any(_is_same_topic(fp, x) for x in self.disliked)
             # 置信度：命中同类偏好的累计反馈次数（≥3 次额外 ±1，高置信度加成）
-            like_n = max((n for x, n in self.liked.items() if _sim(fp, x) >= self.SIM_HIT), default=0)
-            dis_n = max((n for x, n in self.disliked.items() if _sim(fp, x) >= self.SIM_HIT), default=0)
+            like_n = max((n for x, n in self.liked.items() if _is_same_topic(fp, x)), default=0)
+            dis_n = max((n for x, n in self.disliked.items() if _is_same_topic(fp, x)), default=0)
             src = getattr(it, "source_name", "") or getattr(it, "source", "")
             src_pts = self.source_score.get(src, 0)
 
             delta, why = 0, []
-            if like_sim >= self.SIM_HIT:
+            if like_hit:
                 delta += self.boost + (1 if like_n >= 3 else 0)
                 why.append("与你点过「想做」的主题相似")
-            if dis_sim >= self.SIM_HIT:
+            if dis_hit:
                 delta -= self.penalty + (1 if dis_n >= 3 else 0)
                 why.append("与你点过「没兴趣」的主题相似")
             if src_pts >= 2:

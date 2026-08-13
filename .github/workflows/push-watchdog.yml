@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      # 读 storage/push_marker.json 需要仓库文件（每日推送成功后随 Persist state 提交）
+      - uses: actions/checkout@v5
+
       - name: 检查并自愈推送通道
         env:
           WF: daily-push.yml
@@ -33,11 +36,19 @@ jobs:
 
           # 1) 被禁用 -> 自动重开（静默自愈，不发任何通知）
           if [ "$STATE" = "disabled_manually" ] || [ "$STATE" = "disabled_inactivity" ]; then
-            gh workflow enable "$WF" --repo "$REPO"
+            gh workflow enable "$WF" --repo "$REPO" || true
             echo "已自动重新启用"
           fi
 
-          # 2) 今天是否已有成功运行（排除仍在跑的，避免误补推造成重复）
+          # 2) 今天是否已送达：优先读推送标记（main.py 推送成功后写入
+          #    storage/push_marker.json，随 Persist state 提交回仓库）。
+          #    标记比 run status 可靠——run 可能被超时 kill（status 非 success）
+          #    但推送其实已成功，只看 status 会误补推造成双推。
+          MARKER=storage/push_marker.json
+          if [ -f "$MARKER" ] && [ "$(cat "$MARKER")" = "$TODAY" ]; then
+            echo "今日已有成功推送标记，不补推"
+            exit 0
+          fi
           LAST_OK=$(gh run list --workflow "$WF" --repo "$REPO" --status success \
                       --limit 1 --json createdAt --jq '.[0].createdAt // ""' | cut -c1-10)
           PENDING=$(gh run list --workflow "$WF" --repo "$REPO" --limit 10 \

@@ -20,7 +20,10 @@ from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent
 LOG = ROOT / "storage" / "bot_cron.log"
-VENV_PY = ROOT / ".venv" / "Scripts" / "python.exe"
+# 用当前解释器跑 main.py（bat 用系统 python 启动本脚本）：
+# 本仓库不维护 .venv，硬编码 .venv\Scripts\python.exe 不存在时
+# 会 FileNotFoundError → 每天发假「推送失败」告警且主流程根本没跑
+VENV_PY = sys.executable
 
 
 def _load_webhook() -> str:
@@ -107,6 +110,11 @@ def main() -> int:
     rc = None
     output = ""
     try:
+        # 强制子进程以 UTF-8 输出：zh-CN Windows 上 python 默认 stdout 编码是 GBK，
+        # 若按 UTF-8 解码会变乱码 → "推送成功" 永远匹配不上 → 即使成功也发假告警
+        env = dict(os.environ)
+        env["PYTHONIOENCODING"] = "utf-8"
+        env["PYTHONUTF8"] = "1"
         proc = subprocess.run(
             [str(VENV_PY), "main.py", "--once"],
             cwd=str(ROOT),
@@ -115,6 +123,7 @@ def main() -> int:
             encoding="utf-8",
             errors="replace",
             timeout=1800,  # 30 分钟
+            env=env,
         )
         rc = proc.returncode
         output = proc.stdout + "\n" + proc.stderr

@@ -17,8 +17,10 @@ logger = logging.getLogger(__name__)
 
 # 公开 RSSHub 节点列表（按优先级排序，自动回退）
 # 不需要自己部署 Docker，直接使用社区维护的公开实例
+# 注意：公共实例随时可能失效/被墙，至少保留 2-3 个；单镜像时镜像一挂整源归零
 DEFAULT_MIRRORS = [
     "https://rsshub.rssforever.com",
+    "https://rsshub.pseudoyu.com",
 ]
 
 

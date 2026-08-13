@@ -56,10 +56,17 @@ class RedditSource(BaseSource):
     async def _fetch_rss(self, sub: str, limit: int, keywords: dict) -> list[ContentItem]:
         """通过 Reddit RSS 抓取。"""
         import feedparser
-        loop = asyncio.get_event_loop()
+        import httpx
 
         url = self.BASE_RSS.format(sub=sub)
-        raw = await loop.run_in_executor(None, feedparser.parse, url)
+        # feedparser.parse 走 urllib 无超时：被墙/黑洞时线程会挂到天荒地老，
+        # 吞掉整个 workflow 预算。先 httpx 限时拉取，再交给 feedparser 解析字节。
+        async with httpx.AsyncClient(timeout=20, follow_redirects=True) as client:
+            resp = await client.get(url)
+            resp.raise_for_status()
+        raw = await asyncio.get_event_loop().run_in_executor(
+            None, feedparser.parse, resp.content
+        )
 
         items = []
         for entry in raw.entries[:limit]:

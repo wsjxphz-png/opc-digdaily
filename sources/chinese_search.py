@@ -185,7 +185,7 @@ class ChineseSearchSource(BaseSource):
                 summary=snippet,
                 source="chinese-search",
                 source_name="中文搜索",
-                published=datetime.now(timezone.utc),
+                published=None,  # 搜索页只有相对时间(如"2小时前")，解析不出绝对时间；标 None 而非伪造"今天"
             ))
             if len(items) >= limit:
                 break
@@ -228,7 +228,7 @@ class ChineseSearchSource(BaseSource):
                 summary="",
                 source="chinese-search",
                 source_name="中文搜索",
-                published=datetime.now(timezone.utc),
+                published=None,  # 搜索页只有相对时间(如"2小时前")，解析不出绝对时间；标 None 而非伪造"今天"
             ))
             if len(items) >= limit:
                 break
@@ -289,7 +289,7 @@ class ChineseSearchSource(BaseSource):
                 summary="",
                 source="chinese-search",
                 source_name="中文搜索",
-                published=datetime.now(timezone.utc),
+                published=None,  # 搜索页只有相对时间(如"2小时前")，解析不出绝对时间；标 None 而非伪造"今天"
             ))
             if len(items) >= limit:
                 break

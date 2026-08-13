@@ -38,6 +38,9 @@ TECH_KEYWORDS: list[str] = [
     "open source", "open-source", "indie hacker", "tech blogger",
     "ai engineer", "machine learning", "deep learning",
     "writes code", "codes in", "github", "stack overflow",
+    # 裸英文词（之前缺口：codingnotes.io 教程站因缺这些词混进名单）
+    "coding", "programmer", "developer", "software",
+    "developing", "coding tutorial", "code tutorial", "build apps", "building apps",
     # 卖自动化服务 / no-code 流水线≈卖铲子（虽可无代码但本质是技术向服务外包）
     "automation agency", "automation consultant",
     "sell automations", "sell automated",
@@ -65,7 +68,9 @@ TECH_KEYWORDS: list[str] = [
 # 否定词：出现在技术词**之前**的窗口内
 NEGATION_CUES: list[str] = [
     "无需", "不需要", "不用", "不必", "不懂", "不会", "不是", "没有", "不靠", "不写",
-    "零基础", "零", "非", "免", "无", "小白", "外行", "门外汉",
+    # 只保留词组，不收单字「零」「非」——单字会命中「非常需要编程」「零基础学编程」，
+    # 把真正的技术内容错误豁免（「零基础」本身已是词组，无需单字兜底）
+    "零基础", "非技术", "并非", "而非", "免", "无", "小白", "外行", "门外汉",
     "not ", "no ", "non-", "without ", "don't ", "dont ", "doesn't ", "never ",
     "zero ", "can't ", "cannot ", "instead of ",
 ]

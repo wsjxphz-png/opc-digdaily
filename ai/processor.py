@@ -13,6 +13,20 @@ import httpx
 
 from sources.base import ContentItem
 from scoring import FACTOR_RUBRIC, apply_to_item
+
+
+def _to_int(v) -> Optional[int]:
+    """宽松转 int：小模型常把数字返回成字符串（"4"），None/非法值返回 None。"""
+    if isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        try:
+            return int(v)
+        except (OverflowError, ValueError):
+            return None  # inf/NaN：int() 会抛 OverflowError，按缺失处理
+    if isinstance(v, str) and v.strip().isdigit():
+        return int(v.strip())
+    return None
 from filters import is_hype
 
 logger = logging.getLogger(__name__)
@@ -521,20 +535,58 @@ class AIProcessor:
             return items, False
 
         # 应用到原始条目（index 是本块内的局部下标，与 items 一一对应）
-        result_map = {r["index"]: r for r in results if isinstance(r, dict)}
+        # 单条块 + 裸对象无 index：视为 index=0（小模型高频行为）
+        if (
+            len(items) == 1
+            and len(results) == 1
+            and isinstance(results[0], dict)
+            and "index" not in results[0]
+        ):
+            results[0]["index"] = 0
+        result_map: dict[int, dict] = {}
+        missing_index = 0
+        for r in results:
+            if not isinstance(r, dict):
+                continue
+            idx = r.get("index")
+            if idx is None:
+                missing_index += 1
+                continue
+            try:
+                idx = int(idx)  # 字符串 index 宽松转换（小模型常见）
+            except (TypeError, ValueError):
+                missing_index += 1
+                continue
+            result_map[idx] = r
+        if missing_index:
+            logger.warning("AI 响应有 %d 条缺少 index 字段，无法应用", missing_index)
+        if not result_map and len(items) > 1:
+            # 结果一条都没对上 → 视为解析失败，触发上层减半重试，而非静默丢弃
+            logger.warning("AI 响应无一条可应用（index 全缺失/非对象），将减半重试")
+            for item in items:
+                item.ai_processed = False
+            return items, False
         for i, item in enumerate(items):
             r = result_map.get(i)
-            if r and r.get("relevant"):
+            if r is None:
+                # 该条无对应 AI 结果：保持未处理（会被过滤并计入失败统计），
+                # 不标记"不相关"——否则内容被静默丢弃且无任何日志
+                logger.warning("条目[%d] 无对应 AI 结果（index 缺失/超范围），保持未处理", i)
+                item.ai_processed = False
+                continue
+            if r.get("relevant"):
                 item.translation = r.get("translation", "")
                 item.ai_summary = r.get("summary", "")
                 item.opportunity_hint = r.get("opportunity_hint", "")
                 item.difficulty = r.get("difficulty", "")
                 item.quality_flag = r.get("quality_flag", "")
-                # 新评估维度
-                if isinstance(r.get("code_dependency"), (int, float)):
-                    item.code_dependency = int(r["code_dependency"])
-                if isinstance(r.get("authenticity"), (int, float)):
-                    item.authenticity = int(r["authenticity"])
+                # 新评估维度（小模型常把数字返回成字符串 "4"，一律宽松转 int）
+                code_dep = _to_int(r.get("code_dependency"))
+                if code_dep is not None:
+                    item.code_dependency = code_dep
+                auth = _to_int(r.get("authenticity"))
+                if auth is not None:
+                    item.authenticity = auth
                 item.practical_steps = r.get("practical_steps", "")
                 # 可抄模板
                 tpl = r.get("copy_template")
@@ -638,7 +690,13 @@ class AIProcessor:
 
         # 尝试直接解析
         try:
-            return json.loads(content)
+            data = json.loads(content)
+            if isinstance(data, dict) and "index" in data:
+                # 模型对单条/小块返回裸对象：包装成数组，
+                # 否则 len(dict)（键数）会骗过调用方的数量守卫，导致静默丢弃
+                logger.warning("AI 返回裸对象（单条），已包装为数组")
+                return [data]
+            return data
         except json.JSONDecodeError:
             pass
 
@@ -646,7 +704,10 @@ class AIProcessor:
         match = re.search(r"\[.*\]", content, re.DOTALL)
         if match:
             try:
-                return json.loads(match.group())
+                data = json.loads(match.group())
+                if isinstance(data, dict) and "index" in data:
+                    return [data]
+                return data
             except json.JSONDecodeError:
                 pass
 

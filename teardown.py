@@ -395,10 +395,15 @@ class TeardownEngine:
         self._score_business_logic(op, data, td)
 
         # 写回 dossier
-        op.teardown = td.to_dict()
+        # skip（结构性坏案例）：只标记「已评估过」防明天重拆烧 token，
+        # 但不覆盖旧的正常拆解卡——否则好卡被坏卡覆盖且永不推送
         op.last_teardown = datetime.now(CST).strftime("%Y-%m-%d")
         op.teardown_count += 1
-        logger.info(f"[{op.name}] 拆解完成 (可复制性 {td.replicability}/5)")
+        if op.commercial_severity == "skip":
+            logger.info(f"[{op.name}] dbs 判 skip：已标记轮转，保留旧拆解卡")
+        else:
+            op.teardown = td.to_dict()
+            logger.info(f"[{op.name}] 拆解完成 (可复制性 {td.replicability}/5)")
         return td
 
     def _build_revisit_user_content(self, op: Operator, prev: dict | None) -> str:
@@ -473,10 +478,14 @@ class TeardownEngine:
         self._score_business_logic(op, data, td)
 
         # 写回 dossier（更新为最新拆解，含新动态）
-        op.teardown = td.to_dict()
+        # skip 的坏案例：标记轮转防重拆，但不覆盖旧的正常拆解卡
         op.last_revisit = datetime.now(CST).strftime("%Y-%m-%d")
         op.revisit_count += 1
-        logger.info(f"[{op.name}] 动态更新补充完成 (第 {op.revisit_count} 次)")
+        if op.commercial_severity == "skip":
+            logger.info(f"[{op.name}] 复盘 dbs 判 skip：已标记轮转，保留旧拆解卡")
+        else:
+            op.teardown = td.to_dict()
+            logger.info(f"[{op.name}] 动态更新补充完成 (第 {op.revisit_count} 次)")
         return td
 
     @staticmethod

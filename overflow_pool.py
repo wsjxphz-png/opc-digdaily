@@ -49,7 +49,7 @@ class OverflowPool:
     # 公开接口
     # ----------------------------------------------------------------
     def decide(
-        self, today_items: list[ContentItem], date_str: str
+        self, today_items: list[ContentItem], date_str: str, persist: bool = True
     ) -> tuple[list[ContentItem], list[ContentItem]]:
         """合并溢池 + 今日 → 排序 → 分出「今日推送」与「入池留到明天」。
 
@@ -101,9 +101,12 @@ class OverflowPool:
             if (getattr(it, "startup_index", 0) or 0) >= self._quality_threshold - 1
         ]
 
-        # 6. 存入溢池文件
+        # 6. 存入溢池文件（dry-run 演练时不落盘，避免污染真实状态）
         self._items = self._serialize(pool_candidates, date_str)
-        self.save()
+        if persist:
+            self.save()
+        else:
+            logger.info("【演练】溢池不落盘")
 
         if pool_candidates:
             logger.info(
@@ -165,7 +168,10 @@ class OverflowPool:
                 "repeat_count": getattr(it, "repeat_count", 0) or 0,
                 "corroborations": getattr(it, "corroborations", 0) or 0,
                 "first_seen": getattr(it, "first_seen", ""),
-                "pooled_on": date_str,
+                # 保留原始入池日期：恢复后再次入池不得刷新 pooled_on，
+                # 否则保质期（3 天）永远不触发，过时内容会被无限顺延
+                "pooled_on": getattr(it, "_pooled_on", "") or date_str,
+                "region": getattr(it, "region", ""),
             }
             for it in items
         ]
@@ -194,4 +200,6 @@ class OverflowPool:
         it.repeat_count = d.get("repeat_count", 0)
         it.corroborations = d.get("corroborations", 0)
         it.first_seen = d.get("first_seen", "")
+        it.region = d.get("region", "")
+        it._pooled_on = d.get("pooled_on", "")
         return it
