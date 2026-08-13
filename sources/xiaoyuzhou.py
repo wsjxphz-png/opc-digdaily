@@ -117,14 +117,21 @@ class XiaoyuzhouSource(BaseSource):
                                 pdate or datetime.min.replace(tzinfo=timezone.utc),
                                 title, desc, link))
                     parsed.sort(key=lambda x: x[0], reverse=True)
-                    for _, title, desc, link in parsed[:max_eps]:
+                    for pdate, title, desc, link in parsed[:max_eps]:
+                        # 保留真实发布时间：长周期深度内容（播客）发布久≠价值低，
+                        # 让卡片显示真实日期、评分也能感知内容年龄。解析失败才回退 now。
+                        real_pub = (
+                            pdate
+                            if pdate and pdate.year > 1
+                            else datetime.now(timezone.utc)
+                        )
                         items.append(ContentItem(
                             title=title,
                             url=link,
                             summary=desc[:600],
                             source="xiaoyuzhou",
                             source_name=f"小宇宙·{pname[:18]}",
-                            published=datetime.now(timezone.utc),
+                            published=real_pub,
                         ))
                 except Exception as ex:
                     logger.error(f"小宇宙 RSS {feed[:50]}: {ex}")
