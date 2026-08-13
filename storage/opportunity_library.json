@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-12 05:21",
+  "updated": "2026-08-13 23:15",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -206,6 +206,348 @@
       ],
       "best_startup_index": 0,
       "best_commercial": 0,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0012_手工应援扇或穿戴甲定制卖": {
+      "topic": "手工应援扇或穿戴甲定制 → 卖给追星女孩/爱美的年轻女性",
+      "fingerprint": "手工应援扇或穿戴甲定制卖给追星女孩爱美年轻女性",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1002371330"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0013_ecommerce增长策": {
+      "topic": "电商增长策略咨询服务，帮中小商家优化店铺流量和转化 → 卖给有5年以上工作经验、想转行做电商咨询的前大厂员工",
+      "fingerprint": "ecommerce增长策略咨询服务帮中小商家优化店铺流量转化卖给有年以上工作经验想转行ecommerce咨询前大厂员工",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/876961854"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 72,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0014_小红书流量训练营教人账号": {
+      "topic": "小红书流量训练营，教人做账号涨粉变现 → 卖给想在做小红书搞副业的上班族",
+      "fingerprint": "小红书流量训练营教人账号涨粉卖给想小红书搞上班族",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964566654"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0015_小红书账号代运营服务帮他": {
+      "topic": "小红书账号代运营服务，帮他们做内容+涨粉+引流 → 卖给想做个卖货的小微商家或本地实体店老板",
+      "fingerprint": "小红书账号代运营服务帮他们内容涨粉引流卖给想个卖货小微商家或本地实体店老板",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6675ae3ab6a8412729713522?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 74,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0016_从义乌采购服装日品销往东": {
+      "topic": "从义乌采购的服装/日用品销往东南亚 → 卖给有跨境电商兴趣的普通人或夫妻档",
+      "fingerprint": "从义乌采购服装日品销往东南亚卖给有跨境ecommerce兴趣或夫妻档",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6994406b66e2c30377a9bee0?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0017_特色农产品社群团购通过朋": {
+      "topic": "特色农产品社群团购，通过朋友圈和快团团组织拼团销售 → 卖给能找到优质农产品货源、愿意做私域社交电商的普通人",
+      "fingerprint": "特色农产品社群团购通过朋友圈快团团组织拼团销售卖给能找到优质农产品货源愿意私域社交ecommerce",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/840147969"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0018_围绕效率工具如notio": {
+      "topic": "围绕效率工具（如Notion）的使用教程+付费会员社群 → 卖给对职场效率提升有兴趣的中文职场人群",
+      "fingerprint": "围绕效率工具如notion使教程付费会员社群卖给对职场效率提升有兴趣中文职场人群",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clkikohew01jf01tm4rj05mge"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0019_一个垂直主题线下快闪活动": {
+      "topic": "一个垂直主题的线下快闪活动 → 卖给想办小型主题活动的本地组织者",
+      "fingerprint": "一个垂直主题线下快闪活动卖给想办小型主题活动本地组织者",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1006092730"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0020_精选团购商品零食日品地方": {
+      "topic": "精选团购商品（零食/日用品/地方特产） → 卖给你的微信好友和周边邻里",
+      "fingerprint": "精选团购商品零食日品地方特产卖给你微信好友周边邻里",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66a8f02a7349f7a5579f817f?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0021_个人成长领域付费咨询或陪": {
+      "topic": "个人成长领域的付费咨询或陪跑服务 → 卖给想在小红书做个人成长类内容的普通职场人",
+      "fingerprint": "个人成长领域付费咨询或陪跑服务卖给想小红书个人成长类内容普通职场人",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/847444131"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0022_手绘或设计风格文创周边贴": {
+      "topic": "手绘或设计风格的文创周边（贴纸、明信片、手机壳等） → 卖给有绘画/设计能力的个人创作者",
+      "fingerprint": "手绘或设计风格文创周边贴纸明信片手机壳等卖给有绘画设计能力个人创作者",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/666bcd87b6a8412729ae1f01?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0023_单次心理咨询服务卖给有情": {
+      "topic": "单次心理咨询服务 → 卖给有情绪困扰需要咨询的普通人",
+      "fingerprint": "单次心理咨询服务卖给有情绪困扰需要咨询",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66e00cbeee04007d8885bdca?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0024_一套整理好职场学习类电子": {
+      "topic": "一套整理好的职场/学习类电子资料包 → 卖给想做副业的上班族或大学生",
+      "fingerprint": "一套整理好职场学习类电子资料包卖给想上班族或大学生",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964553321"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0025_个人博客内容文章教程经验": {
+      "topic": "个人博客内容（文章、教程、经验分享） → 卖给有写作能力、想副业增收的上班族",
+      "fingerprint": "个人博客内容文章教程经验卖给有写作能力想增收上班族",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-66-%e7%94%a8%e9%83%a8%e8%90%bd%e6%a0%bc%e8%b3%ba%e9%8c%a2%e7%b9%b3%e6%88%bf%e8%b2%b8/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0026_ai辅助完成文案代写服务": {
+      "topic": "用AI辅助完成的文案代写服务或整理好的资料包 → 卖给有写作需求的小企业主或个人博主",
+      "fingerprint": "ai辅助完成文案代写服务或整理好资料包卖给有写作需求小企业主或个人博主",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·好有共鸣"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69e0d186e2c8be31556443d0?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0027_ppt代服务或现成模板包": {
+      "topic": "PPT代做服务或现成模板包 → 卖给需要PPT的大学生或小公司职员",
+      "fingerprint": "ppt代服务或现成模板包卖给需要ppt大学生或小公司职员",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "B站·一个萌二_"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV18z4y1173m"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0028_ai驱动八字命理咨询服务": {
+      "topic": "AI驱动的八字命理咨询服务 → 卖给对中国文化或玄学感兴趣的海外用户",
+      "fingerprint": "ai驱动八字命理咨询服务卖给对中国文化或玄学感兴趣海外户",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·给女孩的商业第一课"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/965283456"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0029_原创水彩画作或插画以授权": {
+      "topic": "原创水彩画作或插画，以授权或代销形式入店销售 → 卖给本地文创店、独立书店、手作礼品店老板",
+      "fingerprint": "原创水彩画作或插画以授权或代销形式入店销售卖给本地文创店独立书店手作礼品店老板",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3512-tbt-southern-transplant-creates-watercolor-brand"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 48,
       "feedback": {
         "up": 0,
         "down": 0

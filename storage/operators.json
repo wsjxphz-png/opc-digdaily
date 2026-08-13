@@ -1686,7 +1686,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "The Faceless AI YouTube Niche Making People RICH",
+          "url": "https://www.youtube.com/watch?v=GxcFXsqYnIQ",
+          "date": "2026-08-06",
+          "summary": "Get My FREE AI Business Ebook: https://wholesaleted.com/aibook\nTOOLS USED IN THIS TUTORIAL:\n► VIDIQ: https://wholesaletedgo.com/vidiq\n► Suno: suno.com \n► Kling 3.0/Nano Banana Pro via Higgsfield: https://wholesaletedgo.com/klinghiggsfield\n► Capcut: https://wholesaletedgo.com/capcutsignup\n\nSome links"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1738,7 +1745,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "I asked Hormozi how to make $100k a year",
+          "url": "https://www.youtube.com/shorts/FE6VL7jpfCs",
+          "date": "2026-08-04",
+          "summary": "I asked @AlexHormozi  how he'd make $100k a year doing what he loves.\n\nHis answer was basically, find one super valuable service you can do for a business, charge them $100K for it, then figure out what to do with the other 364 days of the year 😂\n\nWhat hit me was how casually he said it. He wasn't b"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -4002,6 +4016,318 @@
         "gate_reason": "链条看不懂：只讲了获客，没讲怎么成交和交付"
       },
       "commercial_severity": "warn"
+    },
+    "思洋静心岛": {
+      "handle": "思洋静心岛",
+      "name": "董老师",
+      "region": "国内",
+      "category": "靠「哄睡」内容在全网积累百万粉丝，切入失眠经济赛道，用疗愈内容建立个人品牌，是内容变现的典型示例——不需要技术，只需要找到击中人群痛点的内容方向并持续交付。",
+      "aliases": [
+        "董老师"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "思洋静心岛",
+        "operator_name": "董老师",
+        "region": "国内",
+        "who": "董老师（国内），靠哄睡/助眠内容在全网积累百万粉丝的单人创作者，已切入失眠经济赛道，完成从内容到变现的个人品牌闭环",
+        "deliverable": "交付物分三层：①免费哄睡音频/视频（引流款，抖音、小红书、B站等公开发布）；②付费失眠疗愈课程或音频合集（利润款，通过私域售卖）；③可能还有会员社群或一对一陪跑服务（高端款，未公开定价）。核心卖点是'帮我睡个好觉'的情绪价值+实用方法",
+        "business_model": "大概率是「免费内容引流 → 私域沉淀 → 课程/社群/带货变现」的典型知识付费模式。引流款完全免费；付费产品定价区间未公开（推测在 99-999 元区间，符合同类疗愈课程行情）；收入结构未公开，但此类账号常见组合为：课程收入 + 社群年费 + 助眠产品带货 + 平台广告分成",
+        "acquisition": "获客路径高度依赖内容平台算法推荐，具体打法如下：①主战场在抖音和小红书（视频号可能也有），以'哄睡语音''白噪音''冥想引导''睡前故事'等形式持续发布；②内容选题直击'睡不着''半夜醒''焦虑失眠'等强痛点，标题多用'听完就困''专治失眠''3分钟入睡'等钩子词；③第一批客户几乎全来自平台自然流量——即失眠人群主动搜索相关关键词刷到的视频/笔记；④引流到私域（微信/公众号/知识星球）的方式未公开，推测是在主页简介放微信号、或在评论区引导私信；⑤可照抄的具体动作：用 AI 工具生成助眠音频 → 搭配固定视觉模板（黑底+舒缓文字/动画）→ 每天固定时段发布 → 积累一定粉丝后开橱窗或引流卖课",
+        "stack": "无需任何编程工具。核心依赖：①抖音/小红书/视频号（内容分发）；②AI 语音工具或录软件（生成或录制哄睡内容，如剪映自带配音功能）；③微信个人号或公众号（私域沉淀）；④可能用有赞/小鹅通/知识星球等现成工具卖课或开社群（点鼠标即可，无需技术）",
+        "replicability": 3,
+        "first_step": "今天就能做的事：打开剪映，选一个'催眠男声/女声'配音模板，录一段 3-5 分钟的哄睡音频，配一张黑底或风景图片，发到抖音和小红书，标题写'专治凌晨三点睡不着''听完这3分钟就困了'，看有没有人评论说有效",
+        "red_flag": "①这是典型的'卖铲子'边缘案例——如果董老师后期主要收入来自教别人做哄睡赛道（卖课/招徒弟/卖社群），而不是自己持续交付疗愈内容，那他对普通人复制价值会大幅下降；②助眠/哄睡内容在各大平台政策不稳定，容易被限流或判违规，需持续关注平台规则；③这类内容竞争极度内卷，同质化严重，没有独特人设或声音辨识度很难出头",
+        "learn": "最值得抄的两点：①选对一个极其具体的痛点（失眠），并且这个痛点是'高频+高付费意愿'的——睡不着的人愿意掏钱；②用最低成本的内容形式（一段音频+一张图）就能持续产出，几乎零边际成本，适合一个人长期做",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用手机+现成APP即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-13 23:09",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 50,
+          "feasibility": 68,
+          "startup_index": 6,
+          "composite": 57.9,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 3,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 3,
+            "capital": 5,
+            "speed": 4,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-13",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-13",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-13",
+      "commercial_health": {
+        "commercial": 50,
+        "feasibility": 68,
+        "startup_index": 6,
+        "composite": 57.9,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 3,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 3,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "小宇宙用户/AR特效创作者": {
+      "handle": "小宇宙用户/AR特效创作者",
+      "name": "喵喵",
+      "region": "国内",
+      "category": "用抖音特效君等零代码平台做AR特效师，使用量已超1500万，普通人靠工具+创意就能在社交平台赚流量和商单，是新兴的低门槛副业形态。",
+      "aliases": [
+        "喵喵"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "小宇宙用户/AR特效创作者",
+        "operator_name": "喵喵",
+        "region": "国内",
+        "who": "喵喵（国内），单人AR特效创作者，使用零代码平台制作抖音AR特效，累计使用量超1500万次",
+        "deliverable": "在抖音等社交平台发布的AR特效滤镜——普通用户免费下载使用，品牌方定制付费；同时可能接品牌商单或平台激励分成",
+        "business_model": "未公开具体定价。推测来源：①平台创作者激励计划（按使用量或互动量分成）；②品牌定制AR特效商单（一次性收费）；③可能还有社群/课程收入（需核实）。资料未明确区分各来源占比",
+        "acquisition": "①核心渠道：抖音平台自然流量——发布特效后，用户搜索或刷到特效卡片直接下载使用；②第二渠道：特效本身自带传播属性，用户拍摄视频二次传播形成裂变；③品牌合作来源：资料未明确说明品牌是如何找到他的（是靠作品曝光主动找上门、还是需要主动去品牌方BD）。第一批客户推测来自早期发布的特效在抖音内部获得自然流量后被品牌方注意到。可照抄打法：在抖音特效君平台注册创作者账号 → 搜索热门特效参考趋势 → 模仿同类型风格做差异化版本 → 发布后持续迭代更新",
+        "stack": "抖音特效君（零代码AR特效制作平台）、可能还有剪映等辅助工具",
+        "replicability": 4,
+        "first_step": "去抖音搜索「特效君」或「抖音特效师」进入官方平台，注册创作者账号，跟着内置教程做出第一个最简单的AR特效并发布，这是今天就能完成的第一步",
+        "red_flag": "需要核实：喵喵的主要收入到底是来自特效本身的使用分成/商单，还是主要来自「教别人做特效师」的课程/社群？如果他后期重心转向卖课，则普通人的实际收益会打折扣。此外，1500万使用量是累计量而非月活，不代表持续变现能力，需警惕将「流量数据」误读为「收入证明」",
+        "learn": "①「零代码平台+创意」组合可以降低技术门槛，让普通人也能进入原本需要专业软件才能做的AR特效领域；②AR特效的裂变传播机制本身就是获客杠杆——一个好特效会被无数用户二次传播，相当于一次制作无限分发",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用抖音特效君等零代码工具即可上手）",
+        "signals_used": 0,
+        "generated_at": "2026-08-13 23:09",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 39,
+          "feasibility": 68,
+          "startup_index": 6,
+          "composite": 54.4,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 3,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-13",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-13",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-13",
+      "commercial_health": {
+        "commercial": 39,
+        "feasibility": 68,
+        "startup_index": 6,
+        "composite": 54.4,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "小宇宙用户/澳洲摆摊创业者": {
+      "handle": "小宇宙用户/澳洲摆摊创业者",
+      "name": "阿喵",
+      "region": "国际",
+      "category": "在澳洲悉尼集市摆摊卖艺术周边，从选场地、定价到陈列都有完整实战经验，是典型的小成本一人实体副业，适合想试水摆摊创业但不知如何下手的普通人。",
+      "aliases": [
+        "阿喵"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-13",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-13",
+      "commercial_health": null,
+      "commercial_severity": ""
     }
   }
 }
