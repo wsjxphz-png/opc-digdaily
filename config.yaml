@@ -244,9 +244,9 @@ domestic:
     weixin_targets:
       enabled: true
       engines: ["sogou", "baidu", "ddg"]   # 顺序尝试，任一有候选即停
-      per_account: 4            # 每个号取候选前几篇做昵称验证
+      per_account: 6            # 每个号取候选前几篇做昵称验证（放宽以让较旧但仍有价值的深度文进入候选；去重30天窗口保证稳态成本低，对齐小宇宙 max_episodes=6）
       delay: 2                  # 号间延迟(秒)，避免被限流
-      max_total: 24             # 该源总数上限
+      max_total: 30             # 该源总数上限（per_account 放宽后留余量）
       timeout: 15
 
     # ▸ B站（哔哩哔哩）源：按 OPC 主题关键词搜视频，免登录公开 API
