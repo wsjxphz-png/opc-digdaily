@@ -611,6 +611,18 @@ class DailyOpportunityBot:
         if not (teardowns or discovered or dom_opps or intl_opps or discovered_sources):
             logger.warning("今日两模块均无内容可推送")
 
+        # 可靠性补丁（修复「假绿」）：本应有内容推送、却全部模块失败
+        # （pushed_any=False）时，必须让进程以非 0 退出。否则 GitHub 视为
+        # green、看门狗误判「今日已成功」不再补推，群里实际什么都没收到。
+        # 仅当「至少推成功一个模块」才视为当日成功（避免部分成功时整轮重跑
+        # 造成重复卡片）。推送器未启用（本地无 webhook）时不算投递失败。
+        had_content = bool(teardowns or discovered or dom_opps or intl_opps or discovered_sources)
+        if had_content and not pushed_any and self.pusher.enabled:
+            raise RuntimeError(
+                "全部推送模块均失败（pushed_any=False），但本应有内容推送；"
+                "疑似飞书投递失败。以非0退出以触发重试/看门狗补推。"
+            )
+
         # 去重标记：任一模块成功推送，即把今日采到的内容标记为已读
         # 演练时绝不能标记，否则真实运行会以为这些内容"昨天推过了"而漏掉
         if pushed_any and not self.dry_run:
