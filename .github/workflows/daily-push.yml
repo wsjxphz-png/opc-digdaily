@@ -3,7 +3,7 @@ name: OPC 一人公司每日机会挖掘
 on:
   schedule:
     # 北京时间每天 20:00 = UTC 12:00
-    - cron: "0 12 * * *"
+    - cron: "0 10 * * *"
   workflow_dispatch:  # 允许手动触发
 
 # contents: write —— 把 storage/ 的状态写回仓库（机会库/名单/去重历史要跨天累积）
