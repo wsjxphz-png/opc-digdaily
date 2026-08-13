@@ -49,7 +49,7 @@ jobs:
       - name: Install dependencies
         run: pip install httpx pyyaml feedparser trafilatura
 
-      - name: Run daily push
+      - name: Run daily push (retry with backoff)
         if: steps.guard.outputs.should_run == 'true'
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
@@ -61,7 +61,24 @@ jobs:
           TWITTER_COOKIES: ${{ secrets.TWITTER_COOKIES }}
           # 读 Issues 里的反馈。用 Actions 自带的 token 即可，无需自己建
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python main.py --once
+        run: |
+          # 瞬时故障自愈：网络/API 抖动/限流等失败，最多重试 3 次、逐次退避。
+          # 这只救「瞬时」失败；若为主逻辑代码 bug，重试仍会失败，需改代码后才会好。
+          for i in 1 2 3; do
+            echo "=== 推送第 $i 次尝试 ($(date -u '+%H:%M:%S')) ==="
+            if python main.py --once; then
+              echo "[ok] 推送成功"
+              exit 0
+            fi
+            echo "[warn] 第 $i 次失败"
+            if [ "$i" -lt 3 ]; then
+              wait=$(( i * 60 ))
+              echo "等待 ${wait}s 后重试..."
+              sleep "$wait"
+            fi
+          done
+          echo "::error::推送连续失败 3 次，放弃本次（需排查主逻辑代码 bug）"
+          exit 1
 
       # 关键：把跨天累积的状态写回仓库。
       # 不做这一步的话，每次运行都是从零开始 ——
