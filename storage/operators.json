@@ -745,6 +745,12 @@
           "url": "https://nitter.net/dickiebush/status/2046205778743513309#m",
           "date": "2026-04-20",
           "summary": "Article  \n \n \n \n How To Turn 1 Idea Into A $2,000,000 Digital Product \n \n Over the last 6 years, I’ve generated over $20,000,000 selling digital products.\nBut when I first started out, I had no clue how to turn the ideas in my head into products I could actually sell. Now"
+        },
+        {
+          "title": "Digital Monetization Methods: 8 Ways To Make Money Selling Your Expertise https://t.co/qkgsJJWlwl",
+          "url": "https://x.com/dickiebush/status/2087902033781174677",
+          "date": "2026-08-13",
+          "summary": "Digital Monetization Methods: 8 Ways To Make Money Selling Your Expertise https://t.co/qkgsJJWlwl"
         }
       ],
       "teardown": null,
@@ -1419,7 +1425,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "“割韭菜” 这是伪命题。  \n\n尤其是在卖课的这个领域。  \n\n以前教人用电脑打字， 是不是挺简单的， 但是很多人要成为打字员，还真的要付费学习。  \n\n后来教人用 word 、 excel、ppt ， 成为办公室白领， 也有大把的人付费学",
+          "url": "https://x.com/pandatalk8/status/2087795701749330057",
+          "date": "2026-08-13",
+          "summary": "“割韭菜” 这是伪命题。  \n\n尤其是在卖课的这个领域。  \n\n以前教人用电脑打字， 是不是挺简单的， 但是很多人要成为打字员，还真的要付费学习。  \n\n后来教人用 word 、 excel、ppt ， 成为办公室白领， 也有大把的人付费学习。"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1523,7 +1536,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "一直觉得销售这个岗位会让人更容易理解这个世界的运行规律\n​\n​比如 努力并不一定有回报\n​\n​而大多数人的思维里面 总觉得努力就有回报，其实不是这样的\n​\n​我有一个同学，毕业的时候去一家工厂做销售，他去的第一个月就签了一个 1000 万的",
+          "url": "https://x.com/imwsl90/status/2087805277198577751",
+          "date": "2026-08-13",
+          "summary": "一直觉得销售这个岗位会让人更容易理解这个世界的运行规律\n​\n​比如 努力并不一定有回报\n​\n​而大多数人的思维里面 总觉得努力就有回报，其实不是这样的\n​\n​我有一个同学，毕业的时候去一家工厂做销售，他去的第一个月就签了一个 1000 万的外购单，他剩下一年的时间就啥也不用干了"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1692,6 +1712,12 @@
           "url": "https://www.youtube.com/watch?v=GxcFXsqYnIQ",
           "date": "2026-08-06",
           "summary": "Get My FREE AI Business Ebook: https://wholesaleted.com/aibook\nTOOLS USED IN THIS TUTORIAL:\n► VIDIQ: https://wholesaletedgo.com/vidiq\n► Suno: suno.com \n► Kling 3.0/Nano Banana Pro via Higgsfield: https://wholesaletedgo.com/klinghiggsfield\n► Capcut: https://wholesaletedgo.com/capcutsignup\n\nSome links"
+        },
+        {
+          "title": "The NEW Way To Start AI Dropshipping w/ Claude Code",
+          "url": "https://www.youtube.com/watch?v=hKFv6qqFjTk",
+          "date": "2026-08-13",
+          "summary": "Thank you to AutoDS for sponsoring today's tutorial - here's the full AI dropshipping tool workflow I used:\n► BuildYourStore AI: https://www.buildyourstore.ai/nspr\n► AutoDS: https://www.autods.com/hj9t\n► Try CreateUGC with a 3-day FREE trial: https://www.createugc.ai/3ngf \n► Claude Code: claude.com/"
         }
       ],
       "teardown": null,
@@ -2740,16 +2766,72 @@
         "signals_used": 0,
         "generated_at": "2026-08-08 03:12"
       },
-      "last_teardown": "2026-08-08",
-      "teardown_count": 1,
+      "last_teardown": "2026-08-14",
+      "teardown_count": 2,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": null,
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 33,
+        "feasibility": 62,
+        "startup_index": 3,
+        "composite": 44.8,
+        "drivers": [
+          [
+            "交付毛利",
+            5
+          ],
+          [
+            "启动资金低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "定价结构",
+            1
+          ]
+        ],
+        "caps": [
+          "没有定价 = 还没有产品 → 封顶5分",
+          "没写清客户从哪来 → 封顶6分",
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "定价检验未过：全文没有一个真实价格"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 5,
+          "repeat": 1,
+          "price_ladder": 1,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 2,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 3,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格"
+      },
+      "commercial_severity": "skip"
     },
     "小林": {
       "handle": "小林",
@@ -4101,7 +4183,7 @@
       "last_teardown": "2026-08-13",
       "teardown_count": 1,
       "discovered_date": "2026-08-13",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -4244,7 +4326,7 @@
       "last_teardown": "2026-08-13",
       "teardown_count": 1,
       "discovered_date": "2026-08-13",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -4317,17 +4399,138 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "小宇宙用户/澳洲摆摊创业者",
+        "operator_name": "阿喵",
+        "region": "国际",
+        "who": "阿喵，一位在澳洲悉尼集市摆摊卖艺术周边产品的单人实体创作者。副业性质，小成本启动，具体收入规模未公开。",
+        "deliverable": "艺术周边产品（如贴纸、明信片、钥匙扣、徽章等原创艺术设计实物），通过线下集市直接零售给逛市集的顾客。",
+        "business_model": "线下集市一次性销售，无月费或订阅。定价未公开，推测为中小客单价（几十到几百澳元不等）。收入完全依赖集市现场成交，无后端复购链路。",
+        "acquisition": "核心动作是「申请悉尼当地集市摊位」。具体路径：①渠道——悉尼线下集市（如宠物海滩市集Petersham、皇后街市集Queen Street等本地知名周末集市）；②动作——关注集市官网或社交账号的摊主招募信息，提交申请，带上作品集/样品去现场摆摊；③第一批客户来源——自然流量，即周末逛集市的行人随机停步选购；④可照抄打法——先去目标集市当顾客观察几天，记录人流动线、哪些摊位排队、什么品类好卖，再申请同类摊位进场。",
+        "stack": "无代码需求，纯线下运营。可能用到的低成本工具：手机拍摄产品照片（用于宣传或申请摊位）、现金/POS收款设备、简易折叠桌+展架陈列。",
+        "replicability": 4,
+        "first_step": "在地图上搜「Sydney markets」，列出当地3个周末集市，记下摊主招募邮箱或网站链接，这周就去填一份申请。",
+        "red_flag": "不是卖铲子模式，阿喵自己交付实物产品。但风险在于：①集市摊位竞争激烈，不是申请就能进；②天气/季节直接影响客流；③作品原创度不够容易被模仿；④收入波动大，不适合追求稳定现金流的人。",
+        "learn": "①选址策略比摆摊本身更重要——人流量大的集市胜过偏僻角落；②陈列视觉（颜色统一、价格牌清晰、产品堆叠感）直接影响路人停步率，这是摆摊小白最容易忽略的细节。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-14 05:16",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 32,
+          "feasibility": 72,
+          "startup_index": 6,
+          "composite": 53.3,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              1
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 1,
+            "market_size": 3,
+            "evergreen": 3,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-14",
+      "teardown_count": 1,
       "discovered_date": "2026-08-13",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-08-13",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 32,
+        "feasibility": 72,
+        "startup_index": 6,
+        "composite": 53.3,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 3,
+          "evergreen": 3,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
     }
   }
 }
