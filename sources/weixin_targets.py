@@ -104,6 +104,22 @@ def extract_summary(html: str) -> str:
     return ""
 
 
+def extract_publish_time(html: str) -> Optional[datetime]:
+    """从 mp.weixin 文章页提取发布时间（var publish_time，Unix 秒）。匹配不到返回 None。
+
+    长周期深度文章发布久≠价值低，保留真实时间让卡片显示真实日期、评分也能感知年龄。
+    """
+    if not html:
+        return None
+    m = re.search(r"var\s+publish_time\s*=\s*[\"']?(\d{10})[\"']?", html)
+    if m:
+        try:
+            return datetime.fromtimestamp(int(m.group(1)), tz=timezone.utc)
+        except Exception:
+            return None
+    return None
+
+
 def _norm(s: str) -> str:
     """归一化：去空白（含全角空格）。"""
     return re.sub(r"\s+", "", s or "")
@@ -299,7 +315,7 @@ class WeixinTargetSource(BaseSource):
 
         for title, link in candidates:
             try:
-                nick, final_url, art_title, summary = await self._verify_author(client, link, timeout)
+                nick, final_url, art_title, summary, pub_dt = await self._verify_author(client, link, timeout)
             except Exception as e:
                 logger.debug(f"  验证作者失败 {link}: {e}")
                 continue
@@ -310,7 +326,7 @@ class WeixinTargetSource(BaseSource):
                     summary=summary,
                     source="weixin_targets",
                     source_name="公众号",
-                    published=datetime.now(timezone.utc),
+                    published=pub_dt or datetime.now(timezone.utc),
                 ))
                 logger.info(f"  ✅ 命中目标号 [{weixin_id}]: {(art_title or nick)[:30]}")
             else:
@@ -371,23 +387,25 @@ class WeixinTargetSource(BaseSource):
 
     async def _verify_author(
         self, client: httpx.AsyncClient, link: str, timeout: int
-    ) -> tuple[str, str, str, str]:
-        """抓文章页（自动跟随 Redirect 到 mp.weixin），返回 (作者昵称, 最终文章URL, 文章标题, 摘要)。
+    ) -> tuple[str, str, str, str, Optional[datetime]]:
+        """抓文章页（自动跟随 Redirect 到 mp.weixin），返回 (作者昵称, 最终文章URL, 文章标题, 摘要, 发布时间)。
 
         最终 URL 既用于内容去重，也用于推送时打开真实文章（而非搜狗/百度的跳转链）。
         摘要直接取自文章页 description，使 AI 评估不依赖经常失败的 enricher 全文抓取。
+        发布时间取自 var publish_time（解析不到为 None），用于卡片显示真实日期、评分感知年龄。
         """
         try:
             rp = await client.get(link, timeout=timeout)
         except Exception:
-            return "", link, "", ""
+            return "", link, "", "", None
         final = str(rp.url)
         # 兼容两种真实文章 URL：/s/xxxx（搜狗跟进后）与 /s?__biz=...（Baidu mu= 直链）
         if "mp.weixin.qq.com/s" not in final:
-            return "", final, "", ""  # 不是公众号文章（如搜狗产品页 / 荐号软文）
+            return "", final, "", "", None  # 不是公众号文章（如搜狗产品页 / 荐号软文）
         return (
             extract_nickname(rp.text),
             final,
             extract_title(rp.text),
             extract_summary(rp.text),
+            extract_publish_time(rp.text),
         )
