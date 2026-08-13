@@ -4,7 +4,7 @@ name: 推送通道看门狗
 # 直到用户发现群里没推送才手动重开）。本工作流独立于 daily-push，每日在其后检查并自愈。
 on:
   schedule:
-    # 北京时间每天 21:30 = UTC 13:30（daily-push 排期 20:00 之后，留足运行余量）
+    # 北京时间每天 21:30 = UTC 13:30（daily-push 排期 18:00 之后，留足运行余量）
     - cron: "30 13 * * *"
   workflow_dispatch:
 
