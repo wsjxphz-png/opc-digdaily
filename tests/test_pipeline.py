@@ -21,6 +21,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+# 测试运行时的持久化文件写入临时目录，避免污染真实 storage/
+# （pytest 由 conftest.py 设置；独立运行本文件时此处兜底）
+import os
+if not os.environ.get("OPC_STORAGE_DIR"):
+    os.environ["OPC_STORAGE_DIR"] = str(Path(tempfile.mkdtemp(prefix="opc_test_storage_")))
+
 import yaml
 from operators import Operator, OperatorRoster
 from teardown import TeardownEngine
