@@ -1569,7 +1569,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "收集了最受欢迎的内部 Grok Bot 使用案例：\n\n• 查找 / 预订偏向于 Starlink 接入的航班\n• 从食谱照片中订购 Whole Foods 配送\n• 修复数百张胶片扫描的日期/GPS 元数据\n• 直接协商承包商报价\n• 通过",
+          "url": "https://x.com/iamtonyzhu/status/2088067795359789322",
+          "date": "2026-08-14",
+          "summary": "收集了最受欢迎的内部 Grok Bot 使用案例：\n\n• 查找 / 预订偏向于 Starlink 接入的航班\n• 从食谱照片中订购 Whole Foods 配送\n• 修复数百张胶片扫描的日期/GPS 元数据\n• 直接协商承包商报价\n• 通过外呼代理预订潜在客户 / 客户会议\n• 在客户通话前将销售幻灯片转换为其他语言\n• 从 Granola"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -4531,6 +4538,374 @@
         "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
+    },
+    "君子": {
+      "handle": "君子",
+      "name": "君子",
+      "region": "国内",
+      "category": "00后大专出身，靠写作能力深耕自媒体7年，完成「流量→销售→交付」完整闭环，年收入超7位数——普通人的底层逻辑是：识别个人优势、长期积累、把一件事跑通。",
+      "aliases": [
+        "君子"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "君子",
+        "operator_name": "君子",
+        "region": "国内",
+        "who": "君子，95后（00后标签存疑），大专学历，深耕写作自媒体7年的单人内容创业者，年收入超7位数（约100万+），已完成流量→销售→交付的完整闭环。",
+        "deliverable": "交付物：以写作为核心的内容产品与服务——包括付费专栏/电子书、一对一咨询/陪跑、可能还有社群会员。面向想要提升写作能力或做自媒体的普通人。",
+        "business_model": "商业模式：混合模式。①免费内容引流（公众号/知乎/小红书等）；②低价数字产品（电子书/模板，未公开具体定价，推断几十到几百元）；③高价服务（一对一咨询/陪跑，未公开）；④可能的社群订阅。收入结构：以内容产品为主力，服务为辅。年收入超7位数（未公开精确数字）。",
+        "acquisition": "获客方式（资料有限，以下为合理推断）：①平台：微信公众号+知乎/小红书等文字平台（写作型创作者的主阵地）；②具体动作：持续输出高质量写作干货文章，建立专业人设，用免费内容吸引精准粉丝；③第一批客户来源：文章评论区互动、私信咨询转化——这是写作类创作者最典型的冷启动路径；④可照抄打法：选一个自己擅长的写作细分方向（如商业写作、职场写作、自媒体写作），坚持日更或周更3个月，每篇文章末尾附免费资源（如写作模板/检查清单）引流到私域。",
+        "stack": "工具链：公众号（内容发布）/知乎（长尾流量）/微信个人号+微信群（私域承接）/收款工具（未公开，可能是小报童/知识星球等写作圈常用工具）。全部无代码，点鼠标可用。",
+        "replicability": 4,
+        "first_step": "模仿第一步：今天注册一个公众号或知乎账号，确定一个你愿意深耕7年的写作细分领域（比如「教普通人写小红书爆款文案」），发第一篇干货文章，文末放一个免费写作模板引流。",
+        "red_flag": "风险/卖铲子判断：君子本身确实是靠写作能力做生意，不是纯卖铲子——他有真实交付内容产品。但他分享的成功经验（识别优势、长期积累、把一件事跑通）偏宏观，缺乏可执行细节。最大风险：普通人容易把'长期积累'当成拖延借口，实际执行时发现写3个月没效果就放弃了。",
+        "learn": "最该抄的作业：①他证明了'大专+写作'这个组合也能跑通，不需要融资、不需要技术背景；②七年一个细分领域死磕到底，比频繁切换赛道更重要。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具和平台即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-14 19:07",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 54,
+          "feasibility": 66,
+          "startup_index": 6,
+          "composite": 58.7,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "出单速度快",
+              2
+            ],
+            [
+              "单笔收费",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 3,
+            "revenue_proof": 3,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 2,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": ""
+        }
+      },
+      "last_teardown": "2026-08-14",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-14",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-14",
+      "commercial_health": {
+        "commercial": 54,
+        "feasibility": 66,
+        "startup_index": 6,
+        "composite": 58.7,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "出单速度快",
+            2
+          ],
+          [
+            "单笔收费",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 3,
+          "revenue_proof": 3,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 2,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": ""
+      },
+      "commercial_severity": "ok"
+    },
+    "悠夏": {
+      "handle": "悠夏",
+      "name": "悠夏",
+      "region": "国内",
+      "category": "43岁小县城文员转型写作IP，日更100天小红书后涨粉1.4万/月，写出200万+爆款，并带2000学员通过写作开启第二曲线——普通人可学的是：拆解爆款+反复打磨+坚持输出，副业也能跑通。",
+      "aliases": [
+        "悠夏"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "悠夏",
+        "operator_name": "悠夏",
+        "region": "国内",
+        "who": "悠夏，43岁女性，原小县城体制内文员，转型为写作领域IP。日更小红书，粉丝量未公开，但自称单篇笔记最高阅读200万+，通过写作内容引流到付费课程/陪跑服务。规模估计为单人工作室级别，学员数自称2000人。",
+        "deliverable": "交付物是「写作陪跑/课程」——教普通人（尤其是想副业的人）如何通过小红书等平台写作变现。交付形式大概率为线上课程+社群答疑，可能还有1v1辅导等高阶产品。",
+        "business_model": "商业模式以知识付费为主：低客单价引流课/录播课（价格未公开，同类市场约99-499元区间）+ 高客单价陪跑营/私教（价格未公开，同类市场约2000-10000元区间）。可能还有书籍/专栏等附加产品。收入结构推测以课程销售为主。",
+        "acquisition": "获客方式（核心拆解）：\n① 平台：小红书（主阵地），可能辅以微信私域/社群。\n② 具体动作：日更写作干货/心得类笔记，用真实个人转型故事做信任背书，爆款笔记（200万+阅读）带来大量曝光，评论区引导私信，私信导流到微信/社群，在私域完成转化。\n③ 第一批客户来源：前100天日更积累的早期粉丝，以及爆款笔记自然曝光带来的陌生流量。\n④ 可照抄打法：选定一个细分平台（如小红书），每天发一条与目标客户痛点强相关的干货笔记，持续90天以上；用个人真实故事做信任铺垫；爆款出现后及时把评论区/私信流量导入私域承接。",
+        "stack": "工具链：小红书APP（内容发布）+ 微信（私域运营/转化）+ 社群工具（企业微信/微信群/知识星球等，用于交付）+ 收款工具（微信支付/小鹅通/千聊等，未公开具体用哪个）。全程无代码需求。",
+        "replicability": 4,
+        "first_step": "今天就能做的事：注册/激活你的小红书账号，写第一条「我想学写作/我想做副业」主题的笔记，发出去，观察数据反馈。不需要等准备好了再发，先发再说。",
+        "red_flag": "这是典型的「卖铲子」模式——她的主要收入很可能来自「教别人写作赚钱」，而不是自己写作本身赚到钱。风险点：① 她能不能证明自己的学员确实赚到钱了，还是只晒了报名截图？② 写作变现的成功案例极难规模化复制，教别人写作本质上是在卖希望。③ 如果你已经43岁、在小县城，她的路径未必适合你——她本人就是最好的活广告，但这不代表她的方法对所有人都有效。",
+        "learn": "最值得抄的两个点：① 「日更100天」这个动作本身——不是方法多精妙，而是证明了「持续输出」这个行为能积累流量和信任，这是任何人都能复制的。② 个人真实转型故事是最强的信任背书——不要包装成专家，就讲「我从小县城文员做到月入X」，真实感比专业感更值钱。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-14 19:07",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 38,
+          "feasibility": 73,
+          "startup_index": 6,
+          "composite": 56.2,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-14",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-14",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-14",
+      "commercial_health": {
+        "commercial": 38,
+        "feasibility": 73,
+        "startup_index": 6,
+        "composite": 56.2,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "05年球鞋搬砖青年": {
+      "handle": "05年球鞋搬砖青年",
+      "name": "05年球鞋搬砖青年",
+      "region": "国内",
+      "category": "05年出生靠手机数码/球鞋信息差搬砖，一年赚到145万——核心是可复制的信息差打法，普通人能学的底层逻辑是：找对品类、吃透供需差、用信息不对称赚钱。",
+      "aliases": [
+        "05年球鞋搬砖青年"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-14",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-14",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "Side Hustle School": {
+      "handle": "Side Hustle School",
+      "name": "体育老师（Side Hustle School）",
+      "region": "国际",
+      "category": "一位教师用体育收藏品信息差做副业，月利润8000美元，弥补教学合同的收入缺口——核心逻辑是：把热爱变成生意，用信息差连接供需，普通人可复制。",
+      "aliases": [
+        "体育老师（Side Hustle School）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-14",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-14",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "r/passive_income": {
+      "handle": "r/passive_income",
+      "name": "剪辑社区创作者",
+      "region": "国际",
+      "category": "普通人在剪辑社区坚持3个月做到月入1000刀——核心是可复制的路径：找到内容变现渠道→加入社区→持续产出→获得收入，适合想从0启动的人参考。",
+      "aliases": [
+        "剪辑社区创作者"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-14",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-14",
+      "commercial_health": null,
+      "commercial_severity": ""
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-13 23:15",
+  "updated": "2026-08-14 19:09",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -548,6 +548,25 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0030_ai生成完整ip形象包含": {
+      "topic": "用AI生成的完整IP形象包（含三视图+表情包+海报） → 卖给需要卡通形象的企业或个人创作者",
+      "fingerprint": "ai生成完整ip形象包含三视图表情包海报卖给需要卡通形象企业或个人创作者",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "times_seen": 1,
+      "sources": [
+        "B站·阿喜喜aigc"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1sVSdBREHx"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
       "feedback": {
         "up": 0,
         "down": 0
