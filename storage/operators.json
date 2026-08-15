@@ -713,7 +713,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "It takes a year+ of posting with extreme consistency and diligence for it to start to pay off. \n\nI published 3x a week o",
+          "url": "https://x.com/nateliason/status/2088309673225076873",
+          "date": "2026-08-14",
+          "summary": "It takes a year+ of posting with extreme consistency and diligence for it to start to pay off. \n\nI published 3x a week on my first blog for 2yr straight. \n\nPublished my newsletter every Monday for 6yr straight with 0 misses. \n\nOnce you have some audience you get more flexibility,"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1784,6 +1791,12 @@
           "url": "https://www.youtube.com/shorts/FE6VL7jpfCs",
           "date": "2026-08-04",
           "summary": "I asked @AlexHormozi  how he'd make $100k a year doing what he loves.\n\nHis answer was basically, find one super valuable service you can do for a business, charge them $100K for it, then figure out what to do with the other 364 days of the year 😂\n\nWhat hit me was how casually he said it. He wasn't b"
+        },
+        {
+          "title": "Focus on one thing per quarter to succeed faster - click link in bio for my new app :)",
+          "url": "https://www.youtube.com/shorts/waDtXRCShCg",
+          "date": "2026-08-15",
+          "summary": "What would happen if you committed to one thing for the next 90 days?\n\nMost of us into personal development have goals scattered in every direction:\n\n👉 Progress in the day job\n\n👉 Progress in the side hustle\n\n👉Better health\n\n👉 More present with the family\n\n👉 A creative hobby\n\n👉 Growing a personal bra"
         }
       ],
       "teardown": null,
@@ -4625,7 +4638,7 @@
       "last_teardown": "2026-08-14",
       "teardown_count": 1,
       "discovered_date": "2026-08-14",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -4770,7 +4783,7 @@
       "last_teardown": "2026-08-14",
       "teardown_count": 1,
       "discovered_date": "2026-08-14",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -4843,17 +4856,142 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "05年球鞋搬砖青年",
+        "operator_name": "05年球鞋搬砖青年",
+        "region": "国内",
+        "who": "05年出生，单人运作的球鞋/手机数码搬砖商，通过跨平台价格差倒卖实物商品，年利润约145万元（公开数据，来源为用户描述）",
+        "deliverable": "倒卖实物商品——主要是球鞋和部分手机数码产品。低买高卖赚差价，不是服务也不是课程，是实打实的商品交易。买家是闲鱼/得物上的个人消费者。",
+        "business_model": "纯赚差价，一次性买卖，无订阅。具体定价未公开。粗略推断：若年利145万，假设毛利率15%-20%，年流水约700万-1000万，单均客单价未公开。模式是典型的中转套利，不是卖铲子。",
+        "acquisition": "核心打法：①在得物/淘宝蹲低价货源——新品限款发售时抢首发价、旧款打折时抄底、拼多多百亿补贴拿货；②同时在闲鱼/得物挂高价卖出。闲鱼是主要出货渠道，因为流量大且买家接受二手溢价；得物用于高价值球鞋验证真实性后出手。③第一波客户来自闲鱼自然流量——只要你价格比同类商品有优势，就会有人搜到下单。④可照抄的具体动作：每天早上刷闲鱼'球鞋'关键词，找那些急于出手的个人卖家（标价明显低于市场价），拍下后再挂回得物或闲鱼加价卖出。关键是找到两个平台之间的价差——比如一双鞋得物300元，闲鱼有人急出200元，你拍下来加价到280元挂闲鱼，净赚80元。这不需要任何技术，只需要勤快+对价格敏感。",
+        "stack": "闲鱼App、得物App、淘宝/拼多多比价、微信（和客户沟通）。如果用到工具，大概率是手动操作，没有自动化系统。可能有手机截图比价的小习惯，但都是手工作业。",
+        "replicability": 4,
+        "first_step": "今天去闲鱼搜'球鞋'，找一个标价明显低于市场价的急出卖家，私信问能否小刀，如果能谈下来，你就验证了这套打法的最小闭环。",
+        "red_flag": "①这不是卖铲子，是真搬砖，有库存风险——如果买的鞋卖不掉，钱就压在货里；②竞争极度激烈，现在知道这个逻辑的人很多，价差越来越薄；③需要垫资，前期至少要几千到一两万流动资金；④部分货源可能涉及黄牛抢货，有平台封号风险；⑤年收入145万可能是峰值年份，不稳定。",
+        "learn": "最该抄的两个点：①「信息差永远存在」——只要两个平台之间存在价差，就有套利空间，这个逻辑十年都不会过时；②「小单高频比大单低频更安全」——每单只赚几十块但速度快、风险小，比押一大注赌一双鞋涨到翻倍要稳健得多。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，两个手机+闲鱼+得物就能开始）",
+        "signals_used": 0,
+        "generated_at": "2026-08-15 18:33",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 42,
+          "feasibility": 66,
+          "startup_index": 5,
+          "composite": 54.0,
+          "drivers": [
+            [
+              "技能门槛低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "定价结构",
+              1
+            ],
+            [
+              "启动资金低",
+              2
+            ]
+          ],
+          "caps": [
+            "没有定价 = 还没有产品 → 封顶5分"
+          ],
+          "gates": [
+            "定价检验未过：全文没有一个真实价格"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 2,
+            "price_ladder": 1,
+            "revenue_proof": 3,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 2,
+            "speed": 4,
+            "skill": 5,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "定价检验未过：全文没有一个真实价格"
+        }
+      },
+      "last_teardown": "2026-08-15",
+      "teardown_count": 1,
       "discovered_date": "2026-08-14",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 42,
+        "feasibility": 66,
+        "startup_index": 5,
+        "composite": 54.0,
+        "drivers": [
+          [
+            "技能门槛低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "定价结构",
+            1
+          ],
+          [
+            "启动资金低",
+            2
+          ]
+        ],
+        "caps": [
+          "没有定价 = 还没有产品 → 封顶5分"
+        ],
+        "gates": [
+          "定价检验未过：全文没有一个真实价格"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 2,
+          "price_ladder": 1,
+          "revenue_proof": 3,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 2,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "定价检验未过：全文没有一个真实价格"
+      },
+      "commercial_severity": "warn"
     },
     "Side Hustle School": {
       "handle": "Side Hustle School",
@@ -4869,17 +5007,140 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "Side Hustle School",
+        "operator_name": "体育老师（Side Hustle School）",
+        "region": "国际",
+        "who": "一位美国体育教师，主业是教体育，副业靠买卖体育收藏品（主要是球星卡、 vintage 球衣等）赚信息差，月利润约8000美元",
+        "deliverable": "实体收藏品——球星卡、复古球衣、体育纪念品。从源头低价收购，转手高价卖出，赚取差价。卖的不是服务，是货品本身。",
+        "business_model": "低买高卖的信息差生意。收购价与售价之间的差额就是利润。大致价格区间：单品买入几十到几百美元不等，卖出价视稀有程度从几十到数千美元。未公开总投入和利润率。",
+        "acquisition": "这条路径相对模糊，不是靠获客，而是靠「货源 + 销售渠道」的组合。具体拆解：①货源从哪来——线下旧货店、跳蚤市场、拍卖网站（eBay、Heritage Auctions）、体育博览会上的摊主；②销售渠道——eBay（主要平台）、StockX（球鞋/球衣）、Facebook群组/Reddit社区（本地交易）、TSG/Twitter（收藏圈人脉）；③第一波客户来源——不是主动获客，而是先有货再找买家，在eBay上发布Listing后自然成交，同时在收藏圈社群里建立口碑，回头客来自之前买家评价；④可照抄的打法——普通人可以在周末去本地旧货店翻球星卡区（很多店按斤卖或几十美元一箱），挑出有潜力的稀有卡，在eBay上搜同系列已成交价作为参考，确定利润空间后上架出售。关键是：先学会看卡的年份、版本、签名类型（Auto/Relic/Jersey Patch），这些是决定价格的核心信息。",
+        "stack": "eBay（主要交易平台）、StockX或GOAT（球鞋/球衣）、PriceCharting.com（查历史成交价）、Beckett或PSA（查卡片认证评级）、Facebook Marketplace（本地低价收货源）、PayPal或Venmo（收款）",
+        "replicability": 3,
+        "first_step": "这周六去一趟本地二手店或旧货市场，翻找球星卡/运动纪念品区域，记下10个你觉得可能有价值的东西，回家后在PriceCharting.com上搜同名商品看最近成交价，对比进货价判断利润空间。",
+        "red_flag": "这不是卖铲子的生意，他确实在做实物买卖。但有两个风险：①需要一定启动资金（几百到几千美元）来囤货，不是零成本；②信息差会随时间缩小，竞争者增多后利润会被压缩，需要持续更新市场知识才能保持优势。对普通人最大的坑是：以为「有热情就能赚钱」，但热情不能替代对卡品知识、真伪辨别、市场行情判断的学习成本。",
+        "learn": "①把爱好变成生意的关键不是「喜欢体育」，而是愿意花时间去学行业知识（卡品年份、版本、评级体系、历史成交价）；②信息差生意的本质是「我知道你不知道的价格」，找到那个信息差存在的角落，比选对品类更重要。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，靠线下捡漏 + 线上转卖即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-15 18:33",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 31,
+          "feasibility": 54,
+          "startup_index": 4,
+          "composite": 45.2,
+          "drivers": [
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "启动资金低",
+              2
+            ],
+            [
+              "换人也能做",
+              2
+            ]
+          ],
+          "caps": [
+            "只有原作者本人能做 → 封顶4分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
+          "gates": [
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "低客单纯劳力：靠时间换钱，杠杆低"
+          ],
+          "factors": {
+            "urgency": 2,
+            "pricing": 3,
+            "margin": 3,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 3,
+            "evergreen": 3,
+            "channel": 3,
+            "machine": 2,
+            "delivery_chain": 3,
+            "replicable": 3,
+            "capital": 2,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；低客单纯劳力：靠时间换钱，杠杆低"
+        }
+      },
+      "last_teardown": "2026-08-15",
+      "teardown_count": 1,
       "discovered_date": "2026-08-14",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 31,
+        "feasibility": 54,
+        "startup_index": 4,
+        "composite": 45.2,
+        "drivers": [
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "启动资金低",
+            2
+          ],
+          [
+            "换人也能做",
+            2
+          ]
+        ],
+        "caps": [
+          "只有原作者本人能做 → 封顶4分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
+        "gates": [
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "低客单纯劳力：靠时间换钱，杠杆低"
+        ],
+        "factors": {
+          "urgency": 2,
+          "pricing": 3,
+          "margin": 3,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 3,
+          "evergreen": 3,
+          "channel": 3,
+          "machine": 2,
+          "delivery_chain": 3,
+          "replicable": 3,
+          "capital": 2,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；低客单纯劳力：靠时间换钱，杠杆低"
+      },
+      "commercial_severity": "warn"
     },
     "r/passive_income": {
       "handle": "r/passive_income",
@@ -4899,11 +5160,89 @@
       "last_teardown": null,
       "teardown_count": 0,
       "discovered_date": "2026-08-14",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "白风（魔法疗愈师）": {
+      "handle": "白风（魔法疗愈师）",
+      "name": "白风",
+      "region": "国内",
+      "category": "99年出生，动画专业毕业后放弃入职场，选择神秘学赛道做魔法疗愈师，实现双自由职业、月入稳定5位数；底层逻辑是「热爱即商业模式」——用个人兴趣切入小众高溢价赛道，结合大理旅居的差异化生活场景打造个人品牌，无需写代码、无需融资。",
+      "aliases": [
+        "白风"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-15",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-15",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "玮成": {
+      "handle": "玮成",
+      "name": "玮成",
+      "region": "国内",
+      "category": "毕业两年裸辞年薪30W+金融工作，从零做情感内容博主，首月涨粉10W，随后靠内容获客+商业IP合作跑通变现闭环，一人活成一支团队；底层逻辑是「内容杠杆」：用自媒体筛选精准用户、建立信任，再叠加商业合作放大收入，完全不依赖技术。",
+      "aliases": [
+        "玮成"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-15",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-15",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "Side Hustle School Ep.3513": {
+      "handle": "Side Hustle School Ep.3513",
+      "name": "体育纪念品倒卖的老师",
+      "region": "国际",
+      "category": "一名教师利用对体育周边商品的热爱，在教学合同间隙倒卖体育纪念品，月赚8000美元；底层逻辑是「信息差+热爱驱动」：用自己的专业兴趣和渠道优势做小众品类，无需代码、无需团队，纯靠个人选品和翻卖能力盈利。",
+      "aliases": [
+        "体育纪念品倒卖的老师"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-15",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-15",
       "commercial_health": null,
       "commercial_severity": ""
     }
