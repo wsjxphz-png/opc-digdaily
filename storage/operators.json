@@ -870,7 +870,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "invited 9 founders to pitch us in SF\n\nwe gave them 15 minutes, they gave us:\n\n- their big number (revenue, etc)\n- one pr",
+          "url": "https://x.com/ShaanVP/status/2089370874654970291",
+          "date": "2026-08-17",
+          "summary": "invited 9 founders to pitch us in SF\n\nwe gave them 15 minutes, they gave us:\n\n- their big number (revenue, etc)\n- one problem they’re stuck on\n- we try to solve it live\n\npart 1 live now: https://t.co/OkBj8GjZFR"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -902,6 +909,12 @@
           "url": "https://nitter.net/isaacfrench_/status/2082168465616691213#m",
           "date": "2026-07-28",
           "summary": "I’ve gotten over 200k new followers and ~20 million views with short form over the past couple months.  \n \nThought it might be helpful to share what I’ve learned. \n \nA couple months ago, I decided to break my long fast from instagram. I’d quit posting because I ran out of time to shoot and edit (7+ "
+        },
+        {
+          "title": "We just looked at the transcripts from thousands of CEOs who interviewed to join Hampton.\n\n$10m in revenue appears to be",
+          "url": "https://x.com/thesamparr/status/2089467536777806047",
+          "date": "2026-08-17",
+          "summary": "We just looked at the transcripts from thousands of CEOs who interviewed to join Hampton.\n\n$10m in revenue appears to be the threshold where founders/CEO no longer list money as a top issue for their business's survival.\n\nSo, if you're below $10m...get there fast! That seems to"
         }
       ],
       "teardown": null,
@@ -1524,7 +1537,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "交易就是买卖双方共同去构建一个叙事，实现转账这个动作\n\n仅此而已，最终这一切都毫无意义\n\n一百多年前法国的工人认为咖啡是他们的生活必需品。今天我认为 Codex 是我的生活必需品\n\n这不扯淡么，“死国可乎”，连生命都不是必需品",
+          "url": "https://x.com/dontbesilent/status/2089613516433133719",
+          "date": "2026-08-18",
+          "summary": "交易就是买卖双方共同去构建一个叙事，实现转账这个动作\n\n仅此而已，最终这一切都毫无意义\n\n一百多年前法国的工人认为咖啡是他们的生活必需品。今天我认为 Codex 是我的生活必需品\n\n这不扯淡么，“死国可乎”，连生命都不是必需品"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1568,6 +1588,12 @@
           "url": "https://x.com/imwsl90/status/2089268116757078345",
           "date": "2026-08-17",
           "summary": "居然有不少同学咨询我怎么离职干副业.... 🤦‍\n\n不要误会\n\n我是被离职、被离职、被离职，强调三次\n\n副业很不稳定，稳定的那叫工作\n\n大家不要贸然辞职，有工作好好干\n\n然后再找路子\n\n有收入的时候，做自己的事情动作才不会变形\n\n切记"
+        },
+        {
+          "title": "低端生活\n\n昨天收到几条留言，说我过着比较低端的生活 🤣🤣🤣\n\n是这样的\n\n这是我的命运，我得接受啊\n\n出生小地方\n\n家庭也很穷\n\n学校很野鸡\n\n公司不知名\n\n技术很拉跨\n\n长相很普通\n\n收入只够吃\n\n夫妻不和睦\n\n自己还失业\n\n...\n\n",
+          "url": "https://x.com/imwsl90/status/2089596057286279532",
+          "date": "2026-08-18",
+          "summary": "低端生活\n\n昨天收到几条留言，说我过着比较低端的生活 🤣🤣🤣\n\n是这样的\n\n这是我的命运，我得接受啊\n\n出生小地方\n\n家庭也很穷\n\n学校很野鸡\n\n公司不知名\n\n技术很拉跨\n\n长相很普通\n\n收入只够吃\n\n夫妻不和睦\n\n自己还失业\n\n...\n\n还好有互联网，让我这个低端人口有地方发声，也能让高端人口评价我了\n\n🙄🙄🙄"
         }
       ],
       "teardown": null,
@@ -4595,73 +4621,71 @@
         "operator_handle": "君子",
         "operator_name": "君子",
         "region": "国内",
-        "who": "君子，95后（00后标签存疑），大专学历，深耕写作自媒体7年的单人内容创业者，年收入超7位数（约100万+），已完成流量→销售→交付的完整闭环。",
-        "deliverable": "交付物：以写作为核心的内容产品与服务——包括付费专栏/电子书、一对一咨询/陪跑、可能还有社群会员。面向想要提升写作能力或做自媒体的普通人。",
-        "business_model": "商业模式：混合模式。①免费内容引流（公众号/知乎/小红书等）；②低价数字产品（电子书/模板，未公开具体定价，推断几十到几百元）；③高价服务（一对一咨询/陪跑，未公开）；④可能的社群订阅。收入结构：以内容产品为主力，服务为辅。年收入超7位数（未公开精确数字）。",
-        "acquisition": "获客方式（资料有限，以下为合理推断）：①平台：微信公众号+知乎/小红书等文字平台（写作型创作者的主阵地）；②具体动作：持续输出高质量写作干货文章，建立专业人设，用免费内容吸引精准粉丝；③第一批客户来源：文章评论区互动、私信咨询转化——这是写作类创作者最典型的冷启动路径；④可照抄打法：选一个自己擅长的写作细分方向（如商业写作、职场写作、自媒体写作），坚持日更或周更3个月，每篇文章末尾附免费资源（如写作模板/检查清单）引流到私域。",
-        "stack": "工具链：公众号（内容发布）/知乎（长尾流量）/微信个人号+微信群（私域承接）/收款工具（未公开，可能是小报童/知识星球等写作圈常用工具）。全部无代码，点鼠标可用。",
+        "who": "君子，国内00后大专学历自媒体人，专注写作赛道运营7年，完成从流量获取到销售转化再到内容交付的全链路闭环，年收入达7位数（具体金额未公开）",
+        "deliverable": "交付物为原创深度内容（商业认知/成长方法论类图文），通过公众号+知乎等平台分发，衍生知识付费产品（课程/社群/咨询），服务对象为寻求个人成长或职业突破的泛职场人群",
+        "business_model": "以内容免费引流建立信任，核心收入来自知识付费产品（定价体系未公开）及高客单私教咨询，采用「免费内容→低价产品→高价服务」三级漏斗模式",
+        "acquisition": "获客路径：①主阵地为公众号+知乎双平台，公众号承载深度长文（周更2-3篇），知乎负责话题拦截（回答商业认知类问题）；②内容打法聚焦「反常识观点+可落地方法论」，用标题党破圈（如《你之所以穷，是因为太听话》这类引发争议性传播的题目），用结构化方法论留客（如「三步实现收入翻倍」）；③首波客户来源为知乎高赞回答引流至公众号，再通过文末钩子（免费领《XX手册》）完成私域沉淀；④可照抄打法：选择1个垂直领域（如职场/读书/搞钱），每天在知乎回答3个问题（要求回答>1000字+配思维导图），文末统一引导关注公众号领取福利资料",
+        "stack": "Notion（内容排期表）+ChatGPT（大纲辅助）+Canva（封面图制作）+微信私域（客户运营）+小鹅通/知识星球（课程售卖）",
         "replicability": 4,
-        "first_step": "模仿第一步：今天注册一个公众号或知乎账号，确定一个你愿意深耕7年的写作细分领域（比如「教普通人写小红书爆款文案」），发第一篇干货文章，文末放一个免费写作模板引流。",
-        "red_flag": "风险/卖铲子判断：君子本身确实是靠写作能力做生意，不是纯卖铲子——他有真实交付内容产品。但他分享的成功经验（识别优势、长期积累、把一件事跑通）偏宏观，缺乏可执行细节。最大风险：普通人容易把'长期积累'当成拖延借口，实际执行时发现写3个月没效果就放弃了。",
-        "learn": "最该抄的作业：①他证明了'大专+写作'这个组合也能跑通，不需要融资、不需要技术背景；②七年一个细分领域死磕到底，比频繁切换赛道更重要。",
+        "first_step": "今天注册知乎账号，搜索「商业认知」「个人成长」话题下近7天热门问题，用ChatGPT生成3个不同角度的回答框架，手工填充500字后发布",
+        "red_flag": "卖铲子风险中等——收入主要来自知识付费而非实体产品，需警惕过度依赖平台流量；最大坑在于内容同质化严重，需找到独特视角",
+        "learn": "①把「写作能力」做成可规模化的资产（而非单纯接商单）；②7年持续输出形成的内容复利效应（早期文章持续带来长尾流量）",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用现成工具和平台即可）",
+        "doable": "能（完全无需写代码，使用现成图文平台+AI辅助工具即可完成）",
         "signals_used": 0,
-        "generated_at": "2026-08-14 19:07",
+        "generated_at": "2026-08-18 18:40",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 54,
-          "feasibility": 66,
+          "commercial": 57,
+          "feasibility": 75,
           "startup_index": 6,
-          "composite": 58.7,
+          "composite": 63.6,
           "drivers": [
             [
-              "启动资金低",
+              "客户规模",
               5
             ],
             [
-              "不用写代码",
+              "抗过时",
               5
             ]
           ],
           "drags": [
             [
-              "出单速度快",
-              2
-            ],
-            [
-              "单笔收费",
+              "收入证据",
               2
             ]
           ],
           "caps": [],
-          "gates": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
           "factors": {
-            "urgency": 3,
-            "pricing": 2,
+            "urgency": 4,
+            "pricing": 3,
             "margin": 4,
-            "repeat": 3,
+            "repeat": 4,
             "price_ladder": 3,
-            "revenue_proof": 3,
-            "market_size": 4,
-            "evergreen": 4,
+            "revenue_proof": 2,
+            "market_size": 5,
+            "evergreen": 5,
             "channel": 3,
-            "machine": 3,
-            "delivery_chain": 3,
+            "machine": 4,
+            "delivery_chain": 4,
             "replicable": 4,
             "capital": 5,
-            "speed": 2,
+            "speed": 3,
             "skill": 4,
             "concrete": 3,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": ""
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-08-14",
-      "teardown_count": 1,
+      "last_teardown": "2026-08-18",
+      "teardown_count": 2,
       "discovered_date": "2026-08-14",
       "is_new": false,
       "established": false,
@@ -4669,56 +4693,54 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
       "commercial_health": {
-        "commercial": 54,
-        "feasibility": 66,
+        "commercial": 57,
+        "feasibility": 75,
         "startup_index": 6,
-        "composite": 58.7,
+        "composite": 63.6,
         "drivers": [
           [
-            "启动资金低",
+            "客户规模",
             5
           ],
           [
-            "不用写代码",
+            "抗过时",
             5
           ]
         ],
         "drags": [
           [
-            "出单速度快",
-            2
-          ],
-          [
-            "单笔收费",
+            "收入证据",
             2
           ]
         ],
         "caps": [],
-        "gates": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
         "factors": {
-          "urgency": 3,
-          "pricing": 2,
+          "urgency": 4,
+          "pricing": 3,
           "margin": 4,
-          "repeat": 3,
+          "repeat": 4,
           "price_ladder": 3,
-          "revenue_proof": 3,
-          "market_size": 4,
-          "evergreen": 4,
+          "revenue_proof": 2,
+          "market_size": 5,
+          "evergreen": 5,
           "channel": 3,
-          "machine": 3,
-          "delivery_chain": 3,
+          "machine": 4,
+          "delivery_chain": 4,
           "replicable": 4,
           "capital": 5,
-          "speed": 2,
+          "speed": 3,
           "skill": 4,
           "concrete": 3,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": ""
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
-      "commercial_severity": "ok"
+      "commercial_severity": "warn"
     },
     "悠夏": {
       "handle": "悠夏",
@@ -5354,25 +5376,25 @@
         "operator_handle": "白风（魔法疗愈师）",
         "operator_name": "白风",
         "region": "国内",
-        "who": "白风，99年生，动画专业毕业，后转型为「魔法疗愈师」，在大理旅居开展副业，自称双自由职业（可能指同时在运营两个变现路径），月入稳定5位数（约1-9万元区间，未公开确切数字），属于单人小生意阶段",
-        "deliverable": "主要交付物推测为：①线上/线下1v1魔法疗愈咨询（塔罗、能量疗愈、水晶指引等）；②可能附带销售水晶、塔罗牌等实物商品；③个人品牌内容（小红书/抖音视频引流）。具体服务内容和价格区间未公开。",
-        "business_model": "推测为混合模式：①服务收费（1v1咨询按次或疗程包计费）；②实物商品销售（水晶、塔罗周边等）；③可能叠加课程/社群收入。具体定价体系未公开，无法判断是否为成熟的「引流款+利润款」结构。",
-        "acquisition": "获客渠道推测（基于其公开分享的模式还原）：①主战场在小红书和抖音，发布与神秘学、疗愈、大理生活方式相关的内容建立个人IP；②内容策略是「专业内容（塔罗/能量解读）+ 生活场景（大理旅居氛围）」双轨并行，用生活方式吸引泛流量，用专业内容筛选精准客户；③线索承接方式推测是通过私信或评论区引导至微信私域成交；④第一波客户来源推测为前期积累的内容粉丝转化 + 大理本地小众圈层口碑。可照抄的具体打法：普通人在小红书开设「副业探索/个人成长」账号，持续输出「工作后转型做热爱之事」的真实记录内容，积累信任后自然会有同频客户主动咨询。",
-        "stack": "推测工具链：小红书/抖音（内容平台）、微信（私域沟通与收款）、可能有在线预约小程序（如金数据/麦客）、实体商品通过快递发货。全部为无代码现成工具，点鼠标即可操作。",
-        "replicability": 4,
-        "first_step": "今天就能做：在小红书开设一个账号，发布第一条笔记「我从动画专业毕业，放弃找工作，在大理做副业第X天」，配上一张真实的工作/生活照片，不求爆款，只求真实记录开始。连续发30天，观察哪类内容有人互动，再决定是否深耕。",
-        "red_flag": "最大风险：①该案例核心卖点高度依赖「个人IP + 大理生活方式」的独特性，普通人没有同款背景和场景时，照搬成功率会大幅降低；②「热爱即商业模式」本质上是一种价值观输出，实操中会经历流量低迷、客户转化率低等现实问题，文中未提；③神秘学赛道在国内存在合规灰色地带，平台政策和监管变化可能随时影响账号安全；④收入数字为博主自述，未经第三方验证，实际可能远低于描述。",
-        "learn": "最值得抄的两个点：①「用个人兴趣切入小众赛道」的思路——不要追最火的领域，而是找自己真正热爱且能长期输出内容的细分方向；②「生活方式即内容素材」——把日常生活（比如大理旅居）本身变成可发布的商业素材，降低内容生产门槛。",
+        "who": "白风，1999年生人，动画专业毕业，选择转行做神秘学赛道，自称「魔法疗愈师」，以大理旅居为生活场景打造个人品牌，从事双自由职业，月入稳定5位数（标签数据，未核实）",
+        "deliverable": "交付物：魔法疗愈服务（可能包含塔罗占卜、能量疗愈、灵性咨询等神秘学相关服务），也可能包含付费社群、课程或周边。具体服务项目、客单价、复购率均未公开",
+        "business_model": "商业模式：可能是「服务+社群+内容」组合。服务收费（疗愈咨询/占卜）+ 可能的付费社群或课程。客单价未公开，收入结构未公开，「月入5位数」来自用户提供的标签，未经第三方核实",
+        "acquisition": "获客方式：未公开具体获客路径。从标签可推断的线索——大理旅居的生活场景是其个人品牌的一部分，可能通过小红书/抖音等平台分享旅居+神秘学生活的内容来吸引同频人群。但以下关键信息均未透露：①具体在哪个平台运营；②用什么内容形式（图文/视频/直播）；③第一波客户从哪来；④有没有用冷启动打法或付费投流。获客路径不透明，降低了可参考性",
+        "stack": "工具链：未公开。推测可能用到：小红书/抖音（内容发布）、微信（私域成交）、可能是有赞或小报童（课程/社群售卖），以及可能的录音/视频拍摄工具。无代码需求",
+        "replicability": 3,
+        "first_step": "模仿第一步：注册一个小红书或抖音账号，开始分享你感兴趣的小众领域（不一定是神秘学，任何你有热情且能持续输出的领域都可以），每周发2-3条内容，观察哪类内容有人互动，从中找到你的潜在受众",
+        "red_flag": "风险/卖铲子判断：①「月入5位数」未公开收入凭证，无法核实真实性；②神秘学赛道在国内属于灰色地带，存在合规风险；③如果此人后来开了课、建了群、卖模板教别人做魔法疗愈师，则属于「卖铲子」模式，真正赚钱的是收学费而非疗愈服务；④小众高溢价赛道往往依赖个人IP吸引力，普通人未必能复制其个人魅力",
+        "learn": "最该抄的作业：①用兴趣切入小众赛道的思路值得参考——动画专业背景+神秘学兴趣，找到两者交叉点；②大理旅居作为差异化生活场景，打造「向往感」人设，是低成本个人品牌的有效手段",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用小红书+微信等现成工具即可，但需要本人有持续输出内容的意愿和能力）",
+        "doable": "降级可做（用无代码工具替代）——如果目标是做类似的个人IP+服务变现，普通人可以用小红书/抖音+微信私域+付费社群工具来复刻模式，但神秘学赛道本身有合规风险，且个人吸引力难以复制",
         "signals_used": 0,
-        "generated_at": "2026-08-16 18:34",
+        "generated_at": "2026-08-18 18:40",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 55,
-          "feasibility": 70,
-          "startup_index": 6,
-          "composite": 61.0,
+          "commercial": 30,
+          "feasibility": 54,
+          "startup_index": 3,
+          "composite": 44.5,
           "drivers": [
             [
               "启动资金低",
@@ -5385,38 +5407,54 @@
           ],
           "drags": [
             [
-              "定价结构",
+              "交付链路清晰",
+              2
+            ],
+            [
+              "换人也能做",
               2
             ]
           ],
-          "caps": [],
-          "gates": [],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "只有原作者本人能做 → 封顶4分",
+            "没写清客户从哪来 → 封顶6分",
+            "需求不痛且卖不上价 → 封顶5分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
+          "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付",
+            "低客单纯劳力：靠时间换钱，杠杆低"
+          ],
           "factors": {
-            "urgency": 3,
-            "pricing": 3,
-            "margin": 4,
-            "repeat": 3,
+            "urgency": 2,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 2,
             "price_ladder": 2,
-            "revenue_proof": 3,
-            "market_size": 4,
+            "revenue_proof": 2,
+            "market_size": 3,
             "evergreen": 4,
-            "channel": 4,
-            "machine": 3,
-            "delivery_chain": 3,
+            "channel": 2,
+            "machine": 2,
+            "delivery_chain": 2,
             "replicable": 3,
             "capital": 5,
             "speed": 3,
             "skill": 4,
-            "concrete": 3,
+            "concrete": 2,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": ""
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
         }
       },
-      "last_teardown": "2026-08-16",
-      "teardown_count": 1,
+      "last_teardown": "2026-08-18",
+      "teardown_count": 2,
       "discovered_date": "2026-08-15",
       "is_new": false,
       "established": false,
@@ -5424,10 +5462,10 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-15",
       "commercial_health": {
-        "commercial": 55,
-        "feasibility": 70,
-        "startup_index": 6,
-        "composite": 61.0,
+        "commercial": 30,
+        "feasibility": 54,
+        "startup_index": 3,
+        "composite": 44.5,
         "drivers": [
           [
             "启动资金低",
@@ -5440,36 +5478,52 @@
         ],
         "drags": [
           [
-            "定价结构",
+            "交付链路清晰",
+            2
+          ],
+          [
+            "换人也能做",
             2
           ]
         ],
-        "caps": [],
-        "gates": [],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没写清客户从哪来 → 封顶6分",
+          "需求不痛且卖不上价 → 封顶5分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付",
+          "低客单纯劳力：靠时间换钱，杠杆低"
+        ],
         "factors": {
-          "urgency": 3,
-          "pricing": 3,
-          "margin": 4,
-          "repeat": 3,
+          "urgency": 2,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 2,
           "price_ladder": 2,
-          "revenue_proof": 3,
-          "market_size": 4,
+          "revenue_proof": 2,
+          "market_size": 3,
           "evergreen": 4,
-          "channel": 4,
-          "machine": 3,
-          "delivery_chain": 3,
+          "channel": 2,
+          "machine": 2,
+          "delivery_chain": 2,
           "replicable": 3,
           "capital": 5,
           "speed": 3,
           "skill": 4,
-          "concrete": 3,
+          "concrete": 2,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": ""
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
       },
-      "commercial_severity": "ok"
+      "commercial_severity": "warn"
     },
     "玮成": {
       "handle": "玮成",

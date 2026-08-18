@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-17 18:45",
+  "updated": "2026-08-18 18:42",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -662,6 +662,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0036_从书中摘录有价值段落整理": {
+      "topic": "从书中摘录有价值的段落整理发布 → 卖给想赚零花钱的普通人",
+      "fingerprint": "从书中摘录有价值段落整理发布卖给想赚零花钱",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "B站·是张桃子啊"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1cCba6NEmk"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0037_一个有稳定无脸youtu": {
+      "topic": "一个有稳定收入的无脸YouTube频道 → 卖给想做内容资产并打算出售的创作者",
+      "fingerprint": "一个有稳定无脸youtube频道卖给想内容资产并打算出售创作者",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/faceless-youtube-channel-exit-strategy/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0038_tiktokshop或a": {
+      "topic": "在 TikTok Shop 或 Amazon FBA 上销售实体产品赚取利润 → 卖给想从国内进货、通过社交平台或亚马逊卖到海外的个人卖家",
+      "fingerprint": "tiktokshop或amazonfba上销售实体产品赚取利润卖给想从国内进货通过社交平台或亚马逊卖到海外个人卖家",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/tiktok-shop-vs-amazon-fba-which-platform-is-right-for-you/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0039_一个有稳定流量英文博客卖": {
+      "topic": "一个有稳定流量的英文博客 → 卖给想通过写作变现的内容创作者",
+      "fingerprint": "一个有稳定流量英文博客卖给想通过写作内容创作者",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/how-to-make-money-with-a-blog"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0040_平台选择决策指南卖给想开": {
+      "topic": "一份平台选择决策指南 → 卖给想开线上商店的卖家",
+      "fingerprint": "平台选择决策指南卖给想开线上商店卖家",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/tiktok-shop-vs-shopify-store-which-platform-fits-your-business-goals/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 22,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0041_模式对比清单卖给正选择线": {
+      "topic": "一份模式对比清单 → 卖给正在选择线上商业模式的人",
+      "fingerprint": "模式对比清单卖给正选择线上商业模式人",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/faceless-youtube-business-vs-other-online-businesses/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 20,
       "feedback": {
         "up": 0,
         "down": 0
