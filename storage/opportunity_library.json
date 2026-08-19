@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-18 18:42",
+  "updated": "2026-08-19 18:41",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -776,6 +776,63 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 20,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0042_情感类短视频内容积累粉丝": {
+      "topic": "情感类短视频内容，积累粉丝后接商业合作 → 卖给有情绪表达欲的普通年轻人",
+      "fingerprint": "情感类短视频内容积累粉丝后接商业合作卖给有情绪表达欲普通年轻人",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/655721005"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0043_ai生成短视频动画内容或": {
+      "topic": "AI生成的短视频动画内容或IP形象设计 → 卖给品牌方或需要动画内容的自媒体账号",
+      "fingerprint": "ai生成短视频动画内容或ip形象设计卖给品牌方或需要动画内容自媒体账号",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "times_seen": 1,
+      "sources": [
+        "B站·云清风like"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV19J8767EEX"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 26,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0044_一件有视觉冲击力或情绪价": {
+      "topic": "一件有视觉冲击力或情绪价值的实体商品 → 卖给喜欢猎奇商品的年轻人或小众社群成员",
+      "fingerprint": "一件有视觉冲击力或情绪价值实体商品卖给喜欢猎奇商品年轻人或小众社群成员",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/weird-businesses-that-make-millions/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 48,
       "feedback": {
         "up": 0,
         "down": 0
