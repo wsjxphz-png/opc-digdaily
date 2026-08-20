@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-19 18:41",
+  "updated": "2026-08-20 18:44",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -833,6 +833,158 @@
       ],
       "best_startup_index": 5,
       "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0045_写作陪跑社群收教写小红书": {
+      "topic": "写作陪跑社群，每月收99元，教写小红书爆款文章 → 卖给想写自媒体但不知从何下手的上班族",
+      "fingerprint": "写作陪跑社群收教写小红书爆款文章卖给想写自媒体但不知从何下手上班族",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1006372885"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 61,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0046_帮商家ai搜索中正确展示": {
+      "topic": "帮商家在AI搜索中正确展示联系方式和好评 → 卖给本地中小商家老板",
+      "fingerprint": "帮商家ai搜索中正确展示联系方式好评卖给本地中小商家老板",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·满地找钱"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a85c633ef65145dfcc22e7b?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0047_职业转型咨询服务卖给对自": {
+      "topic": "职业转型咨询服务 → 卖给对自身职业方向迷茫的职场人",
+      "fingerprint": "职业转型咨询服务卖给对自身职业方向迷茫职场人",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1007072992"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0048_儿童派对设备租赁桌椅充气": {
+      "topic": "儿童派对设备租赁（桌椅、充气城堡等） → 卖给有孩子的家庭/活动策划公司",
+      "fingerprint": "儿童派对设备租赁桌椅充气城堡等卖给有孩子家庭活动策划公司",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/kids-party-rental-business/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 80,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0049_二手体育纪念品转卖卖给体": {
+      "topic": "二手体育纪念品转卖 → 卖给体育爱好者/收藏圈子里的人",
+      "fingerprint": "二手体育纪念品转卖卖给体育爱好者收藏圈子里人",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3513-story-teacher-flips-sports-gear-for-8000month"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0050_临时伴娘服务出席婚礼帮忙": {
+      "topic": "临时伴娘服务（出席婚礼、帮忙撑场面） → 卖给准备婚礼但找不到伴娘的新娘",
+      "fingerprint": "临时伴娘服务出席婚礼帮忙撑场面卖给准备婚礼但找不到伴娘新娘",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3519-tbt-bridesmaid-for-hire-keeps-walking-down-the-aisle"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 51,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0051_带有独特插画设计猫咪t恤": {
+      "topic": "带有独特插画设计的猫咪 T 恤或瑜伽垫 → 卖给喜欢猫咪或健身的年轻人的朋友圈和社群",
+      "fingerprint": "带有独特插画设计猫咪t恤或瑜伽垫卖给喜欢猫咪或健身年轻人朋友圈社群",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/basics-social-media-marketing"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0052_一件代发小众日品如宠物配": {
+      "topic": "一件代发的小众日用品（如宠物配件、厨房小工具） → 卖给在亚马逊买过小众日用品的中国消费者",
+      "fingerprint": "一件代发小众日品如宠物配件厨房小工具卖给亚马逊买过小众日品中国消费者",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/the-guide-to-selling-on-amazon-marketplace"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 43,
       "feedback": {
         "up": 0,
         "down": 0
