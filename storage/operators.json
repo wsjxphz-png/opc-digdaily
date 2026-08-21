@@ -817,6 +817,12 @@
           "url": "https://x.com/gregisenberg/status/2088988857417044432",
           "date": "2026-08-16",
           "summary": "Running list of AI agent ideas to make you more productive and more money:\n\n1. The onboarding rescue agent. Watch PostHog for any new signup who stalls on the same step for more than 10 minutes, then have an agent send them a Loom style personal message or a CustomerIO email that"
+        },
+        {
+          "title": "BOOTSTRAPPED VS VENTURE BACKED STARTUPS\n\nIf you run a bootstrapped business using VC strategies, you will lose. They are",
+          "url": "https://x.com/gregisenberg/status/2090513346898334106",
+          "date": "2026-08-20",
+          "summary": "BOOTSTRAPPED VS VENTURE BACKED STARTUPS\n\nIf you run a bootstrapped business using VC strategies, you will lose. They are different games with different rules.\n\nI REALLY felt how different while listening to Travis Kalanick on David Senra.\n\nTravis subsidized rides to buy the"
         }
       ],
       "teardown": null,
@@ -915,6 +921,12 @@
           "url": "https://x.com/thesamparr/status/2089467536777806047",
           "date": "2026-08-17",
           "summary": "We just looked at the transcripts from thousands of CEOs who interviewed to join Hampton.\n\n$10m in revenue appears to be the threshold where founders/CEO no longer list money as a top issue for their business's survival.\n\nSo, if you're below $10m...get there fast! That seems to"
+        },
+        {
+          "title": "Mid Day Squares revenue by year\n\n- year 1: $1.4m\n- 2: $3m\n- then $7m\n- $14m\n- $22m\n- $30m\n- $40m\n- this year on track fo",
+          "url": "https://x.com/thesamparr/status/2090469180344799419",
+          "date": "2026-08-20",
+          "summary": "Mid Day Squares revenue by year\n\n- year 1: $1.4m\n- 2: $3m\n- then $7m\n- $14m\n- $22m\n- $30m\n- $40m\n- this year on track for about $60m https://t.co/Ai7mOArYq4"
         }
       ],
       "teardown": null,
@@ -1802,6 +1814,12 @@
           "url": "https://www.youtube.com/watch?v=hKFv6qqFjTk",
           "date": "2026-08-13",
           "summary": "Thank you to AutoDS for sponsoring today's tutorial - here's the full AI dropshipping tool workflow I used:\n► BuildYourStore AI: https://www.buildyourstore.ai/nspr\n► AutoDS: https://www.autods.com/hj9t\n► Try CreateUGC with a 3-day FREE trial: https://www.createugc.ai/3ngf \n► Claude Code: claude.com/"
+        },
+        {
+          "title": "The Best AI Side Hustles To Start If You're BROKE",
+          "url": "https://www.youtube.com/watch?v=8NvhbfZNTrc",
+          "date": "2026-08-20",
+          "summary": "The best AI business ideas you can start with $0 using free tools! \n► Get My Free AI Business Ebook: https://wholesaleted.com/aibook\n► Join My AI Print On Demand Course: https://theecommlubhouse.com \n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\nTools Used In This Tutorial: \n\n► Claude/ChatGPT/Gemini/Grok (AI LLMs) \n► Canva"
         }
       ],
       "teardown": null,
@@ -1867,6 +1885,12 @@
           "url": "https://www.youtube.com/shorts/waDtXRCShCg",
           "date": "2026-08-15",
           "summary": "What would happen if you committed to one thing for the next 90 days?\n\nMost of us into personal development have goals scattered in every direction:\n\n👉 Progress in the day job\n\n👉 Progress in the side hustle\n\n👉Better health\n\n👉 More present with the family\n\n👉 A creative hobby\n\n👉 Growing a personal bra"
+        },
+        {
+          "title": "30 days free of Manychat Pro in the description :)",
+          "url": "https://www.youtube.com/shorts/D11PMo1JVU4",
+          "date": "2026-08-20",
+          "summary": "Click this link for a free 30-day Manychat Pro trial: get.manychat.com/course-creators?utm_source=influencer&amp;utm_medium=cold&amp;utm_campaign=AliAbdaalEmpireYTS&amp;utm_content=YTS or use the coupon code: ALIABDAAL\n\nOver the last few years I've made over $10 million selling stuff online.\n\nYou'd "
         }
       ],
       "teardown": null,
@@ -6501,6 +6525,240 @@
         "coverage": 1.0,
         "degraded": false,
         "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
+    },
+    "安妮": {
+      "handle": "安妮",
+      "name": "安妮",
+      "region": "国内",
+      "category": "前大厂HR辞职后用AI做视频号带货卖图书，几个视频跑出十万播放爆款，半年稳定月入两万，路径清晰可复制：AI写词→配音→出画面→挂车带货。",
+      "aliases": [
+        "安妮"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": "2026-08-21",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-21",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-21",
+      "commercial_health": {
+        "commercial": 41,
+        "feasibility": 84,
+        "startup_index": 3,
+        "composite": 56.9,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "技能门槛低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 4,
+          "delivery_chain": 4,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "skip"
+    },
+    "文学": {
+      "handle": "文学",
+      "name": "文学",
+      "region": "国内",
+      "category": "00后副业起步，坚持每天发6篇小红书笔记，首月仅22单，一年后做到60万营收、单月净利5万多，用AI做课件产品化交付，是普通人可复制的虚拟电商样本。",
+      "aliases": [
+        "文学"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "文学",
+        "operator_name": "文学",
+        "region": "国内",
+        "who": "00后国内年轻人，副业身份运营虚拟电商，主营文学类电子课件和写作教程，首月22单起步，一年后年营收约60万元，单月净利约5万元",
+        "deliverable": "AI辅助制作的文学类数字课件（电子书、写作教程、写作模板、文案素材包等），买家为想学写作、做自媒体文案或提升文学表达能力的普通用户",
+        "business_model": "一次性售卖数字产品（虚拟课程/课件/资料包），无订阅制；具体客单价未公开；年营收约60万为推断（月均5万×12），首月22单可作参考锚点",
+        "acquisition": "唯一核心渠道：小红书内容运营。①具体平台：小红书（图文笔记）；②具体动作：每天发布6篇笔记，题材围绕文学/写作痛点，如「如何写出好句子」「3个写作技巧」「文学书单推荐」等，用真实案例和干货吸引目标用户关注并私信/加微；③第一波客户来源：前22单来自小红书笔记自然流量带来的主动咨询和加购；④可照抄打法：确定一个细分选题方向（如「零基础学写作」），每天固定发6篇笔记，连续30天以上再谈转化，核心是内容密度堆出曝光量，让客户主动找上门",
+        "stack": "小红书（内容发布）、AI写作工具（用于批量生成课件内容）、微信/企业微信（私域承接与成交）、电子资料自动发货工具（如芝麻信用自动发网盘链接或手动发货）",
+        "replicability": 2,
+        "first_step": "今天就在小红书注册账号，选一个你熟悉的写作或文学细分方向，发第一篇干货笔记（比如「新手写作的3个常见坑」），坚持每天至少发1篇，跑通内容到私信咨询的闭环",
+        "red_flag": "高度疑似卖铲子模式：他的主要收入可能本身就来自卖写作课/写作课件，而不是靠文学内容本身赚钱；普通人最难复制的是「每天6篇笔记」的极端执行力，而非商业模式；60万营收数据未公开第三方凭证，存在夸大可能；虚拟课件赛道已非常拥挤，同质化严重",
+        "learn": "①产品化思维：把零散的文学知识打包成可批量复制的数字课件，一次制作无限销售；②内容密度驱动获客：用每天6篇笔记的极致执行换自然流量，比花钱投流更可持续",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-08-21 18:43",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 48,
+          "feasibility": 64,
+          "startup_index": 4,
+          "composite": 55.6,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "可复刻性",
+              2
+            ],
+            [
+              "换人也能做",
+              2
+            ]
+          ],
+          "caps": [
+            "只有原作者本人能做 → 封顶4分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
+          "gates": [
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "低客单纯劳力：靠时间换钱，杠杆低"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 3,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 2,
+            "delivery_chain": 3,
+            "replicable": 2,
+            "capital": 5,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；低客单纯劳力：靠时间换钱，杠杆低"
+        }
+      },
+      "last_teardown": "2026-08-21",
+      "teardown_count": 1,
+      "discovered_date": "2026-08-21",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-21",
+      "commercial_health": {
+        "commercial": 48,
+        "feasibility": 64,
+        "startup_index": 4,
+        "composite": 55.6,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "可复刻性",
+            2
+          ],
+          [
+            "换人也能做",
+            2
+          ]
+        ],
+        "caps": [
+          "只有原作者本人能做 → 封顶4分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
+        "gates": [
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "低客单纯劳力：靠时间换钱，杠杆低"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 3,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 2,
+          "delivery_chain": 3,
+          "replicable": 2,
+          "capital": 5,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；低客单纯劳力：靠时间换钱，杠杆低"
       },
       "commercial_severity": "warn"
     }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-20 18:44",
+  "updated": "2026-08-21 18:46",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -985,6 +985,177 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0053_chatgpt生成可画排": {
+      "topic": "用ChatGPT生成、可画排版的学科课件PDF → 卖给准备孩子学习资料的家长、急需课件的教师",
+      "fingerprint": "chatgpt生成可画排版学科课件pdf卖给准备孩子学习资料家长急需课件教师",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·自由指北"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a7f107136641f136d884ca6?utm_source=rss"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 76,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0054_整理好电子版资料包简历模": {
+      "topic": "整理好的电子版资料包（简历模板、计划表、设计素材等） → 卖给需要在简历/工作/学习场景获取资料的上班族或大学生",
+      "fingerprint": "整理好电子版资料包简历模板计划表设计素材等卖给需要简历工作学习场景获取资料上班族或大学生",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·自由指北"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a2c1a8f4233e62bc548db44?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0055_小红书ecommerce": {
+      "topic": "小红书电商店铺，卖实物商品（如日用品、小众好物）或虚拟资料 → 卖给想从零开始做小红书电商的普通人，尤其是没有粉丝基础的新手",
+      "fingerprint": "小红书ecommerce店铺卖实物商品如日品小众好物或虚拟资料卖给想从零开始小红书ecommerce尤其没有粉丝基础新手",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·自由指北"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/690a156caf4fc00da71e326f?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0056_公众号垂直领域内容账号叠": {
+      "topic": "公众号垂直领域内容账号，叠加流量主广告分成和私域产品转化 → 卖给想低成本启动副业的上班族或学生",
+      "fingerprint": "公众号垂直领域内容账号叠加流量主广告分成私域产品转化卖给想低成本启动上班族或学生",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·自由指北"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68fcf111015672032103a2a8?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 58,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0057_旅行团队现场带领服务卖给": {
+      "topic": "旅行团队现场带领服务 → 卖给喜欢旅行、想自由工作的人",
+      "fingerprint": "旅行团队现场带领服务卖给喜欢旅行想自由工作人",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·自由指北"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a4265f99d2f5743683fc60e?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0058_对比youtube频道内": {
+      "topic": "对比YouTube频道和内容网站两种投资选择 → 卖给考虑投资数字资产的爱好者",
+      "fingerprint": "对比youtube频道内容网站两种投资选择卖给考虑投资数字资产爱好者",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/faceless-youtube-channel-vs-content-website-investment/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 29,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0059_购买现成youtube频": {
+      "topic": "购买现成YouTube频道作为数字资产 → 卖给有闲钱想投资海外YouTube频道的个人投资者",
+      "fingerprint": "购买现成youtube频道作为数字资产卖给有闲钱想投资海外youtube频道个人投资者",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/what-to-look-for-when-buying-a-faceless-youtube-channel/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0060_对已有频道数据分析内容优": {
+      "topic": "对已有频道做数据分析和内容优化以增长 → 卖给已购买YouTube频道的个人投资者",
+      "fingerprint": "对已有频道数据分析内容优化以增长卖给已购买youtube频道个人投资者",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/growing-an-acquired-faceless-youtube-channel/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0061_shopify开店卖小众": {
+      "topic": "在Shopify开店卖小众实用商品，供应商代发货 → 卖给想从零开始做跨境电商的普通人",
+      "fingerprint": "shopify开店卖小众实商品供应商代发货卖给想从零开始跨境ecommerce",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/is-dropshipping-worth-it"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 32,
       "feedback": {
         "up": 0,
         "down": 0
