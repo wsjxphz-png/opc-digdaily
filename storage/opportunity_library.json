@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-22 18:36",
+  "updated": "2026-08-23 18:38",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1289,6 +1289,44 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0069_配音服务按分钟或按卖给需": {
+      "topic": "配音服务，按分钟或按项目收费 → 卖给需要配音的短视频博主和有声书出版方",
+      "fingerprint": "配音服务按分钟或按卖给需要配音短视频博主有声书出版方",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "times_seen": 1,
+      "sources": [
+        "B站·小鱼爱配音x"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1yyMQ6kEh6"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0070_暂无具体可抄交付物信息卖": {
+      "topic": "暂无具体可抄的交付物信息 → 卖给想做一人公司的自由职业者或副业人群",
+      "fingerprint": "暂无具体可抄交付物信息卖给想自由职业者或人群",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "times_seen": 1,
+      "sources": [
+        "B站·零零邀访谈"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Q5QgB5EGT"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 25,
       "feedback": {
         "up": 0,
         "down": 0
