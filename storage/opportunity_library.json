@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-23 18:38",
+  "updated": "2026-08-24 18:50",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1327,6 +1327,103 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 25,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0071_垂直领域原创视频如旅行知": {
+      "topic": "垂直领域原创视频（如旅行/知识/生活Vlog），通过品牌商单和平台流量分成变现 → 卖给想靠视频内容变现的普通人，有较强表达欲和持续创作意愿",
+      "fingerprint": "垂直领域原创视频如旅行知识生活vlog通过品牌商单平台流量分成卖给想靠视频内容有较强表达欲持续创作意愿",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "times_seen": 1,
+      "sources": [
+        "B站·小豹城市探索"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1LV876pEfp"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0072_成色较好二手餐饮设备含冰": {
+      "topic": "成色较好的二手餐饮设备，含冰箱、灶台、操作台 → 卖给本地准备开餐厅的新手老板",
+      "fingerprint": "成色较好二手餐饮设备含冰箱灶台操作台卖给本地准备开餐厅新手老板",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·知行小酒馆"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a75724dc4079d62c57eb972?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 45,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0073_ecommerce平台信": {
+      "topic": "电商平台信息差套利（低价买、高价卖） → 卖给闲鱼卖家、拼多多砍价群主、淘宝代购",
+      "fingerprint": "ecommerce平台信息差套利低价买高价卖卖给闲鱼卖家拼多多砍价群主淘宝代购",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "times_seen": 1,
+      "sources": [
+        "B站·Letitber",
+        "B站·蜻蜓队长喔3"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Ho8261EiD",
+        "https://www.bilibili.com/video/BV1s18Y61Exd"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0074_后院adu短租房源卖给有": {
+      "topic": "后院ADU短租房源 → 卖给有院子或空地的自有房屋业主",
+      "fingerprint": "后院adu短租房源卖给有院子或空地自有房屋业主",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3516-first-1000-i-built-an-airbnb-rental-in-my-backyard"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 46,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0075_网站隐私合规整改服务co": {
+      "topic": "网站隐私合规整改服务（cookie同意弹窗+政策页面） → 卖给使用Shopify或WordPress建站的小电商卖家",
+      "fingerprint": "网站隐私合规整改服务cookie同意弹窗政策页面卖给使shopify或wordpress建站小ecommerce卖家",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/episode652/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 40,
       "feedback": {
         "up": 0,
         "down": 0
