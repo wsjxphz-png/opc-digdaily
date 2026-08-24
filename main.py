@@ -148,6 +148,15 @@ def load_config() -> dict:
     if os.environ.get("WEIXIN_RSS_BASE_URL"):
         config["weixin_whitelist"]["rss_base_url"] = os.environ["WEIXIN_RSS_BASE_URL"]
 
+    # 占位符/非法 webhook 必须在启动时炸出来，而不是推送时静默失败
+    # （8/24 教训：config.yaml 里 ${FEISHU_WEBHOOK_URL} 未展开，推送链静默断了 10 天）
+    wh = config["feishu"].get("webhook_url", "")
+    if wh and ("${" in wh or not wh.startswith(("http://", "https://"))):
+        raise RuntimeError(
+            f"feishu.webhook_url 无效: {wh!r}"
+            "（未展开的占位符或缺少协议，请检查 config.yaml 与 .env / FEISHU_WEBHOOK_URL 环境变量）"
+        )
+
     return config
 
 
