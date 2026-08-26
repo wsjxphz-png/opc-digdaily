@@ -835,6 +835,12 @@
           "url": "https://x.com/gregisenberg/status/2090901863814017300",
           "date": "2026-08-21",
           "summary": "Grok Bot might be the first tool that lets one non-technical person run an entire business with a team of AI agents.\n\nMy friend Billy runs his whole newsletter business on Grok Bot agents, and I think we're about to see 100,000+ businesses like his.\n\nBEST PRACTICES:\n\n1. The https://t.co/xTuBopoAo4"
+        },
+        {
+          "title": "I went live to react to some of my fav tweets of yours from the X timeline like a $1m baby iOS app, how to actually make",
+          "url": "https://x.com/gregisenberg/status/2092331618077671732",
+          "date": "2026-08-25",
+          "summary": "I went live to react to some of my fav tweets of yours from the X timeline like a $1m baby iOS app, how to actually make a company AI native, and why iMessage agents are becoming a real category worth watching.\n\nLaughed a lot. Full stream below. https://t.co/zgPVkYstx2"
         }
       ],
       "teardown": null,
@@ -1673,6 +1679,12 @@
           "url": "https://x.com/imwsl90/status/2091426643688783910",
           "date": "2026-08-23",
           "summary": "下午看了个陈昌文的视频\n\n他说他现在不见人了，每天录视频做内容，直播连线赚钱就好了\n\n其他时间不该不见人\n\n我很羡慕他这种状态\n\n其实我也很讨厌见人\n\n要是要努力干到一百万粉丝吧"
+        },
+        {
+          "title": "奇怪的梦\n\n昨天梦到前司请我回去，我“勉为其难”回去了\n\n和自己前女同事逛二手店，停在了一个卖二手性玩具的地方，我嘲笑道\n\n“二手性玩具你也买？”\n\n她大笑\n\n一会儿我就醒了",
+          "url": "https://x.com/imwsl90/status/2092409655083532790",
+          "date": "2026-08-26",
+          "summary": "奇怪的梦\n\n昨天梦到前司请我回去，我“勉为其难”回去了\n\n和自己前女同事逛二手店，停在了一个卖二手性玩具的地方，我嘲笑道\n\n“二手性玩具你也买？”\n\n她大笑\n\n一会儿我就醒了"
         }
       ],
       "teardown": null,
@@ -1724,6 +1736,12 @@
           "url": "https://x.com/iamtonyzhu/status/2091811733535092851",
           "date": "2026-08-24",
           "summary": "靠创意赚钱的产品模式：\n\n第一个产品是那个 leveliso 的 打飞机，一周 10 万美元\n\n第二个产品是Marc的TrustMRR，  9个月 30 万美元\n\n第三个产品是 德国小哥的 outbid，3 天 20 万美元"
+        },
+        {
+          "title": "卧槽， 苹果的赚钱能力太强了，又要卖爆\n\n新款 Mac mini &amp; Mac Studio发布\n\n-\n新款 Mac Mini 将配备 M6 芯片以及 M5 Pro 芯片。\n\nM6 芯片为苹果首款 2nm 芯片，拥有 12 核 CPU",
+          "url": "https://x.com/iamtonyzhu/status/2092254079930232885",
+          "date": "2026-08-25",
+          "summary": "卧槽， 苹果的赚钱能力太强了，又要卖爆\n\n新款 Mac mini &amp; Mac Studio发布\n\n-\n新款 Mac Mini 将配备 M6 芯片以及 M5 Pro 芯片。\n\nM6 芯片为苹果首款 2nm 芯片，拥有 12 核 CPU，12 核 GPU，售价 6999 元起，8 月 27 日开始预购，9 月 22 日正式开卖。\n\n-\n新款 Mac Studio 将配备 M5 Max 芯片以及 M5 https://t.co/Mx6kOplBDJ"
         }
       ],
       "teardown": null,
@@ -3749,31 +3767,134 @@
         "operator_handle": "南瓜",
         "operator_name": "南瓜",
         "region": "国内",
-        "who": "南瓜，国内大学辅导员，单人运营，月入数千至万元级别（具体数字未公开，区间为推断）",
-        "deliverable": "专业课培训资料包：针对考研、期末复习或考证的专业课笔记、真题、重点梳理等数字化资料，卖给需要备考的学生",
-        "business_model": "一次性售卖，定价未公开（推测为几十到几百元不等），收入来源单一，靠资料包销售获利",
-        "acquisition": "核心渠道为小红书，具体打法：①平台：小红书，定位「学习博主」或「学长/学姐分享」人设；②内容动作：发布专业课笔记截图、备考经验贴、资料清单展示，用「免费试看」或「低价引流」吸引私信；③第一波客户：通过笔记评论区互动、私信咨询转化，初期可能靠朋友圈或校园群种子用户启动；④可照抄打法：注册小红书账号，发布3-5篇目标专业课的笔记干货（如「XX大学XX专业考研重点梳理」），文末引导私信领取完整资料，用微信或小红书私信完成交易",
-        "stack": "无代码工具：小红书（内容发布）、微信（交易沟通）、可能用网盘（资料交付），无需复杂软件",
+        "who": "「南瓜」，国内大学辅导员，利用自身专业优势和岗位便利，在小红书售卖专业课备考资料，单人运营，月入数千到上万元（区间未公开具体数字）。",
+        "deliverable": "专业课培训资料，主要为电子资料包（PDF/图片），面向考研或期末备考的大学生。内容包括专业课笔记、历年真题、复习重点、学长学姐经验贴等。交付形式是微信或网盘链接发送，非实体书。",
+        "business_model": "一次性售卖为主，价格未公开（大致在几十到几百元之间）。收入结构：靠不同专业课资料组合形成多个SKU，部分可能含答疑陪跑服务作为高价款。未公开具体客单价和月GMV。",
+        "acquisition": "①渠道：小红书单平台起量，主攻考研/期末考试相关话题。②内容打法：发专业课备考笔记、真题分享、复习经验贴，标题打「考研专业课」「XX大学XX专业」等长尾关键词，封面用醒目的资料截图或手写笔记图。③第一波客户来源：早期靠辅导员身份内部资源整理资料，在小红书发真实备考干货，吸引精准考研学生搜索/刷到后私信或评论询问，引导加微信成交。④可照抄的具体动作：找到你想做的细分专业课（如某校某专业考研），去小红书搜「XX专业考研」「XX专业课笔记」，模仿高赞笔记的标题和封面风格，整理一份属于自己的备考资料作为首发内容，评论区/私信引流到微信，用微信收款码+百度网盘链接完成首次交付。无需任何代码，只需要一台手机+整理资料的能力。",
+        "stack": "小红书（内容发布+引流）、微信（私域沟通和收款）、百度网盘/夸克网盘（资料交付）、Excel/表格（客户记录）。全部为现成工具，无需代码。",
         "replicability": 4,
-        "first_step": "今天就在小红书注册账号，发布一篇你熟悉领域的「干货笔记」（如「XX专业考研资料清单」），文末写「私信领取完整版」，观察3天私信量",
-        "red_flag": "非卖铲子模式，但存在版权风险：若资料涉及学校内部教材或真题，可能侵权；另外，资料易被复制，需持续更新或增加服务（如答疑）维持竞争力",
-        "learn": "",
+        "first_step": "今天就去小红书搜「考研专业课笔记」或「XX专业考研资料」，找到10篇高赞笔记，记下它们的标题结构和封面风格，然后整理一份你所在专业或身边同学需要的备考资料包（哪怕只有20页），在小红书发第一篇笔记，标题写「XX专业考研资料分享」，引导感兴趣的人评论区留言或私信，你就开始跑通第一个获客闭环了。",
+        "red_flag": "①这个模式的核心壁垒是「身份+资料源」，如果你是本校学生或能拿到内部资料，门槛低；如果你无法合法获取真实专业课资料，容易踩版权或学术不端的风险。②小红书的流量规则会变，笔记被限流是常见风险，依赖单平台的获客不够稳。③资料类生意容易被同行内卷降价，后期护城河弱。④如果主要收入来自「教别人怎么卖资料」而非自己卖，则变成卖铲子，但根据现有信息，他本人是在交付真实资料，暂不判定为卖铲子。",
+        "learn": "①找准一个细分专业做深，用真实资料建立信任，比泛泛发内容更容易转化。②辅导员身份天然有「内部人」信任背书，普通人也可以找「有资料获取优势的身份」（比如已上岸的学长学姐、培训机构内部员工）来复制这种信任差。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用小红书和微信即可起步）",
+        "doable": "能（完全不用写代码，用现成工具和手机即可照做）",
         "signals_used": 0,
-        "generated_at": "2026-08-08 11:26",
-        "is_revisit": false
+        "generated_at": "2026-08-26 18:47",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 42,
+          "feasibility": 75,
+          "startup_index": 6,
+          "composite": 58.3,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
       },
-      "last_teardown": "2026-08-08",
-      "teardown_count": 1,
+      "last_teardown": "2026-08-26",
+      "teardown_count": 2,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": null,
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 42,
+        "feasibility": 75,
+        "startup_index": 6,
+        "composite": 58.3,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
     },
     "阿金": {
       "handle": "阿金",
@@ -7634,6 +7755,32 @@
         "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格"
       },
       "commercial_severity": "warn"
+    },
+    "叉叉老师（上海训犬师）": {
+      "handle": "叉叉老师（上海训犬师）",
+      "name": "叉叉老师",
+      "region": "国内",
+      "category": "从钢琴老师跨界训犬，靠专业技能+心理学背景，在上海跑通一人训犬生意四五年，证明小众刚需赛道+差异化背景=高客单价服务",
+      "aliases": [
+        "叉叉老师"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-08-26",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-08-26",
+      "commercial_health": null,
+      "commercial_severity": ""
     }
   }
 }

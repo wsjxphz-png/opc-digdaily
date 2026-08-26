@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-25 18:46",
+  "updated": "2026-08-26 18:51",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1500,6 +1500,82 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0080_上门一对一狗狗行为纠正服": {
+      "topic": "上门一对一狗狗行为纠正服务 → 卖给城市里养了狗但有行为问题的宠物主人",
+      "fingerprint": "上门一对一狗狗行为纠正服务卖给城市里养狗但有行为问题宠物主人",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a8c5323ef65145dfcc4b066?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0081_标准化对外合作服务包含具": {
+      "topic": "一份标准化的对外合作服务包，含具体收益说明 → 卖给有可复用技能的自由职业者，如设计师或文案",
+      "fingerprint": "标准化对外合作服务包含具体收益说明卖给有可复技能自由职业者如设计师或文案",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/the-partnership-playbook/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0082_远程行政技术支持服务卖给": {
+      "topic": "远程行政和技术支持服务 → 卖给有技术需求的小企业主",
+      "fingerprint": "远程行政技术支持服务卖给有技术需求小企业主",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3521-qa-how-do-i-find-customers-as-a-digital-personal-ass"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0083_食品类ecommerce": {
+      "topic": "食品类电商网站 → 卖给有美食内容的博主",
+      "fingerprint": "食品类ecommerce网站卖给有美食内容博主",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3517-qa-should-i-start-a-new-site-for-my-food-business"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 35,
       "feedback": {
         "up": 0,
         "down": 0
