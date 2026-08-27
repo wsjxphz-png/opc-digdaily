@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-26 18:51",
+  "updated": "2026-08-28 04:21",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1576,6 +1576,63 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0084_ai生成独特图案或插画素": {
+      "topic": "AI生成的独特图案或插画素材 → 卖给中小商家、自媒体博主、需要配图的设计需求者",
+      "fingerprint": "ai生成独特图案或插画素材卖给中小商家自媒体博主需要配图设计需求者",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3523-first-1000-i-wanted-to-explore-ai-generated-art"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0085_一套录好舞蹈教学视频课程": {
+      "topic": "一套录好的舞蹈教学视频课程 → 卖给有舞蹈或艺术特长的人",
+      "fingerprint": "一套录好舞蹈教学视频课程卖给有舞蹈或艺术特长人",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3526-tbt-tap-dance-teacher-offers-worldwide-lessons"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0086_定制刺绣款帽子或t恤周边": {
+      "topic": "定制刺绣款帽子或T恤周边 → 卖给小红书/抖音上做穿搭的内容创作者",
+      "fingerprint": "定制刺绣款帽子或t恤周边卖给小红书抖音上穿搭内容创作者",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/start-embroidery-business"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 39,
       "feedback": {
         "up": 0,
         "down": 0

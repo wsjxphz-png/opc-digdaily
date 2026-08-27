@@ -945,6 +945,12 @@
           "url": "https://x.com/thesamparr/status/2090469180344799419",
           "date": "2026-08-20",
           "summary": "Mid Day Squares revenue by year\n\n- year 1: $1.4m\n- 2: $3m\n- then $7m\n- $14m\n- $22m\n- $30m\n- $40m\n- this year on track for about $60m https://t.co/Ai7mOArYq4"
+        },
+        {
+          "title": "What's the price of creating a company with good, steady revenue growth and profitability? Boredom (potenially).\n\nHere a",
+          "url": "https://x.com/thesamparr/status/2093001344529686813",
+          "date": "2026-08-27",
+          "summary": "What's the price of creating a company with good, steady revenue growth and profitability? Boredom (potenially).\n\nHere are a few quotes from Roger Lowenstein's book on Warren Buffet and what it was like working for him when he was a board member at the Washington Post (he was"
         }
       ],
       "teardown": null,
@@ -1501,6 +1507,18 @@
           "url": "https://x.com/pandatalk8/status/2091445997167939603",
           "date": "2026-08-23",
           "summary": "杭州很适合带娃，带娃的公共自行车， 到处绿化， 城市界面很绿，很新，水和森林是这里的主题。\n\n缺点就是和北方城市相比，消费水平不低啊， 停车费死贵，大多数商场8-10块一小时，几乎所有的小区停车都收费，至少5块一小时，私立幼儿园也不便宜，相比天津来讲。"
+        },
+        {
+          "title": "说一下我对知识服务的理解。 \n\n做知识付费这个事，不能把专业知识做的太深。\n\n因为那些真正需要太深入的专业知识的这些人，他们本身就有具备学习的能力，而且这类用户群体太少了， 我们的流量很难真正触达到他们。",
+          "url": "https://x.com/pandatalk8/status/2092924783105101842",
+          "date": "2026-08-27",
+          "summary": "说一下我对知识服务的理解。 \n\n做知识付费这个事，不能把专业知识做的太深。\n\n因为那些真正需要太深入的专业知识的这些人，他们本身就有具备学习的能力，而且这类用户群体太少了， 我们的流量很难真正触达到他们。"
+        },
+        {
+          "title": "去年我搞了一个PXC ,  就是Panda X 增长社群， 作为 XBC 的青训营，我们大概是给 XBC 输血最多的增长社群了。  \n当时的XBC 要求创作者必须超过2000fo，现在他们降低的门槛，只需要500fo 就可以了。  \n\n我感",
+          "url": "https://x.com/pandatalk8/status/2092847379477311771",
+          "date": "2026-08-27",
+          "summary": "去年我搞了一个PXC ,  就是Panda X 增长社群， 作为 XBC 的青训营，我们大概是给 XBC 输血最多的增长社群了。  \n当时的XBC 要求创作者必须超过2000fo，现在他们降低的门槛，只需要500fo 就可以了。  \n\n我感到非常的自豪， 昨天登陆了 XBC 的官方网站， 意外发现XBC还给了我一笔意外之财。 https://t.co/SdpQvjV1p7"
         }
       ],
       "teardown": null,
@@ -2022,7 +2040,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "You're not behind (yet): How to learn AI in 22 minutes",
+          "url": "https://www.youtube.com/watch?v=ulJqlCPNGKI",
+          "date": "2026-08-27",
+          "summary": "Get my top 1% AI workspace template free: https://diy.aimakeover.io/r/master-claude\n\nStop typing, start talking: https://get.glaido.com/liam-ottley\n\nWant an AI Makeover for YOUR Business?\n👉🏻 https://bit.ly/aimakeover \n\nFollow me on Instagram to see behind the scenes:\n🤳🏻 https://instagram.com/liamott"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -4053,31 +4078,130 @@
         "operator_handle": "淼淼",
         "operator_name": "淼淼",
         "region": "国内",
-        "who": "淼淼，前互联网大厂产品经理，2024年离职创业，单人操盘24小时无人麻将馆，2个半月回本，4个月赚10几万（具体数字未公开，为当事人自述）",
-        "deliverable": "提供麻将室/棋牌室的场地租赁服务，24小时自助使用，按小时或按局收费，配备麻将机、空调、茶水等基本设施",
-        "business_model": "按小时收费的场地租赁模式，具体定价未公开。收入结构单一，主要来自场地租金。成本主要是房租、装修折旧、麻将机维护、水电。无人值守省去人工成本是核心利润来源",
-        "acquisition": "①主要渠道：美团/大众点评店铺（用户搜索'棋牌室''麻将馆'时出现）+ 抖音/小红书本地生活引流；②具体动作：在美团开店上架套餐（如'4小时畅打XX元'），装修时拍短视频发抖音标注位置，引导顾客到店后好评返现；③第一波客户来源：未公开，推测是开业初期通过美团新店流量扶持 + 周边小区/写字楼地推传单 + 朋友介绍；④可照抄打法：在美团/大众点评开店上架优惠套餐，装修时拍3-5条短视频发抖音带定位，开业首周做'好评返现'或'首单半价'拉首批评价",
-        "stack": "智能门锁（如小米/鹿客，手机远程开门）+ 预约小程序（如'趣约麻将''棋牌室管理系统'等现成SaaS）+ 美团/大众点评店铺 + 抖音/小红书账号 + 监控摄像头 + 自助售货机（可选）",
-        "replicability": 4,
-        "first_step": "打开美团/大众点评，搜索你所在城市的'棋牌室''麻将馆'，看周边3公里内有多少家、价格多少、评价如何，判断本地市场是否饱和，再决定要不要入局",
-        "red_flag": "①回本周期和收入数据为当事人自述，未公开第三方核实，存在幸存者偏差；②麻将馆业务涉及赌博灰色地带，需确保不涉赌、只收场地费，否则有法律风险；③2个半月回本的前提是房租低、装修省、客流旺，普通人盲目复制可能算错账",
-        "learn": "①用智能门锁+预约系统实现无人值守，把人工成本从每月3000-5000元降到0，这是利润的核心来源；②前产品经理身份让他擅长用系统化工具（预约、门禁、监控）替代人力，普通人可以照搬这套工具组合",
+        "who": "淼淼，前互联网大厂产品经理，2024年离职创业，在北京（据公开信息推断）开设24小时无人自助麻将馆，单人操盘，2个半月回本，前4个月净赚约10万元级别",
+        "deliverable": "交付的是24小时自助麻将房的使用权——客户通过手机预约、扫码开门、按小时计费消费麻将桌和房间。本质上是「线下空间租赁+自助服务」的组合，不卖课程、不卖铲子，是真金白银的实体服务",
+        "business_model": "按小时计费的房间使用费，单桌每小时约30-60元（具体未公开），4间房的日周转目标覆盖租金+水电+折旧后净利润。收入结构为纯线下现金流，无订阅制，无后端付费产品，靠翻台率赚钱",
+        "acquisition": "获客三合一打法：① 线下——选在棋牌室聚集区或年轻人密集的中高端社区底商，门口醒目招牌+24小时营业标识吸引路过客流；② 线上——抖音/小红书发「一个人也能开麻将馆」「下班后去私密包间打牌」等内容，挂店铺定位和本地生活团购；③ 本地生活平台——入驻大众点评/美团，上架团购套餐（如2小时体验价），积累好评提升搜索排名。第一批客户来源：前3-5个老客户靠朋友口碑带新客户，之后再靠线上内容自然引流。可照抄的打法：先在小红书发一篇「普通人开24小时自助麻将馆，2个半月回本」的笔记，标题直接写数字，挂同城标签，大概率能收到同城意向客户的私信咨询",
+        "stack": "智能门锁（小米/鹿客等可远程开锁）+ 监控摄像头（萤石/乐橙）+ 自助预约小程序（可用现成SaaS如小鹅通/有赞的轻量版，或直接微信小程序）+ 美团/大众点评商家后台 + 微信支付商户号 + 自动补货提醒（钉钉/企业微信机器人），全程无代码，点鼠标就能跑起来",
+        "replicability": 3,
+        "first_step": "今天就去大众点评搜你所在城市「自助麻将馆」，看评分最高的那家，把它的团购套餐价格、营业时间、评价关键词全部记下来，这就是你的竞争对手画像。然后去小红书搜「自助麻将馆」，看哪篇笔记点赞最多，截图保存，这就是你能照抄的内容模板",
+        "red_flag": "他不是卖铲子的，是真在跑生意，这点要加分。但普通人模仿的最大坑是：① 启动资金被低估——一间房装修+4张电动麻将机+智能设备，一线城市至少15-30万起步，他大厂背景可能有积蓄或资源；② 选址定生死，选错位置三个月就亏；③ 24小时营业意味着夜间安全隐患和投诉风险，不是真正「躺赚」。他的经验对没有启动资金的普通人参考价值打折扣",
+        "learn": "最值得抄的两点：① 「无人化」砍掉了最大的成本——人工，棋牌室行业原本要雇前台+保洁+夜班，他现在全部靠智能系统替代，这是毛利高的核心原因；② 用互联网产品思维做线下——他把麻将馆当「用户产品」运营，重视预约体验、评价管理、内容引流，这是传统老板不会做的",
         "tech_barrier": "低",
-        "doable": "能（完全不用写代码，用现成智能门锁+预约小程序即可）",
+        "doable": "降级可做（用现成智能设备和SaaS工具替代，但需自有场地或资金启动）",
         "signals_used": 0,
-        "generated_at": "2026-08-08 22:35",
-        "is_revisit": false
+        "generated_at": "2026-08-28 04:20",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 55,
+          "feasibility": 62,
+          "startup_index": 6,
+          "composite": 56.9,
+          "drivers": [
+            [
+              "交付毛利",
+              4
+            ],
+            [
+              "客户规模",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "启动资金低",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [],
+          "factors": {
+            "urgency": 3,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 3,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 4,
+            "delivery_chain": 4,
+            "replicable": 3,
+            "capital": 2,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": ""
+        }
       },
-      "last_teardown": "2026-08-08",
-      "teardown_count": 1,
+      "last_teardown": "2026-08-28",
+      "teardown_count": 2,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": null,
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 55,
+        "feasibility": 62,
+        "startup_index": 6,
+        "composite": 56.9,
+        "drivers": [
+          [
+            "交付毛利",
+            4
+          ],
+          [
+            "客户规模",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "启动资金低",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [],
+        "factors": {
+          "urgency": 3,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 3,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 4,
+          "delivery_chain": 4,
+          "replicable": 3,
+          "capital": 2,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": ""
+      },
+      "commercial_severity": "ok"
     },
     "路边的老李树": {
       "handle": "路边的老李树",
@@ -7770,17 +7894,138 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "叉叉老师（上海训犬师）",
+        "operator_name": "叉叉老师",
+        "region": "国内",
+        "who": "叉叉老师，上海单人训犬师，前钢琴老师，有心理学背景，经营训犬业务四到五年，属于一人工作室形态，具体收入规模未公开",
+        "deliverable": "上门一对一训犬服务：针对狗狗行为问题（如乱叫、扑人、分离焦虑、牵引绳问题等）提供矫正训练。也提供行为咨询。交付形式是训犬师上门到客户家中，面对面训练狗狗，同时指导主人掌握方法。客户是上海有养宠需求的中产家庭",
+        "business_model": "按课时或课程体系收费，属于项目制+阶段性陪跑。训犬通常不是单次服务，而是一个系列课程（比如6次、10次套餐）。客单价未公开，但同类一线城市专业训犬师市场价大致在每节课300至800元，整套课程总价约3000至10000元以上。主要收入来源是训犬服务费，不是卖课或卖周边",
+        "acquisition": "①核心渠道：小红书。以训犬前后对比视频为核心内容，比如'一只拆家的狗 training 后变成乖宝宝'这种强视觉反差的内容，吸引上海本地养宠人群点击。也会发训犬知识点短视频，建立专业信任感。②具体动作：发布带地理位置标签的小红书笔记，标题突出'上海训犬''狗狗行为问题'这类搜索词，让客户搜到。内容风格是真实记录训犬过程，不是摆拍教程。③第一批客户来源：据其本人分享，早期靠免费或低价服务换真实案例——帮朋友或认识的人训狗，拿到前后对比视频后发小红书，用效果打动付费客户。④次要渠道：宠物店、宠物医院、宠物公园等线下场景的口碑传播和相互推荐，训犬属于高信任门槛行业，熟人介绍转化率很高。⑤可照抄打法：新手可以先在自己的城市找3到5只愿意'试训'的狗狗（朋友家、救助站志愿者合作都可以），拍对比视频发小红书，加上同城标签，靠内容自然获客。不需要投广告，也不需要粉丝基础",
+        "stack": "小红书（内容获客主阵地）、微信（客户沟通和预约管理）、手机拍摄设备（剪映等App做视频剪辑），可能用到简单的预约工具或表格记录客户和课程进度。无需复杂软件",
+        "replicability": 3,
+        "first_step": "今天就能做：找到身边一只行为有问题或者有训练记录的狗狗，拍下训犬前后的对比视频，用剪映简单剪辑，配上文字说明发到小红书，带上'你所在城市+训犬'的标签。一条内容就能开始验证获客路径",
+        "red_flag": "这个人确实是在交付真实服务，不是卖铲子。但要注意：训犬是一门需要长期实践才能掌握的技能，不是看几篇文章就能上手。叉叉老师有心理学背景加持，这对理解动物行为有帮助，但普通人如果完全没接触过狗狗训练，直接收费服务存在翻车风险。最大的坑是：训犬效果依赖个人手感，不容易标准化，口碑一旦翻车很难挽回。建议先以免费或低价积累真实案例，再考虑正式收费",
+        "learn": "①差异化定位的价值：钢琴老师跨界训犬，这个背景本身就成了记忆点和信任背书——'懂音乐的人更懂节奏，训犬也要讲节奏'，这个角度可以在内容中反复强化。②用真实案例代替广告：训犬行业最重要的是'前后对比'，一条真实的训练记录比一百条干货文案都有说服力。先做3个免费案例，拿到视频再开始收钱",
+        "tech_barrier": "低",
+        "doable": "降级可做（用无代码工具替代）",
+        "signals_used": 0,
+        "generated_at": "2026-08-28 04:20",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 51,
+          "feasibility": 66,
+          "startup_index": 6,
+          "composite": 57.3,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "需求紧迫度",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "技能门槛低",
+              2
+            ],
+            [
+              "收入证据",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 4,
+            "price_ladder": 3,
+            "revenue_proof": 2,
+            "market_size": 3,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 4,
+            "replicable": 3,
+            "capital": 5,
+            "speed": 3,
+            "skill": 2,
+            "concrete": 4,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-08-28",
+      "teardown_count": 1,
       "discovered_date": "2026-08-26",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-08-26",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 51,
+        "feasibility": 66,
+        "startup_index": 6,
+        "composite": 57.3,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "需求紧迫度",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "技能门槛低",
+            2
+          ],
+          [
+            "收入证据",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 4,
+          "price_ladder": 3,
+          "revenue_proof": 2,
+          "market_size": 3,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 4,
+          "replicable": 3,
+          "capital": 5,
+          "speed": 3,
+          "skill": 2,
+          "concrete": 4,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
     }
   }
 }
