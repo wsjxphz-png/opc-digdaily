@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-28 04:21",
+  "updated": "2026-08-29 05:17",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1633,6 +1633,101 @@
       ],
       "best_startup_index": 5,
       "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0087_上门捕鼠灭鼠服务按次卖给": {
+      "topic": "上门捕鼠灭鼠服务，按次收费 → 卖给农村或城郊有仓库/粮店/住宅的家庭",
+      "fingerprint": "上门捕鼠灭鼠服务按次卖给农村或城郊有仓库粮店住宅家庭",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "B站·桥头小何"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1oR496EEU5"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0088_小红书开店卖日常消费品如": {
+      "topic": "在小红书开店卖日常消费品（如家居小物、美妆工具等） → 卖给有购物需求的小红书用户",
+      "fingerprint": "小红书开店卖日常消费品如家居小物美妆工具等卖给有购物需求小红书户",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a897c21ef65145dfcc398a7?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0089_ai工具生成漫画风格短视": {
+      "topic": "用AI工具生成漫画风格短视频内容 → 卖给短视频平台内容创作者或MCN机构",
+      "fingerprint": "ai工具生成漫画风格短视频内容卖给短视频平台内容创作者或mcn机构",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a37cedc608f69578bd78cdf?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 29,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0090_每周更新远程设计岗合集邮": {
+      "topic": "一份每周更新的「远程设计岗」合集邮件 → 卖给专注招远程设计/开发的公司HR或创始人",
+      "fingerprint": "每周更新远程设计岗合集邮件卖给专注招远程设计开发公司hr或创始人",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "r/sidehustle"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/sidehustle/comments/1vyuyia/i_started_with_a_static_html_file_containing_12/"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 83,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0091_一套刺绣风格数字设计图于": {
+      "topic": "一套刺绣风格数字设计图，用于T恤/包袋/帽子的按需定制 → 卖给喜欢个性化服饰的年轻人（18-35岁，关注TikTok时尚内容）",
+      "fingerprint": "一套刺绣风格数字设计图于t恤包袋帽子按需定制卖给喜欢个性化服饰年轻人岁关注tiktok时尚内容",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/embroidery-ideas"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 43,
       "feedback": {
         "up": 0,
         "down": 0

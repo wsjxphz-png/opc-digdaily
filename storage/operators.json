@@ -764,6 +764,12 @@
           "url": "https://x.com/dickiebush/status/2091630340351623441",
           "date": "2026-08-23",
           "summary": "This is the template I use to plan my day by hand.\n\nI break it up into 5 sections:\n\n• Gameplan\n• One Big Thing\n• Build Leverage\n• Learn\n• 1-offs\n\nEverything I do each day fits into one of these buckets.\n\nAnd I fill it out by hand during the last 10 minutes of every work day. https://t.co/CNP6afWR06"
+        },
+        {
+          "title": "How to keep your life interesting:\n\n1. Write down a list of 20 potential side quests\n\nGo somewhere new, try something ne",
+          "url": "https://x.com/dickiebush/status/2093134742107439128",
+          "date": "2026-08-28",
+          "summary": "How to keep your life interesting:\n\n1. Write down a list of 20 potential side quests\n\nGo somewhere new, try something new, host something, learn something, push yourself, anything.\n\n2. Schedule one of them into your week every single week\n\nWatch time slow down as a result."
         }
       ],
       "teardown": null,
@@ -1703,6 +1709,12 @@
           "url": "https://x.com/imwsl90/status/2092409655083532790",
           "date": "2026-08-26",
           "summary": "奇怪的梦\n\n昨天梦到前司请我回去，我“勉为其难”回去了\n\n和自己前女同事逛二手店，停在了一个卖二手性玩具的地方，我嘲笑道\n\n“二手性玩具你也买？”\n\n她大笑\n\n一会儿我就醒了"
+        },
+        {
+          "title": "人人网 多么古早的东西\n\n记得当年用人人网发了一封情书给我高中同学 \n\n对方say no 🤣🤣🤣\n\n当时我倒也没有太多的感觉，只是不知道那封 1kb 的txt文本是否还躺在某台废弃的服务器的硬盘里\n\n时光易逝\n\n前几年在自己住的小区里面碰到",
+          "url": "https://x.com/imwsl90/status/2093331257019212235",
+          "date": "2026-08-28",
+          "summary": "人人网 多么古早的东西\n\n记得当年用人人网发了一封情书给我高中同学 \n\n对方say no 🤣🤣🤣\n\n当时我倒也没有太多的感觉，只是不知道那封 1kb 的txt文本是否还躺在某台废弃的服务器的硬盘里\n\n时光易逝\n\n前几年在自己住的小区里面碰到了高中时候的同年级同学，一聊之下居然发现她认识我那高中同学"
         }
       ],
       "teardown": null,
@@ -2837,31 +2849,134 @@
         "operator_handle": "Aprilynne Alter",
         "operator_name": "Aprilynne Alter",
         "region": "国际",
-        "who": "Aprilynne Alter，一位专注 YouTube 运营策略分享的创作者。通过内容创作在 30 天内实现订阅数 12 倍增长，目前处于刚跑通增长闭环的新晋创作者阶段，单人运作。",
-        "deliverable": "交付物：一份 73 页的 YouTube 运营策略笔记（数字文档），教别人如何做 YouTube 增长。属于「卖铲子」模式——卖的是方法论和模板，不是帮她做 YouTube 的服务。",
-        "business_model": "商业模式：一次性付费购买数字笔记，价格未公开。收入来源单一，靠卖自己的运营经验文档变现，没有订阅或月费结构。",
-        "acquisition": "获客方式：① 主阵地是 YouTube 频道，发布关于 YouTube 运营策略的短视频/长视频内容；② 内容策略是「先给价值再卖课」——在视频里分享具体可执行的运营技巧（如标题写法、封面设计、发布时间等），建立专业信任；③ 第一波客户来自 YouTube 观众，看完视频后觉得有用，主动搜索或点击简介里的购买链接；④ 可照抄的打法：在 YouTube 上持续发布「具体可执行的运营技巧」类内容，每条视频解决一个具体问题，视频简介放笔记购买链接，用免费内容筛选出真正想学习的付费用户。",
-        "stack": "工具链：YouTube（内容发布平台）、Notion 或类似文档工具（制作 73 页笔记）、Gumroad 或类似数字产品售卖平台（收款和交付），全部点鼠标可用，无需写代码。",
+        "who": "Aprilynne Alter —— 一位靠YouTube内容创作起家的新晋创作者，在30天内将订阅数翻了12倍，随后将这套运营方法打包成73页笔记出售变现。",
+        "deliverable": "她的交付物主要有两样：① YouTube内容本身（教人如何做YouTube增长的方法论）；② 73页运营笔记（数字产品，卖给想复刻她增长路径的人）。目标客户是想做YouTube但不知道怎么做增长的内容创作者。",
+        "business_model": "YouTube广告收入（未公开金额）+ 数字产品一次性售卖（73页笔记的价格未公开）。收入结构是典型的「内容引流 → 低价/中价数字产品变现」模式，目前未公开是否有复购或订阅层。",
+        "acquisition": "获客的核心路径是：① 平台：YouTube本身；② 内容动作：拍摄并发布关于'如何做YouTube增长'的方法论视频，用真实的12倍订阅增长作为案例背书，吸引想做同样事情的人；③ 第一波客户来源：看视频觉得她方法有用的人，以及被她的增长数据吸引而来的人；④ 可照抄的打法：普通人可以模仿的是——先在YouTube上分享一个你验证过的具体方法（哪怕只是小范围验证），然后用免费或低价的文档/笔记作为钩子，把观众变成买家。她没有透露是否有冷启动推广、投放或合作，这部分信息未公开。",
+        "stack": "YouTube（内容发布）、Google Docs或Notion（制作73页笔记）、Gumroad或Substack（数字产品售卖平台，具体平台未公开）。全程无需写代码，全部是点鼠标工具。",
         "replicability": 4,
-        "first_step": "模仿第一步：今天就在 YouTube 上发一条 3-5 分钟的短视频，分享一个你擅长的具体技巧（比如「如何用 ChatGPT 写视频标题」），在视频简介里写「想要完整策略笔记的私信我」，测试有没有人感兴趣。",
-        "red_flag": "风险/卖铲子判断：这是典型的「卖铲子」模式——她主要收入来自教别人做 YouTube，而不是自己通过 YouTube 广告或品牌合作赚钱。普通人模仿的最大坑是：如果你自己还没在 YouTube 上跑通增长，就急着卖笔记，会显得没有说服力，客户不会买单。另外，73 页笔记的内容如果不够独特，很容易被免费信息替代。",
-        "learn": "最该抄的作业：① 「先给价值再卖课」的内容策略——在视频里分享真实可执行的技巧，建立信任后再引导购买，而不是上来就卖；② 用一份详细的数字笔记（73 页）作为低价变现产品，门槛低、交付轻、利润高，适合单人运作。",
+        "first_step": "今天就可以做的第一件事：拿一个你真正用过且有效的方法，写成一份简短的PDF或Google文档（哪怕只有5页），发到YouTube或小红书/知乎等平台，看有没有人愿意看，验证这个方法是否有市场需求。",
+        "red_flag": "潜在风险：① 她在教别人做YouTube增长的同时，自己也在做YouTube增长——她既是老师也是竞争者，你的客户可能直接去看她的免费视频而不是买笔记；② 这种'卖铲子'模式的核心风险是：如果增长红利期已过（比如YouTube算法已变），她教的方法可能不再灵验，买家会退款或负面评价；③ 73页笔记是否真的是她原创的验证方法，还是只是整理公开信息——这一点无法核实，需谨慎判断价值。",
+        "learn": "最值得抄的两点：① 用真实的个人增长数据作为信任背书——她不是空讲理论，而是展示了'30天12倍订阅'的具体结果，这比任何话术都管用；② 把知识产品化（73页笔记）而不是只做免费内容，这是从流量到收入的直接闭环。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用现成工具即可）",
+        "doable": "能（完全不用写代码，用YouTube+文档工具+无代码售卖平台即可复刻）",
         "signals_used": 0,
-        "generated_at": "2026-08-09 04:06",
-        "is_revisit": false
+        "generated_at": "2026-08-29 05:15",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 40,
+          "feasibility": 70,
+          "startup_index": 6,
+          "composite": 55.5,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 3,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 4,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
       },
-      "last_teardown": "2026-08-09",
-      "teardown_count": 2,
+      "last_teardown": "2026-08-29",
+      "teardown_count": 3,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": null,
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 40,
+        "feasibility": 70,
+        "startup_index": 6,
+        "composite": 55.5,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
     },
     "Victoria Moll": {
       "handle": "Victoria Moll",
@@ -2881,31 +2996,112 @@
         "operator_handle": "Victoria Moll",
         "operator_name": "Victoria Moll",
         "region": "国际",
-        "who": "Victoria Moll，单人运营，在医疗编码（Medical Coding）这一极小众垂直领域通过 YouTube 建立个人品牌，年收入达到六位数（约10万-99万美元区间，具体未公开）",
-        "deliverable": "交付物：主要是医疗编码相关的教育内容。具体包括：① YouTube 免费视频（教人如何学习医疗编码、备考认证考试、了解行业前景）；② 可能延伸出的付费课程或学习资源（未公开具体产品形态）。目标用户是想进入医疗编码行业的新人、备考认证的学生、或想转行医疗行政的人。",
-        "business_model": "商业模式：主要收入来源为 YouTube 广告分成（AdSense），可能叠加联盟营销（推荐学习材料、书籍、课程赚取佣金）和自有付费产品（如付费课程、电子书，具体未公开）。定价区间未公开。收入结构推测为：YouTube 广告收入占大头，次要来源为联盟佣金和可能的数字产品。",
-        "acquisition": "获客方式：核心打法是 YouTube 内容营销，具体路径如下——① 平台：YouTube，主攻医疗编码这一极细分关键词；② 内容策略：发布大量针对「医疗编码入门」「如何成为医疗编码员」「CPC认证考试准备」「医疗编码薪资」等长尾搜索词的视频，覆盖用户从好奇到决策的完整路径；③ 第一波客户来源：通过搜索医疗编码相关问题的潜在学习者自然流入，属于搜索驱动型获客，而非算法推荐爆款；④ 可照抄的打法：选择一个你自己懂的小众垂直领域（如某个证书考试、某个软件操作、某个行业入门），在 YouTube 上围绕该领域的常见问题持续发布视频，覆盖尽可能多的长尾关键词。关键是选一个搜索量大但竞争少的细分话题，而不是追逐热门赛道。",
-        "stack": "工具链：YouTube（内容发布平台）、可能使用 Canva 或类似工具制作视频封面、可能使用 Otter.ai 或类似工具做字幕、可能使用 TubeBuddy 或 VidIQ 做关键词研究（均未公开确认）。整体工具链极简，以 YouTube 为核心。",
+        "who": "Victoria Moll，一位专注于医疗编码领域的单人教育家，通过 YouTube 频道建立个人品牌并实现六位数年收入。她是医疗编码行业的从业者转型为内容创作者，目标受众是想进入医疗编码行业或提升报销技能的人群。",
+        "deliverable": "教育内容与职业培训服务——她主要卖的是「教你如何成为医疗编码员/提升报销技能」，交付形式包括 YouTube 免费教程、付费课程、可能的一对一辅导或职业咨询。这是一个面向想转行或提升技能的职场人群的教育类产品。",
+        "business_model": "混合模式：YouTube 广告收入（未公开具体数字）+ 付费课程/培训（价格未公开）+ 可能的咨询或辅导服务。核心收入来源推测为付费课程和教育产品。六位数收入（年收入10-99万美元区间）。",
+        "acquisition": "获客主阵地是 YouTube，靠搜索导向的长尾内容获客。具体打法：①平台——YouTube，搜索「medical billing and coding」「ICD-10」「CPT coding」等关键词；②内容策略——发布教育类视频，回答潜在学生最常问的问题（如何入行、需要哪些证书、收入多少、学习路径是什么）；③第一批客户——通过 YouTube 搜索进入的意向观众，他们主动在找「怎么学医疗编码」的答案；④可照抄的打法：选择一个你有专业知识的细分职业领域，在 YouTube 上持续发布回答该领域入门问题的视频，建立搜索流量入口。医疗编码这个关键词竞争低、需求明确，是她成功的关键——选对了极细分且有明确职业诉求的赛道。",
+        "stack": "YouTube（内容发布与流量获取）、可能使用在线课程平台（如 Teachable/Thinkific 类）或 Gumroad 售卖数字课程、Zoom（如有一对一辅导）、无代码工具即可完成全流程。",
         "replicability": 4,
-        "first_step": "模仿第一步：今天就去 YouTube 搜索你想切入的细分领域关键词（比如「XX证书怎么考」「XX软件入门」），看看前 10 个视频的播放量和评论数，判断这个领域有没有人已经在做、竞争烈不激烈。如果找到播放量不错但视频质量一般的赛道，就是你切入的机会。",
-        "red_flag": "风险/卖铲子判断：Victoria Moll 的模式看起来是真实交付教育内容，而非纯卖铲子。但需要注意——医疗编码行业本身有认证门槛，如果你自己不是这个领域的从业者或持证人员，很难建立可信度。另外，YouTube 广告收入依赖流量，波动性大，六位数收入是否稳定未公开。最大风险是：小众赛道虽然竞争少，但天花板也低，需要靠内容数量或延伸产品来放大收入。",
-        "learn": "最该抄的作业：① 选一个极细分的垂直领域（医疗编码比「编程」「写作」这种大赛道竞争小得多），用内容建立权威；② 用搜索驱动而非算法驱动——做那些用户主动搜索的问题，而不是追热点。",
+        "first_step": "今天就在 YouTube 搜索「你的专业领域 + 入门/教程/怎么做」，找出播放量最高的前10个视频，复制它们的选题方向，拍摄并发布你的第一条解答视频。",
+        "red_flag": "医疗编码是一个需要专业资质和实际经验的领域，Victoria 的成功建立在她是该行业从业者的基础上。如果你没有相关经验或证书，难以建立同等权威。此外，六位数收入的具体构成未公开，无法判断课程销量占比与广告收入占比。教育赛道的竞争正在加剧。",
+        "learn": "①极细分垂直领域 + 职业转型需求 = 高质量付费意愿受众；②YouTube 搜索流量比推荐流量更稳定，适合做「答案型内容」而非「娱乐型内容」。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用手机或电脑拍视频、上传 YouTube 即可开始）",
+        "doable": "能（完全不用写代码，用 YouTube + 免费/低成本课程平台即可起步）",
         "signals_used": 0,
-        "generated_at": "2026-08-09 19:30",
-        "is_revisit": false
+        "generated_at": "2026-08-29 05:15",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 60,
+          "feasibility": 72,
+          "startup_index": 6,
+          "composite": 63.0,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [],
+          "caps": [],
+          "gates": [],
+          "factors": {
+            "urgency": 4,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 3,
+            "revenue_proof": 3,
+            "market_size": 3,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": ""
+        }
       },
-      "last_teardown": "2026-08-09",
-      "teardown_count": 2,
+      "last_teardown": "2026-08-29",
+      "teardown_count": 3,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": null,
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 60,
+        "feasibility": 72,
+        "startup_index": 6,
+        "composite": 63.0,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [],
+        "caps": [],
+        "gates": [],
+        "factors": {
+          "urgency": 4,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 3,
+          "revenue_proof": 3,
+          "market_size": 3,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": ""
+      },
+      "commercial_severity": "ok"
     },
     "vimfinn": {
       "handle": "vimfinn",
