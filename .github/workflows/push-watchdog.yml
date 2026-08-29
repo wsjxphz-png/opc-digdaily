@@ -6,8 +6,11 @@ name: 推送通道看门狗
 # 本工作流独立于 daily-push，每日在其后静默检查并自愈。
 on:
   schedule:
-    # 北京时间每天 21:30 = UTC 13:30（daily-push 排期 18:00 之后，留足运行余量）
-    - cron: "30 13 * * *"
+    # 北京时间每天 07:00 = UTC 23:00。
+    # 2026-08-29 从 13:30 挪到 23:00：8-26/27 GitHub 平台级 schedule 延迟后，
+    # 主推送 run 可能延迟到 UTC 20-21 点才创建，看门狗若在其前检查会误判
+    # 「今日无成功」而补推 → 与延迟到达的主推送双推。
+    - cron: "0 23 * * *"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +30,9 @@ jobs:
           WF: daily-push.yml
           REPO: ${{ github.repository }}
           FEISHU: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          # 2026-08-29 修复：gh CLI 在 Actions 里不自动继承 GITHUB_TOKEN，
+          # 此前看门狗自 8-14 上线起每次运行都 exit 4（自愈机制从未生效）
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -e
           TODAY=$(date -u +%Y-%m-%d)
