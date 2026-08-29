@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-29 05:17",
+  "updated": "2026-08-29 23:13",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1728,6 +1728,44 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0092_把电脑或手机闲置带宽共享": {
+      "topic": "把电脑或手机的闲置带宽共享出去 → 卖给有闲置网络带宽的普通人",
+      "fingerprint": "把电脑或手机闲置带宽共享出去卖给有闲置网络带宽",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "B站·mdzahidurrahman"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1nWtP6nEy7"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0093_一款手工定制婚礼甜品台蛋": {
+      "topic": "一款手工定制婚礼甜品台（蛋糕+小甜点组合） → 卖给本地正在筹备婚礼的年轻夫妇",
+      "fingerprint": "一款手工定制婚礼甜品台蛋糕小甜点组合卖给本地正筹备婚礼年轻夫妇",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3527-story-cake-artists-confections-whisk-up-delicious-pr"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 50,
       "feedback": {
         "up": 0,
         "down": 0
