@@ -1727,6 +1727,12 @@
           "url": "https://x.com/imwsl90/status/2093860837744336993",
           "date": "2026-08-30",
           "summary": "以前觉得陈昌文这个人挺极端的，他讲过中年人应该干的三件事情：“早睡 减肥 做自媒体，不要和任何无关紧要的人接触，很多人接触你就是为了搞你钱的”\n​\n​今天早上想一想也是很对的\n​\n​人到中年需要很多social吗？\n​\n​人到中年 最好的状态应该是独处，我现在越来越减少自己和非必要的人联系了"
+        },
+        {
+          "title": "Candy Japan\n\n前互联网时代的赚钱故事\n\n十年前在hack news看到这么篇文章，一个在日本旅居的外国人写了 8000 行python (应该是flask)，弄了个日本糖果订购网站\n\n用户付费后，每月给客户寄两盒随机的日本本土糖",
+          "url": "https://x.com/imwsl90/status/2093999264947225019",
+          "date": "2026-08-30",
+          "summary": "Candy Japan\n\n前互联网时代的赚钱故事\n\n十年前在hack news看到这么篇文章，一个在日本旅居的外国人写了 8000 行python (应该是flask)，弄了个日本糖果订购网站\n\n用户付费后，每月给客户寄两盒随机的日本本土糖果\n\n那篇故事讲这个外国人可以赚 8 万美金，他每日的工作就是收钱、打包并快递糖果 https://t.co/C8SpXuD4Rh"
         }
       ],
       "teardown": null,
@@ -4510,32 +4516,32 @@
         "operator_handle": "路边的老李树",
         "operator_name": "路边的老李树",
         "region": "国内",
-        "who": "小红书实战派博主，专注本地生活团购赛道，从0粉做到10万+粉丝，提供分阶落地方案",
-        "deliverable": "本地生活团购的实操方案，包括内容模板、获客路径、变现方法，以课程/社群/咨询服务形式交付",
-        "business_model": "知识付费为主（课程/社群/咨询），具体定价未公开，收入结构未公开",
-        "acquisition": "①平台：小红书，发布本地生活团购相关干货内容；②内容动作：拆解从0到10万+的分阶方案，输出可复制的获客与变现路径；③第一波客户来源：小红书内容自然流量，搜索「本地生活团购」相关关键词的用户；④可照抄打法：在小红书持续发布本地生活团购实操笔记，用分阶方案吸引想入行的普通人",
-        "stack": "小红书、微信私域（可能）、知识星球/小报童等付费社群工具（未公开确认）",
+        "who": "小红书本地生活团购赛道实战博主，账号名「路边的老李树」，主打从0粉到10万+分阶落地方案，专注2025年本地生活团购蓝海打法",
+        "deliverable": "可复制的获客与变现路径教程（课程/社群/模板），教普通人做本地生活团购业务；同时可能提供代运营或陪跑服务（未公开具体形式）",
+        "business_model": "收入结构未公开。可能组合：①知识付费（课程/社群/模板售卖）；②陪跑服务（按项目收费）；③代运营抽佣。客单价未公开，定价策略未透露",
+        "acquisition": "获客渠道：小红书平台为主阵地。具体打法：①在小红书发本地生活团购实战笔记（如「XX城市本地生活团购月入X万」「0粉起号拆解」）；②用分阶落地方案吸引新手（从0粉→1万粉→10万粉的阶段目标）；③评论区引流到私域（微信/社群）。第一批客户来源：未公开具体数字，推测为小红书自然流量+搜索流量。可照抄打法：在小红书搜「本地生活团购」「同城引流」找对标账号，模仿其笔记结构和话术，发布同城相关内容",
+        "stack": "工具链未完整公开。推测使用：小红书创作者中心、剪映（视频剪辑）、Notion/飞书（内容规划）、微信（私域转化）。无代码工具为主，无编程要求",
         "replicability": 3,
-        "first_step": "在小红书注册账号，发布第一篇关于本地生活团购的实操笔记，测试流量反馈",
-        "red_flag": "主要收入可能来自卖课/卖社群，而非自己实际交付本地生活团购服务。普通人模仿的最大坑：他教的是「教别人做本地生活团购」，而不是「自己做本地生活团购赚钱」，属于卖铲子模式",
-        "learn": "①本地生活团购是2025年蓝海赛道，普通人有机会切入；②用分阶落地方案（从0到10万+）降低学习门槛，让小白觉得可复制",
-        "tech_barrier": "低",
-        "doable": "降级可做（用小红书+微信等现成工具即可模仿内容策略，但能否复制其粉丝量和收入未公开）",
+        "first_step": "今天就去小红书搜索「本地生活团购」，找到10个同赛道爆款笔记，拆解它们的标题结构和开头话术，模仿发第一条笔记",
+        "red_flag": "这是典型的「卖铲子」模式——他的主要收入很可能来自教别人做本地生活团购（卖课/卖社群），而非自己实际交付服务赚到的钱。模仿风险：①赛道已非蓝海（2025年竞争加剧）；②他展示的10万粉可能是结果而非方法；③普通人直接抄作业可能发现实际赚钱难度远超课程描述",
+        "learn": "最值得抄的：①本地生活团购这个细分方向确实有红利（2025年仍在早期）；②分阶落地方案的呈现方式（0粉→1万→10万）让新手有清晰路径感",
+        "tech_barrier": "无",
+        "doable": "能（用现成无代码工具即可起步，但实际团购业务落地需线下跑商家）",
         "signals_used": 0,
-        "generated_at": "2026-08-11 02:03",
+        "generated_at": "2026-08-30 22:51",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 39,
+          "commercial": 37,
           "feasibility": 56,
-          "startup_index": 5,
-          "composite": 48.7,
+          "startup_index": 4,
+          "composite": 48.2,
           "drivers": [
             [
-              "交付毛利",
-              4
+              "不用写代码",
+              5
             ],
             [
-              "客户规模",
+              "交付毛利",
               4
             ]
           ],
@@ -4545,41 +4551,46 @@
               2
             ],
             [
-              "收入证据",
+              "换人也能做",
               2
             ]
           ],
-          "caps": [],
+          "caps": [
+            "只有原作者本人能做 → 封顶4分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
           "gates": [
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
             "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+            "链条看不懂：只讲了获客，没讲怎么成交和交付",
+            "低客单纯劳力：靠时间换钱，杠杆低"
           ],
           "factors": {
             "urgency": 3,
             "pricing": 2,
             "margin": 4,
-            "repeat": 3,
+            "repeat": 2,
             "price_ladder": 2,
             "revenue_proof": 2,
             "market_size": 4,
             "evergreen": 3,
             "channel": 3,
-            "machine": 3,
+            "machine": 2,
             "delivery_chain": 2,
             "replicable": 3,
             "capital": 4,
             "speed": 3,
             "skill": 4,
             "concrete": 3,
-            "no_code": 4
+            "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
         }
       },
-      "last_teardown": "2026-08-11",
-      "teardown_count": 3,
+      "last_teardown": "2026-08-30",
+      "teardown_count": 4,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
@@ -4587,17 +4598,17 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-08",
       "commercial_health": {
-        "commercial": 39,
+        "commercial": 37,
         "feasibility": 56,
-        "startup_index": 5,
-        "composite": 48.7,
+        "startup_index": 4,
+        "composite": 48.2,
         "drivers": [
           [
-            "交付毛利",
-            4
+            "不用写代码",
+            5
           ],
           [
-            "客户规模",
+            "交付毛利",
             4
           ]
         ],
@@ -4607,37 +4618,42 @@
             2
           ],
           [
-            "收入证据",
+            "换人也能做",
             2
           ]
         ],
-        "caps": [],
+        "caps": [
+          "只有原作者本人能做 → 封顶4分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
         "gates": [
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
           "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "链条看不懂：只讲了获客，没讲怎么成交和交付",
+          "低客单纯劳力：靠时间换钱，杠杆低"
         ],
         "factors": {
           "urgency": 3,
           "pricing": 2,
           "margin": 4,
-          "repeat": 3,
+          "repeat": 2,
           "price_ladder": 2,
           "revenue_proof": 2,
           "market_size": 4,
           "evergreen": 3,
           "channel": 3,
-          "machine": 3,
+          "machine": 2,
           "delivery_chain": 2,
           "replicable": 3,
           "capital": 4,
           "speed": 3,
           "skill": 4,
           "concrete": 3,
-          "no_code": 4
+          "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
       },
       "commercial_severity": "warn"
     },
@@ -4877,8 +4893,8 @@
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-08-12",
-      "teardown_count": 3,
+      "last_teardown": "2026-08-30",
+      "teardown_count": 4,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
@@ -4886,10 +4902,10 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-08",
       "commercial_health": {
-        "commercial": 42,
-        "feasibility": 78,
-        "startup_index": 6,
-        "composite": 60.0,
+        "commercial": 44,
+        "feasibility": 74,
+        "startup_index": 3,
+        "composite": 53.6,
         "drivers": [
           [
             "交付毛利",
@@ -4902,15 +4918,18 @@
         ],
         "drags": [
           [
-            "收入证据",
-            1
+            "获客路径清晰",
+            2
           ],
           [
-            "定价结构",
+            "收入证据",
             2
           ]
         ],
-        "caps": [],
+        "caps": [
+          "没写清客户从哪来 → 封顶6分",
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
         "gates": [
           "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
@@ -4920,10 +4939,10 @@
           "margin": 5,
           "repeat": 2,
           "price_ladder": 2,
-          "revenue_proof": 1,
+          "revenue_proof": 2,
           "market_size": 4,
           "evergreen": 4,
-          "channel": 3,
+          "channel": 2,
           "machine": 4,
           "delivery_chain": 4,
           "replicable": 4,
@@ -4937,7 +4956,7 @@
         "degraded": false,
         "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
-      "commercial_severity": "warn"
+      "commercial_severity": "skip"
     },
     "甜甜（AI+跨境副业嘉宾）": {
       "handle": "甜甜（AI+跨境副业嘉宾）",
@@ -8406,7 +8425,7 @@
       "last_teardown": "2026-08-30",
       "teardown_count": 1,
       "discovered_date": "2026-08-30",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
