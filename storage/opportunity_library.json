@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-29 23:13",
+  "updated": "2026-08-30 09:17",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -1766,6 +1766,82 @@
       ],
       "best_startup_index": 4,
       "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0094_倒卖限量球鞋赚差价卖给想": {
+      "topic": "倒卖限量球鞋赚差价 → 卖给想赚快钱的普通人",
+      "fingerprint": "倒卖限量球鞋赚差价卖给想赚快钱",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "times_seen": 1,
+      "sources": [
+        "B站·汤圆只讲球鞋搬砖"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV15C416RE1R"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0095_有声书配音录制服务卖给想": {
+      "topic": "有声书配音录制服务 → 卖给想在家兼职的宝妈或自由职业者",
+      "fingerprint": "有声书配音录制服务卖给想家兼职宝妈或自由职业者",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "times_seen": 1,
+      "sources": [
+        "B站·不认输的星星"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV13ztw6aEzX"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0096_围绕该爱好知识课程付费会": {
+      "topic": "围绕该爱好的知识课程、付费会员、线下活动 → 卖给对某个小众爱好有深度经验的普通人（如养宠、手作、园艺）",
+      "fingerprint": "围绕该爱好知识课程付费会员线下活动卖给对某个小众爱好有深度经验如养宠手作园艺",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/she-built-a-6-figure-business-talking-about-goats/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 71,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0097_一个避开坑品找到有利润空": {
+      "topic": "一个避开坑品、找到有利润空间商品的电商平台 → 卖给想在淘宝或小红书开店的普通人",
+      "fingerprint": "一个避开坑品找到有利润空间商品ecommerce平台卖给想淘宝或小红书开店",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/worst-products-to-sell-online/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 45,
       "feedback": {
         "up": 0,
         "down": 0
