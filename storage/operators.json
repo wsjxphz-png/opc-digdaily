@@ -8708,7 +8708,7 @@
       "last_teardown": "2026-09-01",
       "teardown_count": 1,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -8860,7 +8860,7 @@
       "last_teardown": "2026-09-01",
       "teardown_count": 1,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -8936,17 +8936,144 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "群青女性vol.11",
+        "operator_name": "Fay",
+        "region": "国内",
+        "who": "Fay，43岁在职二胎妈妈，跑步自媒体主理人。6年内完成3次全程马拉松，将跑步经验产品化，单人运营，目前累计接单100+，链接约千名女性用户，月入4位数（约4000-9999元区间）",
+        "deliverable": "跑步相关的轻咨询/陪跑服务或社群。从「接单100+」和「链接千名姐妹」推断，交付物可能是：①1对1跑步计划定制与指导；②线上跑步训练营/陪伴打卡；③跑步主题女性社群的会员费。具体品类未公开",
+        "business_model": "推测以「低客单价引流+社群/训练营复购」为主。月入4位数、100+订单，粗略推算客单价可能在几十到几百元不等，但未公开具体定价。收入结构未公开，可能包含一次性咨询费、训练营报名费、社群会员订阅等组合",
+        "acquisition": "核心路径：跑步自媒体内容引流 → 私域沉淀 → 转化服务。①平台：未明确，但从「链接千名姐妹」的判断，大概率是小红书或公众号（女性用户聚集、跑步内容社区氛围强）；②内容动作：分享个人全马成绩、通勤跑步日常、宝妈如何平衡运动与工作——用真实身份故事打动同类人；③第一批客户来源：应是早期社交媒体自然流量，吸引到有同样「想开始跑步但不知道怎么做」痛点的女性；④可照抄打法：把自己「跑步入门→跑完全马」的真实过程写成内容持续发，不依赖专业拍摄，靠真诚和经验建立信任，再在主页/文末引导加微信或进群",
+        "stack": "推测：小红书/公众号（内容发布）+ 微信（私域+社群）+ 群接龙/小程序（收款/报名）。未公开是否使用付费工具，但从「碎片时间运营」判断，应全部是免费或低成本的现成工具",
+        "replicability": 4,
+        "first_step": "今天就在小红书或朋友圈发布一条「我是如何用通勤时间开始跑步的」真实经历贴，附上自己的跑步记录截图，文末加一句「有同样想跑步但不知道从哪开始的姐妹，可以评论区聊聊」。先获得第一个反馈，验证有没有人感兴趣",
+        "red_flag": "①模式本身不复杂，但高度依赖「个人真实跑步经历」作为背书，如果你没有跑过半马以上的成绩，说服力会打折扣；②「月入4位数」对于单人来说门槛不高，天花板也明显——想突破需要扩课、扩团队或做更高客单价产品，这条路她是否在走未公开；③收入数字本身不高，属于「锦上添花的第二曲线」定位，不要期望短期暴富",
+        "learn": "①用「真实身份+真实过程」做内容比精美制作更有转化力——她不是专业博主，只是普通宝妈，反而更让目标用户觉得「我也可以」；②碎片时间可做，不需要辞职全职投入，通勤时间就是最好的内容生产场景",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用手机发内容+微信社群即可启动）",
+        "signals_used": 0,
+        "generated_at": "2026-09-02 09:00",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 49,
+          "feasibility": 70,
+          "startup_index": 5,
+          "composite": 58.6,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "定价结构",
+              1
+            ],
+            [
+              "交付链路清晰",
+              2
+            ]
+          ],
+          "caps": [
+            "没有定价 = 还没有产品 → 封顶5分"
+          ],
+          "gates": [
+            "定价检验未过：全文没有一个真实价格",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 1,
+            "revenue_proof": 4,
+            "market_size": 3,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
+      },
+      "last_teardown": "2026-09-02",
+      "teardown_count": 1,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-09-01",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 49,
+        "feasibility": 70,
+        "startup_index": 5,
+        "composite": 58.6,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "定价结构",
+            1
+          ],
+          [
+            "交付链路清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "没有定价 = 还没有产品 → 封顶5分"
+        ],
+        "gates": [
+          "定价检验未过：全文没有一个真实价格",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 1,
+          "revenue_proof": 4,
+          "market_size": 3,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
     },
     "群青女性vol.10": {
       "handle": "群青女性vol.10",
@@ -8962,17 +9089,148 @@
       "tech_barrier": "无",
       "seeded_facts": {},
       "signals": [],
-      "teardown": null,
-      "last_teardown": null,
-      "teardown_count": 0,
+      "teardown": {
+        "operator_handle": "群青女性vol.10",
+        "operator_name": "鞠子",
+        "region": "国内",
+        "who": "鞠子：40岁起步的国内女性自媒体人，从素人宝妈转型为小红书写作导师。约3万粉丝规模，属于个人创作者+轻培训模式。",
+        "deliverable": "写作课程/陪跑服务：教普通人写小红书笔记、写自媒体内容、写爆款文案。可能提供低价引流课（训练营/直播课）+ 高价一对一陪跑或小班课。具体课程名称和交付形式未公开。",
+        "business_model": "课程收入 + 可能的私教陪跑。定价未公开。收入规模未公开。",
+        "acquisition": "获客路径未完整公开。据公开信息推断：① 主要在小红书平台运营，发布写作方法论/成长故事类笔记；② 通过个人真实转型经历（40岁起步、普通人逆袭）建立信任，吸引同阶段宝妈/转行人群；③ 具体引流方式（私信/群/直播）未明确披露。",
+        "stack": "主要使用小红书作为获客平台，配合微信私域（社群/一对一沟通）完成转化。具体工具未公开。",
+        "replicability": 4,
+        "first_step": "在小红书注册账号，发布第一篇围绕「40岁转型/写作入门」的真实经历笔记，观察自然流量反馈。",
+        "red_flag": "需确认：① 是否主要靠卖课赚钱（而非亲自做其他服务）；② 3万粉对应的实际转化人数和收入规模未公开，无法验证其模式是否可持续；③ 写作教学赛道竞争激烈，差异化不足。",
+        "learn": "普通人中年转型的可信案例本身具有强信任背书价值；内容定位清晰（写作导师），受众明确（宝妈/想转行的普通人）。",
+        "tech_barrier": "无",
+        "doable": "能",
+        "signals_used": 0,
+        "generated_at": "2026-09-02 09:00",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 36,
+          "feasibility": 58,
+          "startup_index": 3,
+          "composite": 48.8,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              1
+            ],
+            [
+              "交付链路清晰",
+              2
+            ]
+          ],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "没写清客户从哪来 → 封顶6分"
+          ],
+          "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 1,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 2,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 2,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
+      },
+      "last_teardown": "2026-09-02",
+      "teardown_count": 1,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
       "recommended_at": "2026-09-01",
-      "commercial_health": null,
-      "commercial_severity": ""
+      "commercial_health": {
+        "commercial": 36,
+        "feasibility": 58,
+        "startup_index": 3,
+        "composite": 48.8,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "交付链路清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "没写清客户从哪来 → 封顶6分"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 2,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 2,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
     },
     "群青女性vol.13": {
       "handle": "群青女性vol.13",
@@ -8992,7 +9250,7 @@
       "last_teardown": null,
       "teardown_count": 0,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -9018,7 +9276,7 @@
       "last_teardown": null,
       "teardown_count": 0,
       "discovered_date": "2026-09-01",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,

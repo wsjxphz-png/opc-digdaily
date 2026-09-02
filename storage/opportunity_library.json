@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-01 22:48",
+  "updated": "2026-09-02 09:01",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2032,6 +2032,63 @@
       ],
       "best_startup_index": 7,
       "best_commercial": 67,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0108_图书推广佣金卖给爱看书但": {
+      "topic": "图书推广佣金收入 → 卖给爱看书但懒得选书的普通微信用户",
+      "fingerprint": "图书推广佣金卖给爱看书但懒得选书普通微信户",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "B站·吴旭笔记"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1x94X6wEL8"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0109_temu上卖pod定制商": {
+      "topic": "在TEMU上卖POD定制商品（图案由AI生成） → 卖给想兼职赚外快的上班族",
+      "fingerprint": "temu上卖pod定制商品图案由ai生成卖给想兼职赚外快上班族",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a96f685a0210c197dcbe1e0?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0110_每周一期行业深度资讯邮件": {
+      "topic": "每周一期的行业深度资讯邮件 → 卖给某个细分行业的从业者和爱好者",
+      "fingerprint": "每周一期行业深度资讯邮件卖给某个细分行业从业者爱好者",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "@thesamparr"
+      ],
+      "urls": [
+        "https://x.com/thesamparr/status/2094589818378535366"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 70,
       "feedback": {
         "up": 0,
         "down": 0
