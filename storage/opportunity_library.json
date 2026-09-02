@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-02 09:01",
+  "updated": "2026-09-02 22:24",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2089,6 +2089,101 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 70,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0111_低买高卖实物商品如二手电": {
+      "topic": "低买高卖的实物商品（如二手电子产品、闲置物品） → 卖给想买便宜货的普通消费者",
+      "fingerprint": "低买高卖实物商品如二手电子产品闲置物品卖给想买便宜货普通消费者",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "B站·子泉喜欢搬砖"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV11Zt76eE4V"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0112_ai虚拟主播直播代运营服": {
+      "topic": "AI虚拟主播直播代运营服务 → 卖给需要直播但请不起真人主播的中小商家",
+      "fingerprint": "ai虚拟主播直播代运营服务卖给需要直播但请不起真人主播中小商家",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "B站·光羽的平行世界"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Cgtu6vEGj"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0113_垂直品类产品测评短视频带": {
+      "topic": "垂直品类产品测评短视频带购买链接赚佣金 → 卖给想在短视频平台做好物推荐变现的人",
+      "fingerprint": "垂直品类产品测评短视频带购买链接赚佣金卖给想短视频平台好物推荐人",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/john-muscarello/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0114_选定细分品类fba模式销": {
+      "topic": "选定细分品类用FBA模式销售，积累数据后整体出售 → 卖给有一定资金想尝试跨境电商卖自有品牌产品的人",
+      "fingerprint": "选定细分品类fba模式销售积累数据后整体出售卖给有一定资金想尝试跨境ecommerce卖自有品牌产品人",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "Flippa Blog"
+      ],
+      "urls": [
+        "https://flippa.com/blog/how-to-build-scale-and-exit-an-amazon-fba-brand/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0115_周末半日帆船皮划艇体验导": {
+      "topic": "周末半日帆船/皮划艇体验导览服务 → 卖给有本地水域资源的三四线城市年轻人",
+      "fingerprint": "周末半日帆船皮划艇体验导览服务卖给有本地水域资源三四线城市年轻人",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3529-story-anchors-aweigh-designer-leads-guided-sailing-t"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
       "feedback": {
         "up": 0,
         "down": 0
