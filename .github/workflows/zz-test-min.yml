@@ -1,0 +1,8 @@
+name: zz-test-min
+on:
+  workflow_dispatch:
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello
