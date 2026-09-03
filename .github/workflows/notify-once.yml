@@ -38,3 +38,4 @@ jobs:
               print("webhook响应:", body)
               assert '"code":0' in body or '"code": 0' in body, "发送失败: " + body
           EOF
+# touch 140158 强制重索引
