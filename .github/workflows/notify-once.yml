@@ -1,7 +1,5 @@
-name: 迭代通知（一次性，发完即删）
+name: notify-once
 
-# 2026-09-03 临时通知：webhook 值在 secret 里本地不可读，
-# 用一次性 workflow 在 runner 内发卡，用完删除本文件。勿复用。
 on:
   workflow_dispatch:
 
@@ -12,11 +10,11 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: 发飞书通知
+      - name: send
         env:
           FEISHU: ${{ secrets.FEISHU_WEBHOOK_URL }}
         run: |
-          python3 - <<'EOF'
+          python3 - <<'PYEOF'
           import json, os, urllib.request
           text = """【系统更新】AI机会雷达 × OPC 一人机会日报（9/3）
 
@@ -35,7 +33,6 @@ jobs:
                                        headers={"Content-Type": "application/json"})
           with urllib.request.urlopen(req, timeout=15) as resp:
               body = resp.read().decode("utf-8")
-              print("webhook响应:", body)
-              assert '"code":0' in body or '"code": 0' in body, "发送失败: " + body
-          EOF
-# touch 140158 强制重索引
+              print("webhook response:", body)
+              assert '"code":0' in body or '"code": 0' in body, "send failed: " + body
+          PYEOF
