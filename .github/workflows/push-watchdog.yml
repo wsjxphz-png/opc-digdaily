@@ -35,7 +35,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          TODAY=$(date -u +%Y-%m-%d)
 
           STATE=$(gh api "repos/$REPO/actions/workflows/$WF" --jq '.state')
           echo "daily-push 当前状态: $STATE"
@@ -46,28 +45,49 @@ jobs:
             echo "已自动重新启用"
           fi
 
-          # 2) 今天是否已送达：优先读推送标记（main.py 推送成功后写入
-          #    storage/push_marker.json，随 Persist state 提交回仓库）。
-          #    标记比 run status 可靠——run 可能被超时 kill（status 非 success）
-          #    但推送其实已成功，只看 status 会误补推造成双推。
+          # 2) 快速通道：推送标记命中（main.py 推送成功后写入 storage/push_marker.json，
+          #    随 Persist state 提交回仓库）。标记比 run status 可靠——run 可能被超时
+          #    kill（status 非 success）但推送其实已成功，只看 status 会误补推造成双推。
+          #    ⚠ 2026-09-03 修复：main.py 写入的是北京时间(CST)日期，原代码用 UTC 日期
+          #    比较——UTC 16:00-24:00（=北京次日 00:00-08:00）两基准错位，marker 命中不了
+          #    → 落进 run-status 判定 → 误补推（9-02/9-03 误补即因此）。比较基准对齐 CST。
+          TODAY_CST=$(TZ=Asia/Shanghai date +%Y-%m-%d)
           MARKER=storage/push_marker.json
-          if [ -f "$MARKER" ] && [ "$(cat "$MARKER")" = "$TODAY" ]; then
-            echo "今日已有成功推送标记，不补推"
+          if [ -f "$MARKER" ] && [ "$(cat "$MARKER")" = "$TODAY_CST" ]; then
+            echo "今日(北京时间)已有成功推送标记，不补推"
             exit 0
           fi
-          LAST_OK=$(gh run list --workflow "$WF" --repo "$REPO" --status success \
-                      --limit 1 --json createdAt --jq '.[0].createdAt // ""' | cut -c1-10)
-          PENDING=$(gh run list --workflow "$WF" --repo "$REPO" --limit 10 \
-                      --json createdAt,status \
-                      --jq "[.[] | select((.status==\"in_progress\") or (.status==\"queued\") or (.status==\"waiting\")) | select(.createdAt[0:10]==\"$TODAY\")] | length")
-          echo "今日(UTC $TODAY) 最近成功: ${LAST_OK:-无}；今日进行中/排队: ${PENDING:-0}"
 
-          if [ "$LAST_OK" != "$TODAY" ] && [ "${PENDING:-0}" = "0" ]; then
-            echo "今日尚未成功推送，静默补推一次"
+          # 3) 主判定：距上次成功推送 ≥ 一个周期（24h）且无任务在跑 -> 通道异常，补推一次
+          #    ⚠ 2026-09-03 修复：原逻辑按 UTC 日历日判定（最近成功不在「UTC 今天」即补推）。
+          #    本看门狗 cron 23:00 UTC 距午夜仅 1h 余量，GitHub schedule 常规延迟 2-3h 即
+          #    跨 UTC 午夜（run 实际启动 00:53-01:43）→「今天」清零、而当天主推送要到
+          #    UTC 14 点后才创建 → 必然误判补推 → 用户一天收两次推送
+          #    （8-30~9-03 实测误判 4/5 次看门狗）。
+          #    改为按「距上次成功推送的时间间隔」判定：24h 内已成功即视为本周期已推送，
+          #    「看门狗跨天」与「主推送延迟晚到」两个方向的误判同时免疫；
+          #    真失败/被禁用（≥24h 无成功）仍会补推。边界（已知取舍）：连续两日主推失败
+          #    且前夜补推恰在 UTC 01:00 附近成功时，次日补推可能顺延一个周期（不丢失，
+          #    晚约一天送达）；队列卡死 run 会压住补推——宁可不补也不双推。
+          LAST_OK_TS=$(gh run list --workflow "$WF" --repo "$REPO" --status success \
+                          --limit 1 --json createdAt --jq '.[0].createdAt // ""')
+          if [ -n "$LAST_OK_TS" ]; then
+            AGE_H=$(( ( $(date -u +%s) - $(date -u -d "$LAST_OK_TS" +%s) ) / 3600 ))
+          else
+            AGE_H=99999
+          fi
+          # 任何进行中/排队/等待的 run 都不补推（含跨天前创建仍未跑完的），等它出结果
+          PENDING=$(gh run list --workflow "$WF" --repo "$REPO" --limit 10 \
+                      --json status \
+                      --jq '[.[] | select(.status=="in_progress" or .status=="queued" or .status=="waiting")] | length')
+          echo "距上次成功推送: ${LAST_OK_TS:-无}（${AGE_H} 小时前）；进行中/排队: ${PENDING:-0}"
+
+          if [ "${AGE_H}" -ge 24 ] && [ "${PENDING:-0}" = "0" ]; then
+            echo "距上次成功推送 ≥24h 且无任务在跑，判定通道异常，静默补推一次"
             gh workflow run "$WF" --repo "$REPO" || true
           fi
 
-          # 3) 静默自愈：不在群里发任何通知（包括"恢复/补推"也不要）。
+          # 4) 静默自愈：不在群里发任何通知（包括"恢复/补推"也不要）。
           #    正常日子这里什么都不会发生；只有通道被禁用或当日推送失败时，
           #    才在后台默默修好。用户只会在固定时间收到正常的每日推送，
           #    全程无需感知任何修复动作——这才是"每天固定自动推送"。
