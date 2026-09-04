@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-03 22:25",
+  "updated": "2026-09-04 22:14",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2336,6 +2336,44 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 30,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0124_上门一对一训犬服务帮主人": {
+      "topic": "上门一对一训犬服务，帮主人解决狗狗行为问题 → 卖给城市里养了一只行为有问题狗狗的年轻上班族",
+      "fingerprint": "上门一对一训犬服务帮主人解决狗狗行为问题卖给城市里养一只行为有问题狗狗年轻上班族",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a992f2ca0210c197dccdc1a?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0125_热门款球鞋倒卖低买高卖赚": {
+      "topic": "热门款球鞋倒卖（低买高卖赚差价） → 卖给喜欢球鞋的年轻人/二手球鞋买家",
+      "fingerprint": "热门款球鞋倒卖低买高卖赚差价卖给喜欢球鞋年轻人二手球鞋买家",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "times_seen": 1,
+      "sources": [
+        "B站·小风球鞋搬砖"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV12Mto6GEQr"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 46,
       "feedback": {
         "up": 0,
         "down": 0
