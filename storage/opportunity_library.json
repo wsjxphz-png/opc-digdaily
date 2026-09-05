@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-04 22:14",
+  "updated": "2026-09-05 21:28",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2374,6 +2374,44 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 46,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0126_垂直内容网站产业链收购整": {
+      "topic": "垂直内容网站+产业链收购整合 → 卖给在某一小众爱好领域有资源的个人",
+      "fingerprint": "垂直内容网站产业链收购整合卖给某一小众爱好领域有资源个人",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "times_seen": 1,
+      "sources": [
+        "@thesamparr"
+      ],
+      "urls": [
+        "https://x.com/thesamparr/status/2095956781713572223"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0127_协助客户走平台申诉流程找": {
+      "topic": "协助客户走平台申诉流程，找回被黑账号 → 卖给社交媒体账号被封或被盗的个人用户",
+      "fingerprint": "协助客户走平台申诉流程找回被黑账号卖给社交媒体账号被封或被盗个人户",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3530-first-1000-i-help-people-get-back-their-hacked-accou"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
       "feedback": {
         "up": 0,
         "down": 0

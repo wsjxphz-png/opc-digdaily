@@ -981,6 +981,12 @@
           "url": "https://x.com/thesamparr/status/2094589818378535366",
           "date": "2026-09-01",
           "summary": "I found a guy running a newsletter about farming that does about $18m a year.\n\nIt goes to 30,000 to 40,000 people paying around $600 a year. Congressmen, senators, hedge funds, and big trading groups read it.\n\nAnd it's basically just him writing it, with a staff of about four. https://t.co/3gTfWyPs82"
+        },
+        {
+          "title": "On MFM I told Shaan about the Equine Network.\n\nThey started with a tiny website for horse owners. 600k monthly uniques. ",
+          "url": "https://x.com/thesamparr/status/2095956781713572223",
+          "date": "2026-09-04",
+          "summary": "On MFM I told Shaan about the Equine Network.\n\nThey started with a tiny website for horse owners. 600k monthly uniques. Then they noticed their one advertiser was basically AAA for horse trailers.\n\nSo they bought it. Then they bought everything else horse owners pay for. Fly https://t.co/X8VnyDhQau"
         }
       ],
       "teardown": null,
@@ -1296,7 +1302,14 @@
         "mrr": "未公开",
         "first_step": "降级：用现成 AI 工具帮人做省力的活，不碰 n8n 节点编排"
       },
-      "signals": [],
+      "signals": [
+        {
+          "title": "买了个 PS5 Pro 备战 GTA 6。\n\n我操，这东西现在怎么这么贵呀！很难想象， PS5 能卖他妈一万块钱 https://t.co/YwgwPNcz4U",
+          "url": "https://x.com/op7418/status/2096056555229859916",
+          "date": "2026-09-05",
+          "summary": "买了个 PS5 Pro 备战 GTA 6。\n\n我操，这东西现在怎么这么贵呀！很难想象， PS5 能卖他妈一万块钱 https://t.co/YwgwPNcz4U"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1459,6 +1472,12 @@
           "url": "https://x.com/oran_ge/status/2094685080459628793",
           "date": "2026-09-01",
           "summary": "上次 玉伯 @lifesinger  来北京，我跟他录了一期播客。\n本来我是想找他闲聊的，他却认真地聊了聊产品的五个方向和 AI Native 团队协作的真实体验和反思。\n当时也没做任何宣传，在小宇宙不知不觉也快 500 播放了。\n感兴趣的朋友可以去听听。 https://t.co/VwjiCIfviu"
+        },
+        {
+          "title": "从 Astra 发布开始，OpenAI 内部已经认为这是 AGI 时代了。\n\n我很好奇他们内部是如何界定 AGI 以及看待未来的。\n\n今天上午刚好在 B 站看到了一个 OpenAI 工程师的视频播客，讨论 AGI 的到来和人类的命运。\n\n主",
+          "url": "https://x.com/oran_ge/status/2096067572861129102",
+          "date": "2026-09-05",
+          "summary": "从 Astra 发布开始，OpenAI 内部已经认为这是 AGI 时代了。\n\n我很好奇他们内部是如何界定 AGI 以及看待未来的。\n\n今天上午刚好在 B 站看到了一个 OpenAI 工程师的视频播客，讨论 AGI 的到来和人类的命运。\n\n主持人问嘉宾，人类站在未来回望现在，会觉得从哪个地方开始是奇点的起点，嘉宾说是 ChatGPT https://t.co/LrvXps6GC6"
         }
       ],
       "teardown": null,
@@ -1707,6 +1726,12 @@
           "url": "https://x.com/dontbesilent/status/2095780979394978040",
           "date": "2026-09-04",
           "summary": "这话可能我不该说（准确的讲是该说，但是可能不该由我说）\n\n我越来越觉得做自媒体其实不是个大众需求，是个小众需求\n\n且一个所谓的自媒体 IP 所能提供的更大价值，其实不是帮助其他人成为 IP，而在于别处（在于大家百花齐放、各不相同的地方）\n\n或者说，「成为」这个词有歧义。多年前有本书叫 Becoming"
+        },
+        {
+          "title": "我觉得一个亿以下的业务看大盘没什么意义\n\n最终都是因为你懂，别人不懂。在别人看起来像上坟一样的生意，你做起来如鱼得水\n\n别人卖智能体，我开源 skills，就可以无视大盘\n\n你每天在网上可以看到几十万、上百万的人问你什么行业好做，什么赛道好",
+          "url": "https://x.com/dontbesilent/status/2096128512352796688",
+          "date": "2026-09-05",
+          "summary": "我觉得一个亿以下的业务看大盘没什么意义\n\n最终都是因为你懂，别人不懂。在别人看起来像上坟一样的生意，你做起来如鱼得水\n\n别人卖智能体，我开源 skills，就可以无视大盘\n\n你每天在网上可以看到几十万、上百万的人问你什么行业好做，什么赛道好做，最后他们好做了吗？"
         }
       ],
       "teardown": null,
@@ -4607,38 +4632,42 @@
         "operator_handle": "路边的老李树",
         "operator_name": "路边的老李树",
         "region": "国内",
-        "who": "小红书本地生活团购实战派博主，自称从零做到十万粉级别，专注拆解商家线上团购的落地打法，面向想切入本地生活服务的普通人和小商家",
-        "deliverable": "团购运营方法论——以小红书内容形式输出，包括：如何帮本地商家设计团购套餐、如何写团购文案、如何引流到店、如何把零散客户变成持续复购。本质上是一套「商家团购运营服务+个人可复制的变现路径」",
-        "business_model": "以内容引流为主，变现方式未公开具体路径，推测包括：①付费社群/圈子，按年或按月收费；②一对一商家陪跑服务，客单价未公开；③课程或模板售卖，价格未公开。无收入数字披露",
-        "acquisition": "①主战场：小红书平台，搜索「本地生活」「团购」「探店」「商家引流」等关键词的笔记曝光；②核心动作：发布从0到10万的实操分阶案例，每篇笔记都是具体的步骤截图或流程图（如「第一周做啥、第二周做啥、第几篇笔记带来第几个客户」），让读者觉得「照做就能复制」；③第一批客户来源：大概率是自己先拿一个本地商家免费做案例，跑通闭环后再发笔记引流，用真实战绩说服他人；④可照抄打法：普通人今天就能做——去小红书搜「本地生活团购」，找排名靠前的笔记评论区，看哪些商家在问怎么做团购，私信给方法、约案例",
-        "stack": "小红书（内容分发）、微信（私域转化与社群）、可能的数字产品工具如知识星球或小报童（如果已有课程/社群产品），无复杂技术依赖",
-        "replicability": 4,
-        "first_step": "今天打开小红书，搜索「本地生活团购 商家」，收藏5篇点赞最高的笔记，模仿它们的标题和结构，写一篇你自己的实操案例笔记并发布",
-        "red_flag": "主要风险在于——如果他的核心收入就是卖课/卖社群，那本质是「教别人做本地生活团购」，而非自己真正在跑通团购业务。模仿前建议先看他有没有自己的真实商家案例截图，还是只有理论。另外，「十万粉」不代表「月入十万」，流量≠收入",
-        "learn": "最值得抄的两个点：①把「本地生活团购」切成「分阶落地」的系列内容（第1步做什么、第2步做什么），让完全不懂的人觉得有路可走；②用真实商家案例做背书，比任何理论都更有说服力",
-        "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用小红书+微信即可起步）",
+        "who": "小红书实战派博主，自称「路边的老李树」，专注本地生活团购赛道（如餐饮、美业等实体店团购运营）。目前粉丝量级未公开，但其内容体系显示已有10万+粉级的实战经验，属于单人内容型博主，规模阶段判断为成长期",
+        "deliverable": "卖的是「本地生活团购入门教程/陪跑服务」，不是他自己做团购代运营，而是教别人怎么做。交付物可能是：①付费社群（群内分享干货）；②单次课程/训练营；③一对一咨询。具体形式未公开",
+        "business_model": "知识付费模式——引流→私域→卖课/卖社群。定价未公开，预估低价引流款（9.9-99元电子书/资料包）+ 中价课（几百到两千元）+ 高价陪跑（数千到上万）三层结构，属于行业常见定价带",
+        "acquisition": "核心渠道：小红书平台内容获客，具体打法如下——\n① 在哪发：小红书，发的是「本地生活团购实操笔记」，以图文/视频形式讲从0起号到出单的步骤；\n② 用什么内容：标题党+结果展示型笔记，例如「本地生活团购从0到10万粉的完整路径」「实体店老板怎么靠团购活下去」等，配合后台截图/数据截图增加可信度；\n③ 第一波客户从哪来：小红书自然流量，靠发布系列教程内容吸引对「本地生活团购」感兴趣的实体店主和想做副业的人，在评论区/私信引导加微信；\n④ 可照抄的打法：普通人今天就能做——在小红书搜「本地生活团购」，模仿已有爆款笔记的选题结构和封面风格，发自己的实操记录或学习心得，逐步积累精准粉丝后引流至微信再转化",
+        "stack": "小红书（内容发布）/ 微信（私域承接）/ 微信社群或知识星球（付费社群运营，具体未公开）/ 可能是小报童或类似工具做付费内容分发（推断，未公开）",
+        "replicability": 3,
+        "first_step": "在小红书注册账号，搜索「本地生活团购」看前10篇高赞笔记的选题和标题结构，用同样的框架发一篇你正在学习的笔记，不要等完美，先开始",
+        "red_flag": "主要收入来源疑似是「教别人做本地生活团购」（卖铲子），而非他自己靠团购业务盈利。这意味着：① 他的实际团购业务能力未经独立验证；② 这类知识付费赛道本身竞争激烈，课程同质化严重；③ 读者容易陷入「买了课就以为能赚钱」的陷阱，实际上本地生活团购仍需大量线下执行。最大的坑是：把「有人教」等同于「自己能成」",
+        "learn": "① 选对赛道很重要——本地生活团购确实是2024-2025年的政策红利期，抖音/快手/美团都在推，商家有真实需求；② 用系列化内容建立信任，从0到10万的「分阶落地方案」比空谈理论更有说服力，值得模仿",
+        "tech_barrier": "低",
+        "doable": "能（完全不用写代码，但需要自己持续产出内容并运营私域）",
         "signals_used": 0,
-        "generated_at": "2026-09-03 09:06",
+        "generated_at": "2026-09-05 21:26",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 54,
-          "feasibility": 72,
+          "commercial": 50,
+          "feasibility": 66,
           "startup_index": 6,
-          "composite": 61.3,
+          "composite": 57.1,
           "drivers": [
             [
-              "客户规模",
+              "交付毛利",
               5
             ],
             [
-              "抗过时",
+              "启动资金低",
               5
             ]
           ],
           "drags": [
             [
               "收入证据",
+              2
+            ],
+            [
+              "持续付费",
               2
             ]
           ],
@@ -4649,29 +4678,29 @@
           "factors": {
             "urgency": 4,
             "pricing": 3,
-            "margin": 4,
-            "repeat": 3,
+            "margin": 5,
+            "repeat": 2,
             "price_ladder": 3,
             "revenue_proof": 2,
-            "market_size": 5,
-            "evergreen": 5,
-            "channel": 3,
-            "machine": 4,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
             "delivery_chain": 3,
-            "replicable": 4,
+            "replicable": 3,
             "capital": 5,
             "speed": 3,
             "skill": 4,
             "concrete": 4,
-            "no_code": 5
+            "no_code": 4
           },
           "coverage": 1.0,
           "degraded": false,
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-09-03",
-      "teardown_count": 6,
+      "last_teardown": "2026-09-05",
+      "teardown_count": 7,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
@@ -4679,23 +4708,27 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-08",
       "commercial_health": {
-        "commercial": 54,
-        "feasibility": 72,
+        "commercial": 50,
+        "feasibility": 66,
         "startup_index": 6,
-        "composite": 61.3,
+        "composite": 57.1,
         "drivers": [
           [
-            "客户规模",
+            "交付毛利",
             5
           ],
           [
-            "抗过时",
+            "启动资金低",
             5
           ]
         ],
         "drags": [
           [
             "收入证据",
+            2
+          ],
+          [
+            "持续付费",
             2
           ]
         ],
@@ -4706,21 +4739,21 @@
         "factors": {
           "urgency": 4,
           "pricing": 3,
-          "margin": 4,
-          "repeat": 3,
+          "margin": 5,
+          "repeat": 2,
           "price_ladder": 3,
           "revenue_proof": 2,
-          "market_size": 5,
-          "evergreen": 5,
-          "channel": 3,
-          "machine": 4,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
           "delivery_chain": 3,
-          "replicable": 4,
+          "replicable": 3,
           "capital": 5,
           "speed": 3,
           "skill": 4,
           "concrete": 4,
-          "no_code": 5
+          "no_code": 4
         },
         "coverage": 1.0,
         "degraded": false,
@@ -5351,38 +5384,42 @@
         "operator_handle": "没滚刷的吸尘器",
         "operator_name": "B站UP主（扫地僧/友望品牌合作）",
         "region": "国内",
-        "who": "B站UP主「扫地僧」，做数码/家居类内容创作，与友望品牌合作吸尘器推广视频，上个月靠接广子收入约11000元",
-        "deliverable": "品牌合作视频——为友望吸尘器拍摄一条推广/测评视频，交付给品牌方用于B站频道发布",
-        "business_model": "品牌广告合作，一次性收费模式；上月总收入约11000元（仅这一单的公开数据），单条视频价格未公开，大概率是项目制一次性结算",
-        "acquisition": "①渠道：B站官方商业接单平台「花火平台」+ 品牌方主动触达双路径；②具体动作：持续在B站发布数码/家居类测评或体验视频，积累内容数据和粉丝基础，吸引品牌方注意到账号调性契合，再由品牌方或花火平台撮合匹配合作；③第一批客户来源：由内容曝光→品牌主动找上门或平台撮合接单（具体第一单来源未公开）；④可照抄打法：先在B站确定一个细分赛道（如家电、数码、家居），持续发布真实测评内容，养号到一定粉丝量级后开通花火平台接单权限，同时保持内容专业度让品牌愿意付钱",
-        "stack": "B站（内容发布）、花火平台（B站官方商单撮合系统）、剪映或类似剪辑工具（视频制作）、友望品牌方（需求来源）",
+        "who": "B站UP主（ID：扫地僧），单人内容创作者，主营品牌软广合作变现，规模约月入过万级别（仅广告收入），专注数码/家电类评测或测评内容方向",
+        "deliverable": "交付物：品牌植入视频（软广/测评内容）。给品牌方用的，本质是「帮友望吸尘器做种草传播」，交付形式是一条或多条B站视频，挂品牌植入口播+使用场景展示。不卖课、不教人、不卖产品，纯粹靠内容本身收广告费。",
+        "business_model": "商业模式：按单条视频收费的项目制（一次性合作）。未公开具体报价单。已知上个月仅友望这一单就收入约11000元（可推断是单条或系列视频的合作价）。收入结构目前只看到广告费一项，无订阅、无带货佣金、无课程收入。",
+        "acquisition": "获客方式（核心信息较少，以下为合理推断路径）：\n①渠道：B站站内自然流量内容（测评/拆解类视频）+ B站创作中心/哔哩哔哩花火平台接单。\n②具体动作：发布真实开箱或测评视频 → 视频被品牌方或商务运营看到 → 主动联系或平台撮合 → 谈价签约。\n③第一波客户来源推测：友望这类中小家电品牌通常通过两种方式找创作者——A.在B站搜索相关品类内容，主动私信创作者；B.通过「花火平台」官方撮合推荐。\n④可照抄打法：如果你做的是数码/家电/家居测评类内容，可以在B站花火平台开通认证，主动发布高质量测评内容，让品牌更容易找到你。同时保持内容垂直度（持续做同一品类），品牌才会把你当「这个领域的作者」而不是泛娱乐账号联系。",
+        "stack": "工具链：B站创作者中心（接单/投流）、花火平台（品牌接单撮合）、剪映或Premiere Pro（视频剪辑）、可能有麦克风+手机/相机（拍摄设备）。全程无需写代码，全是现成工具。",
         "replicability": 4,
-        "first_step": "注册B站账号，确定一个你愿意持续输出的细分领域（如家电测评），连续发5-10条真实内容，看哪条有自然流量反馈，再决定要不要做商业变现",
-        "red_flag": "这个案例相对常规，本质是B站UP主接广子的标准路径，没有独特壁垒；风险点在于收入不稳定（只看到一个月11000元的数据，不知道后续是否可持续），且花火平台竞争激烈，需要一定粉丝基数才能接到品牌合作",
-        "learn": "①不卖课、不教人、不组团队，纯靠内容交付拿商业变现，这条路本身是成立的；②友望作为国产品牌，可能处于营销扩张期，对KOC/KOL的需求比大品牌更活跃，中小创作者有机会",
+        "first_step": "模仿第一步：打开B站花火平台（花火.bilibili.com），注册创作者账号，上传你的账号主页链接，等品牌主动来联系你；同时本周内发布一条「用免费产品或朋友闲置」做的垂直测评视频，测试内容方向和互动数据。",
+        "red_flag": "风险判断：目前信息显示他是纯内容变现而非卖铲子（不卖课、不教人），这点很干净。但需警惕：如果后续他发现接广子太慢，转型卖「如何接广子」的教程/社群，那就变成卖铲子了，参考价值会打折。另外，品牌合作收入不稳定是行业通病，不能当作稳定工资看。",
+        "learn": "最值得抄的两个点：①不卖课不转型，靠真实内容直接换钱——这是普通人最该学的干净路径；②单条视频能拿到11000元说明垂类测评账号的议价空间比想象中高，关键是内容够垂直、数据够真实，品牌愿意为精准人群买单。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用手机或电脑就能做）",
+        "doable": "能（完全不用写代码，用手机+B站原生工具即可启动）",
         "signals_used": 0,
-        "generated_at": "2026-09-04 22:13",
+        "generated_at": "2026-09-05 21:26",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 53,
-          "feasibility": 73,
+          "commercial": 52,
+          "feasibility": 64,
           "startup_index": 6,
-          "composite": 61.4,
+          "composite": 57.1,
           "drivers": [
-            [
-              "启动资金低",
-              5
-            ],
             [
               "不用写代码",
               5
+            ],
+            [
+              "交付毛利",
+              4
             ]
           ],
           "drags": [
             [
               "定价结构",
+              2
+            ],
+            [
+              "持续付费",
               2
             ]
           ],
@@ -5392,18 +5429,18 @@
             "urgency": 3,
             "pricing": 3,
             "margin": 4,
-            "repeat": 3,
+            "repeat": 2,
             "price_ladder": 2,
             "revenue_proof": 3,
             "market_size": 4,
-            "evergreen": 3,
-            "channel": 4,
+            "evergreen": 4,
+            "channel": 3,
             "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
-            "capital": 5,
+            "capital": 4,
             "speed": 3,
-            "skill": 4,
+            "skill": 3,
             "concrete": 3,
             "no_code": 5
           },
@@ -5412,8 +5449,8 @@
           "gate_reason": ""
         }
       },
-      "last_teardown": "2026-09-04",
-      "teardown_count": 3,
+      "last_teardown": "2026-09-05",
+      "teardown_count": 4,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5421,23 +5458,27 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 53,
-        "feasibility": 73,
+        "commercial": 52,
+        "feasibility": 64,
         "startup_index": 6,
-        "composite": 61.4,
+        "composite": 57.1,
         "drivers": [
-          [
-            "启动资金低",
-            5
-          ],
           [
             "不用写代码",
             5
+          ],
+          [
+            "交付毛利",
+            4
           ]
         ],
         "drags": [
           [
             "定价结构",
+            2
+          ],
+          [
+            "持续付费",
             2
           ]
         ],
@@ -5447,18 +5488,18 @@
           "urgency": 3,
           "pricing": 3,
           "margin": 4,
-          "repeat": 3,
+          "repeat": 2,
           "price_ladder": 2,
           "revenue_proof": 3,
           "market_size": 4,
-          "evergreen": 3,
-          "channel": 4,
+          "evergreen": 4,
+          "channel": 3,
           "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
-          "capital": 5,
+          "capital": 4,
           "speed": 3,
-          "skill": 4,
+          "skill": 3,
           "concrete": 3,
           "no_code": 5
         },
@@ -9629,7 +9670,7 @@
       "last_teardown": "2026-09-04",
       "teardown_count": 1,
       "discovered_date": "2026-09-04",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
