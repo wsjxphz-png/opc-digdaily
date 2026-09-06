@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-05 21:28",
+  "updated": "2026-09-06 21:37",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2412,6 +2412,25 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0128_年刀微型ecommerc": {
+      "topic": "年收入10-30万刀的微型电商品牌 → 卖给被客服耗尽精力的电商创始人",
+      "fingerprint": "年刀微型ecommerce品牌卖给被客服耗尽精力ecommerce创始人",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "times_seen": 1,
+      "sources": [
+        "r/ecommerce"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/ecommerce/comments/1w8ds3e/the_45minute_distressed_ecommerce_brand_audit_and/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 65,
       "feedback": {
         "up": 0,
         "down": 0
