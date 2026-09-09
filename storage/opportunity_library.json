@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-08 22:27",
+  "updated": "2026-09-09 22:42",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2488,6 +2488,158 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0132_一个按小时小时自助麻将间": {
+      "topic": "一个按小时收费的24小时自助麻将间，扫码进门、智能控制、自动结算 → 卖给想在上海/北京二线城市打麻将但不好意思去棋牌室的上班族",
+      "fingerprint": "一个按小时小时自助麻将间扫码进门智能控制自动结算卖给想上海北京二线城市打麻将但不好意思去棋牌室上班族",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6731b8b5f373fe5d4d5c9818?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0133_整理并售卖考试重点资料包": {
+      "topic": "整理并售卖考试重点资料包 → 卖给准备考教师资格证或公务员的备考人群",
+      "fingerprint": "整理并售卖考试重点资料包卖给准备考教师资格证或公务员备考人群",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/688f872f8e06fe8de71e940c?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0134_图库平台出售照片版权卖给": {
+      "topic": "在图库平台出售照片版权 → 卖给喜欢拍照的普通人",
+      "fingerprint": "图库平台出售照片版权卖给喜欢拍照",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-67-%e8%b3%a3%e7%85%a7%e7%89%87%e5%88%b0%e5%9c%8b%e5%a4%96%e5%95%86%e6%a5%ad%e5%9c%96%e5%ba%ab%e7%95%b6%e5%89%af%e6%a5%ad/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0135_ai工具将个人专业能力打": {
+      "topic": "用AI工具将个人专业能力打包成标准化可重复交付的产品 → 卖给有专业技能想变现的人（设计师、文案、财务等）",
+      "fingerprint": "ai工具将个人专业能力打包成标准化可重复交付产品卖给有专业技能想人设计师文案财务等",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司创业进化论"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a09e0171b7bd50295531550?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0136_宠物mcn十年揭秘宠物经": {
+      "topic": "071.宠物MCN创业十年｜揭秘宠物经济的财富密码与行业内幕",
+      "fingerprint": "宠物mcn十年揭秘宠物经济财富密码行业内幕",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a58f39b016dcc7e05435241?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0137_一套自动化客户预约跟进系": {
+      "topic": "一套自动化的客户预约和跟进系统 → 卖给经营小型清洁公司的老板",
+      "fingerprint": "一套自动化客户预约跟进系统卖给经营小型清洁公司老板",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3537-first-1000-i-wanted-to-be-the-guy-with-a-laptop-on-t"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0138_个性化商业方向选择分析报": {
+      "topic": "一份个性化的商业方向选择分析报告 → 卖给有经验但不知如何选择方向的职场人",
+      "fingerprint": "个性化商业方向选择分析报告卖给有经验但不知选择方向职场人",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3538-qa-i-have-20-years-of-experiencehow-do-i-pick-a-nich"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0139_按地区整理车库院落促销活": {
+      "topic": "一份按地区整理的车库/院落促销活动信息清单 → 卖给住在社区里想买便宜二手物品的普通居民",
+      "fingerprint": "按地区整理车库院落促销活动信息清单卖给住社区里想买便宜二手物品普通居民",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3539-qa-how-about-a-directory-of-garage-and-yard-sales"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
       "feedback": {
         "up": 0,
         "down": 0
