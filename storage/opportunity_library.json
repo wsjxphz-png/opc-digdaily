@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-09 22:42",
+  "updated": "2026-09-10 22:22",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2640,6 +2640,139 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0140_ai生成精修写真图卖给想": {
+      "topic": "AI生成精修写真图 → 卖给想拍形象照或氛围照的年轻女性",
+      "fingerprint": "ai生成精修写真图卖给想拍形象照或氛围照年轻女性",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/67010d1d81cdab3a93e4a1fa?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 63,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0141_一个垂直领域短视频ip靠": {
+      "topic": "一个垂直领域短视频IP，靠内容获客后接广告或带货 → 卖给想打造个人品牌的职场人或小博主",
+      "fingerprint": "一个垂直领域短视频ip靠内容获客后接广告或带货卖给想打造个人品牌职场人或小博主",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1008936815"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0142_围绕个人成长或女性话题公": {
+      "topic": "围绕个人成长或女性话题的公众号文章 → 卖给想写公众号但不知道从哪开始的普通人",
+      "fingerprint": "围绕个人成长或女性话题公众号文章卖给想写公众号但不知道从哪开始",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1002981843"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0143_基于自身专业技能内容创作": {
+      "topic": "基于自身专业技能的内容创作或课程服务 → 卖给有某项专业技能想尝试副业变现的人",
+      "fingerprint": "基于自身专业技能内容创作或课程服务卖给有某项专业技能想尝试人",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·提钱不上班NOBAN CLUB"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/67599298bdb9877a9721cf7e?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 30,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0144_预约制烟熏bbq外卖提供": {
+      "topic": "预约制烟熏BBQ外卖，提供到活动现场 → 卖给本地有家庭聚会/公司团建需求的人",
+      "fingerprint": "预约制烟熏bbq外卖提供到活动现场卖给本地有家庭聚会公司团建需求人",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3536-story-bbq-catering-hustle-smokes-out-competitors"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0145_亚马逊上开店一件代发同时": {
+      "topic": "在亚马逊上开店做一件代发，同时在TikTok/Instagram做内容引流 → 卖给有社媒运营经验的个人电商卖家",
+      "fingerprint": "亚马逊上开店一件代发同时tiktokinstagram内容引流卖给有社媒运营经验个人ecommerce卖家",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/is-amazon-fba-worth-it-2026/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0146_标准化服务流程表单模板减": {
+      "topic": "标准化服务流程，用表单/模板减少人工沟通时间 → 卖给已在某个领域获得一定客户的小型服务提供者",
+      "fingerprint": "标准化服务流程表单模板减少人工沟通时间卖给已某个领域获得一定客户小型服务提供者",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3535-qa-im-getting-too-many-inquiries"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 32,
       "feedback": {
         "up": 0,
         "down": 0
