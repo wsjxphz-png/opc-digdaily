@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-12 09:07",
+  "updated": "2026-09-12 21:38",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2887,6 +2887,82 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0153_即梦ai等工具制作ai漫": {
+      "topic": "用即梦AI等工具制作的AI漫剧短视频 → 卖给喜欢看AI生成短剧/漫画的短视频平台用户",
+      "fingerprint": "即梦ai等工具制作ai漫剧短视频卖给喜欢看ai生成短剧漫画短视频平台户",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "B站·comfyui视频工作流"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Vz3v6XE7w"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0154_个人品牌吸引粉丝再转化服": {
+      "topic": "用个人品牌吸引粉丝，再转化服务或活动 → 卖给有某一技能想找副业收入的打工人",
+      "fingerprint": "个人品牌吸引粉丝再转化服务或活动卖给有某一技能想找打工人",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68e1394f8e321a0d6feb0ea4?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0155_未明确说明可抄具体模式整": {
+      "topic": "未明确说明可抄的具体模式，整体偏概念性复盘，无获客路径。",
+      "fingerprint": "未明确说明可抄具体模式整体偏概念性复盘无获客路径",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "B站·斌哥-一人公司"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1kNYS6ZEe1"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 24,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0156_信息不足无法判断具体内容": {
+      "topic": "信息不足，无法判断具体副业内容和获客路径。",
+      "fingerprint": "信息不足无法判断具体内容获客路径",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "B站·老强说"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1LhWAeXEth"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 17,
       "feedback": {
         "up": 0,
         "down": 0

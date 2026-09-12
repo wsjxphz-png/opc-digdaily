@@ -794,6 +794,12 @@
           "url": "https://x.com/dickiebush/status/2098104943806726555",
           "date": "2026-09-10",
           "summary": "Over the last 6 years, I’ve made over 150,000 individual sales to over 34,000 customers.\n\nBut when I first started out, I had no clue how to sell anything.\n\n• I thought copywriting was a legal term\n\n• I thought salespeople only worked at used car dealerships\n\n• And I was so"
+        },
+        {
+          "title": "The number one reason to have an online side hustle business is YOU become the bottleneck to its growth, which forces yo",
+          "url": "https://x.com/dickiebush/status/2098752507174404498",
+          "date": "2026-09-12",
+          "summary": "The number one reason to have an online side hustle business is YOU become the bottleneck to its growth, which forces you to learn.\n\nIn a corporate job, very rarely are your skills the bottleneck to you earning more, so you go years without learning anything new."
         }
       ],
       "teardown": null,
@@ -1532,6 +1538,12 @@
           "url": "https://x.com/oran_ge/status/2096606894219841574",
           "date": "2026-09-06",
           "summary": "看这个视频的时候第一次意识到\n直播在中国已经不是自媒体行为\n而是一种真实的生活方式了\n\n在一艘船上只有水手和农民\n他们直播给网站的观众看看这里艰苦的日常生活\n和评论区的人们对话\n这就是他们每天的生活\nhttps://t.co/rkNem93NKV"
+        },
+        {
+          "title": "OPC 如何使用 vibe coding 月入5万？\n1.靠 vibe coding 做一个特别炫酷的demo\n2.把demo发到社交媒体，获得流量和甲方关注\n3.每月接几个商单\n好像都是这样的，几乎没有例外...",
+          "url": "https://x.com/oran_ge/status/2098692618142269939",
+          "date": "2026-09-12",
+          "summary": "OPC 如何使用 vibe coding 月入5万？\n1.靠 vibe coding 做一个特别炫酷的demo\n2.把demo发到社交媒体，获得流量和甲方关注\n3.每月接几个商单\n好像都是这样的，几乎没有例外..."
         }
       ],
       "teardown": null,
@@ -9838,6 +9850,330 @@
         "coverage": 1.0,
         "degraded": false,
         "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "阿杜": {
+      "handle": "阿杜",
+      "name": "向阳",
+      "region": "国内",
+      "category": "融资600万后从实体店转型线上合香生意，对线上一窍不通却180度大转变成功，普通人可借鉴其从零搭建线上业务的获客打法。",
+      "aliases": [
+        "向阳"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "阿杜",
+        "operator_name": "向阳",
+        "region": "国内",
+        "who": "向阳，国内合香（传统线香、香薰）品类创业者。原经营实体店，后转型线上，据称获得融资后完成180度转变。具体月入金额未公开",
+        "deliverable": "交付物是传统合香产品（线香、香薰等），面向喜欢传统文化、香氛、冥想放松的人群。产品以实体商品为主，通过短视频和直播渠道销售。价格区间未公开",
+        "business_model": "商业模式：以电商零售为主（抖音小店或其他平台），可能叠加内容带货收入。收费方式为一次性售卖商品，无明确订阅制。收入结构未公开，未披露每月收入或订单量",
+        "acquisition": "获客方式：根据已传播信息推测，主要靠短视频内容种草——展示合香的制作过程、传统文化故事、使用场景，引发用户对东方香道的兴趣，再通过直播间或小店转化。第一波客户来源未明确披露，但大概率来自内容平台的自然流量推荐。可照抄的打法：拍摄产品制作或文化故事类短视频，在抖音发布，引导至小店成交。但具体冷启动路径、投放策略、账号运营细节均未公开",
+        "stack": "工具链：推测使用抖音小店、短视频剪辑工具（如剪映）、可能用直播带货后台。具体工具清单未公开",
+        "replicability": 3,
+        "first_step": "模仿第一步：今天就去拍摄一条展示合香制作过程或香道文化知识的30秒短视频，发布到抖音，观察自然播放数据。不需要投流，先跑通内容方向",
+        "red_flag": "风险/卖铲子判断：该案例目前处于传闻阶段，600万融资金额、转型成功细节均未核实，无法确认其真实收入规模。若该案例主要价值在于「有人成功转型」的故事本身而非可复制的方法论，则参考价值有限。需警惕后续是否会出现「教别人做合香生意」的付费课程或社群，那才是真正的卖铲子信号",
+        "learn": "最该抄的作业：如果该案例属实，最值得学习的是「实体店老板如何利用内容平台低成本启动线上业务」的思路——不是靠投广告，而是靠内容吸引精准人群。但如果该案例缺乏可验证的获客细节，则学习价值会大打折扣",
+        "tech_barrier": "低",
+        "doable": "降级可做（用现成无代码工具替代）",
+        "signals_used": 0,
+        "generated_at": "2026-09-12 21:34",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 36,
+          "feasibility": 47,
+          "startup_index": 3,
+          "composite": 43.7,
+          "drivers": [
+            [
+              "抗过时",
+              4
+            ],
+            [
+              "不用写代码",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              2
+            ],
+            [
+              "获客路径清晰",
+              2
+            ]
+          ],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "没写清客户从哪来 → 封顶6分"
+          ],
+          "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 3,
+            "evergreen": 4,
+            "channel": 2,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 3,
+            "capital": 3,
+            "speed": 3,
+            "skill": 3,
+            "concrete": 2,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
+      },
+      "last_teardown": "2026-09-12",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-12",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-12",
+      "commercial_health": {
+        "commercial": 36,
+        "feasibility": 47,
+        "startup_index": 3,
+        "composite": 43.7,
+        "drivers": [
+          [
+            "抗过时",
+            4
+          ],
+          [
+            "不用写代码",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            2
+          ],
+          [
+            "获客路径清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "没写清客户从哪来 → 封顶6分"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 3,
+          "evergreen": 4,
+          "channel": 2,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 3,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 2,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
+    },
+    "思林": {
+      "handle": "思林",
+      "name": "思林",
+      "region": "国内",
+      "category": "37岁国企财务经理，副业11年靠朋友圈文案私域无痕成交年入百万，核心打法是不主动推销让客户主动转账，普通人可直接复制其私域文案SOP。",
+      "aliases": [
+        "思林"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "思林",
+        "operator_name": "思林",
+        "region": "国内",
+        "who": "思林，37岁，国内国企财务经理（主业），副业11年靠朋友圈私域文案成交，自称年入百万级（未公开具体数字）。身份标签：国企员工+副业操盘手。",
+        "deliverable": "交付物是「私域文案SOP」——一套发朋友圈的话术模板和文案套路。客户买的是「照着抄就能无痕成交」的方法论，不是实体产品，也不是代码/软件。可能还带陪跑社群或代写服务，具体未公开。",
+        "business_model": "商业模式：①卖文案SOP（一次性课程/资料包收费，具体金额未公开）；②可能带高阶陪跑社群（年费制，未公开）；③可能代写朋友圈文案（按条/按月收费，未公开）。收入结构：主业国企工资+副业私域变现。自称年入百万（未公开纳税证明或流水，只能作为参考）。",
+        "acquisition": "获客方式（原文信息有限，以下为合理推断）：①渠道：微信朋友圈（私域）、可能的公众号/小红书/抖音内容引流；②动作：发「成交截图」「学员反馈」「日收入报账」类朋友圈触发焦虑和从众心理，用「无痕成交」「不推销」作为差异化卖点；③第一批客户来源：国企同事圈、朋友转介绍、内容平台搜「私域文案」「朋友圈成交」的人；④可照抄的打法：普通人可以今天就在朋友圈发一条「展示结果」的朋友圈（比如一张收款截图+一句心得），看有没有人私信问。原文没写冷启动细节，获客路径不完整。",
+        "stack": "工具链：微信朋友圈（核心战场）+ 可能用Notion/飞书整理文案库 + 收款码（微信/支付宝）+ 可能用有赞/小鹅通卖课。无代码/低代码工具，不需要写程序。",
+        "replicability": 3,
+        "first_step": "模仿第一步：今天就在微信朋友圈发一条「晒成果」的内容——比如截一张虚拟收款图（或真实小额成交），配文「今天帮一个朋友改了朋友圈文案，当天就收钱」，看谁点赞谁私信。这一条动作0成本，任何人今天就能做。",
+        "red_flag": "风险/卖铲子判断：①高度疑似卖铲子——核心收入可能是「教别人做私域文案」而非自己真正在交付高价服务；②「年入百万」无纳税证明/后台截图/客户名单佐证，无法核验；③「国企财务经理」身份是背书人设，但不能证明赚钱能力；④最大的坑：朋友圈文案这套打法在2020-2023年已经饱和，现在入场流量成本更高、转化率更低。",
+        "learn": "最该抄的作业：①「无痕成交」的本质是让客户觉得「是他自己要买的」——这是心理学话术，不是技术；②朋友圈持续晒结果（收款/反馈）制造从众压力——这个动作普通人今天就能开始做。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用微信朋友圈+文案模板即可操作）",
+        "signals_used": 0,
+        "generated_at": "2026-09-12 21:34",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 33,
+          "feasibility": 54,
+          "startup_index": 3,
+          "composite": 45.7,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "不用写代码",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              2
+            ],
+            [
+              "换人也能做",
+              2
+            ]
+          ],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "只有原作者本人能做 → 封顶4分",
+            "没写清客户从哪来 → 封顶6分",
+            "需求不痛且卖不上价 → 封顶5分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
+          "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付",
+            "低客单纯劳力：靠时间换钱，杠杆低"
+          ],
+          "factors": {
+            "urgency": 2,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 2,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 3,
+            "channel": 2,
+            "machine": 2,
+            "delivery_chain": 2,
+            "replicable": 3,
+            "capital": 5,
+            "speed": 3,
+            "skill": 4,
+            "concrete": 2,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
+        }
+      },
+      "last_teardown": "2026-09-12",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-12",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-12",
+      "commercial_health": {
+        "commercial": 33,
+        "feasibility": 54,
+        "startup_index": 3,
+        "composite": 45.7,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            2
+          ],
+          [
+            "换人也能做",
+            2
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没写清客户从哪来 → 封顶6分",
+          "需求不痛且卖不上价 → 封顶5分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付",
+          "低客单纯劳力：靠时间换钱，杠杆低"
+        ],
+        "factors": {
+          "urgency": 2,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 2,
+          "machine": 2,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 5,
+          "speed": 3,
+          "skill": 4,
+          "concrete": 2,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
       },
       "commercial_severity": "warn"
     }
