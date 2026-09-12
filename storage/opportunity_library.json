@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-10 22:22",
+  "updated": "2026-09-12 09:07",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -2773,6 +2773,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0147_一套爆款脚本策划服务帮其": {
+      "topic": "一套爆款脚本策划服务，帮其写出能火的文案和剧情框架 → 卖给小红书/抖音上有粉丝但不会写脚本的家居博主",
+      "fingerprint": "一套爆款脚本策划服务帮其写出能火文案剧情框架卖给小红书抖音上有粉丝但不会写脚本家居博主",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1013348011"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 47,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0148_婚恋竞争力诊断择偶定位咨": {
+      "topic": "婚恋竞争力诊断和择偶定位咨询服务 → 卖给单身且有一定经济基础的城市白领",
+      "fingerprint": "婚恋竞争力诊断择偶定位咨询服务卖给单身且有一定经济基础城市白领",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964578020"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 63,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0149_个人ip内容创作服务文章": {
+      "topic": "个人IP内容创作服务（文章、播客、付费专栏） → 卖给有财经/职场背景、愿意持续输出内容的人",
+      "fingerprint": "个人ip内容创作服务文章podcast付费专栏卖给有财经职场背景愿意持续输出内容人",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1011055746"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0150_买一个已验证线小业务邮件": {
+      "topic": "买一个已验证的在线小业务（邮件列表+内容资产） → 卖给有一定积蓄、想跳过冷启动阶段的创业者",
+      "fingerprint": "买一个已验证线小业务邮件列表内容资产卖给有一定积蓄想跳过冷启动阶段者",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/what-liz-wilcox-actually-bought/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0151_一套帮你自动处理客户邮件": {
+      "topic": "一套帮你自动处理客户邮件并录入表格的自动化系统 → 卖给本地中小企业老板",
+      "fingerprint": "一套帮你自动处理客户邮件并录入表格自动化系统卖给本地中小企业老板",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "Nick Saraev Blog"
+      ],
+      "urls": [
+        "https://nicksaraev.com/5-more-automations-you-can-sell-today-for-1-500-or-10-000/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 51,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0152_未明确卖给未明确": {
+      "topic": "未明确 → 卖给未明确",
+      "fingerprint": "未明确卖给未明确",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3532-qa-i-want-to-be-a-broker-for-overseas-web-developers"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
       "feedback": {
         "up": 0,
         "down": 0
