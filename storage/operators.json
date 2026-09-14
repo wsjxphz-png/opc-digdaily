@@ -1041,6 +1041,12 @@
           "url": "https://x.com/thesamparr/status/2098167426894516536",
           "date": "2026-09-10",
           "summary": "A lot of newsletter companies will say \"hey, we rock cuz we own our audience!\"\n\nNo you don't. Google does. Gmail changes something and you're screwed. \n\nBut email is 100% a channel that's reliable. But you don't own it. They do."
+        },
+        {
+          "title": "David Rubenstein owned a company with a list of every book in print. In the early days, Jeff Bezos came to rent that lis",
+          "url": "https://x.com/thesamparr/status/2099500662715498581",
+          "date": "2026-09-14",
+          "summary": "David Rubenstein owned a company with a list of every book in print. In the early days, Jeff Bezos came to rent that list to sell books online.\n\nBezos offered him 20% of Amazon for it. Rubenstein wanted cash, so they took $100k a year for 5 years instead.\n\nHe later got a little https://t.co/KKwSwm6NEu"
         }
       ],
       "teardown": null,
@@ -5346,76 +5352,86 @@
         "operator_handle": "做不露脸自媒体10个月的研究生博主",
         "operator_name": "不露脸自媒体博主（研究生）",
         "region": "国内",
-        "who": "一名国内研究生，通过不露脸内容在自媒体平台运营10个月后实现变现的单人创作者。具体平台、粉丝规模、月收入等数字均未公开，仅确认「成功变现」这一结果。",
-        "deliverable": "大概率是知识型内容+轻交付物：① 引流内容——考研经验/学习方法/研究生生活记录（不露脸图文或配音视频）；② 变现交付物——可能是「如何做自媒体」的经验分享（卖课/社群/陪跑）或垂直领域的资料包（如考研资料整理）。由于原文未明确具体交付物，此处存在两种可能，需进一步核实。",
-        "business_model": "大概率走「内容引流→私域转化→知识付费/社群/课程」的路径，这是不露脸自媒体的主流变现模式。具体定价（客单价、是否有价格阶梯）未公开。收入结构未披露，无法判断是「自己交付服务赚钱」还是「主要靠教别人做自媒体赚钱」（后者属于卖铲子模式）。",
-        "acquisition": "典型的不露脸自媒体获客路径（基于行业通用模式还原，具体细节未公开）：① 平台——大概率是小红书或B站（这两个平台对不露脸内容最友好，且国内研究生身份在此类平台有天然受众）；② 内容动作——不露脸，靠选题和文案取胜。常见打法包括：a. 图文类：用Notion/Canva做精美排版，标题走「研究生亲测」「月薪XXX」「避坑指南」等实用导向；b. 视频类：用剪映做配音+素材混剪，无需露脸出镜；③ 第一批客户来源——通常是「同类人」：备考的同学、想做自媒体的同龄人、对研究生生活好奇的读者；④ 可照抄的打法——今天就能做的第一步：选定一个你懂的细分领域（比如考研、学习法、自我成长），在小红书或B站发第一条内容，测试反馈。注意：原文未透露具体冷启动细节（如前5个客户从哪来），降低了可参考性。",
-        "stack": "无代码工具链（极低门槛）：内容制作——剪映（视频配音剪辑）/ Canva或醒图（图文设计）/ Notion（内容规划）；发布平台——小红书或B站；变现工具——知识星球/小报童/微信群（私域成交），或直接在小红书挂橱窗/接商单。全程无需写任何代码。",
-        "replicability": 4,
-        "first_step": "今天就去小红书注册账号，搜索「研究生 不露脸」或「考研经验分享」，找到3个对标账号，模仿他们的一条高赞笔记/视频，用自己的话重新发一篇，测试市场反应。",
-        "red_flag": "⚠️ 重要提醒：此类案例的典型风险是——很多人最终赚的钱主要来自「教别人怎么做自媒体」（卖课/卖社群/卖咨询），而非靠内容本身变现。如果拆解对象的核心收入来源是「卖铲子」（教别人做自媒体），那么它的可复制性会大幅降低，因为：① 市场已经高度饱和；② 需要有一定粉丝基础才能教别人；③ 你是在和一个已经跑通的人竞争同样的「学员」市场。此外，10个月的时间周期偏短，「成功变现」的定义模糊，无法判断是月入几千还是月入几万，也不清楚是稳定收入还是昙花一现。",
-        "learn": "最值得抄的两个点：① 不露脸也能做自媒体——打破「必须露脸出镜」的认知障碍，把注意力放在选题和文案上；② 研究生身份是一个天然的差异化标签——在考研、学习、自我成长这个垂直领域里，身份本身就是信任背书，不需要额外证明能力。",
+        "who": "一名研究生，以不露脸形式在自媒体平台持续输出内容10个月，完成从0到变现的闭环。具体收入规模未公开。",
+        "deliverable": "未公开具体交付物。根据「不露脸+研究生」画像推测，常见方向包括：①知识付费类（笔记模板/考研经验/学习方法/专业领域资料包）；②代做服务类（论文排版/PPT制作/简历优化）；③引流后接软广。但原文未明确说明卖什么、卖给谁、多少钱。",
+        "business_model": "未公开。推测可能为一次性售卖（数字资料/模板）或订阅制（社群/陪跑），但具体定价结构、收入占比、客单价均未透露。",
+        "acquisition": "未具体透露获客路径。根据平台共性推断可能为：①在小红书/B站/抖音以图文或配音视频形式发布不露脸内容（如学习打卡/干货分享/避坑指南）；②通过关键词SEO和话题标签获取自然流量；③评论区互动或置顶笔记引导私信/进群。但原文未说明第一波客户从哪来、用了什么具体动作、有没有冷启动策略，这些信息缺失导致可参考性大幅降低。",
+        "stack": "未公开。根据「不露脸」形态推测可能使用：剪映（视频剪辑）、Canva/稿定设计（封面制作）、小红书/抖音后台（发布）、飞书/腾讯文档（资料整理）。但具体工具链未提及。",
+        "replicability": 3,
+        "first_step": "选择一个你熟悉的细分领域（如考研/专业课/技能类），在小红书或B站注册账号，先发3-5篇同主题的不露脸内容（图文笔记或配音视频），观察哪篇数据最好，再决定是否继续投入。",
+        "red_flag": "①「不露脸」不等于「没门槛」——同样不露脸的人很多，差异化定位和人设记忆点才是关键，原文未提及差异化策略；②研究生身份可能被过度渲染，实际门槛可能是「有相关专业背景+能持续产出」而非「会写代码」；③10个月变现的时间线偏长，说明并非「快速复制」型机会，需要长期内容积累；④原文未披露收入数字，无法判断天花板和真实利润空间。",
+        "learn": "①「不露脸」是一种降低出镜焦虑的可行路径，适合内向型创作者先跑起来再迭代；②10个月持续输出才变现，说明这个模式更考验耐力和内容积累，而非技巧捷径。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，全程可用小红书+剪映+微信群完成）",
+        "doable": "降级可做（用无代码工具替代）",
         "signals_used": 0,
-        "generated_at": "2026-09-11 22:30",
+        "generated_at": "2026-09-15 00:34",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 38,
-          "feasibility": 66,
-          "startup_index": 6,
-          "composite": 53.3,
+          "commercial": 28,
+          "feasibility": 41,
+          "startup_index": 3,
+          "composite": 38.4,
           "drivers": [
             [
               "启动资金低",
               5
             ],
             [
-              "技能门槛低",
+              "不用写代码",
               5
             ]
           ],
           "drags": [
             [
               "交付链路清晰",
-              2
+              1
             ],
             [
-              "收入证据",
-              2
+              "获客路径清晰",
+              1
             ]
           ],
-          "caps": [],
+          "caps": [
+            "说不清具体卖什么给谁 → 封顶3分",
+            "只有原作者本人能做 → 封顶4分",
+            "没有定价 = 还没有产品 → 封顶5分",
+            "没写清客户从哪来 → 封顶6分",
+            "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          ],
           "gates": [
+            "产品颜色测试未过：只有方向没有产品",
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
             "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+            "定价检验未过：全文没有一个真实价格",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付",
+            "低客单纯劳力：靠时间换钱，杠杆低"
           ],
           "factors": {
             "urgency": 3,
             "pricing": 2,
-            "margin": 4,
+            "margin": 3,
             "repeat": 2,
-            "price_ladder": 2,
-            "revenue_proof": 2,
+            "price_ladder": 1,
+            "revenue_proof": 1,
             "market_size": 4,
-            "evergreen": 4,
-            "channel": 3,
-            "machine": 3,
-            "delivery_chain": 2,
-            "replicable": 4,
+            "evergreen": 3,
+            "channel": 1,
+            "machine": 2,
+            "delivery_chain": 1,
+            "replicable": 2,
             "capital": 5,
-            "speed": 3,
-            "skill": 5,
-            "concrete": 3,
+            "speed": 2,
+            "skill": 4,
+            "concrete": 2,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
         }
       },
-      "last_teardown": "2026-09-11",
-      "teardown_count": 5,
+      "last_teardown": "2026-09-15",
+      "teardown_count": 6,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5423,57 +5439,67 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 38,
-        "feasibility": 66,
-        "startup_index": 6,
-        "composite": 53.3,
+        "commercial": 28,
+        "feasibility": 41,
+        "startup_index": 3,
+        "composite": 38.4,
         "drivers": [
           [
             "启动资金低",
             5
           ],
           [
-            "技能门槛低",
+            "不用写代码",
             5
           ]
         ],
         "drags": [
           [
             "交付链路清晰",
-            2
+            1
           ],
           [
-            "收入证据",
-            2
+            "获客路径清晰",
+            1
           ]
         ],
-        "caps": [],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没有定价 = 还没有产品 → 封顶5分",
+          "没写清客户从哪来 → 封顶6分",
+          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+        ],
         "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
           "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "定价检验未过：全文没有一个真实价格",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付",
+          "低客单纯劳力：靠时间换钱，杠杆低"
         ],
         "factors": {
           "urgency": 3,
           "pricing": 2,
-          "margin": 4,
+          "margin": 3,
           "repeat": 2,
-          "price_ladder": 2,
-          "revenue_proof": 2,
+          "price_ladder": 1,
+          "revenue_proof": 1,
           "market_size": 4,
-          "evergreen": 4,
-          "channel": 3,
-          "machine": 3,
-          "delivery_chain": 2,
-          "replicable": 4,
+          "evergreen": 3,
+          "channel": 1,
+          "machine": 2,
+          "delivery_chain": 1,
+          "replicable": 2,
           "capital": 5,
-          "speed": 3,
-          "skill": 5,
-          "concrete": 3,
+          "speed": 2,
+          "skill": 4,
+          "concrete": 2,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
       },
       "commercial_severity": "warn"
     },
@@ -10475,6 +10501,237 @@
         "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
+    },
+    "成为更好": {
+      "handle": "成为更好",
+      "name": "鹿歌",
+      "region": "国内",
+      "category": "原卷王打工人，两年前转行做「人生教练」并立誓做一辈子，从工具人到活人感十足的转型本身就是一种可复制的个人品牌路径。",
+      "aliases": [
+        "鹿歌"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "成为更好",
+        "operator_name": "鹿歌",
+        "region": "国内",
+        "who": "国内个人品牌教练，原企业打工人，约两年前从「卷王」职场人转型为全职人生教练。目前以「活人感」个人品牌为核心卖点，单人工作室阶段，收入规模未公开。",
+        "deliverable": "人生教练/个人成长辅导服务。主要交付物包括：1v1 coaching 会话、可能的训练营或社群陪跑。面向有职业迷茫、转型焦虑、职场内耗困扰的打工人和年轻职场人。具体产品矩阵和定价区间未公开。",
+        "business_model": "服务收费模式，可能包含 1v1  coaching 按次/按套餐收费，以及可能的课程或训练营一次性收费。收入结构未公开，定价策略未公开。",
+        "acquisition": "核心打法是靠「人设反差」做内容获客——从「卷王打工人」到「活人感教练」的转型故事本身就是最强内容素材。具体渠道包括：①小红书/微信公众号等平台持续输出「职场转型」「拒绝内耗」「做活人」类真实个人故事；②用自身转型经历作为信任背书，吸引有同样痛点的同频人群；③第一波客户大概率来自早期社交圈口碑 + 内容平台自然流量转化。可照抄的打法：记录自己真实的职业转型故事，在小红书或公众号连载「从卷王到活人」的心路历程，用真实感代替专业包装，吸引有相同困境的人主动私信咨询。具体私信转化话术和定价策略未公开。",
+        "stack": "未公开具体工具链。推测使用：小红书/公众号（内容发布）、微信（私域沟通与成交）、腾讯会议或线下（ coaching 会话）、微信收款或收款码（收费）。无代码门槛的现成工具组合。",
+        "replicability": 4,
+        "first_step": "今天就开始写自己的「职业转型故事」第一篇：用一段真实经历说明你为什么要离开原来的工作方式，以及你现在在做什么。发到小红书或公众号，用真实感打动人，不用包装专业形象。",
+        "red_flag": "需要核实其收入来源结构——如果主要收入来自「教别人如何做人生教练/卖课/卖社群」而非自己交付 coaching 服务，则属于「卖铲子」模式，普通人跟进时会被收割。另外，「人生教练」在国内尚未形成标准执业资质，服务质量参差不齐，客户预期管理是隐忧。模仿时需注意区分「做教练」和「教别人做教练」的商业逻辑差异。",
+        "learn": "①「活人感」本身是一种可复制的个人品牌策略——不需要专业知识包装，用真实转型故事就能建立信任和获客；②从「卷王打工人」到「活人教练」的人设反差，是内容创作的金矿，适合所有有职场转型经历的普通人。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用小红书/公众号 + 微信即可启动）",
+        "signals_used": 0,
+        "generated_at": "2026-09-15 00:34",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 44,
+          "feasibility": 68,
+          "startup_index": 6,
+          "composite": 56.4,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "技能门槛低",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "交付链路清晰",
+              2
+            ],
+            [
+              "收入证据",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 2,
+            "margin": 4,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 2,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 5,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        }
+      },
+      "last_teardown": "2026-09-15",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-15",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-15",
+      "commercial_health": {
+        "commercial": 44,
+        "feasibility": 68,
+        "startup_index": 6,
+        "composite": 56.4,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "技能门槛低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "交付链路清晰",
+            2
+          ],
+          [
+            "收入证据",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "warn"
+    },
+    "一人公司创业进化论": {
+      "handle": "一人公司创业进化论",
+      "name": "灵猫（林猫）",
+      "region": "国内",
+      "category": "40+室内设计从业者，凭10年行业经验拆解问题搭建模式的能力，转型打造「灵猫」一人公司产品，走完从0到0.5的摸索，记录真实不鸡汤的创业心路。",
+      "aliases": [
+        "灵猫（林猫）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": "2026-09-15",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-15",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-15",
+      "commercial_health": {
+        "commercial": 36,
+        "feasibility": 58,
+        "startup_index": 3,
+        "composite": 43.8,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "交付毛利",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "交付链路清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 2,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 2,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 2,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "skip"
     }
   }
 }
