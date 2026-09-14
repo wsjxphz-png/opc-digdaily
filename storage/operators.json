@@ -4815,8 +4815,8 @@
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-09-12",
-      "teardown_count": 14,
+      "last_teardown": "2026-09-14",
+      "teardown_count": 15,
       "discovered_date": "2026-08-08",
       "is_new": false,
       "established": false,
@@ -4824,18 +4824,18 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-08",
       "commercial_health": {
-        "commercial": 50,
-        "feasibility": 68,
-        "startup_index": 6,
-        "composite": 58.4,
+        "commercial": 49,
+        "feasibility": 62,
+        "startup_index": 3,
+        "composite": 50.4,
         "drivers": [
           [
-            "启动资金低",
+            "客户规模",
             5
           ],
           [
-            "需求紧迫度",
-            4
+            "启动资金低",
+            5
           ]
         ],
         "drags": [
@@ -4844,34 +4844,36 @@
             2
           ]
         ],
-        "caps": [],
+        "caps": [
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
         "gates": [
           "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
         "factors": {
           "urgency": 4,
           "pricing": 3,
-          "margin": 4,
+          "margin": 3,
           "repeat": 3,
           "price_ladder": 3,
           "revenue_proof": 2,
-          "market_size": 4,
+          "market_size": 5,
           "evergreen": 4,
-          "channel": 4,
+          "channel": 3,
           "machine": 3,
           "delivery_chain": 3,
-          "replicable": 4,
+          "replicable": 3,
           "capital": 5,
           "speed": 4,
-          "skill": 3,
-          "concrete": 3,
+          "skill": 4,
+          "concrete": 4,
           "no_code": 4
         },
         "coverage": 1.0,
         "degraded": false,
         "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
-      "commercial_severity": "warn"
+      "commercial_severity": "skip"
     },
     "Canva模板赚钱项目": {
       "handle": "Canva模板赚钱项目",
@@ -5264,8 +5266,8 @@
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；低客单纯劳力：靠时间换钱，杠杆低"
         }
       },
-      "last_teardown": "2026-09-11",
-      "teardown_count": 5,
+      "last_teardown": "2026-09-14",
+      "teardown_count": 6,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5273,10 +5275,10 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 28,
-        "feasibility": 69,
-        "startup_index": 5,
-        "composite": 50.7,
+        "commercial": 47,
+        "feasibility": 64,
+        "startup_index": 3,
+        "composite": 49.9,
         "drivers": [
           [
             "客户规模",
@@ -5289,47 +5291,42 @@
         ],
         "drags": [
           [
-            "收入证据",
-            1
+            "定价结构",
+            2
           ],
           [
-            "定价结构",
-            1
+            "持续付费",
+            2
           ]
         ],
         "caps": [
-          "没有定价 = 还没有产品 → 封顶5分",
-          "低客单卖时间/卖劳动力 → 降权（优先产品/服务/高客单）"
+          "疑似卖课/卖铲子 → 封顶3分"
         ],
-        "gates": [
-          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "定价检验未过：全文没有一个真实价格",
-          "低客单纯劳力：靠时间换钱，杠杆低"
-        ],
+        "gates": [],
         "factors": {
-          "urgency": 3,
-          "pricing": 2,
-          "margin": 2,
+          "urgency": 2,
+          "pricing": 3,
+          "margin": 3,
           "repeat": 2,
-          "price_ladder": 1,
-          "revenue_proof": 1,
+          "price_ladder": 2,
+          "revenue_proof": 3,
           "market_size": 5,
-          "evergreen": 3,
+          "evergreen": 4,
           "channel": 3,
-          "machine": 4,
-          "delivery_chain": 3,
-          "replicable": 4,
+          "machine": 3,
+          "delivery_chain": 4,
+          "replicable": 3,
           "capital": 5,
-          "speed": 4,
+          "speed": 3,
           "skill": 4,
-          "concrete": 3,
+          "concrete": 4,
           "no_code": 4
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）；定价检验未过：全文没有一个真实价格；低客单纯劳力：靠时间换钱，杠杆低"
+        "gate_reason": ""
       },
-      "commercial_severity": "warn"
+      "commercial_severity": "skip"
     },
     "做不露脸自媒体10个月的研究生博主": {
       "handle": "做不露脸自媒体10个月的研究生博主",
@@ -10174,6 +10171,308 @@
         "coverage": 1.0,
         "degraded": false,
         "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付；低客单纯劳力：靠时间换钱，杠杆低"
+      },
+      "commercial_severity": "warn"
+    },
+    "古老师/无限合伙播客": {
+      "handle": "古老师/无限合伙播客",
+      "name": "古老师",
+      "region": "国内",
+      "category": "55岁退休英语老师，零基础转型心理咨询一人公司，不靠年龄和资历包袱，纯粹靠真实交付和信任积累跑通新赛道，赚自己热爱的钱。",
+      "aliases": [
+        "古老师"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "古老师/无限合伙播客",
+        "operator_name": "古老师",
+        "region": "国内",
+        "who": "古老师，55岁中国退休英语教师，转型做心理咨询，目前为单人一人公司模式，收入规模未公开",
+        "deliverable": "心理咨询服务（大概率为线上1v1语音/视频咨询），目标客户为有情绪困扰或个人成长需求的普通人；交付形式为定期咨询会话，按次或按疗程计费。具体细分方向（如婚恋、职场、亲子等）未公开",
+        "business_model": "未公开。推断为按小时或按疗程套餐收费的1v1咨询服务，可能搭配低价引流体验课+高价深度咨询的价格梯。无证据表明有订阅制或被动收入结构",
+        "acquisition": "未公开具体获客路径。原文仅交代『靠真实交付和信任积累』，未说明第一批客户从哪来、在哪个平台发内容、是否靠转介绍或社群。基于一般心理咨询行业的常见路径推断：①最可能通过微信朋友圈、小红书或公众号持续输出心理健康相关内容吸引精准客户；②早期客户大概率来自熟人转介绍或原有社交圈层；③也可能通过免费直播/公开课做转化。因原文未透露，无法照抄具体打法，这是本案例最大的参考短板",
+        "stack": "推测使用基础无代码工具：微信（沟通与收款）、腾讯会议或语音通话（咨询交付）、可能的简单预约表单（如腾讯问卷/金数据），无证据显示使用复杂自动化工具或付费SaaS",
+        "replicability": 3,
+        "first_step": "如果你决定进入心理咨询赛道，今天就能做的第一步：去中国心理学会或相关行业协会了解『心理咨询师』资质认证路径（如中科院心理所培训证书等），确认自己是否满足入行门槛——这是比任何获客技巧都更优先的判断",
+        "red_flag": "① 卖铲子风险低：他是真正交付咨询服务，不是卖课教人做咨询；② 最大坑在资质：国内心理咨询行业监管尚不完善，但正规执业仍需系统培训和证书，零基础直接上阵存在法律与道德风险；③ 信任积累极耗时：没有前期粉丝基础或人脉池的普通人，从0到能靠口碑获客的周期可能长达1-2年，耐心不够者容易放弃",
+        "learn": "① 年龄不是壁垒：55岁退休教师转型成功案例，说明非科班出身也能跑通；② 交付驱动增长：不靠流量套路，靠真实咨询效果形成转介绍——适合不善营销但专业能力扎实的人",
+        "tech_barrier": "低",
+        "doable": "降级可做（用无代码工具即可，但必须取得心理咨询相关资质培训，否则无法合法合规执业）",
+        "signals_used": 0,
+        "generated_at": "2026-09-14 08:55",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 50,
+          "feasibility": 41,
+          "startup_index": 4,
+          "composite": 46.1,
+          "drivers": [
+            [
+              "启动资金低",
+              5
+            ],
+            [
+              "需求紧迫度",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "获客路径清晰",
+              1
+            ],
+            [
+              "收入证据",
+              1
+            ]
+          ],
+          "caps": [
+            "只有原作者本人能做 → 封顶4分",
+            "没写清客户从哪来 → 封顶6分"
+          ],
+          "gates": [
+            "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 4,
+            "pricing": 3,
+            "margin": 4,
+            "repeat": 4,
+            "price_ladder": 3,
+            "revenue_proof": 1,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 1,
+            "machine": 2,
+            "delivery_chain": 3,
+            "replicable": 2,
+            "capital": 5,
+            "speed": 3,
+            "skill": 2,
+            "concrete": 3,
+            "no_code": 4
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-09-14",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-14",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-14",
+      "commercial_health": {
+        "commercial": 50,
+        "feasibility": 41,
+        "startup_index": 4,
+        "composite": 46.1,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "需求紧迫度",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "获客路径清晰",
+            1
+          ],
+          [
+            "收入证据",
+            1
+          ]
+        ],
+        "caps": [
+          "只有原作者本人能做 → 封顶4分",
+          "没写清客户从哪来 → 封顶6分"
+        ],
+        "gates": [
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 4,
+          "pricing": 3,
+          "margin": 4,
+          "repeat": 4,
+          "price_ladder": 3,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 1,
+          "machine": 2,
+          "delivery_chain": 3,
+          "replicable": 2,
+          "capital": 5,
+          "speed": 3,
+          "skill": 2,
+          "concrete": 3,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
+    },
+    "Q小姐/无限合伙播客": {
+      "handle": "Q小姐/无限合伙播客",
+      "name": "Q小姐",
+      "region": "国内",
+      "category": "前希音（SHEIN）买手辞职做实体店，两年从第一家开到第三家，把时尚买手的选品能力产品化，普通人能借鉴的核心是把「审美+选品」直接变现为实体商业模式。",
+      "aliases": [
+        "Q小姐"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "Q小姐/无限合伙播客",
+        "operator_name": "Q小姐",
+        "region": "国内",
+        "who": "前希音买手，辞职做时尚实体零售，两年内在国内开出3家店，单人操盘或带小团队",
+        "deliverable": "实体店铺里的时尚商品零售——把买手的选品能力变成店铺的货品组合，卖给追求穿搭审美的女性消费者",
+        "business_model": "实体店零售，主要收入来自商品差价。客单价未公开，收入规模未公开。可能有线上同步（小红书/微信）但资料未明确",
+        "acquisition": "核心获客路径推断：①平台——小红书（最可能），因为时尚买手人设天然适合图文种草；②具体动作——发穿搭笔记/店铺日常/选品思路，建立「懂时尚的买手姐姐」人设，吸引同城精准粉丝；③第一波客户来源——大概率来自她之前在职期间积累的穿搭爱好者关注，加上辞职创业的叙事话题性带来的自然流量；④可照抄的打法：普通人即使没当过买手，也可以做「某品类选品推荐账号」，每天发3条搭配/评测内容，同城引流，到店核销。但资料未透露具体运营细节，获客打法只能参考大方向",
+        "stack": "小红书（内容引流）+ 微信（私域维护）+ 传统开店工具（收银/库存管理，未公开具体品牌）",
+        "replicability": 3,
+        "first_step": "先想清楚自己能把哪个品类的「审美判断」产品化——比如平价穿搭、通勤装、小个子穿搭等，然后在小红书注册账号，连续7天每天发1条该品类的选品/搭配内容，观察哪条有流量反馈",
+        "red_flag": "①她的核心竞争力是「希音买手经验」，这是稀缺行业背景，普通人拿不到同款选品资源和供应链；②实体店模式本身投入重（租金、装修、压货），不是零成本启动；③如果读者没有买手背景，直接照搬开实体店门槛很高，建议先从「卖货内容账号」降级起步",
+        "learn": "①把「审美+选品」这种软能力直接变成生意，不需要等有了产品才想怎么卖；②用实体店当容器，把内容流量变现成真实交易，而不是只赚广告费",
+        "tech_barrier": "无",
+        "doable": "降级可做（普通人无法复制她的供应链和买手背景，但可以用相同逻辑——内容种草+实体/线上零售——在更低成本下起步）",
+        "signals_used": 0,
+        "generated_at": "2026-09-14 08:55",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 38,
+          "feasibility": 54,
+          "startup_index": 5,
+          "composite": 47.4,
+          "drivers": [
+            [
+              "不用写代码",
+              5
+            ],
+            [
+              "客户规模",
+              4
+            ]
+          ],
+          "drags": [
+            [
+              "出单速度快",
+              2
+            ],
+            [
+              "启动资金低",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 3,
+            "pricing": 2,
+            "margin": 3,
+            "repeat": 3,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 3,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 2,
+            "capital": 2,
+            "speed": 2,
+            "skill": 3,
+            "concrete": 3,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-09-14",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-14",
+      "is_new": false,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-14",
+      "commercial_health": {
+        "commercial": 38,
+        "feasibility": 54,
+        "startup_index": 5,
+        "composite": 47.4,
+        "drivers": [
+          [
+            "不用写代码",
+            5
+          ],
+          [
+            "客户规模",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "出单速度快",
+            2
+          ],
+          [
+            "启动资金低",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 3,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 2,
+          "capital": 2,
+          "speed": 2,
+          "skill": 3,
+          "concrete": 3,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
     }
