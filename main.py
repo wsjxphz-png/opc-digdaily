@@ -630,13 +630,15 @@ class DailyOpportunityBot:
                     screened_out=max(0, total_before_pool - len(pushed)) if 'pushed' in dir() else 0,
                     screened_total=total_before_pool,
                 )
+                # 只标记「实际送达」的条目（按子卡粒度，由 pusher 累计）：
+                # 失败批次的内容保持未读，明天/重试仍会出现，杜绝永久丢失。
+                # 必须放在 if ok 外面——「部分送达」时 pusher 返回 False，但已送出的
+                # 那部分若不记账，CI 重试会整条流水线重跑并把它们再推一遍（用户收到重复）。
+                delivered_urls.update(
+                    getattr(self.pusher, "_delivered_urls", set())
+                )
                 if ok:
                     pushed_any = True
-                    # 只标记「实际送达」的条目（按子卡粒度，由 pusher 累计）：
-                    # 失败批次的内容保持未读，明天/重试仍会出现，杜绝永久丢失
-                    delivered_urls.update(
-                        getattr(self.pusher, "_delivered_urls", set())
-                    )
                     # 机会库 / 溢池在确认送达后才落盘（失败日计数不虚增）。
                     # 注意：library 仅在 annotate 执行过才可保存，
                     # 否则 entries 为空会拿空库覆盖真实机会库

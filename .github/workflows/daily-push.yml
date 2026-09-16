@@ -20,7 +20,11 @@ concurrency:
 jobs:
   daily-push:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 2026-09-17 由 30 提到 55：重试是「整条流水线重跑」（重新采集 4-5 分钟 +
+    # 重新 AI 分析约 10 分钟 ≈ 14.5 分钟/次），3 次加退避约 47 分钟，30 分钟装不下
+    # 第二次——推送环节失败时第 2 次尝试会跑到一半被 timeout 砍掉，等于白跑
+    # （9/11、9/15、9/16 即如此）。55 分钟容得下 3 次完整尝试。
+    timeout-minutes: 55
 
     steps:
       - uses: actions/checkout@v5

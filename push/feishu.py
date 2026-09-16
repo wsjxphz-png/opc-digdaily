@@ -151,6 +151,11 @@ def _src_label(key: str) -> str:
 
 
 class FeishuPusher:
+    # 上一次 _send_card 的失败原因："too_large"（超卡片大小闸门，没发请求）
+    # / "send_failed"（真发了但失败）。_send_section_split 只对 too_large 二分重发：
+    # 网络抖动、限流这类失败拆得越细请求越多，只会更糟，应交给外层 CI 重试。
+    _last_reject: Optional[str] = None
+
     def __init__(
         self,
         webhook_url: str,
@@ -292,24 +297,24 @@ class FeishuPusher:
             if ok:
                 _mark(domestic + international)
                 return True
-            # 超限降级：切成国内/国际两张板块卡重发
+            # 超限降级：切成国内/国际两张板块卡；板块卡仍超限就继续二分拆（见 _send_section_split）
             logger.warning(f"单卡 {total} 条发送失败（可能超飞书大小上限），按板块拆分重发")
-            ok_all = True
+            delivered: list[ContentItem] = []
+            sent_sections = 0
             for label, items, color in (("国内", domestic, "red"), ("国际", international, "blue")):
                 if not items:
                     continue
-                sub = self._build_section_card(
+                # 「本周风向」块挂在实际发出的第一个板块上。原来写死 label=="国内"，
+                # 国内为空（只有国际）时风向块会被静默丢掉，而推送仍算成功、无人察觉。
+                delivered.extend(await self._send_section_split(
                     label, items, color, date_str, 1, 2, total,
-                    recurring if label == "国内" else None,
-                )
-                if await self._send_card(sub):
-                    _mark(items)
-                else:
-                    ok_all = False
-            return ok_all
+                    recurring if sent_sections == 0 else None,
+                ))
+                sent_sections += 1
+            _mark(delivered)
+            return len(delivered) == total
 
         # 超批：国内 / 国际分别切块，每块一张卡，顺序推送
-        cards = []
         dom_chunks = (
             [domestic[i : i + batch] for i in range(0, len(domestic), batch)]
             if domestic else []
@@ -322,39 +327,66 @@ class FeishuPusher:
             ("国际", c, "blue") for c in intl_chunks
         ]
         n = len(chunks)
+
+        delivered: list[ContentItem] = []
         for idx, (label, items, color) in enumerate(chunks, 1):
-            cards.append(self._build_section_card(
+            delivered.extend(await self._send_section_split(
                 label, items, color, date_str, idx, n, total,
                 recurring if idx == 1 else None,
             ))
+        _mark(delivered)
+        logger.info(f"模块2 分批推送: 共 {n} 批（每批 ≤{batch} 条，总计 {total} 条）")
+        return len(delivered) == total
 
-        ok_all = True
-        for idx, ((label, items, color), card) in enumerate(zip(chunks, cards), 1):
-            ok = await self._send_card(card)
-            if ok:
-                _mark(items)
-            elif len(items) > 2:
-                # 超限降级：对半拆分重发（最多拆一次，仍失败则如实上报）
-                logger.warning(
-                    f"板块「{label}」{len(items)} 条发送失败（可能超飞书大小上限），对半拆分重发"
-                )
-                half = len(items) // 2
-                ok = True
-                for sub in (items[:half], items[half:]):
-                    if not sub:
-                        continue
-                    sub_card = self._build_section_card(
-                        label, sub, color, date_str, idx, n + 1, total, None
-                    )
-                    if await self._send_card(sub_card):
-                        _mark(sub)
-                    else:
-                        ok = False
-            else:
-                ok = False
-            ok_all = ok_all and ok
-        logger.info(f"模块2 分批推送: 共 {n} 张卡（每批 {batch} 条，总计 {total} 条）")
-        return ok_all
+    async def _send_section_split(
+        self,
+        label: str,
+        items: list[ContentItem],
+        color: str,
+        date_str: str,
+        batch_no: int,
+        total_batches: int,
+        grand_total: int,
+        recurring: Optional[list[dict]] = None,
+    ) -> list[ContentItem]:
+        """发送单板块卡片；超飞书大小上限就二分继续拆，直到发出去为止。
+
+        实测每条机会卡约 4.4KB，10 条即 44KB，远超上限——只降一层（按板块拆）
+        不够，板块卡自己仍会超限，于是整块内容被丢掉（9/11、9/15、9/16 连续漏送
+        即因此）。这里递归二分到能放下为止，保证不丢内容。
+
+        Returns:
+            实际送达的条目（调用方据此标记去重，未送达的绝不标记）。
+        """
+        if not items:
+            return []
+        card = self._build_section_card(
+            label, items, color, date_str, batch_no, total_batches, grand_total, recurring
+        )
+        if await self._send_card(card):
+            return list(items)
+        if self._last_reject != "too_large":
+            # 不是超限（网络抖动/限流/飞书返回错误）：拆得越细请求越多、越容易继续被限流，
+            # 这里不拆，如实上报交给外层 CI 重试循环
+            logger.error(
+                f"板块「{label}」{len(items)} 条发送失败（非超限），本次不重发，交由外层重试"
+            )
+            return []
+        if len(items) == 1:
+            # 单条仍超限（极端异常）：如实上报，不静默吞掉
+            logger.error(f"板块「{label}」单条仍超飞书大小上限，该条未送达")
+            return []
+        mid = len(items) // 2
+        logger.warning(
+            f"板块「{label}」{len(items)} 条超限，二分重发（{mid} + {len(items) - mid} 条）"
+        )
+        delivered: list[ContentItem] = []
+        for i, sub in enumerate((items[:mid], items[mid:])):
+            delivered.extend(await self._send_section_split(
+                label, sub, color, date_str, batch_no, total_batches, grand_total,
+                recurring if i == 0 else None,
+            ))
+        return delivered
 
     def _build_recurring_block(self, recurring: Optional[list[dict]]) -> list[dict]:
         """「本周风向」：跨天机会库里近期反复出现的主题（多来源印证 = 强信号）。"""
@@ -1017,17 +1049,20 @@ class FeishuPusher:
     # ================================================================
 
     async def _send_card(self, card: dict) -> bool:
+        self._last_reject = None
         payload = {"msg_type": "interactive", "card": card}
 
-        # 飞书自定义机器人单条消息体上限约 30KB：超限直接失败（不浪费请求），
-        # 由调用方的降批重发兜底；演练模式同样暴露，避免本地正常、上线才炸
+        # 飞书自定义机器人单条消息体上限约 30KB，这里留 5KB 余量按 25KB 卡：
+        # 超限直接不发送（不浪费请求），由调用方 _send_section_split 二分重发兜底；
+        # 演练模式同样暴露，避免本地正常、上线才炸
         try:
             size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
         except Exception:
             size = 0
         if size > 25 * 1024:
+            self._last_reject = "too_large"
             logger.error(
-                "卡片 %d 字节，超过飞书 ~30KB 上限，本次不发送（将由调用方降批重发）",
+                "卡片 %d 字节，超过 25KB 卡点，本次不发送（将由调用方二分重发）",
                 size,
             )
             return False
@@ -1068,9 +1103,11 @@ class FeishuPusher:
                     logger.info("飞书推送成功")
                     return True
                 else:
+                    self._last_reject = "send_failed"
                     logger.error(f"飞书推送失败: {result}")
                     return False
         except Exception as e:
+            self._last_reject = "send_failed"
             logger.error(f"飞书推送异常: {e}")
             return False
 
