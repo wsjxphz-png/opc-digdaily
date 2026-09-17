@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-15 00:43",
+  "updated": "2026-09-17 09:23",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -3571,6 +3571,253 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0189_社群团购带货服务组织拼团": {
+      "topic": "社群团购带货服务（组织拼团、赚取佣金） → 卖给有微信群资源的女性（宝妈、上班族）",
+      "fingerprint": "社群团购带货服务组织拼团赚取佣金卖给有微信群资源女性宝妈上班族",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66a8f02a7349f7a5579f817f?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0190_从中国供应链采购小商品通": {
+      "topic": "从中国供应链采购小商品，通过跨境电商平台卖给海外客户 → 卖给想创业的年轻人或数字游民",
+      "fingerprint": "从中国供应链采购小商品通过跨境ecommerce平台卖给海外客户卖给想年轻人或数字游民",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6994406b66e2c30377a9bee0?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0191_专业面试咨询服务履历修改": {
+      "topic": "一份专业的面试咨询服务（履历修改+模拟面试+职业规划） → 卖给正在找工作的应届毕业生或想跳槽的年轻人",
+      "fingerprint": "专业面试咨询服务履历修改模拟面试职业规划卖给正找工作应届毕业生或想跳槽年轻人",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckrq4uhe06p940925iiomw207"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0192_一套原创绘画系列作品同一": {
+      "topic": "一套原创绘画系列作品（同一主题系列最佳） → 卖给在本地有艺术氛围的小众画廊负责人",
+      "fingerprint": "一套原创绘画系列作品同一主题系列最佳卖给本地有艺术氛围小众画廊负责人",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6736ec0cf373fe5d4d7e20af?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0193_剪映短视频剪辑培训课程天": {
+      "topic": "剪映短视频剪辑培训课程（7天训练营） → 卖给想学短视频剪辑的普通人/内容创作者",
+      "fingerprint": "剪映短视频剪辑培训课程天训练营卖给想学短视频剪辑内容创作者",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1000349935"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 44,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0194_专业心理咨询一对一服务卖": {
+      "topic": "专业心理咨询一对一服务 → 卖给需要心理咨询服务的职场人群",
+      "fingerprint": "专业心理咨询一对一服务卖给需要心理咨询服务职场人群",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66e00cbeee04007d8885bdca?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 46,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0195_ai辅助公众号podca": {
+      "topic": "用AI辅助的公众号/播客内容创作服务 → 卖给有品牌营销经验的知识工作者",
+      "fingerprint": "ai辅助公众号podcast内容创作服务卖给有品牌营销经验知识工作者",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/982966316"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 29,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0196_一篇关于父母期待情绪勒索": {
+      "topic": "一篇关于父母期待与情绪勒索的个人成长文章或播客 → 卖给需要处理家庭关系困惑的年轻人",
+      "fingerprint": "一篇关于父母期待情绪勒索个人成长文章或podcast卖给需要处理家庭关系困惑年轻人",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/cksx7yrxfoikj0919miyrphq7"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0197_一对一投资行为辅导服务卖": {
+      "topic": "一对一投资行为辅导服务 → 卖给有投资困扰的理财人群",
+      "fingerprint": "一对一投资行为辅导服务卖给有投资困扰理财人群",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·知行小酒馆"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a9a6ce4a0210c197dcd64dc?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0198_一个会员制podcast": {
+      "topic": "一个会员制播客社群，定期分享生活黑客技巧和课程 → 卖给对播客和个人成长话题感兴趣的人",
+      "fingerprint": "一个会员制podcast社群定期生活黑客技巧课程卖给对podcast个人成长话题感兴趣人",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clkikohew01jf01tm4rj05mge"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0199_一个基于notion工具": {
+      "topic": "一个基于Notion的工具培训课程 → 卖给想做在线教育或知识付费的创作者",
+      "fingerprint": "一个基于notion工具培训课程卖给想线教育或知识付费创作者",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckqc4o0jwch800833bts3wlax"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0200_单张照片精修服务调色抠图": {
+      "topic": "单张照片精修服务（调色、抠图、瑕疵修复） → 卖给开淘宝店卖服装或配件的电商卖家，需要商品图精修",
+      "fingerprint": "单张照片精修服务调色抠图瑕疵修复卖给开淘宝店卖服装或配件ecommerce卖家需要商品图精修",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "r/Fiverr"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/Fiverr/comments/1wgxcc7/advice_what_has_your_experience_been_like_finding/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0201_情感咨询类小红书笔记付费": {
+      "topic": "情感咨询类小红书笔记/付费社群 → 卖给在一二线城市工作、想接触更优质异性的年轻女性",
+      "fingerprint": "情感咨询类小红书笔记付费社群卖给一二线城市工作想接触更优质异性年轻女性",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "times_seen": 1,
+      "sources": [
+        "@ai_xiaomu"
+      ],
+      "urls": [
+        "https://x.com/ai_xiaomu/status/2100103387576402092"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 37,
       "feedback": {
         "up": 0,
         "down": 0
