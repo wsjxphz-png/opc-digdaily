@@ -74,8 +74,12 @@ def main():
         check(f"举例含「{kw}」", kw in batch)
 
     print("\n=== 4. teardown：口径注释已更新 ===")
-    check("口径已把资产型付费社群列为允许方向", "资产型付费社群" in td)
-    check("口径点明只有「交付实时时间」才排除", "交付你的实时时间" in td)
+    # 注意：这段口径写在 _operator_authenticity 的 docstring 里，不在 TEARDOWN_SYSTEM_PROMPT 里
+    doc = teardown._operator_authenticity.__doc__ or ""
+    check("口径已把资产型付费社群列为允许方向", "资产型付费社群" in doc)
+    check("口径点明只有「交付实时时间」才排除", "交付你的实时时间" in doc)
+    check("旧的「付费社群=允许方向」旧口径已不存在",
+          "用户允许：内容 / 信息产品·课程·训练营 / 付费社群 / 产品化服务" not in doc)
 
     print("\n=== 5. config.yaml 关键词 ===")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
