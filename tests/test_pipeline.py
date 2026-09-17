@@ -27,6 +27,12 @@ import os
 if not os.environ.get("OPC_STORAGE_DIR"):
     os.environ["OPC_STORAGE_DIR"] = str(Path(tempfile.mkdtemp(prefix="opc_test_storage_")))
 
+# config.yaml 的 webhook 是 ${FEISHU_WEBHOOK_URL} 占位符，构造 bot 时会被启动校验拒绝
+# （2026-08-24 加的防静默失败校验）。不给测试值的话，「完整 run() 全链路」会在
+# 构造 bot 处抛异常 → 后面所有检查（模块2 渲染/机会挖掘/白名单源…）全部静默跳过。
+# 2026-09-17 发现该测试已死两周，卡片超限 bug 正是因此没被测出。
+os.environ.setdefault("FEISHU_WEBHOOK_URL", "https://open.feishu.cn/open-apis/bot/v2/hook/test-offline")
+
 import yaml
 from operators import Operator, OperatorRoster
 from teardown import TeardownEngine

@@ -26,6 +26,7 @@ import httpx
 import yaml
 
 from ai import AIProcessor
+from archive_store import DailyArchive, opportunity_record, teardown_record
 from push import FeishuPusher
 from sources import (
     YouTubeSource, RSSSource, RSSHubSource, RedditSource,
@@ -62,6 +63,7 @@ ROSTER_PATH = _STORAGE_DIR / "operators.json"
 SEEDS_PATH = _STORAGE_DIR / "seeded_facts.json"
 LIBRARY_PATH = _STORAGE_DIR / "opportunity_library.json"
 PUSH_MARKER_PATH = _STORAGE_DIR / "push_marker.json"
+ARCHIVE_DIR = _STORAGE_DIR / "archive"
 
 # 北京时间
 CST = timezone(timedelta(hours=8))
@@ -322,6 +324,9 @@ class DailyOpportunityBot:
         # 去重窗口 30 天（与 config.yaml / weixin_targets 文档一致）。
         # 用 7 天会导致旧内容过窗口后被重新判新、重复推送，故对齐到 30 天。
         self.history = HistoryManager(HISTORY_PATH, days=30)
+
+        # 日报正文归档（月刊/复盘用）。只写不读，不参与推送判定。
+        self.archive = DailyArchive(ARCHIVE_DIR)
 
         # 拆解 / 发现 配置
         td_cfg = config.get("teardown", {})
@@ -600,6 +605,7 @@ class DailyOpportunityBot:
 
         # ── 推送 / 输出 ──
         date_str = datetime.now(CST).strftime("%Y年%m月%d日")
+        today_cst = datetime.now(CST).strftime("%Y-%m-%d")   # 归档按北京时间分天
         pushed_any = False
         push_failed = False
         delivered_urls: set[str] = set()
@@ -616,6 +622,12 @@ class DailyOpportunityBot:
                     )
                     # 确认送达后才保存名单：拆解计数/复盘状态落盘（失败日不消耗额度）
                     self._save_roster()
+                    # 归档正文：roster 只留最近一次拆解，月刊/复盘需要全部历史
+                    if not self.dry_run and teardowns:
+                        self.archive.append(
+                            today_cst, "teardown",
+                            [teardown_record(td, today_cst) for td in teardowns],
+                        )
                 else:
                     push_failed = True
                     logger.error("模块1 推送失败")
@@ -637,6 +649,16 @@ class DailyOpportunityBot:
                 delivered_urls.update(
                     getattr(self.pusher, "_delivered_urls", set())
                 )
+                # 归档正文（只归档实际送达的，与去重标记同口径）：
+                # 机会库只存主题名+指纹，正文不落盘则月底月刊无料可用
+                if not self.dry_run and delivered_urls:
+                    records = [
+                        opportunity_record(it, today_cst, region)
+                        for region, group in (("domestic", dom_opps), ("international", intl_opps))
+                        for it in group
+                        if getattr(it, "url", "") in delivered_urls
+                    ]
+                    self.archive.append(today_cst, "opportunity", records)
                 if ok:
                     pushed_any = True
                     # 机会库 / 溢池在确认送达后才落盘（失败日计数不虚增）。
