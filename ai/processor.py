@@ -462,8 +462,11 @@ class AIProcessor:
                     # 单条仍失败（极端异常）→ 保留在结果里（ai_processed=False），顺序不缺
                     out.extend(processed)
             work = next_work
-        # 诊断日志：本轮 AI 相关性闸门分布（相关=拿到 startup_index）
-        _rel = sum(1 for it in out if getattr(it, "startup_index", None) is not None)
+        # 诊断日志：本轮 AI 相关性闸门分布。
+        # ⚠️ 判据必须是 >0 而不是 is not None——startup_index 的默认值是 0（不是 None），
+        # 用 is not None 恒为真，这行日志会永远报「相关 254 / 不相关 0」，是假信号。
+        # 相关条目经 apply_to_item 拿到 1-10 的分；不相关条目停在默认 0。
+        _rel = sum(1 for it in out if (getattr(it, "startup_index", 0) or 0) > 0)
         _proc = sum(1 for it in out if getattr(it, "ai_processed", False))
         _fail = sum(1 for it in out if not getattr(it, "ai_processed", False))
         logger.info(f"AI 处理完成：输入 {len(items)} 条 → 相关 {_rel} 条 / 不相关 {_proc - _rel} 条 / 解析失败丢条 {_fail} 条")
