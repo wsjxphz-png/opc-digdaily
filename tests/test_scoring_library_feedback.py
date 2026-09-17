@@ -203,14 +203,20 @@ def library_tests():
     # 只有「同一批字」的近重复才会合并；松散改写（换说法/换修饰词）不再合并，
     # 这是 #89 修复的刻意结果——宁可少合并，也不要把不同生意误并。
     # 下面用「who 相同、what 为纯语序颠倒（同一批字）」来验证跨天累积。
+    # 日期必须相对今天：top_recurring 按「now − N 天」过滤，硬编码日期会随日历过期
+    # 变红（2026-09-17 实测：写死的 2026-08-06/07/08 已落在 7 天窗口外，3 项假红）。
+    from datetime import datetime as _dt, timedelta as _td
+    D1 = (_dt.now() - _td(days=2)).strftime("%Y-%m-%d")
+    D2 = (_dt.now() - _td(days=1)).strftime("%Y-%m-%d")
+    D3 = _dt.now().strftime("%Y-%m-%d")
     tmp = Path(tempfile.mkdtemp()) / "lib.json"
 
     d1 = OpportunityLibrary(tmp); d1.load()
     day1 = [_mk("本地餐饮店", "小红书代运营", "公众号-甲"),
             _mk("求职者", "ChatGPT代写简历", "推特-乙")]
-    d1.annotate(day1, "2026-08-06")
+    d1.annotate(day1, D1)
     check("首次出现记为第 1 次", day1[0].repeat_count == 1, str(day1[0].repeat_count))
-    check("首次出现写入 first_seen", day1[0].first_seen == "2026-08-06")
+    check("首次出现写入 first_seen", day1[0].first_seen == D1)
     check("annotate 写入 topic_key", bool(day1[0].topic_key))
     d1.save()
 
@@ -218,22 +224,22 @@ def library_tests():
     # who 相同、what 为纯语序颠倒（同一批字）→ 应累计到第 2 次、印证数 +1
     day2 = [_mk("本地餐饮店", "代运营小红书", "少数派"),
             _mk("宝妈", "付费社群卖育儿知识", "公众号-丙")]
-    d2.annotate(day2, "2026-08-07")
+    d2.annotate(day2, D2)
     check("换成同一批字的不同说法 → 累计到第 2 次",
           day2[0].repeat_count == 2, str(day2[0].repeat_count))
     check("不同来源讲同一件事 → 印证数 2",
           day2[0].corroborations == 2, str(day2[0].corroborations))
-    check("first_seen 保持首日不变", day2[0].first_seen == "2026-08-06", day2[0].first_seen)
+    check("first_seen 保持首日不变", day2[0].first_seen == D1, day2[0].first_seen)
     check("新主题独立计数", day2[1].repeat_count == 1)
     d2.save()
 
     d3 = OpportunityLibrary(tmp); d3.load()
     day3 = [_mk("本地餐饮店", "小红书代运营", "推特-丁", idx=8)]
-    d3.annotate(day3, "2026-08-08")
+    d3.annotate(day3, D3)
     check("第三天累计到第 3 次", day3[0].repeat_count == 3, str(day3[0].repeat_count))
 
     dup = [_mk("本地餐饮店", "小红书代运营", "公众号-戊")]
-    d3.annotate(dup, "2026-08-08")
+    d3.annotate(dup, D3)
     check("同一天再出现不重复计次",
           dup[0].repeat_count == 3, str(dup[0].repeat_count))
     check("同一天不同来源仍计入印证",
@@ -303,7 +309,11 @@ def feedback_tests():
     check("有反馈时偏好档案生效", prof.active)
     check("识别出 1 类喜欢的方向", len(prof.liked) == 1, str(len(prof.liked)))
 
-    new = [_mk("餐厅", "代运营小红书账号", idx=6),
+    # 同类判定已换成归并闸门（二元组≥0.75，见 feedback.adjust 注释：旧的 _sim≥0.4
+    # 会让「英语陪练」的赞泄漏到「日语陪练」）。因此这里必须用真正同主题的写法
+    # ——who 相同 + what 纯语序颠倒（与上面机会库归并测试同一形态），
+    # 原来的「代运营小红书账号」多加了一个词，已不算同一主题，断言必然落空。
+    new = [_mk("本地餐厅", "代运营小红书", idx=6),
            _mk("自由职业者", "卖模板", idx=6)]
     before = new[0].startup_index
     prof.adjust(new)
