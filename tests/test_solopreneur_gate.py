@@ -52,16 +52,21 @@ def main():
     for kw in ("线下开店", "按次卖时间", "纯流量号", "陪跑", "远程全职"):
         check(f"排除项「{kw}」在列", kw in disc)
 
-    print("\n=== 2. discovery：付费社群不再是加分方向 ===")
-    check("旧的「靠付费社群/会员/陪伴赚钱」加分项已移除",
-          "靠付费社群/会员/陪伴赚钱" not in disc)
+    print("\n=== 2. discovery：社群看交付形态，不看形态本身 ===")
+    # 松月把「陪伴入口」列为七种正规定位原型之一，只提示重交付风险；
+    # 故判据是「群里交付资产还是你的时间」，不是「社群一律排除」
+    check("社群保留为允许方向", "靠付费社群/会员赚钱" in disc)
+    check("但要求群里交付已生产好的资产", "群里必须交付已生产好的资产" in disc)
     check("「但必须有自己的付费产品」已加入", "必须有自己的付费产品" in disc)
 
     print("\n=== 3. processor：红线 4 ===")
     check("标题已改为「四条一票否决红线」", "四条一票否决红线" in batch)
     check("含「红线 4：必须是一人公司」", "红线 4：必须是一人公司" in batch)
-    for kw in ("交付物必须可复用", "必须有自己的产品", "主营不能是重交付服务"):
+    for kw in ("交付物必须可复用", "必须有自己的产品", "交付里不能是"):
         check(f"判据「{kw}」在列", kw in batch)
+    check("含「付费社群本身不算淘汰项」", "付费社群本身不算淘汰项" in batch)
+    check("含资产型/时间型的区分", "已生产好的资产" in batch and "你的实时时间" in batch)
+    check("含社群续费判据", "停更两周" in batch)
     check("严格要求段同步为四条", "四条一票否决红线命中任一条" in batch)
     check("旧的「三条一票否决红线命中」已不存在",
           "三条一票否决红线命中任一条" not in batch)
@@ -69,14 +74,14 @@ def main():
         check(f"举例含「{kw}」", kw in batch)
 
     print("\n=== 4. teardown：口径注释已更新 ===")
-    check("口径不再把付费社群列为允许方向",
-          "用户允许：内容 / 信息产品·课程·训练营 / 付费社群" not in td)
+    check("口径已把资产型付费社群列为允许方向", "资产型付费社群" in td)
+    check("口径点明只有「交付实时时间」才排除", "交付你的实时时间" in td)
 
     print("\n=== 5. config.yaml 关键词 ===")
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
     kws = str(cfg)
-    for bad in ("付费社群", "会员制", "社群运营"):
-        check(f"允许关键词已移除「{bad}」", bad not in kws)
+    check("「付费社群」保留为允许关键词（资产型社群可以）", "付费社群" in kws)
+    check("关键词表合法可解析", isinstance(cfg, dict))
 
     print("\n" + "=" * 50)
     passed = sum(1 for _, ok, _ in RESULTS if ok)
