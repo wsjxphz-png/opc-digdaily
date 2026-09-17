@@ -374,6 +374,27 @@ class DailyOpportunityBot:
         logger.info("========== 操盘手拆解系统启动 ==========")
         start = time.time()
 
+        # ── 当日去重闸门：今天若已全部送达，整轮跳过 ──
+        # 看门狗补推成功后会写 push_marker；但**定时 run 原先不看它**，于是同一天推两次。
+        # 2026-09-12 实测：01:07 看门狗补推「拆解 2 人」→ 13:38 定时 run 又推一遍同一批
+        # 拆解卡，用户收到重复。这不是补推的问题——补推是救当天没送达的内容，是对的；
+        # 错在**后跑的定时 run 没有「今天已送过」的意识**。
+        # 语义：marker 只在「全部模块推送成功」时才写，所以部分失败日无 marker →
+        # 仍会正常重跑（那正是我们要的）。只有「今天已完整送达」才跳过。
+        if not self.dry_run:
+            try:
+                if PUSH_MARKER_PATH.exists():
+                    _marker = PUSH_MARKER_PATH.read_text(encoding="utf-8").strip()
+                    _today = datetime.now(CST).strftime("%Y-%m-%d")
+                    if _marker == _today:
+                        logger.info(
+                            f"今日（北京时间 {_marker}）已完整推送过，跳过本轮，避免同日双推"
+                        )
+                        logger.info("========== 完成 (今日已推送) ==========")
+                        return True
+            except Exception as e:
+                logger.warning(f"推送标记读取失败（继续执行，不阻断）: {e}")
+
         # ── 构建 / 加载操盘手名单 ──
         self.roster = OperatorRoster.build_from_config(self.config, ROSTER_PATH)
         # 套用种子事实 + 技术门槛分类（每次运行都重新应用，确保 indie hacker 被过滤）

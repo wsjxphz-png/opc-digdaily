@@ -145,11 +145,15 @@ async def integration_test():
         ]
     main_mod._collect = fake_collect
 
+    calls = {"teardown": 0, "opp": 0}
+
     async def fake_push(teardowns, discovered, date_str):
+        calls["teardown"] += 1
         return True
 
     async def fake_push_opps(domestic, international, date_str, recurring=None,
                              screened_out=0, screened_total=0):
+        calls["opp"] += 1
         # 复刻真实 pusher 的契约：把实际送达的 url 记进 _delivered_urls
         bot.pusher._delivered_urls = {
             it.url for it in (domestic + international) if getattr(it, "url", "")
@@ -181,6 +185,21 @@ async def integration_test():
           f"{len(opp)} 条")
     check("只归档实际送达的条目",
           all(r.get("url", "").startswith("http") for r in opp), f"{len(opp)} 条")
+
+    print("\n=== 7. 同日不重推（双推闸门） ===")
+    # 2026-09-12 实测：看门狗 01:07 补推成功后，当天 13:38 定时 run 又推了一遍同一批
+    # 拆解卡。根因是定时 run 不看 push_marker。这里锁死「今天已完整送达 → 整轮跳过」。
+    from main import PUSH_MARKER_PATH
+    from datetime import datetime, timezone, timedelta
+    today_cst = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+    marker_ok = PUSH_MARKER_PATH.exists() and PUSH_MARKER_PATH.read_text(encoding="utf-8").strip() == today_cst
+    check("首轮跑完已写入今日 marker", marker_ok,
+          PUSH_MARKER_PATH.read_text(encoding="utf-8").strip() if PUSH_MARKER_PATH.exists() else "无文件")
+    before = dict(calls)
+    ok2 = await bot.run()
+    check("同日再跑 → 返回 True（不算失败）", ok2 is True)
+    check("同日再跑 → 没有二次推送",
+          calls == before, f"推送被再调 {calls['teardown']-before['teardown']} 次拆解 / {calls['opp']-before['opp']} 次机会")
 
 
 def run():
