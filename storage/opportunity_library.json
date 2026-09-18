@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-17 09:23",
+  "updated": "2026-09-18 22:31",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -573,19 +573,21 @@
       }
     },
     "t0031_待补充原文未说明具体交付": {
-      "topic": "待补充（原文未说明具体交付物） → 卖给待补充（原文未说明目标客户）",
+      "topic": "待补充——原文未说明具体交付物 → 卖给待补充——原文未说明目标客户是谁",
       "fingerprint": "待补充原文未说明具体交付物卖给待补充原文未说明目标客户",
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "times_seen": 1,
+      "last_seen": "2026-09-18",
+      "times_seen": 2,
       "sources": [
-        "小宇宙·不上班行不行啊"
+        "小宇宙·不上班行不行啊",
+        "小宇宙·不上班俱乐部"
       ],
       "urls": [
-        "https://www.ximalaya.com/sound/671983278"
+        "https://www.ximalaya.com/sound/671983278",
+        "https://www.ximalaya.com/sound/1010565022"
       ],
       "best_startup_index": 3,
-      "best_commercial": 20,
+      "best_commercial": 29,
       "feedback": {
         "up": 0,
         "down": 0
@@ -3818,6 +3820,215 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0202_更新一次专业资料资源包社": {
+      "topic": "每月更新一次的专业资料/资源包社群 → 卖给职场新手妈妈，想找灵活创收方式",
+      "fingerprint": "更新一次专业资料资源包社群卖给职场新手妈妈想找灵活创收方式",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1004202187"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0203_通过微信朋友圈快团团卖时": {
+      "topic": "通过微信朋友圈和快团团卖的时令非标农产品（如当季水果、土特产） → 卖给有稳定农产品货源的个人创业者",
+      "fingerprint": "通过微信朋友圈快团团卖时令非标农产品如当季水果土特产卖给有稳定农产品货源个人者",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/840147969"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0204_本地户外广告位代理中介对": {
+      "topic": "本地户外广告位代理中介（对接品牌方与广告位资源，赚差价） → 卖给本地有广告投放需求的企业（餐饮、教培、本地商家等）",
+      "fingerprint": "本地户外广告位代理中介对接品牌方广告位资源赚差价卖给本地有广告投放需求企业餐饮教培本地商家等",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1002981617"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0205_vol照明届特斯拉揭秘国": {
+      "topic": "Vol23：做照明届的特斯拉，揭秘国货高端品牌的0到1起盘与IP打造心法",
+      "fingerprint": "vol照明届特斯拉揭秘国货高端品牌到起盘ip打造心法",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·IP研究所"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6783f13c1bf3f0ab2ba9288b?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0206_整理好虚拟资料包或模板如": {
+      "topic": "整理好的虚拟资料包或模板（如简历模板、行业资料合集等） → 卖给有技能但无技术背景的小红书用户，想做副业变现的人",
+      "fingerprint": "整理好虚拟资料包或模板如简历模板行业资料合集等卖给有技能但无技术背景小红书户想人",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964553321"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0207_养老金缺口测算保险配置建": {
+      "topic": "一份养老金缺口测算+保险配置建议书 → 卖给25-35岁有稳定收入但不做养老规划的职场人",
+      "fingerprint": "养老金缺口测算保险配置建议书卖给岁有稳定但不养老规划职场人",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小咩聊自由职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66541951c59d1e5757ec417c?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0208_中医养生公众号内容文章图": {
+      "topic": "中医养生公众号内容（文章/图文） → 卖给亚健康人群/手脚冰凉等中医调理需求者",
+      "fingerprint": "中医养生公众号内容文章图文卖给亚健康人群手脚冰凉等中医调理需求者",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1003822137"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0209_ai辅助设计标准化产品或": {
+      "topic": "用AI辅助设计的标准化产品或服务包（具体形态待观察） → 卖给室内设计师或装修从业者",
+      "fingerprint": "ai辅助设计标准化产品或服务包具体形态待观察卖给室内设计师或装修从业者",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司创业进化论"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69ee35571e94ae692135b596?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0210_为其运营社交媒体账号月度": {
+      "topic": "为其运营社交媒体账号的月度管理服务 → 卖给本地小型企业老板（餐厅、健身房、美容院等）",
+      "fingerprint": "为其运营社交媒体账号月度管理服务卖给本地小型企业老板餐厅健身房美容院等",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3544-first-1000-i-have-3-clients-and-4000month-in-retaine"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 63,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0211_howtorapidly": {
+      "topic": "How to Rapidly Grow Your Subscriber Count as a YouTube Creator",
+      "fingerprint": "howtorapidlygrowyoursubscribercountasayoutubecreator",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/grow-subscriber-count-youtube-creator/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 29,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0212_smartpassive": {
+      "topic": "Smart Passive Income Unites Two Entrepreneurial Communities with a Tiered Member",
+      "fingerprint": "smartpassiveincomeunitestwoentrepreneurialcommunitieswithatieredmembershipmodel",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/smart-passive-income-unites-two-entrepreneurial-communities-with-a-tiered-membership-model/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 23,
       "feedback": {
         "up": 0,
         "down": 0
