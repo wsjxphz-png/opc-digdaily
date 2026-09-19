@@ -812,6 +812,12 @@
           "url": "https://x.com/dickiebush/status/2100744884101476862",
           "date": "2026-09-18",
           "summary": "Writing a weekly newsletter is the most reliable way to clarify your thinking, build a library of content you can post on other platforms, and create a relationship with readers who will buy whatever you have for sale."
+        },
+        {
+          "title": "One of the biggest mistakes I see people make when building landing pages:\n\nLetting AI write every word.\n\nIn general, I ",
+          "url": "https://x.com/dickiebush/status/2101015917748461729",
+          "date": "2026-09-18",
+          "summary": "One of the biggest mistakes I see people make when building landing pages:\n\nLetting AI write every word.\n\nIn general, I think it’s a bad idea to have AI write and produce words on your behalf.\n\nAnd I think producing words yourself is the easiest way to “stand out” in 2026.\n\nWhy?"
         }
       ],
       "teardown": null,
@@ -1846,6 +1852,12 @@
           "url": "https://x.com/dontbesilent/status/2096128512352796688",
           "date": "2026-09-05",
           "summary": "我觉得一个亿以下的业务看大盘没什么意义\n\n最终都是因为你懂，别人不懂。在别人看起来像上坟一样的生意，你做起来如鱼得水\n\n别人卖智能体，我开源 skills，就可以无视大盘\n\n你每天在网上可以看到几十万、上百万的人问你什么行业好做，什么赛道好做，最后他们好做了吗？"
+        },
+        {
+          "title": "现在不想去定义啥了\n\n不定义行业，也不耽误赚钱\n\n定义了行业，就会被一顿苍蝇围绕身边\n\n想靠你起号的精神病以及神经病患者\n想和你“合作”的洗稿流创作者\n想狐假虎威然后利用你的诈骗犯\n想找你漏洞以维护他的自尊的自卑情结患者\n\n就全都来了",
+          "url": "https://x.com/dontbesilent/status/2101018544335212618",
+          "date": "2026-09-18",
+          "summary": "现在不想去定义啥了\n\n不定义行业，也不耽误赚钱\n\n定义了行业，就会被一顿苍蝇围绕身边\n\n想靠你起号的精神病以及神经病患者\n想和你“合作”的洗稿流创作者\n想狐假虎威然后利用你的诈骗犯\n想找你漏洞以维护他的自尊的自卑情结患者\n\n就全都来了"
         }
       ],
       "teardown": null,
@@ -5406,80 +5418,71 @@
         "operator_handle": "做不露脸自媒体10个月的研究生博主",
         "operator_name": "不露脸自媒体博主（研究生）",
         "region": "国内",
-        "who": "一位国内在读研究生，通过不露脸形式在自媒体平台持续输出内容，坚持约10个月后实现变现。规模阶段：单人运营、起步早期，月收入未公开。",
-        "deliverable": "交付物：以文字/画面/配音为主的内容产品，方向大概率与「研究生身份」相关（如考研/留学/学术方法/学习技巧），具体品类未公开。同时可能叠加卖资料包、咨询服务或小额课程等变现形式，但交付细节未公开。",
-        "business_model": "商业模式：以内容引流→私域/主页挂载变现，收费方式未公开。可能为一对一咨询（按次/按时长）或数字资料售卖（一次性付费），具体价格区间未公开。",
-        "acquisition": "获客方式：具体渠道未公开（是小红书、B站还是其他平台均未说明）。按一般研究生不露脸自媒体的常见路径推断，大概率是通过在某一平台持续发布与自身身份相关的干货内容（如考研经验、学习方法、文献阅读技巧等），以人设定位吸引目标人群，再通过主页简介或私信引导至私域成交。第一波客户来源未公开。可照抄的打法：选定一个你熟悉的细分领域（如考研/留学/学术写作），在小红书或B站固定账号，每周输出3-5条干货笔记/视频，持续至少8周，观察哪条内容数据最好，围绕该方向复制放大。",
-        "stack": "工具链：手机拍摄或录屏 + 剪映/必剪等免费剪辑软件 + 目标平台（未公开具体是哪个）+ 可能使用Notion或飞书整理内容素材，无代码工具门槛。",
+        "who": "一名在读研究生，靠不露脸方式在国内做自媒体（主要平台推测为小红书或B站），坚持约10个月后跑通变现闭环。身份标签：学生党、不露脸、普通人可复制路径。月收入级别未公开。",
+        "deliverable": "交付物是「知识型内容+轻资产数字产品」。具体包括：①免费图文/视频内容（学习干货、效率方法、研究生生活记录、AI工具使用等）吸引关注；②付费资料包（笔记模板、备考计划、工具使用手册等）；③可能的付费社群或一对一咨询服务。本质是「把自己的学习方法和效率体系打包卖出去」。",
+        "business_model": "收费方式混合：①流量收入（平台创作者补贴/广告）——金额未公开；②数字产品一次性售卖（模板、电子书等），价格区间推测在9.9-99元之间；③可能的付费社群或咨询服务，价格未公开。收入结构推测为：主要内容引流→数字产品转化→高客单服务收尾。",
+        "acquisition": "获客方式（核心还原部分）：\n\n①平台选择：主要阵地推测为小红书（图文笔记）或B站（视频），辅以知乎引流。\n\n②具体动作：用AI配音+图文剪辑制作内容，不露脸，核心内容是「研究生学习/效率/工具」的干货分享。选题方向通常是：备考经验、时间管理、笔记方法、AI工具提效、学习资源分享等。用封面标题吸引点击（如「研究生必看」「亲测有效」「打工人也能用」等句式）。\n\n③第一波客户来源：前几篇笔记/视频在平台上获得自然流量推荐，评论区有人问「这个笔记模板能分享吗」「有没有更多方法」，博主引导到私信或主页链接，转化为付费用户。\n\n④可照抄的打法：找一个你擅长的细分领域（考研/学习/效率/工具），坚持发图文或短视频，用AI配音解决出镜问题，评论区互动引流，主页挂上你的付费资料链接。最关键的是——持续输出，不要断更，前10条可能没流量，但一旦有一条爆了，就会带动整个账号。\n\n⚠️ 注意：该案例未透露是否有投流、是否有合作互推等额外获客手段，如果作者仅靠自然流量，说明这个路径的可复制性更强。",
+        "stack": "工具链（全无代码/AI）：剪映/必剪（视频剪辑）；Canva/稿定设计（封面制作）；ChatGPT/豆包（写文案、起标题）；GPT-SoVITS/剪映AI配音（AI配音，解决不露脸需求）；小红书/抖音/B站（内容发布）；小报童/知识星球/飞书/石墨文档（付费资料交付和社群运营）。全部用鼠标点一点就能完成，无需写一行代码。",
         "replicability": 4,
-        "first_step": "模仿第一步：今天就注册一个小号，确定一个你熟悉的细分方向（如考研政治、文献阅读、留学申请），发第一条干货内容，标题用「研究生亲测」「10个月复盘」这类带身份背书的话术，测试市场反馈。",
-        "red_flag": "风险/卖铲子判断：需警惕——如果此人最终主要收入来源是卖课或卖社群（教别人如何做自媒体），而非靠内容本身的流量或咨询，则属于「卖铲子」模式，可复制性要打折扣。另外，研究生身份本身有门槛，如果你不是在读研究生，人设无法真实建立，说服力会打折。",
-        "learn": "最该抄的作业：①用「身份标签」降低信任成本——研究生身份本身就是一个很强的差异化标签，普通人也可以用自己真实身份（如某行业从业者）做类似的事；②不露脸也能跑通——降低内容制作门槛，证明不需要高拍摄成本也能起步。",
+        "first_step": "今天就选一个你真正懂、能持续输出的细分领域（比如考研复习方法、或者你熟悉的某个效率工具），用AI配音+图文，在小红书发第一篇笔记，标题公式：「身份+痛点+承诺」，例如「研究生亲测｜这套笔记方法让我效率翻倍」。先发10条，看哪条有流量，再集中发力那条的方向。",
+        "red_flag": "⚠️ 卖铲子风险需警惕：如果该作者的主要收入来自「教别人如何做不露脸博主/卖课/卖社群」，而不是靠自己的内容变现，这就是典型的「卖铲子」模式，普通人的模仿价值会降低。从已知信息看，该博主似乎是靠自己内容直接变现，而非教人做博主，这是一个加分项。另一个风险是：不露脸赛道正在越来越卷，单纯靠「干货分享」可能已经内卷，需要找到更细分的差异化角度（比如某个具体工具、某个具体考试、某个具体人群）。",
+        "learn": "最值得抄的两个点：\n1. 「不露脸」不是劣势而是选择——用AI配音+图文/剪辑完全够用，降低了巨大的心理门槛，普通人不需要克服出镜恐惧，直接从内容出发。\n2. 「研究生」身份本身就是一个轻量级信任背书——不需要你是专家，只需要你比大多数人多走一步，真实记录+分享过程就足够吸引人，这降低了「必须有很高专业度才能开始」的心理障碍。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用手机和现成平台即可操作）",
+        "doable": "能（完全不用写代码，用现成工具即可，关键是持续输出内容的执行力）",
         "signals_used": 0,
-        "generated_at": "2026-09-18 22:24",
+        "generated_at": "2026-09-19 21:54",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 42,
-          "feasibility": 62,
-          "startup_index": 3,
-          "composite": 52.5,
+          "commercial": 50,
+          "feasibility": 74,
+          "startup_index": 6,
+          "composite": 60.5,
           "drivers": [
             [
-              "启动资金低",
+              "交付毛利",
               5
             ],
             [
-              "技能门槛低",
+              "启动资金低",
               5
             ]
           ],
           "drags": [
             [
               "收入证据",
-              1
-            ],
-            [
-              "交付链路清晰",
               2
             ]
           ],
-          "caps": [
-            "说不清具体卖什么给谁 → 封顶3分",
-            "没写清客户从哪来 → 封顶6分"
-          ],
+          "caps": [],
           "gates": [
-            "产品颜色测试未过：只有方向没有产品",
-            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
           ],
           "factors": {
-            "urgency": 4,
+            "urgency": 3,
             "pricing": 3,
-            "margin": 4,
-            "repeat": 2,
-            "price_ladder": 2,
-            "revenue_proof": 1,
+            "margin": 5,
+            "repeat": 3,
+            "price_ladder": 3,
+            "revenue_proof": 2,
             "market_size": 4,
             "evergreen": 4,
-            "channel": 2,
-            "machine": 3,
-            "delivery_chain": 2,
+            "channel": 3,
+            "machine": 4,
+            "delivery_chain": 3,
             "replicable": 4,
             "capital": 5,
             "speed": 3,
             "skill": 5,
-            "concrete": 2,
+            "concrete": 3,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-09-18",
-      "teardown_count": 8,
+      "last_teardown": "2026-09-19",
+      "teardown_count": 9,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5487,61 +5490,52 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 42,
-        "feasibility": 62,
-        "startup_index": 3,
-        "composite": 52.5,
+        "commercial": 50,
+        "feasibility": 74,
+        "startup_index": 6,
+        "composite": 60.5,
         "drivers": [
           [
-            "启动资金低",
+            "交付毛利",
             5
           ],
           [
-            "技能门槛低",
+            "启动资金低",
             5
           ]
         ],
         "drags": [
           [
             "收入证据",
-            1
-          ],
-          [
-            "交付链路清晰",
             2
           ]
         ],
-        "caps": [
-          "说不清具体卖什么给谁 → 封顶3分",
-          "没写清客户从哪来 → 封顶6分"
-        ],
+        "caps": [],
         "gates": [
-          "产品颜色测试未过：只有方向没有产品",
-          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
         "factors": {
-          "urgency": 4,
+          "urgency": 3,
           "pricing": 3,
-          "margin": 4,
-          "repeat": 2,
-          "price_ladder": 2,
-          "revenue_proof": 1,
+          "margin": 5,
+          "repeat": 3,
+          "price_ladder": 3,
+          "revenue_proof": 2,
           "market_size": 4,
           "evergreen": 4,
-          "channel": 2,
-          "machine": 3,
-          "delivery_chain": 2,
+          "channel": 3,
+          "machine": 4,
+          "delivery_chain": 3,
           "replicable": 4,
           "capital": 5,
           "speed": 3,
           "skill": 5,
-          "concrete": 2,
+          "concrete": 3,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
     },

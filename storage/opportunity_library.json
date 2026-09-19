@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-18 22:31",
+  "updated": "2026-09-19 22:01",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4029,6 +4029,158 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 23,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0213_一套notion入门到进": {
+      "topic": "一套Notion入门到进阶的线上训练营课程 → 卖给职场效率提升者、想学Notion的打工人",
+      "fingerprint": "一套notion入门到进阶线上训练营课程卖给职场效率提升者想学notion打工人",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clkikohew01jf01tm4rj05mge"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 61,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0214_ai辅助代写服务文章文案": {
+      "topic": "AI辅助代写服务（文章/文案/资料整理），按篇或按月收费 → 卖给需要写公众号文章、朋友圈文案或行业报告的自由职业者和小微企业主",
+      "fingerprint": "ai辅助代写服务文章文案资料整理按篇或按月卖给需要写公众号文章朋友圈文案或行业报告自由职业者小微企业主",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·好有共鸣"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69e0d186e2c8be31556443d0?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0215_把历史问答内容喂给ai一": {
+      "topic": "把历史问答内容喂给AI，做一个能回答你专业问题的智能小工具 → 卖给有自己内容积累（播客/咨询/社群）的创作者或知识型IP",
+      "fingerprint": "把历史问答内容喂给ai一个能回答你专业问题智能小工具卖给有自己内容积累podcast咨询社群创作者或知识型ip",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·给女孩的商业第一课"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1004563878"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0216_为品牌定制专属ar滤镜于": {
+      "topic": "为品牌定制专属AR滤镜，用于短视频营销 → 卖给想做短视频的中小品牌或MCN机构",
+      "fingerprint": "为品牌定制专属ar滤镜于短视频营销卖给想短视频中小品牌或mcn机构",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/65d428ac0847349e0c679990?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0217_ai生成音乐作品参加平台": {
+      "topic": "用AI生成音乐作品参加平台比赛 → 卖给不会音乐但有创作欲望的普通人",
+      "fingerprint": "ai生成音乐作品参加平台比赛卖给不会音乐但有创作欲望",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/673ab24a43dc3a43877042d8?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 23,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0218_一本聚焦具体问题小型知识": {
+      "topic": "一本聚焦具体问题的小型知识书，多格式分发 → 卖给有专业知识可转化为内容的专业人士",
+      "fingerprint": "一本聚焦具体问题小型知识书多格式分发卖给有专业知识可转化为内容专业人士",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "James Clear (习惯/写作/知识付费)"
+      ],
+      "urls": [
+        "https://jamesclear.com/atomic-habits-first-birthday"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 90,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0219_一本解决具体行为问题纸质": {
+      "topic": "一本解决具体行为问题的纸质书或电子书 → 卖给对自我管理/习惯养成有需求的普通读者",
+      "fingerprint": "一本解决具体行为问题纸质书或电子书卖给对自我管理习惯养成有需求普通读者",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "James Clear (习惯/写作/知识付费)"
+      ],
+      "urls": [
+        "https://jamesclear.com/2019-annual-review"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 87,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0220_帮助新兵顺利通过训练数字": {
+      "topic": "一份帮助新兵顺利通过训练的数字版入伍指南（PDF电子书） → 卖给准备参军的新兵及其家长",
+      "fingerprint": "帮助新兵顺利通过训练数字版入伍指南pdf电子书卖给准备参军新兵及其家长",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3545-qa-how-can-i-publish-my-army-enlistment-guide"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
       "feedback": {
         "up": 0,
         "down": 0
