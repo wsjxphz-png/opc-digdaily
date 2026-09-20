@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-19 22:01",
+  "updated": "2026-09-20 22:15",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4181,6 +4181,101 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0221_基于自身职场经验培训或陪": {
+      "topic": "基于自身职场经验的培训或陪跑服务 → 卖给想在小红书做副业变现的女性职场人",
+      "fingerprint": "基于自身职场经验培训或陪跑服务卖给想小红书女性职场人",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/847444131"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 54,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0222_帮商家优化ai搜索引擎上": {
+      "topic": "帮商家优化在AI搜索引擎上的品牌信息呈现 → 卖给本地中小微企业主（如餐饮店、美容院、培训机构老板）",
+      "fingerprint": "帮商家优化ai搜索引擎上品牌信息呈现卖给本地中小微企业主如餐饮店美容院培训机构老板",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·满地找钱"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a85c633ef65145dfcc22e7b?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0223_帮中小企业品牌内容营销服": {
+      "topic": "帮中小企业做品牌内容营销服务，通过行业人脉和信任背书获客，按项目收费，需积累客户资源。",
+      "fingerprint": "帮中小企业品牌内容营销服务通过行业人脉信任背书获客按需积累客户资源",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/805409731"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0224_vol跟前瑞银投行精英聊": {
+      "topic": "VOL.16 跟前瑞银投行精英聊聊：为什么说“只打一份工”才是当下最高风险的投资？",
+      "fingerprint": "vol跟前瑞银投行精英聊聊为什么说只打工才当下最高风险投资",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/955979861"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0225_一个专注taco文化食谱": {
+      "topic": "一个专注Taco文化与食谱的垂直内容网站 → 卖给喜欢墨西哥饮食文化的年轻人",
+      "fingerprint": "一个专注taco文化食谱垂直内容网站卖给喜欢墨西哥饮食文化年轻人",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-63-%e8%88%88%e8%b6%a3%e8%88%87%e5%b7%a5%e4%bd%9c%e7%9a%84%e5%ae%8c%e7%be%8e%e7%b5%90%e5%90%88/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 24,
       "feedback": {
         "up": 0,
         "down": 0
