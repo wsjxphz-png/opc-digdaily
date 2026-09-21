@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-20 22:15",
+  "updated": "2026-09-22 00:39",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4276,6 +4276,633 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 24,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0226_一套写作社群陪跑指导卖给": {
+      "topic": "一套「写作变现社群」+ 陪跑指导 → 卖给想靠写作副业变现的上班族/宝妈",
+      "fingerprint": "一套写作社群陪跑指导卖给想靠写作上班族宝妈",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1006372885"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0227_写作能力产品化付费社群课": {
+      "topic": "写作能力产品化：付费社群/课程/代写服务 → 卖给有写作意愿、想通过内容变现的普通人",
+      "fingerprint": "写作能力产品化付费社群课程代写服务卖给有写作意愿想通过内容",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·停电时间Power outage"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68bdac515faf3686597e5c72?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0228_一套可复制小红书素人起号": {
+      "topic": "一套可复制的小红书素人起号方法论+持续陪伴训练 → 卖给想转型做自媒体的普通上班族",
+      "fingerprint": "一套可复制小红书素人起号论持续陪伴训练卖给想转型自媒体普通上班族",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964574301"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0229_科技生活类博客内容后续知": {
+      "topic": "科技生活类博客内容+后续知识付费产品 → 卖给想发展副业的上班族/科技爱好者",
+      "fingerprint": "科技生活类博客内容后续知识付费产品卖给想发展上班族科技爱好者",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/cll3y3mu302dz01v9f3zw4o4c"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0230_为酒店品牌方提供新媒体内": {
+      "topic": "为酒店、品牌方提供新媒体内容策划与播客制作服务 → 卖给有广告/新媒体从业经验的打工人，想在30岁左右转型自由职业",
+      "fingerprint": "为酒店品牌方提供新媒体内容策划podcast制作服务卖给有广告新媒体从业经验打工人想岁左右转型自由职业",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/671983278"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0231_垂直领域博客产品卖给有写": {
+      "topic": "垂直领域博客+变现产品 → 卖给有写作能力、愿长期输出的个人",
+      "fingerprint": "垂直领域博客产品卖给有写作能力愿长期输出个人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-66-%e7%94%a8%e9%83%a8%e8%90%bd%e6%a0%bc%e8%b3%ba%e9%8c%a2%e7%b9%b3%e6%88%bf%e8%b2%b8/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0232_帮小众艺术家包装作品并对": {
+      "topic": "帮小众艺术家包装作品并对接买家，从中抽成 → 卖给有艺术审美、喜欢和创作者打交道的普通人",
+      "fingerprint": "帮小众艺术家包装作品并对接买家从中抽成卖给有艺术审美喜欢创作者打交道",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·提钱不上班NOBAN CLUB"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/67224fa3cbe0e69c8be5c0f9?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0233_ai生成图书带货短视频视": {
+      "topic": "用AI生成图书带货短视频，在视频号挂商品链接赚取佣金 → 卖给退休长辈或喜欢读书的女性群体",
+      "fingerprint": "ai生成图书带货短视频视频号挂商品链接赚取佣金卖给退休长辈或喜欢读书女性群体",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1007359965"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0234_提供塔罗解读能量疗愈等神": {
+      "topic": "提供塔罗解读、能量疗愈等神秘学服务，同时出售绘画/设计作品 → 卖给对神秘学/心理学有兴趣的年轻人，或动画/设计专业毕业希望转型自由职业的人",
+      "fingerprint": "提供塔罗解读能量疗愈等神秘学服务同时出售绘画设计作品卖给对神秘学心理学有兴趣年轻人或动画设计专业毕业希望转型自由职业人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/668822156"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0235_公众号文章流量分成收益卖": {
+      "topic": "公众号文章流量分成收益 → 卖给想靠文字内容月入几百到几千的上班族或学生",
+      "fingerprint": "公众号文章流量分成收益卖给想靠文字内容几百到几千上班族或学生",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/678eab02c3617f02a41be049?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 47,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0236_ai辅助视觉内容创作服务": {
+      "topic": "AI辅助视觉内容创作服务（海报/配图/图标等） → 卖给有设计基础但想转型的小白或需要AI辅助的设计师",
+      "fingerprint": "ai辅助视觉内容创作服务海报配图图标等卖给有设计基础但想转型小白或需要ai辅助设计师",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69917076de29766da9a621f5?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0237_一套小红书流量获取精准获": {
+      "topic": "一套小红书流量获取与精准获客的方法论训练营 → 卖给想通过小红书搞副业的职场人或小白",
+      "fingerprint": "一套小红书流量获取精准获客论训练营卖给想通过小红书搞职场人或小白",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964566654"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0238_情感类短视频图文内容积累": {
+      "topic": "情感类短视频/图文内容，积累粉丝后接商单或合作 → 卖给想转型的职场人或有表达欲的年轻人",
+      "fingerprint": "情感类短视频图文内容积累粉丝后接商单或合作卖给想转型职场人或有表达欲年轻人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/655721005"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0239_信息不足卖给信息不足": {
+      "topic": "信息不足 → 卖给信息不足",
+      "fingerprint": "信息不足卖给信息不足",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·海叔有观点 | 聊聊创业、投资、热点"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/680221985"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0240_从别人常找你帮忙里挑一件": {
+      "topic": "从别人常找你帮的忙里挑一件事，以不完整方案先收第一单，用实际成交验证需求再迭代。",
+      "fingerprint": "从别人常找你帮忙里挑一件事以不完整方案先收第一单实际成交验证需求再迭代",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "B站·书籍老师你好"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1aReB6UEz8"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 21,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0241_公众号合规运营指南卖给想": {
+      "topic": "一份公众号合规运营指南 → 卖给想做自媒体但不懂平台规则的职场人",
+      "fingerprint": "公众号合规运营指南卖给想自媒体但不懂平台规则职场人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·铁林想聊 ｜ 一人公司"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6ab075b90916f6f8b44673a6?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 24,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0242_无具体交付物卖给想租房或": {
+      "topic": "无具体交付物 → 卖给想租房或购房的年轻人",
+      "fingerprint": "无具体交付物卖给想租房或购房年轻人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·创业找崔磊（谋事文化传媒出品）"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/496639543"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 15,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0243_便携式移动厕所短期长期租": {
+      "topic": "便携式移动厕所短期/长期租赁服务 → 卖给建筑工地负责人、户外婚礼策划公司、乡镇集市/节庆主办方",
+      "fingerprint": "便携式移动厕所短期长期租赁服务卖给建筑工地负责人户外婚礼策划公司乡镇集市节庆主办方",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/chad-howard/"
+      ],
+      "best_startup_index": 9,
+      "best_commercial": 88,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0244_极简notion仪表板模": {
+      "topic": "极简Notion仪表板模板（免费版）+ 进阶功能模块（付费版） → 卖给被复杂Notion模板劝退、只想快速上手管理的普通人",
+      "fingerprint": "极简notion仪表板模板免费版进阶功能模块付费版卖给被复杂notion模板劝退只想快速上手管理",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/yrrlrb/the_simplest_notion_dashboard/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0245_混凝土slab铺设翻新服": {
+      "topic": "混凝土 slab 铺设与翻新服务（车库、庭院、仓库地面） → 卖给小区附近需硬化地面的房主、小型仓储/物流场地老板",
+      "fingerprint": "混凝土slab铺设翻新服务车库庭院仓库地面卖给小区附近需硬化地面房主小型仓储物流场地老板",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/jeff-price/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0246_专业健身追踪notion": {
+      "topic": "专业健身追踪Notion模板（训练记录+渐进超负荷可视化+周期规划） → 卖给认真训练、想科学追踪进度但不想用复杂App的健身爱好者",
+      "fingerprint": "专业健身追踪notion模板训练记录渐进超负荷可视化周期规划卖给认真训练想科学追踪进度但不想复杂app健身爱好者",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/yoz52i/get_a_free_portion_of_the_notion_athlete_os_the/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0247_修复便宜二手自行车后转卖": {
+      "topic": "修复便宜的二手自行车后转卖 → 卖给附近有大学或年轻上班族社区的人",
+      "fingerprint": "修复便宜二手自行车后转卖卖给附近有大学或年轻上班族社区人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/sidehustle"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/sidehustle/comments/1whxelg/how_do_i_find_bikes_to_flip/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0248_一款按停不下来恶搞音乐贺": {
+      "topic": "一款按了停不下来的恶搞音乐贺卡，主打送礼时整蛊朋友 → 卖给想买礼物搞怪送礼的年轻人、办公室白领互赠吐槽礼物",
+      "fingerprint": "一款按停不下来恶搞音乐贺卡主打送礼时整蛊朋友卖给想买礼物搞怪送礼年轻人办公室白领互赠吐槽礼物",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3550-story-its-no-joke-prank-musical-greeting-card-earns"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0249_一套notion专注工作": {
+      "topic": "一套Notion专注工作流模板，包含时间块规划和干扰拦截系统 → 卖给感觉时间不够用、想提升工作效率的上班族或学生",
+      "fingerprint": "一套notion专注工作流模板包含时间块规划干扰拦截系统卖给感觉时间不够想提升工作效率上班族或学生",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/z16r3j/stay_focused_all_day_have_more_free_time/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0250_一套系统备考视频教程解决": {
+      "topic": "一套系统的备考视频教程，解决他们自学找不到方向的痛点 → 卖给准备MCAT或其他标准化考试的学生",
+      "fingerprint": "一套系统备考视频教程解决他们自学找不到方向痛点卖给准备mcat或其他标准化考试学生",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3546-qa-where-are-my-customers-coming-from"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0251_分级付费会员社区卖给想线": {
+      "topic": "分级付费会员社区 → 卖给想在线创业的人",
+      "fingerprint": "分级付费会员社区卖给想线人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/smart-passive-income-unites-two-entrepreneurial-communities-with-a-tiered-membership-model/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0252_帮他们设计并管理pint": {
+      "topic": "帮他们设计并管理Pinterest账号，制作引流pin图，按月收费 → 卖给Etsy卖家、DTC电商品牌、Instagram小店主",
+      "fingerprint": "帮他们设计并管理pinterest账号制作引流pin图按月卖给etsy卖家dtcecommerce品牌instagram小店主",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3542-qa-can-you-still-get-paid-to-post-pins-on-pinterest"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0253_一套专注工作区notio": {
+      "topic": "一套专注工作区的Notion模板 → 卖给使用Notion管理的自由职业者或小团队",
+      "fingerprint": "一套专注工作区notion模板卖给使notion管理自由职业者或小团队",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/zmlrzi/notion_mono_focus_os_a_template_for_a_focused_life/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0254_一个分类清晰垂直领域资源": {
+      "topic": "一个分类清晰的垂直领域资源库文档 → 卖给需要某领域工具/资源清单的从业者（设计师、播客主、独立开发者）",
+      "fingerprint": "一个分类清晰垂直领域资源库文档卖给需要某领域工具资源清单从业者设计师podcast主独立开发者",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/z2bh0n/400_sites_and_resources_library/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0255_帮客户nocode工具搭": {
+      "topic": "帮客户用无代码工具搭建AI自动化工作流，按月收维护费 → 卖给本地中小型服务企业老板（律所、诊所、房产中介、电商卖家）",
+      "fingerprint": "帮客户nocode工具搭建ai自动化工作流按月收维护费卖给本地中小型服务企业老板律所诊所房产中介ecommerce卖家",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Liam Ottley (AI Automation Agency)"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=ONd2UNBmQ40"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0256_印有政治标语或梗图t恤一": {
+      "topic": "印有政治标语或梗图的T恤，一件代发 → 卖给关注美国政治议题的年轻人/小众NGO组织",
+      "fingerprint": "印有政治标语或梗图t恤一件代发卖给关注美国政治议题年轻人小众ngo组织",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/political-merchandise"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0257_围绕该爱好youtube": {
+      "topic": "围绕该爱好的YouTube视频内容，建立粉丝社区 → 卖给对某个小众爱好有热情的普通人（不一定是漫威）",
+      "fingerprint": "围绕该爱好youtube视频内容建立粉丝社区卖给对某个小众爱好有热情不一定漫威",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3543-story-professor-starts-marvel-ous-youtube-channel"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0258_一款健身目标追踪进度记录": {
+      "topic": "一款健身目标追踪与进度记录的Notion模板 → 卖给有健身习惯、想在Notion里管理训练计划的人",
+      "fingerprint": "一款健身目标追踪进度记录notion模板卖给有健身习惯想notion里管理训练计划人",
+      "first_seen": "2026-09-22",
+      "last_seen": "2026-09-22",
+      "times_seen": 1,
+      "sources": [
+        "r/Gumroad"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/gumroad/comments/yn53kw/athlete_os_50_discount/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
       "feedback": {
         "up": 0,
         "down": 0
