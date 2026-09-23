@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-22 00:39",
+  "updated": "2026-09-23 23:08",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4903,6 +4903,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0259_家居日类商品零售店铺卖给": {
+      "topic": "家居日用类商品的零售店铺 → 卖给想在小红书卖货的普通上班族",
+      "fingerprint": "家居日类商品零售店铺卖给想小红书卖货普通上班族",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小黄橘子"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a96bde6a0210c197dcbc170?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 54,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0260_垂直领域博客内容资产靠流": {
+      "topic": "垂直领域博客内容资产，靠流量广告或推广变现 → 卖给有写作能力的普通人",
+      "fingerprint": "垂直领域博客内容资产靠流量广告或推广卖给有写作能力",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-66-%e7%94%a8%e9%83%a8%e8%90%bd%e6%a0%bc%e8%b3%ba%e9%8c%a2%e7%b9%b3%e6%88%bf%e8%b2%b8/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0261_一套notion线课程卖": {
+      "topic": "一套Notion在线课程 → 卖给想学习Notion并提升工作效率的职场人士",
+      "fingerprint": "一套notion线课程卖给想学习notion并提升工作效率职场人士",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckqc4o0jwch800833bts3wlax"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0262_基于卡片盒笔记法写作流程": {
+      "topic": "一份基于卡片盒笔记法的写作流程指南 → 卖给想要提升写作效率的知识工作者",
+      "fingerprint": "基于卡片盒笔记法写作流程指南卖给想要提升写作效率知识工作者",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clmpshwft01jc01yg0tuy8mpp"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 30,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0263_从拍卖现场淘来旧硬币金属": {
+      "topic": "从拍卖现场淘来的旧硬币、金属废料转卖 → 卖给本地旧货市场卖家、收藏爱好者",
+      "fingerprint": "从拍卖现场淘来旧硬币金属废料转卖卖给本地旧货市场卖家收藏爱好者",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3551-first-1000-my-roommate-threw-a-wad-of-hundred-dollar"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0264_mcat考试辅导视频教程": {
+      "topic": "MCAT考试辅导视频教程 → 卖给准备参加MCAT考试的学生",
+      "fingerprint": "mcat考试辅导视频教程卖给准备参加mcat考试学生",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3546-qa-where-are-my-customers-coming-from"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
       "feedback": {
         "up": 0,
         "down": 0
