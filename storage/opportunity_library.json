@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-23 23:08",
+  "updated": "2026-09-24 23:07",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -5017,6 +5017,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0265_个性化饮食减脂方案服务需": {
+      "topic": "个性化饮食+减脂方案服务（需相关资质） → 卖给有减脂需求的职场人或宝妈",
+      "fingerprint": "个性化饮食减脂方案服务需相关资质卖给有减脂需求职场人或宝妈",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·职妈实验室Working Mom L"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68d07ae52c82c9dcca856ac7?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 77,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0266_从低价渠道收二手球鞋得物": {
+      "topic": "从低价渠道收二手球鞋，在得物/闲鱼溢价卖出赚差价 → 卖给有闲置资金、愿意花时间研究球鞋的普通人",
+      "fingerprint": "从低价渠道收二手球鞋得物闲鱼溢价卖出赚差价卖给有闲置资金愿意花时间研究球鞋",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "B站·Letitber"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Hehb6hEsT"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0267_ai工具快速生成海报图标": {
+      "topic": "用AI工具快速生成的海报、图标、界面设计素材 → 卖给需要设计服务的中小企业主或个人创作者",
+      "fingerprint": "ai工具快速生成海报图标界面设计素材卖给需要设计服务中小企业主或个人创作者",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69917076de29766da9a621f5?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0268_一套notion线上课程": {
+      "topic": "一套Notion线上课程或付费社群 → 卖给想学Notion的个人或小型团队",
+      "fingerprint": "一套notion线上课程或付费社群卖给想学notion个人或小型团队",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckqc4o0jwch800833bts3wlax"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0269_文章未提供可复制具体交付": {
+      "topic": "文章未提供可复制的具体交付物详情 → 卖给有减肥需求且工作繁忙的上班族或宝妈",
+      "fingerprint": "文章未提供可复制具体交付物详情卖给有减肥需求且工作繁忙上班族或宝妈",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·职妈实验室Working Mom L"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68be4f78d644af9423fde89b?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0270_文章未提供可复制具体交付": {
+      "topic": "文章未提供可复制的具体交付物详情 → 卖给想做副业但不知道从哪下手的人",
+      "fingerprint": "文章未提供可复制具体交付物详情卖给想但不知道从哪下手人",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a9faf98f03e74ee6b06f3f8?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
       "feedback": {
         "up": 0,
         "down": 0

@@ -1450,6 +1450,12 @@
           "url": "https://x.com/khazix0918/status/2095688501891354915",
           "date": "2026-09-04",
           "summary": "看到GPT-6 Astra发布之后，作为一个博主很激动。\n但写完稿子以后，躺在床上久久不能入眠。\n\n作为一家30多个人的公司的企业管理者，这个时候却又会很真实的焦虑。\n我怕这个时代太快，我们的团队、我们的组织跟不上。\n\n只能尽可能向大家表达我的想法、还有我的认知。\n尽可能让我们的小伙伴，更加的AI https://t.co/0cWEFnNMS7"
+        },
+        {
+          "title": "3年前第一次写公众号的时候，每篇只有几十几百阅读，曾无数次幻想，如果每篇都有上万阅读的话，那该多牛逼啊。\n\n​2年前，每篇都能稳定上万了，看着我很喜欢的差评和小声比比，我又在幻想，啥时候，我也能跟他们一样，篇篇10w+啊。 https://",
+          "url": "https://x.com/khazix0918/status/2103017035563466871",
+          "date": "2026-09-24",
+          "summary": "3年前第一次写公众号的时候，每篇只有几十几百阅读，曾无数次幻想，如果每篇都有上万阅读的话，那该多牛逼啊。\n\n​2年前，每篇都能稳定上万了，看着我很喜欢的差评和小声比比，我又在幻想，啥时候，我也能跟他们一样，篇篇10w+啊。 https://t.co/xAMgPEhahM"
         }
       ],
       "teardown": null,
@@ -11161,7 +11167,7 @@
       "last_teardown": "2026-09-23",
       "teardown_count": 1,
       "discovered_date": "2026-09-23",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -11217,6 +11223,117 @@
         "gate_reason": ""
       },
       "commercial_severity": "ok"
+    },
+    "阿丹": {
+      "handle": "阿丹",
+      "name": "阿丹",
+      "region": "国内",
+      "category": "美团离职后从零起步做公众号个人IP，第一个月即遭遇限流危机并自行拆解平台规则完成复苏，展现出「理解规则→调整策略→重新启动」的一人公司闭环能力，是普通大厂人转型的可复制范本。",
+      "aliases": [
+        "阿丹"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": null,
+      "teardown_count": 0,
+      "discovered_date": "2026-09-24",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-24",
+      "commercial_health": null,
+      "commercial_severity": ""
+    },
+    "Steven / PromptTalk": {
+      "handle": "Steven / PromptTalk",
+      "name": "Steven（吴绍纲）",
+      "region": "国内",
+      "category": "前苹果员工在2026年选择离开职场成为一人公司探索者，同时是摄影师、内容创作者和播客《生成中PromptTalk》主理人，把AI真正落地到自己的内容生产与知识系统里，展示了科技从业者如何用AI赋能一人公司的实战路径。",
+      "aliases": [
+        "Steven（吴绍纲）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "低",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": "2026-09-24",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-24",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-24",
+      "commercial_health": {
+        "commercial": 34,
+        "feasibility": 45,
+        "startup_index": 3,
+        "composite": 37.1,
+        "drivers": [
+          [
+            "客户规模",
+            4
+          ],
+          [
+            "启动资金低",
+            4
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            1
+          ],
+          [
+            "交付链路清晰",
+            2
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没写清客户从哪来 → 封顶6分",
+          "疑似卖课/卖铲子 → 封顶3分"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 3,
+          "pricing": 2,
+          "margin": 3,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 3,
+          "channel": 2,
+          "machine": 2,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 4,
+          "speed": 3,
+          "skill": 3,
+          "concrete": 2,
+          "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "skip"
     }
   }
 }
