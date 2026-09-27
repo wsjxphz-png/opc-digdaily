@@ -1737,6 +1737,12 @@
           "url": "https://x.com/pandatalk8/status/2099802629987782745",
           "date": "2026-09-15",
           "summary": "存款进sp500 ， 退居三线小城租房子，偶尔搞搞产品，主业自媒体， 睡后收入超过每日消费， 自媒体的收入慢慢超过了离职前的收入，更气人的是颈椎病和腱鞘炎也消失了， 更气人的是每天发推的收入超过了黄袍加身的收入。"
+        },
+        {
+          "title": "我从 tw93 那里学到的两个很有用的经验：\n\n1. 找到用户真正的需求。 mole 清理磁盘、卸载流氓软件这样的需求一直都存在，而且用户基数很大。  \n\n2. build in public 推广的技巧。",
+          "url": "https://x.com/pandatalk8/status/2104033717928996904",
+          "date": "2026-09-27",
+          "summary": "我从 tw93 那里学到的两个很有用的经验：\n\n1. 找到用户真正的需求。 mole 清理磁盘、卸载流氓软件这样的需求一直都存在，而且用户基数很大。  \n\n2. build in public 推广的技巧。"
         }
       ],
       "teardown": null,
@@ -1894,6 +1900,12 @@
           "url": "https://x.com/dontbesilent/status/2101664827030790278",
           "date": "2026-09-20",
           "summary": "我觉得挺快乐呀\n\n问题是就算不赚钱，我也得大量思考大量执行呀\n\n对于我来说，这些钱都算是老天白给的思考者分成\n\n就像推特每个月给我的 1000 美金一样 https://t.co/UBUaJRhOeL"
+        },
+        {
+          "title": "有时候，你会看见一些人的想法错得离谱\n\n可是纠正他们的过程又太过于漫长\n\n于是一声长叹，放弃拯救\n\n这些人会说：你能不能卖一个产品给我，纠正我的想法呢？\n\n这真的不太行，因为说服这些人的成本已经超过了这些产品所能赚取的收益\n\n也就是 —— ",
+          "url": "https://x.com/dontbesilent/status/2104181791393493473",
+          "date": "2026-09-27",
+          "summary": "有时候，你会看见一些人的想法错得离谱\n\n可是纠正他们的过程又太过于漫长\n\n于是一声长叹，放弃拯救\n\n这些人会说：你能不能卖一个产品给我，纠正我的想法呢？\n\n这真的不太行，因为说服这些人的成本已经超过了这些产品所能赚取的收益\n\n也就是 —— 这些问题根本就不值得、也不应该被解决"
         }
       ],
       "teardown": null,
@@ -11479,6 +11491,226 @@
           "skill": 3,
           "concrete": 2,
           "no_code": 4
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "产品颜色测试未过：只有方向没有产品；印钞机检验未过：靠个人魅力/独家关系，换人就失效；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+      },
+      "commercial_severity": "skip"
+    },
+    "fuyegirl": {
+      "handle": "fuyegirl",
+      "name": "琪琪老师",
+      "region": "国内",
+      "category": "小红书官方电商讲师，专注帮实体商家做个人IP，沉淀了「定位梳理表格」和「万字小红书新手起号SOP」作为可复用资产，交付方式以已有素材为主而非实时陪跑。",
+      "aliases": [
+        "琪琪老师"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "fuyegirl",
+        "operator_name": "琪琪老师",
+        "region": "国内",
+        "who": "琪琪老师，国内小红书官方认证电商讲师，聚焦实体商家（服装店、餐饮店、美容美发等线下店铺）的个人IP打造赛道。身份是「小红书商业生态的赋能者」——既懂平台规则又懂实体老板痛点的实战派教练。规模：单人操盘型，通过课程+社群+模板资产赚钱，月收入未公开，从「官方讲师」身份和客户量推断在数万到十几万级别",
+        "deliverable": "三类可复用数字资产，而非定制服务：①「定位梳理表格」——帮助实体老板想清楚自己适合做什么内容、打哪个关键词；②「万字小红书新手起号SOP」——按步骤教学的文档；③ 线上课程/训练营——讲怎么拍笔记、怎么养号、怎么变现。交付形式是「发资料+录播课+社群答疑」，不是1对1陪跑，边际成本低",
+        "business_model": "混合模式：① 低价引流款——免费或低价（99-299元）的「定位梳理表格」「新手SOP」作为钩子；② 中价课程——几百到一两千元的小红书起号课；③ 高价训练营/私教——数千元的一对多带练或小班陪跑（具体金额未公开）。核心是「卖模板和流程」而非卖时间，一份素材可以卖给多人，毛利极高",
+        "acquisition": "最核心的打法：①「官方讲师」身份背书——小红书官方认证的讲师头衔是最大的获客杠杆，客户会因为「她是官方认证的」而信任；② 小红书内容矩阵——在小红书发案例拆解、起号技巧、账号诊断，吸引实体老板关注；③ 直播答疑/连麦——通过直播现场诊断账号，展示专业能力，顺便转化；④ 老客户转介绍——教出来的学员再推荐朋友，形成口碑飞轮；⑤ 与其他电商培训机构合作分成。第一波客户来源：小红书官方活动、平台颁发的讲师证书、以及早期免费诊断积累的案例截图",
+        "stack": "无需写代码：① 小红书（主战场，内容+获客+成交）；② 微信（私域承接，朋友圈+社群）；③ Notion/语雀（制作SOP文档和表格）；④ 小鹅通/知识星球/有赞（课程交付和收款）；⑤ 剪映/Canva（做笔记封面和视频）；⑥ ChatGPT（辅助生成内容框架和文案）",
+        "replicability": 4,
+        "first_step": "今天就注册一个小红书账号，用「实体商家个人IP教练」的身份发第一条笔记：标题写「实体店老板做小红书，90%都死在这一步」，内容讲「定位不清」的痛苦，结尾放一个免费的「定位梳理表格」下载链接（用Notion做一个简单的表格），引流到微信后开始转化",
+        "red_flag": "① 「卖铲子」风险：如果主要收入来自「教别人做个人IP」而非自己通过IP变现，这属于卖铲子模式——门槛低但天花板也低；② 依赖官方身份：她的权威来自「小红书官方讲师」头衔，一旦官方政策变化或她失去认证，获客能力会骤降；③ 竞争激烈：赛道已经很卷，大量同质化讲师涌入，新人入场难度在增加",
+        "learn": "① 用「可复用资产」替代「时间换钱」——一份SOP可以卖给无数人，这是单人数字工作室的核心杠杆；② 「官方背书」是最强的获客武器——争取成为某个平台的认证讲师/服务商，比发100条笔记都管用",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用小红书+Notion+微信即可复刻核心流程）",
+        "signals_used": 0,
+        "generated_at": "2026-09-27 23:09",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 62,
+          "feasibility": 75,
+          "startup_index": 7,
+          "composite": 65.5,
+          "drivers": [
+            [
+              "交付毛利",
+              5
+            ],
+            [
+              "启动资金低",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "持续付费",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [],
+          "factors": {
+            "urgency": 4,
+            "pricing": 3,
+            "margin": 5,
+            "repeat": 2,
+            "price_ladder": 3,
+            "revenue_proof": 3,
+            "market_size": 4,
+            "evergreen": 4,
+            "channel": 4,
+            "machine": 3,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": ""
+        }
+      },
+      "last_teardown": "2026-09-27",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-27",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-27",
+      "commercial_health": {
+        "commercial": 62,
+        "feasibility": 75,
+        "startup_index": 7,
+        "composite": 65.5,
+        "drivers": [
+          [
+            "交付毛利",
+            5
+          ],
+          [
+            "启动资金低",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "持续付费",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [],
+        "factors": {
+          "urgency": 4,
+          "pricing": 3,
+          "margin": 5,
+          "repeat": 2,
+          "price_ladder": 3,
+          "revenue_proof": 3,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 4,
+          "machine": 3,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": ""
+      },
+      "commercial_severity": "ok"
+    },
+    "一来老师": {
+      "handle": "一来老师",
+      "name": "一来",
+      "region": "国内",
+      "category": "大学生靠公众号还清贷款、大爷靠它赚养老金的真实案例，他做的公众号流量主教程和信息差社群属于知识产品，可复用。",
+      "aliases": [
+        "一来"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": null,
+      "last_teardown": "2026-09-27",
+      "teardown_count": 1,
+      "discovered_date": "2026-09-27",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-09-27",
+      "commercial_health": {
+        "commercial": 35,
+        "feasibility": 46,
+        "startup_index": 3,
+        "composite": 43.2,
+        "drivers": [
+          [
+            "启动资金低",
+            5
+          ],
+          [
+            "不用写代码",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "获客路径清晰",
+            1
+          ],
+          [
+            "收入证据",
+            1
+          ]
+        ],
+        "caps": [
+          "说不清具体卖什么给谁 → 封顶3分",
+          "只有原作者本人能做 → 封顶4分",
+          "没写清客户从哪来 → 封顶6分",
+          "需求不痛且卖不上价 → 封顶5分"
+        ],
+        "gates": [
+          "产品颜色测试未过：只有方向没有产品",
+          "印钞机检验未过：靠个人魅力/独家关系，换人就失效",
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
+          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+        ],
+        "factors": {
+          "urgency": 2,
+          "pricing": 2,
+          "margin": 4,
+          "repeat": 3,
+          "price_ladder": 2,
+          "revenue_proof": 1,
+          "market_size": 4,
+          "evergreen": 4,
+          "channel": 1,
+          "machine": 2,
+          "delivery_chain": 2,
+          "replicable": 3,
+          "capital": 5,
+          "speed": 2,
+          "skill": 4,
+          "concrete": 1,
+          "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
