@@ -836,6 +836,12 @@
           "url": "https://x.com/dickiebush/status/2102736253011603539",
           "date": "2026-09-23",
           "summary": "My entire business system broken down:\n\n1. Social content on multiple platforms posted multiple times per day\n\n2. All social traffic drives to an email list of some kind - either a lead magnet or directly to my newsletter\n\n3. Every email list sends 1-3 emails per week, building"
+        },
+        {
+          "title": "The exact loop I now use when I need to build anything with AI:\n\n1. Write down my first pass at what I want complete\n\n2.",
+          "url": "https://x.com/dickiebush/status/2104639839677165839",
+          "date": "2026-09-28",
+          "summary": "The exact loop I now use when I need to build anything with AI:\n\n1. Write down my first pass at what I want complete\n\n2. Grant it access to the tools it needs to complete the build\n\n3. Review its V1, give feedback, and make another set of decisions\n\n4. Repeat and iterate in plain"
         }
       ],
       "teardown": null,
@@ -11153,28 +11159,28 @@
         "operator_handle": "大勺子爱测评",
         "operator_name": "大勺子",
         "region": "国内",
-        "who": "大勺子，国内素人家居博主，单人运作，无团队。从数码赛道转型家居赛道，积累约20万粉丝，月入约5万（标签来源，推断值），主要靠品牌合作广告变现。",
-        "deliverable": "家居家装类短视频和图文内容（用手机拍摄），交付给小红书和抖音平台用户；同时向家居品牌方交付广告合作内容（植入视频/图文）。",
-        "business_model": "主要靠品牌合作广告收入（按条收费或项目制），月收入约5万（标签来源，推断值）。其他收入来源未公开。无订阅、无自营产品销售记录。",
-        "acquisition": "① 主阵地：小红书、抖音（国内短视频/图文平台）。② 具体内容动作：早期在数码赛道积累基础后，主动切换到家居装修细分领域，用素人视角记录/分享家居内容，持续发布短视频和图文笔记。③ 第一波客户来源：标签未透露具体前3-5个品牌合作从哪来；粉丝增长来源于内容自然流量。④ 可照抄的打法：用同一套「爱好拍成内容」思路——选择自己熟悉的领域（哪怕是家装小白），用手机真实记录，找到小红书/抖音的家居赛道，坚持输出，粉丝起来后自然会有品牌主动联系或通过商业平台接单。但品牌合作的具体谈判方式、接单渠道（是否通过MCN、商业接单平台等）未公开，降低了可复制性。",
-        "stack": "手机（拍摄设备）、剪映（视频剪辑，国内现成无代码工具）、小红书App、抖音App、无复杂工具链，点鼠标即可。",
+        "who": "大勺子，国内素人家居博主，从数码赛道转型家居赛道，约20万粉丝，声称月入约5万元（该数字来自用户提供材料，未公开可核实证据）。单人运营，无团队。",
+        "deliverable": "交付物是短视频/图文内容，发给品牌方作为商业合作素材（植入、定制内容、软广）。内容主题围绕家居改造、家装避坑、好物分享等。「卖给」想触达装修人群的品牌方（家具、家电、家居用品等）。",
+        "business_model": "商业模式以品牌合作（商单植入/定制内容）为主，收费形式为项目制（按条/按篇报价）。具体客单价和每月收入未公开可核实证据，用户称约5万元/月仅为素材说法，无法独立确认。除品牌合作外，是否有其他收入来源未说明。",
+        "acquisition": "获客方式（基于用户提供材料的还原，具体细节未公开）：①渠道——主要阵地为小红书（国内家居垂类内容核心平台），同时可能有抖音/B站同步分发。②具体内容动作——早期以数码内容试水，后切入家居赛道，用「手机直出实拍」而非专业设备拍摄家装改造、避坑攻略、好物推荐等内容。③第一波客户来源——素材中未说明其前3-5个粉丝或客户的具体来源路径。④可照抄的打法——素人定位+手机拍摄降低门槛；从自己熟悉的赛道（数码）迁移到家居赛道，用「把爱好拍成内容」的心态持续输出，靠内容本身吸引品牌方主动联系或博主主动 outreach。但具体发布节奏、标题公式、话题标签打法、冷启动流量如何撬动等关键细节均未公开，这是本案例可抄性的最大缺口。",
+        "stack": "工具链：手机拍摄 → 剪映（或其他手机剪辑App）→ 小红书发布 → 品牌对接（通过站酷/商务群/品牌主动私信等方式）。全程无需写代码，全是现成无代码工具。",
         "replicability": 4,
-        "first_step": "今天就注册小红书账号，选择「家居/装修」这个细分领域，用手机拍第一条内容发出去——哪怕只是分享一件你最近买的家居好物或装修心得。",
-        "red_flag": "收入来源是品牌合作广告而非卖课/卖社群，不是典型的「卖铲子」模式，这是正面信号。但风险在于：家居赛道竞争激烈，素人出头难度比标签描述的看起来更高；且标签中的「月入5万」是推断值，实际收入可能波动较大，单人博主抗风险能力弱。",
-        "learn": "最值得抄的两点：一是「素人用手机就能跑通变现闭环」——不需要专业设备、不需要团队、不需要写代码；二是「跨赛道切换」思路，从数码转家居证明只要内容方向对，素人身份不是障碍，关键是找到有需求的细分领域持续输出。",
+        "first_step": "今天就能做的第一件事：打开手机，拍一条你正在做的「家居相关」事情（整理桌面、挑窗帘、逛建材市场都行），配上「我刚做完这件事，有3个没想到」这类真实感受的文案，发到小红书，观察数据反馈再迭代。",
+        "red_flag": "风险/卖铲子判断：目前无法判断其是否转向「教别人做家居博主」卖课。若其未来主要收入转为卖课/社群/模板，则普通人照做可复制性会降低。普通人模仿的最大坑：把「月入5万」当结果承诺，但不知其背后发布频率、内容选题、商单报价谈判过程，容易只模仿形式（拍视频）而忽略内核（选题和转化）。",
+        "learn": "最值得普通人学习的两点：①素人不需要专业设备，手机+真实场景就能跑通家居内容，降低了启动门槛；②从自己熟悉或热爱的赛道切入（如数码转家居），比硬追热点更容易持续产出。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用手机+免费App即可开始）",
+        "doable": "能（完全不用写代码，用现成工具即可）",
         "signals_used": 0,
-        "generated_at": "2026-09-29 02:11",
+        "generated_at": "2026-09-30 00:31",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 62,
-          "feasibility": 74,
-          "startup_index": 7,
-          "composite": 65.0,
+          "commercial": 47,
+          "feasibility": 68,
+          "startup_index": 6,
+          "composite": 56.9,
           "drivers": [
             [
-              "交付毛利",
+              "客户规模",
               5
             ],
             [
@@ -11184,38 +11190,44 @@
           ],
           "drags": [
             [
+              "收入证据",
+              2
+            ],
+            [
               "定价结构",
               2
             ]
           ],
           "caps": [],
-          "gates": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
           "factors": {
             "urgency": 4,
-            "pricing": 3,
-            "margin": 5,
+            "pricing": 2,
+            "margin": 4,
             "repeat": 3,
             "price_ladder": 2,
-            "revenue_proof": 3,
-            "market_size": 4,
+            "revenue_proof": 2,
+            "market_size": 5,
             "evergreen": 4,
             "channel": 3,
-            "machine": 4,
+            "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
             "capital": 5,
             "speed": 3,
-            "skill": 5,
-            "concrete": 4,
+            "skill": 4,
+            "concrete": 3,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": ""
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-09-29",
-      "teardown_count": 3,
+      "last_teardown": "2026-09-30",
+      "teardown_count": 4,
       "discovered_date": "2026-09-23",
       "is_new": false,
       "established": false,
@@ -11223,13 +11235,13 @@
       "revisit_count": 0,
       "recommended_at": "2026-09-23",
       "commercial_health": {
-        "commercial": 62,
-        "feasibility": 74,
-        "startup_index": 7,
-        "composite": 65.0,
+        "commercial": 47,
+        "feasibility": 68,
+        "startup_index": 6,
+        "composite": 56.9,
         "drivers": [
           [
-            "交付毛利",
+            "客户规模",
             5
           ],
           [
@@ -11239,36 +11251,42 @@
         ],
         "drags": [
           [
+            "收入证据",
+            2
+          ],
+          [
             "定价结构",
             2
           ]
         ],
         "caps": [],
-        "gates": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
         "factors": {
           "urgency": 4,
-          "pricing": 3,
-          "margin": 5,
+          "pricing": 2,
+          "margin": 4,
           "repeat": 3,
           "price_ladder": 2,
-          "revenue_proof": 3,
-          "market_size": 4,
+          "revenue_proof": 2,
+          "market_size": 5,
           "evergreen": 4,
           "channel": 3,
-          "machine": 4,
+          "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
           "capital": 5,
           "speed": 3,
-          "skill": 5,
-          "concrete": 4,
+          "skill": 4,
+          "concrete": 3,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": ""
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
-      "commercial_severity": "ok"
+      "commercial_severity": "warn"
     },
     "阿丹": {
       "handle": "阿丹",
@@ -11528,36 +11546,40 @@
         "operator_handle": "fuyegirl",
         "operator_name": "琪琪老师",
         "region": "国内",
-        "who": "琪琪老师，国内小红书官方认证电商讲师，聚焦实体商家（服装店、餐饮店、美容美发等线下店铺）的个人IP打造赛道。身份是「小红书商业生态的赋能者」——既懂平台规则又懂实体老板痛点的实战派教练。规模：单人操盘型，通过课程+社群+模板资产赚钱，月收入未公开，从「官方讲师」身份和客户量推断在数万到十几万级别",
-        "deliverable": "三类可复用数字资产，而非定制服务：①「定位梳理表格」——帮助实体老板想清楚自己适合做什么内容、打哪个关键词；②「万字小红书新手起号SOP」——按步骤教学的文档；③ 线上课程/训练营——讲怎么拍笔记、怎么养号、怎么变现。交付形式是「发资料+录播课+社群答疑」，不是1对1陪跑，边际成本低",
-        "business_model": "混合模式：① 低价引流款——免费或低价（99-299元）的「定位梳理表格」「新手SOP」作为钩子；② 中价课程——几百到一两千元的小红书起号课；③ 高价训练营/私教——数千元的一对多带练或小班陪跑（具体金额未公开）。核心是「卖模板和流程」而非卖时间，一份素材可以卖给多人，毛利极高",
-        "acquisition": "最核心的打法：①「官方讲师」身份背书——小红书官方认证的讲师头衔是最大的获客杠杆，客户会因为「她是官方认证的」而信任；② 小红书内容矩阵——在小红书发案例拆解、起号技巧、账号诊断，吸引实体老板关注；③ 直播答疑/连麦——通过直播现场诊断账号，展示专业能力，顺便转化；④ 老客户转介绍——教出来的学员再推荐朋友，形成口碑飞轮；⑤ 与其他电商培训机构合作分成。第一波客户来源：小红书官方活动、平台颁发的讲师证书、以及早期免费诊断积累的案例截图",
-        "stack": "无需写代码：① 小红书（主战场，内容+获客+成交）；② 微信（私域承接，朋友圈+社群）；③ Notion/语雀（制作SOP文档和表格）；④ 小鹅通/知识星球/有赞（课程交付和收款）；⑤ 剪映/Canva（做笔记封面和视频）；⑥ ChatGPT（辅助生成内容框架和文案）",
+        "who": "琪琪老师，小红书官方认证电商讲师，专注帮实体商家（美业、餐饮、零售等）做个人IP打造和小红书起号，已沉淀出定位梳理表格、万字新手起号SOP等标准化方法论资产",
+        "deliverable": "知识型数字产品（定位梳理表格、起号SOP等模板）+ 可能的课程/培训服务，交付对象是实体店主，帮他们从0到1跑通小红书获客",
+        "business_model": "知识付费：售卖已有素材（SOP表格、课程）+ 可能的陪跑服务，收费方式未公开（推测入门产品几百元、高阶陪跑数千至万元级）",
+        "acquisition": "①平台：小红书（自己作为案例）+ 可能的短视频平台引流；②动作：用「帮实体商家做IP」的内容输出建立专家人设，同时用「定位表格」「万字SOP」作为免费/低价钩子获客；③第一批客户来源：未公开，推测从自身服务实体商家的案例中筛选可复制的典型；④可照抄打法：在小红书发「实体商家怎么做个人IP」系列笔记，用定位表格免费领作为钩子引流",
+        "stack": "小红书创作者工具、Notion/飞书做SOP文档、表单工具收集线索、可能用ChatGPT辅助内容生产、无代码交付平台（如小鹅通/有赞等）",
         "replicability": 4,
-        "first_step": "今天就注册一个小红书账号，用「实体商家个人IP教练」的身份发第一条笔记：标题写「实体店老板做小红书，90%都死在这一步」，内容讲「定位不清」的痛苦，结尾放一个免费的「定位梳理表格」下载链接（用Notion做一个简单的表格），引流到微信后开始转化",
-        "red_flag": "① 「卖铲子」风险：如果主要收入来自「教别人做个人IP」而非自己通过IP变现，这属于卖铲子模式——门槛低但天花板也低；② 依赖官方身份：她的权威来自「小红书官方讲师」头衔，一旦官方政策变化或她失去认证，获客能力会骤降；③ 竞争激烈：赛道已经很卷，大量同质化讲师涌入，新人入场难度在增加",
-        "learn": "① 用「可复用资产」替代「时间换钱」——一份SOP可以卖给无数人，这是单人数字工作室的核心杠杆；② 「官方背书」是最强的获客武器——争取成为某个平台的认证讲师/服务商，比发100条笔记都管用",
-        "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用小红书+Notion+微信即可复刻核心流程）",
+        "first_step": "在小红书注册账号，定位「实体商家个人IP打造」细分领域，先发10篇关于实体店如何做小红书获客的笔记，用一份「商家定位自检表」作为免费钩子收集潜在学员线索",
+        "red_flag": "典型卖铲子模式——收入主要靠「教别人做小红书」而非自己用小红书直接获客赚钱，客户群体是同样想赚钱的实体店主，竞争激烈且可替代性强",
+        "learn": "①用方法论资产化降低交付成本（SOP表格可无限复制）；②选择「帮他人赚钱」这个永远有需求的赛道",
+        "tech_barrier": "低",
+        "doable": "能（完全不用写代码，用现成模板和平台即可开始）",
         "signals_used": 0,
-        "generated_at": "2026-09-27 23:09",
+        "generated_at": "2026-09-30 00:32",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 62,
-          "feasibility": 75,
-          "startup_index": 7,
-          "composite": 65.5,
+          "commercial": 50,
+          "feasibility": 63,
+          "startup_index": 6,
+          "composite": 55.8,
           "drivers": [
-            [
-              "交付毛利",
-              5
-            ],
             [
               "启动资金低",
               5
+            ],
+            [
+              "交付毛利",
+              4
             ]
           ],
           "drags": [
+            [
+              "定价结构",
+              2
+            ],
             [
               "持续付费",
               2
@@ -11566,31 +11588,31 @@
           "caps": [],
           "gates": [],
           "factors": {
-            "urgency": 4,
+            "urgency": 3,
             "pricing": 3,
-            "margin": 5,
+            "margin": 4,
             "repeat": 2,
-            "price_ladder": 3,
+            "price_ladder": 2,
             "revenue_proof": 3,
             "market_size": 4,
-            "evergreen": 4,
-            "channel": 4,
+            "evergreen": 3,
+            "channel": 3,
             "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
             "capital": 5,
-            "speed": 4,
+            "speed": 3,
             "skill": 4,
-            "concrete": 4,
-            "no_code": 5
+            "concrete": 3,
+            "no_code": 4
           },
           "coverage": 1.0,
           "degraded": false,
           "gate_reason": ""
         }
       },
-      "last_teardown": "2026-09-27",
-      "teardown_count": 1,
+      "last_teardown": "2026-09-30",
+      "teardown_count": 2,
       "discovered_date": "2026-09-27",
       "is_new": false,
       "established": false,
@@ -11598,21 +11620,25 @@
       "revisit_count": 0,
       "recommended_at": "2026-09-27",
       "commercial_health": {
-        "commercial": 62,
-        "feasibility": 75,
-        "startup_index": 7,
-        "composite": 65.5,
+        "commercial": 50,
+        "feasibility": 63,
+        "startup_index": 6,
+        "composite": 55.8,
         "drivers": [
-          [
-            "交付毛利",
-            5
-          ],
           [
             "启动资金低",
             5
+          ],
+          [
+            "交付毛利",
+            4
           ]
         ],
         "drags": [
+          [
+            "定价结构",
+            2
+          ],
           [
             "持续付费",
             2
@@ -11621,23 +11647,23 @@
         "caps": [],
         "gates": [],
         "factors": {
-          "urgency": 4,
+          "urgency": 3,
           "pricing": 3,
-          "margin": 5,
+          "margin": 4,
           "repeat": 2,
-          "price_ladder": 3,
+          "price_ladder": 2,
           "revenue_proof": 3,
           "market_size": 4,
-          "evergreen": 4,
-          "channel": 4,
+          "evergreen": 3,
+          "channel": 3,
           "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
           "capital": 5,
-          "speed": 4,
+          "speed": 3,
           "skill": 4,
-          "concrete": 4,
-          "no_code": 5
+          "concrete": 3,
+          "no_code": 4
         },
         "coverage": 1.0,
         "degraded": false,
@@ -11823,7 +11849,7 @@
       "last_teardown": "2026-09-29",
       "teardown_count": 1,
       "discovered_date": "2026-09-29",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,

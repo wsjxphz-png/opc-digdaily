@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-29 02:22",
+  "updated": "2026-09-30 00:45",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -5321,6 +5321,63 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 22,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0281_知识写作咨询服务或笔记法": {
+      "topic": "知识写作咨询服务或笔记法培训课程 → 卖给需要提升写作能力或知识管理效率的专业人士",
+      "fingerprint": "知识写作咨询服务或笔记法培训课程卖给需要提升写作能力或知识管理效率专业人士",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clmpshwft01jc01yg0tuy8mpp"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0282_本地市集摆摊售卖自制艺术": {
+      "topic": "在本地市集摆摊售卖自制艺术周边商品 → 卖给有手工或设计能力的个人创作者",
+      "fingerprint": "本地市集摆摊售卖自制艺术周边商品卖给有手工或设计能力个人创作者",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/666bcd87b6a8412729ae1f01?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0283_whatnot平台开直播": {
+      "topic": "在Whatnot平台开直播间，拍卖实物收藏品 → 卖给有收藏爱好的海外华人或英语国家小型收藏品类卖家",
+      "fingerprint": "whatnot平台开直播间拍卖实物收藏品卖给有收藏爱好海外华人或英语国家小型收藏品类卖家",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/how-to-sell-on-whatnot/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 47,
       "feedback": {
         "up": 0,
         "down": 0
