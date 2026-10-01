@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-01 00:38",
+  "updated": "2026-10-02 01:14",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -5397,6 +5397,44 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0285_情感类短视频或图文内容通": {
+      "topic": "情感类短视频或图文内容，通过涨粉后接广告或做知识付费变现 → 卖给20-35岁有情感困惑的城市年轻人",
+      "fingerprint": "情感类短视频或图文内容通过涨粉后接广告或知识付费卖给岁有情感困惑城市年轻人",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/655721005"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0286_为宠物行业提供品牌视觉设": {
+      "topic": "为宠物行业提供品牌视觉设计服务 → 卖给宠物店、宠物美容师、宠物食品品牌等宠物行业经营者",
+      "fingerprint": "为宠物行业提供品牌视觉设计服务卖给宠物店宠物美容师宠物食品品牌等宠物行业经营者",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3561-tbt-graphic-designer-for-dogs-retrieves-new-clients"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
       "feedback": {
         "up": 0,
         "down": 0
