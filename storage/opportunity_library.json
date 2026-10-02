@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-02 01:14",
+  "updated": "2026-10-03 00:29",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -5435,6 +5435,101 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0287_抖音本地生活代运营服务门": {
+      "topic": "抖音本地生活代运营服务（门店上线+直播策划+短视频引流） → 卖给本地小型餐饮店或生活服务门店老板",
+      "fingerprint": "抖音本地生活代运营服务门店上线直播策划短视频引流卖给本地小型餐饮店或生活服务门店老板",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·IP研究所"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6772c1451e823e72d3ff772a?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 58,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0288_亚马逊细分健康功能性食品": {
+      "topic": "亚马逊细分健康/功能性食品品牌 → 卖给有资金（数千至数万美元）想进入跨境电商的卖家",
+      "fingerprint": "亚马逊细分健康功能性食品品牌卖给有资金数千至数万美元想进入跨境ecommerce卖家",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "times_seen": 1,
+      "sources": [
+        "Flippa Blog"
+      ],
+      "urls": [
+        "https://flippa.com/blog/case-study-amazon-fba-carnivore-electrolyte-flippa-sale/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 79,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0289_一个已有一定订阅无脸yo": {
+      "topic": "一个已有一定订阅和收入的无脸YouTube频道 → 卖给有少量资金想购买现成YouTube频道的投资者",
+      "fingerprint": "一个已有一定订阅无脸youtube频道卖给有少量资金想购买现成youtube频道投资者",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "times_seen": 1,
+      "sources": [
+        "Empire Flippers Blog"
+      ],
+      "urls": [
+        "https://empireflippers.com/what-to-look-for-when-buying-a-faceless-youtube-channel/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 26,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0290_垂直兴趣圈子主题服装或周": {
+      "topic": "垂直兴趣圈子的主题服装或周边产品 → 卖给中国国内有某项小众爱好的垂直社群成员",
+      "fingerprint": "垂直兴趣圈子主题服装或周边产品卖给中国国内有某项小众爱好垂直社群成员",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/lacey-conine-success-story"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 26,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0291_印有原创设计t恤或卫衣卖": {
+      "topic": "印有原创设计的T恤或卫衣 → 卖给对特定文化/爱好有认同感的人群（如某游戏、乐队、动漫粉丝）",
+      "fingerprint": "印有原创设计t恤或卫衣卖给对特定文化爱好有认同感人群如某游戏乐队动漫粉丝",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/how-to-create-company-merch"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
       "feedback": {
         "up": 0,
         "down": 0
