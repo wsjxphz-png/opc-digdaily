@@ -687,7 +687,14 @@
       ],
       "tech_barrier": "高",
       "seeded_facts": {},
-      "signals": [],
+      "signals": [
+        {
+          "title": "It's that time of year again. Need to purge my Audible credits and release myself from their subscription reins. \n\nWhat ",
+          "url": "https://x.com/stephsmithio/status/2107509454401105941",
+          "date": "2026-10-06",
+          "summary": "It's that time of year again. Need to purge my Audible credits and release myself from their subscription reins. \n\nWhat audiobook suggestions do you have?! https://t.co/PFzGkjJ6x2"
+        }
+      ],
       "teardown": null,
       "last_teardown": null,
       "teardown_count": 0,
@@ -1965,12 +1972,6 @@
       "seeded_facts": {},
       "signals": [
         {
-          "title": "失业后赚点小钱\n\n当一个失业人士跟我说他准备尝试一下海外电商\n\n我就明白了他还没搞清楚怎么去赚点小钱，他只是看了几篇公众号文章或几条抖音\n\n我们是天朝人，你连身边人的需求都搞不明白，你要去出海搞明白外国人的需求，而且想通过这个来赚钱？\n\n想",
-          "url": "https://x.com/imwsl90/status/2090943044833124400",
-          "date": "2026-08-21",
-          "summary": "失业后赚点小钱\n\n当一个失业人士跟我说他准备尝试一下海外电商\n\n我就明白了他还没搞清楚怎么去赚点小钱，他只是看了几篇公众号文章或几条抖音\n\n我们是天朝人，你连身边人的需求都搞不明白，你要去出海搞明白外国人的需求，而且想通过这个来赚钱？\n\n想多了 想多了"
-        },
-        {
           "title": "下午看了个陈昌文的视频\n\n他说他现在不见人了，每天录视频做内容，直播连线赚钱就好了\n\n其他时间不该不见人\n\n我很羡慕他这种状态\n\n其实我也很讨厌见人\n\n要是要努力干到一百万粉丝吧",
           "url": "https://x.com/imwsl90/status/2091426643688783910",
           "date": "2026-08-23",
@@ -2083,6 +2084,12 @@
           "url": "https://x.com/imwsl90/status/2106719550465351856",
           "date": "2026-10-04",
           "summary": "发个暴论\n\n“从创造价值出发，其实花不了多少 token”\n\n我看很多人每天发自己花了多少亿 token，从未见他发每天赚了多少钱，我只能默认不赚钱\n\n如果你从创造价值出发，AI 带来的效果还是很明显的，赚钱也是非常自然的"
+        },
+        {
+          "title": "就业与挣钱\n\n今天了接了一位朋友的咨询，背景是这位朋友为他刚大学毕业的弟弟前来咨询的\n\n主题主要集中在就业与挣钱，问了很多问题，我总结了几条。\n\n1、赚钱去大公司上班，创业(做生意)去小公司但不要太久",
+          "url": "https://x.com/imwsl90/status/2107461808349196292",
+          "date": "2026-10-06",
+          "summary": "就业与挣钱\n\n今天了接了一位朋友的咨询，背景是这位朋友为他刚大学毕业的弟弟前来咨询的\n\n主题主要集中在就业与挣钱，问了很多问题，我总结了几条。\n\n1、赚钱去大公司上班，创业(做生意)去小公司但不要太久"
         }
       ],
       "teardown": null,
@@ -2332,6 +2339,12 @@
           "url": "https://www.youtube.com/watch?v=wEEi2bCuZGQ",
           "date": "2026-09-24",
           "summary": "Thank you to today's sponsor, which is my personal favorite AI media generator (Higgsfield). COPY MY AUTOMATED AI WORKFLOW:\n👉 Higgsfield CLI integration: https://higgsfield.ai/s/wholesaleted-qGDYyQ\n👉 Canva: https://wholesaletedgo.com/canvapro\n👉 Claude Code: claude.com/product/claude-code\n👉 Printify:"
+        },
+        {
+          "title": "The NEW AI Model Side Hustle Making People RICH",
+          "url": "https://www.youtube.com/watch?v=CXf_UsxGrfg",
+          "date": "2026-10-05",
+          "summary": "A full step-by-step tutorial for the NEW Instagram AI model influencer side hustle\n🤖 Get My FREE AI Business Ebook: https://wholesaleted.com/aibook\n👗 Higgsfield for AI model creation & Omni: https://wholesaletedgo.com/higgsfieldomni\n🗣️ Elevenlabs for AI Voice Changer: https://wholesaletedgo.com/elev"
         }
       ],
       "teardown": null,
@@ -5544,79 +5557,71 @@
         "operator_handle": "做不露脸自媒体10个月的研究生博主",
         "operator_name": "不露脸自媒体博主（研究生）",
         "region": "国内",
-        "who": "一名在读研究生，通过不露脸内容创作在自媒体平台持续输出10个月后实现变现。身份标签为「普通学生+学术背景」，未公开具体平台、粉丝数、月收入等数据。",
-        "deliverable": "交付物推测为知识类数字产品，可能包括：考研/留学经验资料包、 Notion 模板、付费社群（陪伴式学习群）、或者线上轻咨询（学业规划/时间管理）。具体产品形态未公开。",
-        "business_model": "变现方式未公开。推测为一次性付费（资料/模板售卖）+ 月费社群的组合模式。若为纯卖课/卖资料，属低边际成本交付；若含社群陪伴，则有人工投入。定价区间未公开。",
-        "acquisition": "获客路径（基于不露脸自媒体常见模式的合理推断）：① 平台大概率是小红书或 B 站，这两类平台对「不露脸 + 干货图文/短视频」流量友好；② 内容形式为学习笔记截图、资料合集、经验总结图文，配合标题党文案（如「研究生亲测」「10个月变现」）；③ 第一波客户来自平台算法推荐带来的自然流量，以及粉丝在评论区主动询问后私信转化；④ 可照抄的打法：找一个你有专业背景的细分话题（如考研某科目、某个软件技能），用「资料整理 + 经验输出」的方式持续发笔记，在主页或笔记中设置「领取资料需私信/进群」的钩子，把流量导入私域后再转化。",
-        "stack": "工具链推测：Notion（资料整理与模板制作）、剪映或必剪（视频剪辑，不露脸可用素材库+字幕）、小红书/ B 站（内容发布与获客）、微信社群/知识星球（私域运营与付费转化）、小报童或面包多（国内知识付费收款工具）。无编程需求，均为点鼠标操作。",
+        "who": "一名在读研究生，通过不露脸的内容创作（图文/短视频）在小红书或类似平台持续输出，10个月内完成从0到变现的闭环。身份标签为「普通学生/研究生」，无团队、无露脸、无复杂技术背景，属于典型的知识型个人IP起步阶段。规模：未公开具体收入，推测处于月入数千至一万元区间。",
+        "deliverable": "交付物是「学习/成长类内容+轻知识产品」。具体可能包括：①笔记模板/学习计划表等数字资料；②备考/自习/时间管理类的经验内容；③付费社群或1对1咨询。卖给的人群是：备考学生、想要提升学习效率的年轻人、或对个人成长有需求的泛人群。",
+        "business_model": "收费方式采用「内容引流→免费建立信任→付费转化」的路径。可能有以下收入结构：①引流款（免费笔记/干货）；②低价数字产品（9.9-49元模板/资料包）；③中价服务（99-299元1对1咨询/督学）；④高价产品（社群/陪跑计划，未公开）。整体以知识付费/轻服务为主，毛利较高（接近纯数字产品交付）。",
+        "acquisition": "获客方式拆解（典型模式）：①主阵地：小红书（图文笔记）为主，部分同步至抖音/知乎/公众号；②内容动作：发布「学习笔记」「备考经验」「时间管理方法」「书单/资料分享」类笔记，使用封面图+标题党公式（如「研究生复盘｜xxx天背了xxx词」「不露脸but学习很卷」）；③第一波客户来源：前3-5个客户多来自评论区互动、私信咨询，或通过免费资料引流到微信/社群；④可照抄打法：每天固定发1条笔记，聚焦一个细分场景（如「考研英语」「法考」「考研复试」），用真实身份标签（研究生）建立可信度，评论区引导领取免费资料换微信号。",
+        "stack": "工具链极简：①内容制作：Notion/石墨文档（整理内容）、Canva/黄油相机（做封面图）；②发布平台：小红书App；③收款：微信转账/小程序收款码/Gumroad（若做海外）；④社群运营：微信群+腾讯文档；⑤资料交付：百度网盘/夸克网盘自动发货。全程无需写代码，点鼠标即可。",
         "replicability": 4,
-        "first_step": "今天就能做的第一件事：在小红书或 B 站注册账号，选定一个你研究生阶段的专业领域（如某个考试科目、某个研究工具、某类论文写作技巧），整理一份「新手避坑指南」或「必备资料清单」，做成图文笔记发布，观察前3篇的点赞收藏数据，验证是否有兴趣需求。",
-        "red_flag": "这是一个典型的「卖铲子」模式——如果他的主要收入来自教别人「如何做不露脸博主」，则属于二次变现，而非真正在某个垂直领域交付价值。普通人模仿的最大坑是：内容同质化严重，平台流量红利期已过，新号冷启动难度远高于他当年；另外，若变现依赖社群复购，需要持续输出陪伴价值，容易变成时间换钱的陷阱。",
-        "learn": "最值得抄的两个点：① 不露脸也能建立信任感——关键是「专业人设+持续输出」，用资料质量代替颜值吸引力；② 研究生身份本身就是杠杆，学术背景带来天然权威感，普通人可以复用「我有一个稀缺身份/经历」的思路来做定位。",
+        "first_step": "今天就能做的第一件事：打开小红书，搜索「研究生 学习」或「备考 复盘」，找到10个同类型账号，截图他们的笔记封面和标题格式，选一个你最擅长的细分方向（如考研英语/法考/文献阅读），明天发第一条笔记，内容模板：『我是xx学校研究生，分享一个让我效率翻倍的xxx方法』，文末放一句『想要完整资料/计划表可以评论区扣1』。",
+        "red_flag": "①这不是卖铲子，他是真正靠内容和轻知识产品赚钱，风险较低；②但最大坑在于：不露脸模式流量天花板较低，且平台算法变化可能让爆款笔记失效；③同类赛道已非常拥挤（学习博主/考研博主泛滥），新人需要找到更细分的切口（如「研究生怎么写论文」「文献管理技巧」）；④知识付费领域容易被平台判定为营销内容而限流。",
+        "learn": "最值得抄的作业：①「身份标签+真实经历」是最便宜的信任建立方式——研究生身份本身就是一种背书，不需要专业形象；②「不露脸+文字/画面输出」证明了普通人可以用最低成本试水内容变现，关键是把「我知道的东西」包装成「别人需要的东西」。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用现成无代码工具即可）",
+        "doable": "能（完全不用写代码，用现成工具和平台即可）",
         "signals_used": 0,
-        "generated_at": "2026-10-06 03:15",
+        "generated_at": "2026-10-07 00:43",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 38,
-          "feasibility": 65,
-          "startup_index": 3,
-          "composite": 52.7,
+          "commercial": 47,
+          "feasibility": 72,
+          "startup_index": 6,
+          "composite": 58.5,
           "drivers": [
             [
               "启动资金低",
               5
             ],
             [
-              "不用写代码",
+              "技能门槛低",
               5
             ]
           ],
           "drags": [
             [
               "收入证据",
-              1
-            ],
-            [
-              "交付链路清晰",
               2
             ]
           ],
-          "caps": [
-            "说不清具体卖什么给谁 → 封顶3分"
-          ],
+          "caps": [],
           "gates": [
-            "产品颜色测试未过：只有方向没有产品",
-            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-            "链条看不懂：只讲了获客，没讲怎么成交和交付"
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
           ],
           "factors": {
             "urgency": 3,
-            "pricing": 2,
+            "pricing": 3,
             "margin": 4,
             "repeat": 3,
-            "price_ladder": 2,
-            "revenue_proof": 1,
+            "price_ladder": 3,
+            "revenue_proof": 2,
             "market_size": 4,
             "evergreen": 4,
             "channel": 3,
             "machine": 3,
-            "delivery_chain": 2,
+            "delivery_chain": 3,
             "replicable": 4,
             "capital": 5,
-            "speed": 3,
-            "skill": 4,
-            "concrete": 2,
+            "speed": 4,
+            "skill": 5,
+            "concrete": 3,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-10-06",
-      "teardown_count": 19,
+      "last_teardown": "2026-10-07",
+      "teardown_count": 20,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5624,60 +5629,52 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 38,
-        "feasibility": 65,
-        "startup_index": 3,
-        "composite": 52.7,
+        "commercial": 47,
+        "feasibility": 72,
+        "startup_index": 6,
+        "composite": 58.5,
         "drivers": [
           [
             "启动资金低",
             5
           ],
           [
-            "不用写代码",
+            "技能门槛低",
             5
           ]
         ],
         "drags": [
           [
             "收入证据",
-            1
-          ],
-          [
-            "交付链路清晰",
             2
           ]
         ],
-        "caps": [
-          "说不清具体卖什么给谁 → 封顶3分"
-        ],
+        "caps": [],
         "gates": [
-          "产品颜色测试未过：只有方向没有产品",
-          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
         "factors": {
           "urgency": 3,
-          "pricing": 2,
+          "pricing": 3,
           "margin": 4,
           "repeat": 3,
-          "price_ladder": 2,
-          "revenue_proof": 1,
+          "price_ladder": 3,
+          "revenue_proof": 2,
           "market_size": 4,
           "evergreen": 4,
           "channel": 3,
           "machine": 3,
-          "delivery_chain": 2,
+          "delivery_chain": 3,
           "replicable": 4,
           "capital": 5,
-          "speed": 3,
-          "skill": 4,
-          "concrete": 2,
+          "speed": 4,
+          "skill": 5,
+          "concrete": 3,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
     },
@@ -6606,28 +6603,28 @@
         "operator_handle": "05年球鞋搬砖青年",
         "operator_name": "05年球鞋搬砖青年",
         "region": "国内",
-        "who": "05年出生，单人运作的球鞋/手机数码搬砖商，通过跨平台价格差倒卖实物商品，年利润约145万元（公开数据，来源为用户描述）",
-        "deliverable": "倒卖实物商品——主要是球鞋和部分手机数码产品。低买高卖赚差价，不是服务也不是课程，是实打实的商品交易。买家是闲鱼/得物上的个人消费者。",
-        "business_model": "纯赚差价，一次性买卖，无订阅。具体定价未公开。粗略推断：若年利145万，假设毛利率15%-20%，年流水约700万-1000万，单均客单价未公开。模式是典型的中转套利，不是卖铲子。",
-        "acquisition": "核心打法：①在得物/淘宝蹲低价货源——新品限款发售时抢首发价、旧款打折时抄底、拼多多百亿补贴拿货；②同时在闲鱼/得物挂高价卖出。闲鱼是主要出货渠道，因为流量大且买家接受二手溢价；得物用于高价值球鞋验证真实性后出手。③第一波客户来自闲鱼自然流量——只要你价格比同类商品有优势，就会有人搜到下单。④可照抄的具体动作：每天早上刷闲鱼'球鞋'关键词，找那些急于出手的个人卖家（标价明显低于市场价），拍下后再挂回得物或闲鱼加价卖出。关键是找到两个平台之间的价差——比如一双鞋得物300元，闲鱼有人急出200元，你拍下来加价到280元挂闲鱼，净赚80元。这不需要任何技术，只需要勤快+对价格敏感。",
-        "stack": "闲鱼App、得物App、淘宝/拼多多比价、微信（和客户沟通）。如果用到工具，大概率是手动操作，没有自动化系统。可能有手机截图比价的小习惯，但都是手工作业。",
+        "who": "2005年出生，国内球鞋倒卖青年。用信息差在二手/限量球鞋市场赚差价，年入约145万，单人操作，不雇团队。",
+        "deliverable": "限量/热门球鞋。低价从渠道或二级市场买入，加价转手卖给想穿但懒得找的人或专门收鞋的买家。交付物就是一双正品鞋，没有复杂服务。",
+        "business_model": "赚取差价。买价和卖价之间的差额就是利润。一般热门款加价30%-200%不等，冷门款也可能亏。收入取决于周转速度和爆款命中率。具体定价和利润率未公开。",
+        "acquisition": "最关键的环节。①渠道来源：微信球鞋群（全国各地二手球鞋买卖群）、闲鱼（大量挂低价鞋引流）、贴吧/虎扑/得物等球鞋社区蹲货源；②动作打法：在得物/ Nice 等平台监控爆款释放时间和价格波动，蹲点抢购限量款；在闲鱼上用低价引流帖吸引卖家先联系你，形成「有人出鞋→你第一时间收→加价卖出」的闭环；③第一批客户来源：从身边喜欢球鞋的朋友开始，帮他们带买、帮他们收，建立信任后转介绍扩散到微信群；④可照抄的具体打法：加入3-5个本地球鞋群，每天刷得物/闲鱼看哪些款在涨，发现有人急出就立刻出价拿下，再挂到得物/闲鱼上慢卖，赚取信息差+时间差的双倍收益。",
+        "stack": "工具：闲鱼（主力出货平台）、得物/ Nice（行情查询+发货）、微信（客户私域+群聊）、小红书（种草引流）、手机（全程操作不碰电脑）。完全零代码，会用手机就能干。",
         "replicability": 4,
-        "first_step": "今天去闲鱼搜'球鞋'，找一个标价明显低于市场价的急出卖家，私信问能否小刀，如果能谈下来，你就验证了这套打法的最小闭环。",
-        "red_flag": "①这不是卖铲子，是真搬砖，有库存风险——如果买的鞋卖不掉，钱就压在货里；②竞争极度激烈，现在知道这个逻辑的人很多，价差越来越薄；③需要垫资，前期至少要几千到一两万流动资金；④部分货源可能涉及黄牛抢货，有平台封号风险；⑤年收入145万可能是峰值年份，不稳定。",
-        "learn": "最该抄的两个点：①「信息差永远存在」——只要两个平台之间存在价差，就有套利空间，这个逻辑十年都不会过时；②「小单高频比大单低频更安全」——每单只赚几十块但速度快、风险小，比押一大注赌一双鞋涨到翻倍要稳健得多。",
+        "first_step": "今天下载闲鱼和得物，搜索你最喜欢的一款球鞋，对比两边的价格，看看中间有多少差价。有差就记住这个款，观察一周看谁在卖、卖多少钱，摸清市场再下手。",
+        "red_flag": "风险：①库存风险——鞋子压手里卖不掉，尤其是过季款或尺码不全的款，可能亏钱；②假货风险——进货渠道不靠谱收到假鞋会砸口碑；③平台封号风险——频繁交易可能被闲鱼/得物风控；④这不是教人赚钱的课程，他卖的是真实的鞋，但很多人以为是靠卖课赚钱。判断他是否卖铲子：未公开，但从描述看是真实交易，非卖课模式。",
+        "learn": "最值得学习的两点：①信息差永远存在——只要有人愿意多花时间找便宜的鞋，就有人愿意花钱省事买到手；②用碎片时间做——不需要全职，每天刷手机时顺便看行情、回消息，学生党也能做。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，两个手机+闲鱼+得物就能开始）",
+        "doable": "能（完全不用写代码，会用手机就行）",
         "signals_used": 0,
-        "generated_at": "2026-08-15 18:33",
+        "generated_at": "2026-10-07 00:43",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 42,
-          "feasibility": 66,
-          "startup_index": 5,
-          "composite": 54.0,
+          "commercial": 50,
+          "feasibility": 78,
+          "startup_index": 6,
+          "composite": 62.4,
           "drivers": [
             [
-              "技能门槛低",
+              "客户规模",
               5
             ],
             [
@@ -6637,46 +6634,44 @@
           ],
           "drags": [
             [
-              "定价结构",
-              1
+              "收入证据",
+              2
             ],
             [
-              "启动资金低",
+              "定价结构",
               2
             ]
           ],
-          "caps": [
-            "没有定价 = 还没有产品 → 封顶5分"
-          ],
+          "caps": [],
           "gates": [
-            "定价检验未过：全文没有一个真实价格"
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
           ],
           "factors": {
-            "urgency": 3,
-            "pricing": 2,
+            "urgency": 4,
+            "pricing": 3,
             "margin": 3,
-            "repeat": 2,
-            "price_ladder": 1,
-            "revenue_proof": 3,
-            "market_size": 4,
+            "repeat": 4,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 5,
             "evergreen": 4,
-            "channel": 3,
-            "machine": 3,
-            "delivery_chain": 3,
+            "channel": 4,
+            "machine": 4,
+            "delivery_chain": 4,
             "replicable": 4,
-            "capital": 2,
+            "capital": 3,
             "speed": 4,
-            "skill": 5,
+            "skill": 4,
             "concrete": 4,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "定价检验未过：全文没有一个真实价格"
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-08-15",
-      "teardown_count": 1,
+      "last_teardown": "2026-10-07",
+      "teardown_count": 2,
       "discovered_date": "2026-08-14",
       "is_new": false,
       "established": false,
@@ -6684,13 +6679,13 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
       "commercial_health": {
-        "commercial": 42,
-        "feasibility": 66,
-        "startup_index": 5,
-        "composite": 54.0,
+        "commercial": 50,
+        "feasibility": 78,
+        "startup_index": 6,
+        "composite": 62.4,
         "drivers": [
           [
-            "技能门槛低",
+            "客户规模",
             5
           ],
           [
@@ -6700,42 +6695,40 @@
         ],
         "drags": [
           [
-            "定价结构",
-            1
+            "收入证据",
+            2
           ],
           [
-            "启动资金低",
+            "定价结构",
             2
           ]
         ],
-        "caps": [
-          "没有定价 = 还没有产品 → 封顶5分"
-        ],
+        "caps": [],
         "gates": [
-          "定价检验未过：全文没有一个真实价格"
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
         "factors": {
-          "urgency": 3,
-          "pricing": 2,
+          "urgency": 4,
+          "pricing": 3,
           "margin": 3,
-          "repeat": 2,
-          "price_ladder": 1,
-          "revenue_proof": 3,
-          "market_size": 4,
+          "repeat": 4,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 5,
           "evergreen": 4,
-          "channel": 3,
-          "machine": 3,
-          "delivery_chain": 3,
+          "channel": 4,
+          "machine": 4,
+          "delivery_chain": 4,
           "replicable": 4,
-          "capital": 2,
+          "capital": 3,
           "speed": 4,
-          "skill": 5,
+          "skill": 4,
           "concrete": 4,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "定价检验未过：全文没有一个真实价格"
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
       },
       "commercial_severity": "warn"
     },
