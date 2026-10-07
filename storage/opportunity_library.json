@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-07 00:56",
+  "updated": "2026-10-08 01:39",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -5703,6 +5703,63 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 23,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0301_线投资课程电子书卖给有现": {
+      "topic": "在线投资课程 + 电子书 → 卖给有现有粉丝基础的名人/专家",
+      "fingerprint": "线投资课程电子书卖给有现有粉丝基础名人专家",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司實戰手冊 | Ryan Wu"
+      ],
+      "urls": [
+        "https://player.soundon.fm/p/0699b111-9638-444c-ba09-5f6cc524b8b0/episodes/9f3c4d1a-fa6a-4e9b-bd65-f0e0cd6a91fb"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0302_小红书账号诊断服务或流量": {
+      "topic": "小红书账号诊断服务或流量训练营 → 卖给想做好小红书的个体经营者或小白创作者",
+      "fingerprint": "小红书账号诊断服务或流量训练营卖给想好小红书个体经营者或小白创作者",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/964566654"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0303_现成ai工具为其搭建业务": {
+      "topic": "用现成AI工具为其搭建业务流程自动化方案，按项目收费 → 卖给中小企业主或团队负责人",
+      "fingerprint": "现成ai工具为其搭建业务流程自动化方案按卖给中小企业主或团队负责人",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "times_seen": 1,
+      "sources": [
+        "Liam Ottley (AI Automation Agency)"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=9C5hLJ1bIzk"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 51,
       "feedback": {
         "up": 0,
         "down": 0
