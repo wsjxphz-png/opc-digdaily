@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-12 00:29",
+  "updated": "2026-10-13 04:00",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -6112,6 +6112,101 @@
       "fingerprint": "行业爆款帖下撰写高质量回复获取被动曝光卖给x平台上经营个人品牌粉丝少于内容创作者",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
+      "times_seen": 1,
+      "sources": [
+        "@pandatalk8"
+      ],
+      "urls": [
+        "https://x.com/pandatalk8/status/2109282299112215014"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0323_一款轻量级小游戏或互动小": {
+      "topic": "一款轻量级小游戏或互动小程序 → 卖给有游戏创意但不懂开发的普通人",
+      "fingerprint": "一款轻量级小游戏或互动小程序卖给有游戏创意但不懂开发",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68f49fec22654730203014d2?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 50,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0324_一套辅导员考试培训资料电": {
+      "topic": "一套辅导员考试培训资料（电子书或笔记） → 卖给准备考大学辅导员的应届毕业生或在职教师",
+      "fingerprint": "一套辅导员考试培训资料电子书或笔记卖给准备考大学辅导员应届毕业生或职教师",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/688f872f8e06fe8de71e940c?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0325_一个自动化流程比如把每天": {
+      "topic": "一个自动化流程：比如把「每天手动整理会议纪要」变成「AI自动总结并创建任务清单」 → 卖给中小企业里的「运营负责人」或「销售总监」（他们每天被重复工作压垮）",
+      "fingerprint": "一个自动化流程比如把每天手动整理会议纪要变成ai自动总结并创建任务清单卖给中小企业里运营负责人或销售总监他们每天被重复工作压垮",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "times_seen": 1,
+      "sources": [
+        "Nick Saraev Blog"
+      ],
+      "urls": [
+        "https://nicksaraev.com/5-more-automations-you-can-sell-today-for-1-500-or-10-000/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0326_帮他们找到买家撮合成交并": {
+      "topic": "帮他们找到买家，撮合成交并收佣金 → 卖给有闲置网站想出手的创业者",
+      "fingerprint": "帮他们找到买家撮合成交并收佣金卖给有闲置网站想出手者",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/buying-an-online-business-in-2026/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0327_一套x账号运营策略回复爆": {
+      "topic": "一套X账号运营策略（回复爆款帖替代发新帖） → 卖给在X上想做个人品牌的小白",
+      "fingerprint": "一套x账号运营策略回复爆款帖替代发新帖卖给x上想个人品牌小白",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
       "times_seen": 1,
       "sources": [
         "@pandatalk8"
