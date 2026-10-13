@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-13 04:00",
+  "updated": "2026-10-14 01:43",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -6215,6 +6215,82 @@
         "https://x.com/pandatalk8/status/2109282299112215014"
       ],
       "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0328_以独立bd身份帮原行业客": {
+      "topic": "以独立BD身份帮原行业客户签单并收取佣金 → 卖给有B2B销售经验的大厂前员工",
+      "fingerprint": "以独立bd身份帮原行业客户签单并收取佣金卖给有bb销售经验大厂前员工",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班基地"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6aa8b7dd129fe965d332ac14?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0329_针对某一细分文化圈设计t": {
+      "topic": "针对某一细分文化圈设计的T恤、卫衣或家居装饰画，由POD平台代生产发货 → 卖给对特定文化审美有强烈认同的年轻人（如拉美街头文化爱好者、海洋保护关注者）",
+      "fingerprint": "针对某一细分文化圈设计t恤卫衣或家居装饰画由pod平台代生产发货卖给对特定文化审美有强烈认同年轻人如拉美街头文化爱好者海洋保护关注者",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/successful-print-on-demand-stores"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0330_一款便携式颈部悬挂式康复": {
+      "topic": "一款便携式颈部悬挂式康复放松设备（实体产品） → 卖给长期颈肩酸痛的人群（如办公室久坐族、健身爱好者）",
+      "fingerprint": "一款便携式颈部悬挂式康复放松设备实体产品卖给长期颈肩酸痛人群如办公室久坐族健身爱好者",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3564-story-physical-therapist-sells-57000-neck-hammocks"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0331_一套人体器官造型科普毛绒": {
+      "topic": "一套人体器官造型的科普毛绒玩具（或电子版的科普图文素材包） → 卖给家有小学生、关注孩子科学启蒙的家长",
+      "fingerprint": "一套人体器官造型科普毛绒玩具或电子版科普图文素材包卖给家有小学生关注孩子科学启蒙家长",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3568-tbt-physician-designs-plush-toys-to-teach-anatomy"
+      ],
+      "best_startup_index": 4,
       "best_commercial": 28,
       "feedback": {
         "up": 0,
