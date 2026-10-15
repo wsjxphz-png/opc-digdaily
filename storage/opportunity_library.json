@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-14 01:43",
+  "updated": "2026-10-15 23:06",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -6292,6 +6292,82 @@
       ],
       "best_startup_index": 4,
       "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0332_内容获客攻略实操手册后续": {
+      "topic": "一份《内容获客攻略》实操手册 + 后续小额咨询陪伴 → 卖给想开展副业但没方向的普通人",
+      "fingerprint": "内容获客攻略实操手册后续小额咨询陪伴卖给想开展但没方向",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68e1394f8e321a0d6feb0ea4?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0333_家居博主账号矩阵批量复制": {
+      "topic": "家居博主账号矩阵（批量复制爆款内容模板） → 卖给想做家居内容创业的普通个人",
+      "fingerprint": "家居博主账号矩阵批量复制爆款内容模板卖给想家居内容普通个人",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1013348011"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0334_一套围绕单一主题付费内容": {
+      "topic": "一套围绕单一主题的付费内容产品组合（ newsletter+社群+课程） → 卖给有专业技能的自由职业者或内容创作者",
+      "fingerprint": "一套围绕单一主题付费内容产品组合newsletter社群课程卖给有专业技能自由职业者或内容创作者",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/veronica-llorca-smith/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 47,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0335_手绘风格婚礼照片道具套装": {
+      "topic": "手绘风格婚礼照片道具套装（含姓氏牌、日期牌、趣味拍照手持牌等） → 卖给正在筹备婚礼的新人（尤其关注小红书搜索「婚礼布置」「派对装饰」的用户）",
+      "fingerprint": "手绘风格婚礼照片道具套装含姓氏牌日期牌趣味拍照手持牌等卖给正筹备婚礼新人尤其关注小红书搜索婚礼布置派对装饰户",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3569-story-hand-lettering-artist-upgrades-photo-booth-pro"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 42,
       "feedback": {
         "up": 0,
         "down": 0
