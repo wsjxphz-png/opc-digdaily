@@ -5,6 +5,11 @@ on:
     # 北京时间每天 18:00 = UTC 10:00
     - cron: "0 10 * * *"
   workflow_dispatch:  # 允许手动触发
+    inputs:
+      edition_date:
+        description: "可选：强制逻辑出刊日 YYYY-MM-DD（留空按 12:00 分界）"
+        required: false
+        default: ""
 
 # contents: write —— 把 storage/ 的状态写回仓库（机会库/名单/去重历史要跨天累积）
 # issues: read    —— 读取「👍想做 / 👎没兴趣」反馈
@@ -28,6 +33,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+
+      # 一次 job 只算一次逻辑出刊日，重试跨中午也不会跳日。
+      # 与 main.py / push-watchdog.yml 共用 12:00 分界。
+      - name: Compute edition date
+        run: |
+          if [ -n "${{ inputs.edition_date }}" ]; then
+            EDITION="${{ inputs.edition_date }}"
+          elif [ "$(date -u +%H)" -lt 4 ]; then
+            # 北京 12:00 = UTC 04:00；之前的 run 算前一出刊日
+            EDITION=$(date -u -d 'yesterday' +%F)
+          else
+            EDITION=$(date -u +%F)
+          fi
+          echo "OPC_EDITION_DATE=$EDITION" >> "$GITHUB_ENV"
+          echo "[edition] 逻辑出刊日: $EDITION"
 
       # 受控暂停开关（aeon 式：暂停 = 配置标志，绝不 disable 工作流）
       # 需要暂定时：gh secret set OPC_PAUSED -b "true"  ；恢复：gh secret delete OPC_PAUSED

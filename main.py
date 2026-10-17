@@ -68,6 +68,36 @@ ARCHIVE_DIR = _STORAGE_DIR / "archive"
 # 北京时间
 CST = timezone(timedelta(hours=8))
 
+# 日报名义排期是北京时间 18:00；GitHub schedule 经常延迟到次日凌晨。
+# 中午 12:00 前启动的 run 仍算前一天出刊，避免 push_marker、archive、日期显示
+# 被写成次日，导致次日晚间 run 误判「今天已推送」而整轮跳过。
+EDITION_CUTOFF_HOUR = 12
+EDITION_DATE_ENV = "OPC_EDITION_DATE"
+
+
+def edition_day(now: datetime | None = None):
+    """返回本次 run 对应的逻辑出刊日（北京时间）。
+
+    优先读取 workflow 在 job 开始时冻结的 OPC_EDITION_DATE，
+    这样重试跨过中午也不会把同一轮 run 拆成两个出刊日。
+    """
+    if now is None:
+        override = os.environ.get(EDITION_DATE_ENV, "").strip()
+        if override:
+            try:
+                return datetime.strptime(override, "%Y-%m-%d").date()
+            except ValueError:
+                pass
+        now = datetime.now(CST)
+    day = now.date()
+    if now.hour < EDITION_CUTOFF_HOUR:
+        day -= timedelta(days=1)
+    return day
+
+
+def edition_date(now: datetime | None = None) -> str:
+    return edition_day(now).strftime("%Y-%m-%d")
+
 # 浏览器 UA（侦察兵复用搜狗微信账号搜索时需要，跟 weixin_search 一致）
 _HEAD = {
     "User-Agent": (
@@ -373,6 +403,9 @@ class DailyOpportunityBot:
     async def run(self):
         logger.info("========== 操盘手拆解系统启动 ==========")
         start = time.time()
+        # 一次 run 只取一次逻辑出刊日，避免跨中午执行时 marker/归档/日期显示不一致
+        edition_day_obj = edition_day()
+        edition = edition_day_obj.strftime("%Y-%m-%d")
 
         # ── 当日去重闸门：今天若已全部送达，整轮跳过 ──
         # 看门狗补推成功后会写 push_marker；但**定时 run 原先不看它**，于是同一天推两次。
@@ -385,7 +418,7 @@ class DailyOpportunityBot:
             try:
                 if PUSH_MARKER_PATH.exists():
                     _marker = PUSH_MARKER_PATH.read_text(encoding="utf-8").strip()
-                    _today = datetime.now(CST).strftime("%Y-%m-%d")
+                    _today = edition
                     if _marker == _today:
                         logger.info(
                             f"今日（北京时间 {_marker}）已完整推送过，跳过本轮，避免同日双推"
@@ -565,7 +598,7 @@ class DailyOpportunityBot:
                         n = self.library.apply_feedback(tallies)
                         logger.info(f"反馈已并入机会库：{n} 个主题带有 👍/👎")
 
-                today = datetime.now(CST).strftime("%Y-%m-%d")
+                today = edition
                 self.library.annotate(dom_opps, today)
                 self.library.annotate(intl_opps, today)
 
@@ -611,7 +644,7 @@ class DailyOpportunityBot:
                 quality_threshold=self.quality_threshold,
                 max_age_days=int(self.config.get("opportunity", {}).get("overflow_days", 3)),
             )
-            today_str = datetime.now(CST).strftime("%Y-%m-%d")
+            today_str = edition
             # 恒不在此落盘：decide 只在内存算（恢复项从池文件恢复后，未推送不删池）。
             # 推送成功后由模块2成功分支的 pool.save() 统一写盘——
             # 否则失败日恢复项已从池文件消失却未送达，永久丢失
@@ -625,8 +658,8 @@ class DailyOpportunityBot:
                 )
 
         # ── 推送 / 输出 ──
-        date_str = datetime.now(CST).strftime("%Y年%m月%d日")
-        today_cst = datetime.now(CST).strftime("%Y-%m-%d")   # 归档按北京时间分天
+        date_str = edition_day_obj.strftime("%Y年%m月%d日")
+        today_cst = edition   # 归档按逻辑出刊日分天（凌晨延迟 run 算前一天）
         pushed_any = False
         push_failed = False
         delivered_urls: set[str] = set()
@@ -736,9 +769,7 @@ class DailyOpportunityBot:
         if pushed_any and not push_failed and not self.dry_run:
             try:
                 PUSH_MARKER_PATH.parent.mkdir(parents=True, exist_ok=True)
-                PUSH_MARKER_PATH.write_text(
-                    datetime.now(CST).strftime("%Y-%m-%d"), encoding="utf-8"
-                )
+                PUSH_MARKER_PATH.write_text(edition, encoding="utf-8")
             except Exception as e:
                 logger.warning(f"推送标记写入失败（不影响推送结果）: {e}")
 

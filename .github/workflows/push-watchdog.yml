@@ -48,29 +48,24 @@ jobs:
           # 2) 快速通道：推送标记命中（main.py 推送成功后写入 storage/push_marker.json，
           #    随 Persist state 提交回仓库）。标记比 run status 可靠——run 可能被超时
           #    kill（status 非 success）但推送其实已成功，只看 status 会误补推造成双推。
-          #    ⚠ 2026-09-03 修复：main.py 写入的是北京时间(CST)日期，原代码用 UTC 日期
-          #    比较——UTC 16:00-24:00（=北京次日 00:00-08:00）两基准错位，marker 命中不了
-          #    → 落进 run-status 判定 → 误补推（9-02/9-03 误补即因此）。比较基准对齐 CST。
-          TODAY_CST=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          #    期望出刊日与 main.py / daily-push.yml 共用 12:00 分界：
+          #    07:00 看门狗检查的是前一天出刊；凌晨延迟 run 写 marker 也按前一天。
+          if [ "$(date -u +%H)" -lt 4 ]; then
+            # 北京 12:00 = UTC 04:00；之前的 run 算前一出刊日
+            EDITION_CST=$(date -u -d 'yesterday' +%F)
+          else
+            EDITION_CST=$(date -u +%F)
+          fi
           MARKER=storage/push_marker.json
-          if [ -f "$MARKER" ] && [ "$(cat "$MARKER")" = "$TODAY_CST" ]; then
-            echo "今日(北京时间)已有成功推送标记，不补推"
+          if [ -f "$MARKER" ] && [ "$(cat "$MARKER")" = "$EDITION_CST" ]; then
+            echo "出刊日 $EDITION_CST 已有成功推送标记，不补推"
             exit 0
           fi
 
-          # 3) 主判定：距上次成功推送 ≥ 一个周期（26h）且无任务在跑 -> 通道异常，补推一次
-          #    ⚠ 2026-09-03 修复①：原逻辑按 UTC 日历日判定（最近成功不在「UTC 今天」即补推）。
-          #    本看门狗 cron 23:00 UTC 距午夜仅 1h 余量，GitHub schedule 常规延迟 2-3h 即
-          #    跨 UTC 午夜（run 实际启动 00:53-01:43）→「今天」清零、而当天主推送要到
-          #    UTC 14 点后才创建 → 必然误判补推 → 用户一天收两次推送
-          #    （8-30~9-03 实测误判 4/5 次看门狗）。
-          #    改为按「距上次成功推送的时间间隔」判定。
-          #    ⚠ 修复②：阈值取 26h 而非 24h——主推周期 24h × 看门狗检查周期 24h 同频共振，
-          #    平台延迟日主推成功时刻漂移接近看门狗时刻时（如昨天 22:30 成功、今天 23:00 检查
-          #    =24.5h）会周期性撞线误补。26h 远离共振点：真失败/被禁用（age 通常 30h+）仍补推。
-          #    边界（已知取舍）：连续两日主推失败且前夜补推恰在 UTC 01:00 附近成功时，
-          #    次日补推可能顺延一个周期（不丢失，晚约一天送达）；队列卡死 run 会压住补推
-          #    ——宁可不补也不双推。
+          # 3) 主判定：marker 未命中期望出刊日且无进行中/排队 run -> 补推一次。
+          #    marker 由 main.py 按同一逻辑出刊日写入；补推成功后当天晚间的定时 run
+          #    会整轮跳过，不会双推。不要再按 26h 年龄判定：那会漏掉「前夜补推成功、
+          #    当天晚些时候主推失败」的整期。
           LAST_OK_TS=$(gh run list --workflow "$WF" --repo "$REPO" --status success \
                           --limit 1 --json createdAt --jq '.[0].createdAt // ""')
           if [ -n "$LAST_OK_TS" ]; then
@@ -78,14 +73,27 @@ jobs:
           else
             AGE_H=99999
           fi
+          # 期望出刊日的窗口：北京时间 E 12:00 → E+1 12:00。
+          # 窗口内已有成功 run -> 即使 marker 提交失败也不补推，避免双推。
+          EDITION_START_UTC="${EDITION_CST}T04:00:00Z"
+          EDITION_END_UTC="$(date -u -d "$EDITION_CST +1 day" +%F)T04:00:00Z"
+          START_EPOCH=$(date -u -d "$EDITION_START_UTC" +%s)
+          END_EPOCH=$(date -u -d "$EDITION_END_UTC" +%s)
+          if [ -n "$LAST_OK_TS" ]; then
+            LAST_OK_EPOCH=$(date -u -d "$LAST_OK_TS" +%s)
+            if [ "$LAST_OK_EPOCH" -ge "$START_EPOCH" ] && [ "$LAST_OK_EPOCH" -lt "$END_EPOCH" ]; then
+              echo "出刊日 $EDITION_CST 已存在成功 run（marker 可能未提交），不补推"
+              exit 0
+            fi
+          fi
           # 任何进行中/排队/等待的 run 都不补推（含跨天前创建仍未跑完的），等它出结果
           PENDING=$(gh run list --workflow "$WF" --repo "$REPO" --limit 10 \
                       --json status \
                       --jq '[.[] | select(.status=="in_progress" or .status=="queued" or .status=="waiting")] | length')
-          echo "距上次成功推送: ${LAST_OK_TS:-无}（${AGE_H} 小时前）；进行中/排队: ${PENDING:-0}"
+          echo "期望出刊日: $EDITION_CST；上次成功推送: ${LAST_OK_TS:-无}（${AGE_H} 小时前）；进行中/排队: ${PENDING:-0}"
 
-          if [ "${AGE_H}" -ge 26 ] && [ "${PENDING:-0}" = "0" ]; then
-            echo "距上次成功推送 ≥26h 且无任务在跑，判定通道异常，静默补推一次"
+          if [ "${PENDING:-0}" = "0" ]; then
+            echo "marker 未命中出刊日 $EDITION_CST 且无任务在跑，静默补推一次"
             gh workflow run "$WF" --repo "$REPO" || true
           fi
 

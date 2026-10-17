@@ -164,6 +164,8 @@ async def integration_test():
     bot.pusher.push_opportunities = fake_push_opps
 
     arch_dir = bot.archive.root
+    # 固定逻辑出刊日，锁死 marker/archive 不再回到「实际运行日」。
+    os.environ["OPC_EDITION_DATE"] = "2026-10-02"
     with tempfile.TemporaryDirectory() as td_dir:
         main_mod.ROSTER_PATH = Path(td_dir) / "operators.json"
         try:
@@ -185,21 +187,24 @@ async def integration_test():
           f"{len(opp)} 条")
     check("只归档实际送达的条目",
           all(r.get("url", "").startswith("http") for r in opp), f"{len(opp)} 条")
+    check("归档 date 使用逻辑出刊日",
+          all(r.get("date") == "2026-10-02" for r in recs),
+          f"dates={sorted({r.get('date') for r in recs})}")
 
     print("\n=== 7. 同日不重推（双推闸门） ===")
     # 2026-09-12 实测：看门狗 01:07 补推成功后，当天 13:38 定时 run 又推了一遍同一批
-    # 拆解卡。根因是定时 run 不看 push_marker。这里锁死「今天已完整送达 → 整轮跳过」。
+    # 拆解卡。根因是定时 run 不看 push_marker。这里锁死「同一出刊日已完整送达 → 整轮跳过」。
     from main import PUSH_MARKER_PATH
-    from datetime import datetime, timezone, timedelta
-    today_cst = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+    today_cst = main_mod.edition_date()
     marker_ok = PUSH_MARKER_PATH.exists() and PUSH_MARKER_PATH.read_text(encoding="utf-8").strip() == today_cst
-    check("首轮跑完已写入今日 marker", marker_ok,
+    check("首轮跑完已写入逻辑出刊日 marker", marker_ok,
           PUSH_MARKER_PATH.read_text(encoding="utf-8").strip() if PUSH_MARKER_PATH.exists() else "无文件")
     before = dict(calls)
     ok2 = await bot.run()
-    check("同日再跑 → 返回 True（不算失败）", ok2 is True)
-    check("同日再跑 → 没有二次推送",
+    check("同一出刊日再跑 → 返回 True（不算失败）", ok2 is True)
+    check("同一出刊日再跑 → 没有二次推送",
           calls == before, f"推送被再调 {calls['teardown']-before['teardown']} 次拆解 / {calls['opp']-before['opp']} 次机会")
+    os.environ.pop("OPC_EDITION_DATE", None)
 
 
 def run():
