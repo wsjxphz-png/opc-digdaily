@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-17 21:52",
+  "updated": "2026-10-18 22:10",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -6957,6 +6957,101 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0367_简历优化面试辅导一对一咨": {
+      "topic": "简历优化+面试辅导一对一咨询服务 → 卖给应届毕业生和正在找工作的人",
+      "fingerprint": "简历优化面试辅导一对一咨询服务卖给应届毕业生正找工作人",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckrq4uhe06p940925iiomw207"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0368_一套notion系统搭建": {
+      "topic": "一套Notion系统搭建与使用方法的线上训练营 → 卖给想提升个人效率的知识工作者和大学生",
+      "fingerprint": "一套notion系统搭建使线上训练营卖给想提升个人效率知识工作者大学生",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/cksx7yrxfoikj0919miyrphq7"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0369_手工合香产品线香香牌等卖": {
+      "topic": "手工合香产品（线香/香牌等） → 卖给对传统文化感兴趣的都市年轻人",
+      "fingerprint": "手工合香产品线香香牌等卖给对传统文化感兴趣都市年轻人",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司无限合伙"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a5e53fba3fec224d5a0a53d?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0370_it职业技能培训课程转行": {
+      "topic": "IT职业技能培训课程/转行指导 → 卖给想转行IT的职场新人",
+      "fingerprint": "it职业技能培训课程转行指导卖给想转行it职场新人",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·IP研究所"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/66bb8c2d33591c27bedd5e8a?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0371_一篇针对细分关键词seo": {
+      "topic": "一篇针对细分关键词的SEO优化文章 → 卖给中小企业官网运营人员",
+      "fingerprint": "一篇针对细分关键词seo优化文章卖给中小企业官网运营人员",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-10-18",
+      "times_seen": 1,
+      "sources": [
+        "A Better Lemonade Stand (电商/POD/一件代发)"
+      ],
+      "urls": [
+        "https://www.abetterlemonadestand.com/the-great-seo-heist/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 41,
       "feedback": {
         "up": 0,
         "down": 0
