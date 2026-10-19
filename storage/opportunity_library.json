@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-18 22:10",
+  "updated": "2026-10-20 01:12",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4532,16 +4532,20 @@
       "topic": "信息不足 → 卖给信息不足",
       "fingerprint": "信息不足卖给信息不足",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-09-22",
-      "times_seen": 1,
+      "last_seen": "2026-10-19",
+      "times_seen": 2,
       "sources": [
-        "小宇宙·海叔有观点 | 聊聊创业、投资、热点"
+        "小宇宙·海叔有观点 | 聊聊创业、投资、热点",
+        "小宇宙·一人公司无限合伙",
+        "小宇宙·一人公司创业进化论"
       ],
       "urls": [
-        "https://www.ximalaya.com/sound/680221985"
+        "https://www.ximalaya.com/sound/680221985",
+        "https://www.xiaoyuzhoufm.com/episode/6aa0958da0210c197dcfb81e?utm_source=rss",
+        "https://www.xiaoyuzhoufm.com/episode/69ee35571e94ae692135b596?utm_source=rss"
       ],
       "best_startup_index": 3,
-      "best_commercial": 32,
+      "best_commercial": 38,
       "feedback": {
         "up": 0,
         "down": 0
@@ -7052,6 +7056,329 @@
       ],
       "best_startup_index": 5,
       "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0372_ai生成背景音乐素材或参": {
+      "topic": "用AI生成的背景音乐素材或参赛赚奖金 → 卖给做短视频的个人博主或自媒体创作者",
+      "fingerprint": "ai生成背景音乐素材或参赛赚奖金卖给短视频个人博主或自媒体创作者",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/673ab24a43dc3a43877042d8?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 60,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0373_每周精选款高品质农产品或": {
+      "topic": "每周精选的3-5款高品质农产品或特色好物 → 卖给喜欢买小众好物的微信好友或小区邻居",
+      "fingerprint": "每周精选款高品质农产品或特色好物卖给喜欢买小众好物微信好友或小区邻居",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/840147969"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0374_该领域专业内容ip定期发": {
+      "topic": "该领域的专业内容IP（定期发布科普/评测/对比类笔记） → 卖给你想服务的某行业从业者或消费者",
+      "fingerprint": "该领域专业内容ip定期发布科普评测对比类笔记卖给你想服务某行业从业者或消费者",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·给女孩的商业第一课"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1024260398"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0375_百元级付费社群定期提供内": {
+      "topic": "百元级付费社群，定期提供内容陪伴 → 卖给曾经做过知识付费的宝妈，有一定粉丝基础",
+      "fingerprint": "百元级付费社群定期提供内容陪伴卖给曾经过知识付费宝妈有一定粉丝基础",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1004202187"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 53,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0376_temu上开pod印花店": {
+      "topic": "在Temu上开POD印花店铺，卖个性化T恤或家居饰品 → 卖给有设计能力或能找到设计师的普通人，想做海外电商",
+      "fingerprint": "temu上开pod印花店铺卖个性化t恤或家居饰品卖给有设计能力或能找到设计师想海外ecommerce",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·满地找钱"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6abb7ab3e742e36efcbca6bd?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0377_制作ar滤镜作品卖给品牌": {
+      "topic": "制作AR滤镜作品，卖给品牌或供用户使用 → 卖给想入局AR特效行业的年轻人或设计师",
+      "fingerprint": "制作ar滤镜作品卖给品牌或供户使卖给想入局ar特效行业年轻人或设计师",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/65d428ac0847349e0c679990?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0378_魔法疗愈对咨询或神秘学知": {
+      "topic": "魔法疗愈1对1咨询或神秘学知识社群 → 卖给对神秘学/心灵成长感兴趣的城市年轻人",
+      "fingerprint": "魔法疗愈对咨询或神秘学知识社群卖给对神秘学心灵成长感兴趣城市年轻人",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班行不行啊"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/668822156"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0379_垂直领域公众号内容如某个": {
+      "topic": "垂直领域公众号内容（如某个国家/领域的资讯整理） → 卖给对国外资讯感兴趣的小众读者群体",
+      "fingerprint": "垂直领域公众号内容如某个国家领域资讯整理卖给对国外资讯感兴趣小众读者群体",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "B站·Nancy在北欧"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1RK4y1p71N"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0380_ai辅助内容创作服务或社": {
+      "topic": "AI辅助的内容创作服务或社群运营 → 卖给想转型的自由职业者或内容创作者",
+      "fingerprint": "ai辅助内容创作服务或社群运营卖给想转型自由职业者或内容创作者",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/982966316"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 45,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0381_一对一心理咨询服务需确认": {
+      "topic": "一对一心理咨询服务（需确认是否已产品化） → 卖给有家庭困扰的年轻父母",
+      "fingerprint": "一对一心理咨询服务需确认否已产品化卖给有家庭困扰年轻父母",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司无限合伙"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a3b91779d2f5743683d19bb?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0382_ai辅助生成图文内容通过": {
+      "topic": "用AI辅助生成图文内容，通过平台流量分成或带货变现 → 卖给会刷手机、愿意学用AI工具的普通人",
+      "fingerprint": "ai辅助生成图文内容通过平台流量分成或带货卖给会刷手机愿意学ai工具",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "B站·消失的李木子"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1SDn769EYQ"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 30,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0383_小红书抖音展示ai选品结": {
+      "topic": "用小红书/抖音展示AI选品结果，引导至私域成交 → 卖给想尝试跨境副业的普通人",
+      "fingerprint": "小红书抖音展示ai选品结果引导至私域成交卖给想尝试跨境",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·小黄橘子"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a9ed572f03e74ee6b06a56d?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0384_ai生成虚拟网红运营in": {
+      "topic": "用AI生成的虚拟网红，运营Instagram/小红书账号接品牌合作 → 卖给想通过虚拟形象做内容变现的个人创作者",
+      "fingerprint": "ai生成虚拟网红运营instagram小红书账号接品牌合作卖给想通过虚拟形象内容个人创作者",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "Wholesale Ted"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=CXf_UsxGrfg"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0385_ai生成独特图案t恤通过": {
+      "topic": "AI生成的独特图案T恤，通过按需打印发货 → 卖给喜欢街头风格服装的年轻人",
+      "fingerprint": "ai生成独特图案t恤通过按需打印发货卖给喜欢街头风格服装年轻人",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "Wholesale Ted"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=B8tz98nynLg"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0386_自定义设计t恤笔记本家居": {
+      "topic": "自定义设计的T恤、笔记本、家居用品等实物商品 → 卖给有设计爱好的年轻人或小众兴趣群体（如动漫、宠物爱好者）",
+      "fingerprint": "自定义设计t恤笔记本家居品等实物商品卖给有设计爱好年轻人或小众兴趣群体如动漫宠物爱好者",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "A Better Lemonade Stand (电商/POD/一件代发)"
+      ],
+      "urls": [
+        "https://www.abetterlemonadestand.com/print-on-demand-companies/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0387_代发货测品找到能卖产品后": {
+      "topic": "用代发货测品，找到能卖的产品后做自有品牌 → 卖给想做电商但没库存的普通人",
+      "fingerprint": "代发货测品找到能卖产品后自有品牌卖给想ecommerce但没库存",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/dropshipping-2026-playbook/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 30,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0388_epqacanioffe": {
+      "topic": "Ep. 3570 - Q&A: “Can I offer a permanent price discount?”",
+      "fingerprint": "epqacaniofferapermanentpricediscount",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3570-qa-can-i-offer-a-permanent-price-discount"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 19,
       "feedback": {
         "up": 0,
         "down": 0
