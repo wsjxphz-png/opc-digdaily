@@ -885,6 +885,12 @@
           "url": "https://x.com/dickiebush/status/2111925314930475508",
           "date": "2026-10-18",
           "summary": "I’m always shocked by how many times I click on WhatsApp, Slack, or YouTube when I’m working through something challenging.\n\nThis week, I doubled up my newsletter cadence.\n\nSo I broke back out Cold Turkey, my go-to website blocker.\n\nNow when I make one of those “default"
+        },
+        {
+          "title": "My go-to work soundtrack recently:\n\nLofi music + mechanical keyboard typing sounds.\n\nThere is something so calming yet “",
+          "url": "https://x.com/dickiebush/status/2112265222266167660",
+          "date": "2026-10-19",
+          "summary": "My go-to work soundtrack recently:\n\nLofi music + mechanical keyboard typing sounds.\n\nThere is something so calming yet “competition-inducing” about hearing a keyboard in the background while you work.\n\nMost YouTube videos didn’t quite fit what I was looking for.\n\nSo I put a 24/7"
         }
       ],
       "teardown": null,
@@ -1168,6 +1174,12 @@
           "url": "https://x.com/thesamparr/status/2109395931879924211",
           "date": "2026-10-11",
           "summary": "Have a question for those with newsletters:\n\nhas being on substack or any other newsletter platform giving you meaningful growth through their network?\n\nIt appears the big benefit of Substack is subscriber growth via their network? Has that been your experience?"
+        },
+        {
+          "title": "There's a guy on youtube posting videos of him riding his bike and listening to music. Millions of views. Looks like he ",
+          "url": "https://x.com/thesamparr/status/2112556809219367377",
+          "date": "2026-10-20",
+          "summary": "There's a guy on youtube posting videos of him riding his bike and listening to music. Millions of views. Looks like he just started a month ago. I dig it.\n\nhttps://t.co/eDWPvs4Ic3"
         }
       ],
       "teardown": null,
@@ -2680,6 +2692,12 @@
           "url": "https://www.youtube.com/watch?v=HvjHt25RGyU",
           "date": "2026-10-09",
           "summary": "🗞️ Join 100K+ founders on my AI-for-business newsletter: https://liamottley.com/join\n🛠 Want me to rebuild YOUR business with AI? https://aimakeover.com\n\nWork w/ Isaac:\nImprint Genius: https://imprintgenius.com\nInstagram: https://instagram.com/thesourcingguy\nYouTube: https://youtube.com/@thesourcingg"
+        },
+        {
+          "title": "Why Most Businesses Should Stop Buying AI (Right Now)",
+          "url": "https://www.youtube.com/watch?v=skpYjEGOdCs",
+          "date": "2026-10-19",
+          "summary": "🗞️ Join 100K+ founders on my AI-for-business newsletter: https://liamottley.com/join\n🛠 Want me to rebuild YOUR business with AI? https://aimakeover.com\n\n💻 MY TECH STACK\nKylon (AIOS workspace): https://kylon.io/liam\nRailway (agent & web hosting): https://railway.com?referralCode=liam\nApify (web scrap"
         }
       ],
       "teardown": null,
@@ -5714,80 +5732,64 @@
         "operator_handle": "做不露脸自媒体10个月的研究生博主",
         "operator_name": "不露脸自媒体博主（研究生）",
         "region": "国内",
-        "who": "一名国内研究生，不露脸做自媒体约10个月后跑通变现闭环。具体粉丝量、收入金额未公开。",
-        "deliverable": "交付物以知识内容为主——大概率是学习笔记、备考经验、效率工具使用技巧等数字内容。变现形态可能是：①付费图文/笔记（小红书专栏或知识星球）；②一对一咨询（考研规划、学习方法）；③带货（学习用品、电子书、模板）。具体卖什么产品、定价多少，资料未公开。",
-        "business_model": "大致推断为知识付费+社群/咨询的组合模式。收费形式可能是：一次性付费购买资料（价格区间未公开）、月度社群订阅（价格未公开）、或按次咨询收费（价格未公开）。收入具体数字未公开。",
-        "acquisition": "获客路径推断如下（基于同类不露脸博主的通用打法，具体细节因资料不足未完全公开）：①主要平台应为小红书或B站（国内不露脸内容的主要阵地），以图文笔记或配音录屏视频为主要形式；②内容策略：围绕研究生身份做差异化人设，内容聚焦「考研经验」「学习效率」「资料分享」等高搜索意图话题，用干货笔记吸引目标人群；③第一波客户来源：大概率来自平台内搜索流量（考研、学习方法等关键词）+ 自然推荐流量，早期通过免费送资料（如笔记PDF、模板）引流到微信或私域社群；④可照抄的打法：在小红书搜「考研经验」「学习方法」等关键词，找出爆款笔记模仿其选题和封面风格，坚持发20篇以上，用免费资料做钩子引流私域。具体平台、内容方向、钩子设计均未在该资料中明确透露，降低了精确可抄性。",
-        "stack": "工具链推断：手机（拍摄/剪辑）+ 剪映或小红书自带剪辑工具（视频制作）+ Notion或飞书（笔记整理）+ 微信（私域转化）。全部为无代码工具，点鼠标就能用。",
+        "who": "一名在校研究生，选择完全不露脸的账号定位，专注某一垂直细分领域（如学习干货/效率工具/学术经验/小众兴趣等），以图文或录屏短视频为主要形式，持续运营约10个月后实现首次变现，属于典型的一人内容工作室雏形。",
+        "deliverable": "以内容为核心的数字资产：包括可反复传播的图文笔记或录屏视频（引流款），以及可能的付费资料包、经验手册、社群 membership（利润款）。所有内容均可自动化分发和二次售卖，无需一对一交付。",
+        "business_model": "多为混合模式：①平台分成/创作者激励（如小红书蒲公英、B站激励计划、公众号广告收益）——单笔金额未公开；②知识付费产品（电子资料/课程/模板）——定价区间约 9.9 元至 199 元不等（典型范围）；③付费社群（年费制）——约 99-299 元/年（行业常见定价，具体未公开）。收入结构以低价产品为主，靠走量盈利。",
+        "acquisition": "获客路径相对清晰，但高度依赖平台算法和持续输出。具体打法如下：\n\n① 主阵地平台：最常见为小红书（图文+短笔记）、B站（中长视频）、公众号（深度内容）三者之一，或两到三平台同步分发。\n\n② 核心动作——选题公式：从自身身份出发，找到能解决特定人群痛点的细分切入点。研究生身份天然适合做「学霸经验」「考研/留学干货」「效率方法」「科研工具」等方向，这些领域有明确的目标受众（备考学生、职场新人），且竞争相对蓝海。\n\n③ 冷启动策略：前30篇内容密集测试不同选题和封面风格，观察哪类内容获得更高自然流量，然后All in爆款方向。不发鸡汤，发「能直接抄作业的方法论」——如「如何用Notion搭建学术管理系统」「考研英语词汇记忆法全攻略」。\n\n④ 第一批客户来源：主要来自①关键词搜索（用户主动搜相关话题进入）；②平台推荐（小红书/ B站的算法对优质新账号有流量扶持）；③同领域账号评论区互动引流。前3-5个付费客户通常来自某篇高赞笔记下的私信咨询转化。\n\n⑤ 可照抄的第一步：确定一个你作为研究生最有发言权的细分话题（如专业学习方法、考试经验分享），在小红书开设账号，发布3篇以上带实用干货的图文笔记，连续一周观察哪篇数据最好，然后围绕该方向持续深耕。",
+        "stack": "无代码工具链：小红书/ B站/公众号（内容发布）；Canva或醒图（封面制作）；剪映（视频剪辑，免费版即可）；Notion或飞书文档（内容规划与资料整理）；微信（私域承接，朋友圈+微信群）；小鹅通/知识星球/付费笔记（知识付费交付，均有现成模板无需开发）。全套零成本或极低成本即可跑通。",
         "replicability": 4,
-        "first_step": "今天就可以在小红书或B站注册账号，定位「研究生学习博主」人设，先发布第一篇干货笔记（例如「我是如何一个月搞定XX考试」），观察数据反馈后持续迭代。",
-        "red_flag": "①该模式本质是卖铲子——如果此人后期转向「教别人做自媒体」而非继续做内容本身，replicability需重新评估；②不露脸知识博主门槛极低，同质化竞争严重，10个月跑通不等于可长期稳定盈利；③资料未透露具体变现数字和成交路径，存在「只秀过程不晒结果」的包装嫌疑。",
-        "learn": "最值得抄的两个点：①用「研究生」身份做差异化人设，比纯内容输出更容易建立信任；②不露脸+纯内容驱动的路径，对零技术门槛的人非常友好，验证了普通人不需要特殊技能也能跑通自媒体变现。",
+        "first_step": "今天就在小红书注册账号，写一篇你作为研究生最有发言权的实操干货笔记（比如你备考某门课的具体方法），配上清晰的封面，发布后观察72小时内的阅读量和收藏数，根据数据决定下一步深耕哪个方向。",
+        "red_flag": "最大风险是同质化严重——不露脸+干货方向已被大量人模仿，新入局者需要找到足够差异化的切口（如极细分的专业、独特的叙事风格、更强的视觉设计）才能杀出重围。其次，这个模式高度依赖「持续稳定输出能力」，很多人做到第3个月因流量低迷而放弃。另外，知识付费赛道现在处于红海，若内容没有独特性，很容易被淹没。建议先小成本试错，不要一上来就花钱买课或组团队。",
+        "learn": "最值得抄的两个点：①「身份即壁垒」——研究生身份本身就是差异化，普通人很难装得像真的懂；②「不露脸降低心理门槛」——很多人不敢做自媒体是因为不想露脸，这个案例证明不露脸也能跑通，把注意力集中在内容本身而非个人魅力上，降低了起步的心理阻力。",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用手机+免费工具即可起步）",
+        "doable": "能（完全不用写代码，只需会用手机发帖和基础内容制作工具即可）",
         "signals_used": 0,
-        "generated_at": "2026-10-18 21:58",
+        "generated_at": "2026-10-20 22:59",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 41,
-          "feasibility": 62,
-          "startup_index": 3,
-          "composite": 52.0,
+          "commercial": 62,
+          "feasibility": 76,
+          "startup_index": 7,
+          "composite": 65.9,
           "drivers": [
             [
               "启动资金低",
               5
             ],
             [
-              "技能门槛低",
+              "不用写代码",
               5
             ]
           ],
-          "drags": [
-            [
-              "交付链路清晰",
-              2
-            ],
-            [
-              "获客路径清晰",
-              2
-            ]
-          ],
-          "caps": [
-            "说不清具体卖什么给谁 → 封顶3分",
-            "没写清客户从哪来 → 封顶6分"
-          ],
-          "gates": [
-            "产品颜色测试未过：只有方向没有产品",
-            "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-            "链条看不懂：只讲了获客，没讲怎么成交和交付"
-          ],
+          "drags": [],
+          "caps": [],
+          "gates": [],
           "factors": {
-            "urgency": 3,
-            "pricing": 2,
+            "urgency": 4,
+            "pricing": 3,
             "margin": 4,
             "repeat": 3,
-            "price_ladder": 2,
-            "revenue_proof": 2,
+            "price_ladder": 3,
+            "revenue_proof": 3,
             "market_size": 4,
             "evergreen": 4,
-            "channel": 2,
+            "channel": 4,
             "machine": 3,
-            "delivery_chain": 2,
+            "delivery_chain": 4,
             "replicable": 4,
             "capital": 5,
             "speed": 3,
-            "skill": 5,
-            "concrete": 2,
+            "skill": 4,
+            "concrete": 4,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+          "gate_reason": ""
         }
       },
-      "last_teardown": "2026-10-18",
-      "teardown_count": 29,
+      "last_teardown": "2026-10-20",
+      "teardown_count": 30,
       "discovered_date": "2026-08-12",
       "is_new": false,
       "established": false,
@@ -5795,63 +5797,47 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-12",
       "commercial_health": {
-        "commercial": 41,
-        "feasibility": 62,
-        "startup_index": 3,
-        "composite": 52.0,
+        "commercial": 62,
+        "feasibility": 76,
+        "startup_index": 7,
+        "composite": 65.9,
         "drivers": [
           [
             "启动资金低",
             5
           ],
           [
-            "技能门槛低",
+            "不用写代码",
             5
           ]
         ],
-        "drags": [
-          [
-            "交付链路清晰",
-            2
-          ],
-          [
-            "获客路径清晰",
-            2
-          ]
-        ],
-        "caps": [
-          "说不清具体卖什么给谁 → 封顶3分",
-          "没写清客户从哪来 → 封顶6分"
-        ],
-        "gates": [
-          "产品颜色测试未过：只有方向没有产品",
-          "只有流量数据、没有收入证据（粉丝多≠赚钱）",
-          "链条看不懂：只讲了获客，没讲怎么成交和交付"
-        ],
+        "drags": [],
+        "caps": [],
+        "gates": [],
         "factors": {
-          "urgency": 3,
-          "pricing": 2,
+          "urgency": 4,
+          "pricing": 3,
           "margin": 4,
           "repeat": 3,
-          "price_ladder": 2,
-          "revenue_proof": 2,
+          "price_ladder": 3,
+          "revenue_proof": 3,
           "market_size": 4,
           "evergreen": 4,
-          "channel": 2,
+          "channel": 4,
           "machine": 3,
-          "delivery_chain": 2,
+          "delivery_chain": 4,
           "replicable": 4,
           "capital": 5,
           "speed": 3,
-          "skill": 5,
-          "concrete": 2,
+          "skill": 4,
+          "concrete": 4,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "产品颜色测试未过：只有方向没有产品；只有流量数据、没有收入证据（粉丝多≠赚钱）；链条看不懂：只讲了获客，没讲怎么成交和交付"
+        "gate_reason": ""
       },
-      "commercial_severity": "warn"
+      "commercial_severity": "ok"
     },
     "没滚刷的吸尘器": {
       "handle": "没滚刷的吸尘器",
@@ -12664,7 +12650,7 @@
       "last_teardown": "2026-10-20",
       "teardown_count": 1,
       "discovered_date": "2026-10-20",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -12811,7 +12797,7 @@
       "last_teardown": "2026-10-20",
       "teardown_count": 1,
       "discovered_date": "2026-10-20",
-      "is_new": true,
+      "is_new": false,
       "established": false,
       "last_revisit": null,
       "revisit_count": 0,
@@ -12867,6 +12853,153 @@
         "gate_reason": ""
       },
       "commercial_severity": "ok"
+    },
+    "#思洋静心岛": {
+      "handle": "#思洋静心岛",
+      "name": "董老师（思洋静心岛）",
+      "region": "国内",
+      "category": "靠催眠/白噪音内容在失眠赛道积累百万粉丝，聚焦「高焦虑职场人+宝妈」这个具体人群，内容即产品（助眠音频），可无限复用，不依赖实时时间交付，停更两周收入不会断崖。",
+      "aliases": [
+        "董老师（思洋静心岛）"
+      ],
+      "sources": [
+        "discovery"
+      ],
+      "tech_barrier": "无",
+      "seeded_facts": {},
+      "signals": [],
+      "teardown": {
+        "operator_handle": "#思洋静心岛",
+        "operator_name": "董老师（思洋静心岛）",
+        "region": "国内",
+        "who": "董老师（账号名：思洋静心岛），国内单人操盘手。靠催眠/白噪音内容在失眠赛道积累百万粉丝，专注服务高焦虑职场人和宝妈群体。单人、内容型IP，收入规模未公开，但能支撑「停更两周收入不断崖」说明有稳定的被动收入来源。",
+        "deliverable": "交付物是助眠音频——包括催眠引导录音和白噪音音轨。具体形式可能是：免费内容用于吸粉引流，付费音频专辑/课程用于变现，以及可能的私域会员社群。核心特点是「内容即产品」：一次制作、无限次销售，不需要实时交付，也不需要和客户约时间。",
+        "business_model": "收入结构推测为多层：①免费内容在平台吸粉（小红书/B站/喜马拉雅等）；②付费音频专辑或系列课程（具体价格未公开）；③可能的私域会员订阅（进入社群持续接收新内容）。整体是「内容→流量→付费转化」的路径，属于数字产品一次性制作、反复售卖的模式。是否有高阶一对一服务（如私人催眠定制）未公开。",
+        "acquisition": "获客方式还原如下：\n\n① 主阵地：小红书 + B站（推测，因该赛道在这两个平台最集中）+ 喜马拉雅（音频分发）。\n\n② 具体动作：持续发布催眠引导音频/白噪音短视频，封面标题围绕「失眠」「入睡困难」「睡前放松」「焦虑缓解」等痛点关键词。内容形式是纯音频或配合静态画面/轻动画，成本极低，一条能制作几十条分发给不同平台。\n\n③ 第一波客户来源：靠「失眠」这个强痛点驱动搜索。用户是在夜里睡不着时主动搜相关内容，被董老师的音频吸引、关注、然后转化为付费用户。本质是搜索引擎/平台推荐机制在帮他获客，而不是主动出击。\n\n④ 可照抄的打法：任何人可以在小红书/视频号/B站上发「睡前冥想」或「白噪音」内容，用AI配音或自己录音，搭配简单画面，围绕「30秒入睡」「释放焦虑」等标题做内容矩阵。不需要专业录音设备，手机+免费剪辑软件即可。",
+        "stack": "工具链（推测）：① 录音：手机或入门麦克风；② 剪辑：剪映/必剪（手机/电脑端免费）；③ 封面制作：Canva/稿定设计（模板化）；④ 内容分发：小红书、B站、微信公众号、喜马拉雅多个平台同步；⑤ 变现：小红书店铺/微信私域/知识付费平台（如小鹅通、千聊）。全部无代码、点鼠标即可操作。",
+        "replicability": 4,
+        "first_step": "今天就能做：打开手机，录一段3-5分钟的睡前引导音频（可以用ChatGPT帮你写引导词脚本），上传到小红书或视频号，标题写「睡不着？3分钟带你进入深度睡眠」，连续发7天看反馈。",
+        "red_flag": "风险判断：① 这个赛道已经有人在做，竞争在加剧，不是蓝海；② 百万粉丝不代表高收入——需要确认他的付费转化率，如果只赚平台流量分成，天花板很低；③ 「内容即产品」听起来美好，但纯音频内容的差异化壁垒不高，容易被复制；④ 如果他后续转型卖课教别人做催眠IP，那就是「卖铲子」模式，普通人再进去就更难了。",
+        "learn": "最值得抄的两个点：① 「内容即产品」的思路——做一次东西，可以无限卖，不需要按小时换钱，这是单人工作室最该学的心法；② 选对痛点赛道——失眠是刚需中的刚需，用户愿意为解决这个问题付钱，且复购率高（每周都需要听）。",
+        "tech_barrier": "无",
+        "doable": "能（完全不用写代码，用现成无代码工具即可）",
+        "signals_used": 0,
+        "generated_at": "2026-10-20 22:59",
+        "is_revisit": false,
+        "commercial_health": {
+          "commercial": 55,
+          "feasibility": 79,
+          "startup_index": 6,
+          "composite": 64.9,
+          "drivers": [
+            [
+              "需求紧迫度",
+              5
+            ],
+            [
+              "交付毛利",
+              5
+            ]
+          ],
+          "drags": [
+            [
+              "收入证据",
+              2
+            ],
+            [
+              "定价结构",
+              2
+            ]
+          ],
+          "caps": [],
+          "gates": [
+            "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+          ],
+          "factors": {
+            "urgency": 5,
+            "pricing": 2,
+            "margin": 5,
+            "repeat": 4,
+            "price_ladder": 2,
+            "revenue_proof": 2,
+            "market_size": 4,
+            "evergreen": 5,
+            "channel": 4,
+            "machine": 4,
+            "delivery_chain": 3,
+            "replicable": 4,
+            "capital": 5,
+            "speed": 4,
+            "skill": 4,
+            "concrete": 4,
+            "no_code": 5
+          },
+          "coverage": 1.0,
+          "degraded": false,
+          "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        }
+      },
+      "last_teardown": "2026-10-20",
+      "teardown_count": 1,
+      "discovered_date": "2026-10-20",
+      "is_new": true,
+      "established": false,
+      "last_revisit": null,
+      "revisit_count": 0,
+      "recommended_at": "2026-10-20",
+      "commercial_health": {
+        "commercial": 55,
+        "feasibility": 79,
+        "startup_index": 6,
+        "composite": 64.9,
+        "drivers": [
+          [
+            "需求紧迫度",
+            5
+          ],
+          [
+            "交付毛利",
+            5
+          ]
+        ],
+        "drags": [
+          [
+            "收入证据",
+            2
+          ],
+          [
+            "定价结构",
+            2
+          ]
+        ],
+        "caps": [],
+        "gates": [
+          "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+        ],
+        "factors": {
+          "urgency": 5,
+          "pricing": 2,
+          "margin": 5,
+          "repeat": 4,
+          "price_ladder": 2,
+          "revenue_proof": 2,
+          "market_size": 4,
+          "evergreen": 5,
+          "channel": 4,
+          "machine": 4,
+          "delivery_chain": 3,
+          "replicable": 4,
+          "capital": 5,
+          "speed": 4,
+          "skill": 4,
+          "concrete": 4,
+          "no_code": 5
+        },
+        "coverage": 1.0,
+        "degraded": false,
+        "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
+      },
+      "commercial_severity": "warn"
     }
   }
 }
