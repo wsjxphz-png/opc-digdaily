@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-20 23:10",
+  "updated": "2026-10-21 23:20",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -7398,6 +7398,139 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0390_一副原创星座牌卡一次对解": {
+      "topic": "一副原创星座牌卡 + 每月一次1对1解读 → 卖给对星座/塔罗感兴趣的年轻女性",
+      "fingerprint": "一副原创星座牌卡一次对解读卖给对星座塔罗感兴趣年轻女性",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1025624567"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 74,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0391_财税合规方案咨询卖给本地": {
+      "topic": "财税合规方案与咨询 → 卖给本地小微电商老板",
+      "fingerprint": "财税合规方案咨询卖给本地小微ecommerce老板",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1023459019"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0392_内容整合营销服务品牌内容": {
+      "topic": "内容整合营销服务（品牌内容策划与投放） → 卖给有广告投放需求的品牌方负责人",
+      "fingerprint": "内容整合营销服务品牌内容策划投放卖给有广告投放需求品牌方负责人",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/805409731"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0393_女性成长ip内容买手孵化": {
+      "topic": "女性成长IP内容+买手孵化营培训 → 卖给对女性成长、自我提升感兴趣的小红书用户",
+      "fingerprint": "女性成长ip内容买手孵化营培训卖给对女性成长自我提升感兴趣小红书户",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/847444131"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0394_将企业pdfword文档": {
+      "topic": "将企业PDF/Word文档整理成可对话的AI知识库 → 卖给有内部文档但不懂AI的小企业主",
+      "fingerprint": "将企业pdfword文档整理成可对话ai知识库卖给有内部文档但不懂ai小企业主",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6ad82ca1ef67611cac79c3ad?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0395_一场主题画展情绪疗愈类卖": {
+      "topic": "一场主题画展（情绪疗愈类） → 卖给本地社区艺术爱好者或小画廊主",
+      "fingerprint": "一场主题画展情绪疗愈类卖给本地社区艺术爱好者或小画廊主",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6736ec0cf373fe5d4d7e20af?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 21,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0396_ai工具评测内容吸引ai": {
+      "topic": "AI工具评测内容，吸引AI公司广告投放 → 卖给关注AI工具的中小企业和个人创作者",
+      "fingerprint": "ai工具评测内容吸引ai公司广告投放卖给关注ai工具中小企业个人创作者",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "times_seen": 1,
+      "sources": [
+        "@thesamparr"
+      ],
+      "urls": [
+        "https://x.com/thesamparr/status/2112574603004662091"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 70,
       "feedback": {
         "up": 0,
         "down": 0
