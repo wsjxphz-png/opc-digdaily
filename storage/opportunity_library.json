@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-21 23:20",
+  "updated": "2026-10-22 23:21",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -7531,6 +7531,82 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 70,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0397_ai辅助完成公众号文章或": {
+      "topic": "一份用AI辅助完成的公众号文章或PPT文案 → 卖给需要代写公众号文章或PPT的小企业主、自媒体人",
+      "fingerprint": "ai辅助完成公众号文章或ppt文案卖给需要代写公众号文章或ppt小企业主自媒体人",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1024980760"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0398_能持续赚到钱长啥样": {
+      "topic": "能持续赚到钱的一人公司长啥样？",
+      "fingerprint": "能持续赚到钱长啥样",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "times_seen": 1,
+      "sources": [
+        "B站·零零邀访谈"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Q5QgB5EGT"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 17,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0399_woocommerce为": {
+      "topic": "用WooCommerce为其搭建完整可上线的在线商店 → 卖给需要电商网站的中小企业或跨境创业者",
+      "fingerprint": "woocommerce为其搭建完整可上线线商店卖给需要ecommerce网站中小企业或跨境者",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/cheapest-ecommerce-store-setup/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0400_手绘房屋个性化插画卖给喜": {
+      "topic": "手绘房屋个性化插画 → 卖给喜欢自己房屋的房主或房地产中介",
+      "fingerprint": "手绘房屋个性化插画卖给喜欢自己房屋房主或房地产中介",
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3582-tbt-aussie-sketches-old-homes-for-new-money"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 37,
       "feedback": {
         "up": 0,
         "down": 0
