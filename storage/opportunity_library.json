@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-25 22:32",
+  "updated": "2026-10-27 01:03",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -7835,6 +7835,576 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 25,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0413_ai多语种配音字幕本地化": {
+      "topic": "AI多语种配音+字幕本地化视频 → 卖给国内短剧公司、出海游戏或外贸品牌",
+      "fingerprint": "ai多语种配音字幕本地化视频卖给国内短剧公司出海游戏或外贸品牌",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6adac4c497726cd467565b96?utm_source=rss"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0414_帮他们写每天发朋友圈文案": {
+      "topic": "帮他们写每天发朋友圈的文案 → 卖给做电商、微商、小实体店的小老板",
+      "fingerprint": "帮他们写每天发朋友圈文案卖给ecommerce微商小实体店小老板",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱大女主"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1024980765"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 82,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0415_ai自动化工作流如订单自": {
+      "topic": "AI自动化工作流（如订单自动处理、客服自动回复） → 卖给本地小型贸易公司或电商卖家",
+      "fingerprint": "ai自动化工作流如订单自动处理客服自动回复卖给本地小型贸易公司或ecommerce卖家",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6adc20d5c96c8942ec116503?utm_source=rss"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 74,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0416_周末自然体验活动徒步冥想": {
+      "topic": "周末自然体验活动（徒步+冥想+自然观察） → 卖给一二线城市中产家庭（有孩子、关注身心健康）和压力大的白领",
+      "fingerprint": "周末自然体验活动徒步冥想自然观察卖给一二线城市中产家庭有孩子关注身心健康压力大白领",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·群青女性成长说"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6abcbe5e195d838e2aebfce6?utm_source=rss"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 72,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0417_notion線上課程與會": {
+      "topic": "Notion 線上課程與會員訂閱內容 → 卖给想提升工作效率的職場人士",
+      "fingerprint": "notion線上課程與會員訂閱內容卖给想提升工作效率職場人士",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clkikohew01jf01tm4rj05mge"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 78,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0418_ai代写文章或ai生成垂": {
+      "topic": "AI代写文章或AI生成的垂直领域资料包 → 卖给需要文案/资料的小微企业主或自媒体博主",
+      "fingerprint": "ai代写文章或ai生成垂直领域资料包卖给需要文案资料小微企业主或自媒体博主",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·好有共鸣"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69e0d186e2c8be31556443d0?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 61,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0419_每日一篇電腦使技巧與工作": {
+      "topic": "每日一篇的電腦使用技巧與工作效率文章 → 卖给對電腦效率工具感興趣的上班族",
+      "fingerprint": "每日一篇電腦使技巧與工作效率文章卖给對電腦效率工具感興趣上班族",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/cll3y3mu302dz01v9f3zw4o4c"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 58,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0420_垂直领域博客如理财技能教": {
+      "topic": "垂直领域博客（如理财、技能教程、行业分析） → 卖给有专业知识或技能的职场人、自由职业者",
+      "fingerprint": "垂直领域博客如理财技能教程行业分析卖给有专业知识或技能职场人自由职业者",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-66-%e7%94%a8%e9%83%a8%e8%90%bd%e6%a0%bc%e8%b3%ba%e9%8c%a2%e7%b9%b3%e6%88%bf%e8%b2%b8/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0421_设计技能封装成课程或顾问": {
+      "topic": "设计技能封装成的课程或顾问服务 → 卖给有设计基础想转型的平面/室内/视觉设计师",
+      "fingerprint": "设计技能封装成课程或顾问服务卖给有设计基础想转型平面室内视觉设计师",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a42468d9d2f5743683fb7d5?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0422_围绕一个垂直细分领域付费": {
+      "topic": "围绕一个垂直细分领域的付费内容或数字产品 → 卖给在B站/YouTube想靠内容创作变现的普通人",
+      "fingerprint": "围绕一个垂直细分领域付费内容或数字产品卖给b站youtube想靠内容创作",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "B站·XELA赛拉"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1RihF6iEcm"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0423_公众号持续输出中医养生内": {
+      "topic": "在公众号持续输出中医养生内容 → 卖给有医学背景或中医兴趣的上班族",
+      "fingerprint": "公众号持续输出中医养生内容卖给有医学背景或中医兴趣上班族",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1003822137"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0424_出海求职方向指南企业人才": {
+      "topic": "出海求职方向指南+企业人才匹配撮合服务 → 卖给想转行出海领域的职场新人或有招聘需求的中小型企业",
+      "fingerprint": "出海求职方向指南企业人才匹配撮合服务卖给想转行出海领域职场新人或有招聘需求中小型企业",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·义乌听见"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6ad9cd11c96c8942ec109bbf?utm_source=rss"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 63,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0425_一家标准化奶茶小店股权收": {
+      "topic": "一家标准化奶茶小店的股权收益 → 卖给想在二线及以下城市开奶茶店的普通人",
+      "fingerprint": "一家标准化奶茶小店股权收益卖给想二线及以下城市开奶茶店",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·提钱不上班NOBAN CLUB"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/672b97b46c53cd405a7a5c4a?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0426_人生风险管理主题会咨询卖": {
+      "topic": "人生风险管理主题分享会/咨询 → 卖给35岁以上面临职业焦虑的职场人",
+      "fingerprint": "人生风险管理主题会咨询卖给岁以上面临职业焦虑职场人",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·搞钱女孩"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1015807978"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0427_帮商家搭建一套低成本线上": {
+      "topic": "帮商家搭建一套'低成本线上获客'流程，不是代运营，是教他们自己跑起来 → 卖给本地中小商家（餐饮、零售、生活服务），尤其老板自己会刷手机但不懂营销的",
+      "fingerprint": "帮商家搭建一套低成本线上获客流程不代运营教他们自己跑起来卖给本地中小商家餐饮零售生活服务尤其老板自己会刷手机但不懂营销",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·创业金钥匙"
+      ],
+      "urls": [
+        "https://www.lizhi.fm/dhp_static/static/h5_dhp_app/share.html#/voice?voiceId=5009462110800255494&podcastId=5152663241391234687"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 42,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0428_商业案例拆解podcas": {
+      "topic": "商业案例拆解播客/短视频 → 卖给对商业分析感兴趣的职场人或转型者",
+      "fingerprint": "商业案例拆解podcast短视频卖给对商业分析感兴趣职场人或转型者",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·Olga姐姐"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6aa8dd8c129fe965d332c1a9?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0429_艺术家ip经纪服务帮艺术": {
+      "topic": "艺术家IP经纪服务，帮艺术家谈品牌合作赚佣金 → 卖给有审美判断力、愿意深耕艺术圈的普通人",
+      "fingerprint": "艺术家ip经纪服务帮艺术家谈品牌合作赚佣金卖给有审美判断力愿意深耕艺术圈",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·提钱不上班NOBAN CLUB"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/67224fa3cbe0e69c8be5c0f9?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 67,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0430_信息不足本集未明确具体产": {
+      "topic": "信息不足，本集未明确具体产品 → 卖给想转型自由职业的职场人",
+      "fingerprint": "信息不足本集未明确具体产品卖给想转型自由职业职场人",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·群青女性成长说"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a5037211e32575f5eb40050?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 31,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0431_餐饮成本优化方案咨询卖给": {
+      "topic": "餐饮成本优化方案咨询 → 卖给新加坡中小型餐饮店老板",
+      "fingerprint": "餐饮成本优化方案咨询卖给新加坡中小型餐饮店老板",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·MELODY 小马一企谈 - Rad"
+      ],
+      "urls": [
+        "https://feeds.megaphone.fm/SOODO2805778769"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0432_音频疗愈内容或助眠引导课": {
+      "topic": "音频疗愈内容或助眠引导课程 → 卖给有睡眠困扰的上班族或中年人群",
+      "fingerprint": "音频疗愈内容或助眠引导课程卖给有睡眠困扰上班族或中年人群",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司无限合伙"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69e646481e94ae6921bc2f47?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0433_联合销售jv撮合服务卖给": {
+      "topic": "联合销售（JV）撮合服务 → 卖给有播客/社群/自媒体资源的内容创作者或营销人员",
+      "fingerprint": "联合销售jv撮合服务卖给有podcast社群自媒体资源内容创作者或营销人员",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3579-first-1000-new-podcaster-sets-up-joint-venture-deals"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 72,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0434_ai自动化解决方案如客服": {
+      "topic": "AI自动化解决方案（如客服代理、内容生成工作流、数据整理自动化） → 卖给有数字化转型需求的小型企业和初创公司",
+      "fingerprint": "ai自动化解决方案如客服代理内容生成工作流数据整理自动化卖给有数字化转型需求小型企业初创公司",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/the-50k-mo-one-person-agency/"
+      ],
+      "best_startup_index": 8,
+      "best_commercial": 88,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0435_公开构建过程持续内容输出": {
+      "topic": "公开构建过程的持续内容输出 → 卖给正在做产品或服务的个人创作者",
+      "fingerprint": "公开构建过程持续内容输出卖给正产品或服务个人创作者",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "@dontbesilent"
+      ],
+      "urls": [
+        "https://x.com/dontbesilent/status/2114750949839495425"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0436_定期商业清洁服务周月包标": {
+      "topic": "定期商业清洁服务（周/月包），标准化交付 → 卖给本地小型企业老板（如牙科诊所、小办公室、零售店）",
+      "fingerprint": "定期商业清洁服务周月包标准化交付卖给本地小型企业老板如牙科诊所小办公室零售店",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle Nation"
+      ],
+      "urls": [
+        "https://www.sidehustlenation.com/commercial-cleaning-business/"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 70,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0437_线上塔罗牌解读服务短视频": {
+      "topic": "线上塔罗牌解读服务（短视频引流 + 私聊成交） → 卖给对神秘学、星座、塔罗感兴趣的年轻女性用户",
+      "fingerprint": "线上塔罗牌解读服务短视频引流私聊成交卖给对神秘学星座塔罗感兴趣年轻女性户",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3586-first-1000-tarot-and-tiktok-become-winning-combo"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 64,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0438_帮他们shopify上开": {
+      "topic": "帮他们在Shopify上开店，接入Printful自动发货，设计品牌视觉 → 卖给在Dribbble上有作品但没自己店铺的独立插画师/设计师",
+      "fingerprint": "帮他们shopify上开店接入printful自动发货设计品牌视觉卖给dribbble上有作品但没自己店铺独立插画师设计师",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/zazzle-alternatives"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0439_substack付费订阅": {
+      "topic": "Substack付费订阅+代笔服务 → 卖给有写作技能或兴趣的普通人",
+      "fingerprint": "substack付费订阅代笔服务卖给有写作技能或兴趣",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "The Creative Penn (作者变现/自助出版)"
+      ],
+      "urls": [
+        "https://api.follow.it/track-rss-story-click/v3/NatU9-KjnssMu_xFAHYwsm3YrJqnlYH9?utm_source=follow.it"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0440_二手商品转售低买高卖卖给": {
+      "topic": "二手商品转售（低买高卖） → 卖给想利用空闲时间赚外快的上班族/学生",
+      "fingerprint": "二手商品转售低买高卖卖给想利空闲时间赚外快上班族学生",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3580-qa-is-there-an-easier-way-to-start-reselling"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0441_手绘风格城市迷宫艺术画可": {
+      "topic": "手绘风格的城市迷宫艺术画（可数字下载或实体印刷） → 卖给喜欢城市文化、手作风物、独特装饰画的年轻人和礼品购买者",
+      "fingerprint": "手绘风格城市迷宫艺术画可数字下载或实体印刷卖给喜欢城市文化手作风物独特装饰画年轻人礼品购买者",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3585-story-artistic-cartographer-maps-out-successful-side"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 45,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0442_企业出售策略保密流程指导": {
+      "topic": "企业出售策略和保密流程指导 → 卖给已有盈利数字业务、考虑退出的创业者",
+      "fingerprint": "企业出售策略保密流程指导卖给已有盈利数字业务考虑退出者",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "times_seen": 1,
+      "sources": [
+        "Flippa Blog"
+      ],
+      "urls": [
+        "https://flippa.com/blog/how-to-sell-a-business-confidentially/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 50,
       "feedback": {
         "up": 0,
         "down": 0
