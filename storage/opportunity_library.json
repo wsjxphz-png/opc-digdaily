@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-28 00:07",
+  "updated": "2026-10-29 00:52",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -8443,6 +8443,253 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0445_ai生成印花图案找工厂代": {
+      "topic": "用AI生成的印花图案找工厂代工印花生活用品通过Temu销售 → 卖给想通过Temu卖家居用品的普通人",
+      "fingerprint": "ai生成印花图案找工厂代工印花生活品通过temu销售卖给想通过temu卖家居品",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a79d16117676351c56fbe95?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0446_ep顺应天性赚到后者聊聊": {
+      "topic": "EP63 如何顺应天性赚到100万？和00后创业者聊聊流量、销售与商业闭环",
+      "fingerprint": "ep顺应天性赚到后者聊聊流量销售商业闭环",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·停电时间Power outage"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68bdac515faf3686597e5c72?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0447_ai辅助海报图标概念图设": {
+      "topic": "AI辅助海报/图标/概念图设计服务 → 卖给想入行AI视觉创作的个人或独立设计师",
+      "fingerprint": "ai辅助海报图标概念图设计服务卖给想入行ai视觉创作个人或独立设计师",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/69917076de29766da9a621f5?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0448_ep我就好命聊聊好运底层": {
+      "topic": "EP61 我就是好命！聊聊“好运”的底层逻辑",
+      "fingerprint": "ep我就好命聊聊好运底层逻辑",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·停电时间Power outage"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/688a0223edf3fa32d544d56d?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0449_帮他们搭建ai自动化内容": {
+      "topic": "帮他们搭建AI自动化内容生产工作流，从选题到发布全流程 → 卖给做自媒体的小博主或小型内容团队",
+      "fingerprint": "帮他们搭建ai自动化内容生产工作流从选题到发布全流程卖给自媒体小博主或小型内容团队",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "B站·慕维森"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Z6xT6EEAU"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 35,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0450_一套notion使技巧线": {
+      "topic": "一套Notion使用技巧的线上课程 → 卖给对Notion感兴趣的职场人或学生群体",
+      "fingerprint": "一套notion使技巧线上课程卖给对notion感兴趣职场人或学生群体",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/ckqc4o0jwch800833bts3wlax"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0451_婚恋市场分析作为小本方向": {
+      "topic": "婚恋市场分析作为小本创业方向，具体交付物和获客渠道未说明，无法判断是否可复制。",
+      "fingerprint": "婚恋市场分析作为小本方向具体交付物获客渠道未说明无法判断否可复制",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·海叔有观点 | 聊聊创业、投资、热点"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/680221985"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0452_经济下行中仍有小本但具体": {
+      "topic": "经济下行中仍有小本创业机会，但具体方向、获客方式和交付物未说明，仅泛泛而谈。",
+      "fingerprint": "经济下行中仍有小本但具体方向获客方式交付物未说明仅泛泛而谈",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·海叔有观点 | 聊聊创业、投资、热点"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/678693852"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 24,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0453_ep完美主义并非软肋而你": {
+      "topic": "EP62 完美主义并非软肋，而是你与生俱来的天赋",
+      "fingerprint": "ep完美主义并非软肋而你生俱来天赋",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·停电时间Power outage"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/689ca6d2759c1ff652c703ec?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 2,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0454_ep女性无痛健身指南无所": {
+      "topic": "EP60 女性无痛健身指南：无所不能，是她们的本能！",
+      "fingerprint": "ep女性无痛健身指南无所不能她们本能",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·停电时间Power outage"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68753c3d60f8f77d4081df48?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 2,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0455_你所城市手绘迷宫艺术地图": {
+      "topic": "你所在城市的手绘迷宫艺术地图（实体画或数字版） → 卖给喜欢城市主题家居装饰的年轻人、送给外地朋友的城市纪念品需求者",
+      "fingerprint": "你所城市手绘迷宫艺术地图实体画或数字版卖给喜欢城市主题家居装饰年轻人送给外地朋友城市纪念品需求者",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3585-story-artistic-cartographer-maps-out-successful-side"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0456_为他们管理联盟推广活动协": {
+      "topic": "为他们管理联盟推广活动，协调多个推广者的发布节奏 → 卖给做线上课程、电子书、SaaS产品的独立创业者或小团队",
+      "fingerprint": "为他们管理联盟推广活动协调多个推广者发布节奏卖给线上课程电子书saas产品独立者或小团队",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3588-qa-how-to-become-an-affiliate-manager-for-large-laun"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0457_一件印有原创图案t恤或卫": {
+      "topic": "一件印有原创图案的T恤或卫衣（通过按需打印平台发货） → 卖给海外年轻消费者，关注潮流/个性服饰的社媒用户",
+      "fingerprint": "一件印有原创图案t恤或卫衣通过按需打印平台发货卖给海外年轻消费者关注潮流个性服饰社媒户",
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/print-on-demand-content-mistakes"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 33,
       "feedback": {
         "up": 0,
         "down": 0
