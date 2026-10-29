@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-29 00:52",
+  "updated": "2026-10-30 01:08",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -8690,6 +8690,25 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0458_写作内容付费社群具体产品": {
+      "topic": "写作干货内容+付费社群（具体产品需自己定义） → 卖给想靠写作变现的职场女性或宝妈",
+      "fingerprint": "写作内容付费社群具体产品需自己定义卖给想靠写作职场女性或宝妈",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1006372885"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 62,
       "feedback": {
         "up": 0,
         "down": 0
