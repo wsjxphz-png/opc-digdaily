@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-31 00:59",
+  "updated": "2026-11-01 00:01",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -8747,6 +8747,44 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 23,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0461_ai辅助内容创作服务或付": {
+      "topic": "AI辅助的内容创作服务或付费社群 → 卖给有专业技能的职场人",
+      "fingerprint": "ai辅助内容创作服务或付费社群卖给有专业技能职场人",
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/982966316"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0462_ai生成趣味图案上传到t": {
+      "topic": "用AI生成趣味图案，上传到TeePublic或Redbubble卖T恤、马克杯 → 卖给喜欢做趣味图案、愿意花时间研究海外消费趋势的普通人",
+      "fingerprint": "ai生成趣味图案上传到teepublic或redbubble卖t恤马克杯卖给喜欢趣味图案愿意花时间研究海外消费趋势",
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/redbubble-alternatives"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 35,
       "feedback": {
         "up": 0,
         "down": 0
