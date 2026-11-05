@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-05 02:15",
+  "updated": "2026-11-06 02:14",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -4532,17 +4532,19 @@
       "topic": "信息不足 → 卖给信息不足",
       "fingerprint": "信息不足卖给信息不足",
       "first_seen": "2026-09-22",
-      "last_seen": "2026-10-19",
-      "times_seen": 2,
+      "last_seen": "2026-11-05",
+      "times_seen": 3,
       "sources": [
         "小宇宙·海叔有观点 | 聊聊创业、投资、热点",
         "小宇宙·一人公司无限合伙",
-        "小宇宙·一人公司创业进化论"
+        "小宇宙·一人公司创业进化论",
+        "B站·何英东一号"
       ],
       "urls": [
         "https://www.ximalaya.com/sound/680221985",
         "https://www.xiaoyuzhoufm.com/episode/6aa0958da0210c197dcfb81e?utm_source=rss",
-        "https://www.xiaoyuzhoufm.com/episode/69ee35571e94ae692135b596?utm_source=rss"
+        "https://www.xiaoyuzhoufm.com/episode/69ee35571e94ae692135b596?utm_source=rss",
+        "https://www.bilibili.com/video/BV16Kar6wEDy"
       ],
       "best_startup_index": 3,
       "best_commercial": 38,
@@ -8975,6 +8977,139 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 20,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0473_小红书ecommerce": {
+      "topic": "小红书电商带货选品指南 + 知识付费陪跑服务 → 卖给想搞副业的小红书新手、想做电商 but 不知道从哪入手的人",
+      "fingerprint": "小红书ecommerce带货选品指南知识付费陪跑服务卖给想搞小红书新手想ecommercebut不知道从哪入手人",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1009802638"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 66,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0474_人工ai辅助俄中翻译本地": {
+      "topic": "人工+AI辅助的俄中翻译本地化服务 → 卖给需要将俄语内容翻译成中文的跨境电商、游戏出海公司或出版社",
+      "fingerprint": "人工ai辅助俄中翻译本地化服务卖给需要将俄语内容翻译成中文跨境ecommerce游戏出海公司或出版社",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/691549e8cbba038b424f3b17?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 59,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0475_原创小幅绘画作品定价数百": {
+      "topic": "原创小幅绘画作品，定价数百到数千元不等 → 卖给有绘画基础、想在业余时间卖画的普通人",
+      "fingerprint": "原创小幅绘画作品定价数百到数千元不等卖给有绘画基础想业余时间卖画",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·清醒便利店｜看破也说破，治标更治本。"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1017363231"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 51,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0476_帮他们搭建抖音账号拍摄剪": {
+      "topic": "帮他们搭建抖音账号、拍摄剪辑短视频、开直播带团购券 → 卖给本地餐厅、美发店、美容院等实体店老板",
+      "fingerprint": "帮他们搭建抖音账号拍摄剪辑短视频开直播带团购券卖给本地餐厅美发店美容院等实体店老板",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·IP研究所"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6772c1451e823e72d3ff772a?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 65,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0477_一档围绕职场成长话题中文": {
+      "topic": "一档围绕职场/成长话题的中文播客，靠广告植入和知识付费变现 → 卖给对职场成长、女性话题感兴趣想听声音内容的年轻人",
+      "fingerprint": "一档围绕职场成长话题中文podcast靠广告植入知识付费卖给对职场成长女性话题感兴趣想听声音内容年轻人",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·Olga姐姐"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6ad9c3a697726cd467560783?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 47,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0478_待补充需先解具体交付产品": {
+      "topic": "待补充——需先了解具体交付产品 → 卖给待补充——需先了解目标客户具体画像",
+      "fingerprint": "待补充需先解具体交付产品卖给待补充需先解目标客户具体画像",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不打工就创业"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/955979861"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 29,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0479_代售美国本土品牌户外凉亭": {
+      "topic": "代售美国本土品牌的户外凉亭和厨房设备 → 卖给美国郊区有院子的中产家庭",
+      "fingerprint": "代售美国本土品牌户外凉亭厨房设备卖给美国郊区有院子中产家庭",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "times_seen": 1,
+      "sources": [
+        "My Wife Quit Her Job (电商实战)"
+      ],
+      "urls": [
+        "https://mywifequitherjob.com/episode662/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 54,
       "feedback": {
         "up": 0,
         "down": 0
