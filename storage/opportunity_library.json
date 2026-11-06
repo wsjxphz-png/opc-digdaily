@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-06 02:14",
+  "updated": "2026-11-07 01:34",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9110,6 +9110,139 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 54,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0480_商品主图套色设计爆款带货": {
+      "topic": "商品主图套色设计 + 爆款带货视频剪辑服务 → 卖给淘宝/拼多多/抖音的小商家，大促期间需要大量主图和短视频",
+      "fingerprint": "商品主图套色设计爆款带货视频剪辑服务卖给淘宝拼多多抖音小商家大促期间需要大量主图短视频",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "B站·小道Ai"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Wb4i6VESY"
+      ],
+      "best_startup_index": 7,
+      "best_commercial": 68,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0481_一个聚焦个人风格打造付费": {
+      "topic": "一个聚焦个人风格打造的付费社群，提供穿搭指导与情绪支持 → 卖给20-35岁关心穿搭、有形象焦虑的普通女性",
+      "fingerprint": "一个聚焦个人风格打造付费社群提供穿搭指导情绪支持卖给岁关心穿搭有形象焦虑普通女性",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班俱乐部"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1018435562"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 61,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0482_轻小件家居派对品如餐垫杯": {
+      "topic": "轻小件家居/派对用品（如餐垫、杯垫），在亚马逊或TK北美店铺销售 → 卖给有少量启动资金（约5000-10000元）、想尝试跨境电商的普通人，最好能去义乌或与义",
+      "fingerprint": "轻小件家居派对品如餐垫杯垫亚马逊或tk北美店铺销售卖给有少量启动资金约想尝试跨境ecommerce最好能去义乌或义乌供应商建立联系",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·义乌听见"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6aec3fe85b7c4709bfe18636?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 52,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0483_ai生成设计图通过pod": {
+      "topic": "用AI生成设计图，通过POD平台销售印花T恤、手机壳等商品 → 卖给想兼职搞钱的上班族，每天有1-2小时空闲时间",
+      "fingerprint": "ai生成设计图通过pod平台销售印花t恤手机壳等商品卖给想兼职搞钱上班族每天有小时空闲时间",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a96f685a0210c197dcbe1e0?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 40,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0484_帮宠物博主对接品牌合作提": {
+      "topic": "帮宠物博主对接品牌合作，提供经纪人式服务 → 卖给想做宠物博主的素人或已有粉丝基础的宠物内容创作者",
+      "fingerprint": "帮宠物博主对接品牌合作提供经纪人式服务卖给想宠物博主素人或已有粉丝基础宠物内容创作者",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a58f39b016dcc7e05435241?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 54,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0485_海外营销入门课程或训练营": {
+      "topic": "海外营销入门课程或训练营（7周线上课） → 卖给想出海的小微企业主或转型中的营销从业者",
+      "fingerprint": "海外营销入门课程或训练营周线上课卖给想出海小微企业主或转型中营销从业者",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·义乌听见"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a034e861b7bd5029505718b?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0486_文章未说明卖给文章未说明": {
+      "topic": "文章未说明 → 卖给文章未说明",
+      "fingerprint": "文章未说明卖给文章未说明",
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "times_seen": 1,
+      "sources": [
+        "Liam Ottley (AI Automation Agency)"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=3h9kIpusNyA"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
       "feedback": {
         "up": 0,
         "down": 0
