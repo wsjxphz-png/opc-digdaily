@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-07 01:34",
+  "updated": "2026-11-08 00:33",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9243,6 +9243,63 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0487_ai生成服装展示短视频挂": {
+      "topic": "用AI生成的服装展示短视频，挂在抖音小店赚佣金 → 卖给想零成本做副业、对服装有审美爱好的年轻人",
+      "fingerprint": "ai生成服装展示短视频挂抖音小店赚佣金卖给想零成本对服装有审美爱好年轻人",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6aee82695b7c4709bfe24b14?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 39,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0488_一本基于卡片盒笔记法主题": {
+      "topic": "一本基于卡片盒笔记法的主题书籍或系列专栏 → 卖给想通过写作建立个人品牌的职场人",
+      "fingerprint": "一本基于卡片盒笔记法主题书籍或系列专栏卖给想通过写作建立个人品牌职场人",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·雷蒙三十"
+      ],
+      "urls": [
+        "https://open.firstory.me/story/clmpshwft01jc01yg0tuy8mpp"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 24,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0489_精选高端露营装备包车顶帐": {
+      "topic": "精选高端露营装备包（车顶帐篷、便携电源、折叠桌椅组合） → 卖给热爱露营的户外运动人群",
+      "fingerprint": "精选高端露营装备包车顶帐篷便携电源折叠桌椅组合卖给热爱露营户外运动人群",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "times_seen": 1,
+      "sources": [
+        "Niche Pursuits"
+      ],
+      "urls": [
+        "https://www.nichepursuits.com/phil-mceleney/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
       "feedback": {
         "up": 0,
         "down": 0
