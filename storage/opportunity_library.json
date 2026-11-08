@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-08 00:33",
+  "updated": "2026-11-09 00:51",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9300,6 +9300,63 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0490_知识服务顾问数字产品具体": {
+      "topic": "知识服务/顾问/数字产品（具体品类需自行确定） → 卖给有某一行业经验、想摆脱打工的人",
+      "fingerprint": "知识服务顾问数字产品具体品类需自行确定卖给有某一行业经验想摆脱打工人",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a4ce5eb3fb7233cbf453688?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0491_小红书ecommerce": {
+      "topic": "小红书电商商品（具体品类本内容未披露） → 卖给想在小红书开店的个人卖家",
+      "fingerprint": "小红书ecommerce商品具体品类本内容未披露卖给想小红书开店个人卖家",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不想上班❌"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a897c21ef65145dfcc398a7?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0492_一套帮助创作者规划商业路": {
+      "topic": "一套帮助创作者规划商业路径的分层指南 → 卖给刚开始做内容的自媒体新手",
+      "fingerprint": "一套帮助创作者规划商业路径分层指南卖给刚开始内容自媒体新手",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/spi-launches-the-superfans-system/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 61,
       "feedback": {
         "up": 0,
         "down": 0
