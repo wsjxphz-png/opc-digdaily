@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-09 00:51",
+  "updated": "2026-11-10 04:52",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9357,6 +9357,139 @@
       ],
       "best_startup_index": 4,
       "best_commercial": 61,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0493_把自己专业服务打包成标准": {
+      "topic": "把自己的专业服务打包成标准化产品对外售卖 → 卖给有专业技能但没产品化过的自由职业者",
+      "fingerprint": "把自己专业服务打包成标准化产品对外售卖卖给有专业技能但没产品化过自由职业者",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司创业进化论"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a09e0171b7bd50295531550?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0494_一套帮你笔记工具管好生活": {
+      "topic": "一套帮你用笔记工具管好生活和工作的系统课程 → 卖给觉得生活混乱、想要理清目标和日程的普通人",
+      "fingerprint": "一套帮你笔记工具管好生活工作系统课程卖给觉得生活混乱想要理清目标日程",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6af194445b7c4709bfe3700d?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0495_上门一对一行矫正教主人正": {
+      "topic": "上门一对一行矫正+教主人正确互动方式，每次收费600-1000元 → 卖给城市里刚养小狗的新手主人，被狗狗乱尿、暴冲、吠叫困扰",
+      "fingerprint": "上门一对一行矫正教主人正确互动方式每次卖给城市里刚养小狗新手主人被狗狗乱尿暴冲吠叫困扰",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·走进100个职业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a992f2ca0210c197dccdc1a?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 57,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0496_有声书或广播剧单集配音服": {
+      "topic": "有声书或广播剧的单集配音服务 → 卖给有空闲时间想利用声音变现的普通人",
+      "fingerprint": "有声书或广播剧单集配音服务卖给有空闲时间想利声音",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "B站·小鱼爱配音x"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1Dp4b6PEEk"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0497_一个google本地搜索": {
+      "topic": "一个在Google本地搜索结果前列的服务类型网站 → 卖给本地生活服务商家（除虫、管道维修、园艺等）",
+      "fingerprint": "一个google本地搜索结果前列服务类型网站卖给本地生活服务商家除虫管道维修园艺等",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "r/SEO"
+      ],
+      "urls": [
+        "https://www.reddit.com/r/SEO/comments/1xr3h9y/rank_and_rent_middleman_or_acting_as_if/"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 47,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0498_员工招聘roi诊断优化建": {
+      "topic": "员工招聘ROI诊断与优化建议 → 卖给正在扩招的中型服务机构老板",
+      "fingerprint": "员工招聘roi诊断优化建议卖给正扩招中型服务机构老板",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "Nick Saraev Blog"
+      ],
+      "urls": [
+        "https://nicksaraev.com/hiring-pitfalls-and-how-to-fix-them/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0499_一个shopify独立站": {
+      "topic": "一个Shopify独立站，卖代发货的商品（自己不下库存） → 卖给对跨境电商感兴趣但没货源渠道的新手卖家",
+      "fingerprint": "一个shopify独立站卖代发货商品自己不下库存卖给对跨境ecommerce感兴趣但没货源渠道新手卖家",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "times_seen": 1,
+      "sources": [
+        "Wholesale Ted"
+      ],
+      "urls": [
+        "https://www.youtube.com/watch?v=LTkOJzc8o-Y"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 20,
       "feedback": {
         "up": 0,
         "down": 0

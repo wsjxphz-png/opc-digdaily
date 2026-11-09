@@ -2695,6 +2695,12 @@
           "url": "https://www.youtube.com/watch?v=8c6JZ18W0Bo",
           "date": "2026-11-01",
           "summary": "🔥 Join Maker School & get customer #1 guaranteed: https://skool.com/makerschool/about\n💎 Get all course resources 100% free: https://skool.com/maker-zero/about\n➡️ If this is your first video: I'm Nick Saraev. I run LeftClick, an AI growth agency. We've done work for large brands you're likely familia"
+        },
+        {
+          "title": "13 Mind-Blowing AI Hacks That Can Actually Change Your Life",
+          "url": "https://www.youtube.com/watch?v=yMKHtJpgZzc",
+          "date": "2026-11-09",
+          "summary": "🔥 Join Maker School & get customer #1 guaranteed: https://go.nicksaraev.com/13-mind-blowing-ai\n💎 Get all course resources 100% free: https://go.nicksaraev.com/13-mind-blowing-ai-maker-zero\n➡️ If this is your first video: I'm Nick Saraev. I run LeftClick, an AI growth agency. We've done work for larg"
         }
       ],
       "teardown": null,
@@ -6927,42 +6933,42 @@
         "operator_handle": "05年球鞋搬砖青年",
         "operator_name": "05年球鞋搬砖青年",
         "region": "国内",
-        "who": "05年出生（约20岁），单人操作的球鞋/手机数码搬砖商，靠信息差低买高卖，自称一年净赚约145万元",
-        "deliverable": "实物商品倒卖：从低价渠道收进球鞋或手机数码，加价后转手卖给有购买意愿的人。交付物就是实物本身，不涉及教程或服务",
-        "business_model": "低买高卖套利，赚差价。定价区间未公开，据推算单双球鞋利润多在200-800元不等，手机数码单件利润更高但周转慢。收入结构为单品利润×销量，无订阅或服务费，完全靠走量",
-        "acquisition": "①核心'客户来源'：买家主要来自得物、闲鱼、转转等二手/鉴定交易平台，以及微信朋友圈和QQ群里的熟人圈；不需要主动拉客，只要货品合适自然有人问\n②真正关键动作不是'找客户'，而是'找货'和'找价差'——蹲守在拼多多百亿补贴、品牌奥特莱斯清仓、海外代购价、企业内购价等信息洼地，第一时间捕捉低于市场价的商品，然后挂到得物/闲鱼上溢价卖出\n③第一波客户通常来自身边朋友同学，球鞋圈子小，口碑传播快，买到便宜正品后会主动推荐给朋友\n④可照抄的打法：每天花30分钟刷得物比价功能，盯住几款热门球鞋的实时售价，同时在拼多多、京东秒杀里对比同款进货价，发现≥200元价差就立刻动手下单转卖",
-        "stack": "闲鱼、得物、转转（买卖两端的交易平台）、拼多多/京东（低价进货渠道）、微信（私域客户维护）、手机即可全部操作，无需任何代码或复杂工具",
+        "who": "05年出生的球鞋搬砖青年，单人操作，靠手机做国内外球鞋信息差倒卖生意，自称一年利润约145万元（未公开第三方审计），目前处于起步1-2年的单人小生意阶段",
+        "deliverable": "卖实物球鞋——低买高卖的倒卖赚差价。从海外折扣店、国内清仓渠道低价收鞋，转手在闲鱼、私域群高价卖出。核心交付物是「一双真鞋+快速到手」，没有额外服务或课程",
+        "business_model": "一次性差价盈利模式，不卖课不教人。进货价和出货价之间的差额即为毛利，大致区间为每双鞋赚50-500元不等（视鞋款热度而定）。全年总利润声称约145万，但未公开月度明细或后台截图。无订阅制，无月费，纯按单结算",
+        "acquisition": "获客渠道和方法分三层：①闲鱼是主战场——发布球鞋商品链接，标题写货号+尺码+「全新正品」「急出」等关键词吸引搜索流量，有人询价就引导走平台成交；②小红书发穿搭图或开箱帖引流——发真实上脚照片，评论区引导到闲鱼或微信私聊，这是低成本自然流量来源；③私域复购与老带新——把成交客户加微信，建球鞋交流群，有新货第一时间发群里通知，老客户转介绍新客户。第一波客户大概率来自闲鱼的自然搜索流量和他自己的早期小红书内容曝光，资料未透露具体的第一批种子客户如何获得。可照抄的打法：今天就可以去闲鱼搜某双热门球鞋，看看别人怎么定价、怎么写标题、怎么回话术，直接模仿对方的文案模板",
+        "stack": "闲鱼（二手交易平台）+ 小红书（内容种草引流）+ 微信（私域沉淀与复购）+ 抖音/得物（比价和信息同步）。全部为普通人能直接下载使用的现成工具，无需开发任何软件",
         "replicability": 4,
-        "first_step": "今天就去得物APP搜一双你熟悉的热门球鞋（如耐克Dunk系列），记下当前成交价，再去拼多多搜同一款看有没有明显更低的进货价——如果有，这就是你可以照做的第一单",
-        "red_flag": "他不是在卖课或卖铲子，是真的在做实物搬砖，这一点值得肯定。但最大风险有三：①库存压货导致资金链断裂，球鞋行情波动大，一旦判断失误可能亏在本钱上；②买到假货或翻新机，在得物等平台鉴定不通过会直接赔钱丢信誉；③纯靠信息差的生意，随着更多人意识到这个路径，利润空间会被持续压缩，天花板有限",
-        "learn": "最值得抄的有两点：一是学会用'比价思维'而非'消费思维'看商品——每看到一件喜欢的东西先想它在不同平台的价差是多少；二是把'找货渠道'当成核心竞争力来培养，谁的信息源广、响应速度快，谁就能吃到第一波利润",
+        "first_step": "下载闲鱼App，注册账号后搜索一双你感兴趣的热门球鞋，观察3-5个在售商品的标题写法、图片拍摄方式、定价策略和回复话术，然后试着发布第一条商品链接，这就是零成本的入门动作",
+        "red_flag": "此人没有卖课卖铲子，是真在做生意的，这点值得肯定。但需要注意：①145万这个数字是自我宣称，未经第三方核实，可能存在夸大水分；②球鞋搬砖竞争日趋激烈，普通消费者也能进场分一杯羹，利润空间在持续收窄；③库存风险客观存在——买错的码数或过时的配色可能砸手里；④某些渠道涉及跨境购买或真假混说的灰色地带，新手容易踩坑",
+        "learn": "最值得抄的两个点：一是他用的是「手机上就能操作的轻量信息差」——只要愿意花时间盯价格变动、盯市场热度，普通人就有机会参与，不需要资金门槛也不需要技术能力；二是他把闲鱼+小红书+微信跑通了完整闭环——内容引流→平台交易→私域复购，这套流程今天任何人可以直接复制",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，一部手机+两个平台账号就能起步）",
+        "doable": "能（完全不用写代码，用现成工具即可，只需要会用手机浏览商品和发帖）",
         "signals_used": 0,
-        "generated_at": "2026-11-09 00:42",
+        "generated_at": "2026-11-10 04:41",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 48,
-          "feasibility": 74,
+          "commercial": 40,
+          "feasibility": 73,
           "startup_index": 6,
-          "composite": 60.2,
+          "composite": 56.7,
           "drivers": [
-            [
-              "技能门槛低",
-              5
-            ],
             [
               "不用写代码",
               5
+            ],
+            [
+              "客户规模",
+              4
             ]
           ],
           "drags": [
             [
-              "启动资金低",
+              "收入证据",
               2
             ],
             [
-              "收入证据",
+              "定价结构",
               2
             ]
           ],
@@ -6971,21 +6977,21 @@
             "只有流量数据、没有收入证据（粉丝多≠赚钱）"
           ],
           "factors": {
-            "urgency": 4,
+            "urgency": 3,
             "pricing": 3,
-            "margin": 4,
+            "margin": 3,
             "repeat": 3,
             "price_ladder": 2,
             "revenue_proof": 2,
             "market_size": 4,
-            "evergreen": 4,
+            "evergreen": 3,
             "channel": 4,
-            "machine": 4,
+            "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
-            "capital": 2,
+            "capital": 4,
             "speed": 4,
-            "skill": 5,
+            "skill": 4,
             "concrete": 4,
             "no_code": 5
           },
@@ -6994,8 +7000,8 @@
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-11-09",
-      "teardown_count": 13,
+      "last_teardown": "2026-11-10",
+      "teardown_count": 14,
       "discovered_date": "2026-08-14",
       "is_new": false,
       "established": false,
@@ -7003,27 +7009,27 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
       "commercial_health": {
-        "commercial": 48,
-        "feasibility": 74,
+        "commercial": 40,
+        "feasibility": 73,
         "startup_index": 6,
-        "composite": 60.2,
+        "composite": 56.7,
         "drivers": [
-          [
-            "技能门槛低",
-            5
-          ],
           [
             "不用写代码",
             5
+          ],
+          [
+            "客户规模",
+            4
           ]
         ],
         "drags": [
           [
-            "启动资金低",
+            "收入证据",
             2
           ],
           [
-            "收入证据",
+            "定价结构",
             2
           ]
         ],
@@ -7032,21 +7038,21 @@
           "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         ],
         "factors": {
-          "urgency": 4,
+          "urgency": 3,
           "pricing": 3,
-          "margin": 4,
+          "margin": 3,
           "repeat": 3,
           "price_ladder": 2,
           "revenue_proof": 2,
           "market_size": 4,
-          "evergreen": 4,
+          "evergreen": 3,
           "channel": 4,
-          "machine": 4,
+          "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
-          "capital": 2,
+          "capital": 4,
           "speed": 4,
-          "skill": 5,
+          "skill": 4,
           "concrete": 4,
           "no_code": 5
         },
@@ -7695,78 +7701,73 @@
         "operator_handle": "Side Hustle School Ep.3513",
         "operator_name": "体育纪念品倒卖的老师",
         "region": "国际",
-        "who": "一位教师，在学期间隙利用个人时间倒卖体育纪念品（如比赛用球、签名装备、球队周边等），月收入约8000美元（推断自描述），单人运作无团队",
-        "deliverable": "体育纪念品实物商品，卖给体育收藏者、球队粉丝、运动员家属等，核心品类可能是签名装备、限定版球衣、比赛用球等小众稀缺品",
-        "business_model": "低买高卖的倒卖模式（flip），非服务也非订阅；大概率为交易制单笔盈利，具体定价区间未公开，月入约8000美元为描述中给出的数字（未核实）",
-        "acquisition": "①平台/渠道：主要依赖二手交易平台（如eBay、StockX、Facebook Marketplace、Mercari等），以及可能的体育收藏社群、论坛、本地跳蚤市场；②具体动作：从拍卖、清仓、二手低价处淘货，再在更专业的买家群体中溢价卖出；③第一波客户来源：未公开，推测来自个人社交圈+平台自然流量；④可照抄的打法：选择一个你熟悉的运动项目，先从本地二手平台或二手店低价淘同类商品试水，验证能否转卖后再扩大规模。⚠️ 原文对获客路径描述极粗，没有写出具体找货源的方法或第一批客户是怎么来的，这是本案例最大的信息缺口，参考性打了折扣",
-        "stack": "eBay、StockX、Facebook Marketplace、Mercari等二手交易平台（均为现成无代码平台，点鼠标就能用）；未提及使用任何自动化工具或AI工具",
-        "replicability": 3,
-        "first_step": "选择一项你最熟悉的运动，去eBay或本地二手平台搜该运动相关纪念品，观察哪些在低价出售、哪些有人高价买入，记录价格差超过50%的商品，尝试买一件转卖出去",
-        "red_flag": "收入数字来源未核实，8000美元/月对于兼职倒卖来说偏高，可能只做了短期爆款而非稳定模式；货源渠道（哪里能拿到低价好货）是核心竞争力但未公开，普通人很难复制；真假鉴定风险高，一旦买到假货损失大；体育纪念品市场受球队战绩、球星动态影响大，不是稳赚不赔的生意",
-        "learn": "①用热爱驱动选品：做自己喜欢的品类会比盲目追热点更持久，也更容易积累鉴别能力；②信息差永远有利润：找到低价货源的能力（比买家早一步知道什么值钱）是这个生意的核心护城河",
+        "who": "一名全职教师，在教学合同的空闲期（如寒暑假、周末）做体育纪念品倒卖生意，月净利润约8000美元（根据原文数据估算），属于单人微型套利生意",
+        "deliverable": "他卖的是体育纪念品——包括签名球衣、限量球鞋、比赛用球、球队周边等小众收藏品，买家是全球体育收藏爱好者和球迷。本质是「低买高卖」的电商倒卖模式，自己囤货、拍照上架、发货售后一条龙",
+        "business_model": "典型的一手转手差价模式：低价收进 → 加价卖出。收费是一次性交易，单件商品利润空间取决于品类和稀缺度。未公开具体定价区间，但月利润8000美元意味着整体流水不低。收入结构推测：单品利润率较高（可能有几十到几百美元不等的单笔毛利），靠高频翻卖累积月收入",
+        "acquisition": "①主要渠道：eBay、StockX、GOAT、Facebook Marketplace、Mercari 等国际二手/收藏交易平台；②具体内容动作：拍摄高质量商品照片发布 Listing、维护账号信誉评级、与卖家在 eBay/Mercari 搜索「捡漏」关键词截单、关注 Reddit 体育收藏板块和 Facebook 球迷群组寻找货源与买家；③第一波客户来源：大概率从他本人的收藏圈/球迷社区开始，把自己当「懂行的中间人」，先卖自己的存货，再帮别人代买代卖积累口碑；④可照抄打法：选一个你熟悉的细分方向（如某支球队、某个年代、某种球星），先在 eBay 或 StockX 注册账号，每天刷低价 Listings，发现被低估的商品直接入手，加价 30%-100% 转卖即可。无需任何特殊资质，开账号就能做",
+        "stack": "eBay（全球最大二手交易平台）、StockX/GOAT（球鞋/限量潮品交易平台）、Facebook Marketplace（本地交易）、Mercari（轻量级二手市场）、iPhone 手机拍照 + 自然光布置拍摄台、快递包装耗材（气泡膜/纸箱）",
+        "replicability": 4,
+        "first_step": "今天就在 eBay 上注册一个卖家账号，选一个你最了解的体育细分品类（比如某个 NBA 球队、某位传奇球星），搜索正在出售的相关物品，对比同类商品的市场价格，找到至少 5 个价差超过 30% 的商品，记录下来作为第一批候选货源",
+        "red_flag": "①库存风险：倒卖生意最怕囤货砸手里，如果选品眼光不准，一笔大货可能压住几千美元现金流；②并非教别人赚钱的卖铲子模式，而是真做倒卖，这一点值得肯定；③但需注意：货源渠道是核心壁垒，普通人没有作者的球友人脉和拍卖行信息优势，初期选品容易踩雷",
+        "learn": "最该抄的两点：一是「用热爱降低选品成本」——因为真正喜欢某个领域，你天然比别人更早感知到什么值得买；二是「把小众做成生态位」——不跟大玩家抢热门款，专攻冷门但有稳定需求的细分方向（如某支小联盟球队的绝版周边），避开竞争",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用二手交易平台即可起步）",
+        "doable": "能（完全不用写代码，用现成电商平台即可模仿）",
         "signals_used": 0,
-        "generated_at": "2026-08-16 18:41",
+        "generated_at": "2026-11-10 04:41",
         "is_revisit": false,
         "commercial_health": {
           "commercial": 55,
-          "feasibility": 52,
-          "startup_index": 4,
-          "composite": 52.9,
+          "feasibility": 68,
+          "startup_index": 6,
+          "composite": 59.5,
           "drivers": [
-            [
-              "启动资金低",
-              5
-            ],
             [
               "不用写代码",
               5
+            ],
+            [
+              "交付毛利",
+              4
             ]
           ],
           "drags": [
             [
-              "可复刻性",
+              "定价结构",
               2
             ],
             [
-              "换人也能做",
+              "持续付费",
               2
             ]
           ],
-          "caps": [
-            "只有原作者本人能做 → 封顶4分",
-            "没写清客户从哪来 → 封顶6分"
-          ],
-          "gates": [
-            "印钞机检验未过：靠个人魅力/独家关系，换人就失效"
-          ],
+          "caps": [],
+          "gates": [],
           "factors": {
             "urgency": 3,
             "pricing": 3,
             "margin": 4,
-            "repeat": 3,
+            "repeat": 2,
             "price_ladder": 2,
-            "revenue_proof": 3,
+            "revenue_proof": 4,
             "market_size": 4,
             "evergreen": 4,
-            "channel": 2,
-            "machine": 2,
+            "channel": 4,
+            "machine": 3,
             "delivery_chain": 3,
-            "replicable": 2,
-            "capital": 5,
+            "replicable": 4,
+            "capital": 3,
             "speed": 3,
             "skill": 3,
-            "concrete": 3,
+            "concrete": 4,
             "no_code": 5
           },
           "coverage": 1.0,
           "degraded": false,
-          "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效"
+          "gate_reason": ""
         }
       },
-      "last_teardown": "2026-08-16",
-      "teardown_count": 1,
+      "last_teardown": "2026-11-10",
+      "teardown_count": 2,
       "discovered_date": "2026-08-15",
       "is_new": false,
       "established": false,
@@ -7775,60 +7776,55 @@
       "recommended_at": "2026-08-15",
       "commercial_health": {
         "commercial": 55,
-        "feasibility": 52,
-        "startup_index": 4,
-        "composite": 52.9,
+        "feasibility": 68,
+        "startup_index": 6,
+        "composite": 59.5,
         "drivers": [
-          [
-            "启动资金低",
-            5
-          ],
           [
             "不用写代码",
             5
+          ],
+          [
+            "交付毛利",
+            4
           ]
         ],
         "drags": [
           [
-            "可复刻性",
+            "定价结构",
             2
           ],
           [
-            "换人也能做",
+            "持续付费",
             2
           ]
         ],
-        "caps": [
-          "只有原作者本人能做 → 封顶4分",
-          "没写清客户从哪来 → 封顶6分"
-        ],
-        "gates": [
-          "印钞机检验未过：靠个人魅力/独家关系，换人就失效"
-        ],
+        "caps": [],
+        "gates": [],
         "factors": {
           "urgency": 3,
           "pricing": 3,
           "margin": 4,
-          "repeat": 3,
+          "repeat": 2,
           "price_ladder": 2,
-          "revenue_proof": 3,
+          "revenue_proof": 4,
           "market_size": 4,
           "evergreen": 4,
-          "channel": 2,
-          "machine": 2,
+          "channel": 4,
+          "machine": 3,
           "delivery_chain": 3,
-          "replicable": 2,
-          "capital": 5,
+          "replicable": 4,
+          "capital": 3,
           "speed": 3,
           "skill": 3,
-          "concrete": 3,
+          "concrete": 4,
           "no_code": 5
         },
         "coverage": 1.0,
         "degraded": false,
-        "gate_reason": "印钞机检验未过：靠个人魅力/独家关系，换人就失效"
+        "gate_reason": ""
       },
-      "commercial_severity": "warn"
+      "commercial_severity": "ok"
     },
     "丸子": {
       "handle": "丸子",
