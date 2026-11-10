@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-10 04:52",
+  "updated": "2026-11-10 12:48",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9490,6 +9490,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 20,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0500_把目标词表嵌入爽文背诵电": {
+      "topic": "把目标词表嵌入爽文的背诵电子书 → 卖给备考四六级的大学生群体",
+      "fingerprint": "把目标词表嵌入爽文背诵电子书卖给备考四六级大学生群体",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6af266ac5b7c4709bfe3af88?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 56,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0501_高质量生活场景照片库卖给": {
+      "topic": "高质量生活场景照片库 → 卖给有智能手机、喜欢随手拍照的人",
+      "fingerprint": "高质量生活场景照片库卖给有智能手机喜欢随手拍照人",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副業學校"
+      ],
+      "urls": [
+        "https://www.slashieschool.com/ep-67-%e8%b3%a3%e7%85%a7%e7%89%87%e5%88%b0%e5%9c%8b%e5%a4%96%e5%95%86%e6%a5%ad%e5%9c%96%e5%ba%ab%e7%95%b6%e5%89%af%e6%a5%ad/"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 38,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0502_系统化面试技巧电子书或录": {
+      "topic": "一份系统化的面试技巧电子书或录播课程 → 卖给正在找工作的程序员/产品经理/运营等白领求职者",
+      "fingerprint": "系统化面试技巧电子书或录播课程卖给正找工作程序员产品经理运营等白领求职者",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·IP研究所"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/685976494abe6e29cba20880?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 70,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0503_按月个人成长主题通讯或资": {
+      "topic": "一份按月的个人成长主题通讯或资料包 → 卖给想搞副业但找不到方向的上班族",
+      "fingerprint": "按月个人成长主题通讯或资料包卖给想搞但找不到方向上班族",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·造物矩阵｜超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6a1c3dc5ac7bdb080c33b129?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0504_多个内容平台发日常文字内": {
+      "topic": "在多个内容平台发日常文字内容，赚平台广告分成 → 卖给有闲暇时间想赚零花钱的普通人",
+      "fingerprint": "多个内容平台发日常文字内容赚平台广告分成卖给有闲暇时间想赚零花钱",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "B站·今天要100和个"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1PFVU6yEQq"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0505_三天线上市场主题短课程卖": {
+      "topic": "三天线上市场主题短课程 → 卖给想做副业的普通上班族",
+      "fingerprint": "三天线上市场主题短课程卖给想普通上班族",
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·不上班 / Out of Offic"
+      ],
+      "urls": [
+        "https://proxy.wavpub.com/outofoffice.xml"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
       "feedback": {
         "up": 0,
         "down": 0
