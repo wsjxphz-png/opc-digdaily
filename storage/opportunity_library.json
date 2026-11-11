@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-10 12:48",
+  "updated": "2026-11-12 02:04",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9604,6 +9604,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0506_商业插画作品个人ip内容": {
+      "topic": "商业插画作品 + 个人IP内容（视频/图文展示创作过程） → 卖给有插画/设计基础的自由职业者或想转行的人",
+      "fingerprint": "商业插画作品个人ip内容视频图文展示创作过程卖给有插画设计基础自由职业者或想转行人",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·提钱不上班NOBAN CLUB"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/67599298bdb9877a9721cf7e?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 62,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0507_一张老照片数字化修复服务": {
+      "topic": "一张老照片的数字化修复服务（含上色、去损、清晰度提升） → 卖给家里有老照片需要修复的中老年用户子女、寻亲家庭、纪念礼品需求者",
+      "fingerprint": "一张老照片数字化修复服务含上色去损清晰度提升卖给家里有老照片需要修复中老年户子女寻亲家庭纪念礼品需求者",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6af3bd4614d01a26f8a8080f?utm_source=rss"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 54,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0508_flippa收购已有销量": {
+      "topic": "在Flippa收购已有销量基础的亚马逊KDP账号，接手后优化继续运营赚版税 → 卖给想快速进入亚马逊Kindle自出版赛道但没有时间从头写书的个人创作者",
+      "fingerprint": "flippa收购已有销量基础亚马逊kdp账号接手后优化继续运营赚版税卖给想快速进入亚马逊kindle自出版赛道但没有时间从头写书个人创作者",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "Flippa Blog"
+      ],
+      "urls": [
+        "https://flippa.com/blog/how-to-buy-amazon-kdp-account/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0509_一期精选韩国面膜订阅礼盒": {
+      "topic": "每月一期的精选韩国面膜订阅礼盒 → 卖给热爱韩国美妆的护肤品消费者",
+      "fingerprint": "一期精选韩国面膜订阅礼盒卖给热爱韩国美妆护肤品消费者",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3592-story-friends-foster-korean-face-mask-frenzy"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 55,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0510_参考spi三层会员定价结": {
+      "topic": "参考SPI的三层会员定价结构来设计自己的服务分层 → 卖给有海外创业社群运营经验的人（门槛极高）",
+      "fingerprint": "参考spi三层会员定价结构来设计自己服务分层卖给有海外社群运营经验人门槛极高",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/smart-passive-income-unites-two-entrepreneurial-communities-with-a-tiered-membership-model/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 36,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0511_基于大量研究youtub": {
+      "topic": "一份基于大量研究的YouTube涨粉实操策略清单 → 卖给愿意长期经营YouTube频道的个人（需能稳定访问YouTube）",
+      "fingerprint": "基于大量研究youtube涨粉实操策略清单卖给愿意长期经营youtube频道个人需能稳定访问youtube",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "times_seen": 1,
+      "sources": [
+        "Smart Passive Income (SPI)"
+      ],
+      "urls": [
+        "https://www.smartpassiveincome.com/blog/grow-subscriber-count-youtube-creator/"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 28,
       "feedback": {
         "up": 0,
         "down": 0

@@ -1216,6 +1216,12 @@
           "url": "https://x.com/thesamparr/status/2115863464547881014",
           "date": "2026-10-29",
           "summary": "Anthropic will make ~1,000 employees worth +$100m at $2 trillion market cap.\n\nThere's ~11,000 Americans with $100m in investable assets. \n\nSo something like 1 in 12 Americans with $100m (liquid) will be from Anthropic. If you add in Openai, maybe 1 in 7."
+        },
+        {
+          "title": "Would love to dive into this data.\n\nBut my observations:\n\n1. you have a much higher chance of getting rich by bootstrapp",
+          "url": "https://x.com/thesamparr/status/2120537635991019897",
+          "date": "2026-11-11",
+          "summary": "Would love to dive into this data.\n\nBut my observations:\n\n1. you have a much higher chance of getting rich by bootstrapping.\n\n2. if you raise money for something that isn't SUPER scalable, you just reduced the already very small odds by more (ex: media, community, many ecommerce"
         }
       ],
       "teardown": null,
@@ -1924,6 +1930,12 @@
           "url": "https://x.com/pandatalk8/status/2117125980561240176",
           "date": "2026-11-02",
           "summary": "以老板的心态打工， 打工就没有问题。  \n打工的优势是现金流好， 咱们自己做自由职业者，每月按时收钱这件事最难， 每个月超过1万以上的收入， 就属打工最现实， 一边打工一边搞自己的副业， 打工的目的是饿不死， 副业的目标是实现真正的自由。"
+        },
+        {
+          "title": "还在大厂上班的朋友说，现在在厂里的工作，主要目的不是为了升职加薪，已经完全是为了保住自己的那份工作了。 你如果不向上管理，下一轮裁员名单中可能就有你了。 \n大厂的工作都是表面上光鲜，实际上就是一份工作而已，远远不如那些自干的社交媒体博主们。",
+          "url": "https://x.com/pandatalk8/status/2120346800611836242",
+          "date": "2026-11-11",
+          "summary": "还在大厂上班的朋友说，现在在厂里的工作，主要目的不是为了升职加薪，已经完全是为了保住自己的那份工作了。 你如果不向上管理，下一轮裁员名单中可能就有你了。 \n大厂的工作都是表面上光鲜，实际上就是一份工作而已，远远不如那些自干的社交媒体博主们。"
         }
       ],
       "teardown": null,
@@ -6933,33 +6945,33 @@
         "operator_handle": "05年球鞋搬砖青年",
         "operator_name": "05年球鞋搬砖青年",
         "region": "国内",
-        "who": "05年出生的球鞋搬砖青年，单人操作，靠手机做国内外球鞋信息差倒卖生意，自称一年利润约145万元（未公开第三方审计），目前处于起步1-2年的单人小生意阶段",
-        "deliverable": "卖实物球鞋——低买高卖的倒卖赚差价。从海外折扣店、国内清仓渠道低价收鞋，转手在闲鱼、私域群高价卖出。核心交付物是「一双真鞋+快速到手」，没有额外服务或课程",
-        "business_model": "一次性差价盈利模式，不卖课不教人。进货价和出货价之间的差额即为毛利，大致区间为每双鞋赚50-500元不等（视鞋款热度而定）。全年总利润声称约145万，但未公开月度明细或后台截图。无订阅制，无月费，纯按单结算",
-        "acquisition": "获客渠道和方法分三层：①闲鱼是主战场——发布球鞋商品链接，标题写货号+尺码+「全新正品」「急出」等关键词吸引搜索流量，有人询价就引导走平台成交；②小红书发穿搭图或开箱帖引流——发真实上脚照片，评论区引导到闲鱼或微信私聊，这是低成本自然流量来源；③私域复购与老带新——把成交客户加微信，建球鞋交流群，有新货第一时间发群里通知，老客户转介绍新客户。第一波客户大概率来自闲鱼的自然搜索流量和他自己的早期小红书内容曝光，资料未透露具体的第一批种子客户如何获得。可照抄的打法：今天就可以去闲鱼搜某双热门球鞋，看看别人怎么定价、怎么写标题、怎么回话术，直接模仿对方的文案模板",
-        "stack": "闲鱼（二手交易平台）+ 小红书（内容种草引流）+ 微信（私域沉淀与复购）+ 抖音/得物（比价和信息同步）。全部为普通人能直接下载使用的现成工具，无需开发任何软件",
+        "who": "05年出生（约19-20岁）的单人操盘手，利用球鞋/数码产品的价格和供需信息差，在二手交易平台和高价出货渠道之间做倒卖（俗称「搬砖」），据称一年内累计盈利145万元",
+        "deliverable": "实物商品倒卖：球鞋、手机/平板/耳机等数码配件。把低价货源买到手，加价卖给有即时购买需求的客户。没有服务、没有课程、没有软件，就是实物交易的中间商",
+        "business_model": "一次性买卖，低买高卖赚差价。总收入未公开，据描述为一年约145万（未核实）。客单价推测为每单数百元至千元不等，靠走量和快速周转盈利。没有订阅费、没有会员制",
+        "acquisition": "推测为以下多渠道组合（具体顺序未公开）：①闲鱼/转转作为主战场——搜「成色新」「急出」「保真」等关键词蹲守卖家，同时发布含清晰实拍图的商品链接吸引买家；②小红书/抖音发穿搭测评笔记带话题标签，自然流量引来私信咨询，再引导到闲鱼成交；③微信群/QQ群混进球鞋爱好者圈子，发布到货信息拉人下单；④得物上架走平台交易，用正品背书降低买家决策成本。第一批客户大概率来自自己先买几双跑通流程，然后靠评论区互动和私聊积累。普通人可直接照抄的第一步：去闲鱼搜你最熟悉的某个球鞋型号，对比不同卖家的定价，找出3个明显偏低的链接加对方好友询价——这一步就能让你立刻理解什么是信息差",
+        "stack": "闲鱼/转转/得物（二手交易平台）、小红书/抖音（内容引流）、手机拍摄+剪映（素材制作）、Excel或在线表格（记录进货价/售价/利润），全部零代码现成工具即可上手",
         "replicability": 4,
-        "first_step": "下载闲鱼App，注册账号后搜索一双你感兴趣的热门球鞋，观察3-5个在售商品的标题写法、图片拍摄方式、定价策略和回复话术，然后试着发布第一条商品链接，这就是零成本的入门动作",
-        "red_flag": "此人没有卖课卖铲子，是真在做生意的，这点值得肯定。但需要注意：①145万这个数字是自我宣称，未经第三方核实，可能存在夸大水分；②球鞋搬砖竞争日趋激烈，普通消费者也能进场分一杯羹，利润空间在持续收窄；③库存风险客观存在——买错的码数或过时的配色可能砸手里；④某些渠道涉及跨境购买或真假混说的灰色地带，新手容易踩坑",
-        "learn": "最值得抄的两个点：一是他用的是「手机上就能操作的轻量信息差」——只要愿意花时间盯价格变动、盯市场热度，普通人就有机会参与，不需要资金门槛也不需要技术能力；二是他把闲鱼+小红书+微信跑通了完整闭环——内容引流→平台交易→私域复购，这套流程今天任何人可以直接复制",
+        "first_step": "挑一个你感兴趣的球鞋或数码品类，在闲鱼上搜索该品类最近一周内发布的在售商品，记录每个商品的标题、价格、卖家所在地、描述风格，连续观察3天，你会开始发现哪些地区供货便宜、哪些描述能带来询盘——这就是信息差的起点",
+        "red_flag": "这个模式最大风险是：①信息差窗口期很短，一旦你在小红书/抖音上把打法公开出来，大量同质化竞争者涌入会迅速压低利润；②球鞋圈假货泛滥，货源把控不好容易踩坑赔付；③部分平台限制批量卖家账号，存在被封号风险。另外，145万这个数字尚未被第三方交叉验证，需理性看待",
+        "learn": "最值得抄的两个点：①用「内容种草+私域成交」的组合绕过平台抽佣，小红书发真实穿搭笔记比硬广更容易获得精准流量；②用免费工具（闲鱼+Notion/Excel）跑通最小闭环，先小量测试再放大，不要一开始就大量囤货",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用现成工具即可，只需要会用手机浏览商品和发帖）",
+        "doable": "能（完全不用写代码，一部手机+三个平台就能起步）",
         "signals_used": 0,
-        "generated_at": "2026-11-10 04:41",
+        "generated_at": "2026-11-12 01:53",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 40,
-          "feasibility": 73,
+          "commercial": 38,
+          "feasibility": 70,
           "startup_index": 6,
-          "composite": 56.7,
+          "composite": 54.7,
           "drivers": [
             [
-              "不用写代码",
+              "技能门槛低",
               5
             ],
             [
-              "客户规模",
-              4
+              "不用写代码",
+              5
             ]
           ],
           "drags": [
@@ -6980,18 +6992,18 @@
             "urgency": 3,
             "pricing": 3,
             "margin": 3,
-            "repeat": 3,
+            "repeat": 2,
             "price_ladder": 2,
             "revenue_proof": 2,
             "market_size": 4,
-            "evergreen": 3,
-            "channel": 4,
+            "evergreen": 4,
+            "channel": 3,
             "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
             "capital": 4,
             "speed": 4,
-            "skill": 4,
+            "skill": 5,
             "concrete": 4,
             "no_code": 5
           },
@@ -7000,8 +7012,8 @@
           "gate_reason": "只有流量数据、没有收入证据（粉丝多≠赚钱）"
         }
       },
-      "last_teardown": "2026-11-10",
-      "teardown_count": 14,
+      "last_teardown": "2026-11-12",
+      "teardown_count": 15,
       "discovered_date": "2026-08-14",
       "is_new": false,
       "established": false,
@@ -7009,18 +7021,18 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-14",
       "commercial_health": {
-        "commercial": 40,
-        "feasibility": 73,
+        "commercial": 38,
+        "feasibility": 70,
         "startup_index": 6,
-        "composite": 56.7,
+        "composite": 54.7,
         "drivers": [
           [
-            "不用写代码",
+            "技能门槛低",
             5
           ],
           [
-            "客户规模",
-            4
+            "不用写代码",
+            5
           ]
         ],
         "drags": [
@@ -7041,18 +7053,18 @@
           "urgency": 3,
           "pricing": 3,
           "margin": 3,
-          "repeat": 3,
+          "repeat": 2,
           "price_ladder": 2,
           "revenue_proof": 2,
           "market_size": 4,
-          "evergreen": 3,
-          "channel": 4,
+          "evergreen": 4,
+          "channel": 3,
           "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
           "capital": 4,
           "speed": 4,
-          "skill": 4,
+          "skill": 5,
           "concrete": 4,
           "no_code": 5
         },
@@ -7681,32 +7693,32 @@
         "operator_handle": "Side Hustle School Ep.3513",
         "operator_name": "体育纪念品倒卖的老师",
         "region": "国际",
-        "who": "一名全职教师，在教学合同的空闲期（如寒暑假、周末）做体育纪念品倒卖生意，月净利润约8000美元（根据原文数据估算），属于单人微型套利生意",
-        "deliverable": "他卖的是体育纪念品——包括签名球衣、限量球鞋、比赛用球、球队周边等小众收藏品，买家是全球体育收藏爱好者和球迷。本质是「低买高卖」的电商倒卖模式，自己囤货、拍照上架、发货售后一条龙",
-        "business_model": "典型的一手转手差价模式：低价收进 → 加价卖出。收费是一次性交易，单件商品利润空间取决于品类和稀缺度。未公开具体定价区间，但月利润8000美元意味着整体流水不低。收入结构推测：单品利润率较高（可能有几十到几百美元不等的单笔毛利），靠高频翻卖累积月收入",
-        "acquisition": "①主要渠道：eBay、StockX、GOAT、Facebook Marketplace、Mercari 等国际二手/收藏交易平台；②具体内容动作：拍摄高质量商品照片发布 Listing、维护账号信誉评级、与卖家在 eBay/Mercari 搜索「捡漏」关键词截单、关注 Reddit 体育收藏板块和 Facebook 球迷群组寻找货源与买家；③第一波客户来源：大概率从他本人的收藏圈/球迷社区开始，把自己当「懂行的中间人」，先卖自己的存货，再帮别人代买代卖积累口碑；④可照抄打法：选一个你熟悉的细分方向（如某支球队、某个年代、某种球星），先在 eBay 或 StockX 注册账号，每天刷低价 Listings，发现被低估的商品直接入手，加价 30%-100% 转卖即可。无需任何特殊资质，开账号就能做",
-        "stack": "eBay（全球最大二手交易平台）、StockX/GOAT（球鞋/限量潮品交易平台）、Facebook Marketplace（本地交易）、Mercari（轻量级二手市场）、iPhone 手机拍照 + 自然光布置拍摄台、快递包装耗材（气泡膜/纸箱）",
+        "who": "一位海外学校教师，业余时间在学期空档期从事体育纪念品低买高卖，月均利润约8000美元（推断值），单人操作，无团队",
+        "deliverable": "各类体育纪念品：球衣、签名物品、限量版徽章、比赛用球等，面向体育收藏爱好者、球队粉丝、礼品买家",
+        "business_model": "低买高卖的翻卖模式（flip），收入来源为单品价差；收费方式为一次性零售价，客单价未公开，月收入约8000美元（从原文描述推断）",
+        "acquisition": "①主要销售渠道为eBay、Facebook Marketplace、StockX（二手球鞋/球衣交易平台）、Mercari等海外二手电商平台；②具体动作：在赛季淡季、球员被交易、球队更换球衣款式等时间节点前低价扫货，等市场热度回升后挂高价卖出；同时在社交媒体（Twitter/X、Reddit sports版块）持续发布藏品内容维持热度；③第一批客户来源于eBay和FB Marketplace的被动流量，他并未主动触达，而是靠平台搜索流量自然成交；④可照抄打法：选择一种你熟悉的细分品类（如某支球队周边、签名球等），每周固定时间去二手平台或跳蚤市场扫低价货源，同一时段在高价平台挂卖，形成稳定套利链路",
+        "stack": "eBay、Facebook Marketplace、StockX、Mercari（海外二手交易/转卖平台），零代码门槛，手机+电脑即可操作",
         "replicability": 4,
-        "first_step": "今天就在 eBay 上注册一个卖家账号，选一个你最了解的体育细分品类（比如某个 NBA 球队、某位传奇球星），搜索正在出售的相关物品，对比同类商品的市场价格，找到至少 5 个价差超过 30% 的商品，记录下来作为第一批候选货源",
-        "red_flag": "①库存风险：倒卖生意最怕囤货砸手里，如果选品眼光不准，一笔大货可能压住几千美元现金流；②并非教别人赚钱的卖铲子模式，而是真做倒卖，这一点值得肯定；③但需注意：货源渠道是核心壁垒，普通人没有作者的球友人脉和拍卖行信息优势，初期选品容易踩雷",
-        "learn": "最该抄的两点：一是「用热爱降低选品成本」——因为真正喜欢某个领域，你天然比别人更早感知到什么值得买；二是「把小众做成生态位」——不跟大玩家抢热门款，专攻冷门但有稳定需求的细分方向（如某支小联盟球队的绝版周边），避开竞争",
+        "first_step": "今天就下载一个二手交易平台App（如eBay或闲鱼），注册账号，搜索你感兴趣的体育纪念品，连续看10个在售商品的价格，记录下来，找出一条明显的价格差异信号——这就是你的第一个套利机会",
+        "red_flag": "①8000美元月收入来源未公开验证，可能是夸张描述；②这类生意高度依赖个人的选品嗅觉和时机判断力，并非纯流程复制就能稳赚；③热门品类竞争激烈，新入局者议价空间小；④不是卖铲子，是真在倒卖实物，属于正经生意",
+        "learn": "最该抄的是两件事：一是他选了一个自己真正热爱的细分领域，信息搜集成本极低；二是他把时间差当护城河——淡季囤货、旺季出货，普通人也能做，只是需要耐心蹲守时机",
         "tech_barrier": "无",
-        "doable": "能（完全不用写代码，用现成电商平台即可模仿）",
+        "doable": "能（完全不用写代码，用现成二手交易平台即可操作）",
         "signals_used": 0,
-        "generated_at": "2026-11-10 04:41",
+        "generated_at": "2026-11-12 01:53",
         "is_revisit": false,
         "commercial_health": {
-          "commercial": 55,
-          "feasibility": 68,
+          "commercial": 44,
+          "feasibility": 70,
           "startup_index": 6,
-          "composite": 59.5,
+          "composite": 56.9,
           "drivers": [
             [
               "不用写代码",
               5
             ],
             [
-              "交付毛利",
+              "客户规模",
               4
             ]
           ],
@@ -7724,18 +7736,18 @@
           "gates": [],
           "factors": {
             "urgency": 3,
-            "pricing": 3,
-            "margin": 4,
+            "pricing": 2,
+            "margin": 3,
             "repeat": 2,
             "price_ladder": 2,
-            "revenue_proof": 4,
+            "revenue_proof": 3,
             "market_size": 4,
             "evergreen": 4,
             "channel": 4,
             "machine": 3,
             "delivery_chain": 3,
             "replicable": 4,
-            "capital": 3,
+            "capital": 4,
             "speed": 3,
             "skill": 3,
             "concrete": 4,
@@ -7746,8 +7758,8 @@
           "gate_reason": ""
         }
       },
-      "last_teardown": "2026-11-10",
-      "teardown_count": 2,
+      "last_teardown": "2026-11-12",
+      "teardown_count": 3,
       "discovered_date": "2026-08-15",
       "is_new": false,
       "established": false,
@@ -7755,17 +7767,17 @@
       "revisit_count": 0,
       "recommended_at": "2026-08-15",
       "commercial_health": {
-        "commercial": 55,
-        "feasibility": 68,
+        "commercial": 44,
+        "feasibility": 70,
         "startup_index": 6,
-        "composite": 59.5,
+        "composite": 56.9,
         "drivers": [
           [
             "不用写代码",
             5
           ],
           [
-            "交付毛利",
+            "客户规模",
             4
           ]
         ],
@@ -7783,18 +7795,18 @@
         "gates": [],
         "factors": {
           "urgency": 3,
-          "pricing": 3,
-          "margin": 4,
+          "pricing": 2,
+          "margin": 3,
           "repeat": 2,
           "price_ladder": 2,
-          "revenue_proof": 4,
+          "revenue_proof": 3,
           "market_size": 4,
           "evergreen": 4,
           "channel": 4,
           "machine": 3,
           "delivery_chain": 3,
           "replicable": 4,
-          "capital": 3,
+          "capital": 4,
           "speed": 3,
           "skill": 3,
           "concrete": 4,
