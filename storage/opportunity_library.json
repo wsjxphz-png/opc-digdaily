@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-12 02:04",
+  "updated": "2026-11-13 02:17",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9718,6 +9718,120 @@
       ],
       "best_startup_index": 3,
       "best_commercial": 28,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0512_一套整理好备考资料pdf": {
+      "topic": "一套整理好的备考资料PDF → 卖给准备考公务员/教师证/会计证的在职人士",
+      "fingerprint": "一套整理好备考资料pdf卖给准备考公务员教师证会计证职人士",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·副业女孩"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/688f872f8e06fe8de71e940c?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 48,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0513_自己设计小众文创小物件贴": {
+      "topic": "自己设计的小众文创小物件（贴纸/明信片/徽章等） → 卖给周末去逛市集的年轻人",
+      "fingerprint": "自己设计小众文创小物件贴纸明信片徽章等卖给周末去逛市集年轻人",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/666bcd87b6a8412729ae1f01?utm_source=rss"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0514_一对一方向商业诊断咨询卖": {
+      "topic": "一对一「一人公司」方向的商业诊断咨询 → 卖给想尝试一人公司或自由职业的职场人",
+      "fingerprint": "一对一方向商业诊断咨询卖给想尝试或自由职业职场人",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1005664834"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 43,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0515_na卖给na本文无具体可": {
+      "topic": "N/A → 卖给N/A，本文无具体可复制案例",
+      "fingerprint": "na卖给na本文无具体可复制案例",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·聊副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/667ba82fc13b46d76cf64dca?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 27,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0516_定制化本地小众徒步路线指": {
+      "topic": "一份定制化的本地小众徒步路线指南 → 卖给对户外探索有兴趣的都市上班族",
+      "fingerprint": "定制化本地小众徒步路线指南卖给对户外探索有兴趣都市上班族",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·一人公司丨商业人物故事"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/1007072992"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 32,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0517_一套帮他省人力自动化工作": {
+      "topic": "一套帮他省人力的自动化工作流 → 卖给中小企业老板或有繁琐手工流程的团队负责人",
+      "fingerprint": "一套帮他省人力自动化工作流卖给中小企业老板或有繁琐手工流程团队负责人",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "times_seen": 1,
+      "sources": [
+        "Nick Saraev Blog"
+      ],
+      "urls": [
+        "https://nicksaraev.com/5-more-automations-you-can-sell-today-for-1-500-or-10-000/"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 69,
       "feedback": {
         "up": 0,
         "down": 0
