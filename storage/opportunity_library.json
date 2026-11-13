@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-13 02:17",
+  "updated": "2026-11-14 01:53",
   "entries": {
     "t0001_考试培训资料或省钱攻略内": {
       "topic": "考试培训资料或省钱攻略内容，通过小红书引流到微信成交 → 卖给有某项专业技能或信息优势的普通人（如备考辅导、省钱达人、行业经验者）",
@@ -9832,6 +9832,139 @@
       ],
       "best_startup_index": 6,
       "best_commercial": 69,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0518_ai设计图定制款球鞋含专": {
+      "topic": "AI设计图定制款球鞋（含专属图案和名字） → 卖给追求个性的年轻人、情侣、礼物送礼人群",
+      "fingerprint": "ai设计图定制款球鞋含专属图案名字卖给追求个性年轻人情侣礼物送礼人群",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6af512c03caef3b52f546ee1?utm_source=rss"
+      ],
+      "best_startup_index": 5,
+      "best_commercial": 49,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0519_基于自身心理咨询师背景提": {
+      "topic": "基于自身心理咨询师的背景，提供一对一情绪疏导或写作陪伴服务 → 卖给有情绪困扰、想转行的白领或全职妈妈",
+      "fingerprint": "基于自身心理咨询师背景提供一对一情绪疏导或写作陪伴服务卖给有情绪困扰想转行白领或全职妈妈",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·活捉捌师傅 | 奇怪的知识增加了"
+      ],
+      "urls": [
+        "https://www.ximalaya.com/sound/834254782"
+      ],
+      "best_startup_index": 4,
+      "best_commercial": 33,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0520_一套ai自动回复常见问题": {
+      "topic": "一套用AI自动回复常见问题的客服工作流，挂在商家后台 → 卖给开淘宝店的中小卖家，每天被客服消息淹没",
+      "fingerprint": "一套ai自动回复常见问题客服工作流挂商家后台卖给开淘宝店中小卖家每天被客服消息淹没",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "B站·WorkBuddy新手教学"
+      ],
+      "urls": [
+        "https://www.bilibili.com/video/BV1HJxv6qEmP"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 44,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0521_ai快速生成垂直领域小型": {
+      "topic": "用AI快速生成垂直领域小型互动内容产品包 → 卖给需要合规版权资产的中小企业或内容机构",
+      "fingerprint": "ai快速生成垂直领域小型互动内容产品包卖给需要合规版权资产中小企业或内容机构",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·超级个体开放麦"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/68f49fec22654730203014d2?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 37,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0522_尚未明确ai赋能培训交付": {
+      "topic": "尚未明确的AI赋能培训交付物 → 卖给需要继续教育的工程技术人员或中小企业培训负责人",
+      "fingerprint": "尚未明确ai赋能培训交付物卖给需要继续教育工程技术人员或中小企业培训负责人",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "小宇宙·豪有用的信息差｜Ai搞钱副业"
+      ],
+      "urls": [
+        "https://www.xiaoyuzhoufm.com/episode/6af51f5914d01a26f8a8974a?utm_source=rss"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 34,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0523_自己etsy上设计图案印": {
+      "topic": "自己在Etsy上设计的图案印在T恤/马克杯等商品上 → 卖给有设计能力或创意灵感的普通人",
+      "fingerprint": "自己etsy上设计图案印t恤马克杯等商品上卖给有设计能力或创意灵感",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "Printful Blog (POD 一件代发)"
+      ],
+      "urls": [
+        "https://www.printful.com/blog/how-to-sell-printful-products-on-etsy"
+      ],
+      "best_startup_index": 6,
+      "best_commercial": 41,
+      "feedback": {
+        "up": 0,
+        "down": 0
+      }
+    },
+    "t0524_一次性取名服务不含后续设": {
+      "topic": "一次性取名服务（不含后续设计） → 卖给需要品牌命名的初创小企业主",
+      "fingerprint": "一次性取名服务不含后续设计卖给需要品牌命名初创小企业主",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "times_seen": 1,
+      "sources": [
+        "Side Hustle School (Chris Guillebeau)"
+      ],
+      "urls": [
+        "https://shows.acast.com/side-hustle-school/episodes/ep-3603-tbt-man-makes-100000-five-dollars-at-a-time"
+      ],
+      "best_startup_index": 3,
+      "best_commercial": 42,
       "feedback": {
         "up": 0,
         "down": 0
